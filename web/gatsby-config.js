@@ -32,6 +32,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-theme-ui',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',
@@ -62,13 +63,6 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
-    // {
-    //   resolve: 'gatsby-source-instagram',
-    //   options: {
-    //     access_token: process.env.ACCESS_TOKEN,
-    //     instagram_id: process.env.BUSINESS_ID,
-    //   }
-    // },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -79,16 +73,6 @@ module.exports = {
       resolve: 'gatsby-plugin-twitter-pixel',
       options: {
         pixelId: 'o4kit'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-linkedin-insight',
-      options: {
-        partnerId: `2715889`,
-
-        // Include LinkedIn Insight in development.
-        // Defaults to false meaning LinkedIn Insight will only be loaded in production.
-        includeInDevelopment: false
       }
     },
     {
