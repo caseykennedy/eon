@@ -33,6 +33,7 @@
     "@types/google-map-react": "^1.1.7",
     "@types/lodash": "^4.14.149",
     "@types/rebass": "^3.0.4",
+    "@types/theme-ui": "^0.3.6",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.7",

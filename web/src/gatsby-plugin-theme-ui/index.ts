@@ -5,9 +5,7 @@
 
 type ThemeShape = {
   breakpoints: string[]
-  mq: {
-    [key: string]: string
-  }
+  mq: string[]
   colors: {
     [key: string]: string
   }
@@ -69,10 +67,13 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   breakpoints,
-  mq: {
-    tablet: `(min-width: ${breakpoints[0]})`,
-    desktop: `(min-width: ${breakpoints[1]})`
-  },
+  mq: breakpoints.map(
+    (bp) => `@media only screen and (min-width: ${bp})`
+  ),
+  // mq: {
+  //   tablet: `(min-width: ${breakpoints[0]})`,
+  //   desktop: `(min-width: ${breakpoints[1]})`
+  // },
 
   // Color palette
   // ___________________________________________________________________
@@ -83,6 +84,10 @@ const theme: ThemeShape = {
     
     primary: '#4073b2',
     secondary: '#09040b',
+
+    accent: '',
+    muted: '',
+
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',
 

@@ -4,6 +4,8 @@
 
 import React from 'react'
 
+import { Box } from 'theme-ui'
+
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
@@ -14,7 +16,7 @@ const HomePage: React.FC = () => {
   // const data = useHomePage()
   return (
     <S.HomePage p={5}>
-      Professional-grade hand sanitation, made easy.
+      <Box color="primary">Professional-grade hand sanitation, made easy.</Box>
     </S.HomePage>
   )
 }
