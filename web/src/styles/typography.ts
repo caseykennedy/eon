@@ -6,100 +6,119 @@ import { css } from 'styled-components'
 import theme from '../../config/theme'
 import { darken } from 'polished'
 
-// Helvetica Neue Condensed Regular
-import HelveticaNeueLTStdCnEot from './fonts/HelveticaNeueLTStd-Cn.eot'
-import HelveticaNeueLTStdCnWoff2 from './fonts/HelveticaNeueLTStd-Cn.woff2'
-import HelveticaNeueLTStdCnWoff from './fonts/HelveticaNeueLTStd-Cn.woff'
-import HelveticaNeueLTStdCnOtf from './fonts/HelveticaNeueLTStd-Cn.otf'
+// Arial Narrow
+import ArialNarrowEot from './fonts/ArialNarrow.eot'
+import ArialNarrowWoff2 from './fonts/ArialNarrow.woff2'
+import ArialNarrowWoff from './fonts/ArialNarrow.woff'
+import ArialNarrowOtf from './fonts/ArialNarrow.otf'
 
-// Helvetica Neue Condensed Medium
-import HelveticaNeueLTStdMdCnEot from './fonts/HelveticaNeueLTStd-MdCn.eot'
-import HelveticaNeueLTStdMdCnWoff2 from './fonts/HelveticaNeueLTStd-MdCn.woff2'
-import HelveticaNeueLTStdMdCnWoff from './fonts/HelveticaNeueLTStd-MdCn.woff'
-import HelveticaNeueLTStdMdCnOtf from './fonts/HelveticaNeueLTStd-MdCn.otf'
+// DM Sans Bold
+import DMSansBoldEot from './fonts/DMSans-Bold.eot'
+import DMSansBoldWoff2 from './fonts/DMSans-Bold.woff2'
+import DMSansBoldWoff from './fonts/DMSans-Bold.woff'
+import DMSansBoldOtf from './fonts/DMSans-Bold.otf'
 
-// Helvetica Neue Light
-import HelveticaNeueLTStdLtEot from './fonts/HelveticaNeueLTStd-Lt.eot'
-import HelveticaNeueLTStdLtWoff2 from './fonts/HelveticaNeueLTStd-Lt.woff2'
-import HelveticaNeueLTStdLtWoff from './fonts/HelveticaNeueLTStd-Lt.woff'
-import HelveticaNeueLTStdLtOtf from './fonts/HelveticaNeueLTStd-Lt.otf'
+// DM Sans Italic
+import DMSansItalicEot from './fonts/DMSans-Italic.eot'
+import DMSansItalicWoff2 from './fonts/DMSans-Italic.woff2'
+import DMSansItalicWoff from './fonts/DMSans-Italic.woff'
+import DMSansItalicOtf from './fonts/DMSans-Italic.otf'
 
-// Helvetica Neue Roman
-import HelveticaNeueLTStdRomanEot from './fonts/HelveticaNeueLTStd-Roman.eot'
-import HelveticaNeueLTStdRomanWoff2 from './fonts/HelveticaNeueLTStd-Roman.woff2'
-import HelveticaNeueLTStdRomanWoff from './fonts/HelveticaNeueLTStd-Roman.woff'
-import HelveticaNeueLTStdRomanOtf from './fonts/HelveticaNeueLTStd-Roman.otf'
+// DM Sans Medium
+import DMSansMediumEot from './fonts/DMSans-Medium.eot'
+import DMSansMediumWoff2 from './fonts/DMSans-Medium.woff2'
+import DMSansMediumWoff from './fonts/DMSans-Medium.woff'
+import DMSansMediumOtf from './fonts/DMSans-Medium.otf'
 
-// Helvetica Monospace Regular
-import HelveticaMonospacedProRgEot from './fonts/HelveticaMonospacedPro-Rg.eot'
-import HelveticaMonospacedProRgWoff2 from './fonts/HelveticaMonospacedPro-Rg.woff2'
-import HelveticaMonospacedProRgWoff from './fonts/HelveticaMonospacedPro-Rg.woff'
-import HelveticaMonospacedProRgOtf from './fonts/HelveticaMonospacedPro-Rg.otf'
+// DM Sans Medium Italic
+import DMSansMediumItalicEot from './fonts/DMSans-MediumItalic.eot'
+import DMSansMediumItalicWoff2 from './fonts/DMSans-MediumItalic.woff2'
+import DMSansMediumItalicWoff from './fonts/DMSans-MediumItalic.woff'
+import DMSansMediumItalicOtf from './fonts/DMSans-MediumItalic.otf'
+
+// DM Sans Regular
+import DMSansRegularEot from './fonts/DMSans-Regular.eot'
+import DMSansRegularWoff2 from './fonts/DMSans-Regular.woff2'
+import DMSansRegularWoff from './fonts/DMSans-Regular.woff'
+import DMSansRegularOtf from './fonts/DMSans-Regular.otf'
 
 // ___________________________________________________________________
 
 const Typography = css`
-  /* Helvetica Neue Condensed Regular */
+  /* Arial Narrow */
   @font-face {
-    font-family: 'HelveticaCondensed';
-    src: url(${HelveticaNeueLTStdCnEot});
-    src: url(${HelveticaNeueLTStdCnWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdCnWoff}) format('woff'),
-      url(${HelveticaNeueLTStdCnOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdCnEot}?#iefix) format('embedded-opentype');
+    font-family: 'Arial Narrow';
+    src: url(${ArialNarrowEot});
+    src: url(${ArialNarrowWoff2}) format('woff2'),
+      url(${ArialNarrowWoff}) format('woff'),
+      url(${ArialNarrowOtf}) format('opentype'),
+      url(${ArialNarrowEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Helvetica Neue Condensed Medium */
+  /* DM Sans Regular */
   @font-face {
-    font-family: 'HelveticaCondensed';
-    src: url(${HelveticaNeueLTStdMdCnEot});
-    src: url(${HelveticaNeueLTStdMdCnWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdMdCnWoff}) format('woff'),
-      url(${HelveticaNeueLTStdMdCnOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdMdCnEot}?#iefix) format('embedded-opentype');
+    font-family: 'DM Sans';
+    src: url(${DMSansRegularEot});
+    src: url(${DMSansRegularWoff2}) format('woff2'),
+      url(${DMSansRegularWoff}) format('woff'),
+      url(${DMSansRegularOtf}) format('opentype'),
+      url(${DMSansRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* DM Sans Italic */
+  @font-face {
+    font-family: 'DM Sans';
+    src: url(${DMSansItalicEot});
+    src: url(${DMSansItalicWoff2}) format('woff2'),
+      url(${DMSansItalicWoff}) format('woff'),
+      url(${DMSansItalicOtf}) format('opentype'),
+      url(${DMSansItalicEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  /* DM Sans Medium  */
+  @font-face {
+    font-family: 'DM Sans';
+    src: url(${DMSansMediumEot});
+    src: url(${DMSansMediumWoff2}) format('woff2'),
+      url(${DMSansMediumWoff}) format('woff'),
+      url(${DMSansMediumOtf}) format('opentype'),
+      url(${DMSansMediumEot}?#iefix) format('embedded-opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
-  /* Helvetica Neue Light */
+  /* DM Sans Medium Italic */
   @font-face {
-    font-family: 'Helvetica';
-    src: url(${HelveticaNeueLTStdLtEot});
-    src: url(${HelveticaNeueLTStdLtWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdLtWoff}) format('woff'),
-      url(${HelveticaNeueLTStdLtOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdLtEot}?#iefix) format('embedded-opentype');
-    font-weight: 300;
-    font-style: normal;
+    font-family: 'DM Sans';
+    src: url(${DMSansMediumItalicEot});
+    src: url(${DMSansMediumItalicWoff2}) format('woff2'),
+      url(${DMSansMediumItalicWoff}) format('woff'),
+      url(${DMSansMediumItalicOtf}) format('opentype'),
+      url(${DMSansMediumItalicEot}?#iefix) format('embedded-opentype');
+    font-weight: 500;
+    font-style: italic;
     font-display: swap;
   }
 
-  /* Helvetica Neue Roman */
+  /* DM Sans Bold */
   @font-face {
-    font-family: 'Helvetica';
-    src: url(${HelveticaNeueLTStdRomanEot});
-    src: url(${HelveticaNeueLTStdRomanWoff2}) format('woff2'),
-      url(${HelveticaNeueLTStdRomanWoff}) format('woff'),
-      url(${HelveticaNeueLTStdRomanOtf}) format('opentype'),
-      url(${HelveticaNeueLTStdRomanEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* Helvetica Monospace Regular */
-  @font-face {
-    font-family: 'HelveticaMono';
-    src: url(${HelveticaMonospacedProRgEot});
-    src: url(${HelveticaMonospacedProRgWoff2}) format('woff2'),
-      url(${HelveticaMonospacedProRgWoff}) format('woff'),
-      url(${HelveticaMonospacedProRgOtf}) format('opentype'),
-      url(${HelveticaMonospacedProRgEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
+    font-family: 'DM Sans';
+    src: url(${DMSansBoldEot});
+    src: url(${DMSansBoldWoff2}) format('woff2'),
+      url(${DMSansBoldWoff}) format('woff'),
+      url(${DMSansBoldOtf}) format('opentype'),
+      url(${DMSansBoldEot}?#iefix) format('embedded-opentype');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
@@ -146,10 +165,10 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: ${theme.fontWeights.medium};
+    font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: 0.5px;
-    margin: 0 0 0.25em;
+    margin: 0 0 ${theme.space[2]};
     transition: ${theme.transition.all};
   }
 
@@ -165,7 +184,6 @@ const Typography = css`
   h1,
   .text--xxl {
     font-size: calc(${theme.root.font.lg} * 1.15);
-    font-weight: 500;
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.root.font.xl};
@@ -175,7 +193,6 @@ const Typography = css`
   h2,
   .text--xl {
     font-size: ${theme.root.font.lg};
-    font-weight: 400;
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.root.font.lg} * 1.25);
@@ -185,8 +202,6 @@ const Typography = css`
   h3,
   .text--lg {
     font-size: ${theme.root.font.md};
-    /* line-height: ${theme.root.font.bodyLineHeight}; */
-    margin: 0 0 0.5em;
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.root.font.lg};
@@ -196,31 +211,21 @@ const Typography = css`
   h4,
   .text--md {
     font-size: ${theme.fontSizes[2]};
-    font-weight: 500;
-    /* line-height: ${theme.root.font.bodyLineHeight}; */
-    text-transform: uppercase;
-    margin: 0 0 0.5em;
 
     @media ${theme.mq.tablet} {
-      margin: 0 0 1.5em;
     }
   }
 
   h5,
   .text--sm {
     font-size: ${theme.fontSizes[1]};
-    /* font-weight: 400; */
-    line-height: ${theme.root.font.bodyLineHeight};
-    text-transform: uppercase;
-    margin: 0 0 1em;
 
     @media ${theme.mq.tablet} {
-      margin: 0 0 1.5em;
     }
   }
 
   small {
-    font-size: ${theme.root.font.sm};
+    font-size: calc(${theme.fontSizes[1]} / 1.15);
   }
 
   .text--xs {
@@ -229,8 +234,9 @@ const Typography = css`
 
   p {
     font-size: ${theme.root.font.baseSize};
+    font-weight: ${theme.fontWeights.medium};
     line-height: ${theme.root.font.bodyLineHeight};
-    margin-bottom: 1.5em;
+    margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[2]};
@@ -273,18 +279,18 @@ const Typography = css`
 
     transition: ${theme.transition.all};
 
-    /* color: ${theme.colors.primary}; */
+    color: ${theme.colors.primary};
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: ${darken(0.05, `${theme.colors.secondary}`)};
+      color: ${theme.colors.text};
     }
   }
 
   mark {
-    background-color: ${theme.colors.primary};
-    padding: ${theme.space[2]} ${theme.space[2]} ${theme.space[1]} ${theme.space[2]};
+    background-color: ${theme.colors.quaternary};
+    padding: ${theme.space[1]};
   }
 
   .t--link {

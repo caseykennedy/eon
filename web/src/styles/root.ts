@@ -12,7 +12,18 @@ import theme from '../../config/theme'
 
 const RootVariables = css`
   :root {
-    --root-size: 6rem;
+
+    /* -------------------------------- 
+    Spacing
+    -------------------------------- */
+    --space-unit: 1em;
+    --space-xxs:  calc(0.25 * var(--space-unit));
+    --space-xs:   calc(0.5 * var(--space-unit));
+    --space-sm:   calc(0.75 * var(--space-unit));
+    --space-md:   calc(1.25 * var(--space-unit));
+    --space-lg:   calc(2 * var(--space-unit));
+    --space-xl:   calc(3.25 * var(--space-unit));
+    --space-xxl:  calc(5.25 * var(--space-unit));
 
     /* -------------------------------- 
     Typography
@@ -37,14 +48,13 @@ const RootVariables = css`
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
     /* line-height */
-    --heading-line-height: 1.1;
+    --heading-line-height: 1.15;
     --body-line-height: 1.65;
   }
 
   @media ${theme.mq.tablet} {
     :root {
-      --root-size: 8rem;
-      --text-base-size: 1.1em;
+      --text-base-size: 1.15em;
     }
   }
 `

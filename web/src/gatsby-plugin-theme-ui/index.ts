@@ -5,7 +5,9 @@
 
 type ThemeShape = {
   breakpoints: string[]
-  mq: string[]
+  mq: {
+    [key: string]: string
+  }
   colors: {
     [key: string]: string
   }
@@ -29,6 +31,7 @@ type ThemeShape = {
   logoWidth: string
   headerHeight: string
   iconWidth: string
+  buttons: any
   grid: {
     [key: string]: string
   }
@@ -45,8 +48,10 @@ type ThemeShape = {
   root: {
     mouseX: string
     mouseY: string
-    space: string
     font: {
+      [key: string]: string
+    }
+    space: {
       [key: string]: string
     }
   }
@@ -55,7 +60,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['780px', '1024px']
+const breakpoints: string[] = ['600px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -67,13 +72,10 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   breakpoints,
-  mq: breakpoints.map(
-    (bp) => `@media only screen and (min-width: ${bp})`
-  ),
-  // mq: {
-  //   tablet: `(min-width: ${breakpoints[0]})`,
-  //   desktop: `(min-width: ${breakpoints[1]})`
-  // },
+  mq: {
+    tablet: `(min-width: ${breakpoints[0]})`,
+    desktop: `(min-width: ${breakpoints[1]})`
+  },
 
   // Color palette
   // ___________________________________________________________________
@@ -81,45 +83,41 @@ const theme: ThemeShape = {
   colors: {
     text: '#09040b',
     background: '#ffffff',
-    
+
     primary: '#4073b2',
     secondary: '#09040b',
-
-    accent: '',
-    muted: '',
-
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',
 
     black: '#000000',
-    white: '#ffffff',
+    white: '#ffffff'
   },
 
   // Space
   // ___________________________________________________________________
 
   space: [
-    '0',          // 0
-    '0.25rem',    // 1
-    '0.5rem',     // 2
-    '1rem',       // 3
-    '1.5rem',     // 4
-    '2rem',       // 5
-    '3rem',       // 6
-    '4rem',       // 7
-    '6rem',       // 8
-    '10rem',      // 9
-    '12rem',      // 10
-    '14rem',      // 11
-    '16rem',      // 12
-    '18rem'       // 13
+    '0', // 0
+    'var(--space-xxs)',
+    'var(--space-xs)',
+    'var(--space-sm)',
+    'var(--space-md)',
+    'var(--space-lg)',
+    'var(--space-xl)',
+    'var(--space-xxl)',
+    '6rem', // 8
+    '10rem', // 9
+    '12rem', // 10
+    '14rem', // 11
+    '16rem', // 12
+    '18rem' // 13
   ],
 
   // Left/Right gutter
   gutter: {
     tablet: '2rem',
     desktop: '4rem',
-    axis: [5, 7],
+    axis: [5, 7]
   },
 
   // Typography
@@ -132,18 +130,17 @@ const theme: ThemeShape = {
   },
 
   fontSizes: [
-    'var(--text-xs)',         // 0
-    'var(--text-sm)',         // 1
-    'var(--text-base-size)',  // 2
-    'var(--text-md)',         // 3
-    'var(--text-lg)',         // 4
-    'var(--text-xl)',         // 5
-    'var(--text-xxl)',        // 6
-    'var(--text-xxxl)',       // 7
+    'var(--text-xs)', // 0
+    'var(--text-sm)', // 1
+    'var(--text-base-size)', // 2
+    'var(--text-md)', // 3
+    'var(--text-lg)', // 4
+    'var(--text-xl)', // 5
+    'var(--text-xxl)', // 6
+    'var(--text-xxxl)' // 7
   ],
 
-  Heading: {
-  },
+  Heading: {},
 
   fontWeights: {
     light: 300,
@@ -160,6 +157,48 @@ const theme: ThemeShape = {
   logoWidth: '225px',
   headerHeight: '180px',
   iconWidth: '18px',
+
+  buttons: {
+    primary: {
+      boxSizing: 'border-box',
+      fontFamily: 'body',
+      fontSize: 2,
+      fontWeight: 'bold',
+      color: 'background',
+      bg: 'primary',
+      borderRadius: 'default',
+      border: '1px solid',
+      borderColor: 'primary',
+      transition: 'all 0.3s ease 0s',
+      transitionProperty: 'all',
+      transitionDuration: '0.3s',
+      transitionTimingFunction: 'ease',
+      transitionDelay: '0s',
+      ':hover,:focus,.active': {
+        bg: 'white',
+        border: '1px solid',
+        borderColor: 'primary',
+        color: 'primary',
+        textDecoration: 'none',
+      },
+    },
+    outline: {
+      variant: 'buttons.primary',
+      color: 'primary',
+      bg: 'transparent',
+      boxShadow: 'inset 0 0 2px',
+    },
+    secondary: {
+      variant: 'buttons.primary',
+      color: 'background',
+      bg: 'secondary',
+    },
+    disabled: {
+      variant: 'buttons.primary',
+      color: 'white',
+      bg: 'gray',
+    },
+  },
 
   // Base
   // ___________________________________________________________________
@@ -185,13 +224,12 @@ const theme: ThemeShape = {
   root: {
     mouseX: 'var(--mouse-x)',
     mouseY: 'var(--mouse-y)',
-    space: 'var(--root-size)',
     font: {
       // Base sizing
       baseSize: 'var(--text-base-size)',
       scaleRatio: 'var(--text-scale-ratio)',
       baseLetterSpacing: 'var(--text-base-letter-spacing)',
-  
+
       // Type scale
       xs: 'var(--text-xs)',
       sm: 'var(--text-sm)',
@@ -200,10 +238,19 @@ const theme: ThemeShape = {
       xl: 'var(--text-xl)',
       xxl: 'var(--text-xxl)',
       xxxl: 'var(--text-xxxl)',
-  
+
       // Line height
       headingLineHeight: 'var(--heading-line-height)',
       bodyLineHeight: 'var(--body-line-height)'
+    },
+    space: {
+      xxs: 'var(--space-xxs)',
+      xs: 'var(--space-xs)',
+      sm: 'var(--space-sm)',
+      md: 'var(--space-md)',
+      lg: 'var(--space-lg)',
+      xl: 'var(--space-xl)',
+      xxl: 'var(--space-xxl)'
     }
   }
 }
