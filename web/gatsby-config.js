@@ -25,7 +25,37 @@ module.exports = {
     ogLanguage: config.ogLanguage,
     author: config.author,
     twitter: config.userTwitter,
-    facebook: config.ogSiteName
+    facebook: config.ogSiteName,
+    gatsbyStorefrontConfig: {
+      storeName: 'Gatsby Storefront',
+      storeDescription: 'Demo store description',
+      email: 'info@gatsbystorefront.com',
+      logoUrl: '',
+      company: 'Gatsby Storefront Inc.',
+      location: 'New York, NY',
+      address: '1 Centre St.',
+      phone: '+1 (800) 123-1234',
+      workingDays: 'Mon - Fri',
+      workingHours: '8AM - 6PM',
+      socialNetworks: [],
+      payments: [],
+      // For available socia share buttons see: https://github.com/nygardk/react-share
+      shareButtons: [],
+      googleAnalyticsId: 'UA-141525658-3',
+      isShopifyLite: false,
+      gatsbyImageProps: {},
+      //
+      // Main page types: "carousel", "collection", "product"
+      //
+      mainPage: [],
+      // Menu types: "header", "collection", "product", "link"
+      menu: {},
+      footerLinks: [],
+      locales: 'en-US',
+      currency: 'USD',
+      productsPerCollectionPage: '9',
+      articlesPerBlogPage: '6'
+    }
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -47,6 +77,15 @@ module.exports = {
         token: process.env.GATSBY_SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true
+      }
+    },
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        // The domain name of your Shopify shop.
+        shopName: process.env.GATSBY_SHOP_NAME,
+        // The storefront access token
+        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN
       }
     },
     {

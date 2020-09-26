@@ -16,7 +16,23 @@ const HomePage: React.FC = () => {
   // const data = useHomePage()
   return (
     <S.HomePage p={5}>
-      <h1>professional-grade hand sanitation, made easy.</h1>
+      <Box py={7} />
+      <h1>
+        sanitation you can count on in a convenient, easy to carry size. Plus,
+        its high performance formulation means it doesn’t immediately dry your
+        hands or leave them sticky.
+      </h1>
+
+      <p>
+        Sanitation you can count on in a convenient, easy to carry size. Plus,
+        its high performance formulation means it doesn’t immediately dry your
+        hands or leave them sticky.
+      </p>
+
+      <br />
+      <hr />
+      <br />
+
       <h2>professional-grade hand sanitation, made easy.</h2>
       <h3>professional-grade hand sanitation, made easy.</h3>
       <h4>professional-grade hand sanitation, made easy.</h4>

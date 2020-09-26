@@ -1,7 +1,7 @@
 // import * as useSiteSettings from '../src/hooks/useSiteSettings'
 // const settings = useSiteSettings
 
-const settings = require.resolve('../src/hooks/useSiteSettings.tsx')
+const settings = require.resolve('../src/hooks/useSiteSettings.ts')
 
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
