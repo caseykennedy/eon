@@ -5,10 +5,10 @@
 import styled from 'styled-components'
 
 // Elements
-import { Heading } from '../'
+import { Heading } from '..'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

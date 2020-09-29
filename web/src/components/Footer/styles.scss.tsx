@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { Box, Flex, Heading } from '../../elements'
+import { Box, Flex, Heading } from '../ui'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________

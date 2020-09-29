@@ -5,7 +5,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { Box } from '../../../elements'
+import { Box } from '../../ui'
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 

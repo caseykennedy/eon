@@ -10,7 +10,7 @@ import { darken } from 'polished'
 import theme from '../../../config/theme'
 
 // Elements
-import { Box, Flex } from '../../elements'
+import { Box, Flex } from '../ui'
 
 // Begin Styles
 // ___________________________________________________________________

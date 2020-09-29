@@ -59,7 +59,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['600px', '1024px']
+const breakpoints: string[] = ['780px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -82,11 +82,13 @@ const theme: ThemeShape = {
   colors: {
     text: '#09040b',
     background: '#ffffff',
+    cta: '#39b14a',
 
     primary: '#4073b2',
     secondary: '#09040b',
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',
+    quinary: '#dcedff',
 
     black: '#000000',
     white: '#ffffff'
@@ -96,20 +98,20 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   space: [
-    '0', // 0
-    'var(--space-xxs)',
-    'var(--space-xs)',
-    'var(--space-sm)',
-    'var(--space-md)',
-    'var(--space-lg)',
-    'var(--space-xl)',
-    'var(--space-xxl)',
-    '6rem', // 8
-    '10rem', // 9
-    '12rem', // 10
-    '14rem', // 11
-    '16rem', // 12
-    '18rem' // 13
+    '0',                     // 0
+    'var(--space-xxs)',      // 1
+    'var(--space-xs)',       // 2
+    'var(--space-sm)',       // 3
+    'var(--space-md)',       // 4
+    'var(--space-lg)',       // 5
+    'var(--space-xl)',       // 6
+    'var(--space-xxl)',      // 7
+    '6rem',                  // 8
+    '10rem',                 // 9
+    '12rem',                 // 10
+    '14rem',                 // 11
+    '16rem',                 // 12
+    '18rem'                  // 13
   ],
 
   // Left/Right gutter
@@ -153,8 +155,8 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '100vw',
-  logoWidth: '225px',
-  headerHeight: '180px',
+  logoWidth: '76px',
+  headerHeight: '56px',
   iconWidth: '18px',
 
   // Base
@@ -165,7 +167,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.222s ease-in-out'
+    all: 'all 0.444s ease-in-out',
+    global: '0.444s ease-in-out'
   },
 
   transform: {

@@ -5,7 +5,7 @@
 import styled from 'styled-components'
 import { animated } from 'react-spring'
 
-import { Box, Flex } from '../../elements'
+import { Box, Flex } from '../ui'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________

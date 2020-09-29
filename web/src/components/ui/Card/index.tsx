@@ -5,9 +5,9 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { Box, Flex, Heading, AnimatedBox } from '../../elements'
+import { Box, Flex, Heading, AnimatedBox } from '..'
 
-import theme from '../../../config/theme'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

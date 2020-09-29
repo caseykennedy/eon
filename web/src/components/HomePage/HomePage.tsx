@@ -4,7 +4,8 @@
 
 import React from 'react'
 
-import { Box, Button } from 'theme-ui'
+import { Box } from '../ui'
+import Button from '../ui/Button'
 
 // Theme
 import * as S from './styles.scss'
@@ -17,11 +18,12 @@ const HomePage: React.FC = () => {
   return (
     <S.HomePage p={5}>
       <Box py={7} />
-      <h1>
-        sanitation you can count on in a convenient, easy to carry size. Plus,
-        its high performance formulation means it doesn’t immediately dry your
-        hands or leave them sticky.
-      </h1>
+      <Box width={[1, 2 / 3]}>
+        <h1>
+          eOn is professional-grade hand sanitation made easy. One quick spray
+          is all it takes to know your hands are 100% clean.
+        </h1>
+      </Box>
 
       <p>
         Sanitation you can count on in a convenient, easy to carry size. Plus,

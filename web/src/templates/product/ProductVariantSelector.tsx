@@ -35,15 +35,15 @@ const ProductVariantSelector = (props: any) => {
   }
 
   const getVariantFromSelectedOptions = (options, variants) => {
-    let variantSelectedOptions
+    let variantSelectedOptions: object
     let availableForSale
     let shopifyId = false
     let price
     let compareAtPrice
     let sku
 
-    variants.forEach(v => {
-      v.selectedOptions.forEach(o => {
+    variants.forEach((v: any) => {
+      v.selectedOptions.forEach((o: any) => {
         variantSelectedOptions = {
           ...variantSelectedOptions,
           [o.name]: o.value
@@ -78,8 +78,8 @@ const ProductVariantSelector = (props: any) => {
               - currently 3 is a max number of product options 
               */
               <Box width={1 / 3} mx={1} key={`box-${option.name}-${index}`}>
-                {/* <Label htmlFor={option.name}>{option.name}</Label>
-                <Select
+                <label htmlFor={option.name}>{option.name}</label>
+                <select
                   onChange={event => {
                     handleOptionsSelect(option.name, event.target.value)
                   }}
@@ -95,7 +95,7 @@ const ProductVariantSelector = (props: any) => {
                       {value}
                     </option>
                   ))}
-                </Select> */}
+                </select>
               </Box>
             )
           })}

@@ -5,7 +5,7 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { AnimatedFlex } from '../../elements'
+import { AnimatedFlex } from '../ui'
 
 import theme from '../../../config/theme'
 

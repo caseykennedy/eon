@@ -5,7 +5,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Box, Flex, Text } from '../../../elements'
+import { Box, Flex, Text } from '../../ui'
 
 import theme from '../../../../config/theme'
 

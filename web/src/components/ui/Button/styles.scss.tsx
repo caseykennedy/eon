@@ -6,8 +6,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { lighten } from 'polished'
 
-import { Box, Flex, Heading } from '../'
-import theme from '../../../config/theme'
+import { Box, Flex, Heading } from '..'
+import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 

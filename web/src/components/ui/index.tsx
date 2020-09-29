@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { animated } from 'react-spring'
 
 // Theme
-import theme from '../../config/theme'
+import theme from '../../../config/theme'
 
 import {
   space,

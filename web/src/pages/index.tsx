@@ -5,9 +5,6 @@
 // Libraries
 import React from 'react'
 
-// Elements
-import { AnimatedBox } from '../elements'
-
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'

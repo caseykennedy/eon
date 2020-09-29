@@ -7,7 +7,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { useTransition } from 'react-spring'
 
-import { Box, Text } from '../../../elements'
+import { Box, Text } from '../../ui'
 
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'

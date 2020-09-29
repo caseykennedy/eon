@@ -7,7 +7,7 @@
 import * as React from 'react'
 
 // Components
-import { Box, Flex } from '../../elements'
+import { Box, Flex } from '../ui'
 import styled from 'styled-components'
 
 // Theme
