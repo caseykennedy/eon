@@ -21,6 +21,7 @@ export const Header = styled(Flex)`
 
   /* background: ${theme.colors.quinary}
   ; */
+  border-top: ${theme.border};
   border-bottom: ${theme.border};
   height: ${theme.headerHeight};
   position: sticky;

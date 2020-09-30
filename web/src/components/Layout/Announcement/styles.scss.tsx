@@ -13,20 +13,19 @@ import Headroom from 'react-headroom'
 
 export const Announcement = styled(motion.div)`
   display: flex;
-  border-bottom: ${theme.border};
   height: ${theme.headerHeight};
-
+  max-height: 0;
   opacity: 0;
+  top: -1px;
   padding: 0 calc(${theme.space[3]});
   position: relative;
-  max-height: 0;
   visibility: hidden;
 
   &.announcement {
     &--open {
       opacity: 1;
-      visibility: visible;
       top: 0;
+      visibility: visible;
       max-height: ${theme.headerHeight};
     }
   }

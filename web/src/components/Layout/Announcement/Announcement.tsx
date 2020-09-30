@@ -23,8 +23,8 @@ import Overlay from '../../Overlay'
 // ___________________________________________________________________
 
 type Props = {
-  handleExit: () => any
-  isPortalOpen: boolean
+  handleExit?: () => any
+  isPortalOpen?: boolean
 } & typeof defaultProps
 const defaultProps = {
   announcement: 'Announcement bar',
