@@ -58,7 +58,9 @@ export const Header = styled(Flex)`
         background: ${theme.colors.quinary};
         border: ${theme.border};
         border-radius: ${theme.space[6]};
+        
         cursor: pointer;
+        outline: none;
         padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
 
         font-weight: 500;
@@ -66,35 +68,66 @@ export const Header = styled(Flex)`
         transition: background ${theme.transition.global};
 
         &:hover {
+          background: ${darken(0, theme.colors.cta)};
+          color: ${theme.colors.white};
+          border-color: ${theme.colors.cta};
+        }
+
+        &:active {
           background: ${theme.colors.black};
           color: ${theme.colors.white};
+          border-color: ${theme.colors.black};
         }
 
         &.header--stuck {
           background: ${theme.colors.cta};
           border-color: ${theme.colors.cta};
           color: ${theme.colors.white};
+
+          &:hover {
+            background: ${darken(0.08, theme.colors.cta)};
+            /* color: ${theme.colors.white}; */
+          }
+
+          &:active {
+            background: ${theme.colors.black};
+            color: ${theme.colors.white};
+            border-color: ${theme.colors.black};
+          }
         }
       }
     }
 
     &-toggle {
       display: flex;
+      align-items: center;
       border-right: ${theme.border};
       color: ${theme.colors.text};
       cursor: pointer;
 
       height: 100%;
-      padding-right: ${theme.space[5]};
+      width: 70px;
       padding-left: ${theme.space[3]};
+      
+      transition: background ${theme.transition.global};
 
-      @media ${theme.mq.desktop} {
-        padding-right: ${theme.space[6]};
+      @media ${theme.mq.tablet} {
+        width: 100px;
       }
+
+      &:hover {
+        background: ${darken(0.08, theme.colors.quinary)};
+      }
+
+      /* &:active {
+        background: ${theme.colors.black};
+        color: ${theme.colors.white};
+        border-color: ${theme.colors.black};
+      } */
 
       span {
         svg {
-          width: 36.18px;
+          /* width: 36.18px; */
         }
       }
     }
@@ -108,11 +141,17 @@ export const Header = styled(Flex)`
       cursor: pointer;
 
       height: 100%;
+      width: 70px;
       padding-right: ${theme.space[3]};
-      padding-left: ${theme.space[5]};
 
-      @media ${theme.mq.desktop} {
-        padding-left: ${theme.space[6]};
+      transition: background ${theme.transition.global};
+
+      @media ${theme.mq.tablet} {
+        width: 100px;
+      }
+
+      &:hover {
+        background: ${darken(0.08, theme.colors.quinary)};
       }
 
       span {

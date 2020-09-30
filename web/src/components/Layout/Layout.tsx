@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components'
 // import { ParallaxProvider } from 'react-scroll-parallax'
 
 // Components
+import Announcement from './Announcement'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -39,6 +40,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <S.Wrapper>
+        <Announcement
+          announcement="Hello there! Looking for eOn multi-surface disinfectant?"
+          to="/eon"
+        />
         <Header mainRef={mainRef} />
         <S.Main ref={mainRef}>{children}</S.Main>
         <Footer />

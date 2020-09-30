@@ -6,17 +6,18 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
-import { Parallax } from 'react-scroll-parallax'
+import HamburgerMenu from 'react-hamburger-menu'
 
 // Hooks
 import useScrollWatch from '../../hooks/useScrollWatch'
 
 import Logo from '../Logo'
 import Navigation from './Navigation'
-import NavLinks from './NavLinks'
-import Overlay from '../Overlay'
+import NavigationMobile from './NavigationMobile'
+import Portal from '../Portal'
 import Button from '../ui/Button'
 import Icon from '../Icons'
+import Overlay from '../Overlay'
 
 // Elements
 import { Box } from '../ui'
@@ -64,27 +65,23 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   const headerBG = shouldShowBackground
     ? theme.colors.background
     : theme.colors.quinary
-  const buttonBG = !shouldShowBackground
-    ? theme.colors.quinary
-    : theme.colors.cta
-  const buttonColor = !shouldShowBackground
-    ? theme.colors.text
-    : theme.colors.white
 
   return (
     <>
-      <Overlay
+      <Portal
         id="nav-root"
         root="root"
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
         mainRef={mainRef}
-        className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
       >
-        <NavLinks handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
-      </Overlay>
-
-      <Box bg="black" pb="1px" mt="52px" />
+        <Overlay className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}>
+          <NavigationMobile
+            handleExit={() => setNavOpen(false)}
+            isNavOpen={isNavOpen}
+          />
+        </Overlay>
+      </Portal>
 
       <S.Header bg={headerBG}>
         <div
@@ -92,7 +89,17 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           onClick={toggleModal}
           aria-label="toggle menu"
         >
-          <Icon name="hamburger" color="black" />
+          <HamburgerMenu
+            isOpen={!isNavOpen ? false : true}
+            menuClicked={toggleModal}
+            width={36}
+            height={16}
+            strokeWidth={2}
+            rotate={0}
+            color="black"
+            borderRadius={0}
+            animationDuration={0.333}
+          />
         </div>
 
         <div className="header-inner">

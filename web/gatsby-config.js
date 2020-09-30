@@ -83,9 +83,9 @@ module.exports = {
       resolve: `gatsby-source-shopify`,
       options: {
         // The domain name of your Shopify shop.
-        shopName: process.env.GATSBY_SHOP_NAME,
+        shopName: `eonmist`,
         // The storefront access token
-        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN
+        accessToken: `9fa1bdbbcdabe920e38f46991babfe14`
       }
     },
     {

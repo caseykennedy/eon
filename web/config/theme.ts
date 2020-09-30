@@ -118,7 +118,7 @@ const theme: ThemeShape = {
   gutter: {
     tablet: '2rem',
     desktop: '4rem',
-    axis: [5, 7]
+    axis: [5, 6]
   },
 
   // Typography
@@ -155,7 +155,7 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '100vw',
-  logoWidth: '76px',
+  logoWidth: '70px',
   headerHeight: '56px',
   iconWidth: '18px',
 
@@ -167,8 +167,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.444s ease-in-out',
-    global: '0.444s ease-in-out'
+    all: 'all 0.333s ease-in-out',
+    global: '0.333s ease-in-out'
   },
 
   transform: {

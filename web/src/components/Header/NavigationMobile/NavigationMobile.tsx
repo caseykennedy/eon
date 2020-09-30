@@ -1,4 +1,4 @@
-// NavLinks:
+// NavigationMobile:
 // Navigation links
 
 // ___________________________________________________________________
@@ -33,16 +33,14 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 
   return (
     <S.NavLink onClick={handleExitOnClick} style={transition}>
-      <Box className="nav-mobile-sub">
-        <Link to={item.link} className="nav-mobile__link">
-          {item.name}
-        </Link>
-      </Box>
+      <Link to={item.link} className="nav-mobile__link">
+        {item.name}
+      </Link>
     </S.NavLink>
   )
 }
 
-const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
+const NavigationMobile: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
   const navTransitions = useTransition(
     isNavOpen ? navData : [],
     item => item.name,
@@ -74,29 +72,21 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
   )
 }
 
-export default NavLinks
+export default NavigationMobile
 
 // ___________________________________________________________________
 
 const navData = [
   {
-    name: 'rethink',
+    name: 'about',
     link: '/rethink'
   },
   {
-    name: 'about oic',
+    name: 'how it works',
     link: '/about'
   },
   {
-    name: 'implants',
+    name: 'tips & faq',
     link: '/implants'
-  },
-  {
-    name: 'news',
-    link: '/news'
-  },
-  {
-    name: 'contact',
-    link: '/contact'
   }
 ]
