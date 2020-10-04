@@ -18,6 +18,7 @@ import Portal from '../Portal'
 import Button from '../ui/Button'
 import Icon from '../Icons'
 import Overlay from '../Overlay'
+import Cart from '../Cart'
 
 // Elements
 import { Box } from '../ui'
@@ -62,9 +63,9 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   })
 
   // Scroll state styles
-  const headerBG = shouldShowBackground
+  const headerBG = !shouldShowBackground
     ? theme.colors.background
-    : theme.colors.quinary
+    : `rgb(255, 255, 255, 0.7)`
 
   return (
     <>
@@ -84,7 +85,8 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       </Portal>
 
       <S.Header bg={headerBG}>
-        <div
+        <Box
+          bg={`${isNavOpen && theme.colors.quinary}`}
           className="header-toggle"
           onClick={toggleModal}
           aria-label="toggle menu"
@@ -92,15 +94,15 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <HamburgerMenu
             isOpen={!isNavOpen ? false : true}
             menuClicked={toggleModal}
-            width={36}
-            height={16}
-            strokeWidth={2}
+            width={32}
+            height={12}
+            strokeWidth={1.5}
             rotate={0}
             color="black"
             borderRadius={0}
             animationDuration={0.333}
           />
-        </div>
+        </Box>
 
         <div className="header-inner">
           <div className="header-logo">
@@ -116,9 +118,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </div>
         </div>
 
-        <div className="header-cart">
-          <Icon name="bag" color="black" />
-        </div>
+        <Cart />
       </S.Header>
     </>
   )

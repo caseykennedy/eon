@@ -80,6 +80,10 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
+    // Standard Colors
+    black: '#000000',
+    white: '#ffffff',
+
     text: '#09040b',
     background: '#ffffff',
     cta: '#39b14a',
@@ -90,8 +94,14 @@ const theme: ThemeShape = {
     quaternary: '#C4C4c4',
     quinary: '#dcedff',
 
-    black: '#000000',
-    white: '#ffffff'
+    // Theme colors
+    lightgray: '#EEEEEE',
+    gray: '#C4C4c4',
+    darkgray: '#9D9FA2',
+    darknight: '#09040b',
+    babyblue: '#dcedff',
+    skyblue: '#4073b2',
+    moneygreen: '#39b14a',
   },
 
   // Space
@@ -116,9 +126,9 @@ const theme: ThemeShape = {
 
   // Left/Right gutter
   gutter: {
-    tablet: '2rem',
-    desktop: '4rem',
-    axis: [5, 6]
+    tablet: 4,
+    desktop: 7,
+    axis: [4, 7]
   },
 
   // Typography
@@ -153,7 +163,7 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  maxWidth: '1680px',
+  maxWidth: '1440px',
   siteWidth: '100vw',
   logoWidth: '70px',
   headerHeight: '56px',

@@ -21,7 +21,6 @@ import Specs from './Specs'
 const HomePage: React.FC = () => {
   return (
     <S.HomePage>
-      <Box py={7} />
       <Hero />
       <How />
       <Specs />

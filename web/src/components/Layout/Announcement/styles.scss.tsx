@@ -13,6 +13,7 @@ import Headroom from 'react-headroom'
 
 export const Announcement = styled(motion.div)`
   display: flex;
+  background: ${theme.colors.lightgray};
   height: ${theme.headerHeight};
   max-height: 0;
   opacity: 0;

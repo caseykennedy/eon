@@ -50,8 +50,15 @@ const RootVariables = css`
 
   @media ${theme.mq.tablet} {
     :root {
+      --text-base-size: 1.05em;
+      --body-line-height: 1.35;
+      --heading-line-height: 1.25;
+    }
+  }
+
+  @media ${theme.mq.desktop} {
+    :root {
       --text-base-size: 1.15em;
-      --body-line-height: 1.65;
     }
   }
 `

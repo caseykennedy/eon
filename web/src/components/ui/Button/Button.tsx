@@ -27,7 +27,6 @@ const Button: React.FC<Props> = ({ children, to, invert }) => {
     <Link to={to}>
       <S.Button invert={invert}>
         {children}
-        <Icon name="nextArrow" />
       </S.Button>
     </Link>
   )

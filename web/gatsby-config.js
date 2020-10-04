@@ -68,6 +68,20 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
     {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        // The domain name of your Shopify shop. This is required.
+        shopName: process.env.GATSBY_SHOP_NAME,
+        // An API access token to your Shopify shop. This is required.
+        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
+        // Set verbose to true to display a verbose output on `npm run develop`
+        // or `npm run build`. This prints which nodes are being fetched and how
+        // much time was required to fetch and process the data.
+        // Defaults to true.
+        verbose: true,
+      }
+    },
+    {
       resolve: 'gatsby-source-sanity',
       options: {
         projectId,
@@ -77,15 +91,6 @@ module.exports = {
         token: process.env.GATSBY_SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true
-      }
-    },
-    {
-      resolve: `gatsby-source-shopify`,
-      options: {
-        // The domain name of your Shopify shop.
-        shopName: `eonmist`,
-        // The storefront access token
-        accessToken: `9fa1bdbbcdabe920e38f46991babfe14`
       }
     },
     {

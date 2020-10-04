@@ -21,12 +21,13 @@ export const Header = styled(Flex)`
 
   /* background: ${theme.colors.quinary}
   ; */
+  backdrop-filter: blur(9px);
   border-top: ${theme.border};
   border-bottom: ${theme.border};
   height: ${theme.headerHeight};
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 999;
 
   @media ${theme.mq.tablet} {
   }
@@ -113,11 +114,11 @@ export const Header = styled(Flex)`
       transition: background ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
-        width: 100px;
+        width: ${theme.space[7]};
       }
 
       &:hover {
-        background: ${darken(0.08, theme.colors.quinary)};
+        background: ${darken(0.05, theme.colors.quinary)};
       }
 
       /* &:active {
@@ -137,18 +138,18 @@ export const Header = styled(Flex)`
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
       border-left: ${theme.border};
       color: ${theme.colors.text};
       cursor: pointer;
 
+      padding-right: ${theme.space[3]};
       height: 100%;
       width: 70px;
-      padding-right: ${theme.space[3]};
-
       transition: background ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
-        width: 100px;
+        width: ${theme.space[7]};
       }
 
       &:hover {

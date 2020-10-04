@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { lighten } from 'polished'
+import { darken } from 'polished'
 
 import { Box, Flex, Heading } from '..'
 import theme from '../../../../config/theme'
@@ -13,38 +13,45 @@ import theme from '../../../../config/theme'
 
 export const Button = styled(Box)<{ invert?: boolean }>`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  
+  padding: calc(${theme.space[3]} / 1.15) ${theme.space[4]};
+  max-width: 400px;
 
-  width: calc(${theme.space[7]} * 4);
-  padding: calc(${theme.space[5]}) ${theme.space[3]} ${theme.space[3]};
-
-  color: ${p => p.invert ? theme.colors.white : theme.colors.text};
+  color: ${p => (!p.invert ? theme.colors.white : theme.colors.text)};
   font-family: ${theme.fonts.heading};
+  font-size: calc(${theme.fontSizes[2]} * 1.5);
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 0.5;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
-  background: ${p => !p.invert ? theme.colors.primary : theme.colors.secondary};
-  border-bottom: ${theme.border};
+  background: ${p => (!p.invert ? theme.colors.cta : theme.colors.secondary)};
+  border-radius: 6px;
   transition: ${theme.transition.all};
 
   @media ${theme.mq.desktop} {
     width: calc(${theme.space[7]} * 4);
+    font-size: ${theme.fontSizes[3]};
   }
 
   &:hover {
-    background: ${p => !p.invert ? theme.colors.secondary : theme.colors.quaternary};
-    color: ${p => !p.invert ? theme.colors.white : theme.colors.text};
+    background: ${darken(0.05, theme.colors.cta)};
+    color: ${p => (!p.invert ? theme.colors.white : theme.colors.text)};
 
     span {
       margin-right: 0;
 
       svg {
-        fill: ${p => !p.invert ? theme.colors.white : theme.colors.text};
+        fill: ${p => (!p.invert ? theme.colors.white : theme.colors.text)};
       }
     }
+  }
+
+  &:active {
+    background: ${theme.colors.black};
+    color: ${theme.colors.white};
+    border-color: ${theme.colors.black};
   }
 
   span {
@@ -53,7 +60,7 @@ export const Button = styled(Box)<{ invert?: boolean }>`
 
     svg {
       width: ${theme.iconWidth};
-      fill: ${p => p.invert ? theme.colors.white : theme.colors.secondary};
+      fill: ${p => (p.invert ? theme.colors.white : theme.colors.secondary)};
     }
   }
 `

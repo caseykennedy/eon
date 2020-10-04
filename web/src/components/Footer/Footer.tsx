@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
       <S.Footer
         as="footer"
         bg="quinary"
-        color="text"
-        p={theme.gutter.axis}
+        px={[4, 7]}
+        py={[6, 8]}
         style={{ borderTop: theme.border }}
       >
         Footer {getYear()}

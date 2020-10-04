@@ -42,7 +42,7 @@ const Message: React.FC<Props> = ({
       <Link to={to}>
         <Text dangerouslySetInnerHTML={{ __html: announcement }} />
       </Link>
-      <S.Exit onClick={handleExit}>
+      <S.Exit onClick={handleExit} aria-label="close announcement">
         <Icon name="plus" color="black" />
       </S.Exit>
     </>
@@ -53,9 +53,16 @@ const Announcement: React.FC<Props> = ({ announcement, to }) => {
   // Navigation toggle
   const [isPortalOpen, setPortalOpen] = useState(false)
   const togglePortal = () => setPortalOpen(!isPortalOpen)
-  const variants = {
-    hidden: { height: 0 },
-    visible: { height: theme.headerHeight },
+
+  // Framer animation
+  const motionProps = {
+    initial: 'hidden',
+    animate: 'visible',
+    transition: { delay: 0.5, duration: 0.5 },
+    variants: {
+      hidden: { height: 0, opacity: 0 },
+      visible: { height: theme.headerHeight, opacity: 1 }
+    }
   }
   return (
     <>
@@ -69,9 +76,7 @@ const Announcement: React.FC<Props> = ({ announcement, to }) => {
           className={`announcement ${
             !isPortalOpen ? 'announcement--open' : 'announcement--closed'
           }`}
-          initial="hidden"
-          animate="visible"
-          variants={variants}
+          {...motionProps}
         >
           {!isPortalOpen && (
             <Message

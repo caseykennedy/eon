@@ -4,6 +4,8 @@
 
 import styled from 'styled-components'
 
+import { transparentize } from 'polished'
+
 import { Box, Flex } from '../ui'
 
 import theme from '../../../config/theme'
@@ -23,14 +25,14 @@ export const Overlay = styled(Box)`
   padding: ${theme.space[5]};
 
   position: fixed;
-  top: calc(${theme.headerHeight} * 2 + 1px);
+  top: calc(${theme.headerHeight});
   left: -${overlayWidth};
   bottom: 0;
 
-  background: ${theme.colors.quinary};
-
+  background: ${transparentize(0.15, theme.colors.quinary)};
+  backdrop-filter: blur(9px);
   transition: left 0.333 ease-in-out;
-  z-index: 9999;
+  z-index: 99;
 
   &::-webkit-scrollbar {
     display: none;

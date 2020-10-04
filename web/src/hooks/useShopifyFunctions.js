@@ -36,7 +36,7 @@ function shopifyCheckoutReducer(_, action) {
 }
 
 const useShopifyFunctions = () => {
-  const client = useMemo(() => createShopifyClient(), [createShopifyClient])
+  const client = useMemo(() => createShopifyClient(), [])
 
   const [shopifyCheckoutId, setShopifyCheckoutId] = useLocalStorage(
     persistedStateId,

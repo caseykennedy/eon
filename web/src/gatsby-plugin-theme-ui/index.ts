@@ -31,7 +31,6 @@ type ThemeShape = {
   logoWidth: string
   headerHeight: string
   iconWidth: string
-  buttons: any
   grid: {
     [key: string]: string
   }
@@ -60,7 +59,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['600px', '1024px']
+const breakpoints: string[] = ['780px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -81,52 +80,64 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
+    // Standard Colors
+    black: '#000000',
+    white: '#ffffff',
+
     text: '#09040b',
     background: '#ffffff',
+    cta: '#39b14a',
 
     primary: '#4073b2',
     secondary: '#09040b',
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',
+    quinary: '#dcedff',
 
-    black: '#000000',
-    white: '#ffffff'
+    // Theme colors
+    lightgray: '#EEEEEE',
+    gray: '#C4C4c4',
+    darkgray: '#9D9FA2',
+    darknight: '#09040b',
+    babyblue: '#dcedff',
+    skyblue: '#4073b2',
+    moneygreen: '#39b14a',
   },
 
   // Space
   // ___________________________________________________________________
 
   space: [
-    '0', // 0
-    'var(--space-xxs)',
-    'var(--space-xs)',
-    'var(--space-sm)',
-    'var(--space-md)',
-    'var(--space-lg)',
-    'var(--space-xl)',
-    'var(--space-xxl)',
-    '6rem', // 8
-    '10rem', // 9
-    '12rem', // 10
-    '14rem', // 11
-    '16rem', // 12
-    '18rem' // 13
+    '0',                     // 0
+    'var(--space-xxs)',      // 1
+    'var(--space-xs)',       // 2
+    'var(--space-sm)',       // 3
+    'var(--space-md)',       // 4
+    'var(--space-lg)',       // 5
+    'var(--space-xl)',       // 6
+    'var(--space-xxl)',      // 7
+    '6rem',                  // 8
+    '10rem',                 // 9
+    '12rem',                 // 10
+    '14rem',                 // 11
+    '16rem',                 // 12
+    '18rem'                  // 13
   ],
 
   // Left/Right gutter
   gutter: {
     tablet: '2rem',
     desktop: '4rem',
-    axis: [5, 7]
+    axis: [5, 6]
   },
 
   // Typography
   // ___________________________________________________________________
 
   fonts: {
-    body: `"Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    heading: `"HelveticaCondensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    code: `"HelveticaMono", Consolas, Liberation Mono, Menlo, Courier, monospace`
+    body: `"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    legal: `"Arial Narrow", Consolas, Liberation Mono, Menlo, Courier, monospace`
   },
 
   fontSizes: [
@@ -152,53 +163,11 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  maxWidth: '1680px',
+  maxWidth: '1440px',
   siteWidth: '100vw',
-  logoWidth: '225px',
-  headerHeight: '180px',
+  logoWidth: '70px',
+  headerHeight: '56px',
   iconWidth: '18px',
-
-  buttons: {
-    primary: {
-      boxSizing: 'border-box',
-      fontFamily: 'body',
-      fontSize: 2,
-      fontWeight: 'bold',
-      color: 'background',
-      bg: 'primary',
-      borderRadius: 'default',
-      border: '1px solid',
-      borderColor: 'primary',
-      transition: 'all 0.3s ease 0s',
-      transitionProperty: 'all',
-      transitionDuration: '0.3s',
-      transitionTimingFunction: 'ease',
-      transitionDelay: '0s',
-      ':hover,:focus,.active': {
-        bg: 'white',
-        border: '1px solid',
-        borderColor: 'primary',
-        color: 'primary',
-        textDecoration: 'none',
-      },
-    },
-    outline: {
-      variant: 'buttons.primary',
-      color: 'primary',
-      bg: 'transparent',
-      boxShadow: 'inset 0 0 2px',
-    },
-    secondary: {
-      variant: 'buttons.primary',
-      color: 'background',
-      bg: 'secondary',
-    },
-    disabled: {
-      variant: 'buttons.primary',
-      color: 'white',
-      bg: 'gray',
-    },
-  },
 
   // Base
   // ___________________________________________________________________
@@ -208,7 +177,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.222s ease-in-out'
+    all: 'all 0.333s ease-in-out',
+    global: '0.333s ease-in-out'
   },
 
   transform: {
@@ -218,7 +188,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '2px solid #000000',
+  border: '1px solid #000000',
   shadow: '2rem 1.5rem 1rem #8a8a7c',
 
   root: {

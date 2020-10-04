@@ -8,9 +8,9 @@ import * as React from 'react'
 
 // Components
 import { Box, Flex } from '../ui'
-import styled from 'styled-components'
 
 // Theme
+import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
@@ -19,6 +19,7 @@ type Props = {
   bg?: string
   border?: boolean
   children: React.ReactNode
+  className?: string
   color?: string
   pt?: number | number[] | string
   pb?: number | number[] | string
@@ -33,6 +34,7 @@ const Section: React.FC<Props> = ({
   bg,
   border,
   children,
+  className,
   color,
   pt,
   pb,
@@ -42,7 +44,7 @@ const Section: React.FC<Props> = ({
   width,
   overflow
 }) => (
-  <Container
+  <S.Section
     as="section"
     border={border}
     bg={bg}
@@ -52,11 +54,12 @@ const Section: React.FC<Props> = ({
     id={id}
     width={width}
     overflow={overflow}
+    className={className}
   >
     <Box width={1} pr={pr} pl={pl} m="0 auto">
       {children}
     </Box>
-  </Container>
+  </S.Section>
 )
 
 export default Section
@@ -66,28 +69,9 @@ export default Section
 const defaultProps = {
   pt: theme.gutter.axis,
   pb: theme.gutter.axis,
-  pr: theme.gutter.axis,
-  pl: theme.gutter.axis,
+  pr: [4, 7],
+  pl: [4, 7],
   width: 1
 }
 
 Section.defaultProps = defaultProps
-
-// ___________________________________________________________________
-
-const Container = styled(Box)<{ border?: boolean, overflow?: string }>`
-  border-top: ${p => (!p.border ? 'none' : `${theme.border}`)};
-  position: relative;
-  overflow: ${p => (!p.overflow ? 'visible' : p.overflow)};
-
-  .cta {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 9;
-
-    @media ${theme.mq.tablet} {
-      right: ${theme.space[7]};
-    }
-  }
-`
