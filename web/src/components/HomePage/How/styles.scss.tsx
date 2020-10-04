@@ -13,8 +13,8 @@ import { Parallax } from 'react-scroll-parallax'
 // ___________________________________________________________________
 
 export const How = styled(Section)`
-  background: ${transparentize(0.25, theme.colors.quinary)};
-  backdrop-filter: blur(9px);
+  background: ${transparentize(0.05, theme.colors.quinary)};
+  /* backdrop-filter: blur(9px); */
   @media ${theme.mq.tablet} {
   }
 `
