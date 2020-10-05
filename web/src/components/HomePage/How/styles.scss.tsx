@@ -14,6 +14,7 @@ import { Parallax } from 'react-scroll-parallax'
 
 export const How = styled(Section)`
   background: ${transparentize(0.05, theme.colors.quinary)};
+  border-radius: 0 0 ${theme.space[9]} 0;
   /* backdrop-filter: blur(9px); */
   @media ${theme.mq.tablet} {
   }

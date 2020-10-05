@@ -8,6 +8,10 @@ import * as S from './styles.scss'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
 import theme from '../../../../config/theme'
 
+import { Grid, Cell } from 'styled-css-grid'
+
+import Section from '../../Section'
+
 import Lock from '../../Lock'
 import Rotation from '../../Rotation'
 import Spray from '../../Spray'
@@ -17,62 +21,87 @@ import Atom from '../../Atom'
 import Beaker from '../../Beaker'
 import HandFemale from '../../HandFemale'
 
+import CapTwist from '../../CapTwist'
+import SprayHand from '../../SprayHand'
+import HappyHands from '../../HappyHands'
+
 // ___________________________________________________________________
 
 type Props = {}
 
+const HowTo = () => (
+  <>
+    {data.map((item, idx) => (
+      <Cell className="figure" key={idx}>
+        {item.figure}
+        <Flex as="span">{item.spec}</Flex>
+      </Cell>
+    ))}
+  </>
+)
+
 const Specs: React.FC<Props> = () => {
   return (
-    <S.Specs bg="white">
-      <Box width={[1, 2 / 3, 1 / 2]}>
-        <Heading as="h3" mb={4}>
-          Works on contact: Immediate action against bacteria, fungi, and
-          viruses.
-        </Heading>
-        <Heading as="h3" mb={4}>
-          Child-safe{' '}
-          <span>
-            <Lock />
-          </span>
-          , zero-propellant, continuous spray{' '}
-          <span>
-            <Rotation />
-          </span>{' '}
-          actuator.
-        </Heading>
-        <Heading as="h3" mb={4}>
-          Fine mist, wide angle{' '}
-          <span>
-            <Spray />
-          </span>{' '}
-          aerosol covers hands in one quick spray{' '}
-          <span>
-            <Hand />
-          </span>
-          .
-        </Heading>
-        <Heading as="h3" mb={4}>
-          190 proof, plant-based,{' '}
-          <span>
-            <CornCob />
-          </span>{' '}
-          Food Chemical Codex approved, Ethyl Alcohol solution.{' '}
-          <span>
-            <Atom />
-          </span>
-        </Heading>
-        <Heading as="h3" mb={4}>
-          Lab tested, high performance{' '}
-          <span>
-            <Beaker />
-          </span>{' '}
-          formulation doesn’t dry or leave hands sticky.{' '}
-          <span>
-            <HandFemale />
-          </span>
-        </Heading>
-      </Box>
-    </S.Specs>
+    <>
+      <Section bg="background" pt={12} pb={10}>
+        <S.HowTo
+          columns={`repeat(auto-fit, minmax(280px, 1fr))`}
+          gap={theme.space[7]}
+        >
+          <HowTo />
+        </S.HowTo>
+      </Section>
+      <S.Specs bg="white">
+        <Box width={[1, 8 / 10]}>
+          <Heading as="h3" mb={4} className="text--xxl">
+            Works on contact: Immediate action against bacteria, fungi, and
+            viruses.
+          </Heading>
+          <Heading as="h3" mb={4} className="text--xxl">
+            Child-safe{' '}
+            <span>
+              <Lock />
+            </span>
+            , zero-propellant, continuous spray{' '}
+            <span>
+              <Rotation />
+            </span>{' '}
+            actuator.
+          </Heading>
+          <Heading as="h3" mb={4} className="text--xxl">
+            Fine mist, wide angle{' '}
+            <span>
+              <Spray />
+            </span>{' '}
+            aerosol covers hands in one quick spray{' '}
+            <span>
+              <Hand />
+            </span>
+            .
+          </Heading>
+          <Heading as="h3" mb={4} className="text--xxl">
+            190 proof, plant-based,{' '}
+            <span>
+              <CornCob />
+            </span>{' '}
+            Food Chemical Codex approved, Ethyl Alcohol solution.{' '}
+            <span>
+              <Atom />
+            </span>
+          </Heading>
+          <Heading as="h3" mb={4} className="text--xxl">
+            Lab tested, high performance{' '}
+            <span>
+              <Beaker />
+            </span>{' '}
+            formulation doesn’t dry or leave hands sticky.{' '}
+            <span>
+              <HandFemale />
+            </span>
+          </Heading>
+        </Box>
+      </S.Specs>
+    </>
   )
 }
 
@@ -86,26 +115,15 @@ Specs.defaultProps = defaultProps
 
 const data = [
   {
-    spec:
-      'Works on contact: Immediate action against bacteria, fungi, and viruses.',
-    figure: 'img.jpg'
+    spec: 'TWIST to UNLOCK',
+    figure: <CapTwist />
   },
   {
-    spec: 'Child-safe, zero-propellant, continuous spray actuator.',
-    figure: ''
+    spec: 'SPRAY LIGHTLY',
+    figure: <SprayHand />
   },
   {
-    spec: 'Fine mist, wide angle aerosol covers hands in one quick spray.',
-    figure: ''
-  },
-  {
-    spec:
-      '190 proof, plant-based, Food Chemical Codex approved, Ethyl Alcohol solution.',
-    figure: ''
-  },
-  {
-    spec:
-      'Lab tested, high performance formulation doesn’t dry or leave hands sticky.',
-    figure: ''
+    spec: 'RUB until DRY',
+    figure: <HappyHands />
   }
 ]

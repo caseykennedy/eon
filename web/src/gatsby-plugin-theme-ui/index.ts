@@ -126,9 +126,9 @@ const theme: ThemeShape = {
 
   // Left/Right gutter
   gutter: {
-    tablet: '2rem',
-    desktop: '4rem',
-    axis: [5, 6]
+    tablet: 4,
+    desktop: 7,
+    axis: [6, 7]
   },
 
   // Typography
@@ -163,7 +163,7 @@ const theme: ThemeShape = {
 
   strokeWidth: '2px',
 
-  maxWidth: '1440px',
+  maxWidth: '1280px',
   siteWidth: '100vw',
   logoWidth: '70px',
   headerHeight: '56px',

@@ -25,7 +25,12 @@ const How: React.FC<Props> = () => {
   return (
     <S.How pt={10} pb={10}>
       <Flex alignItems="center" flexWrap="wrap">
-        <Box width={[1, 1 / 2]} position="relative" pr={10}>
+        <Box
+          width={[1, 1, 1 / 2]}
+          position="relative"
+          pr={[7, 13, 10]}
+          style={{ maxWidth: '700px' }}
+        >
           <ImgMatch
             src="hand-can.png"
             altText="Hand holding eOn Hand Sanitizer can."
@@ -37,15 +42,19 @@ const How: React.FC<Props> = () => {
                 <Germs />
               </S.ParallaxBox>
             </Box>
-            <Box width={[`150px`]} position="relative" style={{ left: '-40px' }}>
+            <Box
+              width={[`150px`]}
+              position="relative"
+              style={{ left: '-40px' }}
+            >
               <S.ParallaxBox y={[-40, -180]}>
                 <SymbolBadge />
               </S.ParallaxBox>
             </Box>
           </Flex>
         </Box>
-        <Box width={[1, 1 / 2]}>
-          <Heading as="h2">
+        <Box width={[1, 8 / 10, 1 / 2]}>
+          <Heading as="h2" className="text--xxl">
             eOn hand sanitizer packs high performance germ fighting power into
             easy, effective, zero mess protection.
           </Heading>

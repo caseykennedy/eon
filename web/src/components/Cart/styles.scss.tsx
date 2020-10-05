@@ -33,10 +33,10 @@ export const Cart = styled(Box)`
 
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
     padding: ${theme.space[7]} ${theme.space[5]};
-    right: -${cartWidth};
+    right: 0;
     width: ${cartWidth};
   }
 

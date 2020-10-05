@@ -2,21 +2,21 @@ import React from 'react'
 
 export type StoreState = {
   client: ShopifyBuy.Client
-  added: boolean
-  adding: boolean
+  adding?: boolean
   checkout: {
-    id: string
-    lineItems: object[]
-    webUrl: string
+    id?: string
+    lineItems: {
+      quantity: number
+    }[]
+    webUrl?: string
   }
-  products: object[]
-  shop: object
+  products?: object[]
+  shop?: object
 }
 
 type ContextProps = {
   store: StoreState
   addVariantToCart: (variantId: any, quantity: number) => Promise<void>
-  addedToCart: (added: boolean) => void
   removeLineItem: (
     client: any,
     checkoutID: string,

@@ -167,7 +167,7 @@ const Typography = css`
     font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
-    letter-spacing: 0.5px;
+    letter-spacing: ${theme.root.font.baseLetterSpacing};
     margin: 0 0 ${theme.space[2]};
     transition: ${theme.transition.all};
   }
@@ -186,6 +186,10 @@ const Typography = css`
     font-size: calc(${theme.root.font.lg} / 1.15);
 
     @media ${theme.mq.tablet} {
+      font-size: calc(${theme.root.font.xl} / 1.25);
+    }
+
+    @media ${theme.mq.desktop} {
       font-size: ${theme.root.font.xl};
     }
   }
