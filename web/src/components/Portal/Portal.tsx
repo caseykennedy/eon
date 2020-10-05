@@ -15,7 +15,7 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 type Props = {
-  mainRef?: React.RefObject<HTMLDivElement>
+  mainRef: React.RefObject<HTMLDivElement>
   className?: string
   children: React.ReactNode
   root?: string
@@ -44,7 +44,7 @@ const Portal: React.FC<Props> = ({
 
   React.useEffect(() => {
     portal.current = document.createElement('div')
-    portal.current.id = id
+    // portal.current.id = id
 
     if (!document.body.querySelector(`#${id}`)) {
       document.body.prepend(portal.current)
@@ -58,6 +58,7 @@ const Portal: React.FC<Props> = ({
   }, [])
 
   const initialRender = React.useRef(false)
+
   React.useEffect(() => {
     const rootContainer = document.querySelector(`#${root}`)
     const modalContainer = document.querySelector(`#${id}`)
@@ -97,6 +98,12 @@ const Portal: React.FC<Props> = ({
       }
     }
 
+    function handleClickOutside(e: any) {
+      if (mainRef.current && mainRef.current.contains(e.target)) {
+        handleExit()
+      }
+    }
+
     // const { freeze, unfreeze } = capturePosition()
 
     if (isOpen) {
@@ -104,6 +111,8 @@ const Portal: React.FC<Props> = ({
       if (modalContainer) toggleTabIndex('on', modalContainer)
       if (rootContainer) toggleTabIndex('off', rootContainer)
       window.addEventListener('keydown', handleKeyDown)
+      // Bind the event listener
+      document.addEventListener('mousedown', handleClickOutside)
       // freeze()
     } else {
       if (modalContainer) toggleTabIndex('off', modalContainer)
@@ -124,17 +133,15 @@ const Portal: React.FC<Props> = ({
       if (isOpen) {
         window.removeEventListener('keydown', handleKeyDown)
         // unfreeze()
+        // Unbind the event listener on clean up
+        document.removeEventListener('mousedown', handleClickOutside)
       }
     }
   }, [isOpen])
 
   if (portal.current) {
     return ReactDOM.createPortal(
-      (
-      <S.Portal className={className}>
-        {children}
-      </S.Portal>
-      ),
+      <S.Portal className={className}>{children}</S.Portal>,
       portal.current
     )
   }

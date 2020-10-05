@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'gatsby'
 
 import HamburgerMenu from 'react-hamburger-menu'
@@ -19,6 +19,7 @@ import Button from '../ui/Button'
 import Icon from '../Icons'
 import Overlay from '../Overlay'
 import Cart from '../Cart'
+import BuyButton from './BuyButton'
 
 // Elements
 import { Box } from '../ui'
@@ -76,7 +77,9 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         handleExit={() => setNavOpen(false)}
         mainRef={mainRef}
       >
-        <Overlay className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}>
+        <Overlay
+          className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
+        >
           <NavigationMobile
             handleExit={() => setNavOpen(false)}
             isNavOpen={isNavOpen}
@@ -112,13 +115,11 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </div>
 
           <div className="header-cta">
-            <button className={`${shouldShowBackground && 'header--stuck'}`}>
-              buy now
-            </button>
+            <BuyButton shouldShowBackground={shouldShowBackground} />
           </div>
         </div>
 
-        <Cart />
+        <Cart mainRef={mainRef} />
       </S.Header>
     </>
   )

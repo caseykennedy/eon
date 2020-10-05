@@ -35,10 +35,10 @@ const ProductForm: React.FC<{ product: ShopifyProductNode }> = ({
 
   const checkAvailability = useCallback(
     productId => {
-      client.product.fetch(productId).then(fetchedProduct => {
+      client.product.fetch(productId).then((fetchedProduct: any) => {
         // this checks the currently selected variant for availability
         const result = fetchedProduct.variants.filter(
-          variant => variant.id === productVariant.shopifyId
+          (variant: any) => variant.id === productVariant.shopifyId
         )
         if (result.length > 0) {
           setAvailable(result[0].available)

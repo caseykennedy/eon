@@ -9,6 +9,7 @@ declare module 'gatsby-image/withIEPolyfill'
 declare module 'react-anchor-link-smooth-scroll'
 declare module '@sanity/block-content-to-react'
 declare module 'react-id-swiper'
+declare module 'shopify-buy/index.unoptimized.umd'
 
 function createRef<T>(): RefObject<T>
 interface RefObject<T> {

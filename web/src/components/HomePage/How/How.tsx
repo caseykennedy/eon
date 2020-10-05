@@ -24,8 +24,8 @@ type Props = {}
 const How: React.FC<Props> = () => {
   return (
     <S.How pt={10} pb={10}>
-      <Flex alignItems="center">
-        <Box width={[1, 1 / 2]} position="relative" pr={9}>
+      <Flex alignItems="center" flexWrap="wrap">
+        <Box width={[1, 1 / 2]} position="relative" pr={10}>
           <ImgMatch
             src="hand-can.png"
             altText="Hand holding eOn Hand Sanitizer can."
@@ -45,7 +45,7 @@ const How: React.FC<Props> = () => {
           </Flex>
         </Box>
         <Box width={[1, 1 / 2]}>
-          <Heading as="h2" fontSize={5}>
+          <Heading as="h2">
             eOn hand sanitizer packs high performance germ fighting power into
             easy, effective, zero mess protection.
           </Heading>

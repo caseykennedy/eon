@@ -2,7 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useRef } from 'react'
 
 // UI
 import { Box } from '../ui'
@@ -20,25 +20,48 @@ import LineItem from './LineItem'
 
 // ___________________________________________________________________
 
-type Props = {} & typeof defaultProps
+type Props = { mainRef: React.RefObject<HTMLDivElement> } & typeof defaultProps
 const defaultProps = {}
 
-const Cart: React.FC<Props> = () => {
-  const {
-    store: { checkout, added }
-  } = useContext(StoreContext)
+const CartItems: React.FC<{ checkout: any }> = ({ checkout }) => {
+  const LineItems = () =>
+    checkout.lineItems.map((item: any) => (
+      <LineItem key={item.id.toString()} item={item} />
+    ))
 
-  // Navigation toggle
-  const [isPortalOpen, setPortalOpen] = useState(false)
-  const togglePortal = () => setPortalOpen(!isPortalOpen)
-
+  // Trigger checkout
   const handleCheckout = () => {
     window.open(checkout.webUrl)
   }
 
-  const lineItems = checkout.lineItems.map(item => (
-    <LineItem key={item.id.toString()} item={item} />
-  ))
+  return (
+    <>
+      <LineItems />
+      <p>Subtotal $ {checkout.subtotalPrice && checkout.subtotalPrice}</p>
+      <br />
+      <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
+      <br />
+      <p>Total $ {checkout.totalPrice && checkout.totalPrice}</p>
+      <br />
+      <button
+        onClick={handleCheckout}
+        disabled={checkout.lineItems.length === 0}
+      >
+        Check out
+      </button>
+    </>
+  )
+}
+
+const Cart: React.FC<Props> = ({ mainRef }) => {
+  // use shopify store context
+  const {
+    store: { checkout }
+  } = useContext(StoreContext)
+
+  // Toggle portal
+  const [isPortalOpen, setPortalOpen] = useState(false)
+  const togglePortal = () => setPortalOpen(!isPortalOpen)
 
   return (
     <>
@@ -47,28 +70,19 @@ const Cart: React.FC<Props> = () => {
         root="root"
         isOpen={isPortalOpen}
         handleExit={() => setPortalOpen(false)}
+        mainRef={mainRef}
       >
         <S.Cart
           className={`cart ${isPortalOpen ? 'cart--open' : 'cart--closed'}`}
         >
           {isPortalOpen && (
-            <div>
-              {lineItems}
-              <p>
-                Subtotal $ {checkout.subtotalPrice && checkout.subtotalPrice}
-              </p>
-              <br />
-              <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
-              <br />
-              <p>Total $ {checkout.totalPrice && checkout.totalPrice}</p>
-              <br />
-              <button
-                onClick={handleCheckout}
-                disabled={checkout.lineItems.length === 0}
-              >
-                Check out
-              </button>
-            </div>
+            <>
+              {!checkout.lineItems[0] ? (
+                <p>Your cart is empty.</p>
+              ) : (
+                <CartItems checkout={checkout} />
+              )}
+            </>
           )}
         </S.Cart>
       </Portal>

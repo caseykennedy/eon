@@ -23,8 +23,8 @@ type Props = {}
 
 const Specs: React.FC<Props> = () => {
   return (
-    <S.Specs>
-      <Box width={[1, 2 / 3]}>
+    <S.Specs bg="white">
+      <Box width={[1, 2 / 3, 1 / 2]}>
         <Heading as="h3" mb={4}>
           Works on contact: Immediate action against bacteria, fungi, and
           viruses.

@@ -14,6 +14,7 @@ import Layout from '../components/Layout'
 
 const ProductPage: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
   const product = data.shopifyProduct
+  console.log(product)
   return (
     <Layout>
       <Flex p={5}>

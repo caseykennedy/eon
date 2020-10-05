@@ -1,6 +1,4 @@
-import { any } from 'ramda'
 import React from 'react'
-import Client, { GraphModel, ShopResource } from 'shopify-buy'
 
 export type StoreState = {
   client: ShopifyBuy.Client
@@ -16,13 +14,14 @@ export type StoreState = {
 }
 
 type ContextProps = {
-  store: any
-  addVariantToCart: (variantId: any, quantity: any) => Promise<void> | undefined
+  store: StoreState
+  addVariantToCart: (variantId: any, quantity: number) => Promise<void>
+  addedToCart: (added: boolean) => void
   removeLineItem: (
     client: any,
     checkoutID: string,
     lineItemID: string
-  ) => void
+  ) => Promise<void>
   updateLineItem: (
     client: any,
     checkoutID: any,
@@ -31,6 +30,6 @@ type ContextProps = {
   ) => Promise<void>
 }
 
-const StoreContext = React.createContext<Partial<ContextProps>>({})
+const StoreContext = React.createContext<ContextProps>({})
 
 export default StoreContext

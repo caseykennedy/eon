@@ -10,8 +10,8 @@ type Props = {
 
 const client = Client.buildClient(
   {
-    storefrontAccessToken: `9fa1bdbbcdabe920e38f46991babfe14`,
-    domain: `eonmist.myshopify.com`
+    storefrontAccessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
+    domain: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`
   },
   fetch
 )
