@@ -14,10 +14,14 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 type Props = {
-  shouldShowBackground: boolean
+  setPortalOpen: any
+  highlightBG: boolean
 }
 
-const BuyButton: React.FC<Props> = ({ shouldShowBackground }) => {
+const BuyButton: React.FC<Props> = ({
+  setPortalOpen,
+  highlightBG,
+}) => {
   const products = useProduct()
   const product = products.edges[0].node
   const {
@@ -59,6 +63,8 @@ const BuyButton: React.FC<Props> = ({ shouldShowBackground }) => {
 
   const handleAddToCart = () => {
     addVariantToCart(productVariant.shopifyId, quantity)
+    // Open up the cart drawer
+    setPortalOpen(true)
   }
 
   return (
@@ -66,7 +72,7 @@ const BuyButton: React.FC<Props> = ({ shouldShowBackground }) => {
       type="submit"
       disabled={!available || adding}
       onClick={handleAddToCart}
-      className={`${shouldShowBackground && 'header--stuck'}`}
+      className={`${highlightBG && 'header--stuck'}`}
     >
       buy now
     </S.BuyButton>

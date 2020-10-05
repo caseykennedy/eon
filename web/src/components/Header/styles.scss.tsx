@@ -44,10 +44,12 @@ export const Header = styled(Flex)`
 
     &-logo {
       position: relative;
-      top: 3px;
-      width: calc(${theme.logoWidth} / 1);
+      top: 1px;
+      width: calc(${theme.logoWidth} / 1.15);
 
       @media ${theme.mq.tablet} {
+        top: 3px;
+        width: calc(${theme.logoWidth} / 1);
       }
 
       svg {

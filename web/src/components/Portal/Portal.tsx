@@ -15,7 +15,7 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 type Props = {
-  mainRef: React.RefObject<HTMLDivElement>
+  mainRef?: React.RefObject<HTMLDivElement>
   className?: string
   children: React.ReactNode
   root?: string
@@ -99,7 +99,7 @@ const Portal: React.FC<Props> = ({
     }
 
     function handleClickOutside(e: any) {
-      if (mainRef.current && mainRef.current.contains(e.target)) {
+      if (mainRef && mainRef.current && mainRef.current.contains(e.target)) {
         handleExit()
       }
     }

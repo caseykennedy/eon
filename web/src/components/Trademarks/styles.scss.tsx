@@ -20,12 +20,20 @@ export const Trademarks = styled(Flex)`
     }
 
     &__tsa {
-      margin-right: ${theme.space[8]};
+      margin-right: ${theme.space[6]};
+
+      @media ${theme.mq.tablet} {
+        margin-right: ${theme.space[8]};
+  }
     }
   }
 
   img {
-    height: ${theme.space[5]};
+    height: ${theme.space[4]};
+    @media ${theme.mq.tablet} {
+      height: ${theme.space[5]};
+  }
+    
   }
 
   @media ${theme.mq.tablet} {

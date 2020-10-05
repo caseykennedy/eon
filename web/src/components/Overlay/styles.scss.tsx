@@ -22,10 +22,10 @@ export const Overlay = styled(Box)`
   width: ${overlayWidth};
   height: 100vh;
   overflow: auto;
-  padding: ${theme.space[5]};
+  padding: ${theme.space[2]} ${theme.space[4]} ${theme.space[5]};
 
   position: fixed;
-  top: calc(${theme.headerHeight});
+  top: ${theme.headerHeight};
   left: -${overlayWidth};
   bottom: 0;
 
@@ -39,7 +39,7 @@ export const Overlay = styled(Box)`
   }
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[7]};
+    /* padding: ${theme.space[7]}; */
   }
 
   &.nav-bg--open {

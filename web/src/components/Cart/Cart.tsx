@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React, { useState, useContext, useRef } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 // UI
 import { Box } from '../ui'
@@ -20,8 +21,13 @@ import LineItem from './LineItem'
 
 // ___________________________________________________________________
 
-type Props = { mainRef: React.RefObject<HTMLDivElement> } & typeof defaultProps
-const defaultProps = {}
+type Props = {
+  mainRef: React.RefObject<HTMLDivElement>
+  isPortalOpen: boolean
+  setPortalOpen: (arg0: boolean) => void
+}
+
+// ___________________________________________________________________
 
 const CartItems: React.FC<{ checkout: any }> = ({ checkout }) => {
   const LineItems = () =>
@@ -53,14 +59,12 @@ const CartItems: React.FC<{ checkout: any }> = ({ checkout }) => {
   )
 }
 
-const Cart: React.FC<Props> = ({ mainRef }) => {
+const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
   // use shopify store context
   const {
     store: { checkout }
   } = useContext(StoreContext)
 
-  // Toggle portal
-  const [isPortalOpen, setPortalOpen] = useState(false)
   const togglePortal = () => setPortalOpen(!isPortalOpen)
 
   return (
@@ -75,15 +79,22 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
         <S.Cart
           className={`cart ${isPortalOpen ? 'cart--open' : 'cart--closed'}`}
         >
-          {isPortalOpen && (
-            <>
-              {!checkout.lineItems[0] ? (
-                <p>Your cart is empty.</p>
-              ) : (
-                <CartItems checkout={checkout} />
-              )}
-            </>
-          )}
+          <AnimatePresence>
+            {isPortalOpen && (
+              <motion.div
+                initial={{ opacity: 0, transform: theme.transform.matrix.from }}
+                animate={{ opacity: 1, transform: theme.transform.matrix.to }}
+                exit={{ opacity: 0, transform: theme.transform.matrix.from }}
+                transition={{ duration: 0.5 }}
+              >
+                {!checkout.lineItems[0] ? (
+                  <p>Your cart is empty.</p>
+                ) : (
+                  <CartItems checkout={checkout} />
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </S.Cart>
       </Portal>
       <Box
@@ -99,7 +110,3 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
 }
 
 export default Cart
-
-// ___________________________________________________________________
-
-Cart.defaultProps = defaultProps

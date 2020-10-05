@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 import HamburgerMenu from 'react-hamburger-menu'
@@ -12,11 +12,8 @@ import HamburgerMenu from 'react-hamburger-menu'
 import useScrollWatch from '../../hooks/useScrollWatch'
 
 import Logo from '../Logo'
-import Navigation from './Navigation'
 import NavigationMobile from './NavigationMobile'
 import Portal from '../Portal'
-import Button from '../ui/Button'
-import Icon from '../Icons'
 import Overlay from '../Overlay'
 import Cart from '../Cart'
 import BuyButton from './BuyButton'
@@ -38,13 +35,16 @@ interface CallbackTypes {
 }
 
 const Header: React.FC<HeaderShape> = ({ mainRef }) => {
-  // Navigation toggle
+  // Navigation portal
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
 
+  // Cart portal
+  const [isPortalOpen, setPortalOpen] = useState<boolean>(false)
+
   // On scroll class change
   const [shouldHideHeader, setShouldHideHeader] = useState(false)
-  const [shouldShowBackground, setShouldShowBackground] = useState(false)
+  const [highlightBG, setHighlightBG] = useState(false)
 
   // scrollWatch settings
   const MINIMUM_SCROLL = 2
@@ -56,7 +56,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
     const isScrolledDown = previousScrollTop < currentScrollTop
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
 
-    setShouldShowBackground(currentScrollTop > 53)
+    setHighlightBG(currentScrollTop > 53)
 
     setTimeout(() => {
       setShouldHideHeader(isScrolledDown && isMinimumScrolled)
@@ -64,7 +64,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   })
 
   // Scroll state styles
-  const headerBG = !shouldShowBackground
+  const headerBG = !setHighlightBG
     ? theme.colors.background
     : `rgb(255, 255, 255, 0.7)`
 
@@ -115,11 +115,18 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </div>
 
           <div className="header-cta">
-            <BuyButton shouldShowBackground={shouldShowBackground} />
+            <BuyButton
+              setPortalOpen={setPortalOpen}
+              highlightBG={highlightBG}
+            />
           </div>
         </div>
 
-        <Cart mainRef={mainRef} />
+        <Cart
+          isPortalOpen={isPortalOpen}
+          setPortalOpen={setPortalOpen}
+          mainRef={mainRef}
+        />
       </S.Header>
     </>
   )
