@@ -23,7 +23,7 @@ type Props = {}
 
 const Hero: React.FC<Props> = () => {
   return (
-    <S.Hero>
+    <S.Hero pt={4}>
       <S.Decorator>
         <Shine />
       </S.Decorator>

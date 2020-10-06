@@ -21,6 +21,13 @@ export const Hero = styled(Section)`
       justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
+      position: relative;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(9px);
+
+      @media ${theme.mq.tablet} {
+        align-items: center;
+      }
     }
   }
 `
