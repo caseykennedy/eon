@@ -11,15 +11,36 @@ import { Grid, Cell } from 'styled-css-grid'
 // ___________________________________________________________________
 
 export const Specs = styled(Section)`
+  .deco-feature-icons {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: absolute;
+    top: ${theme.space[0]};
+    right: ${theme.space[5]};
+    width: ${theme.space[6]};
+
+    @media ${theme.mq.tablet} {
+      width: ${theme.space[10]};
+    }
+
+    &__spray {
+      position: absolute;
+      top: calc(${theme.space[10]} * 2);
+      right: ${theme.space[5]};
+      width: ${theme.space[6]};
+
+      @media ${theme.mq.tablet} {
+        width: ${theme.space[10]};
+      }
+    }
+  }
+
   h3 {
     span {
       svg {
         height: ${theme.space[3]};
       }
     }
-  }
-
-  @media ${theme.mq.tablet} {
   }
 `
 

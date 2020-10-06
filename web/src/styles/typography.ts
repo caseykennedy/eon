@@ -217,6 +217,7 @@ const Typography = css`
     font-size: ${theme.fontSizes[2]};
 
     @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[3]} / 1.15);
     }
   }
 

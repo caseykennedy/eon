@@ -15,6 +15,10 @@ import theme from '../../../config/theme'
 import Hero from './Hero'
 import How from './How'
 import Specs from './Specs'
+import Reviews from './Reviews'
+
+// Components
+import Billboard from '../Billboard'
 
 // ___________________________________________________________________
 
@@ -24,6 +28,8 @@ const HomePage: React.FC = () => {
       <Hero />
       <How />
       <Specs />
+      <Billboard />
+      <Reviews />
     </S.HomePage>
   )
 }
