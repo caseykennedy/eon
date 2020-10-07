@@ -12,7 +12,7 @@ import HamburgerMenu from 'react-hamburger-menu'
 import useScrollWatch from '../../hooks/useScrollWatch'
 
 import Logo from '../Logo'
-import NavigationMobile from './NavigationMobile'
+import Menu from './Menu'
 import Portal from '../Portal'
 import Overlay from '../Overlay'
 import Cart from '../Cart'
@@ -80,7 +80,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         <Overlay
           className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
         >
-          <NavigationMobile
+          <Menu
             handleExit={() => setNavOpen(false)}
             isNavOpen={isNavOpen}
           />
