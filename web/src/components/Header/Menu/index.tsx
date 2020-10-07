@@ -1,4 +1,4 @@
-import NavigationMobile from './NavigationMobile'
+import Menu from './Menu'
 
 
-export default NavigationMobile
+export default Menu
