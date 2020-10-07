@@ -108,7 +108,7 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
       <Box
         bg={`${isPortalOpen && theme.colors.quinary}`}
         className="header-cart"
-        aria-label="toggle menu"
+        aria-label="toggle cart"
         onClick={togglePortal}
       >
         {hasItems && <Box>({quantity})</Box>}

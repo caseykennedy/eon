@@ -38,6 +38,12 @@ type Props = {
 
 const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
   switch (name) {
+    case 'arrow':
+      return (
+        <IconStyle color={color} className={className}>
+          <NextArrow />
+        </IconStyle>
+      )
     case 'carat':
       return (
         <IconStyle color={color} className={className}>
@@ -90,12 +96,6 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
       return (
         <IconStyle color={color} className={className}>
           <ListView />
-        </IconStyle>
-      )
-    case 'nextArrow':
-      return (
-        <IconStyle color={color} className={className}>
-          <NextArrow />
         </IconStyle>
       )
     case 'pdf':

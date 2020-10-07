@@ -20,7 +20,7 @@ const Specs: React.FC<Props> = () => {
     <S.Reviews bg="white">
       <h4>Reviews</h4>
       <br /><br />
-      <h3 className="text--xxl">
+      <h3 className="text--lg">
         I carry it in my pocket and bring it out for a quick spray when needed,
         the feeling of clean it leaves on my hands feels great and I definitely
         feel protected from taking germs to my face or bringing them back home

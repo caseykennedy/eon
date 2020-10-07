@@ -73,6 +73,7 @@ const BuyButton: React.FC<Props> = ({
       disabled={!available || adding}
       onClick={handleAddToCart}
       className={`${highlightBG && 'header--stuck'}`}
+      aria-label="Buy now"
     >
       buy now
     </S.BuyButton>

@@ -3,12 +3,15 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import { Grid, Cell } from 'styled-css-grid'
 
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
+// Theme + ui
 import { Box, Flex, Heading } from '../../ui'
-import { Grid, Cell } from 'styled-css-grid'
+
+// Components
 import Section from '../../Section'
 
 // SVG
@@ -29,8 +32,6 @@ import WeRefreshHands from '../../WeRefreshHands'
 
 // ___________________________________________________________________
 
-type Props = {}
-
 const HowTo = () => (
   <>
     {data.map((item, idx) => (
@@ -42,7 +43,7 @@ const HowTo = () => (
   </>
 )
 
-const Specs: React.FC<Props> = () => {
+const Specs = () => {
   return (
     <>
       <Section bg="background" pt={12} pb={10}>
@@ -103,7 +104,7 @@ const Specs: React.FC<Props> = () => {
             </span>
             .
           </Heading>
-          <Box width={theme.space[10]} mt={12}>
+          <Box width={theme.space[12]} mt={12}>
             <WeRefreshHands />
           </Box>
         </Box>
@@ -114,7 +115,7 @@ const Specs: React.FC<Props> = () => {
           <Box width="100%" mt={7}>
             <AbstractSpray />
           </Box>
-          <Box width="100%" mt={7}/>
+          <Box width="100%" mt={7} />
         </Flex>
       </S.Specs>
     </>
@@ -124,10 +125,6 @@ const Specs: React.FC<Props> = () => {
 export default Specs
 
 // ___________________________________________________________________
-
-const defaultProps = {}
-
-Specs.defaultProps = defaultProps
 
 const data = [
   {

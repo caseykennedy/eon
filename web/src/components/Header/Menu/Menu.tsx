@@ -34,20 +34,20 @@ type NavLinksProps = {
 
 const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
   return (
-    <S.NavLink onClick={handleExitOnClick} style={transition}>
+    <S.MenuItems onClick={handleExitOnClick} style={transition}>
       <Link to={item.link} className="nav-mobile__link">
         {item.name}
       </Link>
-    </S.NavLink>
+    </S.MenuItems>
   )
 }
 
-const NavigationMobile: React.FC<NavLinksProps> = ({
+const Menu: React.FC<NavLinksProps> = ({
   handleExit,
   isNavOpen
 }) => {
   return (
-    <S.NavLinks>
+    <S.Menu>
       <AnimatePresence>
         {isNavOpen && (
           <motion.div
@@ -63,11 +63,11 @@ const NavigationMobile: React.FC<NavLinksProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </S.NavLinks>
+    </S.Menu>
   )
 }
 
-export default NavigationMobile
+export default Menu
 
 // ___________________________________________________________________
 
