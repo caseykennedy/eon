@@ -4,7 +4,7 @@
 
 import { css } from 'styled-components'
 import theme from '../../config/theme'
-import { darken } from 'polished'
+import { transparentize } from 'polished'
 
 // Arial Narrow
 import ArialNarrowEot from './fonts/ArialNarrow.eot'
@@ -173,7 +173,7 @@ const Typography = css`
   }
 
   .text--xxxl {
-    font-size: calc(${theme.root.font.xxxl} / 1.25);
+    font-size: calc(${theme.root.font.xxxl} / 1);
     line-height: calc(${theme.root.font.headingLineHeight} / 1);
 
     @media ${theme.mq.tablet} {
@@ -183,7 +183,7 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.lg} / 1.15);
+    font-size: calc(${theme.root.font.lg} / 1.1);
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.root.font.xl} / 1.25);
@@ -294,8 +294,9 @@ const Typography = css`
   }
 
   mark {
-    background-color: ${theme.colors.quaternary};
-    padding: ${theme.space[1]};
+    background-color: ${transparentize(0.5, theme.colors.yellowbuzz)};
+    border-bottom: ${theme.border};
+    padding: 0 calc(${theme.space[1]} / 1.5);
   }
 
   .t--link {

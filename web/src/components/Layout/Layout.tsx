@@ -45,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <ParallaxProvider>
           <S.Wrapper>
             <Announcement
-              announcement="Hello there! Looking for eOn multi-surface disinfectant?"
+              announcement="Looking for eOn multi-surface disinfectant?"
               to="/eon"
             />
             <Header mainRef={mainRef} />

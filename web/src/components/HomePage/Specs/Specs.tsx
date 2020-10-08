@@ -30,15 +30,19 @@ import FeatureStack from '../../FeatureStack'
 import AbstractSpray from '../../AbstractSpray'
 import WeRefreshHands from '../../WeRefreshHands'
 
+import SpraySystem from './svg/deco.svg'
+
 // ___________________________________________________________________
 
 const HowTo = () => (
   <>
     {data.map((item, idx) => (
-      <Cell className="figure" key={idx}>
+      <Box className="figure" key={idx}>
         {item.figure}
-        <Flex as="span">{item.spec}</Flex>
-      </Cell>
+        <Flex as="span" className="figure-spec">
+          {item.spec}
+        </Flex>
+      </Box>
     ))}
   </>
 )
@@ -47,20 +51,17 @@ const Specs = () => {
   return (
     <>
       <Section bg="background" pt={12} pb={10}>
-        <S.HowTo
-          columns={`repeat(auto-fit, minmax(280px, 1fr))`}
-          gap={theme.space[7]}
-        >
+        <S.HowTo>
           <HowTo />
         </S.HowTo>
       </Section>
       <S.Specs bg="white">
         <Box width={[1, 8 / 10]}>
-          <Heading as="h3" mb={4} className="text--xxl">
+          <Heading as="h3" mb={5} className="text--xxl">
             Works on contact: Immediate action against bacteria, fungi, and
             viruses.
           </Heading>
-          <Heading as="h3" mb={4} className="text--xxl">
+          <Heading as="h3" mb={5} className="text--xxl">
             Child-safe{' '}
             <span>
               <Lock />
@@ -71,7 +72,7 @@ const Specs = () => {
             </span>{' '}
             actuator.
           </Heading>
-          <Heading as="h3" mb={4} className="text--xxl">
+          <Heading as="h3" mb={5} className="text--xxl">
             Fine mist, wide angle{' '}
             <span>
               <Spray />
@@ -82,7 +83,7 @@ const Specs = () => {
             </span>
             .
           </Heading>
-          <Heading as="h3" mb={4} className="text--xxl">
+          <Heading as="h3" mb={5} className="text--xxl">
             190 proof, plant-based{' '}
             <span>
               <CornCob />,
@@ -93,7 +94,7 @@ const Specs = () => {
             </span>
             .
           </Heading>
-          <Heading as="h3" mb={4} className="text--xxl">
+          <Heading as="h3" mb={5} className="text--xxl">
             Lab tested, high performance{' '}
             <span>
               <Beaker />
@@ -115,7 +116,9 @@ const Specs = () => {
           <Box width="100%" mt={7}>
             <AbstractSpray />
           </Box>
-          <Box width="100%" mt={7} />
+          <Box width="160%" mt={7}>
+            <img src={SpraySystem} />
+          </Box>
         </Flex>
       </S.Specs>
     </>

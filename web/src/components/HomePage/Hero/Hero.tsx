@@ -15,7 +15,6 @@ import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
 // Compoonents
 import ImgMatch from '../../ImgMatch'
 import Shine from '../../Shine'
-import TradeMarks from '../../Trademarks'
 
 // ___________________________________________________________________
 
@@ -28,34 +27,25 @@ const Hero: React.FC<Props> = () => {
         <Shine />
       </S.Decorator>
       <div className="hero-inner">
-        <Flex width={1} justifyContent="center">
-          <Box
-            margin="0 auto"
-            width={[`27%`, `25%`, `20%`]}
-            style={{
-              position: 'fixed'
-            }}
-          >
+        <Flex width={1} position="relative" justifyContent="center">
+          <Box width={[`27%`, `25%`, `20%`]} className="figure">
             <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>
 
-        <Box
-          mt={['55%', '40%']}
-          position="relative"
-          style={{ zIndex: 9 }}
-        >
+        <Box mt={['55%', '40%']} position="relative" style={{ zIndex: 9 }}>
           <h1>
             eOn is professional-grade hand sanitation made easy. One quick spray
             is all it takes to know your hands are 100% clean.
           </h1>
         </Box>
-        <Flex className="hero-inner__meta">
-          <Flex width={[1 / 2, 1 / 2, 2 / 3]} flexWrap="wrap">
-            <Text as="p" mr={5}>
+        <div className="hero-inner__features">
+          <Flex width={[1 / 2, 1 / 2, 2 / 3]} flexWrap="wrap" >
+            <Text as="p" mr={5} mb={[2, 0]}>
               Effective on
               <br />
-              99.99% of <br />
+              <mark>99.99%</mark> of
+              <br />
               common germs
             </Text>
 
@@ -66,9 +56,6 @@ const Hero: React.FC<Props> = () => {
               <br />
               on the go
             </Text>
-            <Box mt={4}>
-              <TradeMarks />
-            </Box>
           </Flex>
 
           <Flex
@@ -78,7 +65,7 @@ const Hero: React.FC<Props> = () => {
           >
             <Button to="/">Buy Now</Button>
           </Flex>
-        </Flex>
+        </div>
       </div>
     </S.Hero>
   )

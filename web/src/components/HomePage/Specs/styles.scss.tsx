@@ -51,28 +51,42 @@ export const Features = styled(Box)`
   }
 `
 
-export const HowTo = styled(Grid)`
-  padding: 0 ${theme.space[4]};
+export const HowTo = styled(Flex)`
   max-width: ${theme.maxWidth};
   margin: 0 auto;
+  flex-wrap: wrap;
 
   .figure {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    span {
+    margin: 0 ${theme.space[5]} ${theme.space[9]};
+
+    flex: 1 1 250px;
+
+    @media ${theme.mq.tablet} {
+      margin: 0 ${theme.space[5]};
+    }
+
+    &-spec {
       width: 100%;
       align-items: center;
       justify-content: center;
 
       font-size: calc(${theme.fontSizes[2]} * 1.5);
       font-weight: 500;
+      line-height: 1.75;
 
       background: ${theme.colors.white};
       border: 2px solid ${theme.colors.black};
+      border-radius: ${theme.space[9]};
       margin-top: ${theme.space[4]};
       padding: ${theme.space[1]} 0;
+
+      @media ${theme.mq.tablet} {
+        font-size: calc(${theme.fontSizes[2]} * 1.5);
+      }
 
       svg {
         width: 100%;

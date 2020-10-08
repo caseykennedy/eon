@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
       <Terms />
       <S.Footer>
         <div>&copy;{getYear()} eOn Mist</div>
-        <div>Legal terms | Shipping &amp; Returns</div>
+        <div><a href="">Legal</a> | <a href="">Shipping &amp; Returns</a></div>
       </S.Footer>
     </>
   )

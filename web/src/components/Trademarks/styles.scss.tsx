@@ -9,31 +9,63 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 export const Trademarks = styled(Flex)`
-  border-bottom: ${theme.border};
-  padding-bottom: ${theme.space[2]};
+  justify-content: center;
+  flex-wrap: wrap;
+
+  background: rgba(255, 255, 255, 0.95);
+  /* backdrop-filter: blur(9px); */
+  border-top: 2px solid ${theme.colors.black};
+  border-bottom: 2px solid ${theme.colors.black};
+
+  position: relative;
+  z-index: 9;
 
   .mark {
-    &__fda {
-      border-right: ${theme.border};
-      padding-right: ${theme.space[3]};
-      margin-right: ${theme.space[3]};
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-right: ${theme.border};
+    padding: ${theme.space[4]} 0;
+    white-space: nowrap;
+    width: 50%;
+
+    &:nth-child(even) {
+      border-right: none;
     }
 
-    &__tsa {
-      margin-right: ${theme.space[6]};
+    &:nth-child(1) {
+      border-bottom: ${theme.border};
+    }
 
-      @media ${theme.mq.tablet} {
-        margin-right: ${theme.space[8]};
-  }
+    &:nth-child(2) {
+      border-bottom: ${theme.border};
+    }
+
+    @media ${theme.mq.tablet} {
+      border-bottom: none !important;
+      max-width: 333px;
+      width: 25%;
+
+      &:nth-child(2) {
+        border-right: ${theme.border};
+      }
+    }
+
+    p {
+      color: ${theme.colors.black};
+      letter-spacing: 0.25px;
+      font-size: calc(${theme.fontSizes[1]} / 1);
+      margin-top: ${theme.space[2]};
     }
   }
 
   img {
     height: ${theme.space[4]};
+
     @media ${theme.mq.tablet} {
-      height: ${theme.space[5]};
-  }
-    
+      height: calc(${theme.space[4]} * 1.35);
+    }
   }
 
   @media ${theme.mq.tablet} {

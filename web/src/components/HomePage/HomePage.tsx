@@ -17,8 +17,10 @@ import How from './How'
 import Specs from './Specs'
 import Reviews from './Reviews'
 
+import Trademarks from '../Trademarks'
+
 // Components
-import Billboard from '../Billboard'
+import ProductDetail from './ProductDetail'
 
 // ___________________________________________________________________
 
@@ -26,9 +28,10 @@ const HomePage: React.FC = () => {
   return (
     <S.HomePage>
       <Hero />
+      <Trademarks />
       <How />
       <Specs />
-      <Billboard />
+      <ProductDetail />
       <Reviews />
     </S.HomePage>
   )

@@ -40,7 +40,7 @@ const Message: React.FC<Props> = ({
   return (
     <>
       <Link to={to}>
-        <Text dangerouslySetInnerHTML={{ __html: announcement }} />
+        <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} />
       </Link>
       <S.Exit onClick={handleExit} aria-label="close announcement">
         <Icon name="plus" color="black" />

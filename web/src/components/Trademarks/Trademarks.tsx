@@ -7,27 +7,63 @@ import * as React from 'react'
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
+import { Flex, Text } from '../ui'
+
+import Icon from '../Icons'
+
 import fdaMark from './svg/fda-registered.svg'
 import tsaMark from './svg/tsa-friendly.svg'
 import usaMark from './svg/usa-made.svg'
+import ethylMark from './svg/ethyl-alc.svg'
 
 // ___________________________________________________________________
 
-const Trademarks: React.FC = () => {
-  const getYear = () => new Date().getFullYear()
+type TrademarkShape = {
+  alt: string
+  src: string
+  title?: string
+}
+
+const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
+  return (
+    <Flex className="mark">
+      <img src={item.src} alt={item.alt} />
+      <Text as="p">{item.title}</Text>
+    </Flex>
+  )
+}
+
+const Trademarks = () => {
   return (
     <S.Trademarks>
-      <div className="mark__fda">
-        <img src={fdaMark} alt="Logo" />
-      </div>
-      <div className="mark__tsa">
-        <img src={tsaMark} alt="Logo" />
-      </div>
-      <div className="mark__usa">
-        <img src={usaMark} alt="Logo" />
-      </div>
+      {data.map((item, idx) => (
+        <Mark item={item} key={idx} />
+      ))}
     </S.Trademarks>
   )
 }
 
 export default Trademarks
+
+const data = [
+  {
+    alt: '80% ethyl alcohol',
+    src: ethylMark,
+    title: '80% ethyl alcohol'
+  },
+  {
+    alt: 'FDA logo',
+    src: fdaMark,
+    title: 'registered'
+  },
+  {
+    alt: 'TSA logo',
+    src: tsaMark,
+    title: 'TSA friendly'
+  },
+  {
+    alt: 'USA logo',
+    src: usaMark,
+    title: 'made in the USA'
+  }
+]

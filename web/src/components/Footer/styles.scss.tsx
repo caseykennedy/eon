@@ -12,11 +12,15 @@ import theme from '../../../config/theme'
 export const Terms = styled.div`
   background: ${theme.colors.lightgray};
   border-top: ${theme.border};
-  color: ${theme.colors.gray};
-  padding: ${theme.space[6]} ${theme.space[4]};
+  padding: ${theme.space[6]};
+
+  p {
+    color: ${theme.colors.darkgray};
+    font-weight: 400;
+  }
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[6]} ${theme.space[7]};
+    padding: ${theme.space[6]} ${theme.space[10]};
   }
 `
 
@@ -32,10 +36,11 @@ export const PreFoot = styled.div`
   .prefoot {
     &-panel {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
 
-      padding: ${theme.space[4]};
+      padding: ${theme.space[6]} ${theme.space[4]};
       width: 100%;
 
       @media ${theme.mq.tablet} {
@@ -53,10 +58,13 @@ export const PreFoot = styled.div`
 
           input {
             flex: 1;
+
+            border: ${theme.border};
+            border-radius: ${theme.borderRadius};
+            font-size: calc(${theme.fontSizes[2]} * 1.25);
             margin-right: ${theme.space[2]};
             padding: ${theme.space[1]} ${theme.space[3]};
-
-            font-size: calc(${theme.fontSizes[2]} * 1.25);
+            min-width: 200px;
 
             @media ${theme.mq.desktop} {
               font-size: calc(${theme.fontSizes[2]} * 1.5);
@@ -67,7 +75,7 @@ export const PreFoot = styled.div`
             display: flex;
             justify-content: center;
 
-            padding: calc(${theme.space[2]} / 1) ${theme.space[4]};
+            padding: calc(${theme.space[2]} / 1) ${theme.space[3]};
 
             font-family: ${theme.fonts.heading};
             font-size: calc(${theme.fontSizes[2]} * 1.5);
@@ -106,13 +114,15 @@ export const PreFoot = styled.div`
       }
 
       &__usa {
+        border-top: ${theme.border};
+
+        @media ${theme.mq.tablet} {
+          border-top: none;
+          border-left: ${theme.border};
+        }
 
         svg {
           width: 56px;
-        }
-
-        @media ${theme.mq.tablet} {
-          border-left: ${theme.border};
         }
       }
     }

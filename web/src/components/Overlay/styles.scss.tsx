@@ -29,8 +29,9 @@ export const Overlay = styled(Box)`
   left: -${overlayWidth};
   bottom: 0;
 
-  background: ${transparentize(0.15, theme.colors.quinary)};
-  backdrop-filter: blur(9px);
+  background: ${transparentize(0, theme.colors.quinary)};
+  /* backdrop-filter: blur(9px); */
+  border-right: ${theme.border};
   transition: left 0.333 ease-in-out;
   z-index: 99;
 

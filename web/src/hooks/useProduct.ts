@@ -18,7 +18,7 @@ type ProductShape = {
 const useProduct = () => {
   const data = useStaticQuery<ProductShape>(graphql`
     query ProductQuery {
-      product: allShopifyProduct {
+      product: allShopifyProduct(filter: {handle: {eq: "eon-continuous-spray-hand-sanitizer-80"}}) {
         edges {
           node {
             id

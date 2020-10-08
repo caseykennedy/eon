@@ -25,7 +25,7 @@ export const Cart = styled(Box)`
   position: fixed;
   top: calc(${theme.headerHeight});
 
-  background: rgb(255, 255, 255, 0.7);
+  background: rgb(255, 255, 255, 0.8);
   backdrop-filter: blur(9px);
   opacity: 0;
   visibility: hidden;

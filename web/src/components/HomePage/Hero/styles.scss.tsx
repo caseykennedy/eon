@@ -17,17 +17,22 @@ export const Hero = styled(Section)`
     @media ${theme.mq.tablet} {
     }
 
-    &__meta {
-      justify-content: space-between;
-      flex-wrap: wrap;
-      width: 100%;
-      position: relative;
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(9px);
+    .figure {
+      position: fixed;
+      z-index: 0;
 
       @media ${theme.mq.tablet} {
-        align-items: center;
       }
+    }
+
+    &__features {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      
+      width: 100%;
+      position: relative;
     }
   }
 `
