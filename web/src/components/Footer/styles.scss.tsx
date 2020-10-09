@@ -13,6 +13,8 @@ export const Terms = styled.div`
   background: ${theme.colors.lightgray};
   border-top: ${theme.border};
   padding: ${theme.space[6]};
+  position: relative;
+  z-index: 1;
 
   p {
     color: ${theme.colors.darkgray};
@@ -31,7 +33,7 @@ export const PreFoot = styled.div`
   background: ${theme.colors.background};
   border-top: ${theme.border};
   position: relative;
-  z-index: 9;
+  z-index: 1;
 
   .prefoot {
     &-panel {
@@ -132,6 +134,8 @@ export const PreFoot = styled.div`
 export const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 0;
 
   border-top: ${theme.border};
   padding: ${theme.space[4]} ${theme.space[4]};

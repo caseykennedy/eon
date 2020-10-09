@@ -16,7 +16,7 @@ import { Flex, AnimatedFlex } from '../../ui'
 export const Menu = styled(Flex)`
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: ${theme.space[7]};
+  padding-top: ${theme.space[5]};
   width: 100%;
 `
 

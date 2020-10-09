@@ -22,7 +22,7 @@ export const Overlay = styled(Box)`
   width: ${overlayWidth};
   height: 100vh;
   overflow: auto;
-  padding: ${theme.space[2]} ${theme.space[4]} ${theme.space[5]};
+  padding: ${theme.headerHeight} ${theme.space[4]} ${theme.space[5]};
 
   position: fixed;
   top: ${theme.headerHeight};

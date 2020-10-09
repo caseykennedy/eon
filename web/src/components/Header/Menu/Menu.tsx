@@ -10,6 +10,7 @@ import { useTransition } from 'react-spring'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { Box, Text } from '../../ui'
+import BuyButton from '../../BuyButton'
 
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
@@ -42,10 +43,7 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
   )
 }
 
-const Menu: React.FC<NavLinksProps> = ({
-  handleExit,
-  isNavOpen
-}) => {
+const Menu: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
   return (
     <S.Menu>
       <AnimatePresence>
@@ -56,10 +54,17 @@ const Menu: React.FC<NavLinksProps> = ({
             exit={{ opacity: 0, transform: theme.transform.matrix.from }}
             transition={{ duration: 0.5 }}
           >
-            <h2>
-              eOn is professional-grade hand sanitation made easy. One quick
-              spray is all it takes to know your hands are 100% clean.
-            </h2>
+            <Box width={8 / 10}>
+              <h2>
+                Please pardon our dust. We’re building an exciting new eOn
+                sanitizing mist™ website experience, chockful of info, usage
+                tips, support and more.
+              </h2>
+              <p>Coming soon.</p>
+            </Box>
+            <Box>
+              <BuyButton />
+            </Box>
           </motion.div>
         )}
       </AnimatePresence>
