@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { darken } from 'polished'
 import { Box, Flex } from '../ui'
 import { motion } from 'framer-motion'
 import theme from '../../../config/theme'
@@ -20,7 +21,7 @@ export const Cart = styled(Box)`
   height: 100vh;
   width: 100vw;
   overflow: auto;
-  padding: ${theme.space[7]} ${theme.space[5]};
+  padding: ${theme.space[7]} ${theme.space[5]} ${theme.space[9]};
 
   position: fixed;
   top: calc(${theme.headerHeight});
@@ -69,15 +70,64 @@ export const Cart = styled(Box)`
           svg {
             position: relative;
             right: 0;
-            width: calc(${theme.space[4]} /1.25);
+            width: calc(${theme.space[4]} / 1.25);
           }
         }
 
         &:hover {
-          
         }
       }
     }
+  }
+`
+
+export const CartToggle = styled(Box)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  border-left: ${theme.border};
+  color: ${theme.colors.text};
+  cursor: pointer;
+
+  padding-right: ${theme.space[3]};
+  position: relative;
+  height: 100%;
+  width: 70px;
+  transition: background-color ${theme.transition.global};
+
+  @media ${theme.mq.tablet} {
+    width: ${theme.space[7]};
+  }
+
+  &:hover {
+    background: ${darken(0.08, theme.colors.quinary)};
+  }
+
+  span {
+    svg {
+      width: 24px;
+    }
+  }
+
+  .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: ${theme.colors.primary};
+    border-radius: 999px;
+
+    color: ${theme.colors.white};
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: ${theme.space[2]};
+    right: ${theme.space[2]};
+
+    height: calc(${theme.space[4]} * 1.15);
+    width: calc(${theme.space[4]} * 1.15);
   }
 `
 

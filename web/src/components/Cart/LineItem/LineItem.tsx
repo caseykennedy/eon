@@ -57,7 +57,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
           </Link>
         </Box>
         <Box width={3 / 4}>
-          <Text as="p" fontSize={3} fontWeight={500} mb={2}>
+          <Text as="p" fontSize={[2, 3]} fontWeight={500} mb={2}>
             {item.title}
           </Text>
           <Text as="p" fontSize={2} fontWeight={500}>

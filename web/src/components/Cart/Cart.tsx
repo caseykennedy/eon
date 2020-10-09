@@ -63,12 +63,12 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
               <p>Total</p>
               <p>${checkout.totalPrice && checkout.totalPrice}</p>
             </div>
-            <Button
+            <button
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}
             >
               Check out
-            </Button>
+            </button>
           </div>
           {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
       <br /> */}
@@ -128,15 +128,14 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
           </AnimatePresence>
         </S.Cart>
       </Portal>
-      <Box
+      <S.CartToggle
         bg={`${isPortalOpen && theme.colors.quinary}`}
-        className="header-cart"
         aria-label="toggle cart"
         onClick={togglePortal}
       >
-        {hasItems && <Box>({quantity})</Box>}
+        {hasItems && <div className="quantity">{quantity}</div>}
         <Icon name="bag" color="black" />
-      </Box>
+      </S.CartToggle>
     </>
   )
 }
