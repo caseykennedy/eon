@@ -78,7 +78,7 @@ type ElementProps = SpaceProps &
 export const Box = styled.div<ElementProps>`
   box-sizing: border-box;
   height: auto;
-  transition: ${theme.transition.all};
+  /* transition: ${theme.transition.all}; */
 
   ${space}
   ${width}

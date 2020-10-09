@@ -9,7 +9,7 @@ import { useSpring, config } from 'react-spring'
 import Headroom from 'react-headroom'
 
 // UI
-import { Text } from '../../ui'
+import { Box } from '../../ui'
 
 // Theme
 import * as S from './styles.scss'
@@ -23,11 +23,11 @@ import Overlay from '../../Overlay'
 // ___________________________________________________________________
 
 type Props = {
+  announcement?: string
   handleExit?: () => any
   isPortalOpen?: boolean
 } & typeof defaultProps
 const defaultProps = {
-  announcement: 'Announcement bar',
   to: '/'
 }
 
@@ -40,7 +40,13 @@ const Message: React.FC<Props> = ({
   return (
     <>
       <Link to={to}>
-        <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} />
+        {/* <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} /> */}
+        <p>
+          <Box as="span" color="primary">
+            Hello there!
+          </Box>{' '}
+          Looking for eOn multi-surface disinfectant?
+        </p>
       </Link>
       <S.Exit onClick={handleExit} aria-label="close announcement">
         <Icon name="plus" color="black" />

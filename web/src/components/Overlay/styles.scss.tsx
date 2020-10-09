@@ -26,14 +26,19 @@ export const Overlay = styled(Box)`
 
   position: fixed;
   top: ${theme.headerHeight};
-  left: -${overlayWidth};
+  left: 0;
   bottom: 0;
+
+  visibility: hidden;
+    opacity: 0;
 
   background: ${transparentize(0, theme.colors.quinary)};
   /* backdrop-filter: blur(9px); */
   border-right: ${theme.border};
   transition: left 0.333 ease-in-out;
   z-index: 99;
+
+  transition: ${theme.transition.all};
 
   &::-webkit-scrollbar {
     display: none;
@@ -46,7 +51,6 @@ export const Overlay = styled(Box)`
   &.nav-bg--open {
     visibility: visible;
     opacity: 1;
-    left: 0;
   }
 `
 

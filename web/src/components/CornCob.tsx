@@ -9,38 +9,38 @@ import theme from '../../config/theme'
 // ___________________________________________________________________
 
 const CornCob = () => (
-  <svg viewBox="0 0 90.33 79">
+  <svg viewBox="0 0 21.58 31.74">
     <title>Corn Cob icon</title>
-    <circle fill={theme.colors.primary} cx="26.5" cy="67.65" r="3.7" />
-    <circle fill={theme.colors.primary} cx="26.5" cy="58.31" r="3.7" />
-    <circle fill={theme.colors.primary} cx="26.5" cy="48.97" r="3.7" />
-    <circle fill={theme.colors.primary} cx="26.5" cy="39.63" r="3.7" />
-    <circle fill={theme.colors.primary} cx="26.5" cy="30.29" r="3.7" />
-    <circle fill={theme.colors.primary} cx="26.5" cy="20.94" r="3.7" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="63.71" r="3.12" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="55.83" r="3.12" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="47.95" r="3.12" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="40.07" r="3.12" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="32.19" r="3.12" />
-    <circle fill={theme.colors.primary} cx="26.39" cy="3.12" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="63.71" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="55.83" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="47.95" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="40.07" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="32.19" r="3.12" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="24.31" r="3.12" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="16.43" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="24.31" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="16.43" r="3.12" />
-    <circle fill={theme.colors.primary} cx="26.5" cy="11.48" r="3.7" />
-    <circle fill={theme.colors.primary} cx="18.61" cy="8.58" r="3.12" />
-    <circle fill={theme.colors.primary} cx="34.23" cy="8.58" r="3.12" />
+    <circle fill={theme.colors.primary} cx="10.84" cy="27.08" r="1.48" />
+    <circle fill={theme.colors.primary} cx="10.84" cy="23.34" r="1.48" />
+    <circle fill={theme.colors.primary} cx="10.84" cy="19.6" r="1.48" />
+    <circle fill={theme.colors.primary} cx="10.84" cy="15.86" r="1.48" />
+    <circle fill={theme.colors.primary} cx="10.84" cy="12.12" r="1.48" />
+    <circle fill={theme.colors.primary} cx="10.84" cy="8.38" r="1.48" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="25.5" r="1.25" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="22.35" r="1.25" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="19.19" r="1.25" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="16.04" r="1.25" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="12.89" r="1.25" />
+    <circle fill={theme.colors.primary} cx="10.8" cy="1.25" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="25.5" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="22.35" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="19.19" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="16.04" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="12.89" r="1.25" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="9.73" r="1.25" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="6.58" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="9.73" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="6.58" r="1.25" />
+    <circle fill={theme.colors.primary} cx="10.84" cy="4.6" r="1.48" />
+    <circle fill={theme.colors.primary} cx="7.69" cy="3.44" r="1.25" />
+    <circle fill={theme.colors.primary} cx="13.94" cy="3.44" r="1.25" />
     <path
       fill="none"
       stroke={theme.colors.primary}
       strokeMiterlimit="10"
-      strokeWidth="2px"
-      d="M50.19,40.66a16.64,16.64,0,0,0-6.55,4.67c0-.31.06-.6.1-.87,1.28-8.75,7.39-11.77,7.66-11.9A1.61,1.61,0,1,0,50,29.65c-.32.16-7.94,3.81-9.47,14.35a48.36,48.36,0,0,0-.27,6.62c0,9.81.29,23.68-14,23.66-13.86,0-13.81-13.85-13.82-23.66A50,50,0,0,0,12.16,44C10.62,33.46,3,29.81,2.68,29.66a1.6,1.6,0,0,0-2.13.77,1.62,1.62,0,0,0,.77,2.14C1.58,32.69,7.7,35.7,9,44.46c0,.27.07.57.1.87a16.64,16.64,0,0,0-6.55-4.67,1.61,1.61,0,0,0-1.06,3c.07,0,6.28,2.27,7.52,8.67A28.46,28.46,0,0,1,9.23,57c0,7.64,1.64,21.32,16.83,21.32h.66C41.66,78.22,43.45,64.62,43.49,57a28.39,28.39,0,0,1,.24-4.63C45,46,51,43.79,51.25,43.69a1.61,1.61,0,0,0-1.06-3Z"
+      strokeWidth="1px"
+      d="M20.33,16.28a6.56,6.56,0,0,0-2.62,1.86c0-.12,0-.23,0-.34A6.22,6.22,0,0,1,20.81,13a.64.64,0,0,0-.54-1.16,7.47,7.47,0,0,0-3.8,5.74,21,21,0,0,0-.1,2.65c0,3.93.11,9.48-5.62,9.47-5.55,0-5.53-5.54-5.54-9.47a19.06,19.06,0,0,0-.11-2.65,7.44,7.44,0,0,0-3.79-5.74.64.64,0,0,0-.85.31A.65.65,0,0,0,.77,13,6.16,6.16,0,0,1,3.83,17.8c0,.11,0,.22,0,.34a6.56,6.56,0,0,0-2.62-1.86.64.64,0,0,0-.82.39.65.65,0,0,0,.4.82,5,5,0,0,1,3,3.47,12,12,0,0,1,.09,1.85c0,3.06.66,8.54,6.74,8.54h.26c6,0,6.7-5.47,6.72-8.53A10.81,10.81,0,0,1,17.74,21a4.91,4.91,0,0,1,3-3.47.65.65,0,0,0,.4-.82A.64.64,0,0,0,20.33,16.28Z"
     />
   </svg>
 )

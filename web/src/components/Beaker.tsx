@@ -8,7 +8,7 @@ import theme from '../../config/theme'
 // ___________________________________________________________________
 
 const Beaker = () => (
-  <svg viewBox="0 0 52.72 78.71">
+  <svg viewBox="0 0 64.15 68.52">
     <title>Beaker icon</title>
     <path
       fill={theme.colors.primary}

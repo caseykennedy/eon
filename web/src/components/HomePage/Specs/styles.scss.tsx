@@ -40,7 +40,7 @@ export const Specs = styled(Section)`
       svg {
         height: ${theme.space[4]};
         position: relative;
-        top: 5px;
+        top: 8px;
 
         @media ${theme.mq.tablet} {
           height: calc(${theme.space[4]} / 1.15);
@@ -58,6 +58,7 @@ export const Features = styled(Box)`
 `
 
 export const HowTo = styled(Flex)`
+  justify-content: center;
   max-width: ${theme.maxWidth};
   margin: 0 auto;
   flex-wrap: wrap;
@@ -69,10 +70,20 @@ export const HowTo = styled(Flex)`
 
     margin: 0 ${theme.space[6]} ${theme.space[7]};
 
-    flex: 1 1 250px;
+    flex: 1 1 300px;
+    max-width: 500px;
 
     @media ${theme.mq.tablet} {
-      margin: 0 ${theme.space[5]};
+      margin: 0 ${theme.space[5]} ${theme.space[7]};
+    }
+
+    svg {
+      height: 200px;
+      width: 100%;
+
+      @media ${theme.mq.tablet} {
+        height: 280px;
+      }
     }
 
     &-spec {
@@ -92,10 +103,6 @@ export const HowTo = styled(Flex)`
 
       @media ${theme.mq.tablet} {
         font-size: calc(${theme.fontSizes[2]} * 1.5);
-      }
-
-      svg {
-        width: 100%;
       }
     }
   }

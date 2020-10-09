@@ -66,11 +66,11 @@ const Specs = () => {
             <span>
               <Lock />
             </span>
-            , zero-propellant, continuous spray{' '}
-            <span>
+            {' '}, zero-propellant, continuous spray{' '}
+            <span className="rotation">
               <Rotation />
             </span>{' '}
-            actuator.
+            action.
           </Heading>
           <Heading as="h3" mb={[7, 5]} className="text--xxl">
             Fine mist, wide angle{' '}
@@ -81,18 +81,18 @@ const Specs = () => {
             <span>
               <Hand />
             </span>
-            .
+            {' '}.
           </Heading>
           <Heading as="h3" mb={[7, 5]} className="text--xxl">
             190 proof, plant-based{' '}
             <span>
               <CornCob />,
-            </span>{' '}
-            Food Chemical Codex approved, Ethyl Alcohol solution{' '}
+            </span>
+            {' '}Food Chemical Codex approved, Ethyl Alcohol solution{' '}
             <span>
               <Atom />
             </span>
-            .
+            {' '}.
           </Heading>
           <Heading as="h3" mb={[7, 5]} className="text--xxl">
             Lab tested, high performance{' '}
@@ -103,7 +103,7 @@ const Specs = () => {
             <span>
               <HandFemale />
             </span>
-            .
+            {' '}.
           </Heading>
           <Box width={theme.space[12]} mt={12}>
             <WeRefreshHands />

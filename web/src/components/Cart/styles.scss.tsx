@@ -32,6 +32,8 @@ export const Cart = styled(Box)`
   visibility: hidden;
   z-index: 991;
 
+  transition: ${theme.transition.all};
+
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};
     visibility: hidden;
