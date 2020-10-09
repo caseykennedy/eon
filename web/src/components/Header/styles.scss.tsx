@@ -37,7 +37,11 @@ export const Header = styled(Flex)`
       justify-content: space-between;
       flex: 1;
 
-      padding: 0 ${theme.space[4]};
+      padding: 0 ${theme.space[3]};
+
+      @media ${theme.mq.tablet} {
+        padding: 0 ${theme.space[4]};
+      }
     }
 
     &-logo {

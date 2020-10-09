@@ -20,11 +20,15 @@ export const BuyButton = styled.button`
   
   cursor: pointer;
   outline: none;
-  padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
+  padding: calc(${theme.space[1]} * 1.5) ${theme.space[3]};
 
   font-weight: 500;
   text-transform: capitalize;
   transition: background-color ${theme.transition.global};
+
+  @media ${theme.mq.tablet} {
+    padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
+  }
 
   &:hover {
     background: ${darken(0, theme.colors.cta)};
