@@ -31,7 +31,12 @@ type Props = {
 
 // ___________________________________________________________________
 
-const CartItems: React.FC<{ checkout: any }> = ({ checkout }) => {
+type CartItemsProps = {
+  adding?: boolean
+  checkout: any
+}
+
+const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
   const LineItems = () =>
     checkout.lineItems.map((item: any) => (
       <LineItem key={item.id.toString()} item={item} />
@@ -41,24 +46,35 @@ const CartItems: React.FC<{ checkout: any }> = ({ checkout }) => {
     window.open(checkout.webUrl)
   }
   return (
-    <>
-      <LineItems />
-      <p>Subtotal $ {checkout.subtotalPrice && checkout.subtotalPrice}</p>
-      <br />
-      {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
+    <S.CartItems>
+      {!checkout.lineItems[0] ? (
+        <p>{!adding ? 'Your cart is empty.' : 'Adding items...'}</p>
+      ) : (
+        <>
+          <div className="cart-items__list">
+            <LineItems />
+          </div>
+          <div className="cart-items__checkout">
+            <div className="subtotal">
+              <p>Subtotal</p>
+              <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>
+            </div>
+            <div className="total">
+              <p>Total</p>
+              <p>${checkout.totalPrice && checkout.totalPrice}</p>
+            </div>
+            <Button
+              onClick={handleCheckout}
+              disabled={checkout.lineItems.length === 0}
+            >
+              Check out
+            </Button>
+          </div>
+          {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
       <br /> */}
-      <Flex alignItems="center" justifyContent="space-between">
-        <Text as="p" mb={0}>
-          Total $ {checkout.totalPrice && checkout.totalPrice}
-        </Text>
-        <button
-          onClick={handleCheckout}
-          disabled={checkout.lineItems.length === 0}
-        >
-          Check out
-        </button>
-      </Flex>
-    </>
+        </>
+      )}
+    </S.CartItems>
   )
 }
 
@@ -94,12 +110,19 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
                 animate={{ opacity: 1, transform: theme.transform.matrix.to }}
                 exit={{ opacity: 0, transform: theme.transform.matrix.from }}
                 transition={{ duration: 0.5 }}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%'
+                }}
               >
-                {!checkout.lineItems[0] ? (
-                  <p>{!adding ? 'Your cart is empty.' : 'Adding items...'}</p>
-                ) : (
-                  <CartItems checkout={checkout} />
-                )}
+                <div className="cart__utilities">
+                  <Text color="darkgray">your cart</Text>
+                  <Text onClick={togglePortal} className="close-cart">
+                    close <Icon name="arrow" color="black" />
+                  </Text>
+                </div>
+                <CartItems adding={adding} checkout={checkout} />
               </motion.div>
             )}
           </AnimatePresence>

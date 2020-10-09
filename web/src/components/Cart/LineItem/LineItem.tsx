@@ -9,7 +9,10 @@ import { Link } from 'gatsby'
 import * as S from './styles.scss'
 
 // UI
-import { Box, Flex } from '../../ui'
+import { Box, Flex, Text } from '../../ui'
+
+// Components
+import Icon from '../../Icons'
 
 // Context
 import StoreContext from '../../../context/StoreContext'
@@ -39,38 +42,51 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
       <img
         src={item.variant.image.src}
         alt={`${item.title} product shot`}
-        height="60px"
+        width="100%"
       />
     )
 
+  console.log(item)
+
   return (
     <S.LineItem>
-      <Flex>
-        <Link to={`/product/${item.variant.product.handle}/`}>
-          <VariantImage />
-        </Link>
-        <p>{item.title}</p>
-      </Flex>
-      <Flex width={1} my={4} justifyContent="flex-end">
-        <Box mr={4}>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            min="1"
-            step="1"
-            onChange={handleQuantityChange}
-            value={quantity}
-          />{' '}
-          <button onClick={handleUpdate}>update</button>
+      <Flex className="line-item__product">
+        <Box width={1 / 4}>
+          <Link to={`/product/${item.variant.product.handle}/`}>
+            <VariantImage />
+          </Link>
         </Box>
-        | <Box as="button" ml={4} onClick={handleRemove}>Remove</Box>
+        <Box width={3 / 4}>
+          <Text as="p" fontSize={3} fontWeight={500} mb={2}>
+            {item.title}
+          </Text>
+          <Text as="p" fontSize={2} fontWeight={500}>
+            ${item.variant.priceV2.amount}
+          </Text>
+        </Box>
       </Flex>
-      {/* {selectedOptions} */}
-      {/* <p>
-        {item.title}
-        {item.variant.title !== 'Default Title' ? item.variant.title : ''}
-      </p> */}
+
+      <Flex width={1} className="line-item__utilities">
+        <Box width={1 / 4} />
+        <Flex width={3 / 4} className="utilities">
+          <Flex pr={4}>
+            <Box mr={2}>qty.</Box>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              step="1"
+              onChange={handleQuantityChange}
+              value={quantity}
+            />
+            <button onClick={handleUpdate}>update</button>
+          </Flex>
+          <button onClick={handleRemove} className="btn-remove">
+            <Icon name="plus" />
+          </button>
+        </Flex>
+      </Flex>
     </S.LineItem>
   )
 }

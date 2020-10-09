@@ -14,7 +14,6 @@ import Section from '../../Section'
 
 export const ProductDetail = styled(Section)`
   background: ${transparentize(0.05, theme.colors.lightgray)};
-  border-top: ${theme.border};
   border-radius: 0 0 ${theme.space[9]} 0;
 
   overflow: hidden;

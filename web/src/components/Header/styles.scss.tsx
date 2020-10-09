@@ -19,8 +19,6 @@ export const Header = styled(Flex)`
   align-items: center;
   justify-content: space-between;
 
-  /* background: ${theme.colors.quinary}
-  ; */
   backdrop-filter: blur(9px);
   border-top: ${theme.border};
   border-bottom: ${theme.border};

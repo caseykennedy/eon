@@ -33,10 +33,10 @@ const Hero: React.FC<Props> = () => {
           </Box>
         </Flex>
 
-        <Box mt={['55%', '40%']} position="relative" style={{ zIndex: 9 }}>
+        <Box mt={['55%', '42%']} position="relative" style={{ zIndex: 9 }}>
           <h1>
-            eOn is professional-grade hand sanitation made easy. One quick spray
-            is all it takes to know your hands are 100% clean.
+            eOn is pro-grade hand sanitation made easy. One quick spray
+            is all it takes to know your hands are clean.
           </h1>
         </Box>
         <div className="hero-inner__features">

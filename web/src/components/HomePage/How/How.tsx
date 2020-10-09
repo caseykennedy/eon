@@ -29,7 +29,7 @@ const How: React.FC<Props> = () => {
           width={[1, 1, 1 / 2]}
           position="relative"
           pr={[7, 13, 10]}
-          style={{ maxWidth: '700px' }}
+          style={{ maxWidth: '600px' }}
         >
           <ImgMatch
             src="hand-can.png"

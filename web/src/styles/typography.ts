@@ -294,8 +294,8 @@ const Typography = css`
   }
 
   mark {
-    background-color: ${transparentize(0.5, theme.colors.yellowbuzz)};
-    border-bottom: ${theme.border};
+    background-color: transparent;
+    border: 2px solid red;
     padding: 0 calc(${theme.space[1]} / 1.5);
   }
 

@@ -14,8 +14,8 @@ export const Trademarks = styled(Flex)`
 
   background: rgba(255, 255, 255, 0.95);
   /* backdrop-filter: blur(9px); */
-  border-top: 2px solid ${theme.colors.black};
-  border-bottom: 2px solid ${theme.colors.black};
+  border-top: ${theme.border};
+  border-bottom: ${theme.border};
 
   position: relative;
   z-index: 9;

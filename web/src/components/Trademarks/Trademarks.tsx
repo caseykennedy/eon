@@ -49,21 +49,21 @@ const data = [
   {
     alt: '80% ethyl alcohol',
     src: ethylMark,
-    title: '80% ethyl alcohol'
+    title: '80% Ethyl Alcohol'
   },
   {
     alt: 'FDA logo',
     src: fdaMark,
-    title: 'registered'
+    title: 'FDA Registered'
   },
   {
     alt: 'TSA logo',
     src: tsaMark,
-    title: 'TSA friendly'
+    title: 'TSA Friendly'
   },
   {
     alt: 'USA logo',
     src: usaMark,
-    title: 'made in the USA'
+    title: 'Made in the USA'
   }
 ]
