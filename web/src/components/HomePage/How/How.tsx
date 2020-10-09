@@ -23,7 +23,7 @@ type Props = {}
 
 const How: React.FC<Props> = () => {
   return (
-    <S.How pt={10} pb={10}>
+    <S.How>
       <Flex alignItems="center" flexWrap="wrap">
         <Box
           width={[1, 1, 1 / 2]}

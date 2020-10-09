@@ -14,11 +14,12 @@ import Section from '../../Section'
 
 export const ProductDetail = styled(Section)`
   background: ${transparentize(0.05, theme.colors.lightgray)};
-  border-radius: 0 0 ${theme.space[9]} 0;
+  border-radius: 0 0 ${theme.space[7]} 0;
 
   overflow: hidden;
   position: relative;
 
   @media ${theme.mq.tablet} {
+    border-radius: 0 0 ${theme.space[9]} 0;
   }
 `

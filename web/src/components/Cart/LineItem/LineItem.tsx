@@ -10,6 +10,7 @@ import * as S from './styles.scss'
 
 // UI
 import { Box, Flex, Text } from '../../ui'
+import { Input } from 'theme-ui'
 
 // Components
 import Icon from '../../Icons'
@@ -71,7 +72,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
         <Flex width={3 / 4} className="utilities">
           <Flex pr={4}>
             <Box mr={2}>qty.</Box>
-            <input
+            <Input
               type="number"
               id="quantity"
               name="quantity"

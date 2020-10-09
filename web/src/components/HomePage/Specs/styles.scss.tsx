@@ -38,7 +38,13 @@ export const Specs = styled(Section)`
   h3 {
     span {
       svg {
-        height: ${theme.space[3]};
+        height: ${theme.space[4]};
+        position: relative;
+        top: 5px;
+
+        @media ${theme.mq.tablet} {
+          height: calc(${theme.space[4]} / 1.15);
+        }
       }
     }
   }
@@ -61,7 +67,7 @@ export const HowTo = styled(Flex)`
     flex-direction: column;
     justify-content: space-between;
 
-    margin: 0 ${theme.space[5]} ${theme.space[9]};
+    margin: 0 ${theme.space[6]} ${theme.space[7]};
 
     flex: 1 1 250px;
 
@@ -74,13 +80,13 @@ export const HowTo = styled(Flex)`
       align-items: center;
       justify-content: center;
 
-      font-size: calc(${theme.fontSizes[2]} * 1.5);
+      font-size: calc(${theme.fontSizes[2]} * 1.25);
       font-weight: 500;
       line-height: 1.75;
 
       background: ${theme.colors.white};
-      border: 2px solid ${theme.colors.black};
-      border-radius: ${theme.space[9]};
+      border: 3px solid ${theme.colors.black};
+      /* border-radius: ${theme.space[9]}; */
       margin-top: ${theme.space[4]};
       padding: ${theme.space[1]} 0;
 

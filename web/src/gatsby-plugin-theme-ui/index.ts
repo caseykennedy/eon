@@ -43,6 +43,7 @@ type ThemeShape = {
     }
   }
   border: string
+  borderRadius: string
   shadow: string
   root: {
     mouseX: string
@@ -102,6 +103,7 @@ const theme: ThemeShape = {
     babyblue: '#dcedff',
     skyblue: '#4073b2',
     moneygreen: '#39b14a',
+    yellowbuzz: '#F1E554'
   },
 
   // Space
@@ -128,7 +130,7 @@ const theme: ThemeShape = {
   gutter: {
     tablet: 4,
     desktop: 7,
-    axis: [6, 7]
+    axis: [4, 7]
   },
 
   // Typography
@@ -189,6 +191,7 @@ const theme: ThemeShape = {
   },
 
   border: '1px solid #000000',
+  borderRadius: '6px',
   shadow: '2rem 1.5rem 1rem #8a8a7c',
 
   root: {

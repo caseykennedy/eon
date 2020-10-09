@@ -7,11 +7,11 @@ import theme from '../../../../config/theme'
 import * as S from './styles.scss'
 
 // ui
-import Button from '../../ui/Button'
-import { Text, Flex, Box } from '../../ui'
+import { Button, Text, Flex, Box } from '../../ui'
 
 // Components
 import ImgMatch from '../../ImgMatch'
+import BuyButton from '../../BuyButton'
 
 // ___________________________________________________________________
 
@@ -50,7 +50,7 @@ const ProductDetail: React.FC = () => {
           </Flex>
         </Box>
         <Box width={1 / 2} style={{ position: 'relative', zIndex: 9 }}>
-          <Button>Buy Now</Button>
+          <BuyButton>Buy Now</BuyButton>
         </Box>
         <Box
           width={`48%`}

@@ -23,10 +23,12 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
     adding: false,
     checkout: { lineItems: [] },
     products: [],
-    shop: {}
+    shop: {},
+    isCartOpen: false
   }
 
   const [store, updateStore] = useState(initialStoreState)
+  const [isCartOpen, setCartOpen] = useState(false)
   let isRemoved = false
 
   useEffect(() => {
@@ -83,6 +85,8 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
   return (
     <Context.Provider
       value={{
+        isCartOpen,
+        setCartOpen,
         store,
         addVariantToCart: (variantId, quantity) => {
           if (variantId === '' || !quantity) {
@@ -91,7 +95,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
           }
 
           updateStore(prevState => {
-            return { ...prevState, adding: true }
+            return { ...prevState, adding: true, added: false }
           })
 
           const { checkout, client } = store
@@ -107,6 +111,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
               updateStore(prevState => {
                 return { ...prevState, checkout, adding: false, added: true }
               })
+              setCartOpen(true)
             })
         },
         removeLineItem: (client, checkoutID, lineItemID) => {

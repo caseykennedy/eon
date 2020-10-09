@@ -50,18 +50,18 @@ const HowTo = () => (
 const Specs = () => {
   return (
     <>
-      <Section bg="background" pt={12} pb={10}>
+      <Section bg="background" pt={[7, 9]}>
         <S.HowTo>
           <HowTo />
         </S.HowTo>
       </Section>
       <S.Specs bg="white">
         <Box width={[1, 8 / 10]}>
-          <Heading as="h3" mb={5} className="text--xxl">
+          <Heading as="h3" mb={[7, 5]} className="text--xxl">
             Works on contact: Immediate action against bacteria, fungi, and
             viruses.
           </Heading>
-          <Heading as="h3" mb={5} className="text--xxl">
+          <Heading as="h3" mb={[7, 5]} className="text--xxl">
             Child-safe{' '}
             <span>
               <Lock />
@@ -72,7 +72,7 @@ const Specs = () => {
             </span>{' '}
             actuator.
           </Heading>
-          <Heading as="h3" mb={5} className="text--xxl">
+          <Heading as="h3" mb={[7, 5]} className="text--xxl">
             Fine mist, wide angle{' '}
             <span>
               <Spray />
@@ -83,7 +83,7 @@ const Specs = () => {
             </span>
             .
           </Heading>
-          <Heading as="h3" mb={5} className="text--xxl">
+          <Heading as="h3" mb={[7, 5]} className="text--xxl">
             190 proof, plant-based{' '}
             <span>
               <CornCob />,
@@ -94,7 +94,7 @@ const Specs = () => {
             </span>
             .
           </Heading>
-          <Heading as="h3" mb={5} className="text--xxl">
+          <Heading as="h3" mb={[7, 5]} className="text--xxl">
             Lab tested, high performance{' '}
             <span>
               <Beaker />

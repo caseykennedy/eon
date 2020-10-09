@@ -15,7 +15,7 @@ import Header from '../Header'
 import Footer from '../Footer'
 
 // Styles + Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
 import 'swiper/css/swiper.css'

@@ -7,11 +7,12 @@ import { Link } from 'gatsby'
 import { darken } from 'polished'
 
 import { Box, Flex, Heading } from '..'
+import {Button} from 'theme-ui'
 import theme from '../../../../config/theme'
 
 // ___________________________________________________________________
 
-export const Button = styled(Box)<{ invert?: boolean }>`
+export const Btn = styled(Button)<{ invert?: boolean }>`
   display: flex;
   justify-content: center;
   

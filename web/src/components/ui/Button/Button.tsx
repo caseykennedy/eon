@@ -25,9 +25,9 @@ const defaultProps = {
 const Button: React.FC<Props> = ({ children, to, invert }) => {
   return (
     <Link to={to}>
-      <S.Button invert={invert}>
+      <S.Btn invert={invert}>
         {children}
-      </S.Button>
+      </S.Btn>
     </Link>
   )
 }

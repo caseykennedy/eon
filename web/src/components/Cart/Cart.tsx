@@ -7,8 +7,7 @@ import reduce from 'lodash/reduce'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // UI
-import { Box, Flex, Text } from '../ui'
-import Button from '../ui/Button'
+import { Button, Text } from '../ui'
 
 // Theme
 import * as S from './styles.scss'
@@ -63,12 +62,12 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
               <p>Total</p>
               <p>${checkout.totalPrice && checkout.totalPrice}</p>
             </div>
-            <button
+            <Button
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}
             >
-              Check out
-            </button>
+              Check Out
+            </Button>
           </div>
           {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
       <br /> */}
@@ -80,10 +79,12 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
 
 const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
   const {
+    isCartOpen,
+    setCartOpen,
     store: { checkout, adding }
   } = useContext(StoreContext)
   // Toggle cart portal
-  const togglePortal = () => setPortalOpen(!isPortalOpen)
+  const togglePortal = () => setCartOpen(!isCartOpen)
   // Get current cart count
   const useQuantity = () => {
     const items = checkout ? checkout.lineItems : []
@@ -96,15 +97,15 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
       <Portal
         id="cart-root"
         root="root"
-        isOpen={isPortalOpen}
-        handleExit={() => setPortalOpen(false)}
+        isOpen={isCartOpen}
+        handleExit={() => setCartOpen(false)}
         mainRef={mainRef}
       >
         <S.Cart
-          className={`cart ${isPortalOpen ? 'cart--open' : 'cart--closed'}`}
+          className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
         >
           <AnimatePresence>
-            {isPortalOpen && (
+            {isCartOpen && (
               <motion.div
                 initial={{ opacity: 0, transform: theme.transform.matrix.from }}
                 animate={{ opacity: 1, transform: theme.transform.matrix.to }}
@@ -117,7 +118,7 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
                 }}
               >
                 <div className="cart__utilities">
-                  <Text color="darkgray">your cart</Text>
+                  <Text color="darkgray">Your cart</Text>
                   <Text onClick={togglePortal} className="close-cart">
                     close <Icon name="arrow" color="black" />
                   </Text>
@@ -129,7 +130,7 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
         </S.Cart>
       </Portal>
       <S.CartToggle
-        bg={`${isPortalOpen && theme.colors.quinary}`}
+        bg={`${isCartOpen && theme.colors.quinary}`}
         aria-label="toggle cart"
         onClick={togglePortal}
       >

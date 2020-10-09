@@ -22,7 +22,12 @@ export const Header = styled(Flex)`
   backdrop-filter: blur(9px);
   border-top: ${theme.border};
   border-bottom: ${theme.border};
+  
   height: ${theme.headerHeight};
+  max-width: 100vw;
+  width: 100vw;
+
+  overflow: hidden;
   position: sticky;
   top: 0;
   z-index: 999;

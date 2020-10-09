@@ -9,12 +9,12 @@ import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
 // UI
-import Button from '../../ui/Button'
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
 
 // Compoonents
 import ImgMatch from '../../ImgMatch'
 import Shine from '../../Shine'
+import BuyButton from '../../BuyButton'
 
 // ___________________________________________________________________
 
@@ -26,8 +26,8 @@ const Hero: React.FC<Props> = () => {
       <S.Decorator>
         <Shine />
       </S.Decorator>
-      <div className="hero-inner">
-        <Flex width={1} position="relative" justifyContent="center">
+      <div className="hero__inner">
+        <Flex width={1} className="hero__figure">
           <Box width={[`27%`, `25%`, `20%`]} className="figure">
             <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
           </Box>
@@ -35,12 +35,12 @@ const Hero: React.FC<Props> = () => {
 
         <Box mt={['55%', '42%']} position="relative" style={{ zIndex: 9 }}>
           <h1>
-            eOn is pro-grade hand sanitation made easy. One quick spray
-            is all it takes to know your hands are clean.
+            eOn is pro-grade hand sanitation made easy. One quick spray is all
+            it takes to know your hands are clean.
           </h1>
         </Box>
-        <div className="hero-inner__features">
-          <Flex width={[1 / 2, 1 / 2, 2 / 3]} flexWrap="wrap" >
+        <div className="hero__features">
+          <Flex width={[1 / 2, 1 / 2, 2 / 3]} flexWrap="wrap">
             <Text as="p" mr={5} mb={[2, 0]}>
               Effective on
               <br />
@@ -63,7 +63,7 @@ const Hero: React.FC<Props> = () => {
             mt={[5, 6, 0]}
             justifyContent="flex-end"
           >
-            <Button to="/">Buy Now</Button>
+            <BuyButton>Buy Now</BuyButton>
           </Flex>
         </div>
       </div>

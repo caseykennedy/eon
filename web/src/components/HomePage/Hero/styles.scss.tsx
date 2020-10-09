@@ -13,15 +13,25 @@ export const Hero = styled(Section)`
   @media ${theme.mq.tablet} {
   }
 
-  .hero-inner {
-    @media ${theme.mq.tablet} {
+  .hero {
+    &__inner {
+      @media ${theme.mq.tablet} {
+      }
     }
 
-    .figure {
-      position: fixed;
+    &__figure {
+      position: relative;
+      justify-content: center;
+      height: auto;
+      margin: 0 auto;
       z-index: 0;
 
-      @media ${theme.mq.tablet} {
+      .figure {
+        position: fixed;
+        top: calc(${theme.headerHeight} + ${theme.space[7]});
+        
+        @media ${theme.mq.tablet} {
+        }
       }
     }
 
@@ -30,7 +40,7 @@ export const Hero = styled(Section)`
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      
+
       width: 100%;
       position: relative;
     }

@@ -40,7 +40,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   const toggleModal = () => setNavOpen(!isNavOpen)
 
   // Cart portal
-  const [isPortalOpen, setPortalOpen] = useState<boolean>(false)
+  const [isCartOpen, setCartOpen] = useState<boolean>(false)
 
   // On scroll class change
   const [shouldHideHeader, setShouldHideHeader] = useState(false)
@@ -116,15 +116,15 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
           <div className="header-cta">
             <BuyButton
-              setPortalOpen={setPortalOpen}
+              setPortalOpen={setCartOpen}
               highlightBG={highlightBG}
             />
           </div>
         </div>
 
         <Cart
-          isPortalOpen={isPortalOpen}
-          setPortalOpen={setPortalOpen}
+          isPortalOpen={isCartOpen}
+          setPortalOpen={setCartOpen}
           mainRef={mainRef}
         />
       </S.Header>

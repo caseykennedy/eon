@@ -5,6 +5,7 @@
 
 import styled from 'styled-components'
 import { animated } from 'react-spring'
+import { darken } from 'polished'
 
 // Theme
 import theme from '../../../config/theme'
@@ -151,25 +152,6 @@ export const AnimatedFlex = styled(animated.div)<ElementProps>`
 
 AnimatedFlex.displayName = 'AnimatedFlex'
 
-// Button
-
-export const Btn = styled.button<ElementProps>`
-  border: none;
-  font-weight: inherit;
-  font-size: 0.8em;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  ${space}
-  ${width}
-  ${color}
-  ${overflow}
-  ${textAlign}
-`
-
-Btn.displayName = 'Btn'
-
 // Typography
 
 export const Heading = styled.div<ElementProps>`
@@ -189,7 +171,7 @@ export const Heading = styled.div<ElementProps>`
   ${width}
 `
 
-Box.displayName = 'Heading'
+Heading.displayName = 'Heading'
 
 // export const HeadingStroked = styled(Heading)<ElementProps>`
 //   -webkit-text-fill-color: ${theme.colors.background};
@@ -216,7 +198,83 @@ export const Text = styled.div<ElementProps>`
   ${width}
 `
 
-Box.displayName = 'Text'
+Text.displayName = 'Text'
+
+
+export const Button = styled.button<ElementProps>`
+  box-sizing: border-box;
+  display: block;
+  transition: ${theme.transition.all};
+
+  display: flex;
+  justify-content: center;
+  
+  padding: calc(${theme.space[3]} / 1.15) ${theme.space[4]};
+  max-width: 400px;
+
+  color: ${theme.colors.white};
+  font-family: ${theme.fonts.heading};
+  font-size: calc(${theme.fontSizes[2]} * 1.5);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 0.5;
+  text-transform: capitalize;
+
+  background: ${theme.colors.cta};
+  border: ${theme.border};
+  border-color: ${theme.colors.cta};
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: ${theme.transition.all};
+
+  @media ${theme.mq.desktop} {
+    width: calc(${theme.space[7]} * 4);
+    font-size: ${theme.fontSizes[3]};
+  }
+
+  &:hover {
+    background: ${darken(0.05, theme.colors.cta)};
+    color: ${theme.colors.DefaultButton_color__white_6fu1h};
+
+    span {
+      margin-right: 0;
+
+      svg {
+        fill: ${theme.colors.white};
+      }
+    }
+  }
+
+  &:active {
+    background: ${theme.colors.black};
+    color: ${theme.colors.white};
+    border-color: ${theme.colors.black};
+  }
+
+  span {
+    margin-right: ${theme.space[3]};
+    transition: ${theme.transition.all};
+
+    svg {
+      width: ${theme.iconWidth};
+      fill: ${theme.colors.white};
+    }
+  }
+
+  ${space}
+  ${color}
+  ${textAlign}
+  ${fontFamily}
+  ${fontSize}
+  ${fontWeight}
+  ${lineHeight}
+  ${letterSpacing}
+  ${maxWidth}
+  ${width}
+`
+
+Button.displayName = 'Button'
 
 // ___________________________________________________________________
 // End Component
