@@ -28,7 +28,7 @@ export const LineItem = styled.div`
       }
       input {
         margin-right: ${theme.space[2]};
-        width: ${theme.space[5]};
+        width: ${theme.space[6]};
       }
 
       .utilities {
