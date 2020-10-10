@@ -1,6 +1,7 @@
 // // gatsby-browser
 
 // import React, { useState, useEffect } from 'react'
+// import Announcement from './src/components/Layout/Announcement'
 
 // // ___________________________________________________________________
 
@@ -11,5 +12,8 @@
 // }
 
 // export const wrapRootElement = ({ element }) => (
-//   <LoadAnimation>{element}</LoadAnimation>
+//   <>
+//     <Announcement to="/eon" />
+//     {element}
+//   </>
 // )
