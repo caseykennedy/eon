@@ -58,16 +58,16 @@ const ReviewSlider: React.FC = ({ children }) => {
 const Specs: React.FC<Props> = () => {
   return (
     <S.Reviews bg="white">
-      <h4>Reviews</h4>
+      <h4>What people say</h4>
       <br />
       <br />
       <ReviewSlider>
         {data.map((item, idx) => (
           <Box className="review__card" key={idx}>
             <p>{item.author}</p>
-            <h3 className="text--lg">
+            <Heading as="h3" fontSize={`calc(${theme.fontSizes[4]} / 1.25)`}>
               {item.review}
-            </h3>
+            </Heading>
           </Box>
         ))}
       </ReviewSlider>

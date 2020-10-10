@@ -7,7 +7,7 @@ import * as React from 'react'
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
-import { Box, Text } from '../ui'
+import { Box, Flex, Text } from '../ui'
 
 // Components
 import Icon from '../Icons'
@@ -73,8 +73,24 @@ const Footer: React.FC = () => {
       <PreFoot />
       <Terms />
       <S.Footer>
-        <div>&copy;{getYear()} eOn Mist</div>
-        <div><a href="">Legal</a> | <a href="">Shipping &amp; Returns</a></div>
+        <Flex alignItems="center" justifyContent="center">
+          &copy;{getYear()} eOn Mist
+        </Flex>
+        <Flex className="footer__links">
+          <a className="link" href="">
+            Legal
+          </a>
+          <a className="link" href="">
+            Shipping &amp; Returns
+          </a>
+          <Flex
+            as="a"
+            className="footer__contact"
+            href="mailto:hello@eonmist.com?subject=Contact from eonmist.com"
+          >
+            <small>Contact Us</small>
+          </Flex>
+        </Flex>
       </S.Footer>
     </>
   )

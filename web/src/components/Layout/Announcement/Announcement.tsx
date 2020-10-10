@@ -42,10 +42,12 @@ const Message: React.FC<Props> = ({
       <Link to={to}>
         {/* <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} /> */}
         <p>
-          <Box as="span" color="primary">
-            Hello there!
-          </Box>{' '}
-          Looking for eOn multi-surface disinfectant?
+          <small>
+            <Box as="span" color="primary">
+              Hello there!
+            </Box>{' '}
+            Looking for eOn multi-surface disinfectant?
+          </small>
         </p>
       </Link>
       <S.Exit onClick={handleExit} aria-label="close announcement">

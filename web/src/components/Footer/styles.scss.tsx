@@ -143,4 +143,32 @@ export const Footer = styled.footer`
   @media ${theme.mq.tablet} {
     padding: ${theme.space[4]} ${theme.space[7]};
   }
+
+  .footer {
+    &__links {
+      align-items: center;
+
+      .link {
+        color: ${theme.colors.black};
+        margin-left: ${theme.space[4]};
+      }
+    }
+
+    &__contact {
+      background: ${theme.colors.quinary};
+      border: 1px solid ${lighten(0.15, theme.colors.primary)};
+      border-radius: 999px;
+      color: ${lighten(0.15, theme.colors.primary)};
+      cursor: pointer;
+      font-weight: 500;
+      margin-left: ${theme.space[4]};
+      padding: ${theme.space[1]} ${theme.space[3]};
+
+      &:hover,
+      &:active {
+        background: ${darken(0.05, theme.colors.quinary)};
+        color: ${darken(0.15, theme.colors.primary)};
+      }
+    }
+  }
 `

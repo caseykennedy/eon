@@ -96,7 +96,7 @@ export const HowTo = styled(Flex)`
       line-height: 1.75;
 
       background: ${theme.colors.white};
-      border: 3px solid ${theme.colors.black};
+      border: 2px solid ${theme.colors.black};
       /* border-radius: ${theme.space[9]}; */
       margin-top: ${theme.space[4]};
       padding: ${theme.space[1]} 0;

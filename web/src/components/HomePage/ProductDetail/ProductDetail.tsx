@@ -52,7 +52,7 @@ const ProductDetail: React.FC = () => {
         <Box width={1 / 2} style={{ position: 'relative', zIndex: 9 }}>
           <BuyButton>Buy Now</BuyButton>
         </Box>
-        <Box
+        {/* <Box
           width={`48%`}
           style={{
             position: 'absolute',
@@ -64,7 +64,7 @@ const ProductDetail: React.FC = () => {
             src="hand-can--f.png"
             altText="Hand holding eOn Hand Sanitizer can."
           />
-        </Box>
+        </Box> */}
       </Flex>
     </S.ProductDetail>
   )
