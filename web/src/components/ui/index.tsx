@@ -200,7 +200,6 @@ export const Text = styled.div<ElementProps>`
 
 Text.displayName = 'Text'
 
-
 export const Button = styled.button<ElementProps>`
   box-sizing: border-box;
   display: block;
@@ -235,7 +234,7 @@ export const Button = styled.button<ElementProps>`
 
   &:hover {
     background: ${darken(0.05, theme.colors.cta)};
-    color: ${theme.colors.DefaultButton_color__white_6fu1h};
+    color: ${theme.colors.white};
 
     span {
       margin-right: 0;
@@ -244,6 +243,12 @@ export const Button = styled.button<ElementProps>`
         fill: ${theme.colors.white};
       }
     }
+  }
+
+  &:disabled {
+    background: ${theme.colors.white};
+    border-color: ${theme.colors.white};
+    color: ${theme.colors.primary};
   }
 
   &:active {

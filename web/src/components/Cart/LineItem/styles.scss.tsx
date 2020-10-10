@@ -19,21 +19,33 @@ export const LineItem = styled.div`
       justify-content: space-between;
       margin: ${theme.space[4]} 0;
 
-      input[type='number'] {
-        appearance: textfield;
-      }
-      input[type='number']::-webkit-inner-spin-button,
-      input[type='number']::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-      }
       input {
+        font-size: calc(${theme.fontSizes[2]} * 1.25);
         margin-right: ${theme.space[2]};
         width: ${theme.space[6]};
+
+        @media ${theme.mq.tablet} {
+          width: ${theme.space[7]};
+        }
       }
 
       .utilities {
         align-items: center;
         justify-content: space-between;
+
+        .btn-update {
+          background: transparent;
+          border: ${theme.border};
+          border-radius: ${theme.borderRadius};
+          outline: none;
+          cursor: pointer;
+
+          transition: ${theme.transition.all};
+
+          &:hover {
+            background: ${theme.colors.quinary};
+          }
+        }
 
         .btn-remove {
           display: flex;

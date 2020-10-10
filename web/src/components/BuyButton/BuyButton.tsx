@@ -70,7 +70,7 @@ const BuyButton: React.FC<Props> = ({
       onClick={handleAddToCart}
       aria-label="Buy now"
     >
-      buy now
+      {!adding ? 'Buy Now' : 'thank you 😃'}
     </Button>
   )
 }

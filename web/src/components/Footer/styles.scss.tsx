@@ -137,6 +137,7 @@ export const Footer = styled.footer`
   position: relative;
   z-index: 0;
 
+  background: ${theme.colors.white};
   border-top: ${theme.border};
   padding: ${theme.space[4]} ${theme.space[4]};
 

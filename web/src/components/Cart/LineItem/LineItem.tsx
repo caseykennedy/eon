@@ -23,7 +23,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   const {
     removeLineItem,
     updateLineItem,
-    store: { client, checkout }
+    store: { client, checkout, adding }
   } = useContext(StoreContext)
 
   const [quantity, setQuantity] = useState(item.quantity)
@@ -61,7 +61,10 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
         <Box width={3 / 4}>
           <Text
             as="p"
-            fontSize={[`calc(${theme.fontSizes[3]} / 1.5)`, `calc(${theme.fontSizes[3]} / 1.25)`]}
+            fontSize={[
+              `calc(${theme.fontSizes[3]} / 1.5)`,
+              `calc(${theme.fontSizes[3]} / 1.25)`
+            ]}
             fontWeight={500}
             mb={2}
           >
@@ -87,7 +90,13 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
               onChange={handleQuantityChange}
               value={quantity}
             />
-            <button onClick={handleUpdate}>update</button>
+            <button
+              className="btn-update"
+              disabled={adding}
+              onClick={handleUpdate}
+            >
+              update
+            </button>
           </Flex>
           <button onClick={handleRemove} className="btn-remove">
             <Icon name="plus" />

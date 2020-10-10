@@ -55,8 +55,12 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
           </div>
           <div className="cart-items__checkout">
             <div className="subtotal">
-              <p>Subtotal</p>
-              <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>
+              <Text as="p" color="darkgray">
+                Subtotal
+              </Text>
+              <Text as="p" color="darkgray">
+                ${checkout.subtotalPrice && checkout.subtotalPrice}
+              </Text>
             </div>
             <div className="total">
               <p>Total</p>

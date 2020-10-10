@@ -38,7 +38,7 @@ export const Cart = styled(Box)`
     border-left: ${theme.border};
     visibility: hidden;
     opacity: 0;
-    padding: ${theme.space[7]} ${theme.space[5]};
+    padding: ${theme.space[7]} ${theme.space[5]} ${theme.space[9]};
     right: 0;
     width: ${cartWidth};
   }
@@ -57,7 +57,7 @@ export const Cart = styled(Box)`
     &__utilities {
       display: flex;
       justify-content: space-between;
-      margin-bottom: ${theme.space[6]};
+      margin-bottom: ${theme.space[4]};
       width: 100%;
 
       .close-cart {
@@ -152,6 +152,7 @@ export const CartItems = styled(Flex)`
       align-items: center;
 
       border-top: ${theme.border};
+      border-top-color: ${theme.colors.gray};
       padding-top: ${theme.space[4]};
 
       .total {
@@ -160,8 +161,11 @@ export const CartItems = styled(Flex)`
         margin-bottom: ${theme.space[6]};
         width: 100%;
 
-        font-size: ${theme.fontSizes[1]};
-        text-transform: uppercase;
+        p {
+          font-size: ${theme.fontSizes[2]};
+          font-weight: 600;
+          text-transform: uppercase;
+        }
       }
 
       .subtotal {
@@ -170,7 +174,7 @@ export const CartItems = styled(Flex)`
         width: 100%;
 
         font-size: ${theme.fontSizes[1]};
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
       }
     }
   }
