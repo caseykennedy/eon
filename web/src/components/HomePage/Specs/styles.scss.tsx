@@ -38,7 +38,7 @@ export const Specs = styled(Section)`
   h3 {
     span {
       svg {
-        height: ${theme.space[4]};
+        height: calc(${theme.space[4]} / 1.25);
         position: relative;
         top: 8px;
 
@@ -96,7 +96,7 @@ export const HowTo = styled(Flex)`
       line-height: 1.75;
 
       background: ${theme.colors.white};
-      border: 2px solid ${theme.colors.black};
+      border: ${theme.border};
       /* border-radius: ${theme.space[9]}; */
       margin-top: ${theme.space[4]};
       padding: ${theme.space[1]} 0;

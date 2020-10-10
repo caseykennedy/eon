@@ -79,7 +79,10 @@ const Footer: React.FC = () => {
             Legal
           </a>
           <a className="link" href="">
-            Shipping &amp; Returns
+            Shipping
+          </a>
+          <a className="link" href="">
+            Returns
           </a>
           <Flex
             as="a"

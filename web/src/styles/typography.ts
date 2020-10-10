@@ -214,7 +214,7 @@ const Typography = css`
 
   h4,
   .text--md {
-    font-size: ${theme.fontSizes[2]};
+    font-size: calc(${theme.fontSizes[3]} / 1.25);
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[3]} / 1.15);

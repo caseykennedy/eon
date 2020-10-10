@@ -21,6 +21,14 @@ export const Reviews = styled(Section)`
       @media ${theme.mq.tablet} {
         padding: ${theme.space[6]};
       }
+
+      h3 {
+        font-size: calc(${theme.fontSizes[4]} / 1.5);
+
+        @media ${theme.mq.tablet} {
+          font-size: calc(${theme.fontSizes[4]} / 1.25);
+        }
+      }
     }
   }
 

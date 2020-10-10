@@ -176,23 +176,51 @@ export const Footer = styled.footer`
     }
 
     &__contact {
-      background: ${theme.colors.quinary};
-      border: 1px solid ${lighten(0.15, theme.colors.primary)};
-      border-radius: 999px;
-
+      background-color: ${theme.colors.quinary};
+      border: ${theme.border};
+      border-radius: ${theme.space[6]};
+      
       cursor: pointer;
+      outline: none;
+      margin-left: ${theme.space[4]};
+      padding: calc(${theme.space[1]} * 1.5) ${theme.space[3]};
 
-      color: ${lighten(0.15, theme.colors.primary)};
       font-weight: 500;
+      text-transform: capitalize;
+      transition: background-color ${theme.transition.global};
       white-space: nowrap;
 
-      margin-left: ${theme.space[4]};
-      padding: ${theme.space[1]} ${theme.space[3]};
+      @media ${theme.mq.tablet} {
+        padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
+      }
 
-      &:hover,
+      &:hover {
+        background: ${darken(0, theme.colors.cta)};
+        color: ${theme.colors.white};
+        border-color: ${theme.colors.cta};
+      }
+
       &:active {
-        background: ${darken(0.05, theme.colors.quinary)};
-        color: ${darken(0.15, theme.colors.primary)};
+        background: ${theme.colors.black};
+        color: ${theme.colors.white};
+        border-color: ${theme.colors.black};
+      }
+
+      &.header--stuck {
+        background: ${theme.colors.cta};
+        border-color: ${theme.colors.cta};
+        color: ${theme.colors.white};
+
+        &:hover {
+          background: ${darken(0.08, theme.colors.cta)};
+          /* color: ${theme.colors.white}; */
+        }
+
+        &:active {
+          background: ${theme.colors.black};
+          color: ${theme.colors.white};
+          border-color: ${theme.colors.black};
+        }
       }
     }
   }

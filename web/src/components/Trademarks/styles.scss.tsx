@@ -61,13 +61,10 @@ export const Trademarks = styled(Flex)`
   }
 
   img {
-    height: ${theme.space[4]};
+    height: calc(${theme.space[5]} * 1.25);
 
     @media ${theme.mq.tablet} {
       height: calc(${theme.space[4]} * 1.35);
     }
-  }
-
-  @media ${theme.mq.tablet} {
   }
 `

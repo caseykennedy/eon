@@ -25,6 +25,7 @@ export const BuyButton = styled.button`
   font-weight: 500;
   text-transform: capitalize;
   transition: background-color ${theme.transition.global};
+  white-space: nowrap;
 
   @media ${theme.mq.tablet} {
     padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
