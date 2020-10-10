@@ -33,6 +33,8 @@ export const PreFoot = styled.div`
   background: ${theme.colors.background};
   border-top: ${theme.border};
   position: relative;
+  max-width: 100vw;
+  width: 100vw;
   z-index: 1;
 
   .prefoot {
@@ -80,7 +82,7 @@ export const PreFoot = styled.div`
             padding: calc(${theme.space[2]} / 1) ${theme.space[3]};
 
             font-family: ${theme.fonts.heading};
-            font-size: calc(${theme.fontSizes[2]} * 1.5);
+            font-size: calc(${theme.fontSizes[2]} * 1.25);
             font-weight: 500;
             letter-spacing: 0.5px;
             line-height: 0.5;
@@ -134,12 +136,16 @@ export const PreFoot = styled.div`
 export const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+
   position: relative;
+  width: 100%;
   z-index: 0;
 
   background: ${theme.colors.white};
   border-top: ${theme.border};
-  padding: ${theme.space[4]} ${theme.space[4]};
+  padding: ${theme.space[4]} ${theme.space[4]} ${theme.space[6]};
 
   @media ${theme.mq.tablet} {
     padding: ${theme.space[4]} ${theme.space[7]};
@@ -148,20 +154,38 @@ export const Footer = styled.footer`
   .footer {
     &__links {
       align-items: center;
+      justify-content: flex-end;
+
+      @media ${theme.mq.tablet} {
+      }
 
       .link {
         color: ${theme.colors.black};
         margin-left: ${theme.space[4]};
+        display: none;
+
+        @media ${theme.mq.tablet} {
+          display: inherit;
+        }
       }
+    }
+
+    &__copyright {
+      align-items: center;
+      justify-content: center;
     }
 
     &__contact {
       background: ${theme.colors.quinary};
       border: 1px solid ${lighten(0.15, theme.colors.primary)};
       border-radius: 999px;
-      color: ${lighten(0.15, theme.colors.primary)};
+
       cursor: pointer;
+
+      color: ${lighten(0.15, theme.colors.primary)};
       font-weight: 500;
+      white-space: nowrap;
+
       margin-left: ${theme.space[4]};
       padding: ${theme.space[1]} ${theme.space[3]};
 

@@ -8,6 +8,7 @@ import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
 import { Box, Flex, Text } from '../ui'
+import { Input } from 'theme-ui'
 
 // Components
 import Icon from '../Icons'
@@ -25,7 +26,7 @@ const PreFoot = () => (
         <label htmlFor="email" style={{ display: 'none' }}>
           Email address:
         </label>
-        <input
+        <Input
           placeholder="email here"
           type="email"
           className="form-control"
@@ -73,9 +74,6 @@ const Footer: React.FC = () => {
       <PreFoot />
       <Terms />
       <S.Footer>
-        <Flex alignItems="center" justifyContent="center">
-          &copy;{getYear()} eOn Mist
-        </Flex>
         <Flex className="footer__links">
           <a className="link" href="">
             Legal
@@ -90,6 +88,9 @@ const Footer: React.FC = () => {
           >
             <small>Contact Us</small>
           </Flex>
+        </Flex>
+        <Flex className="footer__copyright">
+          &copy;{getYear()} eOn Mist
         </Flex>
       </S.Footer>
     </>
