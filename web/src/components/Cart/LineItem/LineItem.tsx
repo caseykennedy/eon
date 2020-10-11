@@ -11,7 +11,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex, Text } from '../../ui'
-import { Input } from 'theme-ui'
+import { Input, Slider } from 'theme-ui'
 
 // Components
 import Icon from '../../Icons'
@@ -84,6 +84,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             <Input
               type="number"
               id="quantity"
+              inputMode="decimal"
               name="quantity"
               min="1"
               step="1"

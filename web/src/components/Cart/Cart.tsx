@@ -121,13 +121,16 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
                   height: '100%'
                 }}
               >
-                <div className="cart__utilities">
-                  <Text color="darkgray">Your cart</Text>
-                  <Text onClick={togglePortal} className="close-cart">
-                    close <Icon name="arrow" color="black" />
-                  </Text>
-                </div>
-                <CartItems adding={adding} checkout={checkout} />
+                <>
+                  {/* <div className="cart__veil" /> */}
+                  <div className="cart__utilities">
+                    <Text color="darkgray">Your cart</Text>
+                    <Text onClick={togglePortal} className="close-cart">
+                      close <Icon name="arrow" color="black" />
+                    </Text>
+                  </div>
+                  <CartItems adding={adding} checkout={checkout} />
+                </>
               </motion.div>
             )}
           </AnimatePresence>

@@ -48,6 +48,7 @@ export const Announcement = styled(motion.div)`
 export const Exit = styled(Flex)`
   align-items: center;
   cursor: pointer;
+  margin-left: auto;
   height: 100%;
   padding: 0 ${theme.space[3]};
   z-index: 9999;

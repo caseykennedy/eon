@@ -22,6 +22,7 @@ export const LineItem = styled.div`
       input {
         font-size: calc(${theme.fontSizes[2]} * 1.25);
         margin-right: ${theme.space[2]};
+        padding: ${theme.space[1]} ${theme.space[2]};
         width: ${theme.space[6]};
 
         @media ${theme.mq.tablet} {
@@ -38,12 +39,20 @@ export const LineItem = styled.div`
           border: ${theme.border};
           border-radius: ${theme.borderRadius};
           outline: none;
+          padding: ${theme.space[1]} calc(${theme.space[3]});
           cursor: pointer;
 
           transition: ${theme.transition.all};
 
+          &:active,
           &:hover {
             background: ${theme.colors.quinary};
+          }
+
+          &:disabled {
+            background: ${theme.colors.white};
+            border-color: ${theme.colors.darkgray};
+            color: ${theme.colors.darkgray};
           }
         }
 
@@ -56,7 +65,7 @@ export const LineItem = styled.div`
           border-radius: 999px;
           cursor: pointer;
           outline: none;
-          padding: ${theme.space[1]};
+          padding: calc(${theme.space[1]});
 
           height: calc(${theme.space[3]} * 2.15);
           width: calc(${theme.space[3]} * 2.15);

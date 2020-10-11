@@ -65,7 +65,7 @@ const Specs: React.FC<Props> = () => {
         {data.map((item, idx) => (
           <Box className="review__card" key={idx}>
             <p>{item.author}</p>
-            <Heading as="h3" fontSize={`calc(${theme.fontSizes[4]} / 1.25)`}>
+            <Heading as="h3">
               {item.review}
             </Heading>
           </Box>

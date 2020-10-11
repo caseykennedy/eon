@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
+import { darken, transparentize } from 'polished'
 import { Box, Flex } from '../ui'
 import { motion } from 'framer-motion'
 import theme from '../../../config/theme'
@@ -79,6 +79,15 @@ export const Cart = styled(Box)`
         &:hover {
         }
       }
+    }
+
+    &__veil {
+      background: ${transparentize(0.25, theme.colors.lightgray)};
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 `

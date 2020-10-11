@@ -43,6 +43,12 @@ export const BuyButton = styled.button`
     border-color: ${theme.colors.black};
   }
 
+  /* &:disabled {
+    background: ${theme.colors.white};
+    border-color: ${theme.colors.darkgray};
+    color: ${theme.colors.darkgray};
+  } */
+
   &.header--stuck {
     background: ${theme.colors.cta};
     border-color: ${theme.colors.cta};
