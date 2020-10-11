@@ -51,7 +51,7 @@ export const Exit = styled(Flex)`
   margin-left: auto;
   height: 100%;
   padding: 0 ${theme.space[3]};
-  z-index: 9999;
+  z-index: 999;
 
   @media ${theme.mq.tablet} {
   }

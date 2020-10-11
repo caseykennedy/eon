@@ -17,7 +17,7 @@ export const LineItem = styled.div`
     &__utilities {
       display: flex;
       justify-content: space-between;
-      margin: ${theme.space[4]} 0;
+      margin: ${theme.space[4]} 0 0;
 
       input {
         font-size: calc(${theme.fontSizes[2]} * 1.25);

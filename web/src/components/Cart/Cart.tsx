@@ -47,7 +47,7 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
   return (
     <S.CartItems>
       {!checkout.lineItems[0] ? (
-        <p>{!adding ? 'Your cart is empty.' : 'Adding items...'}</p>
+        <p>{!adding ? 'Your cart is empty 😭' : 'Adding eOn...'}</p>
       ) : (
         <>
           <div className="cart-items__list">
@@ -125,8 +125,12 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
                   {/* <div className="cart__veil" /> */}
                   <div className="cart__utilities">
                     <Text color="darkgray">Your cart</Text>
-                    <Text onClick={togglePortal} className="close-cart">
-                      close <Icon name="arrow" color="black" />
+                    <Text
+                      onClick={togglePortal}
+                      className="close-cart"
+                      aria-label="close cart"
+                    >
+                      <Icon name="plus" color="black" />
                     </Text>
                   </div>
                   <CartItems adding={adding} checkout={checkout} />
