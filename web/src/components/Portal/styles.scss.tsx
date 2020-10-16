@@ -8,5 +8,4 @@ import theme from '../../../config/theme'
 // Begin Styles
 // ___________________________________________________________________
 
-export const Portal = styled.div`
-`
+export const Portal = styled.div``

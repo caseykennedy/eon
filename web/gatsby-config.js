@@ -113,6 +113,14 @@ module.exports = {
         trackingId: config.googleAnalyticsID
       }
     },
+    // {
+    //   resolve: "gatsby-plugin-hubspot",
+    //   options: {
+    //       trackingCode: "8630717",
+    //       respectDNT: true,
+    //       productionOnly: true,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-twitter-pixel',
       options: {

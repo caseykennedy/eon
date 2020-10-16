@@ -6,7 +6,7 @@
 
 // ___________________________________________________________________
 
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import theme from '../../../config/theme'
@@ -15,7 +15,7 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 type Props = {
-  mainRef?: React.RefObject<HTMLDivElement>
+  mainRef: React.RefObject<HTMLDivElement>
   className?: string
   children: React.ReactNode
   root?: string
@@ -63,21 +63,26 @@ const Portal: React.FC<Props> = ({
     const rootContainer = document.querySelector(`#${root}`)
     const modalContainer = document.querySelector(`#${id}`)
 
-    // const capturePosition = () => {
-    //   const cachedPosition = window.pageYOffset
-    //   return {
-    //     freeze: () => {
-    //       mainRef.current.style = `position: relative; top: ${cachedPosition *
-    //         -1}px; width: 100%;`
-    //     },
-    //     unfreeze: () => {
-    //       mainRef.current.removeAttribute('style')
-    //       window.scrollTo({
-    //         top: cachedPosition
-    //       })
-    //     }
-    //   }
-    // }
+    const capturePosition = () => {
+      const cachedPosition = window.pageYOffset
+      return {
+        freeze: () => {
+          // document.body.style.overflow = 'hidden'
+          if (null !== mainRef.current) {
+            mainRef.current.classList.add('body-lock')
+          }
+        },
+        unfreeze: () => {
+          // document.body.style.overflow = 'unset'
+          // if (mainRef.current) {
+          //   mainRef.current.classList.remove('body-lock')
+          // }
+          window.scrollTo({
+            top: cachedPosition
+          })
+        }
+      }
+    }
 
     const toggleTabIndex = (type: 'on' | 'off', container: Element) => {
       const focusableElements = container.querySelectorAll(
@@ -104,7 +109,7 @@ const Portal: React.FC<Props> = ({
       }
     }
 
-    // const { freeze, unfreeze } = capturePosition()
+    const { freeze, unfreeze } = capturePosition()
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()
@@ -113,12 +118,12 @@ const Portal: React.FC<Props> = ({
       window.addEventListener('keydown', handleKeyDown)
       // Bind the event listener
       document.addEventListener('mousedown', handleClickOutside)
-      // freeze()
+      freeze()
     } else {
       if (modalContainer) toggleTabIndex('off', modalContainer)
       if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
-      // unfreeze()
+      unfreeze()
       if (focusAfterExit) focusAfterExit.focus()
 
       if (!initialRender.current) {
@@ -132,7 +137,8 @@ const Portal: React.FC<Props> = ({
     return () => {
       if (isOpen) {
         window.removeEventListener('keydown', handleKeyDown)
-        // unfreeze()
+        unfreeze()
+
         // Unbind the event listener on clean up
         document.removeEventListener('mousedown', handleClickOutside)
       }

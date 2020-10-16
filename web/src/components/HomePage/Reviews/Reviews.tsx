@@ -21,6 +21,7 @@ type Props = {}
 const ReviewSlider: React.FC = ({ children }) => {
   const params = {
     freeMode: true,
+    grabCursor: true,
     // loop: true,
     centeredSlides: true,
     // effect: 'fade',

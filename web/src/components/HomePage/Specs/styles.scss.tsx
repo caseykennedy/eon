@@ -11,6 +11,13 @@ import { Grid, Cell } from 'styled-css-grid'
 // ___________________________________________________________________
 
 export const Specs = styled(Section)`
+
+  .spec {
+    &__block {
+      flex-wrap: wrap;
+    }
+  }
+
   .deco-feature-icons {
     justify-content: flex-end;
     flex-wrap: wrap;

@@ -95,7 +95,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
           }
 
           updateStore(prevState => {
-            return { ...prevState, adding: true, added: false }
+            return { ...prevState, adding: true }
           })
 
           const { checkout, client } = store

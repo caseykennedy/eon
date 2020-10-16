@@ -30,7 +30,8 @@ import FeatureStack from '../../FeatureStack'
 import AbstractSpray from '../../AbstractSpray'
 import WeRefreshHands from '../../WeRefreshHands'
 
-import SpraySystem from './svg/deco.svg'
+import sprayMist from './svg/spray.svg'
+import hch from './svg/hch.svg'
 
 // ___________________________________________________________________
 
@@ -55,71 +56,130 @@ const Specs = () => {
           <HowTo />
         </S.HowTo>
       </Section>
-      <S.Specs bg="white">
-        <Box width={[1, 8 / 10]}>
-          <Heading as="h3" mb={[7, 5]} className="text--xxl">
-            Works on contact: Immediate action against bacteria, fungi, and
-            viruses.
-          </Heading>
-          <Heading as="h3" mb={[7, 5]} className="text--xxl">
-            Child-safe{' '}
-            <span>
-              <Lock />
-            </span>
-            {' '}, zero-propellant, continuous spray{' '}
-            <span className="rotation">
-              <Rotation />
-            </span>{' '}
-            action.
-          </Heading>
-          <Heading as="h3" mb={[7, 5]} className="text--xxl">
-            Fine mist, wide angle{' '}
-            <span>
-              <Spray />
-            </span>{' '}
-            aerosol covers hands in one quick spray{' '}
-            <span>
-              <Hand />
-            </span>
-            {' '}.
-          </Heading>
-          <Heading as="h3" mb={[7, 5]} className="text--xxl">
-            190 proof, plant-based{' '}
-            <span>
-              <CornCob />,
-            </span>
-            {' '}Food Chemical Codex approved, Ethyl Alcohol solution{' '}
-            <span>
-              <Atom />
-            </span>
-            {' '}.
-          </Heading>
-          <Heading as="h3" mb={[7, 5]} className="text--xxl">
-            Lab tested, high performance{' '}
-            <span>
-              <Beaker />
-            </span>{' '}
-            formulation doesn’t dry or leave hands sticky{' '}
-            <span>
-              <HandFemale />
-            </span>
-            {' '}.
-          </Heading>
-          <Box width={theme.space[12]} mt={12}>
-            <WeRefreshHands />
+      <S.Specs bg="white" overflow="hidden">
+        <Flex className="spec__block">
+          <Box width={[1, 8 / 10]}>
+            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+              Works on contact: Immediate action against bacteria, fungi, and
+              viruses.
+            </Heading>
           </Box>
-        </Box>
-        <Flex className="deco-feature-icons">
-          <Box width="60%">
-            <FeatureStack />
-          </Box>
-          <Box width="100%" mt={7}>
-            <AbstractSpray />
-          </Box>
-          <Box width="160%" mt={7}>
-            <img src={SpraySystem} />
-          </Box>
+          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
+            <Box width={['15%', '30%']}>
+              <FeatureStack />
+            </Box>
+          </Flex>
         </Flex>
+
+        <Flex className="spec__block">
+          <Box width={[1, 8 / 10]}>
+            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+              Child-safe{' '}
+              <span>
+                <Lock />
+              </span>{' '}
+              , zero-propellant, continuous spray{' '}
+              <span className="rotation">
+                <Rotation />
+              </span>{' '}
+              action.
+            </Heading>
+          </Box>
+          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
+            <Box width={['30%', '80%']}>
+              <AbstractSpray />
+            </Box>
+          </Flex>
+        </Flex>
+
+        <Flex className="spec__block">
+          <Box width={[1, 8 / 10]}>
+            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+              Fine mist, wide angle{' '}
+              <span>
+                <Spray />
+              </span>{' '}
+              aerosol covers hands in one quick spray{' '}
+              <span>
+                <Hand />
+              </span>{' '}
+              .
+            </Heading>
+          </Box>
+          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
+            <Box
+              width={1}
+              style={{
+                position: 'relative',
+                // right: `-${theme.space[10]}`
+                maxHeight: '200px'
+              }}
+            >
+              <Box
+                as="img"
+                width={['70%', '200%']}
+                src={sprayMist}
+                alt="spray mist"
+              />
+            </Box>
+          </Flex>
+        </Flex>
+
+        <Flex className="spec__block">
+          <Box width={[1, 8 / 10]}>
+            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+              190 proof, plant-based{' '}
+              <span>
+                <CornCob />,
+              </span>{' '}
+              Food Chemical Codex approved, Ethyl Alcohol solution{' '}
+              <span>
+                <Atom />
+              </span>{' '}
+              .
+            </Heading>
+          </Box>
+          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
+            <Box
+              width={1}
+              style={{
+                position: 'relative',
+                top: `calc(${theme.space[7]} * 5)`,
+                // right: `-${theme.space[10]}`,
+                maxHeight: '200px'
+              }}
+            >
+              <Box
+                as="img"
+                width={['75%', '150%']}
+                src={hch}
+                alt="spray mist"
+              />
+            </Box>
+          </Flex>
+        </Flex>
+
+        <Flex className="spec__block">
+          <Box width={[1, 8 / 10]}>
+            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+              Lab tested, high performance{' '}
+              <span>
+                <Beaker />
+              </span>{' '}
+              formulation doesn’t dry or leave hands sticky{' '}
+              <span>
+                <HandFemale />
+              </span>{' '}
+              .
+            </Heading>
+          </Box>
+          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
+            <Box width="30%"/>
+          </Flex>
+        </Flex>
+        <Box width={theme.space[12]} mt={12}>
+          <WeRefreshHands />
+        </Box>
       </S.Specs>
     </>
   )

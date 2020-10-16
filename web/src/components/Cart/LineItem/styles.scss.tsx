@@ -20,13 +20,20 @@ export const LineItem = styled.div`
       margin: ${theme.space[4]} 0 0;
 
       input {
+        border-top: none;
+        border-right: none;
+        border-bottom: ${theme.border};
+        border-left: none;
+        border-radius: 0;
+
         font-size: calc(${theme.fontSizes[2]} * 1.25);
-        margin-right: ${theme.space[2]};
+        line-height: 1.5;
+        text-align: center;
         padding: ${theme.space[1]} ${theme.space[2]};
-        width: ${theme.space[6]};
+        width: ${theme.space[5]};
 
         @media ${theme.mq.tablet} {
-          width: ${theme.space[7]};
+          width: ${theme.space[6]};
         }
       }
 
@@ -36,10 +43,15 @@ export const LineItem = styled.div`
 
         .btn-update {
           background: transparent;
-          border: ${theme.border};
-          border-radius: ${theme.borderRadius};
+          border-top: none;
+          border-right: none;
+          border-bottom: ${theme.border};
+          border-left: none;
+          border-radius: 0;
+
+          font-size: ${theme.fontSizes[3]};
           outline: none;
-          padding: ${theme.space[1]} calc(${theme.space[3]});
+          padding: ${theme.space[1]} ${theme.space[2]};
           cursor: pointer;
 
           transition: ${theme.transition.all};
@@ -67,8 +79,8 @@ export const LineItem = styled.div`
           outline: none;
           padding: calc(${theme.space[1]});
 
-          height: calc(${theme.space[3]} * 2.15);
-          width: calc(${theme.space[3]} * 2.15);
+          height: calc(${theme.space[3]} * 2.5);
+          width: calc(${theme.space[3]} * 2.5);
 
           transition: background-color 0.222s ease-in-out;
 
@@ -76,7 +88,7 @@ export const LineItem = styled.div`
             background: ${theme.colors.quinary};
           }
 
-          svg {
+          span {
             transform: rotate(45deg);
             height: calc(${theme.space[3]} * 1.5);
             width: calc(${theme.space[3]} * 1.5);

@@ -5,7 +5,7 @@ export type StoreState = {
   added?: boolean
   adding?: boolean
   checkout: {
-    id?: string
+    id: string
     lineItems: {
       quantity: number
     }[]
