@@ -3,11 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-
 import { transparentize } from 'polished'
-
 import { Box, Flex } from '../ui'
-
 import theme from '../../../config/theme'
 
 // Begin Styles

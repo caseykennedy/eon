@@ -16,6 +16,7 @@ import Hero from './Hero'
 import How from './How'
 import Specs from './Specs'
 import Reviews from './Reviews'
+import Retailers from './Retailers'
 
 import Trademarks from '../Trademarks'
 
@@ -33,6 +34,7 @@ const HomePage: React.FC = () => {
       <Specs />
       <ProductDetail />
       <Reviews />
+      <Retailers />
     </S.HomePage>
   )
 }

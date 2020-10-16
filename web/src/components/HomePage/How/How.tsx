@@ -55,7 +55,7 @@ const How: React.FC<Props> = () => {
         </Box>
         <Box width={[1, 8 / 10, 1 / 2]}>
           <Heading as="h4" mb={5}>
-            effective protection
+            No mess, just mist
           </Heading>
           <Heading as="h2" className="text--xxl">
             eOn hand sanitizer packs high performance germ fighting power into

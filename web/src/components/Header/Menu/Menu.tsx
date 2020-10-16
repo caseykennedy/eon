@@ -9,7 +9,7 @@ import { useTransition } from 'react-spring'
 
 import { motion, AnimatePresence } from 'framer-motion'
 
-import { Box, Text } from '../../ui'
+import { Box, Flex, Text } from '../../ui'
 import BuyButton from '../../BuyButton'
 
 import theme from '../../../../config/theme'
@@ -54,15 +54,35 @@ const Menu: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
             exit={{ opacity: 0, transform: theme.transform.matrix.from }}
             transition={{ duration: 0.5 }}
           >
-            <Box width={8 / 10}>
+            <Box width={1}>
               <h2>
                 Please pardon our dust. We’re building an exciting new eOn
                 sanitizing mist™ website experience, chockful of info, usage
                 tips, support and more.
               </h2>
-              <p>Coming soon.</p>
+              <Flex mt={7}>
+                <Box bg="white" p={5} mr={5}>
+                  <p>
+                    <Text as="span" color="primary" fontWeight={600}>
+                      Quality in manufacturing excellence:
+                    </Text>{' '}
+                    eOn is produced in a nearly 100 yr. state of the art factory
+                    in compliance with all applicable safety, health and
+                    environmental standards.
+                  </p>
+                </Box>
+                <Box bg="white" p={5}>
+                  <p>
+                    <Text as="span" color="primary" fontWeight={600}>
+                      eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
+                    </Text>
+                    solution works by denaturing the proteins of germs,
+                    inactivating and inhibiting microbial growth. Learn more.
+                  </p>
+                </Box>
+              </Flex>
             </Box>
-            <Box>
+            <Box mt={7}>
               <BuyButton />
             </Box>
           </motion.div>

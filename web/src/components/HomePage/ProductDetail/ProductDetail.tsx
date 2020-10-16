@@ -18,7 +18,7 @@ import BuyButton from '../../BuyButton'
 const ProductDetail: React.FC = () => {
   return (
     <S.ProductDetail>
-      <Flex alignItems="flex-end" flexWrap="wrap">
+      <Flex alignItems="flex-start" flexWrap="wrap">
         <Box width={[1, 1 / 2]}>
           <h3 className="text--xxl">
             Effective
@@ -48,23 +48,18 @@ const ProductDetail: React.FC = () => {
               on the go
             </Text>
           </Flex>
+          <Box mt={6}>
+            <BuyButton>Buy Now</BuyButton>
+          </Box>
         </Box>
         <Box width={1 / 2} style={{ position: 'relative', zIndex: 9 }}>
-          <BuyButton>Buy Now</BuyButton>
+          <Box>
+            <ImgMatch
+              src="cans.png"
+              altText="Hand holding eOn Hand Sanitizer can."
+            />
+          </Box>
         </Box>
-        {/* <Box
-          width={`48%`}
-          style={{
-            position: 'absolute',
-            bottom: '-5rem',
-            right: '-12rem'
-          }}
-        >
-          <ImgMatch
-            src="hand-can--f.png"
-            altText="Hand holding eOn Hand Sanitizer can."
-          />
-        </Box> */}
       </Flex>
     </S.ProductDetail>
   )

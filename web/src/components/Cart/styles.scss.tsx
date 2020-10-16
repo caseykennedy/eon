@@ -21,13 +21,13 @@ export const Cart = styled(Box)`
   height: calc(100vh);
   width: 100vw;
   overflow: auto;
-  padding: calc(${theme.space[7]} / 1.25) ${theme.space[4]} ${theme.space[9]};
+  padding: calc(${theme.space[6]}) ${theme.space[4]} ${theme.space[9]};
 
   background: rgb(255, 255, 255, 0.9);
   backdrop-filter: blur(9px);
   opacity: 0;
   
-  position: fixed;
+  position: absolute;
   visibility: hidden;
   z-index: 9999;
 
@@ -38,6 +38,7 @@ export const Cart = styled(Box)`
     visibility: hidden;
     opacity: 0;
     padding: calc(${theme.space[7]} / 1.25) ${theme.space[5]} ${theme.space[5]};
+    position: fixed;
     right: 0;
     bottom: 0;
     left: auto;
