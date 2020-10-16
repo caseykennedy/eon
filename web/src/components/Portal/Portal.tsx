@@ -118,12 +118,12 @@ const Portal: React.FC<Props> = ({
       window.addEventListener('keydown', handleKeyDown)
       // Bind the event listener
       document.addEventListener('mousedown', handleClickOutside)
-      freeze()
+      // freeze()
     } else {
       if (modalContainer) toggleTabIndex('off', modalContainer)
       if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
-      unfreeze()
+      // unfreeze()
       if (focusAfterExit) focusAfterExit.focus()
 
       if (!initialRender.current) {
@@ -137,7 +137,7 @@ const Portal: React.FC<Props> = ({
     return () => {
       if (isOpen) {
         window.removeEventListener('keydown', handleKeyDown)
-        unfreeze()
+        // unfreeze()
 
         // Unbind the event listener on clean up
         document.removeEventListener('mousedown', handleClickOutside)

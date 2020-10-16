@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // const isHome = pathname === '/'
 
   // eslint-disable-next-line no-console
-  console.log(`%c eOn Mist `, `background: #FFFFFF; color: #000000`)
+  console.log(`%c eOn Mist — caseyKennedy.me `, `background: #FFFFFF; color: #000000`)
   return (
     <ContextProvider>
       <ThemeProvider theme={theme}>

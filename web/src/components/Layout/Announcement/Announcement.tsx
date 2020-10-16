@@ -26,6 +26,7 @@ type Props = {
   announcement?: string
   handleExit?: () => any
   isPortalOpen?: boolean
+  mainRef: React.RefObject<HTMLDivElement>
 } & typeof defaultProps
 const defaultProps = {
   to: '/'
@@ -57,7 +58,7 @@ const Message: React.FC<Props> = ({
   )
 }
 
-const Announcement: React.FC<Props> = ({ announcement, to }) => {
+const Announcement: React.FC<Props> = ({ announcement, mainRef, to }) => {
   // Navigation toggle
   const [isPortalOpen, setPortalOpen] = useState(false)
   const togglePortal = () => setPortalOpen(!isPortalOpen)
@@ -79,6 +80,7 @@ const Announcement: React.FC<Props> = ({ announcement, to }) => {
         root="root"
         isOpen={isPortalOpen}
         handleExit={() => setPortalOpen(false)}
+        mainRef={mainRef}
       >
         <S.Announcement
           className={`announcement ${
@@ -92,6 +94,7 @@ const Announcement: React.FC<Props> = ({ announcement, to }) => {
               to={to}
               handleExit={togglePortal}
               isPortalOpen={isPortalOpen}
+              mainRef={mainRef}
             />
           )}
         </S.Announcement>

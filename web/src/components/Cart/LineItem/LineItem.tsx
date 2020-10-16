@@ -25,13 +25,8 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
     updateLineItem,
     store: { client, checkout, adding }
   } = useContext(StoreContext)
-
   // Line item quantity state
   const [quantity, setQuantity] = useState(item.quantity)
-  // Update the cart quantity
-  // const handleUpdate = () => {
-  //   updateLineItem(client, checkout.id, item.id, quantity)
-  // }
   // Change the input quantity value
   const handleQuantityChange = ({ target }: any) => {
     setQuantity(target.value)
