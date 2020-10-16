@@ -101,7 +101,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             >
               -
             </button>
-            <Input
+            <input
               type="text"
               id="quantity"
               name="quantity"

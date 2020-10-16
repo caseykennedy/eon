@@ -18,7 +18,7 @@ export const Cart = styled(Box)`
   justify-content: flex-start;
   flex-direction: column;
 
-  height: calc(100vh);
+  height: 100vh;
   width: 100vw;
   overflow: auto;
   padding: calc(${theme.space[6]}) ${theme.space[4]} ${theme.space[9]};
@@ -26,8 +26,12 @@ export const Cart = styled(Box)`
   background: rgb(255, 255, 255, 0.9);
   backdrop-filter: blur(9px);
   opacity: 0;
-  
-  position: absolute;
+
+  position: fixed;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
   visibility: hidden;
   z-index: 9999;
 
@@ -38,9 +42,7 @@ export const Cart = styled(Box)`
     visibility: hidden;
     opacity: 0;
     padding: calc(${theme.space[7]} / 1.25) ${theme.space[5]} ${theme.space[5]};
-    position: fixed;
-    right: 0;
-    bottom: 0;
+
     left: auto;
     height: calc(100vh - ${theme.headerHeight});
     width: ${cartWidth};

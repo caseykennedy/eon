@@ -30,7 +30,7 @@ export const LineItem = styled.div`
         line-height: 1.5;
         text-align: center;
         padding: ${theme.space[1]} ${theme.space[2]};
-        width: ${theme.space[5]};
+        width: ${theme.space[6]};
 
         @media ${theme.mq.tablet} {
           width: ${theme.space[6]};
@@ -86,6 +86,11 @@ export const LineItem = styled.div`
 
           &:hover {
             background: ${theme.colors.quinary};
+          }
+
+          div {
+            background: ${theme.colors.gray};
+            position: relative;
           }
 
           span {
