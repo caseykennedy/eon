@@ -31,26 +31,35 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   const handleQuantityChange = ({ target }: any) => {
     setQuantity(target.value)
   }
+  // Update cart quantity
+  const handleUpdate = async () => {
+    try {
+      await updateLineItem(client, checkout.id, item.id, quantity)
+    } catch (error) {
+      console.error(error)
+    }
+  }
   // Remove line item
   const handleRemove = () => {
     removeLineItem(client, checkout.id, item.id)
   }
-  // Add / Remove one item from quantity + update cart
-  const decreaseProductAmount = async () => {
-    if (quantity === 1) return
-    try {
-      await updateLineItem(client, checkout.id, item.id, quantity - 1)
-    } catch (error) {
-      console.error(error)
-    }
-  }
-  const increaseProductAmount = async () => {
-    try {
-      await updateLineItem(client, checkout.id, item.id, quantity + 1)
-    } catch (error) {
-      console.error(error)
-    }
-  }
+
+  // // Add / Remove one item from quantity + update cart
+  // const decreaseProductAmount = async () => {
+  //   if (quantity === 1) return
+  //   try {
+  //     await updateLineItem(client, checkout.id, item.id, quantity - 1)
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
+  // const increaseProductAmount = async () => {
+  //   try {
+  //     await updateLineItem(client, checkout.id, item.id, quantity + 1)
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
   // Variant image
   const VariantImage = () =>
@@ -92,28 +101,24 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
         <Box width={1 / 4} />
         <Flex width={3 / 4} className="utilities">
           <Flex pr={4}>
-            {/* <Box mr={2}>qty.</Box> */}
-            <button
-              className="btn-update"
-              disabled={adding}
-              onClick={decreaseProductAmount}
-              value="-"
-            >
-              -
-            </button>
-            <input
-              type="text"
+            <Box mr={2}>qty.</Box>
+            <Input
+              type="number"
               id="quantity"
+              inputMode="decimal"
               name="quantity"
+              min="1"
+              step="1"
+              pattern="[0-9]*"
               onChange={handleQuantityChange}
               value={quantity}
             />
             <button
               className="btn-update"
               disabled={adding}
-              onClick={increaseProductAmount}
+              onClick={handleUpdate}
             >
-              +
+              update
             </button>
           </Flex>
           <button onClick={handleRemove} className="btn-remove">

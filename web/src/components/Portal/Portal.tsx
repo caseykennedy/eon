@@ -144,8 +144,8 @@ const Portal: React.FC<Props> = ({
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()
-      if (modalContainer) toggleTabIndex('on', modalContainer)
-      if (rootContainer) toggleTabIndex('off', rootContainer)
+      // if (modalContainer) toggleTabIndex('on', modalContainer)
+      // if (rootContainer) toggleTabIndex('off', rootContainer)
       window.addEventListener('keydown', handleKeyDown)
       // Bind the event listener
       document.addEventListener('mousedown', handleClickOutside)
@@ -154,8 +154,8 @@ const Portal: React.FC<Props> = ({
       }
       freeze()
     } else {
-      if (modalContainer) toggleTabIndex('off', modalContainer)
-      if (rootContainer) toggleTabIndex('on', rootContainer)
+      // if (modalContainer) toggleTabIndex('off', modalContainer)
+      // if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
       if (null !== scrollRef.current) {
         enableBodyScroll(scrollRef.current)

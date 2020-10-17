@@ -137,7 +137,8 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                       className="close-cart"
                       aria-label="close cart"
                     >
-                      <Icon name="plus" color="black" />
+                      {/* <Icon name="plus" color="black" /> */}
+                      close
                     </Text>
                   </div>
                   <CartItems

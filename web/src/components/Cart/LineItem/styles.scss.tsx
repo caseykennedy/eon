@@ -21,15 +21,14 @@ export const LineItem = styled.div`
 
       input {
         background: transparent;
-        border-top: none;
-        border-right: none;
-        border-bottom: ${theme.border};
-        border-left: none;
-        border-radius: 0;
+        border: ${theme.border};
+        border-radius: ${theme.borderRadius};
 
-        font-size: calc(${theme.fontSizes[2]} * 1.25);
+        font-size: calc(${theme.fontSizes[2]} * 1.5);
         line-height: 1.5;
         text-align: center;
+
+        margin-right: ${theme.space[2]};
         padding: ${theme.space[1]} ${theme.space[2]};
         width: ${theme.space[6]};
 
@@ -44,13 +43,10 @@ export const LineItem = styled.div`
 
         .btn-update {
           background: transparent;
-          border-top: none;
-          border-right: none;
-          border-bottom: ${theme.border};
-          border-left: none;
-          border-radius: 0;
+          border: ${theme.border};
+          border-radius: ${theme.borderRadius};
 
-          font-size: ${theme.fontSizes[3]};
+          font-size: ${theme.fontSizes[2]};
           outline: none;
           padding: ${theme.space[1]} ${theme.space[2]};
           cursor: pointer;
