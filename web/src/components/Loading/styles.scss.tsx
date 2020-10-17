@@ -26,8 +26,8 @@ export const Loading = styled(AnimatedFlex)`
     align-items: center;
 
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: ${theme.siteWidth};
+    height: 100%;
     top: 0;
     left: 0;
     background: ${theme.colors.secondary};

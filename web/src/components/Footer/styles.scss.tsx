@@ -33,8 +33,8 @@ export const PreFoot = styled.div`
   background: ${theme.colors.background};
   border-top: ${theme.border};
   position: relative;
-  max-width: 100vw;
-  width: 100vw;
+  max-width: ${theme.siteWidth};
+  width: ${theme.siteWidth};
   z-index: 1;
 
   .prefoot {

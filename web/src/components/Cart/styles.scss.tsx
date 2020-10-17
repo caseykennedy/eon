@@ -18,9 +18,9 @@ export const Cart = styled(Box)`
   justify-content: flex-start;
   flex-direction: column;
   height: 100%;
-  width: 100vw;
+  width: ${theme.siteWidth};
   overflow: auto;
-  padding: calc(${theme.space[6]}) ${theme.space[4]} ${theme.space[9]};
+  padding: ${theme.space[6]} ${theme.space[4]};
 
   background: rgb(255, 255, 255, 0.9);
   backdrop-filter: blur(9px);

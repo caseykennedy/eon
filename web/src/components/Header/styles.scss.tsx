@@ -24,8 +24,8 @@ export const Header = styled(Flex)`
   border-bottom: ${theme.border};
   
   height: ${theme.headerHeight};
-  max-width: 100vw;
-  width: 100vw;
+  max-width: ${theme.siteWidth};
+  width: ${theme.siteWidth};
 
   overflow: hidden;
   position: sticky;

@@ -152,7 +152,7 @@ const Portal: React.FC<Props> = ({
       if (null !== scrollRef.current) {
         disableBodyScroll(scrollRef.current)
       }
-      // freeze()
+      freeze()
     } else {
       if (modalContainer) toggleTabIndex('off', modalContainer)
       if (rootContainer) toggleTabIndex('on', rootContainer)
@@ -160,7 +160,7 @@ const Portal: React.FC<Props> = ({
       if (null !== scrollRef.current) {
         enableBodyScroll(scrollRef.current)
       }
-      // unfreeze()
+      unfreeze()
 
       if (focusAfterExit) focusAfterExit.focus()
 
@@ -176,7 +176,7 @@ const Portal: React.FC<Props> = ({
       if (isOpen) {
         window.removeEventListener('keydown', handleKeyDown)
         clearAllBodyScrollLocks()
-        // unfreeze()
+        unfreeze()
 
         // Unbind the event listener on clean up
         document.removeEventListener('mousedown', handleClickOutside)

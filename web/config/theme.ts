@@ -1,4 +1,5 @@
 // Theme / Design system:
+// DEPRACATED
 
 // Types
 // ___________________________________________________________________
@@ -166,7 +167,7 @@ const theme: ThemeShape = {
   strokeWidth: '2px',
 
   maxWidth: '1280px',
-  siteWidth: '100vw',
+  siteWidth: '100%',
   logoWidth: '70px',
   headerHeight: '56px',
   iconWidth: '18px',
