@@ -20,7 +20,7 @@ export const Cart = styled(Box)`
   height: 100vh;
   width: ${theme.siteWidth};
   overflow: auto;
-  padding: ${theme.space[6]} ${theme.space[4]};
+  padding: ${theme.space[5]} ${theme.space[4]};
 
   background: rgb(255, 255, 255, 0.9);
   backdrop-filter: blur(9px);
@@ -32,7 +32,7 @@ export const Cart = styled(Box)`
   right: 0;
   bottom: 0;
 
-  z-index: 999999;
+  z-index: 9999;
   transition: ${theme.transition.all};
   -webkit-overflow-scrolling: touch;
 
@@ -43,7 +43,7 @@ export const Cart = styled(Box)`
 
     top: initial;
     left: auto;
-    padding: calc(${theme.space[7]} / 1.25) ${theme.space[5]} ${theme.space[5]};
+    padding: ${theme.space[5]};
     height: calc(100% - ${theme.headerHeight});
     width: ${cartWidth};
     z-index: 991;
@@ -56,7 +56,6 @@ export const Cart = styled(Box)`
   &.cart--open {
     visibility: visible;
     opacity: 1;
-    right: 0;
   }
 
   .cart {

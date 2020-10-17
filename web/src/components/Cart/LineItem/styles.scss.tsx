@@ -20,7 +20,7 @@ export const LineItem = styled.div`
       margin: ${theme.space[4]} 0 0;
 
       input {
-        background: transparent;
+        background: ${theme.colors.white};
         border: ${theme.border};
         border-radius: ${theme.borderRadius};
 
@@ -32,10 +32,8 @@ export const LineItem = styled.div`
         padding: ${theme.space[1]} ${theme.space[2]};
         width: ${theme.space[6]};
 
-        position: relative;
-        z-index: 999999;
-
         @media ${theme.mq.tablet} {
+          font-size: calc(${theme.fontSizes[2]} * 1.25);
           width: ${theme.space[6]};
         }
       }
@@ -45,7 +43,7 @@ export const LineItem = styled.div`
         justify-content: space-between;
 
         .btn-update {
-          background: transparent;
+          background: ${theme.colors.white};
           border: ${theme.border};
           border-radius: ${theme.borderRadius};
 
