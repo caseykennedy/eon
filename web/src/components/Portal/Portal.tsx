@@ -52,7 +52,7 @@ const Portal: React.FC<Props> = ({
 
   React.useEffect(() => {
     portal.current = document.createElement('div')
-    // portal.current.id = id
+    portal.current.id = id
 
     if (!document.body.querySelector(`#${id}`)) {
       document.body.prepend(portal.current)
@@ -144,23 +144,23 @@ const Portal: React.FC<Props> = ({
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()
-      // if (modalContainer) toggleTabIndex('on', modalContainer)
-      // if (rootContainer) toggleTabIndex('off', rootContainer)
+      if (modalContainer) toggleTabIndex('on', modalContainer)
+      if (rootContainer) toggleTabIndex('off', rootContainer)
       window.addEventListener('keydown', handleKeyDown)
       // Bind the event listener
       document.addEventListener('mousedown', handleClickOutside)
       if (null !== scrollRef.current) {
         disableBodyScroll(scrollRef.current)
       }
-      freeze()
+      // freeze()
     } else {
-      // if (modalContainer) toggleTabIndex('off', modalContainer)
-      // if (rootContainer) toggleTabIndex('on', rootContainer)
+      if (modalContainer) toggleTabIndex('off', modalContainer)
+      if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
       if (null !== scrollRef.current) {
         enableBodyScroll(scrollRef.current)
       }
-      unfreeze()
+      // unfreeze()
 
       if (focusAfterExit) focusAfterExit.focus()
 
@@ -176,7 +176,7 @@ const Portal: React.FC<Props> = ({
       if (isOpen) {
         window.removeEventListener('keydown', handleKeyDown)
         clearAllBodyScrollLocks()
-        unfreeze()
+        // unfreeze()
 
         // Unbind the event listener on clean up
         document.removeEventListener('mousedown', handleClickOutside)

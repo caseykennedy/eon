@@ -33,13 +33,11 @@ type Props = {
 type CartItemsProps = {
   adding?: boolean
   checkout: any
-  scrollRef: React.RefObject<HTMLDivElement>
 }
 
 const CartItems: React.FC<CartItemsProps> = ({
   adding,
-  checkout,
-  scrollRef
+  checkout
 }) => {
   const LineItems = () =>
     checkout.lineItems.map((item: any) => (
@@ -50,7 +48,7 @@ const CartItems: React.FC<CartItemsProps> = ({
     window.open(checkout.webUrl)
   }
   return (
-    <S.CartItems ref={scrollRef}>
+    <S.CartItems>
       {!checkout.lineItems[0] ? (
         <p>{!adding ? 'Your cart is empty 😭' : 'Adding eOn...'}</p>
       ) : (
@@ -128,6 +126,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                   flexDirection: 'column',
                   height: '100%'
                 }}
+                ref={scrollRef}
               >
                 <>
                   {/* <div className="cart__veil" /> */}
@@ -144,7 +143,6 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                   <CartItems
                     adding={adding}
                     checkout={checkout}
-                    scrollRef={scrollRef}
                   />
                 </>
               </motion.div>

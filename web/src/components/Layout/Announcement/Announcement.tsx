@@ -74,32 +74,22 @@ const Announcement: React.FC<Props> = ({ announcement, mainRef, to }) => {
     }
   }
   return (
-    <>
-      <Portal
-        id="announcement-root"
-        root="root"
-        isOpen={isPortalOpen}
-        handleExit={() => setPortalOpen(false)}
-        mainRef={mainRef}
-      >
-        <S.Announcement
-          className={`announcement ${
-            !isPortalOpen ? 'announcement--open' : 'announcement--closed'
-          }`}
-          {...motionProps}
-        >
-          {!isPortalOpen && (
-            <Message
-              announcement={announcement}
-              to={to}
-              handleExit={togglePortal}
-              isPortalOpen={isPortalOpen}
-              mainRef={mainRef}
-            />
-          )}
-        </S.Announcement>
-      </Portal>
-    </>
+    <S.Announcement
+      className={`announcement ${
+        !isPortalOpen ? 'announcement--open' : 'announcement--closed'
+      }`}
+      {...motionProps}
+    >
+      {!isPortalOpen && (
+        <Message
+          announcement={announcement}
+          to={to}
+          handleExit={togglePortal}
+          isPortalOpen={isPortalOpen}
+          mainRef={mainRef}
+        />
+      )}
+    </S.Announcement>
   )
 }
 
