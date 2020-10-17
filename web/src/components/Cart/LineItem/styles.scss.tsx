@@ -26,7 +26,7 @@ export const LineItem = styled.div`
 
         font-size: calc(${theme.fontSizes[2]} * 1.5);
         line-height: 1.5;
-        text-align: center;
+        /* text-align: center; */
 
         margin-right: ${theme.space[2]};
         padding: ${theme.space[1]} ${theme.space[2]};

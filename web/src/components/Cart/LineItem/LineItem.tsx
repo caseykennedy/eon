@@ -32,12 +32,8 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
     setQuantity(target.value)
   }
   // Update cart quantity
-  const handleUpdate = async () => {
-    try {
-      await updateLineItem(client, checkout.id, item.id, quantity)
-    } catch (error) {
-      console.error(error)
-    }
+  const handleUpdate = () => {
+    updateLineItem(client, checkout.id, item.id, quantity)
   }
   // Remove line item
   const handleRemove = () => {
