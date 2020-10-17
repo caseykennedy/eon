@@ -9,6 +9,12 @@
 import React, { useLayoutEffect } from 'react'
 import ReactDOM from 'react-dom'
 
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from 'body-scroll-lock'
+
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
@@ -16,6 +22,7 @@ import * as S from './styles.scss'
 
 type Props = {
   mainRef: React.RefObject<HTMLDivElement>
+  scrollRef: React.RefObject<HTMLDivElement>
   className?: string
   children: React.ReactNode
   root?: string
@@ -35,7 +42,8 @@ const Portal: React.FC<Props> = ({
   handleExit,
   focusAfterExit,
   mainRef,
-  className
+  className,
+  scrollRef
 }) => {
   const [hasUpdated, forceUpdate] = React.useState(false)
 
@@ -69,7 +77,7 @@ const Portal: React.FC<Props> = ({
         freeze: () => {
           // document.body.style.overflow = 'hidden'
           if (null !== mainRef.current) {
-            mainRef.current.classList.add('body-lock')
+            mainRef.current.style = `top: ${cachedPosition * -1}px;`
           }
         },
         unfreeze: () => {
@@ -77,12 +85,35 @@ const Portal: React.FC<Props> = ({
           // if (mainRef.current) {
           //   mainRef.current.classList.remove('body-lock')
           // }
-          window.scrollTo({
-            top: cachedPosition
-          })
+          // mainRef.current.removeAttribute('style')
+          // window.scrollTo({
+          //   top: cachedPosition
+          // })
+          if (null !== mainRef.current) {
+            mainRef.current.removeAttribute('style')
+            window.scrollTo({
+              top: cachedPosition
+            })
+          }
         }
       }
     }
+
+    // const capturePosition = () => {
+    //   const cachedPosition = window.pageYOffset
+    //   return {
+    //     freeze: () => {
+    //       mainRef.current.style = `position: relative; top: ${cachedPosition *
+    //         -1}px; width: 100%;`
+    //     },
+    //     unfreeze: () => {
+    //       mainRef.current.removeAttribute('style')
+    //       window.scrollTo({
+    //         top: cachedPosition
+    //       })
+    //     }
+    //   }
+    // }
 
     const toggleTabIndex = (type: 'on' | 'off', container: Element) => {
       const focusableElements = container.querySelectorAll(
@@ -113,17 +144,24 @@ const Portal: React.FC<Props> = ({
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()
-      if (modalContainer) toggleTabIndex('on', modalContainer)
-      if (rootContainer) toggleTabIndex('off', rootContainer)
+      // if (modalContainer) toggleTabIndex('on', modalContainer)
+      // if (rootContainer) toggleTabIndex('off', rootContainer)
       window.addEventListener('keydown', handleKeyDown)
       // Bind the event listener
       document.addEventListener('mousedown', handleClickOutside)
+      if (null !== scrollRef.current) {
+        disableBodyScroll(scrollRef.current)
+      }
       freeze()
     } else {
-      if (modalContainer) toggleTabIndex('off', modalContainer)
-      if (rootContainer) toggleTabIndex('on', rootContainer)
+      // if (modalContainer) toggleTabIndex('off', modalContainer)
+      // if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
+      if (null !== scrollRef.current) {
+        enableBodyScroll(scrollRef.current)
+      }
       unfreeze()
+
       if (focusAfterExit) focusAfterExit.focus()
 
       if (!initialRender.current) {
@@ -137,6 +175,7 @@ const Portal: React.FC<Props> = ({
     return () => {
       if (isOpen) {
         window.removeEventListener('keydown', handleKeyDown)
+        clearAllBodyScrollLocks()
         unfreeze()
 
         // Unbind the event listener on clean up

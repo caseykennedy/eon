@@ -31,6 +31,7 @@
   "dependencies": {
     "@loadable/component": "^5.13.2",
     "@sanity/block-content-to-react": "^2.0.7",
+    "@types/body-scroll-lock": "^2.6.1",
     "@types/google-map-react": "^1.1.7",
     "@types/isomorphic-fetch": "0.0.35",
     "@types/loadable__component": "^5.13.1",
@@ -42,6 +43,7 @@
     "@types/shopify-buy": "^2.10.3",
     "@types/theme-ui": "^0.3.6",
     "babel-plugin-styled-components": "^1.10.7",
+    "body-scroll-lock": "^3.1.5",
     "dotenv": "^8.2.0",
     "framer-motion": "^2.7.6",
     "gatsby": "^2.20.7",

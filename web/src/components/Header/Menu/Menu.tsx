@@ -26,9 +26,10 @@ type LinkProps = {
   handleExitOnClick: () => void
 }
 
-type NavLinksProps = {
+type MenuProps = {
   handleExit: () => void
   isNavOpen: boolean
+  scrollRef: React.RefObject<HTMLDivElement>
 }
 
 // ___________________________________________________________________
@@ -43,9 +44,9 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
   )
 }
 
-const Menu: React.FC<NavLinksProps> = ({ handleExit, isNavOpen }) => {
+const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
   return (
-    <S.Menu>
+    <S.Menu ref={scrollRef}>
       <AnimatePresence>
         {isNavOpen && (
           <motion.div

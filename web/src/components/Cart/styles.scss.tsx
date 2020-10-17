@@ -37,6 +37,8 @@ export const Cart = styled(Box)`
 
   transition: ${theme.transition.all};
 
+  -webkit-overflow-scrolling: touch;
+
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};
     visibility: hidden;

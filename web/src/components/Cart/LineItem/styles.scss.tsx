@@ -20,6 +20,7 @@ export const LineItem = styled.div`
       margin: ${theme.space[4]} 0 0;
 
       input {
+        background: transparent;
         border-top: none;
         border-right: none;
         border-bottom: ${theme.border};

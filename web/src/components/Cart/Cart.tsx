@@ -24,8 +24,8 @@ import LineItem from './LineItem'
 
 type Props = {
   mainRef: React.RefObject<HTMLDivElement>
-  isPortalOpen: boolean
-  setPortalOpen: (arg0: boolean) => void
+  // isPortalOpen: boolean
+  // setPortalOpen: (arg0: boolean) => void
 }
 
 // ___________________________________________________________________
@@ -33,9 +33,14 @@ type Props = {
 type CartItemsProps = {
   adding?: boolean
   checkout: any
+  scrollRef: React.RefObject<HTMLDivElement>
 }
 
-const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
+const CartItems: React.FC<CartItemsProps> = ({
+  adding,
+  checkout,
+  scrollRef
+}) => {
   const LineItems = () =>
     checkout.lineItems.map((item: any) => (
       <LineItem key={item.id.toString()} item={item} />
@@ -45,7 +50,7 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
     window.open(checkout.webUrl)
   }
   return (
-    <S.CartItems>
+    <S.CartItems ref={scrollRef}>
       {!checkout.lineItems[0] ? (
         <p>{!adding ? 'Your cart is empty 😭' : 'Adding eOn...'}</p>
       ) : (
@@ -81,7 +86,9 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
   )
 }
 
-const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
+const Cart: React.FC<Props> = ({ mainRef }) => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
   const {
     isCartOpen,
     setCartOpen,
@@ -103,6 +110,7 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
         root="root"
         isOpen={isCartOpen}
         handleExit={() => setCartOpen(false)}
+        scrollRef={scrollRef}
         mainRef={mainRef}
       >
         <S.Cart
@@ -133,7 +141,11 @@ const Cart: React.FC<Props> = ({ mainRef, setPortalOpen, isPortalOpen }) => {
                       <Icon name="plus" color="black" />
                     </Text>
                   </div>
-                  <CartItems adding={adding} checkout={checkout} />
+                  <CartItems
+                    adding={adding}
+                    checkout={checkout}
+                    scrollRef={scrollRef}
+                  />
                 </>
               </motion.div>
             )}

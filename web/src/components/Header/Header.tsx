@@ -3,7 +3,7 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Link } from 'gatsby'
 
 import HamburgerMenu from 'react-hamburger-menu'
@@ -35,6 +35,8 @@ interface CallbackTypes {
 }
 
 const Header: React.FC<HeaderShape> = ({ mainRef }) => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
   // Navigation portal
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
@@ -76,14 +78,12 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
         mainRef={mainRef}
+        scrollRef={scrollRef}
       >
         <Overlay
           className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
         >
-          <Menu
-            handleExit={() => setNavOpen(false)}
-            isNavOpen={isNavOpen}
-          />
+          <Menu handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} scrollRef={scrollRef} />
         </Overlay>
       </Portal>
 
@@ -115,18 +115,11 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </div>
 
           <div className="header-cta">
-            <BuyButton
-              setPortalOpen={setCartOpen}
-              highlightBG={highlightBG}
-            />
+            <BuyButton setPortalOpen={setCartOpen} highlightBG={highlightBG} />
           </div>
         </div>
 
-        <Cart
-          isPortalOpen={isCartOpen}
-          setPortalOpen={setCartOpen}
-          mainRef={mainRef}
-        />
+        <Cart mainRef={mainRef} />
       </S.Header>
     </>
   )
