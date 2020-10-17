@@ -17,8 +17,7 @@ const cartWidth = `700px`
 export const Cart = styled(Box)`
   justify-content: flex-start;
   flex-direction: column;
-
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: auto;
   padding: calc(${theme.space[6]}) ${theme.space[4]} ${theme.space[9]};
@@ -26,29 +25,24 @@ export const Cart = styled(Box)`
   background: rgb(255, 255, 255, 0.9);
   backdrop-filter: blur(9px);
   opacity: 0;
-
-  position: fixed;
+  visibility: hidden;
   position: fixed;
   right: 0;
   bottom: 0;
 
-  visibility: hidden;
   z-index: 9999;
-
   transition: ${theme.transition.all};
-
   -webkit-overflow-scrolling: touch;
 
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};
-    visibility: hidden;
     opacity: 0;
-    padding: calc(${theme.space[7]} / 1.25) ${theme.space[5]} ${theme.space[5]};
+    visibility: hidden;
 
     left: auto;
-    height: calc(100vh - ${theme.headerHeight});
+    padding: calc(${theme.space[7]} / 1.25) ${theme.space[5]} ${theme.space[5]};
+    height: calc(100% - ${theme.headerHeight});
     width: ${cartWidth};
-
     z-index: 991;
   }
 
