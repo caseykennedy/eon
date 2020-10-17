@@ -152,7 +152,7 @@ const Portal: React.FC<Props> = ({
       if (null !== scrollRef.current) {
         disableBodyScroll(scrollRef.current)
       }
-      // freeze()
+      freeze()
     } else {
       // if (modalContainer) toggleTabIndex('off', modalContainer)
       // if (rootContainer) toggleTabIndex('on', rootContainer)

@@ -87,7 +87,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         </Overlay>
       </Portal>
 
-      <S.Header bg={headerBG}>
+      <S.Header as="header" bg={headerBG}>
         <Box
           bg={`${isNavOpen && theme.colors.quinary}`}
           className="header-toggle"

@@ -27,7 +27,7 @@ export const Header = styled(Flex)`
   max-width: ${theme.siteWidth};
   width: ${theme.siteWidth};
 
-  overflow: hidden;
+  overflow: visible;
   position: sticky;
   top: 0;
   z-index: 999;

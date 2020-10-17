@@ -35,10 +35,7 @@ type CartItemsProps = {
   checkout: any
 }
 
-const CartItems: React.FC<CartItemsProps> = ({
-  adding,
-  checkout
-}) => {
+const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
   const LineItems = () =>
     checkout.lineItems.map((item: any) => (
       <LineItem key={item.id.toString()} item={item} />
@@ -103,19 +100,12 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
   const [hasItems, quantity] = useQuantity()
   return (
     <>
-      <Portal
-        id="cart-root"
-        root="root"
-        isOpen={isCartOpen}
-        handleExit={() => setCartOpen(false)}
-        scrollRef={scrollRef}
-        mainRef={mainRef}
-      >
-        <S.Cart
-          className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
-        >
-          <AnimatePresence>
-            {isCartOpen && (
+      
+        {isCartOpen && (
+          <S.Cart
+            className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
+          >
+            <AnimatePresence>
               <motion.div
                 initial={{ opacity: 0, transform: theme.transform.matrix.from }}
                 animate={{ opacity: 1, transform: theme.transform.matrix.to }}
@@ -141,16 +131,13 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                       close
                     </Text>
                   </div>
-                  <CartItems
-                    adding={adding}
-                    checkout={checkout}
-                  />
+                  <CartItems adding={adding} checkout={checkout} />
                 </>
               </motion.div>
-            )}
-          </AnimatePresence>
-        </S.Cart>
-      </Portal>
+            </AnimatePresence>
+          </S.Cart>
+        )}
+
       <S.CartToggle
         bg={`${isCartOpen && theme.colors.quinary}`}
         aria-label="toggle cart"

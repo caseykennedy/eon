@@ -17,7 +17,7 @@ const cartWidth = `700px`
 export const Cart = styled(Box)`
   justify-content: flex-start;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: ${theme.siteWidth};
   overflow: auto;
   padding: ${theme.space[6]} ${theme.space[4]};
@@ -28,10 +28,11 @@ export const Cart = styled(Box)`
   visibility: hidden;
   
   position: fixed;
+  top: 0;
   right: 0;
   bottom: 0;
 
-  z-index: 9999;
+  z-index: 999999;
   transition: ${theme.transition.all};
   -webkit-overflow-scrolling: touch;
 
@@ -40,6 +41,7 @@ export const Cart = styled(Box)`
     opacity: 0;
     visibility: hidden;
 
+    top: initial;
     left: auto;
     padding: calc(${theme.space[7]} / 1.25) ${theme.space[5]} ${theme.space[5]};
     height: calc(100% - ${theme.headerHeight});
