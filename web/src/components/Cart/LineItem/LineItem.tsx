@@ -31,13 +31,13 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   const handleQuantityChange = ({ target }: any) => {
     setQuantity(target.value)
   }
-  // Update cart quantity
-  const handleUpdate = () => {
-    updateLineItem(client, checkout.id, item.id, quantity)
-  }
   // Remove line item
   const handleRemove = () => {
     removeLineItem(client, checkout.id, item.id)
+  }
+  // Update cart quantity
+  const handleUpdate = () => {
+    updateLineItem(client, checkout.id, item.id, quantity)
   }
 
   // // Add / Remove one item from quantity + update cart
@@ -78,10 +78,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
         <Box width={3 / 4}>
           <Text
             as="p"
-            fontSize={[
-              `calc(${theme.fontSizes[3]} / 1.5)`,
-              `calc(${theme.fontSizes[3]} / 1.5)`
-            ]}
+            fontSize={[`calc(${theme.fontSizes[3]} / 1.5)`]}
             fontWeight={500}
             mb={2}
           >
@@ -101,7 +98,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             <Input
               type="number"
               id="quantity"
-              inputMode="decimal"
+              inputMode="numeric"
               name="quantity"
               min="1"
               step="1"

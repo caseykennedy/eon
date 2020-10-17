@@ -32,6 +32,9 @@ export const LineItem = styled.div`
         padding: ${theme.space[1]} ${theme.space[2]};
         width: ${theme.space[6]};
 
+        position: relative;
+        z-index: 999999;
+
         @media ${theme.mq.tablet} {
           width: ${theme.space[6]};
         }

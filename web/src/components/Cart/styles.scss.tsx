@@ -26,8 +26,8 @@ export const Cart = styled(Box)`
   backdrop-filter: blur(9px);
   opacity: 0;
   visibility: hidden;
-
-  position: absolute;
+  
+  position: fixed;
   right: 0;
   bottom: 0;
 
