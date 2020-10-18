@@ -17,7 +17,7 @@ export const Overlay = styled(Box)`
   flex-direction: column;
 
   width: ${overlayWidth};
-  height: 100vh;
+  height: calc(100% - ${theme.headerHeight});
   overflow: auto;
   padding: ${theme.headerHeight} ${theme.space[4]} ${theme.space[5]};
 
@@ -27,7 +27,7 @@ export const Overlay = styled(Box)`
   bottom: 0;
 
   visibility: hidden;
-    opacity: 0;
+  opacity: 0;
 
   background: ${transparentize(0, theme.colors.quinary)};
   /* backdrop-filter: blur(9px); */

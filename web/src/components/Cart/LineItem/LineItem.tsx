@@ -63,7 +63,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
       <img
         src={item.variant.image.src}
         alt={`${item.title} product shot`}
-        width="100%"
+        width="70%"
       />
     )
 
@@ -119,6 +119,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
           </button>
         </Flex>
       </Flex>
+        <Input />
     </S.LineItem>
   )
 }

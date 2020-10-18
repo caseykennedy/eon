@@ -85,6 +85,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             </Box>
             <Box mt={7}>
               <BuyButton />
+              <input />
             </Box>
           </motion.div>
         )}
