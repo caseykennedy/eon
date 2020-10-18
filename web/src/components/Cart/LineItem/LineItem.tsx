@@ -2,7 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 
 // Theme
@@ -20,6 +20,14 @@ import Icon from '../../Icons'
 import StoreContext from '../../../context/StoreContext'
 
 const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
+  const qtyRef = React.useRef<HTMLInputElement>(null)
+  const element = document.getElementById('qty-input')
+  if (null !== element) {
+    element.focus({
+      preventScroll: true
+    })
+  }
+
   const {
     removeLineItem,
     updateLineItem,
@@ -56,6 +64,19 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   //     console.error(error)
   //   }
   // }
+
+  // const preventDef = (e: any) => {
+  //   e.preventDefault()
+  // }
+
+  // useEffect(() => {
+  //   document.addEventListener('touchmove', preventDef, { passive: false })
+  //   document.addEventListener('touchforcechange', preventDef, { passive: false })
+  //   return () => {
+  //     document.removeEventListener('touchmove', preventDef)
+  //     document.removeEventListener('touchforcechange', preventDef)
+  //   }
+  // }, [])
 
   // Variant image
   const VariantImage = () =>
@@ -105,6 +126,8 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
               pattern="[0-9]*"
               onChange={handleQuantityChange}
               value={quantity}
+              ref={qtyRef}
+              id="qty-input"
             />
             <button
               className="btn-update"
@@ -119,7 +142,6 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
           </button>
         </Flex>
       </Flex>
-        <Input />
     </S.LineItem>
   )
 }

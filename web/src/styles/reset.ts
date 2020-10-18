@@ -25,7 +25,7 @@ const Reset = css`
     overflow: auto;
   }
 
-  input,
+  /* input,
   input:before,
   input:after {
     -webkit-user-select: initial;
@@ -33,7 +33,7 @@ const Reset = css`
     -moz-user-select: initial;
     -ms-user-select: initial;
     user-select: initial;
-  }
+  } */
 
   /* Sections
      ========================================================================== */

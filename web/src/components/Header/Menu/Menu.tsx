@@ -46,7 +46,7 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 
 const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
   return (
-    <S.Menu ref={scrollRef}>
+    <S.Menu>
       <AnimatePresence>
         {isNavOpen && (
           <motion.div
@@ -54,6 +54,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             animate={{ opacity: 1, transform: theme.transform.matrix.to }}
             exit={{ opacity: 0, transform: theme.transform.matrix.from }}
             transition={{ duration: 0.5 }}
+            ref={scrollRef}
           >
             <Box width={1}>
               <h2>
@@ -85,7 +86,6 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             </Box>
             <Box mt={7}>
               <BuyButton />
-              <input />
             </Box>
           </motion.div>
         )}
