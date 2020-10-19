@@ -3,13 +3,15 @@
 
 // ___________________________________________________________________
 
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import { Link } from 'gatsby'
-
+import reduce from 'lodash/reduce'
 import HamburgerMenu from 'react-hamburger-menu'
 
 // Hooks
 import useScrollWatch from '../../hooks/useScrollWatch'
+
+import StoreContext from '../../context/StoreContext'
 
 import Logo from '../Logo'
 import Menu from './Menu'
@@ -17,6 +19,7 @@ import Portal from '../Portal'
 import Overlay from '../Overlay'
 import Cart from '../Cart'
 import BuyButton from './BuyButton'
+import Icon from '../Icons'
 
 // Elements
 import { Box } from '../ui'
@@ -35,14 +38,24 @@ interface CallbackTypes {
 }
 
 const Header: React.FC<HeaderShape> = ({ mainRef }) => {
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const {
+    isCartOpen,
+    setCartOpen,
+    store: { checkout, adding }
+  } = useContext(StoreContext)
+  // Toggle cart portal
+  const togglePortal = () => setCartOpen(!isCartOpen)
+  // Get current cart count
+  const useQuantity = () => {
+    const items = checkout ? checkout.lineItems : []
+    const total = reduce(items, (acc, item) => acc + item.quantity, 0)
+    return [total !== 0, total]
+  }
+  const [hasItems, quantity] = useQuantity()
 
   // Navigation portal
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
-
-  // Cart portal
-  const [isCartOpen, setCartOpen] = useState<boolean>(false)
 
   // On scroll class change
   const [shouldHideHeader, setShouldHideHeader] = useState(false)
@@ -88,7 +101,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         </Overlay>
       </Portal> */}
 
-      <S.Header as="header" bg={headerBG} id="root">
+      <S.Header as="header" bg={headerBG}>
         <Box
           bg={`${isNavOpen && theme.colors.quinary}`}
           className="header-toggle"
@@ -120,8 +133,16 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </div>
         </div>
 
-        <Cart mainRef={mainRef} />
+        <S.CartToggle
+          bg={`${isCartOpen && theme.colors.quinary}`}
+          aria-label="toggle cart"
+          onClick={togglePortal}
+        >
+          {hasItems && <div className="quantity">{quantity}</div>}
+          <Icon name="bag" color="black" />
+        </S.CartToggle>
       </S.Header>
+      <Cart />
     </>
   )
 }

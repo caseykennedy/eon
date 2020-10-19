@@ -112,7 +112,7 @@ export const Header = styled(Flex)`
       padding-right: ${theme.space[3]};
       height: 100%;
       width: 70px;
-      transition: background ${theme.transition.global};
+      transition: background-color ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
         width: ${theme.space[7]};
@@ -128,5 +128,55 @@ export const Header = styled(Flex)`
         }
       }
     }
+  }
+`
+
+export const CartToggle = styled(Box)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  border-left: ${theme.border};
+  color: ${theme.colors.text};
+  cursor: pointer;
+
+  padding-right: ${theme.space[3]};
+  position: relative;
+  height: 100%;
+  width: 70px;
+  transition: background-color ${theme.transition.global};
+
+  @media ${theme.mq.tablet} {
+    width: ${theme.space[7]};
+  }
+
+  &:hover {
+    background: ${darken(0.08, theme.colors.quinary)};
+  }
+
+  span {
+    svg {
+      width: 24px;
+    }
+  }
+
+  .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: ${theme.colors.primary};
+    border-radius: 999px;
+
+    color: ${theme.colors.white};
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: ${theme.space[2]};
+    right: ${theme.space[2]};
+
+    height: calc(${theme.space[4]} * 1.15);
+    width: calc(${theme.space[4]} * 1.15);
   }
 `
