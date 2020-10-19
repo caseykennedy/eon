@@ -23,7 +23,7 @@ import * as S from './styles.scss'
 type Props = {
   mainRef: React.RefObject<HTMLDivElement>
   scrollRef: React.RefObject<HTMLDivElement>
-  exitRef: React.RefObject<HTMLButtonElement>
+  exitRef: React.RefObject<HTMLDivElement>
   className?: string
   children: React.ReactNode
   root?: string

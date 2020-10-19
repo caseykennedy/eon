@@ -24,7 +24,11 @@ type Props = {}
 const Retailers: React.FC<Props> = () => {
   return (
     <S.Retailers bg="white" border={true}>
-      <Heading as="h3">retailers</Heading>
+      <Text as="p" mb={7}>
+        eOn sanitizing mist&trade; brand
+        <br />
+        is available at these fine retailers:
+      </Text>
       <ImgMatch src="retailers.png" altText="Fine retailers" />
     </S.Retailers>
   )

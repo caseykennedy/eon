@@ -38,6 +38,9 @@ interface CallbackTypes {
 }
 
 const Header: React.FC<HeaderShape> = ({ mainRef }) => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const exitRef = useRef<HTMLDivElement>(null)
+
   const {
     isCartOpen,
     setCartOpen,
@@ -85,21 +88,21 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
   return (
     <>
-      {/* <Portal
+      <Portal
         id="nav-root"
         root="root"
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
         mainRef={mainRef}
         scrollRef={scrollRef}
-        exitRef={null}
+        exitRef={exitRef}
       >
         <Overlay
           className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
         >
           <Menu handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} scrollRef={scrollRef} />
         </Overlay>
-      </Portal> */}
+      </Portal>
 
       <S.Header as="header" bg={headerBG}>
         <Box

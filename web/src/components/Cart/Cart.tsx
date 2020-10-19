@@ -121,10 +121,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
           <S.Cart
             className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
             id="cart"
-            role="dialog"
-            aria-modal={true}
-            aria-label="cart-modal"
-            tabIndex={-1}
+            aria-label="cart drawer flyout"
           >
             <AnimatePresence>
               {isCartOpen && (
