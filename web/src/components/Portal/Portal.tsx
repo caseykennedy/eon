@@ -123,7 +123,7 @@ const Portal: React.FC<Props> = ({
       )
       focusableElements.forEach((element: Element) => {
         if (type === 'on') {
-          element.removeAttribute('tabindex')
+          element.setAttribute('tabindex', '0')
         } else {
           element.setAttribute('tabindex', '-1')
         }
@@ -150,6 +150,7 @@ const Portal: React.FC<Props> = ({
         toggleTabIndex('on', scrollRef.current)
         console.log(rootContainer)
         console.log(modalContainer)
+        console.log(scrollRef)
       }
       if (rootContainer) toggleTabIndex('off', rootContainer)
       window.addEventListener('keydown', handleKeyDown)
@@ -173,7 +174,7 @@ const Portal: React.FC<Props> = ({
       if (!initialRender.current) {
         initialRender.current = true
         setTimeout(() => {
-          if (modalContainer) toggleTabIndex('off', modalContainer)
+          if (scrollRef.current) toggleTabIndex('off', scrollRef.current)
         }, 0)
       }
     }

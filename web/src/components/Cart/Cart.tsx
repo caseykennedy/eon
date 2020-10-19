@@ -33,7 +33,7 @@ type Props = {
 type CartItemsProps = {
   adding?: boolean
   checkout: any
-  scrollRef: React.RefObject<HTMLDivElement>
+  scrollRef?: React.RefObject<HTMLDivElement>
 }
 
 const CartItems: React.FC<CartItemsProps> = ({
@@ -50,7 +50,7 @@ const CartItems: React.FC<CartItemsProps> = ({
     window.open(checkout.webUrl)
   }
   return (
-    <S.CartItems ref={scrollRef}>
+    <S.CartItems>
       {!checkout.lineItems[0] ? (
         <p>{!adding ? 'Your cart is empty 😭' : 'Adding eOn...'}</p>
       ) : (
@@ -89,7 +89,6 @@ const CartItems: React.FC<CartItemsProps> = ({
 const Cart: React.FC<Props> = ({ mainRef }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const exitRef = useRef<HTMLButtonElement>(null)
-  const toggleRef = useRef<HTMLDivElement>(null)
 
   const {
     isCartOpen,
@@ -131,6 +130,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                   flexDirection: 'column',
                   height: '100%'
                 }}
+                ref={scrollRef}
               >
                 <>
                   {/* <div className="cart__veil" /> */}
@@ -162,7 +162,6 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
         bg={`${isCartOpen && theme.colors.quinary}`}
         aria-label="toggle cart"
         onClick={togglePortal}
-        ref={toggleRef}
       >
         {hasItems && <div className="quantity">{quantity}</div>}
         <Icon name="bag" color="black" />

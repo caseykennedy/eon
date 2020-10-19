@@ -37,6 +37,7 @@ export const LineItem = styled.div`
         margin-right: ${theme.space[2]};
         padding: ${theme.space[1]} ${theme.space[2]};
         width: ${theme.space[6]};
+        touch-action: none;
 
         @media ${theme.mq.tablet} {
           font-size: calc(${theme.fontSizes[2]} * 1.25);
