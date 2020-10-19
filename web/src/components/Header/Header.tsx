@@ -142,7 +142,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <Icon name="bag" color="black" />
         </S.CartToggle>
       </S.Header>
-      <Cart />
+      <Cart mainRef={mainRef} />
     </>
   )
 }

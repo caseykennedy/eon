@@ -48,7 +48,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
       element.focus({
         preventScroll: true
       })
-      console.log('e clicked')
+      console.log('should focus input')
     }
   }
 

@@ -25,7 +25,7 @@ import LineItem from './LineItem'
 // ___________________________________________________________________
 
 type Props = {
-  mainRef?: React.RefObject<HTMLDivElement>
+  mainRef: React.RefObject<HTMLDivElement>
   // isPortalOpen: boolean
   // setPortalOpen: (arg0: boolean) => void
 }
@@ -108,59 +108,69 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
   const [hasItems, quantity] = useQuantity()
   return (
     <>
-      <FocusLock persistentFocus={false}>
-        <S.Cart
-          className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
-          id="cart"
-          role="dialog"
-          aria-modal={true}
-          aria-labeledby="cart-modal"
-          tabIndex={-1}
-        >
-          <AnimatePresence>
-            {isCartOpen && (
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  transform: theme.transform.matrix.from
-                }}
-                animate={{ opacity: 1, transform: theme.transform.matrix.to }}
-                exit={{ opacity: 0, transform: theme.transform.matrix.from }}
-                transition={{ duration: 0.5 }}
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: '100%'
-                }}
-                ref={scrollRef}
-              >
-                <>
-                  {/* <div className="cart__veil" /> */}
-                  <div className="cart__utilities">
-                    <Text color="darkgray">Your cart</Text>
-                    <Text
-                      as="button"
-                      onClick={togglePortal}
-                      className="close-cart"
-                      aria-label="close cart"
-                      data-dismiss="modal"
-                      ref={exitRef}
-                    >
-                      {/* <Icon name="plus" color="black" /> */}
-                      close
-                    </Text>
-                  </div>
-                  <CartItems
-                    adding={adding}
-                    checkout={checkout}
-                    scrollRef={scrollRef}
-                  />
-                </>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </S.Cart>
-      </FocusLock>
+      <Portal
+        id="cart-root"
+        root="main-root"
+        isOpen={isCartOpen}
+        handleExit={() => setCartOpen(false)}
+        scrollRef={scrollRef}
+        mainRef={mainRef}
+        exitRef={exitRef}
+      >
+        <FocusLock persistentFocus={false}>
+          <S.Cart
+            className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
+            id="cart"
+            role="dialog"
+            aria-modal={true}
+            aria-label="cart-modal"
+            tabIndex={-1}
+          >
+            <AnimatePresence>
+              {isCartOpen && (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    transform: theme.transform.matrix.from
+                  }}
+                  animate={{ opacity: 1, transform: theme.transform.matrix.to }}
+                  exit={{ opacity: 0, transform: theme.transform.matrix.from }}
+                  transition={{ duration: 0.5 }}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%'
+                  }}
+                  ref={scrollRef}
+                >
+                  <>
+                    {/* <div className="cart__veil" /> */}
+                    <div className="cart__utilities">
+                      <Text color="darkgray">Your cart</Text>
+                      <Text
+                        as="button"
+                        onClick={togglePortal}
+                        className="close-cart"
+                        aria-label="close cart"
+                        data-dismiss="modal"
+                        ref={exitRef}
+                      >
+                        {/* <Icon name="plus" color="black" /> */}
+                        close
+                      </Text>
+                    </div>
+                    <CartItems
+                      adding={adding}
+                      checkout={checkout}
+                      scrollRef={scrollRef}
+                    />
+                  </>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </S.Cart>
+        </FocusLock>
+      </Portal>
     </>
   )
 }

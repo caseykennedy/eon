@@ -16,6 +16,14 @@ const GlobalStyles = createGlobalStyle`
   ${RootVars}
   ${Reset}
   ${Typography}
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: auto
+  }
   
   body {
     background: ${theme.colors.secondary};

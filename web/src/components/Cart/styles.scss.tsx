@@ -23,24 +23,27 @@ export const Cart = styled(Box)`
   backdrop-filter: blur(9px);
   opacity: 0;
   visibility: hidden;
-  
-  position: fixed;
-  /* top: 0; */
+
+  position: absolute;
+  top: 0;
   right: 0;
   bottom: 0;
 
   z-index: 9999;
   transition: ${theme.transition.all};
 
-  /* overflow: auto;
-  -webkit-overflow-scrolling: touch; */
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};
     opacity: 0;
     visibility: hidden;
 
-    left: auto;
+    position: fixed;
+    top: ${theme.headerHeight};
+    right: 0;
+    bottom: 0;
     padding: ${theme.space[5]};
     height: calc(100% - ${theme.headerHeight});
     width: ${cartWidth};
