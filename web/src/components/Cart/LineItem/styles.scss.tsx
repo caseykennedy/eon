@@ -11,13 +11,13 @@ export const LineItem = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 
-  padding: ${theme.space[4]} 0;
+  padding: ${theme.space[1]} 0 ${theme.space[4]};
 
   .line-item {
     &__utilities {
       display: flex;
       justify-content: space-between;
-      margin: ${theme.space[4]} 0 0;
+      margin: ${theme.space[2]} 0 0;
 
       input {
         background: ${theme.colors.white};

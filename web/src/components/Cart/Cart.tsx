@@ -90,7 +90,7 @@ const CartItems: React.FC<CartItemsProps> = ({
 
 const Cart: React.FC<Props> = ({ mainRef }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const exitRef = useRef<HTMLButtonElement>(null)
+  const exitRef = useRef<HTMLDivElement>(null)
 
   const {
     isCartOpen,
@@ -148,7 +148,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                     <div className="cart__utilities">
                       <Text color="darkgray">Your cart</Text>
                       <Text
-                        as="button"
+                        // as="button"
                         onClick={togglePortal}
                         className="close-cart"
                         aria-label="close cart"
@@ -156,7 +156,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                         ref={exitRef}
                       >
                         {/* <Icon name="plus" color="black" /> */}
-                        close
+                        <small>close</small>
                       </Text>
                     </div>
                     <CartItems
