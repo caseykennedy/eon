@@ -71,7 +71,7 @@ const Portal: React.FC<Props> = ({
 
   React.useEffect(() => {
     const rootContainer = document.querySelector(`#${root}`)
-    const modalContainer = document.querySelector(`#cart`)
+    const modalContainer = document.querySelector(`#${id}`)
 
     const capturePosition = () => {
       const cachedPosition = window.pageYOffset
@@ -130,13 +130,13 @@ const Portal: React.FC<Props> = ({
       })
     }
 
-    const handleKeyDown = (e: any) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         handleExit()
       }
     }
 
-    function handleClickOutside(e: any) {
+    const handleClickOutside = (e: any) => {
       if (mainRef && mainRef.current && mainRef.current.contains(e.target)) {
         handleExit()
       }
@@ -145,15 +145,21 @@ const Portal: React.FC<Props> = ({
     const { freeze, unfreeze } = capturePosition()
 
     if (isOpen) {
-      if (modalContainer) {
-        toggleTabIndex('on', modalContainer)
-        console.log(rootContainer)
-        console.log(modalContainer)
-        console.log(scrollRef)
+      // if (modalContainer) {
+      //   toggleTabIndex('on', modalContainer)
+      //   console.log('tabs on')
+      //   // console.log(rootContainer)
+      //   // console.log(modalContainer)
+      //   // console.log(scrollRef)
+      // }
+      // if (rootContainer) toggleTabIndex('off', rootContainer)
+      if (exitButton.current) {
+        exitButton.current.focus()
+        console.log('focus exit')
       }
-      if (rootContainer) toggleTabIndex('off', rootContainer)
-      if (exitButton.current) exitButton.current.focus()
-      console.log(exitButton)
+
+      // console.log(exitButton)
+
       window.addEventListener('keydown', handleKeyDown)
       // Bind the event listener
       document.addEventListener('mousedown', handleClickOutside)
@@ -162,9 +168,13 @@ const Portal: React.FC<Props> = ({
       }
       // freeze()
     } else {
-      if (modalContainer) toggleTabIndex('off', modalContainer)
-      if (rootContainer) toggleTabIndex('on', rootContainer)
+      // if (modalContainer) {
+      //   toggleTabIndex('off', modalContainer)
+      //   console.log('tabs off')
+      // }
+      // if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
+
       if (null !== scrollRef.current) {
         enableBodyScroll(scrollRef.current)
       }
@@ -175,7 +185,10 @@ const Portal: React.FC<Props> = ({
       if (!initialRender.current) {
         initialRender.current = true
         setTimeout(() => {
-          if (modalContainer) toggleTabIndex('off', modalContainer)
+          if (modalContainer) {
+            toggleTabIndex('off', modalContainer)
+            console.log('set timeout toggle off')
+          }
         }, 0)
       }
     }

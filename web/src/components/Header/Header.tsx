@@ -72,7 +72,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
   return (
     <>
-      <Portal
+      {/* <Portal
         id="nav-root"
         root="root"
         isOpen={isNavOpen}
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         >
           <Menu handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} scrollRef={scrollRef} />
         </Overlay>
-      </Portal>
+      </Portal> */}
 
       <S.Header as="header" bg={headerBG} id="root">
         <Box

@@ -74,6 +74,7 @@
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
+    "react-focus-lock": "^2.4.1",
     "react-hamburger-menu": "^1.2.1",
     "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1",

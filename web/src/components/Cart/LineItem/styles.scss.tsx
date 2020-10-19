@@ -31,7 +31,7 @@ export const LineItem = styled.div`
         border-radius: ${theme.borderRadius};
 
         font-size: calc(${theme.fontSizes[2]} * 1.5);
-        line-height: 1.5;
+        line-height: 1.25;
         /* text-align: center; */
 
         margin-right: ${theme.space[2]};

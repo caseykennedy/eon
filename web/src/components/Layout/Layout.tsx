@@ -43,7 +43,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <ParallaxProvider>
-          <S.Wrapper>
+          <S.Wrapper id="main-root">
             <Header mainRef={mainRef} />
             {/* <Announcement mainRef={mainRef} to="/eon" /> */}
             <S.Main ref={mainRef}>{children}</S.Main>
