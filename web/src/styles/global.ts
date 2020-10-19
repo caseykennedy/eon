@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     width: 100%;
     overflow: auto;
-    -webkit-overflow-scrolling: auto
+    -webkit-overflow-scrolling: touch;
   }
   
   body {
