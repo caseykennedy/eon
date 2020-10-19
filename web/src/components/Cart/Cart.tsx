@@ -108,7 +108,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
   const [hasItems, quantity] = useQuantity()
   return (
     <>
-      <FocusLock>
+      <FocusLock persistentFocus={false}>
         <S.Cart
           className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
           id="cart"

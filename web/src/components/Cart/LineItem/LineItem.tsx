@@ -21,12 +21,6 @@ import StoreContext from '../../../context/StoreContext'
 
 const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   const qtyRef = React.useRef<HTMLInputElement>(null)
-  // const element = qtyRef.current
-  // if (null !== element) {
-  //   element.focus({
-  //     preventScroll: true
-  //   })
-  // }
 
   const {
     removeLineItem,
@@ -46,6 +40,16 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   // Update cart quantity
   const handleUpdate = () => {
     updateLineItem(client, checkout.id, item.id, quantity)
+  }
+
+  const focusInput = () => {
+    const element = qtyRef.current
+    if (null !== element) {
+      element.focus({
+        preventScroll: true
+      })
+      console.log('e clicked')
+    }
   }
 
   // const handleTouch = (e: Event) => {
@@ -141,6 +145,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
               onChange={handleQuantityChange}
               value={quantity}
               ref={qtyRef}
+              onClick={focusInput}
             />
             <button
               className="btn-update"

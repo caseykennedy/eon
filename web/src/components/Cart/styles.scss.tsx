@@ -24,7 +24,7 @@ export const Cart = styled(Box)`
   opacity: 0;
   visibility: hidden;
   
-  position: absolute;
+  position: fixed;
   /* top: 0; */
   right: 0;
   bottom: 0;
