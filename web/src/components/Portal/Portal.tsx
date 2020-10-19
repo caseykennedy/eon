@@ -70,7 +70,7 @@ const Portal: React.FC<Props> = ({
   const initialRender = React.useRef(false)
 
   React.useEffect(() => {
-    const rootContainer = document.querySelector(`#${root}`)
+    const rootContainer = document.querySelector(`body`)
     const modalContainer = document.querySelector(`#${id}`)
 
     const capturePosition = () => {
@@ -118,14 +118,14 @@ const Portal: React.FC<Props> = ({
     // }
 
     const toggleTabIndex = (type: 'on' | 'off', container: Element) => {
-      const focusableElements = container.querySelectorAll(
+      const focusableElements: NodeListOf<Element> = container.querySelectorAll(
         'button, a, input, textarea, select'
       )
       focusableElements.forEach((element: Element) => {
         if (type === 'on') {
-          element.setAttribute('tabindex', '0')
-        } else {
           element.setAttribute('tabindex', '-1')
+        } else {
+          element.setAttribute('tabindex', '0')
         }
       })
     }

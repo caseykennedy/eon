@@ -74,7 +74,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
     <>
       <Portal
         id="nav-root"
-        root="root"
+        root="nav-root"
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
         mainRef={mainRef}
@@ -87,7 +87,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         </Overlay>
       </Portal>
 
-      <S.Header as="header" bg={headerBG}>
+      <S.Header as="header" bg={headerBG} id="root">
         <Box
           bg={`${isNavOpen && theme.colors.quinary}`}
           className="header-toggle"

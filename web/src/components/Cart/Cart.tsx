@@ -108,7 +108,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
     <>
       <Portal
         id="cart-root"
-        root="cart-root"
+        root="root"
         isOpen={isCartOpen}
         handleExit={() => setCartOpen(false)}
         scrollRef={scrollRef}

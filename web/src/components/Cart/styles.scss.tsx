@@ -42,7 +42,7 @@ export const Cart = styled(Box)`
     opacity: 0;
     visibility: hidden;
 
-    top: initial;
+    top: inherit;
     left: auto;
     padding: ${theme.space[5]};
     height: calc(100% - ${theme.headerHeight});
