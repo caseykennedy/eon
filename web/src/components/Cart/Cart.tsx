@@ -117,8 +117,8 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
       >
         <S.Cart
           className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
-          tabIndex={-1}
           id="cart"
+          tabIndex={-1}
         >
           <AnimatePresence>
             {isCartOpen && (
@@ -144,6 +144,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                       className="close-cart"
                       aria-label="close cart"
                       ref={exitRef}
+                      autoFocus={true}
                     >
                       {/* <Icon name="plus" color="black" /> */}
                       close

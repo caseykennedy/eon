@@ -74,11 +74,12 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
     <>
       <Portal
         id="nav-root"
-        root="nav-root"
+        root="root"
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
         mainRef={mainRef}
         scrollRef={scrollRef}
+        exitRef={null}
       >
         <Overlay
           className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
