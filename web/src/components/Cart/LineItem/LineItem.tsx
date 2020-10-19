@@ -21,7 +21,7 @@ import StoreContext from '../../../context/StoreContext'
 
 const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   const qtyRef = React.useRef<HTMLInputElement>(null)
-  const element = document.getElementById('qty-input')
+  const element = qtyRef.current
   if (null !== element) {
     element.focus({
       preventScroll: true
@@ -47,6 +47,20 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   const handleUpdate = () => {
     updateLineItem(client, checkout.id, item.id, quantity)
   }
+
+  const handleTouch = (e: Event) => {
+    e.preventDefault()
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('touchmove', handleTouch)
+    window.addEventListener('touchstart', handleTouch)
+
+    return () => {
+      window.removeEventListener('touchmove', handleTouch)
+      window.removeEventListener('touchstart', handleTouch)
+    }
+  }, [])
 
   // // Add / Remove one item from quantity + update cart
   // const decreaseProductAmount = async () => {
@@ -127,7 +141,6 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
               onChange={handleQuantityChange}
               value={quantity}
               ref={qtyRef}
-              id="qty-input"
             />
             <button
               className="btn-update"

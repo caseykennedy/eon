@@ -34,8 +34,8 @@ export const Cart = styled(Box)`
   z-index: 9999;
   transition: ${theme.transition.all};
 
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  /* overflow: auto;
+  -webkit-overflow-scrolling: touch; */
 
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};

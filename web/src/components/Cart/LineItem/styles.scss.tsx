@@ -19,6 +19,12 @@ export const LineItem = styled.div`
       justify-content: space-between;
       margin: ${theme.space[4]} 0 0;
 
+      input,
+      input:before,
+      input:after {
+        user-select: initial;
+      }
+
       input {
         background: ${theme.colors.white};
         border: ${theme.border};

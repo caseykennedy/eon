@@ -88,6 +88,8 @@ const CartItems: React.FC<CartItemsProps> = ({
 
 const Cart: React.FC<Props> = ({ mainRef }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
+  const exitRef = useRef<HTMLButtonElement>(null)
+  const toggleRef = useRef<HTMLDivElement>(null)
 
   const {
     isCartOpen,
@@ -107,15 +109,15 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
     <>
       <Portal
         id="cart-root"
-        root="root"
+        root="cart-root"
         isOpen={isCartOpen}
         handleExit={() => setCartOpen(false)}
         scrollRef={scrollRef}
         mainRef={mainRef}
+        exitRef={exitRef}
       >
         <S.Cart
           className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
-          
         >
           <AnimatePresence>
             {isCartOpen && (
@@ -135,9 +137,11 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                   <div className="cart__utilities">
                     <Text color="darkgray">Your cart</Text>
                     <Text
+                      as="button"
                       onClick={togglePortal}
                       className="close-cart"
                       aria-label="close cart"
+                      ref={exitRef}
                     >
                       {/* <Icon name="plus" color="black" /> */}
                       close
@@ -158,6 +162,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
         bg={`${isCartOpen && theme.colors.quinary}`}
         aria-label="toggle cart"
         onClick={togglePortal}
+        ref={toggleRef}
       >
         {hasItems && <div className="quantity">{quantity}</div>}
         <Icon name="bag" color="black" />

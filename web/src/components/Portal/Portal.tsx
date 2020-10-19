@@ -23,6 +23,7 @@ import * as S from './styles.scss'
 type Props = {
   mainRef: React.RefObject<HTMLDivElement>
   scrollRef: React.RefObject<HTMLDivElement>
+  exitRef: React.RefObject<HTMLButtonElement>
   className?: string
   children: React.ReactNode
   root?: string
@@ -43,11 +44,12 @@ const Portal: React.FC<Props> = ({
   focusAfterExit,
   mainRef,
   className,
-  scrollRef
+  scrollRef,
+  exitRef
 }) => {
   const [hasUpdated, forceUpdate] = React.useState(false)
 
-  const exitButton = React.useRef<HTMLButtonElement>(null)
+  const exitButton = exitRef
   const portal = React.useRef<HTMLDivElement | null>(null)
 
   React.useEffect(() => {
@@ -144,8 +146,12 @@ const Portal: React.FC<Props> = ({
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()
-      // if (modalContainer) toggleTabIndex('on', modalContainer)
-      // if (rootContainer) toggleTabIndex('off', rootContainer)
+      if (scrollRef.current) {
+        toggleTabIndex('on', scrollRef.current)
+        console.log(rootContainer)
+        console.log(modalContainer)
+      }
+      if (rootContainer) toggleTabIndex('off', rootContainer)
       window.addEventListener('keydown', handleKeyDown)
       // Bind the event listener
       document.addEventListener('mousedown', handleClickOutside)
@@ -154,8 +160,8 @@ const Portal: React.FC<Props> = ({
       }
       // freeze()
     } else {
-      // if (modalContainer) toggleTabIndex('off', modalContainer)
-      // if (rootContainer) toggleTabIndex('on', rootContainer)
+      if (scrollRef.current) toggleTabIndex('off', scrollRef.current)
+      if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
       if (null !== scrollRef.current) {
         enableBodyScroll(scrollRef.current)
