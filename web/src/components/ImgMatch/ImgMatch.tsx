@@ -27,7 +27,7 @@ const ImgMatch: React.FC<Props> = ({
             relativePath
             childImageSharp {
               fluid(maxWidth: 1600) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
