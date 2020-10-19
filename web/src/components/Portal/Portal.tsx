@@ -70,8 +70,8 @@ const Portal: React.FC<Props> = ({
   const initialRender = React.useRef(false)
 
   React.useEffect(() => {
-    const rootContainer = document.querySelector(`body`)
-    const modalContainer = document.querySelector(`#${id}`)
+    const rootContainer = document.querySelector(`#${root}`)
+    const modalContainer = document.querySelector(`#cart`)
 
     const capturePosition = () => {
       const cachedPosition = window.pageYOffset
@@ -123,9 +123,9 @@ const Portal: React.FC<Props> = ({
       )
       focusableElements.forEach((element: Element) => {
         if (type === 'on') {
-          element.setAttribute('tabindex', '-1')
+          element.removeAttribute('tabindex')
         } else {
-          element.setAttribute('tabindex', '0')
+          element.setAttribute('tabindex', '-1')
         }
       })
     }
@@ -146,8 +146,8 @@ const Portal: React.FC<Props> = ({
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()
-      if (scrollRef.current) {
-        toggleTabIndex('on', scrollRef.current)
+      if (modalContainer) {
+        toggleTabIndex('on', modalContainer)
         console.log(rootContainer)
         console.log(modalContainer)
         console.log(scrollRef)
@@ -161,7 +161,7 @@ const Portal: React.FC<Props> = ({
       }
       // freeze()
     } else {
-      if (scrollRef.current) toggleTabIndex('off', scrollRef.current)
+      if (modalContainer) toggleTabIndex('off', modalContainer)
       if (rootContainer) toggleTabIndex('on', rootContainer)
       window.removeEventListener('keydown', handleKeyDown)
       if (null !== scrollRef.current) {

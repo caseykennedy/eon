@@ -117,6 +117,8 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
       >
         <S.Cart
           className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
+          tabIndex={-1}
+          id="cart"
         >
           <AnimatePresence>
             {isCartOpen && (
