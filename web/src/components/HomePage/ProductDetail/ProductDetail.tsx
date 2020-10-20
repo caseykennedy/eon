@@ -18,7 +18,15 @@ import AddToCart from '../../AddToCart'
 const ProductDetail: React.FC = () => {
   return (
     <S.ProductDetail>
-      <Flex alignItems="flex-start" flexWrap="wrap">
+      <Flex alignItems="flex-start" flexWrap="wrap" flexDirection={['row', 'row-reverse']}>
+        <Box width={[1, 1 / 2]} style={{ position: 'relative', zIndex: 9 }}>
+          <Box>
+            <ImgMatch
+              src="cans.png"
+              altText="Hand holding eOn Hand Sanitizer can."
+            />
+          </Box>
+        </Box>
         <Box width={[1, 1 / 2]}>
           <h3 className="text--xxl">
             Effective
@@ -50,14 +58,6 @@ const ProductDetail: React.FC = () => {
           </Flex>
           <Box mt={6}>
             <AddToCart>Buy Now</AddToCart>
-          </Box>
-        </Box>
-        <Box width={1 / 2} style={{ position: 'relative', zIndex: 9 }}>
-          <Box>
-            <ImgMatch
-              src="cans.png"
-              altText="Hand holding eOn Hand Sanitizer can."
-            />
           </Box>
         </Box>
       </Flex>

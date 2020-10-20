@@ -45,9 +45,10 @@ export const How = styled(Section)`
         &__alcohol {
           top: -4rem;
           left: 1rem;
+          width: 8rem;
 
           @media ${theme.mq.tablet} {
-            left: 3rem;
+            left: 2rem;
           }
         }
       }

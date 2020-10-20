@@ -78,7 +78,8 @@ const Specs = () => {
               <span>
                 <Lock />
               </span>{' '}
-              , zero-propellant, continuous spray{' '}
+              , <span style={{ whiteSpace: 'nowrap' }}>zero-propellant,</span>{' '}
+              continuous spray{' '}
               <span className="rotation">
                 <Rotation />
               </span>{' '}
@@ -93,7 +94,7 @@ const Specs = () => {
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[1, 8 / 10]}>
+          <Box width={[1, 8 / 10]} pr={[5, 0]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               Fine mist, wide angle{' '}
               <span>
@@ -126,7 +127,7 @@ const Specs = () => {
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[1, 8 / 10]}>
+          <Box width={[1, 8 / 10]} pr={[6, 0]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               190 proof, plant-based{' '}
               <span>
@@ -174,12 +175,14 @@ const Specs = () => {
             </Heading>
           </Box>
           <Flex width={[1, 2 / 10]} justifyContent="flex-end">
-            <Box width="30%"/>
+            <Box width="30%" />
           </Flex>
         </Flex>
-        <Box width={theme.space[12]} mt={12}>
-          <WeRefreshHands />
-        </Box>
+        <Flex width={1} mt={12} justifyContent="center">
+          <Box width={['60%', '30%']}>
+            <WeRefreshHands />
+          </Box>
+        </Flex>
       </S.Specs>
     </>
   )

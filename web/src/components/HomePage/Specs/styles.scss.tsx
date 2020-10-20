@@ -11,7 +11,6 @@ import { Grid, Cell } from 'styled-css-grid'
 // ___________________________________________________________________
 
 export const Specs = styled(Section)`
-
   .spec {
     &__block {
       flex-wrap: wrap;
@@ -43,6 +42,12 @@ export const Specs = styled(Section)`
   }
 
   h3 {
+    /* font-size: calc(${theme.fontSizes[3]} * 1);
+
+    @media ${theme.mq.tablet} {
+      font-size: ${theme.root.font.lg};
+    } */
+
     span {
       svg {
         height: calc(${theme.space[4]} / 1.25);
