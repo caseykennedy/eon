@@ -1,4 +1,4 @@
-// BuyButton:
+// AddToCart:
 
 // ___________________________________________________________________
 
@@ -15,11 +15,10 @@ import * as S from './styles.scss'
 
 type Props = {
   setPortalOpen?: any
+  linkText?: string
 }
 
-const BuyButton: React.FC<Props> = ({
-  setPortalOpen
-}) => {
+const AddToCart: React.FC<Props> = ({ setPortalOpen, linkText }) => {
   const products = useProduct()
   const product = products.edges[0].node
   const {
@@ -63,7 +62,7 @@ const BuyButton: React.FC<Props> = ({
     addVariantToCart(productVariant.shopifyId, quantity)
   }
 
-  return (
+  return !linkText ? (
     <Button
       type="submit"
       disabled={!available || adding}
@@ -72,7 +71,21 @@ const BuyButton: React.FC<Props> = ({
     >
       {!adding ? 'Buy Now' : 'thank you 😃'}
     </Button>
+  ) : (
+    <S.TextLink
+      as="span"
+      onClick={handleAddToCart}
+      aria-label="Buy now"
+    >
+      {!adding ? linkText : 'thank you 😃'}
+    </S.TextLink>
   )
 }
 
-export default BuyButton
+export default AddToCart
+
+// ___________________________________________________________________
+
+const defaultProps = {}
+
+AddToCart.defaultProps = defaultProps

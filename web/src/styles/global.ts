@@ -19,9 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
   html,
   body {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
   

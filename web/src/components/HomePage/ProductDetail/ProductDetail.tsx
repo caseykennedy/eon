@@ -11,7 +11,7 @@ import { Button, Text, Flex, Box } from '../../ui'
 
 // Components
 import ImgMatch from '../../ImgMatch'
-import BuyButton from '../../BuyButton'
+import AddToCart from '../../AddToCart'
 
 // ___________________________________________________________________
 
@@ -49,7 +49,7 @@ const ProductDetail: React.FC = () => {
             </Text>
           </Flex>
           <Box mt={6}>
-            <BuyButton>Buy Now</BuyButton>
+            <AddToCart>Buy Now</AddToCart>
           </Box>
         </Box>
         <Box width={1 / 2} style={{ position: 'relative', zIndex: 9 }}>

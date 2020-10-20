@@ -10,7 +10,7 @@ import { useTransition } from 'react-spring'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { Box, Flex, Text } from '../../ui'
-import BuyButton from '../../BuyButton'
+import AddToCart from '../../AddToCart'
 
 import theme from '../../../../config/theme'
 import * as S from './styles.scss'
@@ -85,7 +85,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
               </Flex>
             </Box>
             <Box mt={7}>
-              <BuyButton />
+              <AddToCart />
             </Box>
           </motion.div>
         )}

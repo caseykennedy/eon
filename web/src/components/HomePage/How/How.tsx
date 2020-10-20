@@ -24,23 +24,21 @@ type Props = {}
 const How: React.FC<Props> = () => {
   return (
     <S.How>
-      <Flex alignItems="center" flexWrap="wrap">
-        <Box
-          width={[1, 1, 1 / 2]}
-          position="relative"
-          pr={[7, 13, 10]}
-          style={{ maxWidth: '600px' }}
-        >
-          <ImgMatch
-            src="hand-can.png"
-            altText="Hand holding eOn Hand Sanitizer can."
-          />
+      <Flex flexWrap="wrap" alignItems="center">
+        <Box width={[1, 4 / 10, 4 / 10]} pr={[4, 6, '10%']} className="how__figure">
+          <Box width={1}>
+            <ImgMatch
+              src="hand-can.png"
+              altText="Hand holding eOn Hand Sanitizer can."
+            />
+          </Box>
 
-          <Flex position="relative" mt={-10} ml={-5}>
+          {/* <Flex position="relative" mt={-8} ml={-5}>
             <Box width={[`150px`]}>
               <S.ParallaxBox y={[-110, -180]}>
                 <Germs />
               </S.ParallaxBox>
+              <Germs />
             </Box>
             <Box
               width={[`150px`]}
@@ -50,10 +48,11 @@ const How: React.FC<Props> = () => {
               <S.ParallaxBox y={[-40, -180]}>
                 <SymbolBadge />
               </S.ParallaxBox>
+              <SymbolBadge />
             </Box>
-          </Flex>
+          </Flex> */}
         </Box>
-        <Box width={[1, 8 / 10, 1 / 2]}>
+        <Box width={[1, 6 / 10, 6 / 10]}>
           <Heading as="h4" mb={5}>
             No mess, just mist
           </Heading>

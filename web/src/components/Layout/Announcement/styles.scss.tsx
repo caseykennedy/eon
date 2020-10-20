@@ -17,7 +17,7 @@ export const Announcement = styled(motion.div)`
   height: ${theme.headerHeight};
   max-height: 0;
   opacity: 0;
-  top: -1px;
+  top: 0;
   padding: 0 calc(${theme.space[3]});
   position: relative;
   visibility: hidden;

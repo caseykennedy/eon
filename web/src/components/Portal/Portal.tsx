@@ -155,7 +155,6 @@ const Portal: React.FC<Props> = ({
       // if (rootContainer) toggleTabIndex('off', rootContainer)
       if (exitButton.current) {
         exitButton.current.focus()
-        console.log('focus exit')
       }
 
       // console.log(exitButton)
@@ -187,7 +186,6 @@ const Portal: React.FC<Props> = ({
         setTimeout(() => {
           if (modalContainer) {
             toggleTabIndex('off', modalContainer)
-            console.log('set timeout toggle off')
           }
         }, 0)
       }

@@ -186,10 +186,10 @@ const Typography = css`
     font-size: calc(${theme.root.font.lg} / 1.1);
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xl} / 1.25);
+      font-size: calc(${theme.root.font.xl} / 1.45);
     }
 
-    @media ${theme.mq.desktop} {
+    @media (min-width: 1280px) {
       font-size: ${theme.root.font.xl};
     }
   }

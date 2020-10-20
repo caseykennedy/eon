@@ -19,6 +19,12 @@ export const How = styled(Section)`
   @media ${theme.mq.tablet} {
     border-radius: 0 0 ${theme.space[9]} 0;
   }
+
+  .how {
+    &__figure {
+      position: relative;
+    }
+  }
 `
 
 export const ParallaxBox = styled(Parallax)`

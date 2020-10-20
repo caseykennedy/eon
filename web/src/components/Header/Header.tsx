@@ -21,8 +21,10 @@ import Cart from '../Cart'
 import BuyButton from './BuyButton'
 import Icon from '../Icons'
 
+import Announcement from '../Layout/Announcement'
+
 // Elements
-import { Box } from '../ui'
+import { Box, Flex } from '../ui'
 
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
@@ -74,17 +76,12 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
     const isScrolledDown = previousScrollTop < currentScrollTop
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
 
-    setHighlightBG(currentScrollTop > 53)
+    setHighlightBG(isScrolledDown)
 
     setTimeout(() => {
       setShouldHideHeader(isScrolledDown && isMinimumScrolled)
     }, TIMEOUT_DELAY)
   })
-
-  // Scroll state styles
-  const headerBG = !setHighlightBG
-    ? theme.colors.background
-    : `rgb(255, 255, 255, 0.7)`
 
   return (
     <>
@@ -100,11 +97,15 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         <Overlay
           className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
         >
-          <Menu handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} scrollRef={scrollRef} />
+          <Menu
+            handleExit={() => setNavOpen(false)}
+            isNavOpen={isNavOpen}
+            scrollRef={scrollRef}
+          />
         </Overlay>
       </Portal>
 
-      <S.Header as="header" bg={headerBG}>
+      <S.Header as="header">
         <Box
           bg={`${isNavOpen && theme.colors.quinary}`}
           className="header-toggle"

@@ -18,6 +18,7 @@ import theme from '../../../config/theme'
 // Components
 import Icon from '../Icons'
 import Portal from '../Portal'
+import AddToCart from '../AddToCart'
 
 import StoreContext from '../../context/StoreContext'
 import LineItem from './LineItem'
@@ -54,7 +55,15 @@ const CartItems: React.FC<CartItemsProps> = ({
   return (
     <S.CartItems>
       {!checkout.lineItems[0] ? (
-        <p>{!adding ? 'Your cart is empty 😭' : 'Adding eOn...'}</p>
+        <>
+          {!adding ? (
+            <p>
+              Your cart is empty 😭. <AddToCart linkText="Add some eOn!" />
+            </p>
+          ) : (
+            <p>Adding eOn...</p>
+          )}
+        </>
       ) : (
         <>
           <div className="cart-items__list">
@@ -143,7 +152,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                   <>
                     {/* <div className="cart__veil" /> */}
                     <div className="cart__utilities">
-                      <Text color="darkgray">Your cart</Text>
+                      <Text color="darkgray">your cart</Text>
                       <Text
                         // as="button"
                         onClick={togglePortal}
@@ -153,7 +162,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
                         ref={exitRef}
                       >
                         {/* <Icon name="plus" color="black" /> */}
-                        <small>close</small>
+                        close
                       </Text>
                     </div>
                     <CartItems

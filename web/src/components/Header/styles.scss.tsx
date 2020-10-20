@@ -19,11 +19,13 @@ export const Header = styled(Flex)`
   align-items: center;
   justify-content: space-between;
 
+  background: rgb(255, 255, 255, 0.7);
   backdrop-filter: blur(9px);
   border-top: ${theme.border};
   border-bottom: ${theme.border};
   
   height: ${theme.headerHeight};
+  max-height: calc(${theme.headerHeight} * 2);
   max-width: ${theme.siteWidth};
   width: ${theme.siteWidth};
 
@@ -77,7 +79,7 @@ export const Header = styled(Flex)`
       width: 70px;
       padding-left: ${theme.space[3]};
       
-      transition: background ${theme.transition.global};
+      transition: background-color ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
         width: ${theme.space[7]};
