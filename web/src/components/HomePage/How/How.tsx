@@ -16,6 +16,7 @@ import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
 import ImgMatch from '../../ImgMatch'
 import SymbolBadge from '../../SymbolBadge'
 import Germs from '../../Germs'
+import Alcohol from '../../Alcohol'
 
 // ___________________________________________________________________
 
@@ -25,33 +26,29 @@ const How: React.FC<Props> = () => {
   return (
     <S.How>
       <Flex flexWrap="wrap" alignItems="center">
-        <Box width={[1, 4 / 10, 4 / 10]} pr={[4, 6, '10%']} className="how__figure">
-          <Box width={1}>
-            <ImgMatch
-              src="hand-can.png"
-              altText="Hand holding eOn Hand Sanitizer can."
-            />
-          </Box>
+        <Box width={[1, 4 / 10, 4 / 10]} pr={[4, 6, '10%']}>
+          <Flex mx={['10%', 0, 0]} className="how__figure">
+            <Box width={1}>
+              <ImgMatch
+                src="hand-can.png"
+                altText="Hand holding eOn Hand Sanitizer can."
+              />
+            </Box>
+          </Flex>
 
-          {/* <Flex position="relative" mt={-8} ml={-5}>
-            <Box width={[`150px`]}>
-              <S.ParallaxBox y={[-110, -180]}>
-                <Germs />
-              </S.ParallaxBox>
+          <Flex className="how__decorators">
+            <Box className="icon  icon__germs">
               <Germs />
             </Box>
-            <Box
-              width={[`150px`]}
-              position="relative"
-              style={{ left: '-40px' }}
-            >
-              <S.ParallaxBox y={[-40, -180]}>
-                <SymbolBadge />
-              </S.ParallaxBox>
+            <Box className="icon  icon__refresh">
               <SymbolBadge />
             </Box>
-          </Flex> */}
+            <Box className="icon  icon__alcohol">
+              <Alcohol />
+            </Box>
+          </Flex>
         </Box>
+
         <Box width={[1, 6 / 10, 6 / 10]}>
           <Heading as="h4" mb={5}>
             No mess, just mist

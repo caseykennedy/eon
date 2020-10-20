@@ -24,7 +24,7 @@ type Props = {}
 const Retailers: React.FC<Props> = () => {
   return (
     <S.Retailers bg="white" border={true}>
-      <Text as="p" mb={7}>
+      <Text as="p" mb={[5, 7]}>
         eOn sanitizing mist&trade; brand
         <br />
         is available at these fine retailers:

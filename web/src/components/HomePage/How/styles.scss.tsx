@@ -23,6 +23,34 @@ export const How = styled(Section)`
   .how {
     &__figure {
       position: relative;
+
+      @media ${theme.mq.tablet} {
+      }
+    }
+
+    &__decorators {
+      align-items: flex-start;
+
+      .icon {
+        position: relative;
+        width: ${theme.space[7]};
+
+        &__germs {
+          top: -8rem;
+        }
+        &__refresh {
+          top: -5rem;
+          left: -1.5rem;
+        }
+        &__alcohol {
+          top: -4rem;
+          left: 1rem;
+
+          @media ${theme.mq.tablet} {
+            left: 3rem;
+          }
+        }
+      }
     }
   }
 `
