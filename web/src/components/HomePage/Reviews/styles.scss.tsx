@@ -22,12 +22,36 @@ export const Reviews = styled(Section)`
         padding: ${theme.space[6]};
       }
 
+      svg {
+        path {
+        fill: ${theme.colors.goldenrod} !important;
+      }
+      }
+
       h3 {
         font-size: calc(${theme.fontSizes[4]} / 1.5);
 
         @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[4]} / 1.25);
+          font-size: calc(${theme.fontSizes[4]} / 1.35);
         }
+      }
+
+      .lead {
+        color: ${theme.colors.primary};
+        margin-bottom: 0;
+        font-size: calc(${theme.fontSizes[3]} / 1.5);
+
+        @media ${theme.mq.tablet} {
+          font-size: calc(${theme.fontSizes[3]} / 1.35);
+        }
+      }
+    }
+
+    &__rating {
+      margin: ${theme.space[2]} 0 ${theme.space[4]};
+
+      svg {
+        width:calc(${theme.space[7]} * 1.25);
       }
     }
   }

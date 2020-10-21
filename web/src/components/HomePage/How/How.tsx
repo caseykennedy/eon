@@ -26,7 +26,7 @@ const How: React.FC<Props> = () => {
   return (
     <S.How>
       <Flex flexWrap="wrap" alignItems="center">
-        <Box width={[1, 4 / 10, 4 / 10]} pr={[4, 6, '10%']}>
+        <Box width={[1, 4 / 10, 4 / 10]} pr={[4, 6, '14%']}>
           <Flex mx={['10%', 0, 0]} className="how__figure">
             <Box width={1}>
               <ImgMatch

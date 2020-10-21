@@ -7,9 +7,10 @@ import React from 'react'
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
-import { Box, Flex, Heading } from '../../ui'
-import { Grid, Cell } from 'styled-css-grid'
-import Section from '../../Section'
+import { Box, Flex, Heading, Text } from '../../ui'
+
+// Components
+import Stars from '../../Stars'
 
 // Libraries
 import Swiper from 'react-id-swiper'
@@ -59,16 +60,22 @@ const ReviewSlider: React.FC = ({ children }) => {
 const Specs: React.FC<Props> = () => {
   return (
     <S.Reviews bg="white" overflow="hidden">
-      <h4>What people say</h4>
+      <h4>What people are saying</h4>
       <br />
       <br />
       <ReviewSlider>
         {data.map((item, idx) => (
           <Box className="review__card" key={idx}>
-            <p>{item.author}</p>
-            <Heading as="h3">
+            <Flex alignItems="center" justifyContent="space-between">
+              <p className="lead">{item.lead}</p>
+            </Flex>
+            <div className="review__rating">
+              <Stars />
+            </div>
+            <Heading as="h3" mb={5}>
               {item.review}
             </Heading>
+            <p>{item.author}</p>
           </Box>
         ))}
       </ReviewSlider>
@@ -80,28 +87,39 @@ export default Specs
 
 const data = [
   {
-    author: 'Betty Sue',
+    lead: 'Thank you, eOn!!',
+    author: 'Blake, CA',
+    review:
+      'I was tired of carrying around messy or ineffective gels, and wondered if there existed an easy to carry and use, industrial-grade "spray" hand sanitizer. eOn\'s just what I was looking for.'
+  },
+  {
+    lead: 'My hands feel refreshed!',
+    author: 'Jenny, AZ',
+    review:
+      'I take it with me wherever I go, from the gym to the restaurant, one single spray gives me the confidence my hands are clean and completely germ free. Thanks for the cool product!'
+  },
+  {
+    lead: 'Love the spray action',
+    author: 'John, OH',
+    review:
+      'The strength of the continuous spray surprised me, as well as the even mist it leaves on hands. Oh and the lock cap "click" is really satisfying. Recommended!'
+  },
+  {
+    lead: 'No mess!',
+    author: 'Teresa, TX',
+    review:
+      "It's just easier to spray and mist hands while on the go, it saves time and with 80% ethyl alcohol, I know I’m getting professional sanitation."
+  },
+  {
+    lead: 'Convenient!',
+    author: 'Mary, WA',
+    review:
+      'Before we get out of the car I make my children hold out their hands and spray them all. It covers their tiny hands in one quick second. Makes safety simple.'
+  },
+  {
+    lead: 'Wonderful!',
+    author: 'Mark, FL',
     review:
       'I carry it in my pocket and bring it out for a quick spray when needed, the feeling of clean it leaves on my hands feels great and I definitely feel protected from taking germs to my face or bringing them back home to my family.'
-  },
-  {
-    author: 'Phillip Fidelisk',
-    review:
-      'I carry it in my pocket and bring it out for a quick spray when needed, the feeling of clean it leaves on my hands feels great.'
-  },
-  {
-    author: 'Betty Sue',
-    review:
-      'I carry it in my pocket and bring it out for a quick spray when needed, the feeling of clean it leaves on my hands feels great and I definitely feel protected from taking germs to my face or bringing.'
-  },
-  {
-    author: 'Phillip Fidelisk',
-    review:
-      'I carry it in my pocket and bring it out for a quick spray when needed, the feeling of clean it leaves on my hands feels great.'
-  },
-  {
-    author: 'Betty Sue',
-    review:
-      'I carry it in my pocket and spray when needed, the feeling of clean it leaves on my hands feels great and I definitely feel protected from taking germs to my face or bringing them back home to my family.'
   }
 ]

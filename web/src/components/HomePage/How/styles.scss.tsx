@@ -38,17 +38,26 @@ export const How = styled(Section)`
         &__germs {
           top: -8rem;
         }
+
         &__refresh {
           top: -5rem;
           left: -1.5rem;
+          width: calc(${theme.space[7]} * 1.15);
         }
+
         &__alcohol {
           top: -4rem;
           left: 1rem;
-          width: 8rem;
+          width: 10rem;
 
           @media ${theme.mq.tablet} {
-            left: 2rem;
+            left: 1rem;
+            width: 9rem;
+          }
+
+          @media ${theme.mq.desktop} {
+            left: 5rem;
+            width: 10rem;
           }
         }
       }

@@ -8,7 +8,7 @@ import { animated } from 'react-spring'
 import { darken } from 'polished'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 import {
   space,

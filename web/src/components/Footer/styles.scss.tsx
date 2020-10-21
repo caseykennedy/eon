@@ -145,7 +145,7 @@ export const Footer = styled.footer`
 
   background: ${theme.colors.white};
   border-top: ${theme.border};
-  padding: ${theme.space[4]} ${theme.space[4]} ${theme.space[6]};
+  padding: ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
     padding: ${theme.space[4]} ${theme.space[7]};

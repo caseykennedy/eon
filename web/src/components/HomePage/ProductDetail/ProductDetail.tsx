@@ -18,7 +18,11 @@ import AddToCart from '../../AddToCart'
 const ProductDetail: React.FC = () => {
   return (
     <S.ProductDetail>
-      <Flex alignItems="flex-start" flexWrap="wrap" flexDirection={['row', 'row-reverse']}>
+      <Flex
+        alignItems="flex-start"
+        flexWrap="wrap"
+        flexDirection={['row', 'row-reverse']}
+      >
         <Box width={[1, 1 / 2]} style={{ position: 'relative', zIndex: 9 }}>
           <Box>
             <ImgMatch

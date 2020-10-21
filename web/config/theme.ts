@@ -1,5 +1,4 @@
 // Theme / Design system:
-// DEPRACATED
 
 // Types
 // ___________________________________________________________________
@@ -61,7 +60,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['780px', '1024px']
+const breakpoints: string[] = ['768px', '1024px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -104,7 +103,8 @@ const theme: ThemeShape = {
     babyblue: '#dcedff',
     skyblue: '#4073b2',
     moneygreen: '#39b14a',
-    yellowbuzz: '#F1E554'
+    yellowbuzz: '#F1E554',
+    goldenrod: '#daa520'
   },
 
   // Space

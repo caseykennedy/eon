@@ -114,19 +114,12 @@ module.exports = {
       }
     },
     // {
-    //   resolve: "gatsby-plugin-hubspot",
+    //   resolve: 'gatsby-source-instagram',
     //   options: {
-    //       trackingCode: "8630717",
-    //       respectDNT: true,
-    //       productionOnly: true,
-    //   },
+    //     access_token: process.env.GATSBY_IG_ACCESS_TOKEN,
+    //     instagram_id: process.env.GATSBY_IG_BUSINESS_ID,
+    //   }
     // },
-    {
-      resolve: 'gatsby-plugin-twitter-pixel',
-      options: {
-        pixelId: 'o4kit'
-      }
-    },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {

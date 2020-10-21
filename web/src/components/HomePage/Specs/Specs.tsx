@@ -9,7 +9,7 @@ import * as S from './styles.scss'
 import theme from '../../../../config/theme'
 
 // Theme + ui
-import { Box, Flex, Heading } from '../../ui'
+import { Box, Flex, Heading, Text } from '../../ui'
 
 // Components
 import Section from '../../Section'
@@ -51,7 +51,7 @@ const HowTo = () => (
 const Specs = () => {
   return (
     <>
-      <Section bg="background" pt={[7, 9]}>
+      <Section bg="background" pt={[7, 11]}>
         <S.HowTo>
           <HowTo />
         </S.HowTo>
@@ -60,8 +60,10 @@ const Specs = () => {
         <Flex className="spec__block">
           <Box width={[1, 8 / 10]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
-              Works on contact: Immediate action against bacteria, fungi, and
-              viruses.
+              <Text as="span" color="primary">
+                Works on contact
+              </Text>{' '}
+              Immediate action against bacteria, fungi, and viruses.
             </Heading>
           </Box>
           <Flex width={[1, 2 / 10]} justifyContent="flex-end">

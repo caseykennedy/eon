@@ -103,7 +103,8 @@ const theme: ThemeShape = {
     babyblue: '#dcedff',
     skyblue: '#4073b2',
     moneygreen: '#39b14a',
-    yellowbuzz: '#F1E554'
+    yellowbuzz: '#F1E554',
+    goldenrod: '#daa520'
   },
 
   // Space

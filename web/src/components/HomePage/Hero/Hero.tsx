@@ -33,7 +33,11 @@ const Hero: React.FC<Props> = () => {
           </Box>
         </Flex>
 
-        <Box mt={['85%', '44%']} position="relative" style={{ zIndex: 9 }}>
+        <Box
+          mt={['85%', '62%', '44%']}
+          position="relative"
+          style={{ zIndex: 9 }}
+        >
           <h1>
             eOn is pro-grade hand sanitation made easy. One quick spray is all
             it takes to know your hands are clean.
@@ -58,10 +62,7 @@ const Hero: React.FC<Props> = () => {
             </Text>
           </Flex>
 
-          <Flex
-            width={[1 / 2, 1 / 2, 1 / 3]}
-            justifyContent="flex-end"
-          >
+          <Flex width={[1 / 2, 1 / 2, 1 / 3]} justifyContent="flex-end">
             <AddToCart>Buy Now</AddToCart>
           </Flex>
         </div>

@@ -61,7 +61,7 @@ export const Trademarks = styled(Flex)`
   }
 
   img {
-    height: calc(${theme.space[5]} * 1.15);
+    height: calc(${theme.space[5]} * 1.05);
 
     @media ${theme.mq.tablet} {
       height: calc(${theme.space[4]} * 1.35);
