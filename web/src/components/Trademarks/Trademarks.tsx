@@ -4,7 +4,7 @@
 
 import * as React from 'react'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 import { Flex, Text } from '../ui'

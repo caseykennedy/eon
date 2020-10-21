@@ -7,7 +7,7 @@ import { Parallax } from 'react-scroll-parallax'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'

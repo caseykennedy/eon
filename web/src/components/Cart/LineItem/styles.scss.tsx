@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 export const LineItem = styled.div`
   display: flex;

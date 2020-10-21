@@ -6,7 +6,7 @@ import React from 'react'
 import { Grid, Cell } from 'styled-css-grid'
 
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // Theme + ui
 import { Box, Flex, Heading, Text } from '../../ui'

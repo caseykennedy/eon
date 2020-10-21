@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { transparentize } from 'polished'
 
 import { Box, Flex, Heading } from '../../ui'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 import Section from '../../Section'
 

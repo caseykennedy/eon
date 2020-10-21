@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
-import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui'
 import { transparentize } from 'polished'
 
 // Arial Narrow
@@ -196,7 +196,7 @@ const Typography = css`
 
   h2,
   .text--xl {
-    font-size: ${theme.root.font.lg};
+    font-size: calc(${theme.root.font.lg} / 1.15);
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.root.font.lg} * 1.25);

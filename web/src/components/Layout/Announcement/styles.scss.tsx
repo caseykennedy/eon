@@ -5,16 +5,18 @@
 import styled from 'styled-components'
 import { AnimatedFlex, Flex } from '../../ui'
 import { motion } from 'framer-motion'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 import Headroom from 'react-headroom'
 
 // ___________________________________________________________________
 
+const height = theme.headerHeight
+
 export const Announcement = styled(motion.div)`
   display: flex;
   background: ${theme.colors.lightgray};
-  height: ${theme.headerHeight};
+  height: ${height};
   max-height: 0;
   opacity: 0;
   top: 0;
@@ -27,8 +29,23 @@ export const Announcement = styled(motion.div)`
       opacity: 1;
       top: 0;
       visibility: visible;
-      max-height: ${theme.headerHeight};
+      max-height: ${height};
     }
+  }
+
+  p {
+    align-items: center;
+  }
+
+  p small {
+    line-height: 1.25;
+    display: inline-block;
+  }
+
+  .figure {
+    float: right;
+    margin-right: ${theme.space[4]};
+    height: 56px;
   }
 
   a {

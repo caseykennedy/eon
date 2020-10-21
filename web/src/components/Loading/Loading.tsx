@@ -15,7 +15,7 @@ import Divider from '../ui/Divider'
 // Theme
 import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 

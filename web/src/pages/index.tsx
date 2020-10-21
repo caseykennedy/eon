@@ -11,7 +11,7 @@ import SEO from '../components/SEO'
 import HomePage from '../components/HomePage'
 
 // Theme
-import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 

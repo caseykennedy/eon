@@ -7,7 +7,7 @@ import React from 'react'
 
 // Theme + ui
 import { Box } from '../components/ui'
-import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui'
 
 // Components
 import Layout from '../components/Layout'

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { darken } from 'polished'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // Elements
 import { Button, Box, Flex } from '../ui'
@@ -42,10 +42,14 @@ export const AddToCart = styled(Flex)`
   transition: ${theme.transition.all};
   white-space: nowrap;
 
+  @media ${theme.mq.tablet} {
+    padding: calc(${theme.space[2]} / 1.25) ${theme.space[3]};
+  }
+
   @media ${theme.mq.desktop} {
     /* width: calc(${theme.space[7]} * 4); */
     font-size: ${theme.fontSizes[3]};
-    padding: calc(${theme.space[2]} / 1.15) ${theme.space[3]};
+    padding: calc(${theme.space[2]} / 1.25) ${theme.space[2]};
   }
 
   span {

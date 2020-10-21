@@ -9,7 +9,7 @@ import Button from '../ui/Button'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // Sections
 import Hero from './Hero'

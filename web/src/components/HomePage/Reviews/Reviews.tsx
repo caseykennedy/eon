@@ -5,7 +5,7 @@
 import React from 'react'
 
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 import { Box, Flex, Heading, Text } from '../../ui'
 

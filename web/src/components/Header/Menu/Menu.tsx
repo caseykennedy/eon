@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Box, Flex, Text } from '../../ui'
 import AddToCart from '../../AddToCart'
 
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
@@ -46,7 +46,7 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 
 const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
   return (
-    <S.Menu>
+    <S.Menu ref={scrollRef}>
       <AnimatePresence>
         {isNavOpen && (
           <motion.div
@@ -54,7 +54,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             animate={{ opacity: 1, transform: theme.transform.matrix.to }}
             exit={{ opacity: 0, transform: theme.transform.matrix.from }}
             transition={{ duration: 0.5 }}
-            ref={scrollRef}
+            className="motion"
           >
             <Box width={1}>
               <h2>
@@ -62,8 +62,12 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                 sanitizing mist™ website experience, chockful of info, usage
                 tips, support and more.
               </h2>
-              <Flex mt={7}>
-                <Box bg="white" p={5} mr={5}>
+              <AddToCart />
+            </Box>
+
+            <Box mt={7} mb={[4, 0, 0]} width={1}>
+              <Flex>
+                <Box bg="white" p={4} mr={[3, 4]} flex={1}>
                   <p>
                     <Text as="span" color="primary" fontWeight={600}>
                       Quality in manufacturing excellence:
@@ -73,7 +77,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                     environmental standards.
                   </p>
                 </Box>
-                <Box bg="white" p={5}>
+                <Box bg="white" p={4} flex={1}>
                   <p>
                     <Text as="span" color="primary" fontWeight={600}>
                       eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
@@ -83,9 +87,6 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                   </p>
                 </Box>
               </Flex>
-            </Box>
-            <Box mt={7}>
-              <AddToCart />
             </Box>
           </motion.div>
         )}

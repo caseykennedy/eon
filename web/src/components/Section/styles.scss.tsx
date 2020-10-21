@@ -3,7 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import { Box } from '../ui'
 
 // ___________________________________________________________________

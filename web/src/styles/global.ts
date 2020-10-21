@@ -4,7 +4,7 @@
 
 import { createGlobalStyle } from 'styled-components'
 
-import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui'
 
 import RootVars from './root'
 import Reset from './reset'

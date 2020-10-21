@@ -8,7 +8,7 @@ import StoreContext from '../../../context/StoreContext'
 import useProduct from '../../../hooks/useProduct'
 
 import { Box, Text } from '../../ui'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

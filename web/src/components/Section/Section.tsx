@@ -11,7 +11,7 @@ import { Box, Flex } from '../ui'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 

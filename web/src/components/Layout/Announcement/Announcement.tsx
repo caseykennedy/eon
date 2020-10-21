@@ -9,16 +9,15 @@ import { useSpring, config } from 'react-spring'
 import Headroom from 'react-headroom'
 
 // UI
-import { Box } from '../../ui'
+import { Box, Flex } from '../../ui'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // Components
 import Icon from '../../Icons'
-import Portal from '../../Portal'
-import Overlay from '../../Overlay'
+import ImgMatch from '../../ImgMatch'
 
 // ___________________________________________________________________
 
@@ -42,14 +41,17 @@ const Message: React.FC<Props> = ({
     <>
       <Link to={to}>
         {/* <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} /> */}
-        <p>
+        <Flex as="p">
           <small>
             <Box as="span" color="primary">
               Hello there!
             </Box>{' '}
             Looking for eOn multi-surface disinfectant?
           </small>
-        </p>
+          <Box as="span" width="24px" ml={2} className="figure">
+            <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
+          </Box>
+        </Flex>
       </Link>
       <S.Exit onClick={handleExit} aria-label="close announcement">
         <Icon name="plus" color="black" />

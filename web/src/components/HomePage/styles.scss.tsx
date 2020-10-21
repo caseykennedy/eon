@@ -7,7 +7,7 @@ import { darken } from 'polished'
 
 import { Box } from '../ui'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { darken, transparentize } from 'polished'
 import { Box, Flex } from '../ui'
 import { motion } from 'framer-motion'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 import Headroom from 'react-headroom'
 

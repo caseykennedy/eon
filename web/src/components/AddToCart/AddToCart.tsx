@@ -10,7 +10,7 @@ import useProduct from '../../hooks/useProduct'
 import { Button, Box, Text } from '../ui'
 import Icon from '../Icons'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________

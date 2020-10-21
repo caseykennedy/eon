@@ -13,7 +13,7 @@ import { Button, Text } from '../ui'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // Components
 import Icon from '../Icons'
@@ -57,11 +57,16 @@ const CartItems: React.FC<CartItemsProps> = ({
       {!checkout.lineItems[0] ? (
         <>
           {!adding ? (
-            <p>
-              Your cart is empty 😭. <AddToCart linkText="Add some eOn!" />
-            </p>
+            <Text as="p" mt={7} textAlign="center">
+              Your cart is empty 😭
+              <br />
+              <br />
+              <AddToCart linkText="Add some eOn!" />
+            </Text>
           ) : (
-            <p>Adding eOn...</p>
+            <Text as="p" mt={7} textAlign="center">
+              Adding eOn...
+            </Text>
           )}
         </>
       ) : (

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import theme from '../../config/theme'
+import theme from '../gatsby-plugin-theme-ui'
 
 const SymbolBadge = () => (
   <svg width="100%" viewBox="0 0 162.78 162.78">

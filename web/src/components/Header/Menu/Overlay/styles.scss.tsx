@@ -4,22 +4,19 @@
 
 import styled from 'styled-components'
 import { transparentize } from 'polished'
-import { Box, Flex } from '../ui'
-import theme from '../../../config/theme'
+import { Box, Flex } from '../../../ui'
+import theme from '../../../../gatsby-plugin-theme-ui'
 
 // Begin Styles
 // ___________________________________________________________________
 
 const overlayWidth = '100%'
 
-export const Overlay = styled(Box)`
-  justify-content: flex-start;
-  flex-direction: column;
-
+export const Overlay = styled(Flex)`
   width: ${overlayWidth};
   height: calc(100% - ${theme.headerHeight});
   overflow: auto;
-  padding: ${theme.headerHeight} ${theme.space[4]} ${theme.space[5]};
+  padding: ${theme.space[4]};
 
   position: fixed;
   top: ${theme.headerHeight};
@@ -30,8 +27,6 @@ export const Overlay = styled(Box)`
   opacity: 0;
 
   background: ${transparentize(0, theme.colors.quinary)};
-  /* backdrop-filter: blur(9px); */
-  border-right: ${theme.border};
   transition: left 0.333 ease-in-out;
   z-index: 99;
 

@@ -16,7 +16,7 @@ import StoreContext from '../../context/StoreContext'
 import Logo from '../Logo'
 import Menu from './Menu'
 import Portal from '../Portal'
-import Overlay from '../Overlay'
+import Overlay from './Menu/Overlay'
 import Cart from '../Cart'
 import BuyButton from './BuyButton'
 import Icon from '../Icons'
@@ -26,7 +26,7 @@ import Announcement from '../Layout/Announcement'
 // Elements
 import { Box, Flex } from '../ui'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
