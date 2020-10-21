@@ -1,35 +1,4 @@
-# eOn Marketing & eCommerce Website
-
-
-
-## Features
-
-- [x] Configurable
-  - [x] Use the config to easily change the most important information
-  - [x] Change the theming for styled-components
-  - [x] Navigation powered by a .yaml file
-  - [x] Layout driven by CSS-Grid
-- [x] Create your projects by creating a folder full of images and adding an entry to a .yaml file
-- [x] Shows your Instagram posts
-- [x] TypeScript
-- [x] Cypress for End-to-End testing
-- [x] [Husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged) for autofix each commit
-- [x] react-spring animations
-- [x] styled-components + styled-system + rebass for styling
-- [x] styled-css-grid for css grid layouts
-- [x] Polished for cool things
-- [x] Google Analytics support
-- [x] SEO
-  - [x] Sitemap
-  - [x] Schema.org JSONLD
-  - [x] OpenGraph Tags
-  - [x] Twitter Tags
-- [x] Offline Support
-- [x] WebApp Manifest Support
-- [x] Responsive Images
-  - [x] Right image sizes
-  - [x] Blurred loading animation
-  - [x] WebP support
+# eOn Marketing & eCommerce Website built with React, Gatsby, Sanity and Shopify
 
 ## Getting Started
 
