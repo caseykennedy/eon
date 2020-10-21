@@ -28,9 +28,10 @@ export const Hero = styled(Section)`
 
       .figure {
         position: fixed;
-        top: calc(${theme.headerHeight} + ${theme.space[7]});
+        top: calc(${theme.headerHeight} + ${theme.space[6]});
 
         @media ${theme.mq.tablet} {
+          top: calc(${theme.headerHeight} + ${theme.space[7]});
         }
       }
     }

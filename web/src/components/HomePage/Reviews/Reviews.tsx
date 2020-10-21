@@ -72,7 +72,7 @@ const Specs: React.FC<Props> = () => {
             <div className="review__rating">
               <Stars />
             </div>
-            <Heading as="h3" mb={5}>
+            <Heading as="span" mb={5} className="quote">
               {item.review}
             </Heading>
             <p>{item.author}</p>

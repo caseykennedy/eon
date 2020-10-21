@@ -28,8 +28,8 @@ export const Reviews = styled(Section)`
       }
       }
 
-      h3 {
-        font-size: calc(${theme.fontSizes[4]} / 1.5);
+      .quote {
+        font-size: calc(${theme.fontSizes[4]} / 1.75);
 
         @media ${theme.mq.tablet} {
           font-size: calc(${theme.fontSizes[4]} / 1.35);

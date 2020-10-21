@@ -34,7 +34,7 @@ const Hero: React.FC<Props> = () => {
         </Flex>
 
         <Box
-          mt={['108%', '62%', '44%']}
+          mt={['98%', '62%', '44%']}
           position="relative"
           style={{ zIndex: 9 }}
         >
