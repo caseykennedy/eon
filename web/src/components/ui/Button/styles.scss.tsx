@@ -14,7 +14,7 @@ import theme from '../../../../config/theme'
 
 export const Btn = styled(Button)<{ invert?: boolean }>`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   
   padding: calc(${theme.space[3]} / 1.15) ${theme.space[4]};
   max-width: 400px;

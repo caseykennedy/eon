@@ -12,7 +12,7 @@ import Headroom from 'react-headroom'
 
 // ___________________________________________________________________
 
-const cartWidth = `700px`
+const cartWidth = `500px`
 
 export const Cart = styled(Box)`
   height: 100%;
@@ -44,7 +44,7 @@ export const Cart = styled(Box)`
     top: ${theme.headerHeight};
     right: 0;
     bottom: 0;
-    padding: ${theme.space[5]};
+    padding: ${theme.space[4]} ${theme.space[5]} ${theme.space[5]};
     height: calc(100% - ${theme.headerHeight});
     width: ${cartWidth};
     z-index: 991;
@@ -67,7 +67,10 @@ export const Cart = styled(Box)`
       width: 100%;
 
       .close-cart {
+        display: flex;
         align-items: center;
+        justify-content: space-between;
+
         cursor: pointer;
         margin-left: auto;
         height: 100%;
@@ -78,8 +81,9 @@ export const Cart = styled(Box)`
         }
 
         svg {
-          width: ${theme.space[4]};
-          transform: rotate(45deg);
+          margin-left: ${theme.space[2]};
+          fill: ${theme.colors.black};
+          width: calc(${theme.space[3]} * 1.15);
         }
       }
     }

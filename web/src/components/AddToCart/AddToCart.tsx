@@ -8,6 +8,8 @@ import StoreContext from '../../context/StoreContext'
 import useProduct from '../../hooks/useProduct'
 
 import { Button, Box, Text } from '../ui'
+import Icon from '../Icons'
+
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
@@ -63,20 +65,17 @@ const AddToCart: React.FC<Props> = ({ setPortalOpen, linkText }) => {
   }
 
   return !linkText ? (
-    <Button
+    <S.AddToCart
+      as="button"
       type="submit"
       disabled={!available || adding}
       onClick={handleAddToCart}
-      aria-label="Buy now"
     >
       {!adding ? 'Buy Now' : 'thank you 😃'}
-    </Button>
+      <Icon name="arrow" />
+    </S.AddToCart>
   ) : (
-    <S.TextLink
-      as="span"
-      onClick={handleAddToCart}
-      aria-label="Buy now"
-    >
+    <S.TextLink as="span" onClick={handleAddToCart} aria-label="Buy now">
       {!adding ? linkText : 'thank you 😃'}
     </S.TextLink>
   )

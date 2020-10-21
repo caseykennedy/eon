@@ -28,13 +28,13 @@ const Hero: React.FC<Props> = () => {
       </S.Decorator>
       <div className="hero__inner">
         <Flex className="hero__figure">
-          <Box width={[`40%`, `25%`, `20%`]} className="figure">
+          <Box width={[`50%`, `25%`, `20%`]} className="figure">
             <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>
 
         <Box
-          mt={['85%', '62%', '44%']}
+          mt={['108%', '62%', '44%']}
           position="relative"
           style={{ zIndex: 9 }}
         >

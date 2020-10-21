@@ -114,70 +114,66 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
     const total = reduce(items, (acc, item) => acc + item.quantity, 0)
     return [total !== 0, total]
   }
-  const [hasItems, quantity] = useQuantity()
   return (
-    <>
-      <Portal
-        id="cart-root"
-        root="main-root"
-        isOpen={isCartOpen}
-        handleExit={() => setCartOpen(false)}
-        scrollRef={scrollRef}
-        mainRef={mainRef}
-        exitRef={exitRef}
-      >
-        <FocusLock persistentFocus={false}>
-          <S.Cart
-            className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
-            id="cart"
-            aria-label="cart drawer flyout"
-          >
-            <AnimatePresence>
-              {isCartOpen && (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    transform: theme.transform.matrix.from
-                  }}
-                  animate={{ opacity: 1, transform: theme.transform.matrix.to }}
-                  exit={{ opacity: 0, transform: theme.transform.matrix.from }}
-                  transition={{ duration: 0.5 }}
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: '100%'
-                  }}
-                  ref={scrollRef}
-                >
-                  <>
-                    {/* <div className="cart__veil" /> */}
-                    <div className="cart__utilities">
-                      <Text color="darkgray">your cart</Text>
-                      <Text
-                        // as="button"
-                        onClick={togglePortal}
-                        className="close-cart"
-                        aria-label="close cart"
-                        data-dismiss="modal"
-                        ref={exitRef}
-                      >
-                        {/* <Icon name="plus" color="black" /> */}
-                        close
-                      </Text>
-                    </div>
-                    <CartItems
-                      adding={adding}
-                      checkout={checkout}
-                      scrollRef={scrollRef}
-                    />
-                  </>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </S.Cart>
-        </FocusLock>
-      </Portal>
-    </>
+    <Portal
+      id="cart-root"
+      root="main-root"
+      isOpen={isCartOpen}
+      handleExit={() => setCartOpen(false)}
+      scrollRef={scrollRef}
+      mainRef={mainRef}
+      exitRef={exitRef}
+    >
+      <FocusLock persistentFocus={false}>
+        <S.Cart
+          className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}
+          id="cart"
+          aria-label="cart drawer flyout"
+        >
+          <AnimatePresence>
+            {isCartOpen && (
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  transform: theme.transform.matrix.from
+                }}
+                animate={{ opacity: 1, transform: theme.transform.matrix.to }}
+                exit={{ opacity: 0, transform: theme.transform.matrix.from }}
+                transition={{ duration: 0.5 }}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%'
+                }}
+                ref={scrollRef}
+              >
+                <>
+                  {/* <div className="cart__veil" /> */}
+                  <div className="cart__utilities">
+                    <Text color="darkgray">your cart</Text>
+                    <Text
+                      // as="button"
+                      onClick={togglePortal}
+                      className="close-cart"
+                      aria-label="close cart"
+                      data-dismiss="modal"
+                      ref={exitRef}
+                    >
+                      close <Icon name="arrow" />
+                    </Text>
+                  </div>
+                  <CartItems
+                    adding={adding}
+                    checkout={checkout}
+                    scrollRef={scrollRef}
+                  />
+                </>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </S.Cart>
+      </FocusLock>
+    </Portal>
   )
 }
 

@@ -19,6 +19,10 @@ export const LineItem = styled.div`
       justify-content: space-between;
       margin: ${theme.space[2]} 0 0;
 
+      @media ${theme.mq.tablet} {
+        margin: ${theme.space[5]} 0 0;
+      }
+
       input {
         background: ${theme.colors.white};
         border: ${theme.border};
