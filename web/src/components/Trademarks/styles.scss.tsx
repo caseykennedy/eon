@@ -17,7 +17,8 @@ export const Trademarks = styled(Flex)`
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 
-  position: relative;
+  position: sticky;
+  top: calc(${theme.headerHeight} - 1px);
   z-index: 9;
 
   .mark {
@@ -26,7 +27,7 @@ export const Trademarks = styled(Flex)`
     justify-content: center;
 
     border-right: ${theme.border};
-    padding: ${theme.space[4]} 0;
+    padding: ${theme.space[3]} 0;
     white-space: nowrap;
     width: 50%;
 

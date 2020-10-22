@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
   return (
     <S.HomePage>
       <Hero />
-      <Trademarks />
+      {/* <Trademarks /> */}
       <How />
       <Specs />
       <ProductDetail />

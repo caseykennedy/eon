@@ -67,7 +67,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   const [highlightBG, setHighlightBG] = useState(false)
 
   // scrollWatch settings
-  const MINIMUM_SCROLL = 2
+  const MINIMUM_SCROLL = 3
   const TIMEOUT_DELAY = 0
 
   // scrollWatch hook to watch for page scroll
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   return (
     <>
       <Portal
-        id="nav-root"
+        id="menu-root"
         root="root"
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
@@ -133,7 +133,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </div>
 
           <div className="header-cta">
-            <BuyButton setPortalOpen={setCartOpen} highlightBG={highlightBG} />
+            <BuyButton setPortalOpen={!setCartOpen} highlightBG={highlightBG} />
           </div>
         </div>
 
