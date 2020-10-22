@@ -34,18 +34,15 @@ export const Announcement = styled(motion.div)`
   }
 
   p {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
   }
 
   p small {
-    line-height: 1.25;
+    line-height: 1.45;
     display: inline-block;
-  }
-
-  .figure {
-    float: right;
-    margin-right: ${theme.space[4]};
-    height: 56px;
   }
 
   a {
@@ -54,10 +51,21 @@ export const Announcement = styled(motion.div)`
     justify-content: space-between;
 
     color: ${theme.colors.text};
+    height: 100%;
     width: 100%;
 
     &:hover {
       color: ${theme.colors.secondary};
+    }
+
+    .figure {
+      justify-content: flex-end;
+      margin: 0 ${theme.space[4]};
+      padding-top: ${theme.space[1]};
+
+      svg {
+        width: 32px;
+      }
     }
   }
 `

@@ -13,12 +13,9 @@ export const Trademarks = styled(Flex)`
   flex-wrap: wrap;
 
   background: rgba(255, 255, 255, 0.95);
-  /* backdrop-filter: blur(9px); */
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 
-  position: sticky;
-  top: calc(${theme.headerHeight} - 1px);
   z-index: 9;
 
   .mark {

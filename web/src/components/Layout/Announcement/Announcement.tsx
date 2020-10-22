@@ -18,6 +18,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 // Components
 import Icon from '../../Icons'
 import ImgMatch from '../../ImgMatch'
+import CanMulti from '../../CanMulti'
 
 // ___________________________________________________________________
 
@@ -41,16 +42,18 @@ const Message: React.FC<Props> = ({
     <>
       <Link to={to}>
         {/* <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} /> */}
-        <Flex as="p">
+        <Flex>
+          <p>
           <small>
             <Box as="span" color="primary">
               Hello there!
             </Box>{' '}
             Looking for eOn multi-surface disinfectant?
           </small>
-          <Box as="span" width="24px" ml={2} className="figure">
-            <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
-          </Box>
+          </p>
+          <Flex as="span" className="figure">
+            <CanMulti />
+          </Flex>
         </Flex>
       </Link>
       <S.Exit onClick={handleExit} aria-label="close announcement">
