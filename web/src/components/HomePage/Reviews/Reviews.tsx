@@ -27,7 +27,7 @@ const ReviewSlider: React.FC = ({ children }) => {
     centeredSlides: true,
     // effect: 'fade',
     slidesPerView: 1,
-    spaceBetween: 24,
+    spaceBetween: 8,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -35,7 +35,7 @@ const ReviewSlider: React.FC = ({ children }) => {
     breakpoints: {
       1024: {
         slidesPerView: 2,
-        spaceBetween: 64
+        spaceBetween: 32
       },
       768: {
         slidesPerView: 2,
@@ -44,12 +44,12 @@ const ReviewSlider: React.FC = ({ children }) => {
       },
       640: {
         slidesPerView: 1,
-        spaceBetween: 24,
+        spaceBetween: 8,
         grabCursor: true
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: 16,
+        spaceBetween: 8,
         grabCursor: true
       }
     }
@@ -72,9 +72,9 @@ const Specs: React.FC<Props> = () => {
             <div className="review__rating">
               <Stars />
             </div>
-            <Heading as="span" mb={5} className="quote">
+            <Text as="span" mb={5} className="quote">
               {item.review}
-            </Heading>
+            </Text>
             <p>{item.author}</p>
           </Box>
         ))}

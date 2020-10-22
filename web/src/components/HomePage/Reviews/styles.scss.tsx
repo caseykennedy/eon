@@ -19,7 +19,7 @@ export const Reviews = styled(Section)`
       border-radius: ${theme.borderRadius};
 
       @media ${theme.mq.tablet} {
-        padding: ${theme.space[6]};
+        padding: ${theme.space[5]};
       }
 
       svg {
@@ -29,25 +29,16 @@ export const Reviews = styled(Section)`
       }
 
       .quote {
-        font-size: calc(${theme.fontSizes[4]} / 1.75);
+        font-size: calc(${theme.fontSizes[3]} / 1.5);
 
         @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[4]} / 1.5);
-        }
-
-        @media ${theme.mq.desktop} {
-          font-size: calc(${theme.fontSizes[4]} / 1.35);
+          font-size: calc(${theme.fontSizes[3]} / 1.25);
         }
       }
 
       .lead {
         color: ${theme.colors.primary};
         margin-bottom: 0;
-        font-size: calc(${theme.fontSizes[3]} / 1.5);
-
-        @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[3]} / 1.35);
-        }
       }
     }
 
@@ -65,7 +56,7 @@ export const Reviews = styled(Section)`
     padding-bottom: ${theme.space[6]};
 
     @media ${theme.mq.tablet} {
-      padding-bottom: ${theme.space[9]};
+      padding-bottom: ${theme.space[8]};
     }
 
     .parallax-bg {
