@@ -61,7 +61,7 @@ const Specs = () => {
           <Box width={[1, 8 / 10]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               <Text as="span" color="primary">
-                Works on contact
+                Works on contact;
               </Text>{' '}
               Immediate action against bacteria, fungi, and viruses.
             </Heading>
@@ -180,7 +180,7 @@ const Specs = () => {
             <Box width="30%" />
           </Flex>
         </Flex>
-        <Flex width={1} mt={12} justifyContent="center">
+        <Flex width={1} mt={6} justifyContent="center">
           <Box width={['60%', '30%']}>
             <WeRefreshHands />
           </Box>

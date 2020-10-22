@@ -27,7 +27,7 @@ const ReviewSlider: React.FC = ({ children }) => {
     centeredSlides: true,
     // effect: 'fade',
     slidesPerView: 1,
-    spaceBetween: 32,
+    spaceBetween: 24,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -38,18 +38,18 @@ const ReviewSlider: React.FC = ({ children }) => {
         spaceBetween: 64
       },
       768: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 32,
         grabCursor: true
       },
       640: {
         slidesPerView: 1,
-        spaceBetween: 32,
+        spaceBetween: 24,
         grabCursor: true
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: 32,
+        spaceBetween: 16,
         grabCursor: true
       }
     }

@@ -32,6 +32,10 @@ export const Reviews = styled(Section)`
         font-size: calc(${theme.fontSizes[4]} / 1.75);
 
         @media ${theme.mq.tablet} {
+          font-size: calc(${theme.fontSizes[4]} / 1.5);
+        }
+
+        @media ${theme.mq.desktop} {
           font-size: calc(${theme.fontSizes[4]} / 1.35);
         }
       }
@@ -58,7 +62,11 @@ export const Reviews = styled(Section)`
 
   .swiper-container {
     overflow: visible;
-    padding-bottom: ${theme.space[9]};
+    padding-bottom: ${theme.space[6]};
+
+    @media ${theme.mq.tablet} {
+      padding-bottom: ${theme.space[9]};
+    }
 
     .parallax-bg {
       background: yellow;

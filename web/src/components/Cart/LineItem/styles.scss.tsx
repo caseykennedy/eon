@@ -32,7 +32,7 @@ export const LineItem = styled.div`
         line-height: 1.25;
         /* text-align: center; */
 
-        margin-right: ${theme.space[2]};
+        margin-right: ${theme.space[1]};
         padding: ${theme.space[1]} ${theme.space[2]};
         width: ${theme.space[6]};
         touch-action: none;
