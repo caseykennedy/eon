@@ -4,10 +4,15 @@
 
 import React, { useContext, useState, useEffect, useCallback } from 'react'
 
+// Context
 import StoreContext from '../../../context/StoreContext'
 import useProduct from '../../../hooks/useProduct'
 
+// Components
+import Icon from '../../Icons'
 import { Box, Text } from '../../ui'
+
+// Theme
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
@@ -18,10 +23,7 @@ type Props = {
   highlightBG: boolean
 }
 
-const BuyButton: React.FC<Props> = ({
-  setPortalOpen,
-  highlightBG,
-}) => {
+const BuyButton: React.FC<Props> = ({ setPortalOpen, highlightBG }) => {
   const products = useProduct()
   const product = products.edges[0].node
   const {
@@ -63,8 +65,6 @@ const BuyButton: React.FC<Props> = ({
 
   const handleAddToCart = () => {
     addVariantToCart(productVariant.shopifyId, quantity)
-    // Open up the cart drawer
-    setPortalOpen(true)
   }
 
   return (
@@ -75,7 +75,7 @@ const BuyButton: React.FC<Props> = ({
       className={`${highlightBG ? 'header--stuck' : 'header--unstuck'}`}
       aria-label="Buy now"
     >
-      buy now
+      {!adding ? 'Buy now' : 'Thank you'}
     </S.BuyButton>
   )
 }

@@ -159,7 +159,7 @@ export const Footer = styled.footer`
       @media ${theme.mq.tablet} {
       }
 
-      .link {
+      a {
         color: ${theme.colors.black};
         margin-left: ${theme.space[4]};
         display: none;

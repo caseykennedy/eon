@@ -63,6 +63,7 @@
     "gatsby-plugin-twitter-pixel": "^2.0.2",
     "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-source-instagram": "^0.9.0",
     "gatsby-source-sanity": "^5.0.6",
     "gatsby-source-shopify": "^3.2.32",
     "gatsby-transformer-sharp": "^2.4.2",

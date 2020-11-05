@@ -7,7 +7,7 @@ import React, { useContext, useState, useEffect, useCallback } from 'react'
 import StoreContext from '../../context/StoreContext'
 import useProduct from '../../hooks/useProduct'
 
-import { Button, Box, Text } from '../ui'
+import { Box } from '../ui'
 import Icon from '../Icons'
 
 import theme from '../../gatsby-plugin-theme-ui'
@@ -71,8 +71,8 @@ const AddToCart: React.FC<Props> = ({ setPortalOpen, linkText }) => {
       disabled={!available || adding}
       onClick={handleAddToCart}
     >
-      {!adding ? 'Buy Now' : 'thank you 😃'}
-      <Icon name="arrow" />
+      {!adding ? 'Buy now' : 'Thank you'}
+      {!adding ? <Icon name="arrow" /> : <div className="smiley">😃</div>}
     </S.AddToCart>
   ) : (
     <S.TextLink as="span" onClick={handleAddToCart} aria-label="Buy now">

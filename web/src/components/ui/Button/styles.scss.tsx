@@ -16,7 +16,7 @@ export const Btn = styled(Button)<{ invert?: boolean }>`
   display: flex;
   justify-content: space-between;
   
-  padding: calc(${theme.space[3]} / 1.15) ${theme.space[4]};
+  padding: ${theme.space[3]} ${theme.space[4]};
   max-width: 400px;
 
   color: ${p => (!p.invert ? theme.colors.white : theme.colors.text)};
@@ -31,9 +31,14 @@ export const Btn = styled(Button)<{ invert?: boolean }>`
   border-radius: 6px;
   transition: ${theme.transition.all};
 
+  @media ${theme.mq.tablet} {
+    padding: calc(${theme.space[2]} / 1.25) ${theme.space[3]};
+  }
+
   @media ${theme.mq.desktop} {
     width: calc(${theme.space[7]} * 4);
     font-size: ${theme.fontSizes[3]};
+    padding: calc(${theme.space[2]} / 1.25) ${theme.space[2]};
   }
 
   &:hover {

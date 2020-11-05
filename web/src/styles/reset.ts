@@ -22,7 +22,7 @@ const Reset = css`
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: auto;
+    /* overflow: auto; */
   }
 
   /* Sections

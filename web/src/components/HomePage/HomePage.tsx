@@ -25,7 +25,7 @@ import ProductDetail from './ProductDetail'
 
 // ___________________________________________________________________
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <S.HomePage>
       <Hero />

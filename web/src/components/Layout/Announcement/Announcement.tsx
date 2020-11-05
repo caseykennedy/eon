@@ -44,12 +44,12 @@ const Message: React.FC<Props> = ({
         {/* <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} /> */}
         <Flex>
           <p>
-          <small>
-            <Box as="span" color="primary">
-              Hello there!
-            </Box>{' '}
-            Looking for eOn multi-surface disinfectant?
-          </small>
+            <small>
+              <Box as="span" color="primary">
+                Hello there!
+              </Box>{' '}
+              Looking for eOn multi-surface disinfectant?
+            </small>
           </p>
           <Flex as="span" className="figure">
             <CanMulti />

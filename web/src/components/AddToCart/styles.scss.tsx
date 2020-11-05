@@ -67,7 +67,7 @@ export const AddToCart = styled(Flex)`
     }
 
     @media ${theme.mq.desktop} {
-      margin-left: ${theme.space[7]};
+      margin-left: ${theme.space[6]};
     }
 
     svg {
@@ -106,6 +106,11 @@ export const AddToCart = styled(Flex)`
   }
 
   .inner {
+  }
+
+  .smiley {
+    margin-left: ${theme.space[3]};
+    /* width: calc(${theme.space[5]}); */
   }
 `
 

@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
+import { Link } from 'gatsby'
 
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
@@ -75,15 +76,15 @@ const Footer: React.FC = () => {
       <Terms />
       <S.Footer>
         <Flex className="footer__links">
-          <a className="link" href="">
-            Legal
-          </a>
-          <a className="link" href="">
-            Shipping
-          </a>
-          <a className="link" href="">
-            Returns
-          </a>
+          <Link to={`/privacy`}>
+            privacy
+          </Link>
+          <Link to={`/terms`}>
+            terms
+          </Link>
+          <Link to={`/returns`}>
+            returns
+          </Link>
           <Flex
             as="a"
             className="footer__contact"

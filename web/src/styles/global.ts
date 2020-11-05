@@ -17,11 +17,11 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
 
-  html,
+  /* html,
   body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-  }
+  } */
   
   body {
     background: ${theme.colors.secondary};
@@ -52,11 +52,6 @@ const GlobalStyles = createGlobalStyle`
       cursor: none;
     }
   } */
-
-  #drawer-root {
-    position: relative;
-    z-index: 100;
-  }
 `
 
 export default GlobalStyles
