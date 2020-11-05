@@ -113,13 +113,13 @@ module.exports = {
         trackingId: config.googleAnalyticsID
       }
     },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        type: `user-profile`,
-        username: `eonmist`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-instagram`,
+    //   options: {
+    //     type: `user-profile`,
+    //     username: `eonmist`,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
