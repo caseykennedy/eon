@@ -232,22 +232,18 @@ const Typography = css`
     }
   }
 
-  small {
-    font-size: calc(${theme.fontSizes[1]} / 1.15);
-  }
-
   .text--xs {
     font-size: ${theme.root.font.xs};
   }
 
   p {
-    font-size: ${theme.root.font.baseSize};
+    font-size: ${theme.fontSizes[2]};
     font-weight: ${theme.fontWeights.medium};
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[5]};
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[2]};
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
     }
 
     &:last-child {
@@ -260,7 +256,7 @@ const Typography = css`
   }
 
   .t--small {
-    font-size: calc(${theme.fontSizes[1]} / 1.1);
+    font-size: calc(${theme.fontSizes[2]});
   }
 
   .t-underline {

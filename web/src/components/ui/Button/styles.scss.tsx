@@ -28,7 +28,7 @@ export const Btn = styled(Button)<{ invert?: boolean }>`
   text-transform: capitalize;
 
   background: ${p => (!p.invert ? theme.colors.cta : theme.colors.secondary)};
-  border-radius: 6px;
+  border-radius: ${theme.borderRadius};
   transition: ${theme.transition.all};
 
   @media ${theme.mq.tablet} {

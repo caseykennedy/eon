@@ -36,7 +36,7 @@ export const AddToCart = styled(Flex)`
   background: ${theme.colors.cta};
   border: ${theme.border};
   border-color: ${theme.colors.cta};
-  border-radius: 6px;
+  border-radius: ${theme.borderRadius};
   cursor: pointer;
   outline: none;
   transition: ${theme.transition.all};

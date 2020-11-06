@@ -194,7 +194,7 @@ const theme: ThemeShape = {
   },
 
   border: '1px solid #000000',
-  borderRadius: '6px',
+  borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #8a8a7c',
 
   root: {

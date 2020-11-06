@@ -91,7 +91,7 @@ export const PreFoot = styled.div`
             background: ${theme.colors.primary};
             border: none;
             box-shadow: none;
-            border-radius: 6px;
+            border-radius: ${theme.borderRadius};
             outline: none;
             cursor: pointer;
 
