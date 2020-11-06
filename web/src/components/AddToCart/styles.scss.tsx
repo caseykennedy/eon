@@ -21,16 +21,16 @@ export const AddToCart = styled(Flex)`
   align-items: center;
   justify-content: space-between;
 
-  padding: ${theme.space[3]} ${theme.space[4]};
+  padding: calc(${theme.space[3]} * 1.15);
   /* max-width: 400px; */
   /* width: 100%; */
 
   color: ${theme.colors.white};
   font-family: ${theme.fonts.heading};
-  font-size: calc(${theme.fontSizes[2]} * 1.5);
+  font-size: calc(${theme.fontSizes[2]} * 1.25);
   font-weight: 500;
   letter-spacing: 0.5px;
-  line-height: 0.5;
+  /* line-height: 1; */
   text-transform: capitalize;
 
   background: ${theme.colors.cta};
@@ -43,13 +43,12 @@ export const AddToCart = styled(Flex)`
   white-space: nowrap;
 
   @media ${theme.mq.tablet} {
-    padding: calc(${theme.space[2]} / 1.25) ${theme.space[3]};
+    padding: ${theme.space[3]};
   }
 
   @media ${theme.mq.desktop} {
-    /* width: calc(${theme.space[7]} * 4); */
-    font-size: ${theme.fontSizes[3]};
-    padding: calc(${theme.space[2]} / 1.25) ${theme.space[2]};
+    font-size: calc(${theme.fontSizes[2]} * 1.5);
+    padding: ${theme.space[3]};
   }
 
   span {
@@ -63,11 +62,11 @@ export const AddToCart = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       display: block;
-      margin-left: ${theme.space[6]};
+      margin-left: ${theme.space[7]};
     }
 
     @media ${theme.mq.desktop} {
-      margin-left: ${theme.space[6]};
+      margin-left: ${theme.space[9]};
     }
 
     svg {
@@ -75,7 +74,7 @@ export const AddToCart = styled(Flex)`
       fill: ${theme.colors.white};
 
       @media ${theme.mq.desktop} {
-        width: calc(${theme.space[6]} / 1.25);
+        width: calc(${theme.space[5]} / 1);
       }
     }
   }
@@ -109,6 +108,7 @@ export const AddToCart = styled(Flex)`
   }
 
   .smiley {
+    display: block;
     margin-left: ${theme.space[3]};
     /* width: calc(${theme.space[5]}); */
   }

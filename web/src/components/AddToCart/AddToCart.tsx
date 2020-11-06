@@ -72,7 +72,7 @@ const AddToCart: React.FC<Props> = ({ setPortalOpen, linkText }) => {
       onClick={handleAddToCart}
     >
       {!adding ? 'Buy now' : 'Thank you'}
-      {!adding ? <Icon name="arrow" /> : <div className="smiley">😃</div>}
+      {!adding ? <Icon name="arrow" /> : <Box className="smiley">😃</Box>}
     </S.AddToCart>
   ) : (
     <S.TextLink as="span" onClick={handleAddToCart} aria-label="Buy now">

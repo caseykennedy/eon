@@ -15,6 +15,7 @@ import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
 import ImgMatch from '../../ImgMatch'
 import Shine from '../../Shine'
 import AddToCart from '../../AddToCart'
+import Trademarks from '../../Trademarks'
 
 // ___________________________________________________________________
 
@@ -22,52 +23,55 @@ type Props = {}
 
 const Hero: React.FC<Props> = () => {
   return (
-    <S.Hero pt={4}>
-      <S.Decorator>
-        <Shine />
-      </S.Decorator>
-      <div className="hero__inner">
-        <Flex className="hero__figure">
-          <Box width={[`50%`, `25%`, `20%`]} className="figure">
-            <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
+    <>
+      <S.Hero py={[4, 5]} px={theme.gutter.axis}>
+        <S.Decorator>
+          <Shine />
+        </S.Decorator>
+        <div className="hero__inner">
+          {/* <Flex className="hero__figure">
+            <Box width={[`50%`, `25%`, `20%`]} className="figure">
+              <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
+            </Box>
+          </Flex> */}
+
+          <Box
+            // mt={['98%', '62%', '44%']}
+            position="relative"
+            style={{ zIndex: 9 }}
+          >
+            <h1>
+              eOn is pro-grade hand sanitation made easy. One quick spray is all
+              it takes to know your hands are clean.
+            </h1>
           </Box>
-        </Flex>
+          <div className="hero__features">
+            <Flex width={[1 / 2, 1 / 2, 2 / 3]} flexWrap="wrap">
+              <Text as="p" mr={5} mb={[2, 0]}>
+                Effective on
+                <br />
+                <mark>99.99%</mark> of
+                <br />
+                common germs
+              </Text>
 
-        <Box
-          mt={['98%', '62%', '44%']}
-          position="relative"
-          style={{ zIndex: 9 }}
-        >
-          <h1>
-            eOn is pro-grade hand sanitation made easy. One quick spray is all
-            it takes to know your hands are clean.
-          </h1>
-        </Box>
-        <div className="hero__features">
-          <Flex width={[1 / 2, 1 / 2, 2 / 3]} flexWrap="wrap">
-            <Text as="p" mr={5} mb={[2, 0]}>
-              Effective on
-              <br />
-              <mark>99.99%</mark> of
-              <br />
-              common germs
-            </Text>
+              <Text as="p" color="primary" mr={5}>
+                personal size
+                <br />
+                germ protection
+                <br />
+                on the go
+              </Text>
+            </Flex>
 
-            <Text as="p" color="primary" mr={5}>
-              personal size
-              <br />
-              germ protection
-              <br />
-              on the go
-            </Text>
-          </Flex>
-
-          <Flex width={[1 / 2, 1 / 2, 1 / 3]} justifyContent="flex-end">
-            <AddToCart>Buy Now</AddToCart>
-          </Flex>
+            <Flex width={[1 / 2, 1 / 2, 1 / 3]} justifyContent="flex-end">
+              <AddToCart>Buy Now</AddToCart>
+            </Flex>
+          </div>
         </div>
-      </div>
-    </S.Hero>
+      </S.Hero>
+      <Trademarks />
+    </>
   )
 }
 

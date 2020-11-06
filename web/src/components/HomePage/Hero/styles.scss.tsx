@@ -9,8 +9,17 @@ import { Box, Flex } from '../../ui'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Section)`
+export const Hero = styled(Flex)`
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: calc(100vh - calc(${theme.headerHeight} * 2));
+  min-height: 600px;
+
   @media ${theme.mq.tablet} {
+    height: calc(
+      100vh - calc(${theme.headerHeight} * 2) - ${theme.trademarksHeight}
+    );
   }
 
   .hero {

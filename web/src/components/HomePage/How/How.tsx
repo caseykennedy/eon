@@ -16,7 +16,6 @@ import ImgMatch from '../../ImgMatch'
 import SymbolBadge from '../../SymbolBadge'
 import Germs from '../../Germs'
 import Alcohol from '../../Alcohol'
-import Trademarks from '../../Trademarks'
 
 // ___________________________________________________________________
 
@@ -25,7 +24,6 @@ type Props = {}
 const How: React.FC<Props> = () => {
   return (
     <Box position="relative">
-      <Trademarks />
       <S.How>
         <Flex flexWrap="wrap" alignItems="center">
           <Box width={[1, 4 / 10, 4 / 10]} pr={[4, 6, '14%']}>

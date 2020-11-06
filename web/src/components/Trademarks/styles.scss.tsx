@@ -16,7 +16,12 @@ export const Trademarks = styled(Flex)`
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 
+  height: calc(${theme.trademarksHeight} * 2);
   z-index: 9;
+
+  @media ${theme.mq.tablet} {
+    height: ${theme.trademarksHeight};
+  }
 
   .mark {
     flex-direction: column;

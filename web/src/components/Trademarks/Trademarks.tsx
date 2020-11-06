@@ -35,7 +35,7 @@ const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
 
 const Trademarks = () => {
   return (
-    <S.Trademarks>
+    <S.Trademarks className="trademarks">
       {data.map((item, idx) => (
         <Mark item={item} key={idx} />
       ))}
