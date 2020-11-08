@@ -13,7 +13,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // Sections
 import Hero from './Hero'
-import How from './How'
+import Mist from './Mist'
 import Specs from './Specs'
 import Reviews from './Reviews'
 import Retailers from './Retailers'
@@ -30,7 +30,7 @@ const HomePage = () => {
     <S.HomePage>
       <Hero />
       {/* <Trademarks /> */}
-      <How />
+      <Mist />
       <Specs />
       <ProductDetail />
       <Reviews />

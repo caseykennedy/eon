@@ -1,4 +1,4 @@
-// How Styles:
+// Mist Styles:
 
 // ___________________________________________________________________
 
@@ -12,10 +12,9 @@ import { Parallax } from 'react-scroll-parallax'
 
 // ___________________________________________________________________
 
-export const How = styled(Section)`
-  background: ${transparentize(0.05, theme.colors.quinary)};
+export const Mist = styled(Section)`
   border-radius: 0 0 ${theme.space[7]} 0;
-  /* backdrop-filter: blur(9px); */
+
   @media ${theme.mq.tablet} {
     border-radius: 0 0 ${theme.space[9]} 0;
   }

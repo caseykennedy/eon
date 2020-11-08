@@ -29,10 +29,10 @@ export const Reviews = styled(Section)`
       }
 
       .quote {
-        font-size: calc(${theme.fontSizes[3]} / 1.5);
+        font-size: calc(${theme.fontSizes[3]} / 1.25);
 
         @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[3]} / 1.25);
+          font-size: calc(${theme.fontSizes[3]} / 1);
         }
       }
 

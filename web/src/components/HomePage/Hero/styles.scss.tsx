@@ -10,11 +10,9 @@ import { Box, Flex } from '../../ui'
 // ___________________________________________________________________
 
 export const Hero = styled(Flex)`
-  flex-direction: column;
-  justify-content: flex-end;
-
   height: calc(100vh - calc(${theme.headerHeight} * 2));
   min-height: 600px;
+  position: relative;
 
   @media ${theme.mq.tablet} {
     height: calc(
@@ -24,24 +22,26 @@ export const Hero = styled(Flex)`
 
   .hero {
     &__inner {
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+      /* max-width: ${theme.maxWidth}; */
+
       @media ${theme.mq.tablet} {
       }
     }
 
     &__figure {
-      position: relative;
+      position: absolute;
       justify-content: center;
-      height: auto;
       margin: 0 auto;
+
+      width: 100%;
       z-index: 0;
 
-      .figure {
-        position: fixed;
-        top: calc(${theme.headerHeight} + ${theme.space[6]});
+      
 
-        @media ${theme.mq.tablet} {
-          top: calc(${theme.headerHeight} + ${theme.space[7]});
-        }
+      .figure {
       }
     }
 
@@ -62,15 +62,11 @@ export const Decorator = styled.div`
   top: ${theme.space[4]};
   right: calc(${theme.space[4]});
   margin-left: auto;
-  width: ${theme.space[7]};
+  width: ${theme.space[8]};
 
   @media ${theme.mq.tablet} {
     top: ${theme.space[5]};
-    right: calc(${theme.space[6]} + 15px);
-    width: calc(${theme.space[7]} * 1.35);
-  }
-
-  @media ${theme.mq.desktop} {
-    width: ${theme.space[9]};
+    right: calc(${theme.space[6]} + 8px);
+    width: calc(${theme.space[9]});
   }
 `

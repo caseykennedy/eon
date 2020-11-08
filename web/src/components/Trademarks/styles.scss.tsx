@@ -17,6 +17,7 @@ export const Trademarks = styled(Flex)`
   border-bottom: ${theme.border};
 
   height: calc(${theme.trademarksHeight} * 2);
+  position: relative;
   z-index: 9;
 
   @media ${theme.mq.tablet} {
