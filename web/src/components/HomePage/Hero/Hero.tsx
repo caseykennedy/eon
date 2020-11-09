@@ -31,7 +31,7 @@ const Hero: React.FC<Props> = () => {
         
         <Flex className="hero__figure">
           <Box width={[`50%`, `25%`, `22%`]} className="figure">
-            <ImgMatch src="hero-handcan.jpg" altText="eOn Hand Sanitizer can" />
+            <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>
 
@@ -67,7 +67,7 @@ const Hero: React.FC<Props> = () => {
             </Flex>
 
             <Flex width={[1 / 2, 1 / 2, 1 / 3]} justifyContent="flex-end">
-              <AddToCart>Buy Now</AddToCart>
+              <AddToCart />
             </Flex>
           </Box>
         </Flex>

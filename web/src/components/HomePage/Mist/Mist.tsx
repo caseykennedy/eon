@@ -18,21 +18,43 @@ import Germs from '../../Germs'
 import Alcohol from '../../Alcohol'
 import Video from '../../Video'
 
+import borderFrame from './assets/border.svg'
+
 // ___________________________________________________________________
 
 const VideoProps = {
-  src: 'https://youtu.be/twqKOKxIfPo',
+  src: 'https://www.youtube.com/embed/twqKOKxIfPo',
   title: 'Placeholder'
 }
 
 const How = () => {
   return (
-    <S.Mist bg={theme.colors.babyblue}>
-      <Flex flexDirection={['column', 'column', 'row']}>
-        <Box flex={[1, 1, 3]} mb={[6, 6, 0]}>
+    <S.Mist bg={theme.colors.babyblue} pt={[6, 7, 9]} pb={[6, 7, 9]}>
+      <Flex
+        flexDirection={['column', 'column', 'row']}
+        maxWidth={theme.maxWidth}
+        margin={'0 auto'}
+      >
+        <Box flex={[1, 1, 4]} mb={[5, 6, 0]} pr={[7, 12, 7]}>
           <Video {...VideoProps} />
+
+          <Text
+            bg="white"
+            fontSize={2}
+            fontWeight={600}
+            p={4}
+            mt={4}
+            mx={6}
+            textAlign="center"
+            style={{ border: theme.border, borderRadius: theme.borderRadius }}
+          >
+            Maximum strength 80% ethyl alcohol continuous spray action.
+          </Text>
+          {/* <Box width={1} mt={4}>
+            <img src={borderFrame} alt="frame" />
+          </Box> */}
         </Box>
-        <Box flex={[1, 1, 2]} ml={[0, 0, 6]}>
+        <Box flex={[1, 1, 4]}>
           <Heading as="h4" mb={4}>
             No mess, just mist.
           </Heading>

@@ -68,7 +68,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
   // scrollWatch settings
   const MINIMUM_SCROLL = 3
-  const TIMEOUT_DELAY = 0
+  const TIMEOUT_DELAY = 3
 
   // scrollWatch hook to watch for page scroll
   useScrollWatch((callbackData: CallbackTypes) => {

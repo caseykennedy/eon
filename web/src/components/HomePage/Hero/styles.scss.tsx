@@ -18,6 +18,11 @@ export const Hero = styled(Flex)`
     height: calc(
       100vh - calc(${theme.headerHeight} * 2) - ${theme.trademarksHeight}
     );
+    max-height: 750px;
+  }
+
+  @media ${theme.mq.desktop} {
+    max-height: 1200px;
   }
 
   .hero {
@@ -34,13 +39,14 @@ export const Hero = styled(Flex)`
 
     &__figure {
       position: absolute;
-      justify-content: center;
       margin-right: auto;
 
       width: 100%;
       z-index: 0;
 
       @media ${theme.mq.tablet} {
+        align-self: center;
+        justify-content: center;
         margin: 0 auto;
       }
 

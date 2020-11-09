@@ -21,7 +21,7 @@ export const AddToCart = styled(Flex)`
   align-items: center;
   justify-content: space-between;
 
-  padding: calc(${theme.space[3]} * 1.15);
+  padding: calc(${theme.space[3]} * 1);
   /* max-width: 400px; */
   /* width: 100%; */
 
@@ -31,7 +31,7 @@ export const AddToCart = styled(Flex)`
   font-weight: 500;
   letter-spacing: 0.5px;
   /* line-height: 1; */
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 
   background: ${theme.colors.cta};
   border: ${theme.border};
