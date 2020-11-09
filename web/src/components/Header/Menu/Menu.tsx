@@ -58,16 +58,24 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
           >
             <Box width={1}>
               <h3 className="text--xxxl">
-                Pardon our dust! We're building an exciting new eOn
-                sanitizing mist™ website experience, chockful of info, usage
-                tips, support and more.
+                Pardon our dust! We're building an exciting new eOn sanitizing
+                mist™ website experience — chockful of info, usage tips, support
+                and more.
               </h3>
-              <AddToCart />
+
+              <Flex alignItems="center" justifyContent="space-between" mt={[5, 7, 7]}>
+                <Box flex={1}>
+                  <Text fontSize={[2, 4, 4]} fontWeight={600}>
+                    Meanwhile,
+                  </Text>
+                </Box>
+                <AddToCart />
+              </Flex>
             </Box>
 
             <Box mt={7} mb={[4, 0, 0]} width={1}>
-              <Flex>
-                <Box bg="white" p={4} mr={[3, 4]} flex={1}>
+              <Flex flexDirection={['column', 'column', 'row']}>
+                <Box bg="white" p={4} mr={[0, 0, 4]} mb={[4, 4, 0]} flex={1}>
                   <p>
                     <Text as="span" color="primary" fontWeight={600}>
                       Quality in manufacturing excellence:

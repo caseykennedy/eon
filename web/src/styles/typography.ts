@@ -173,11 +173,15 @@ const Typography = css`
   }
 
   .text--xxxl {
-    font-size: calc(${theme.root.font.xl} / 1.5);
+    font-size: calc(${theme.root.font.xl} / 1.75);
     line-height: calc(${theme.root.font.headingLineHeight} / 1);
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xxxl} / 1.75);
+      font-size: calc(${theme.root.font.xl} / 1.25);
+    }
+
+    @media ${theme.mq.desktop} {
+      font-size: calc(${theme.root.font.xxl} / 1.5);
     }
   }
 
@@ -243,7 +247,7 @@ const Typography = css`
     margin: 0 0 ${theme.space[5]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[2]} * 1.15);
+      font-size: calc(${theme.fontSizes[2]} * 1.25);
     }
 
     &:last-child {
@@ -252,7 +256,7 @@ const Typography = css`
   }
 
   strong {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .t--small {

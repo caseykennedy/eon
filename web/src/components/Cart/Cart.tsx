@@ -75,23 +75,27 @@ const CartItems: React.FC<CartItemsProps> = ({
             <LineItems />
           </div>
           <div className="cart-items__checkout">
-            <div className="subtotal">
+            {/* <div className="subtotal">
               <Text as="p" color="darkgray">
                 Subtotal
               </Text>
               <Text as="p" color="darkgray">
                 ${checkout.subtotalPrice && checkout.subtotalPrice}
               </Text>
-            </div>
+            </div> */}
             <div className="total">
+              <p>Subtotal</p>
+              <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>
+            </div>
+            {/* <div className="total">
               <p>Total</p>
               <p>${checkout.totalPrice && checkout.totalPrice}</p>
-            </div>
+            </div> */}
             <Button
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}
             >
-              Check Out
+              Check out
             </Button>
           </div>
           {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>

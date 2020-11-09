@@ -123,8 +123,13 @@ export const CartItems = styled(Flex)`
       align-items: center;
 
       border-top: ${theme.border};
-      border-top-color: ${theme.colors.gray};
+      /* border-top-color: ${theme.colors.gray}; */
       padding-top: ${theme.space[4]};
+
+      button {
+        /* background: ${theme.colors.yellowbuzz}; */
+        width: 100%;
+      }
 
       .total {
         display: flex;

@@ -17,10 +17,10 @@ export const LineItem = styled.div`
     &__utilities {
       display: flex;
       justify-content: space-between;
-      margin: ${theme.space[2]} 0 0;
+      margin: ${theme.space[3]} 0 0;
 
       @media ${theme.mq.tablet} {
-        margin: ${theme.space[5]} 0 0;
+        margin: ${theme.space[4]} 0 0;
       }
 
       input {
@@ -28,19 +28,14 @@ export const LineItem = styled.div`
         border: ${theme.border};
         border-radius: ${theme.borderRadius};
 
-        font-size: calc(${theme.fontSizes[2]} * 1.5);
+        font-size: calc(${theme.fontSizes[2]} * 1.25);
         line-height: 1.25;
         /* text-align: center; */
 
         margin-right: ${theme.space[1]};
         padding: ${theme.space[1]} ${theme.space[2]};
-        width: ${theme.space[6]};
+        width: calc(${theme.space[6]} + 0.5rem);
         touch-action: none;
-
-        @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[2]} * 1.25);
-          width: ${theme.space[6]};
-        }
       }
 
       .utilities {

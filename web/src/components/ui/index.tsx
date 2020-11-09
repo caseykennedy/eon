@@ -202,22 +202,23 @@ Text.displayName = 'Text'
 
 export const Button = styled.button<ElementProps>`
   box-sizing: border-box;
-  display: block;
   transition: ${theme.transition.all};
 
   display: flex;
-  justify-content: center;
-  
-  padding: calc(${theme.space[3]} / 1.15) ${theme.space[4]};
-  max-width: 400px;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: calc(${theme.space[3]} / 1.25) ${theme.space[3]};
+  /* max-width: 400px; */
+  /* width: 100%; */
 
   color: ${theme.colors.white};
   font-family: ${theme.fonts.heading};
-  font-size: calc(${theme.fontSizes[2]} * 1.5);
+  font-size: calc(${theme.fontSizes[2]} * 1.25);
   font-weight: 500;
   letter-spacing: 0.5px;
-  line-height: 0.5;
-  text-transform: capitalize;
+  /* line-height: 1; */
+  /* text-transform: capitalize; */
 
   background: ${theme.colors.cta};
   border: ${theme.border};
@@ -226,10 +227,42 @@ export const Button = styled.button<ElementProps>`
   cursor: pointer;
   outline: none;
   transition: ${theme.transition.all};
+  white-space: nowrap;
+
+  @media ${theme.mq.tablet} {
+
+  }
 
   @media ${theme.mq.desktop} {
-    width: calc(${theme.space[7]} * 4);
-    font-size: ${theme.fontSizes[3]};
+    font-size: calc(${theme.fontSizes[2]} * 1.5);
+  }
+
+  span {
+    margin-left: ${theme.space[5]};
+    transition: ${theme.transition.all};
+
+    position: relative;
+    right: ${theme.space[2]};
+
+    display: none;
+
+    @media ${theme.mq.tablet} {
+      display: block;
+      margin-left: ${theme.space[6]};
+    }
+
+    @media ${theme.mq.desktop} {
+      margin-left: ${theme.space[7]};
+    }
+
+    svg {
+      width: calc(${theme.space[5]});
+      fill: ${theme.colors.white};
+
+      @media ${theme.mq.desktop} {
+        width: calc(${theme.space[5]} / 1);
+      }
+    }
   }
 
   &:hover {
@@ -237,7 +270,7 @@ export const Button = styled.button<ElementProps>`
     color: ${theme.colors.white};
 
     span {
-      margin-right: 0;
+      right: 0;
 
       svg {
         fill: ${theme.colors.white};
@@ -257,14 +290,13 @@ export const Button = styled.button<ElementProps>`
     border-color: ${theme.colors.black};
   }
 
-  span {
-    margin-right: ${theme.space[3]};
-    transition: ${theme.transition.all};
+  .inner {
+  }
 
-    svg {
-      width: ${theme.iconWidth};
-      fill: ${theme.colors.white};
-    }
+  .smiley {
+    display: block;
+    margin-left: ${theme.space[3]};
+    /* width: calc(${theme.space[5]}); */
   }
 
   ${space}

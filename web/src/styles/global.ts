@@ -17,13 +17,13 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
 
-  html,
+  /* html,
   body {
     @media (max-width: 767px) {
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
-  }
+  } */
   
   body {
     background: ${theme.colors.secondary};

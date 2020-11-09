@@ -41,7 +41,7 @@ module.exports = {
       payments: [],
       // For available socia share buttons see: https://github.com/nygardk/react-share
       shareButtons: [],
-      googleAnalyticsId: 'UA-141525658-3',
+      googleAnalyticsId: config.googleAnalyticsID,
       isShopifyLite: false,
       gatsbyImageProps: {},
       //
@@ -123,7 +123,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: 'goldenrod',
+        color: '#4073b2',
         showSpinner: false
       }
     },

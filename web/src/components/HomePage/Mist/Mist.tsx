@@ -13,7 +13,7 @@ import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
 
 // Components
 import ImgMatch from '../../ImgMatch'
-import SymbolBadge from '../../SymbolBadge'
+import Gauge from '../../Gauge'
 import Germs from '../../Germs'
 import Alcohol from '../../Alcohol'
 import Video from '../../Video'
@@ -35,21 +35,35 @@ const How = () => {
         maxWidth={theme.maxWidth}
         margin={'0 auto'}
       >
-        <Box flex={[1, 1, 4]} mb={[6, 6, 0]} pr={[4, 12, 7]} pl={[4, 0, 0]}>
+        <Box flex={[1, 1, 4]} mb={[6, 6, 0]} pr={[4, 7, 7]} pl={[4, 7, 0]}>
           <Video {...VideoProps} />
 
-          <Text
-            bg="white"
-            fontSize={2}
-            fontWeight={600}
-            p={[2, 3, 4]}
-            mt={4}
-            mx={[4]}
-            textAlign="center"
-            style={{ border: theme.border, borderRadius: theme.borderRadius }}
-          >
-            Maximum strength 80% ethyl alcohol continuous spray action.
-          </Text>
+          <Flex justifyContent="center" mt={4}>
+            <Flex
+              bg="white"
+              alignItems="center"
+              py={2}
+              px={3}
+              mx="auto"
+              style={{ border: theme.border, borderRadius: theme.borderRadius }}
+            >
+              <Box
+                width={[
+                  theme.space[5],
+                  theme.space[5],
+                  `calc(${theme.space[5]} * 1.15)`
+                ]}
+                mr={3}
+              >
+                <Gauge />
+              </Box>
+              <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
+                <strong>Maximum strength</strong> 80% ethyl
+                <br />
+                alcohol continuous spray action.
+              </Text>
+            </Flex>
+          </Flex>
           {/* <Box width={1} mt={4}>
             <img src={borderFrame} alt="frame" />
           </Box> */}

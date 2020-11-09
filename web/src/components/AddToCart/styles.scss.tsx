@@ -21,7 +21,7 @@ export const AddToCart = styled(Flex)`
   align-items: center;
   justify-content: space-between;
 
-  padding: calc(${theme.space[3]} * 1);
+  padding: calc(${theme.space[3]} / 1.25) ${theme.space[3]};
   /* max-width: 400px; */
   /* width: 100%; */
 
@@ -43,12 +43,10 @@ export const AddToCart = styled(Flex)`
   white-space: nowrap;
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[3]};
   }
 
   @media ${theme.mq.desktop} {
     font-size: calc(${theme.fontSizes[2]} * 1.5);
-    padding: ${theme.space[3]};
   }
 
   span {
