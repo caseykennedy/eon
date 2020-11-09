@@ -23,23 +23,26 @@ export const Hero = styled(Flex)`
   .hero {
     &__inner {
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
       margin: 0 auto;
       /* max-width: ${theme.maxWidth}; */
 
       @media ${theme.mq.tablet} {
+        justify-content: space-between;
       }
     }
 
     &__figure {
       position: absolute;
       justify-content: center;
-      margin: 0 auto;
+      margin-right: auto;
 
       width: 100%;
       z-index: 0;
 
-      
+      @media ${theme.mq.tablet} {
+        margin: 0 auto;
+      }
 
       .figure {
       }

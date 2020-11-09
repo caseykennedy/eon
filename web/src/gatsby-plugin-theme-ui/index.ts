@@ -106,7 +106,7 @@ const theme: ThemeShape = {
     moneygreen: '#39b14a',
     yellowbuzz: '#F1E554',
     goldenrod: '#daa520',
-    mossgreen: '#e5f7d7'
+    mossgreen: '#f1fcf2'
   },
 
   // Space

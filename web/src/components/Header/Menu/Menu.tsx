@@ -57,11 +57,11 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             className="motion"
           >
             <Box width={1}>
-              <h2>
-                Please pardon our dust. We’re building an exciting new eOn
+              <h3 className="text--xxxl">
+                Pardon our dust! We're building an exciting new eOn
                 sanitizing mist™ website experience, chockful of info, usage
                 tips, support and more.
-              </h2>
+              </h3>
               <AddToCart />
             </Box>
 

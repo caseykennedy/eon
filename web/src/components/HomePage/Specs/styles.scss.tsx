@@ -80,21 +80,21 @@ export const HowTo = styled(Flex)`
     flex-direction: column;
     justify-content: space-between;
 
-    margin: 0 ${theme.space[6]} ${theme.space[7]};
+    margin: 0 ${theme.space[5]} ${theme.space[5]};
 
     flex: 1 1 300px;
-    max-width: 500px;
+    max-width: 300px;
 
     @media ${theme.mq.tablet} {
-      margin: 0 ${theme.space[5]} ${theme.space[7]};
+      margin: 0 ${theme.space[3]} ${theme.space[6]};
     }
 
     svg {
-      height: 200px;
+      height: 150px;
       width: 100%;
 
       @media ${theme.mq.tablet} {
-        height: 280px;
+        height: 200px;
       }
     }
 

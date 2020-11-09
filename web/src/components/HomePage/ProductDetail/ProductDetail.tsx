@@ -24,7 +24,7 @@ const ProductDetail: React.FC = () => {
         flexDirection={['row', 'row-reverse']}
       >
         <Box width={[1, 1 / 2]} style={{ position: 'relative', zIndex: 9 }}>
-          <Box>
+          <Box pl={[12, 9, 9]}>
             <ImgMatch
               src="cans.png"
               altText="Hand holding eOn Hand Sanitizer can."
@@ -32,18 +32,13 @@ const ProductDetail: React.FC = () => {
           </Box>
         </Box>
         <Box width={[1, 1 / 2]}>
-          <h3 className="text--xxl">
-            Effective
-            <br />
-            on 99.99%
-            <br />
-            of germs
-          </h3>
-          <Text as="h4">
-            Continuous spray,
-            <br /> antimicrobial sanitation.
-            <br /> Smarter, better, faster.
+          <Text as="h4" my={[3, 4]}>
+            Spray and go.
           </Text>
+          <h3 className="text--xl">
+            The only 80% ethyl alcohol, continuous spray hand sanitizer.
+            eOn—effective on 99.99% of common germs.
+          </h3>
           <Flex mt={5} mb={0}>
             <Text as="p">
               Aluminum-Free

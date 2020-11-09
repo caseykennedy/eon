@@ -31,7 +31,7 @@ const RootVariables = css`
     /* set base values */
     --text-base-size: 1em;
     --text-scale-ratio: 1.618;
-    --text-base-letter-spacing: -0.5px;
+    --text-base-letter-spacing: 0px;
 
     @media ${theme.mq.tablet} {
       :root {

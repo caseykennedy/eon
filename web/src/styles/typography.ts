@@ -173,11 +173,11 @@ const Typography = css`
   }
 
   .text--xxxl {
-    font-size: calc(${theme.root.font.xxxl} / 1);
+    font-size: calc(${theme.root.font.xl} / 1.5);
     line-height: calc(${theme.root.font.headingLineHeight} / 1);
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xxxl} * 1.25);
+      font-size: calc(${theme.root.font.xxxl} / 1.75);
     }
   }
 
@@ -214,7 +214,7 @@ const Typography = css`
 
   h4,
   .text--md {
-    font-size: calc(${theme.fontSizes[3]} / 1.25);
+    font-size: calc(${theme.fontSizes[3]} / 1.5);
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[3]} / 1.15);

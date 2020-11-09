@@ -37,7 +37,7 @@ const Hero: React.FC<Props> = () => {
 
         <Flex px={theme.gutter.axis} width={1} className="hero__inner">
           <Box position="relative" style={{ zIndex: 9 }}>
-            <Text as="h4" my={4}>
+            <Text as="h4" my={[3, 4]}>
               eOn makes it simple.
             </Text>
             <h1 className="text--xl">

@@ -16,20 +16,27 @@ import ImgMatch from '../../ImgMatch'
 import SymbolBadge from '../../SymbolBadge'
 import Germs from '../../Germs'
 import Alcohol from '../../Alcohol'
+import Video from '../../Video'
 
 // ___________________________________________________________________
 
-type Props = {}
+const VideoProps = {
+  src: 'https://youtu.be/twqKOKxIfPo',
+  title: 'Placeholder'
+}
 
-const How: React.FC<Props> = () => {
+const How = () => {
   return (
     <S.Mist bg={theme.colors.babyblue}>
-      <Flex flexWrap="wrap" alignItems="center">
-        <Box width={[1, 6 / 10, 6 / 10]}>
-          <Heading as="h4" mb={5}>
+      <Flex flexDirection={['column', 'column', 'row']}>
+        <Box flex={[1, 1, 3]} mb={[6, 6, 0]}>
+          <Video {...VideoProps} />
+        </Box>
+        <Box flex={[1, 1, 2]} ml={[0, 0, 6]}>
+          <Heading as="h4" mb={4}>
             No mess, just mist.
           </Heading>
-          <Heading as="h2" className="text--xxl">
+          <Heading as="h2" className="text--xl">
             eOn mist's hand sanitizer packs high performance germ fighting power
             into easy, effective, zero mess protection.
           </Heading>
