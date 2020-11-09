@@ -51,7 +51,7 @@ const HowTo = () => (
 const Specs = () => {
   return (
     <>
-      <Section bg="background" pt={[7, 11]}>
+      <Section bg="background" pt={[7, 9, 10]}>
         <S.HowTo>
           <HowTo />
         </S.HowTo>
@@ -63,7 +63,7 @@ const Specs = () => {
               <Text as="span" color="primary">
                 Works on contact;
               </Text>{' '}
-              Immediate action against bacteria, fungi, and viruses.
+              Immediate action against 99.99% of common germs.
             </Heading>
           </Box>
           <Flex width={[1, 2 / 10]} justifyContent="flex-end">
@@ -98,11 +98,11 @@ const Specs = () => {
         <Flex className="spec__block">
           <Box width={[1, 8 / 10]} pr={[5, 0]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
-              Fine mist, wide angle{' '}
+              Fine, wide angle{' '}
               <span>
                 <Spray />
               </span>{' '}
-              aerosol covers hands in one quick spray{' '}
+              mist covers hands in one quick spray{' '}
               <span>
                 <Hand />
               </span>{' '}

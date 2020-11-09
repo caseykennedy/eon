@@ -28,7 +28,7 @@ const Hero = () => {
         </S.Decorator>
 
         <Flex className="hero__figure">
-          <Box ml={[0, 9, 6]} width={[`40%`, `27%`, `22%`]} className="figure">
+          <Box ml={[0, 12, 5]} mr={[5, 0, 0]} width={[`50%`, `27%`, `calc(${theme.space[9]} * 2)`]} className="figure">
             <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>

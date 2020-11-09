@@ -71,7 +71,7 @@ const AddToCart: React.FC<Props> = ({ setPortalOpen, linkText }) => {
       disabled={!available || adding}
       onClick={handleAddToCart}
     >
-      {!adding ? `Buy eOn mist™` : 'Thank you'}
+      {!adding ? `Buy Now` : 'Thank you'}
       {!adding ? <Icon name="arrow" /> : <Box className="smiley">😃</Box>}
     </S.AddToCart>
   ) : (

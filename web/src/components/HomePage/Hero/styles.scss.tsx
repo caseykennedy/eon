@@ -10,7 +10,7 @@ import { Box, Flex } from '../../ui'
 // ___________________________________________________________________
 
 export const Hero = styled(Flex)`
-  height: calc(100vh - calc(${theme.headerHeight} * 2));
+  height: calc(104vh - calc(${theme.headerHeight} * 2));
   min-height: 400px;
   position: relative;
 
@@ -38,6 +38,7 @@ export const Hero = styled(Flex)`
     }
 
     &__figure {
+      justify-content: center;
       position: absolute;
       margin-right: auto;
 
@@ -46,7 +47,6 @@ export const Hero = styled(Flex)`
 
       @media ${theme.mq.tablet} {
         align-self: center;
-        justify-content: center;
         margin: 0 auto;
       }
 

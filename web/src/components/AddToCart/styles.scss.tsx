@@ -50,17 +50,17 @@ export const AddToCart = styled(Flex)`
   }
 
   span {
-    margin-left: ${theme.space[5]};
+    margin-left: ${theme.space[4]};
     transition: ${theme.transition.all};
 
     position: relative;
-    right: ${theme.space[2]};
 
-    display: none;
+    /* display: none; */
 
     @media ${theme.mq.tablet} {
       display: block;
       margin-left: ${theme.space[6]};
+      right: ${theme.space[2]};
     }
 
     @media ${theme.mq.desktop} {
@@ -68,7 +68,7 @@ export const AddToCart = styled(Flex)`
     }
 
     svg {
-      width: calc(${theme.space[5]});
+      width: calc(${theme.space[4]} * 1.25);
       fill: ${theme.colors.white};
 
       @media ${theme.mq.desktop} {

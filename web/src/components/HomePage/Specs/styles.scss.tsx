@@ -75,6 +75,10 @@ export const HowTo = styled(Flex)`
   margin: 0 auto;
   flex-wrap: wrap;
 
+  @media ${theme.mq.tablet} {
+    flex-wrap: nowrap;
+  }
+
   .figure {
     display: flex;
     flex-direction: column;
@@ -82,11 +86,12 @@ export const HowTo = styled(Flex)`
 
     margin: 0 ${theme.space[5]} ${theme.space[5]};
 
-    flex: 1 1 300px;
-    max-width: 300px;
+    flex: 1 1 280px;
+    max-width: 280px;
 
     @media ${theme.mq.tablet} {
       margin: 0 ${theme.space[3]} ${theme.space[6]};
+      max-width: 333px;
     }
 
     svg {
@@ -94,6 +99,10 @@ export const HowTo = styled(Flex)`
       width: 100%;
 
       @media ${theme.mq.tablet} {
+        height: 140px;
+      }
+
+      @media ${theme.mq.desktop} {
         height: 200px;
       }
     }
@@ -109,11 +118,15 @@ export const HowTo = styled(Flex)`
 
       background: ${theme.colors.white};
       border: ${theme.border};
-      /* border-radius: ${theme.space[9]}; */
+      border-radius: ${theme.borderRadius};
       margin-top: ${theme.space[4]};
       padding: ${theme.space[1]} 0;
 
       @media ${theme.mq.tablet} {
+        font-size: calc(${theme.fontSizes[2]} * 1.25);
+      }
+
+      @media ${theme.mq.desktop} {
         font-size: calc(${theme.fontSizes[2]} * 1.5);
       }
     }
