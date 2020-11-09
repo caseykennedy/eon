@@ -28,9 +28,9 @@ const Hero: React.FC<Props> = () => {
         <S.Decorator>
           <Shine />
         </S.Decorator>
-        
+
         <Flex className="hero__figure">
-          <Box width={[`37%`, `20%`, `20%`]} className="figure">
+          <Box ml={[0, 9, 6]} width={[`40%`, `27%`, `22%`]} className="figure">
             <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>
@@ -41,7 +41,9 @@ const Hero: React.FC<Props> = () => {
               eOn makes it simple.
             </Text>
             <h1 className="text--xl">
-              Pro-grade<br />hand sanitation
+              Pro-grade
+              <br />
+              hand sanitation
               <br />
               for everyone.
             </h1>
