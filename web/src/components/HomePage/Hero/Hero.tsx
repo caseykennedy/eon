@@ -30,7 +30,7 @@ const Hero: React.FC<Props> = () => {
         </S.Decorator>
         
         <Flex className="hero__figure">
-          <Box width={[`50%`, `25%`, `22%`]} className="figure">
+          <Box width={[`37%`, `20%`, `20%`]} className="figure">
             <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>

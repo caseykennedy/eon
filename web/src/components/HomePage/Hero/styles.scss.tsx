@@ -11,7 +11,7 @@ import { Box, Flex } from '../../ui'
 
 export const Hero = styled(Flex)`
   height: calc(100vh - calc(${theme.headerHeight} * 2));
-  min-height: 600px;
+  min-height: 400px;
   position: relative;
 
   @media ${theme.mq.tablet} {
@@ -75,7 +75,7 @@ export const Decorator = styled.div`
 
   @media ${theme.mq.tablet} {
     top: ${theme.space[5]};
-    right: calc(${theme.space[6]} + 8px);
-    width: calc(${theme.space[9]});
+    right: calc(${theme.space[6]} + 14px);
+    width: calc(${theme.space[9]} / 1.25);
   }
 `

@@ -35,16 +35,16 @@ const How = () => {
         maxWidth={theme.maxWidth}
         margin={'0 auto'}
       >
-        <Box flex={[1, 1, 4]} mb={[5, 6, 0]} pr={[7, 12, 7]}>
+        <Box flex={[1, 1, 4]} mb={[6, 6, 0]} pr={[4, 12, 7]} pl={[4, 0, 0]}>
           <Video {...VideoProps} />
 
           <Text
             bg="white"
             fontSize={2}
             fontWeight={600}
-            p={4}
+            p={[2, 3, 4]}
             mt={4}
-            mx={6}
+            mx={[4]}
             textAlign="center"
             style={{ border: theme.border, borderRadius: theme.borderRadius }}
           >

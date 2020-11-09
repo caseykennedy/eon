@@ -62,11 +62,11 @@ export const AddToCart = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       display: block;
-      margin-left: ${theme.space[7]};
+      margin-left: ${theme.space[6]};
     }
 
     @media ${theme.mq.desktop} {
-      margin-left: ${theme.space[9]};
+      margin-left: ${theme.space[7]};
     }
 
     svg {
