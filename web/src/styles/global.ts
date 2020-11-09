@@ -17,50 +17,33 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
 
-  /* html,
+  html,
   body {
+    height: 100%;
+    width: 100%;
+
     @media (max-width: 767px) {
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
-  } */
+  }
   
   body {
     background: ${theme.colors.secondary};
-    color: ${theme.colors.text};
     
     border: 0;
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
 
-    &::-webkit-scrollbar {
+    /* &::-webkit-scrollbar {
       display: none;
-    }
+    } */
   }
 
   .img {
     width: 100%;
     height: 100%;
   }
-
-  /* Cursor */
-  /* html,
-  a,
-  button {
-    cursor: none;
-
-    &:hover {
-      cursor: none;
-    }
-  } */
-
-  #drawer-root {
-    position: relative;
-    z-index: 100;
-  }
 `
 
 export default GlobalStyles
-
-// ___________________________________________________________________

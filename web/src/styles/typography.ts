@@ -135,7 +135,7 @@ const Typography = css`
 
   html {
     font-size: 16px;
-    box-sizing: border-box;
+    color: ${theme.colors.text};
     border: 0;
     margin: 0;
   }

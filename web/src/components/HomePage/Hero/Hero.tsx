@@ -9,7 +9,7 @@ import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
-import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
+import { Box, Flex, Text } from '../../ui'
 
 // Compoonents
 import ImgMatch from '../../ImgMatch'
@@ -19,9 +19,7 @@ import Trademarks from '../../Trademarks'
 
 // ___________________________________________________________________
 
-type Props = {}
-
-const Hero: React.FC<Props> = () => {
+const Hero = () => {
   return (
     <>
       <S.Hero py={[4, 5]}>
@@ -80,9 +78,3 @@ const Hero: React.FC<Props> = () => {
 }
 
 export default Hero
-
-// ___________________________________________________________________
-
-const defaultProps = {}
-
-Hero.defaultProps = defaultProps

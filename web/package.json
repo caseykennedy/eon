@@ -90,6 +90,7 @@
     "shopify-buy": "^2.11.0",
     "styled-components": "^4.4.1",
     "styled-css-grid": "^1.2.1",
+    "styled-normalize": "^8.0.7",
     "styled-system": "^4.2.4",
     "swiper": "^5.4.2",
     "theme-ui": "^0.3.1",
