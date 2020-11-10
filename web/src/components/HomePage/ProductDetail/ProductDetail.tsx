@@ -44,8 +44,13 @@ const ProductDetail: React.FC = () => {
               The only 80% ethyl alcohol, continuous spray hand sanitizer.
               eOn—effective on 99.99% of common germs.
             </h3>
+
+            <Box mt={5}>
+              <AddToCart>Buy Now</AddToCart>
+            </Box>
+
             <Flex mt={5} mb={0}>
-              <Text as="p">
+              <Text as="p" mb={0}>
                 Aluminum-Free
                 <br />
                 Dye-Free
@@ -60,9 +65,6 @@ const ProductDetail: React.FC = () => {
                 on the go
               </Text>
             </Flex>
-            <Box mt={6}>
-              <AddToCart>Buy Now</AddToCart>
-            </Box>
           </Box>
         </Flex>
       </Flex>

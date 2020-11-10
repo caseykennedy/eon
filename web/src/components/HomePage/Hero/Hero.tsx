@@ -28,7 +28,12 @@ const Hero = () => {
         </S.Decorator>
 
         <Flex className="hero__figure">
-          <Box ml={[0, 12, 5]} mr={[5, 0, 0]} width={[`50%`, `27%`, `calc(${theme.space[9]} * 2)`]} className="figure">
+          <Box
+            ml={[0, 12, 5]}
+            mr={[5, 0, 0]}
+            width={[`50%`, `27%`, `calc(${theme.space[9]} * 2)`]}
+            className="figure"
+          >
             <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>
@@ -47,9 +52,13 @@ const Hero = () => {
             </h1>
           </Box>
 
-          <Box className="hero__features">
-            <Flex width={[1 / 2, 1 / 2, 2 / 3]} flexWrap="wrap">
-              <Text as="p" mr={5} mb={[2, 0]}>
+          <Flex className="hero__features" flexDirection={['row', 'row-reverse']}>
+            <Flex width={[1, 1 / 2, 1 / 3]} justifyContent="flex-end">
+              <AddToCart />
+            </Flex>
+
+            <Flex width={[1, 1 / 2, 2 / 3]} mt={[4, 0, 0]}>
+              <Text as="p" mr={5} mb={0}>
                 Effective on
                 <br />
                 <mark>99.99%</mark> of
@@ -65,11 +74,7 @@ const Hero = () => {
                 on the go
               </Text>
             </Flex>
-
-            <Flex width={[1 / 2, 1 / 2, 1 / 3]} justifyContent="flex-end">
-              <AddToCart />
-            </Flex>
-          </Box>
+          </Flex>
         </Flex>
       </S.Hero>
       <Trademarks />

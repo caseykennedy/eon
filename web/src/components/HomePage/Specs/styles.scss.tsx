@@ -14,6 +14,62 @@ export const Specs = styled(Section)`
   .spec {
     &__block {
       flex-wrap: wrap;
+      justify-content: space-between;
+
+      .decorator {
+        justify-content: flex-end;
+        overflow: visible;
+        height: ${theme.space[5]};
+
+        &--features {
+          justify-content: flex-end;
+          overflow: visible;
+          height: 0;
+
+          img {
+            position: relative;
+            top: 0;
+            @media ${theme.mq.tablet} {
+            }
+          }
+        }
+
+        &--spray {
+          justify-content: flex-end;
+          overflow: visible;
+          height: 0;
+
+          img {
+            position: relative;
+            width: 70%;
+            right: calc(${theme.space[7]} * -4);
+
+            @media ${theme.mq.tablet} {
+              right: 0;
+              width: 200%;
+            }
+          }
+        }
+
+        &--hch {
+          justify-content: flex-end;
+          overflow: visible;
+          height: 0;
+
+          img {
+            position: relative;
+            width: 50%;
+            top: ${theme.space[7]};
+            right: calc(${theme.space[9]} * -2);
+
+            @media ${theme.mq.tablet} {
+              top: ${theme.space[10]};
+              right: 0;
+              width: 130%;
+            }
+          }
+        }
+      }
     }
   }
 

@@ -10,7 +10,7 @@ import { Box, Flex } from '../../ui'
 // ___________________________________________________________________
 
 export const Hero = styled(Flex)`
-  height: calc(104vh - calc(${theme.headerHeight} * 2));
+  height: calc(105vh - calc(${theme.headerHeight} * 2));
   min-height: 400px;
   position: relative;
 
@@ -55,7 +55,6 @@ export const Hero = styled(Flex)`
     }
 
     &__features {
-      display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;

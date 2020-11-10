@@ -23,7 +23,7 @@ import borderFrame from './assets/border.svg'
 // ___________________________________________________________________
 
 const VideoProps = {
-  src: 'https://www.youtube.com/embed/twqKOKxIfPo',
+  src: 'https://www.youtube.com/embed/D1PTc5BshA4',
   title: 'Placeholder'
 }
 
@@ -40,12 +40,12 @@ const How = () => {
 
           <Flex justifyContent="center" mt={4}>
             <Flex
-              bg="white"
+              // bg="white"
               alignItems="center"
               py={2}
               px={3}
               mx="auto"
-              style={{ border: theme.border, borderRadius: theme.borderRadius }}
+              // style={{ border: theme.border, borderRadius: theme.borderRadius }}
             >
               <Box
                 width={[
@@ -64,9 +64,9 @@ const How = () => {
               </Text>
             </Flex>
           </Flex>
-          {/* <Box width={1} mt={4}>
+          <Box width={1} mt={4}>
             <img src={borderFrame} alt="frame" />
-          </Box> */}
+          </Box>
         </Box>
         <Box flex={[1, 1, 4]}>
           <Heading as="h4" mb={4}>

@@ -22,8 +22,7 @@ export const AddToCart = styled(Flex)`
   justify-content: space-between;
 
   padding: calc(${theme.space[3]} / 1.25) ${theme.space[3]};
-  /* max-width: 400px; */
-  /* width: 100%; */
+  width: 100%;
 
   color: ${theme.colors.white};
   font-family: ${theme.fonts.heading};
@@ -42,7 +41,8 @@ export const AddToCart = styled(Flex)`
   transition: ${theme.transition.all};
   white-space: nowrap;
 
-  @media ${theme.mq.tablet} {
+  @media (min-width: 400px) {
+    width: initial;
   }
 
   @media ${theme.mq.desktop} {
@@ -59,12 +59,12 @@ export const AddToCart = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       display: block;
-      margin-left: ${theme.space[6]};
+      margin-left: ${theme.space[7]};
       right: ${theme.space[2]};
     }
 
     @media ${theme.mq.desktop} {
-      margin-left: ${theme.space[7]};
+      margin-left: ${theme.space[9]};
     }
 
     svg {

@@ -57,8 +57,13 @@ const Specs = () => {
         </S.HowTo>
       </Section>
       <S.Specs bg="white" overflow="hidden">
-        <Flex className="spec__block">
-          <Box width={[1, 8 / 10]}>
+        <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
+          <Flex width={[1, 2 / 10]} className="decorator">
+            <Box width={['15%', '50%', '30%']} className="decorator--features">
+              <FeatureStack />
+            </Box>
+          </Flex>
+          <Box width={[8 / 10]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               <Text as="span" color="primary">
                 Works on contact;
@@ -66,15 +71,10 @@ const Specs = () => {
               Immediate action against 99.99% of common germs.
             </Heading>
           </Box>
-          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
-            <Box width={['15%', '30%']}>
-              <FeatureStack />
-            </Box>
-          </Flex>
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[1, 8 / 10]}>
+          <Box width={[8 / 10]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               Child-safe{' '}
               <span>
@@ -88,15 +88,15 @@ const Specs = () => {
               action.
             </Heading>
           </Box>
-          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
-            <Box width={['30%', '80%']}>
+          <Flex width={[1, 2 / 10]} className="decorator">
+            <Box width={['22%', '75%', '75%']} className="decorator--abstract">
               <AbstractSpray />
             </Box>
           </Flex>
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[1, 8 / 10]} pr={[5, 0]}>
+          <Box width={[8 / 10]} pr={[5, 0]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               Fine, wide angle{' '}
               <span>
@@ -109,27 +109,16 @@ const Specs = () => {
               .
             </Heading>
           </Box>
-          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
-            <Box
-              width={1}
-              style={{
-                position: 'relative',
-                // right: `-${theme.space[10]}`
-                maxHeight: '200px'
-              }}
-            >
-              <Box
-                as="img"
-                width={['70%', '200%']}
-                src={sprayMist}
-                alt="spray mist"
-              />
+
+          <Flex width={[1, 2 / 10]} className="decorator">
+            <Box width={1} className="decorator--spray">
+              <Box as="img" src={sprayMist} alt="spray mist" />
             </Box>
           </Flex>
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[1, 8 / 10]} pr={[6, 0]}>
+          <Box width={[8 / 10]} pr={[6, 0]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               190 proof, plant-based{' '}
               <span>
@@ -142,28 +131,15 @@ const Specs = () => {
               .
             </Heading>
           </Box>
-          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
-            <Box
-              width={1}
-              style={{
-                position: 'relative',
-                top: `calc(${theme.space[7]} * 5)`,
-                // right: `-${theme.space[10]}`,
-                maxHeight: '200px'
-              }}
-            >
-              <Box
-                as="img"
-                width={['75%', '150%']}
-                src={hch}
-                alt="spray mist"
-              />
+          <Flex width={[1, 2 / 10]} className="decorator">
+            <Box width={1} className="decorator--hch">
+              <Box as="img" src={hch} alt="spray mist" />
             </Box>
           </Flex>
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[1, 8 / 10]}>
+          <Box width={[8 / 10]}>
             <Heading as="h3" mb={[4, 5]} className="text--xxl">
               Lab tested, high performance{' '}
               <span>
@@ -176,9 +152,6 @@ const Specs = () => {
               .
             </Heading>
           </Box>
-          <Flex width={[1, 2 / 10]} justifyContent="flex-end">
-            <Box width="30%" />
-          </Flex>
         </Flex>
         <Flex width={1} mt={6} justifyContent="center">
           <Box width={['60%', '30%']}>

@@ -95,7 +95,7 @@ const CartItems: React.FC<CartItemsProps> = ({
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}
             >
-              Check out
+              Checkout
             </Button>
           </div>
           {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>

@@ -127,7 +127,7 @@ export const CartItems = styled(Flex)`
       padding-top: ${theme.space[4]};
 
       button {
-        /* background: ${theme.colors.yellowbuzz}; */
+        justify-content: center;
         width: 100%;
       }
 
