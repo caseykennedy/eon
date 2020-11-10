@@ -59,12 +59,12 @@ const Specs = () => {
       <S.Specs bg="white" overflow="hidden">
         <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
           <Flex width={[1, 2 / 10]} className="decorator">
-            <Box width={['15%', '50%', '30%']} className="decorator--features">
+            <Box width={['15%', '40%', '30%']} className="decorator--features">
               <FeatureStack />
             </Box>
           </Flex>
-          <Box width={[8 / 10]}>
-            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+          <Box width={[1, 7 / 10, 8 / 10]} pr={[5, 0]}>
+            <Heading as="h3" mb={[4, 5]}>
               <Text as="span" color="primary">
                 Works on contact;
               </Text>{' '}
@@ -73,9 +73,14 @@ const Specs = () => {
           </Box>
         </Flex>
 
-        <Flex className="spec__block">
-          <Box width={[8 / 10]}>
-            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+        <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
+          <Flex width={[1, 2 / 10]} className="decorator">
+            <Box width={['22%', '75%', '75%']} className="decorator--abstract">
+              <AbstractSpray />
+            </Box>
+          </Flex>
+          <Box width={[1, 7 / 10, 8 / 10]} pr={[7, 0]}>
+            <Heading as="h3" mb={[4, 5]}>
               Child-safe{' '}
               <span>
                 <Lock />
@@ -88,16 +93,11 @@ const Specs = () => {
               action.
             </Heading>
           </Box>
-          <Flex width={[1, 2 / 10]} className="decorator">
-            <Box width={['22%', '75%', '75%']} className="decorator--abstract">
-              <AbstractSpray />
-            </Box>
-          </Flex>
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[8 / 10]} pr={[5, 0]}>
-            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+          <Box width={[1, 7 / 10, 8 / 10]} pr={[5, 0]}>
+            <Heading as="h3" mb={[4, 5]}>
               Fine, wide angle{' '}
               <span>
                 <Spray />
@@ -118,8 +118,8 @@ const Specs = () => {
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[8 / 10]} pr={[6, 0]}>
-            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+          <Box width={[1, 7 / 10, 8 / 10]} pr={[7, 0]}>
+            <Heading as="h3" mb={[4, 5]}>
               190 proof, plant-based{' '}
               <span>
                 <CornCob />,
@@ -139,8 +139,8 @@ const Specs = () => {
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[8 / 10]}>
-            <Heading as="h3" mb={[4, 5]} className="text--xxl">
+          <Box width={[1, 7 / 10, 8 / 10]} pr={[5, 0]}>
+            <Heading as="h3" mb={[4, 5]}>
               Lab tested, high performance{' '}
               <span>
                 <Beaker />

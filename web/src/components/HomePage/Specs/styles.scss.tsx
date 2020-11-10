@@ -16,6 +16,18 @@ export const Specs = styled(Section)`
       flex-wrap: wrap;
       justify-content: space-between;
 
+      h3 {
+        font-size: calc(${theme.fontSizes[4]} / 1.4);
+
+        @media ${theme.mq.tablet} {
+          font-size: calc(${theme.root.font.xl} / 1.45);
+        }
+
+        @media (min-width: 1280px) {
+          font-size: ${theme.root.font.xl};
+        }
+      }
+
       .decorator {
         justify-content: flex-end;
         overflow: visible;
@@ -28,8 +40,25 @@ export const Specs = styled(Section)`
 
           img {
             position: relative;
-            top: 0;
+            top: calc(${theme.space[6]} * -2);
+
             @media ${theme.mq.tablet} {
+              top: 0;
+            }
+          }
+        }
+
+        &--abstract {
+          justify-content: flex-end;
+          overflow: visible;
+          height: 0;
+
+          img {
+            position: relative;
+            top: calc(${theme.space[6]});
+            
+            @media ${theme.mq.tablet} {
+              top: 0;
             }
           }
         }
@@ -42,9 +71,11 @@ export const Specs = styled(Section)`
           img {
             position: relative;
             width: 70%;
-            right: calc(${theme.space[7]} * -4);
+            top: calc(${theme.space[6]} * -2);
+            right: calc(${theme.space[7]} * -3);
 
             @media ${theme.mq.tablet} {
+              top: 0;
               right: 0;
               width: 200%;
             }
@@ -58,14 +89,14 @@ export const Specs = styled(Section)`
 
           img {
             position: relative;
-            width: 50%;
-            top: ${theme.space[7]};
-            right: calc(${theme.space[9]} * -2);
+            width: 45%;
+            top: calc(${theme.space[5]} * -1);
+            right: calc(${theme.space[7]} * -3);
 
             @media ${theme.mq.tablet} {
-              top: ${theme.space[10]};
+              top: calc(${theme.space[7]} * 5);
               right: 0;
-              width: 130%;
+              width: 120%;
             }
           }
         }
