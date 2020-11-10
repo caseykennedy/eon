@@ -59,13 +59,13 @@ export const Hero = styled(Flex)`
 
         @media ${theme.mq.tablet} {
           top: 125px;
-          right: -240px;
+          right: -190px;
           width: 275px;
         }
 
         @media ${theme.mq.desktop} {
           top: 175px;
-          right: -325px;
+          right: -250px;
           width: 375px;
         }
       }

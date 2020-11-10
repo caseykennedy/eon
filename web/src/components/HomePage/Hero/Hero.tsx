@@ -32,7 +32,7 @@ const Hero = () => {
           <Box position="relative">
             <Box
               ml={[0, 0, 5]}
-              mr={[5, 0, 0]}
+              mr={[5, 6, 7]}
               width={[
                 `calc(${theme.space[7]} * 2.25)`,
                 `calc(${theme.space[7]} * 3)`,
