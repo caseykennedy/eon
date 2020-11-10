@@ -46,7 +46,7 @@ const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
 
 const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
   return (
-    <S.Menu ref={scrollRef}>
+    <S.Menu>
       <AnimatePresence>
         {isNavOpen && (
           <motion.div
@@ -55,6 +55,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             exit={{ opacity: 0, transform: theme.transform.matrix.from }}
             transition={{ duration: 0.5 }}
             className="motion"
+            ref={scrollRef}
           >
             <Box width={1}>
               <h3 className="text--xxxl">
@@ -63,13 +64,8 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                 and more.
               </h3>
 
-              <Flex alignItems="center" justifyContent="space-between" mt={[5, 7, 7]}>
-                <Box flex={1}>
-                  <Text fontSize={[2, 4, 4]} fontWeight={600}>
-                    Meanwhile,
-                  </Text>
-                </Box>
-                <AddToCart />
+              <Flex mt={[5, 7, 7]}>
+                <AddToCart btnText="Buy eOn mist™" />
               </Flex>
             </Box>
 

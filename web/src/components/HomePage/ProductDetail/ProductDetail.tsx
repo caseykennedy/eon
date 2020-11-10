@@ -12,6 +12,9 @@ import { Button, Text, Flex, Box } from '../../ui'
 // Components
 import ImgMatch from '../../ImgMatch'
 import AddToCart from '../../AddToCart'
+import Recycle from '../../Recycle'
+
+import triangleObtuse from './assets/TriangleObtuse.svg'
 
 // ___________________________________________________________________
 
@@ -29,11 +32,14 @@ const ProductDetail: React.FC = () => {
           flexDirection={['row', 'row-reverse']}
         >
           <Box width={[1, 1 / 2]} style={{ position: 'relative', zIndex: 9 }}>
-            <Box pl={[7, 9, 9]} mb={[5, 0, 0]}>
+            <Box pl={[4, 6, 7]} mb={[5, 0, 0]}>
               <ImgMatch
-                src="cans.png"
+                src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
               />
+              <Box width={1} mt={`calc(${theme.space[7]} * -2)`}>
+                <img src={triangleObtuse} alt="frame" />
+              </Box>
             </Box>
           </Box>
           <Box width={[1, 1 / 2]}>
@@ -64,6 +70,29 @@ const ProductDetail: React.FC = () => {
                 <br />
                 on the go
               </Text>
+            </Flex>
+
+            <Flex mt={[5, 7]}>
+              <Flex
+                alignItems="center"
+                // bg="white"
+                py={2}
+                // style={{ border: theme.border, borderRadius: theme.borderRadius }}
+              >
+                <Box
+                  width={[
+                    theme.space[5],
+                    theme.space[5],
+                    `calc(${theme.space[5]} * 1.15)`
+                  ]}
+                  mr={3}
+                >
+                  <Recycle />
+                </Box>
+                <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
+                  <strong>Recyclable</strong> aluminum despenser
+                </Text>
+              </Flex>
             </Flex>
           </Box>
         </Flex>

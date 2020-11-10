@@ -14,6 +14,7 @@ import { Input } from 'theme-ui'
 // Components
 import Icon from '../Icons'
 import FlagUsa from '../FlagUsa'
+import CanMulti from '../CanMulti'
 
 // ___________________________________________________________________
 
@@ -38,12 +39,14 @@ const PreFoot = () => (
         </button>
       </Box>
     </Box>
-    <Box className="prefoot-panel  prefoot-panel__usa">
+    <Link to={`/eon-multi-surface`} className="prefoot-panel  prefoot-panel__usa">
       <Box mb={4}>
-        <FlagUsa />
+        <CanMulti />
       </Box>
-      <Text as="p">Made in the USA</Text>
-    </Box>
+      <Text as="p" textAlign="center">
+        Looking for eOn multi-surface disinfectant?
+      </Text>
+    </Link>
   </S.PreFoot>
 )
 
@@ -76,15 +79,9 @@ const Footer: React.FC = () => {
       <Terms />
       <S.Footer>
         <Flex className="footer__links">
-          <Link to={`/privacy`}>
-            privacy
-          </Link>
-          <Link to={`/terms`}>
-            terms
-          </Link>
-          <Link to={`/returns`}>
-            returns
-          </Link>
+          <Link to={`/privacy`}>privacy</Link>
+          <Link to={`/terms`}>terms</Link>
+          <Link to={`/returns`}>returns</Link>
           <Flex
             as="a"
             className="footer__contact"
@@ -93,9 +90,7 @@ const Footer: React.FC = () => {
             <small>Contact Us</small>
           </Flex>
         </Flex>
-        <Flex className="footer__copyright">
-          &copy;{getYear()} eOn Mist
-        </Flex>
+        <Flex className="footer__copyright">&copy;{getYear()} eOn Mist</Flex>
       </S.Footer>
     </>
   )

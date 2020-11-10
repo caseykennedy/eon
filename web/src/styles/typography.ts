@@ -203,6 +203,10 @@ const Typography = css`
     font-size: calc(${theme.root.font.lg} / 1.15);
 
     @media ${theme.mq.tablet} {
+      font-size: calc(${theme.root.font.lg} * 1);
+    }
+
+    @media ${theme.mq.desktop} {
       font-size: calc(${theme.root.font.lg} * 1.25);
     }
   }
@@ -219,6 +223,10 @@ const Typography = css`
   h4,
   .text--md {
     font-size: calc(${theme.fontSizes[3]} / 1.5);
+
+    @media ${theme.mq.tablet} {
+      font-size: calc(${theme.fontSizes[3]} / 1.25);
+    }
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[3]} / 1.15);

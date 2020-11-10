@@ -31,7 +31,7 @@ const Hero = () => {
         <Flex className="hero__figure">
           <Box position="relative">
             <Box
-              ml={[0, 0, 5]}
+              ml={[0, 9, 5]}
               mr={[5, 0, 0]}
               width={[
                 `calc(${theme.space[7]} * 2.25)`,
@@ -41,7 +41,7 @@ const Hero = () => {
               className="figure"
             >
               <ImgMatch
-                src="hero-handcan.png"
+                src="can.png"
                 altText="eOn Hand Sanitizer can"
               />
             </Box>
@@ -52,26 +52,21 @@ const Hero = () => {
         </Flex>
 
         <Flex px={theme.gutter.axis} width={1} className="hero__inner">
-          <Box position="relative" style={{ zIndex: 9 }}>
+          <Box width={1/2} position="relative" style={{ zIndex: 9 }}>
             <Text as="h4" my={[3, 4]}>
               eOn makes it simple.
             </Text>
             <h1 className="text--xl">
-              Pro-grade
-              <br />
-              hand sanitation
-              <br />
-              for everyone.
+            Find eOn multi-surface disinfectant at your favorite local pharmacy, retail or grocery store today.
             </h1>
           </Box>
 
           <Flex
             className="hero__features"
-            flexDirection={['row', 'row-reverse']}
           >
-            <Flex width={[1, 1 / 2, 1 / 3]} justifyContent="flex-end">
+            {/* <Flex width={[1, 1 / 2, 1 / 3]} justifyContent="flex-end">
               <AddToCart />
-            </Flex>
+            </Flex> */}
 
             <Flex width={[1, 1 / 2, 2 / 3]} mt={[4, 0, 0]}>
               <Text as="p" mr={5} mb={0}>

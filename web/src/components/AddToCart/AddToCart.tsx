@@ -16,11 +16,12 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 type Props = {
-  setPortalOpen?: any
+  btnText?: string
   linkText?: string
+  setPortalOpen?: any
 }
 
-const AddToCart: React.FC<Props> = ({ setPortalOpen, linkText }) => {
+const AddToCart: React.FC<Props> = ({ btnText, linkText, setPortalOpen }) => {
   const products = useProduct()
   const product = products.edges[0].node
   const {
@@ -71,7 +72,7 @@ const AddToCart: React.FC<Props> = ({ setPortalOpen, linkText }) => {
       disabled={!available || adding}
       onClick={handleAddToCart}
     >
-      {!adding ? `Buy Now` : 'Thank you'}
+      {!adding ? btnText : 'Thank you'}
       {!adding ? <Icon name="arrow" /> : <Box className="smiley">😃</Box>}
     </S.AddToCart>
   ) : (
@@ -85,6 +86,8 @@ export default AddToCart
 
 // ___________________________________________________________________
 
-const defaultProps = {}
+const defaultProps = {
+  btnText: 'Buy Now'
+}
 
 AddToCart.defaultProps = defaultProps

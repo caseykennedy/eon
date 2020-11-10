@@ -119,10 +119,19 @@ export const PreFoot = styled.div`
 
       &__usa {
         border-top: ${theme.border};
+        cursor: pointer;
 
         @media ${theme.mq.tablet} {
           border-top: none;
           border-left: ${theme.border};
+        }
+
+        &:hover {
+          background: ${theme.colors.babyblue};
+        }
+
+        p {
+          color: ${theme.colors.text};
         }
 
         svg {
