@@ -18,8 +18,6 @@ import Specs from './Specs'
 import Reviews from './Reviews'
 import Retailers from './Retailers'
 
-import Trademarks from '../Trademarks'
-
 // Components
 import ProductDetail from './ProductDetail'
 
@@ -29,7 +27,6 @@ const HomePage = () => {
   return (
     <S.HomePage>
       <Hero />
-      {/* <Trademarks /> */}
       <Mist />
       <Specs />
       <ProductDetail />

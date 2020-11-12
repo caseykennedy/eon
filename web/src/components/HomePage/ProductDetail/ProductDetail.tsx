@@ -37,7 +37,7 @@ const ProductDetail: React.FC = () => {
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
               />
-              <Box width={1} mt={`calc(${theme.space[7]} * -2)`}>
+              <Box width={1} mt={`-40%`}>
                 <img src={triangleObtuse} alt="frame" />
               </Box>
             </Box>
