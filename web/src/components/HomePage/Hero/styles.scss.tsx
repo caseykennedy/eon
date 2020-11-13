@@ -31,7 +31,7 @@ export const Hero = styled(Flex)`
       flex-direction: column;
       justify-content: flex-end;
       margin: 0 auto;
-      /* max-width: ${theme.maxWidth}; */
+      width: 100%;
 
       @media ${theme.mq.tablet} {
         justify-content: space-between;
@@ -49,6 +49,24 @@ export const Hero = styled(Flex)`
       @media ${theme.mq.tablet} {
         align-self: center;
         margin: 0 auto;
+      }
+
+      .figure {
+        margin-right: ${theme.space[5]};
+        margin-left: 0;
+        width: calc(${theme.space[7]} * 2.25);
+
+        @media ${theme.mq.tablet} {
+          margin-right: ${theme.space[6]};
+          margin-left: 0;
+          width: calc(${theme.space[7]} * 3);
+        }
+
+        @media ${theme.mq.desktop} {
+          margin-right: ${theme.space[7]};
+          margin-left: ${theme.space[5]};
+          width: calc(${theme.space[9]} * 2);
+        }
       }
 
       .spray {
@@ -74,10 +92,44 @@ export const Hero = styled(Flex)`
     &__features {
       align-items: center;
       justify-content: space-between;
+      flex-direction: row;
       flex-wrap: wrap;
 
       width: 100%;
       position: relative;
+
+      @media ${theme.mq.tablet} {
+        flex-direction: row-reverse;
+      }
+
+      .feature-set {
+        margin-top: ${theme.space[4]};
+        width: 100%;
+
+        @media ${theme.mq.tablet} {
+          margin-top: 0;
+          width: 50%;
+        }
+
+        @media ${theme.mq.desktop} {
+          width: 66.666%;
+        }
+      }
+
+      .cta {
+        justify-content: flex-end;
+        margin-top: ${theme.space[5]};
+        width: 100%;
+
+        @media ${theme.mq.tablet} {
+          margin-top: 0;
+          width: 50%;
+        }
+
+        @media ${theme.mq.desktop} {
+          width: 33.333%;
+        }
+      }
     }
   }
 `

@@ -48,6 +48,7 @@ export const Trademarks = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       border-bottom: none !important;
+      padding: ${theme.space[3]} 0;
       max-width: 333px;
       width: 25%;
 
