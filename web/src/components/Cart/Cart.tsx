@@ -137,6 +137,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
       mainRef={mainRef}
       exitRef={exitRef}
     >
+      <S.GlobalStyles isOpen={isCartOpen} />
       <FocusLock persistentFocus={false}>
         <S.Cart
           className={`cart ${isCartOpen ? 'cart--open' : 'cart--closed'}`}

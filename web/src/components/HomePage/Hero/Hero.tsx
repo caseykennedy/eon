@@ -43,17 +43,17 @@ const Hero = () => {
                 altText="eOn Hand Sanitizer can"
               />
             </Box>
-            <Box className="spray">
-              <motion.div
-                initial={{
-                  opacity: 0
-                }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-              >
+            <motion.div
+              initial={{
+                opacity: 0
+              }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 1 }}
+            >
+              <Box className="spray">
                 <CanSpray />
-              </motion.div>
-            </Box>
+              </Box>
+            </motion.div>
           </Box>
         </Flex>
 
@@ -68,35 +68,35 @@ const Hero = () => {
             />
           </Box>
 
-          <Flex className="hero__features">
-            <Flex className="cta">
-              <motion.div
-                initial={{
-                  opacity: 0
-                }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-              >
+          <motion.div
+            initial={{
+              opacity: 0
+            }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
+            <Flex className="hero__features">
+              <Flex className="cta">
                 <AddToCart />
-              </motion.div>
-            </Flex>
+              </Flex>
 
-            <Flex className="feature-set">
-              <Text
-                as="p"
-                mr={5}
-                mb={0}
-                dangerouslySetInnerHTML={{ __html: data.featureA }}
-              />
+              <Flex className="feature-set">
+                <Text
+                  as="p"
+                  mr={5}
+                  mb={[5, 0, 0]}
+                  dangerouslySetInnerHTML={{ __html: data.featureA }}
+                />
 
-              <Text
-                as="p"
-                color="primary"
-                mr={5}
-                dangerouslySetInnerHTML={{ __html: data.featureB }}
-              />
+                <Text
+                  as="p"
+                  color="primary"
+                  mr={5}
+                  dangerouslySetInnerHTML={{ __html: data.featureB }}
+                />
+              </Flex>
             </Flex>
-          </Flex>
+          </motion.div>
         </Flex>
       </S.Hero>
       <Trademarks />

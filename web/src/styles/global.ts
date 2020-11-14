@@ -2,8 +2,11 @@
 
 // ___________________________________________________________________
 
+import React, { useContext } from 'react'
+
 import { createGlobalStyle } from 'styled-components'
 
+import StoreContext from '../context/StoreContext'
 import theme from '../gatsby-plugin-theme-ui'
 
 import RootVars from './root'
@@ -23,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
 
     @media (max-width: 767px) {
-      overflow-y: auto;
+      overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
   }

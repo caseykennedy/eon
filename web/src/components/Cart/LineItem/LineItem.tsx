@@ -130,7 +130,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             ${item.variant.priceV2.amount}
           </Text>
 
-          <Box as="span" color="tertiary" mt={0}>$2.99 flat rate shipping</Box>
+          <Box as="span" color="tertiary" mt={1}>$2.99 flat rate shipping</Box>
         </Box>
       </Flex>
 

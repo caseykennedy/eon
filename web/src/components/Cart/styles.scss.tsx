@@ -2,7 +2,7 @@
 
 // ___________________________________________________________________
 
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { darken, transparentize } from 'polished'
 import { Box, Flex } from '../ui'
 import { motion } from 'framer-motion'
@@ -12,10 +12,27 @@ import Headroom from 'react-headroom'
 
 // ___________________________________________________________________
 
+const bodyScroll = () => {
+  const {
+    isCartOpen,
+    setCartOpen,
+  } = useContext(StoreContext)
+  
+  let isOpen
+  if (!isCartOpen) {
+    isOpen = false
+  } {
+    isOpen = true
+  }
+
+  return isOpen
+}
+
+const overflowScroll = bodyScroll
+
 const cartWidth = `500px`
 
 export const Cart = styled(Box)`
-  height: 100%;
   width: ${theme.siteWidth};
   padding: ${theme.space[4]};
 
@@ -24,7 +41,7 @@ export const Cart = styled(Box)`
   opacity: 0;
   visibility: hidden;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -171,4 +188,8 @@ export const Exit = styled(Flex)`
     width: ${theme.space[4]};
     transform: rotate(45deg);
   }
+`
+
+export const GlobalStyles = createGlobalStyle<{isOpen?: boolean}>`
+
 `

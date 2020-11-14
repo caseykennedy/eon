@@ -29,10 +29,10 @@ const ProductDetail: React.FC = () => {
         <Flex
           alignItems="flex-start"
           flexWrap="wrap"
-          flexDirection={['row-reverse']}
+          flexDirection={['column', 'column', 'row-reverse']}
         >
-          <Box flex={1} style={{ position: 'relative', zIndex: 9 }}>
-            <Box pl={[4, 6, 7]} mb={[5, 0, 0]}>
+          <Box flex={1} width={1} style={{ position: 'relative', zIndex: 9 }}>
+            <Box width={1} pl={[7, 12, 7]} mb={[5, 0, 0]}>
               <ImgMatch
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
@@ -42,7 +42,7 @@ const ProductDetail: React.FC = () => {
               </Box>
             </Box>
           </Box>
-          <Box flex={1} mr={9}>
+          <Box flex={[1]} mr={[0, 0, 7]}>
             <Text as="h4" my={[3, 4]}>
               Spray and go.
             </Text>

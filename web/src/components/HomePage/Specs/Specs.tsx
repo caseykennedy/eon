@@ -85,7 +85,7 @@ const Specs = () => {
               <AbstractSpray />
             </Box>
           </Flex>
-          <Box width={[1, 7 / 10, 6 / 10]} pr={[7, 0]}>
+          <Box width={[1, 7 / 10, 6 / 10]} pr={[6, 0]}>
             <Heading as="h3" mb={[4, 5]}>
               Child-safe{' '}
               <span>
@@ -110,7 +110,7 @@ const Specs = () => {
               <Box as="img" src={sprayMist} alt="spray mist" />
             </Box>
           </Flex>
-          <Box width={[1, 7 / 10, 6 / 10]} pr={[7, 0]}>
+          <Box width={[1, 7 / 10, 6 / 10]} pr={[6, 0]}>
             <Heading as="h3" mb={[4, 5]}>
               Fine, wide angle{' '}
               <span>
@@ -132,7 +132,7 @@ const Specs = () => {
             </Box>
           </Flex>
 
-          <Box width={[1, 7 / 10, 6 / 10]} pr={[7, 0]}>
+          <Box width={[1, 7 / 10, 6 / 10]} pr={[5, 0]}>
             <Heading as="h3" mb={[4, 5]}>
               190 proof, plant-based{' '}
               <span>

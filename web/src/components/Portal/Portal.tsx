@@ -57,7 +57,7 @@ const Portal: React.FC<Props> = ({
     portal.current.id = id
 
     if (!document.body.querySelector(`#${id}`)) {
-      document.body.prepend(portal.current)
+      document.body.append(portal.current)
     }
 
     if (!hasUpdated) forceUpdate(true)
@@ -153,9 +153,9 @@ const Portal: React.FC<Props> = ({
       //   // console.log(scrollRef)
       // }
       // if (rootContainer) toggleTabIndex('off', rootContainer)
-      if (exitButton.current) {
-        exitButton.current.focus()
-      }
+      // if (exitButton.current) {
+      //   exitButton.current.focus()
+      // }
 
       // console.log(exitButton)
 
@@ -172,7 +172,7 @@ const Portal: React.FC<Props> = ({
       //   console.log('tabs off')
       // }
       // if (rootContainer) toggleTabIndex('on', rootContainer)
-      window.removeEventListener('keydown', handleKeyDown)
+      // window.removeEventListener('keydown', handleKeyDown)
 
       if (null !== scrollRef.current) {
         enableBodyScroll(scrollRef.current)
