@@ -223,6 +223,7 @@ const Typography = css`
   h4,
   .text--md {
     font-size: calc(${theme.fontSizes[3]} / 1.5);
+    margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[3]} / 1.25);
@@ -252,7 +253,7 @@ const Typography = css`
     font-size: ${theme.fontSizes[2]};
     font-weight: ${theme.fontWeights.medium};
     line-height: ${theme.root.font.bodyLineHeight};
-    margin: 0 0 ${theme.space[5]};
+    margin: 0 0 ${theme.space[3]};
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[2]} * 1.25);

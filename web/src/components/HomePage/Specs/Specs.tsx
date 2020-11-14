@@ -125,13 +125,7 @@ const Specs = () => {
           </Box>
         </Flex>
 
-        <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
-          <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
-            <Box width={['175px', '200px', '225px']} className="decorator--hch">
-              <Box as="img" src={hch} alt="spray mist" />
-            </Box>
-          </Flex>
-
+        <Flex className="spec__block">
           <Box width={[1, 7 / 10, 6 / 10]} pr={[5, 0]}>
             <Heading as="h3" mb={[4, 5]}>
               190 proof, plant-based{' '}
@@ -145,11 +139,13 @@ const Specs = () => {
               .
             </Heading>
           </Box>
+
+          <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
+            <Box width={['175px', '200px', '225px']} className="decorator--hch">
+              <Box as="img" src={hch} alt="spray mist" />
+            </Box>
+          </Flex>
         </Flex>
-
-        {/*
-
-        
 
         <Flex className="spec__block">
           <Box width={[1, 7 / 10, 8 / 10]} pr={[5, 0]}>
@@ -170,7 +166,7 @@ const Specs = () => {
           <Box width={['60%', '30%']}>
             <WeRefreshHands />
           </Box>
-        </Flex> */}
+        </Flex>
       </S.Specs>
     </>
   )

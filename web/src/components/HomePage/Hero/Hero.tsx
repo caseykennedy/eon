@@ -28,7 +28,7 @@ const Hero = () => {
         opacity: 0
       }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.75 }}
     >
       <S.Hero py={[4, 5]}>
         <S.Decorator>
@@ -73,7 +73,7 @@ const Hero = () => {
               opacity: 0
             }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
           >
             <Flex className="hero__features">
               <Flex className="cta">
