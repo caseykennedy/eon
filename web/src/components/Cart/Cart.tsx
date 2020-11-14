@@ -83,6 +83,10 @@ const CartItems: React.FC<CartItemsProps> = ({
                 ${checkout.subtotalPrice && checkout.subtotalPrice}
               </Text>
             </div> */}
+            {/* <div className="total">
+              <Text>shipping</Text>
+              <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>
+            </div> */}
             <div className="total">
               <p>Subtotal</p>
               <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>

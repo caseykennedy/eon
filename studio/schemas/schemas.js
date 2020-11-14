@@ -13,6 +13,7 @@ import postCategory from './postCategory'
 import person from './person'
 import position from './position'
 import post from './post'
+import retailer from './retailer'
 import siteSettings from './siteSettings'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -29,6 +30,7 @@ export default createSchema({
     blockText,
     figure,
     mainImage,
+    retailer,
     siteSettings,
 
 

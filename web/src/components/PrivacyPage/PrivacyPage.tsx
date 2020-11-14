@@ -41,7 +41,7 @@ const PrivacyPage = () => {
     // or trigger window resize event by setTimeout
     setTimeout(() => {
       resize()
-    }, 1000)
+    }, 10)
   }, [])
   return (
     <S.PrivacyPage>

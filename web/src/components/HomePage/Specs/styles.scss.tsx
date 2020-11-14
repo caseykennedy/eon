@@ -17,14 +17,14 @@ export const Specs = styled(Section)`
       justify-content: space-between;
 
       h3 {
-        font-size: calc(${theme.fontSizes[4]} / 1.4);
+        font-size: calc(${theme.fontSizes[4]} / 1.5);
 
         @media ${theme.mq.tablet} {
-          font-size: calc(${theme.root.font.xl} / 1.45);
+          font-size: calc(${theme.fontSizes[5]} / 1.5);
         }
 
         @media (min-width: 1280px) {
-          font-size: ${theme.root.font.xl};
+          font-size: calc(${theme.fontSizes[5]} / 1.25);
         }
       }
 
@@ -70,14 +70,15 @@ export const Specs = styled(Section)`
 
           img {
             position: relative;
-            width: 70%;
             top: calc(${theme.space[6]} * -2);
-            right: calc(${theme.space[7]} * -3);
+            right: calc(${theme.space[6]} * -2);
 
             @media ${theme.mq.tablet} {
-              top: 0;
-              right: 0;
-              width: 200%;
+              right: calc(${theme.space[6]} * -2);
+            }
+
+            @media ${theme.mq.desktop} {
+              right: calc(${theme.space[6]} * -4);
             }
           }
         }
@@ -89,14 +90,10 @@ export const Specs = styled(Section)`
 
           img {
             position: relative;
-            width: 45%;
-            top: calc(${theme.space[5]} * -1);
-            right: calc(${theme.space[7]} * -3);
+            right: calc(${theme.space[6]} * -2);
 
             @media ${theme.mq.tablet} {
-              top: calc(${theme.space[7]} * 5);
               right: 0;
-              width: 120%;
             }
           }
         }

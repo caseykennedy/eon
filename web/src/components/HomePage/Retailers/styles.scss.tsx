@@ -14,6 +14,22 @@ import { Parallax } from 'react-scroll-parallax'
 
 export const Retailers = styled(Section)`
   @media ${theme.mq.tablet} {
+  }
 
+  .retailers-grid {
+    align-items: center;
+    justify-content: center;
+
+    &__cell {    
+      /* justify-content: center; */
+      height: auto;
+      width: 100%;
+      /* height: 40px; */
+
+      div {
+        max-width: 120px;
+        width: 100%;
+      }
+    }
   }
 `

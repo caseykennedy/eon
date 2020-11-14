@@ -29,9 +29,9 @@ const ProductDetail: React.FC = () => {
         <Flex
           alignItems="flex-start"
           flexWrap="wrap"
-          flexDirection={['row', 'row-reverse']}
+          flexDirection={['row-reverse']}
         >
-          <Box width={[1, 1 / 2]} style={{ position: 'relative', zIndex: 9 }}>
+          <Box flex={1} style={{ position: 'relative', zIndex: 9 }}>
             <Box pl={[4, 6, 7]} mb={[5, 0, 0]}>
               <ImgMatch
                 src="can-stack.png"
@@ -42,7 +42,7 @@ const ProductDetail: React.FC = () => {
               </Box>
             </Box>
           </Box>
-          <Box width={[1, 1 / 2]}>
+          <Box flex={1} mr={9}>
             <Text as="h4" my={[3, 4]}>
               Spray and go.
             </Text>
@@ -50,19 +50,32 @@ const ProductDetail: React.FC = () => {
               The only 80% ethyl alcohol, continuous spray hand sanitizer.
             </h3>
 
+            <p>
+              Introducing eOn mist's 2 FL OZ (personal size)
+              Continuous Spray Hand Sanitizer with 80% Ethyl Alcohol.
+              Professional-grade sanitation, in your pocket. Effective on 99.99%
+              of germs—no droplets, just mist. Easy to carry and use.
+            </p>
+
+            <p>
+              eOn hand sanitizer cans are fully recyclable, for a greener ♻️
+              environment. Proudly made in the 🇺🇸USA in an EPA &amp; FDA Registered
+              Facility.
+            </p>
+
             <Box mt={7}>
               <AddToCart>Buy Now</AddToCart>
             </Box>
 
-            <Flex mt={5} mb={0}>
-              <Text as="p" mb={0}>
+            <Flex mt={4} mb={0}>
+              <Text as="p" mb={0} className="t--small">
                 Aluminum-Free
                 <br />
                 Dye-Free
                 <br />
                 Paraben-Free
               </Text>
-              <Text as="p" color="primary" ml={5}>
+              <Text as="p" color="primary" ml={5} className="t--small">
                 Keeps your
                 <br />
                 hands sanitized
@@ -71,7 +84,7 @@ const ProductDetail: React.FC = () => {
               </Text>
             </Flex>
 
-            <Flex mt={[5, 7]}>
+            <Flex mt={[4, 6]}>
               <Flex
                 alignItems="center"
                 // bg="white"

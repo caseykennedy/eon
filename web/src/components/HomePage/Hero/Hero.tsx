@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 // Styles + Theme
 import * as S from './styles.scss'
@@ -22,7 +23,13 @@ import Trademarks from '../../Trademarks'
 
 const Hero = () => {
   return (
-    <>
+    <motion.div
+      initial={{
+        opacity: 0
+      }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <S.Hero py={[4, 5]}>
         <S.Decorator>
           <Shine />
@@ -37,7 +44,15 @@ const Hero = () => {
               />
             </Box>
             <Box className="spray">
-              <CanSpray />
+              <motion.div
+                initial={{
+                  opacity: 0
+                }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
+              >
+                <CanSpray />
+              </motion.div>
             </Box>
           </Box>
         </Flex>
@@ -55,7 +70,15 @@ const Hero = () => {
 
           <Flex className="hero__features">
             <Flex className="cta">
-              <AddToCart />
+              <motion.div
+                initial={{
+                  opacity: 0
+                }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
+              >
+                <AddToCart />
+              </motion.div>
             </Flex>
 
             <Flex className="feature-set">
@@ -77,7 +100,7 @@ const Hero = () => {
         </Flex>
       </S.Hero>
       <Trademarks />
-    </>
+    </motion.div>
   )
 }
 

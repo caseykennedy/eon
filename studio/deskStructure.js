@@ -9,7 +9,7 @@ const hiddenTypes = [
   "person",
   "post",
   "project",
-  "siteSettings",
+  "siteSettings"
 ];
 
 export default () =>
@@ -20,8 +20,22 @@ export default () =>
       // _________________________________________________________________
       S.listItem()
         .title("Site Settings")
-        .child(S.editor().id("siteSettings").schemaType("siteSettings").documentId("siteSettings"))
+        .child(
+          S.editor()
+            .id("siteSettings")
+            .schemaType("siteSettings")
+            .documentId("siteSettings")
+        )
         .icon(MdSettings),
+
+      // Retailers
+      // _________________________________________________________________
+      S.listItem()
+        .title("Retailers")
+        .schemaType("retailer")
+        .child(S.documentTypeList("retailer").title("Retailers"))
+
+        .icon(MdSettings)
 
       // End
       // _________________________________________________________________

@@ -124,7 +124,7 @@ export const CartItems = styled(Flex)`
 
       border-top: ${theme.border};
       /* border-top-color: ${theme.colors.gray}; */
-      padding-top: ${theme.space[4]};
+      padding-top: ${theme.space[2]};
 
       button {
         justify-content: center;

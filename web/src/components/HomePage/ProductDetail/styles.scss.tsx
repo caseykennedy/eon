@@ -13,7 +13,7 @@ import Section from '../../Section'
 // ___________________________________________________________________
 
 export const ProductDetail = styled(Section)`
-  background: ${transparentize(0, theme.colors.mossgreen)};
+  background: ${transparentize(0, theme.colors.lightgray)};
   border-radius: 0 0 ${theme.space[7]} 0;
 
   overflow: hidden;

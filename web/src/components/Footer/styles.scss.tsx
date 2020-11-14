@@ -142,10 +142,9 @@ export const PreFoot = styled.div`
   }
 `
 
-export const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+export const Footer = styled(Flex)`
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
 
   position: relative;
@@ -157,21 +156,26 @@ export const Footer = styled.footer`
   padding: ${theme.space[4]};
 
   @media ${theme.mq.tablet} {
+    flex-direction: row-reverse;
+    justify-content: space-between;
     padding: ${theme.space[4]} ${theme.space[7]};
   }
 
-  .footer {
+  .footer {    
     &__links {
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
+      margin-bottom: ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
+        justify-content: flex-end;
+        margin-bottom: 0;
       }
 
       a {
         color: ${theme.colors.black};
         margin-left: ${theme.space[4]};
-        display: none;
+        /* display: none; */
 
         @media ${theme.mq.tablet} {
           display: inherit;

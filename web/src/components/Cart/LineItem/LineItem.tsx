@@ -126,9 +126,11 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
           >
             {item.title}
           </Text>
-          <Text as="p" fontSize={2} fontWeight={500}>
+          <Text as="p" fontSize={2} fontWeight={500} mb={0}>
             ${item.variant.priceV2.amount}
           </Text>
+
+          <Box as="span" color="tertiary" mt={0}>$2.99 flat rate shipping</Box>
         </Box>
       </Flex>
 
