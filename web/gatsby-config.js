@@ -66,6 +66,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',
+    'gatsby-plugin-loadable-components-ssr',
     'gatsby-plugin-netlify',
     {
       resolve: `gatsby-source-shopify`,

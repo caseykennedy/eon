@@ -22,7 +22,7 @@ const PreFoot = () => (
   <S.PreFoot>
     <Box className="prefoot-panel  prefoot-panel__newsletter">
       <Text as="p" color="primary">
-        Sign up for updates and giveaways.
+        Sign up for updates and giveaways!
       </Text>
       <Box as="form" action="/">
         <label htmlFor="email" style={{ display: 'none' }}>

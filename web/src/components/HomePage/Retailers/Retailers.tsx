@@ -28,7 +28,7 @@ const Retailers = () => {
         is available at these fine retailers:
       </Text>
 
-      <Grid columns={[3, 4, 5]} gap={[6, 7, 6]} p={[4, 0, 0]} className="retailers-grid">
+      <Grid columns={[3, 4, 5]} gap={[6, 7, 7]} p={[4, 0, 0]} className="retailers-grid">
         {retailers.map(({ node: retailer }, idx) => (
           <Flex key={idx} className="retailers-grid__cell">
             <Img

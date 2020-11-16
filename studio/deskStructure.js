@@ -35,6 +35,15 @@ export default () =>
         .schemaType("retailer")
         .child(S.documentTypeList("retailer").title("Retailers"))
 
+        .icon(MdSettings),
+
+      // Instagram
+      // _________________________________________________________________
+      S.listItem()
+        .title("Instagram Feed")
+        .schemaType("instagram")
+        .child(S.documentTypeList("instagram").title("Instagram"))
+
         .icon(MdSettings)
 
       // End

@@ -4,9 +4,6 @@
 
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import { useSpring, config } from 'react-spring'
-
-import Headroom from 'react-headroom'
 
 // UI
 import { Box, Flex } from '../../ui'
@@ -17,7 +14,6 @@ import theme from '../../../gatsby-plugin-theme-ui'
 
 // Components
 import Icon from '../../Icons'
-import ImgMatch from '../../ImgMatch'
 import CanMulti from '../../CanMulti'
 
 // ___________________________________________________________________
@@ -83,7 +79,7 @@ const Announcement: React.FC<Props> = ({ announcement, mainRef, to }) => {
       className={`announcement ${
         !isPortalOpen ? 'announcement--open' : 'announcement--closed'
       }`}
-      {...motionProps}
+      // {...motionProps}
     >
       {!isPortalOpen && (
         <Message

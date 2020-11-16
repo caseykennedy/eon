@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import { motion } from 'framer-motion'
 
 // Styles + Theme
 import * as S from './styles.scss'
@@ -14,15 +15,19 @@ import { Box, Flex, Text } from '../../ui'
 // Compoonents
 import ImgMatch from '../../ImgMatch'
 import Shine from '../../Shine'
-import CanSpray from '../../CanSpray'
-import AddToCart from '../../AddToCart'
 import Trademarks from '../../Trademarks'
 
 // ___________________________________________________________________
 
 const Hero = () => {
   return (
-    <>
+    <motion.div
+      initial={{
+        opacity: 0
+      }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75 }}
+    >
       <S.Hero py={[4, 5]}>
         <S.Decorator>
           <Shine />
@@ -30,67 +35,68 @@ const Hero = () => {
 
         <Flex className="hero__figure">
           <Box position="relative">
-            <Box
-              ml={[0, 9, 5]}
-              mr={[5, 0, 0]}
-              width={[
-                `calc(${theme.space[7]} * 2.25)`,
-                `calc(${theme.space[7]} * 3)`,
-                `calc(${theme.space[9]} * 2)`
-              ]}
-              className="figure"
-            >
+            <Box className="figure">
               <ImgMatch
                 src="can.png"
                 altText="eOn Hand Sanitizer can"
               />
             </Box>
-            <Box className="spray">
-              <CanSpray />
-            </Box>
           </Box>
         </Flex>
 
-        <Flex px={theme.gutter.axis} width={1} className="hero__inner">
-          <Box width={1/2} position="relative" style={{ zIndex: 9 }}>
+        <Flex px={theme.gutter.axis} className="hero__inner">
+          <Box position="relative" style={{ zIndex: 9 }}>
             <Text as="h4" my={[3, 4]}>
-              eOn makes it simple.
+              {data.title}
             </Text>
-            <h1 className="text--xl">
-            Find eOn multi-surface disinfectant at your favorite local pharmacy, retail or grocery store today.
-            </h1>
+            <h1
+              dangerouslySetInnerHTML={{ __html: data.headline }}
+              className="text--xl"
+            />
           </Box>
 
-          <Flex
-            className="hero__features"
+          <motion.div
+            initial={{
+              opacity: 0
+            }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
           >
-            {/* <Flex width={[1, 1 / 2, 1 / 3]} justifyContent="flex-end">
-              <AddToCart />
-            </Flex> */}
+            <Flex className="hero__features">
+              <Flex className="cta">
+                {/* <AddToCart /> */}
+              </Flex>
 
-            <Flex width={[1, 1 / 2, 2 / 3]} mt={[4, 0, 0]}>
-              <Text as="p" mr={5} mb={0}>
-                Effective on
-                <br />
-                <mark>99.99%</mark> of
-                <br />
-                common germs
-              </Text>
+              <Flex className="feature-set">
+                <Text
+                  as="p"
+                  mr={5}
+                  mb={[5, 0, 0]}
+                  dangerouslySetInnerHTML={{ __html: data.featureA }}
+                />
 
-              <Text as="p" color="primary" mr={5}>
-                personal size
-                <br />
-                germ protection
-                <br />
-                on the go
-              </Text>
+                <Text
+                  as="p"
+                  color="primary"
+                  mr={5}
+                  dangerouslySetInnerHTML={{ __html: data.featureB }}
+                />
+              </Flex>
             </Flex>
-          </Flex>
+          </motion.div>
         </Flex>
       </S.Hero>
       <Trademarks />
-    </>
+    </motion.div>
   )
 }
 
 export default Hero
+
+const data = {
+  title: 'eOn makes it simple.',
+  headline:
+    'Find eOn multi-surface disinfectant at your favorite local pharmacy, retail or grocery store today.',
+  featureA: 'Effective on<br /><mark>99.99%</mark> of<br />common germs',
+  featureB: 'personal size<br />germ protection<br />on the go'
+}

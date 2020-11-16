@@ -14,6 +14,14 @@ export default {
         isHighlighted: true
       },
       validation: Rule => Rule.required()
-    }
+    },
+    // {
+    //   name: 'caption',
+    //   title: 'Caption',
+    //   type: 'string',
+    //   options: {
+    //     isHighlighted: true
+    //   }
+    // }
   ]
 }

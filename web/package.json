@@ -29,7 +29,7 @@
     "test:ci": "cross-env CYPRESS_SUPPORT=y npm-run-all -s test:compile server:ci"
   },
   "dependencies": {
-    "@loadable/component": "^5.13.2",
+    "@loadable/component": "^5.14.1",
     "@sanity/block-content-to-react": "^2.0.7",
     "@types/body-scroll-lock": "^2.6.1",
     "@types/google-map-react": "^1.1.7",
@@ -51,6 +51,7 @@
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-linkedin-insight": "^1.0.1",
+    "gatsby-plugin-loadable-components-ssr": "^2.1.0",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-netlify": "^2.2.1",
     "gatsby-plugin-nprogress": "^2.2.1",

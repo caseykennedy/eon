@@ -42,18 +42,16 @@ const ProductDetail: React.FC = () => {
               </Box>
             </Box>
           </Box>
-          <Box flex={[1]} mr={[0, 0, 5]}>
-            <Text as="h4" >
+          <Box flex={[1]} mr={[0, 0, 7]}>
+            <Text as="h4">
               Spray and go.
             </Text>
             <h3 className="text--xl">
-              The only 80% ethyl alcohol, continuous spray hand sanitizer.
+              The <em>only</em> 80% ethyl alcohol, continuous spray hand sanitizer.
             </h3>
 
             <p>
-              Introducing eOn mist's 2 FL OZ (personal size)
-              Continuous Spray Hand Sanitizer with 80% Ethyl Alcohol.
-              Professional-grade sanitation, in your pocket. Effective on 99.99%
+              Personal size (2 fl. oz.), professional-grade sanitation in your pocket. Effective on <mark>99.99%</mark>
               of germs—no droplets, just mist. Easy to carry and use.
             </p>
 

@@ -17,6 +17,7 @@ import Mist from './Mist'
 import Specs from './Specs'
 import Reviews from './Reviews'
 import Retailers from './Retailers'
+import InstagramFeed from './InstagramFeed'
 
 // Components
 import ProductDetail from './ProductDetail'
@@ -31,6 +32,7 @@ const HomePage = () => {
       <Specs />
       <ProductDetail />
       <Reviews />
+      <InstagramFeed />
       <Retailers />
     </S.HomePage>
   )

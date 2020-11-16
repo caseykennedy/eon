@@ -93,7 +93,8 @@ export const Specs = styled(Section)`
             right: calc(${theme.space[6]} * -2);
 
             @media ${theme.mq.tablet} {
-              right: 0;
+              top: calc(${theme.space[7]} * 2);
+              right: calc(${theme.space[6]} * -2);
             }
           }
         }

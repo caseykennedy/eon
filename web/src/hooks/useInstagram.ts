@@ -1,4 +1,4 @@
-// useRetailers hook
+// useInstagram hook
 
 // ___________________________________________________________________
 
@@ -7,13 +7,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 // ___________________________________________________________________
 
 type Props = {
-  retailers: {
+  instagram: {
     edges: {
       node: {
         id: string
-        _rawDescription: string
-        publishedAt: string
-        logo: {
+        _rawCaption: string
+        figure: {
           alt: string
           asset: {
             fluid: {
@@ -27,41 +26,43 @@ type Props = {
             }
           }
         }
+        publishedAt: string
+        title: string
       }
     }[]
   }
 }
 
-const useRetailers = () => {
+const useInstagram = () => {
   const data = useStaticQuery<Props>(graphql`
-    query RetailersQuery {
-      retailers: allSanityRetailer(sort: {order: ASC, fields: publishedAt}) {
+    query InstagramQuery {
+      instagram: allSanityInstagram {
         edges {
           node {
-            id
-            _rawDescription
-            publishedAt
-            logo {
+            _rawCaption
+            figure {
               alt
               asset {
-                fluid(maxHeight: 300) {
-                  srcWebp
-                  srcSetWebp
-                  srcSet
-                  src
-                  sizes
-                  base64
+                fluid(maxWidth: 600) {
                   aspectRatio
+                  base64
+                  sizes
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
                 }
               }
             }
+            publishedAt
+            title
           }
         }
       }
     }
   `)
 
-  return data.retailers.edges
+  return data.instagram.edges
 }
 
-export default useRetailers
+export default useInstagram

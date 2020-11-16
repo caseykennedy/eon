@@ -12,22 +12,26 @@ import { Parallax } from 'react-scroll-parallax'
 
 // ___________________________________________________________________
 
-export const Retailers = styled(Section)`
-  @media ${theme.mq.tablet} {
+export const InstagramFeed = styled(Box)`
+  border-top: ${theme.border};
+  padding-top: ${theme.space[6]};
+  /* padding: ${theme.space[6]} ${theme.space[2]} ${theme.space[2]}; */
+
+  @media ${theme.mq.desktop} {
+    padding-top: ${theme.space[7]};
   }
 
-  .retailers-grid {
+  .ig-feed-grid {
     align-items: center;
     justify-content: center;
 
-    &__cell {    
+    &__cell {
       /* justify-content: center; */
       height: auto;
       width: 100%;
       /* height: 40px; */
 
       div {
-        max-width: 150px;
         width: 100%;
       }
     }

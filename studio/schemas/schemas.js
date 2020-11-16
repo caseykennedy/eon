@@ -8,11 +8,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
 import blockText from './blockText'
 import figure from './figure'
+import instagram from './instagram'
 import mainImage from './mainImage'
-import postCategory from './postCategory'
-import person from './person'
-import position from './position'
-import post from './post'
 import retailer from './retailer'
 import siteSettings from './siteSettings'
 
@@ -29,6 +26,7 @@ export default createSchema({
     blockContent,
     blockText,
     figure,
+    instagram,
     mainImage,
     retailer,
     siteSettings,

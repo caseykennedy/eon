@@ -21,6 +21,12 @@ export default {
       name: 'logo',
       title: 'Logo',
       type: 'figure',
+    },
+    {
+      name: 'publishedAt',
+      title: 'Published at',
+      description: 'For ordering the list',
+      type: 'datetime',
     }
   ]
 }

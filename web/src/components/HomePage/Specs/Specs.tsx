@@ -3,13 +3,11 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Grid, Cell } from 'styled-css-grid'
-
-import * as S from './styles.scss'
-import theme from '../../../gatsby-plugin-theme-ui'
 
 // Theme + ui
 import { Box, Flex, Heading, Text } from '../../ui'
+import * as S from './styles.scss'
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // Components
 import Section from '../../Section'
@@ -67,7 +65,7 @@ const Specs = () => {
             </Box>
           </Flex>
           <Box width={[8 / 10, 2 / 3, 1 / 2]} pr={[5, 0]}>
-            <Heading as="h3" mb={[4, 5]}>
+            <Heading as="h3" className="text--xl" mb={[4, 5]}>
               <Text as="span" color="primary">
                 Works on contact;
               </Text>{' '}
@@ -86,7 +84,7 @@ const Specs = () => {
             </Box>
           </Flex>
           <Box width={[1, 7 / 10, 6 / 10]} pr={[6, 0]}>
-            <Heading as="h3" mb={[4, 5]}>
+            <Heading as="h3" className="text--xl" mb={[4, 5]}>
               Child-safe{' '}
               <span>
                 <Lock />
@@ -111,7 +109,7 @@ const Specs = () => {
             </Box>
           </Flex>
           <Box width={[1, 7 / 10, 6 / 10]} pr={[6, 0]}>
-            <Heading as="h3" mb={[4, 5]}>
+            <Heading as="h3" className="text--xl" mb={[4, 5]}>
               Fine, wide angle{' '}
               <span>
                 <Spray />
@@ -127,7 +125,7 @@ const Specs = () => {
 
         <Flex className="spec__block">
           <Box width={[1, 7 / 10, 6 / 10]} pr={[5, 0]}>
-            <Heading as="h3" mb={[4, 5]}>
+            <Heading as="h3" className="text--xl" mb={[4, 5]}>
               190 proof, plant-based{' '}
               <span>
                 <CornCob />,
@@ -148,8 +146,8 @@ const Specs = () => {
         </Flex>
 
         <Flex className="spec__block">
-          <Box width={[1, 7 / 10, 8 / 10]} pr={[5, 0]}>
-            <Heading as="h3" mb={[4, 5]}>
+          <Box width={[1, 7 / 10, 8 / 10]} pr={[5, 4, 11]}>
+            <Heading as="h3" className="text--xl" mb={[4, 5]}>
               Lab tested, high performance{' '}
               <span>
                 <Beaker />
