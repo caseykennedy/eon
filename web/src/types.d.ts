@@ -12,6 +12,32 @@ type ImageShape = {
   srcSetWebp: string
 }
 
+// Instagram
+// ___________________________________________________________________
+
+type InstagramFeedShape = {
+  instagram: InstagramFeedEdges
+}
+
+type InstagramFeedEdges = {
+  edges: {
+    node: InstagramFeedNode
+  }[]
+}
+
+type InstagramFeedNode = {
+  id: string
+  _rawCaption: string
+  figure: {
+    alt: string
+    asset: {
+      fluid: ImageShape
+    }
+  }
+  publishedAt: string
+  title: string
+}
+
 // Shopify Product
 // ___________________________________________________________________
 
@@ -54,15 +80,7 @@ type ShopifyProductNode = {
     id: string
     localFile: {
       childImageSharp: {
-        fluid: {
-          tracedSVG: string
-          aspectRatio: string
-          src: string
-          srcSet: string
-          srcWebp: string
-          srcSetWebp: string
-          sizes: string
-        }
+        fluid: ImageShape
       }
     }
   }[]

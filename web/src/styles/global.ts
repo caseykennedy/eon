@@ -20,16 +20,16 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
 
-  html,
+  /* html,
   body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
 
-    @media (max-width: 767px) {
+    @media (max-width: 400px) {
       overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
-  }
+  } */
   
   body {
     background: ${theme.colors.secondary};

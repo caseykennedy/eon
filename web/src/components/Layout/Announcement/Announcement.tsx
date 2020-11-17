@@ -52,9 +52,9 @@ const Message: React.FC<Props> = ({
           </Flex>
         </Flex>
       </Link>
-      <S.Exit onClick={handleExit} aria-label="close announcement">
+      {/* <S.Exit onClick={handleExit} aria-label="close announcement">
         <Icon name="plus" color="black" />
-      </S.Exit>
+      </S.Exit> */}
     </>
   )
 }

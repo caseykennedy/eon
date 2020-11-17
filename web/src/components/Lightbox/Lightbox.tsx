@@ -6,6 +6,9 @@ import React from 'react'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
 
+// UI
+import { Box, Flex, Text } from '../ui'
+
 // ___________________________________________________________________
 
 type LightboxShape = {

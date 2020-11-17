@@ -6,37 +6,10 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 // ___________________________________________________________________
 
-type Props = {
-  instagram: {
-    edges: {
-      node: {
-        id: string
-        _rawCaption: string
-        figure: {
-          alt: string
-          asset: {
-            fluid: {
-              srcWebp: string
-              srcSetWebp: string
-              srcSet: string
-              src: string
-              sizes: string
-              base64: string
-              aspectRatio: number
-            }
-          }
-        }
-        publishedAt: string
-        title: string
-      }
-    }[]
-  }
-}
-
 const useInstagram = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<InstagramFeedShape>(graphql`
     query InstagramQuery {
-      instagram: allSanityInstagram {
+      instagram: allSanityInstagram(sort: {order: DESC, fields: publishedAt}) {
         edges {
           node {
             _rawCaption

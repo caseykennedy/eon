@@ -8,27 +8,7 @@ import { Box, Flex } from '../ui'
 import { motion } from 'framer-motion'
 import theme from '../../gatsby-plugin-theme-ui'
 
-import Headroom from 'react-headroom'
-
 // ___________________________________________________________________
-
-const bodyScroll = () => {
-  const {
-    isCartOpen,
-    setCartOpen,
-  } = useContext(StoreContext)
-  
-  let isOpen
-  if (!isCartOpen) {
-    isOpen = false
-  } {
-    isOpen = true
-  }
-
-  return isOpen
-}
-
-const overflowScroll = bodyScroll
 
 const cartWidth = `500px`
 
@@ -191,5 +171,14 @@ export const Exit = styled(Flex)`
 `
 
 export const GlobalStyles = createGlobalStyle<{isOpen?: boolean}>`
+  html,
+  body {
+    height: 100vh;
+    width: 100%;
 
+    @media (max-width: 400px) {
+      overflow: ${p => p.isOpen ? 'auto' : 'inherit'};
+      -webkit-overflow-scrolling: touch;
+    }
+  }
 `

@@ -57,7 +57,7 @@ const Portal: React.FC<Props> = ({
     portal.current.id = id
 
     if (!document.body.querySelector(`#${id}`)) {
-      document.body.append(portal.current)
+      document.body.prepend(portal.current)
     }
 
     if (!hasUpdated) forceUpdate(true)

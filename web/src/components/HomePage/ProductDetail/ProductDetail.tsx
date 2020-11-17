@@ -56,12 +56,12 @@ const ProductDetail: React.FC = () => {
             </p>
 
             <p>
-              eOn hand sanitizer cans are fully recyclable, for a greener ♻️
+              eOn hand sanitizer cans are fully recyclable—for a greener ♻️
               environment. Proudly made in the 🇺🇸USA in an EPA &amp; FDA Registered
               Facility.
             </p>
 
-            <Box mt={7}>
+            <Box mt={[6, 6, 7]}>
               <AddToCart>Buy Now</AddToCart>
             </Box>
 

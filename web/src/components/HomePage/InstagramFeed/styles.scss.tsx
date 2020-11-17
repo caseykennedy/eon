@@ -14,8 +14,7 @@ import { Parallax } from 'react-scroll-parallax'
 
 export const InstagramFeed = styled(Box)`
   border-top: ${theme.border};
-  padding-top: ${theme.space[6]};
-  /* padding: ${theme.space[6]} ${theme.space[2]} ${theme.space[2]}; */
+  padding: ${theme.space[6]} ${theme.space[0]} ${theme.space[0]};
 
   @media ${theme.mq.desktop} {
     padding-top: ${theme.space[7]};
