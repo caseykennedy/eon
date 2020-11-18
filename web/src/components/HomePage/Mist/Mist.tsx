@@ -69,7 +69,7 @@ const How = () => {
           </Box>
         </Box>
         <Box flex={[1, 1, 4]}>
-          <Heading as="h4" mb={4}>
+          <Heading mb={4} className="text--md">
             No mess, just mist.
           </Heading>
           <Heading as="h2" className="text--xl">

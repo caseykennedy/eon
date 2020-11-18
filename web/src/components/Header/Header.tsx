@@ -21,10 +21,8 @@ import Cart from '../Cart'
 import BuyButton from './BuyButton'
 import Icon from '../Icons'
 
-import Announcement from '../Layout/Announcement'
-
 // Elements
-import { Box, Flex } from '../ui'
+import { Box } from '../ui'
 
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'

@@ -13,7 +13,6 @@ import { Input } from 'theme-ui'
 
 // Components
 import Icon from '../Icons'
-import FlagUsa from '../FlagUsa'
 import CanMulti from '../CanMulti'
 
 // ___________________________________________________________________

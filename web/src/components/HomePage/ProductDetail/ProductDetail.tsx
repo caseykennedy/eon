@@ -43,7 +43,7 @@ const ProductDetail: React.FC = () => {
             </Box>
           </Box>
           <Box flex={[1]} mr={[0, 0, 7]}>
-            <Text as="h4">
+            <Text className="text--md">
               Spray and go.
             </Text>
             <h3 className="text--xl">

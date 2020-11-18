@@ -60,7 +60,7 @@ const ReviewSlider: React.FC = ({ children }) => {
 const Specs: React.FC<Props> = () => {
   return (
     <S.Reviews bg="white" overflow="hidden">
-      <h4>What people are saying</h4>
+      <Text className="text--md">What people are saying</Text>
       <br />
       <br />
       <ReviewSlider>

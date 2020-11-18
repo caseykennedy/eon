@@ -8,10 +8,6 @@ import React, { useContext, useState, useEffect, useCallback } from 'react'
 import StoreContext from '../../../context/StoreContext'
 import useProduct from '../../../hooks/useProduct'
 
-// Components
-import Icon from '../../Icons'
-import { Box, Text } from '../../ui'
-
 // Theme
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
