@@ -29,8 +29,9 @@ const Hero = () => {
       }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75 }}
+
     >
-      <S.Hero py={[4, 5]}>
+      <S.Hero pb={[4, 5]}>
         <S.Decorator>
           <Shine />
         </S.Decorator>

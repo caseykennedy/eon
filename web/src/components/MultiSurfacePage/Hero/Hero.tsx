@@ -28,25 +28,24 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75 }}
     >
-      <S.Hero py={[4, 5]}>
-        <S.Decorator>
-          <Shine />
-        </S.Decorator>
+      <S.Hero py={[6, 7]}>
+        <S.Decorator>{/* <Shine /> */}</S.Decorator>
 
-        <Flex className="hero__figure">
+        {/* <Flex className="hero__figure">
           <Box position="relative">
             <Box className="figure">
-              <ImgMatch
-                src="can.png"
-                altText="eOn Hand Sanitizer can"
-              />
+              <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
             </Box>
           </Box>
-        </Flex>
+        </Flex> */}
 
         <Flex px={theme.gutter.axis} className="hero__inner">
-          <Box position="relative" style={{ zIndex: 9 }}>
-            <Text as="h4" my={[3, 4]}>
+          <Box
+            position="relative"
+            width={[1, 1 / 2, 1 / 2]}
+            style={{ zIndex: 9 }}
+          >
+            <Text as="h4" mb={[3, 4]}>
               {data.title}
             </Text>
             <h1
@@ -63,9 +62,7 @@ const Hero = () => {
             transition={{ delay: 1.5, duration: 0.5 }}
           >
             <Flex className="hero__features">
-              <Flex className="cta">
-                {/* <AddToCart /> */}
-              </Flex>
+              <Flex className="cta">{/* <AddToCart /> */}</Flex>
 
               <Flex className="feature-set">
                 <Text
@@ -94,9 +91,9 @@ const Hero = () => {
 export default Hero
 
 const data = {
-  title: 'eOn makes it simple.',
+  title: 'eOn',
   headline:
     'Find eOn multi-surface disinfectant at your favorite local pharmacy, retail or grocery store today.',
-  featureA: 'Effective on<br /><mark>99.99%</mark> of<br />common germs',
-  featureB: 'personal size<br />germ protection<br />on the go'
+  featureA: 'Eliminates<br /><mark>99.99%</mark> of bacteria<br />and viruses',
+  featureB: 'personal size<br />multi-surface<br />disinfectant'
 }

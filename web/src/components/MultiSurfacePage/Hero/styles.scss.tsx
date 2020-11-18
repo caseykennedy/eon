@@ -10,20 +10,14 @@ import { Box, Flex } from '../../ui'
 // ___________________________________________________________________
 
 export const Hero = styled(Flex)`
-  height: 768px;
-  min-height: 400px;
+  /* min-height: 800px; */
   position: relative;
   overflow: hidden;
 
   @media ${theme.mq.tablet} {
-    height: calc(
-      100vh - calc(${theme.headerHeight} * 2) - ${theme.trademarksHeight}
-    );
-    max-height: 750px;
   }
 
   @media ${theme.mq.desktop} {
-    max-height: 1200px;
   }
 
   .hero {
@@ -39,7 +33,7 @@ export const Hero = styled(Flex)`
     }
 
     &__figure {
-      justify-content: center;
+      justify-content: flex-end;
       position: absolute;
       margin-right: auto;
 
@@ -52,19 +46,13 @@ export const Hero = styled(Flex)`
       }
 
       .figure {
-        margin-right: ${theme.space[5]};
-        margin-left: 0;
         width: calc(${theme.space[7]} * 2.25);
 
         @media ${theme.mq.tablet} {
-          margin-right: ${theme.space[6]};
-          margin-left: 0;
           width: calc(${theme.space[7]} * 3);
         }
 
         @media ${theme.mq.desktop} {
-          margin-right: ${theme.space[7]};
-          margin-left: ${theme.space[5]};
           width: calc(${theme.space[9]} * 2);
         }
       }
@@ -107,7 +95,7 @@ export const Hero = styled(Flex)`
         width: 100%;
 
         @media ${theme.mq.tablet} {
-          margin-top: 0;
+          margin-top: ${theme.space[7]};
           width: 50%;
         }
 

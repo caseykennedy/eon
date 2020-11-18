@@ -168,7 +168,7 @@ const Typography = css`
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.baseLetterSpacing};
-    margin: 0 0 ${theme.space[2]};
+    margin: 0 0 ${theme.space[3]};
     transition: ${theme.transition.all};
   }
 

@@ -47,7 +47,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
 
   const schemaOrgWebPage = {
     '@context': 'http://schema.org',
-    '@type': 'WebPage',
+    '@type': 'Product',
     url: settings.url,
     headline: settings.headline,
     inLanguage: settings.language,
@@ -76,7 +76,21 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     image: {
       '@type': 'ImageObject',
       url: `${settings.banner}`
-    }
+    },
+    // Product specific
+    offers: {
+      '@type': 'Offer',
+      url: 'https://eonmist.com',
+      priceCurrency: 'USD',
+      price: '4.49',
+      priceValidUntil: '2021-11-20',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability: 'https://schema.org/InStock'
+    },
+    brand: {
+      '@type': 'Brand',
+      name: 'eOn Mist™'
+    },
   }
 
   // Initial breadcrumb list

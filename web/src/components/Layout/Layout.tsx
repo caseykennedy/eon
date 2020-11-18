@@ -5,7 +5,6 @@
 
 import React, { useRef } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
 import ContextProvider from '../../provider/ContextProvider'
 
@@ -33,8 +32,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
 
-  // const { pathname } = location
-  // const isHome = pathname === '/'
+  const { pathname } = location
+  const isHome: boolean = pathname === '/'
 
   // eslint-disable-next-line no-console
   console.log(
@@ -47,7 +46,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <GlobalStyles />
         <S.Wrapper id="main-root">
           <Header mainRef={mainRef} />
-          <Announcement to={`/eon-multi-surface`} mainRef={mainRef} />
+          {isHome && (
+            <Announcement to={`/eon-multi-surface`} mainRef={mainRef} />
+          )}
           <S.Main ref={mainRef}>{children}</S.Main>
           <Footer />
         </S.Wrapper>

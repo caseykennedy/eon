@@ -29,10 +29,10 @@ const ProductDetail: React.FC = () => {
         <Flex
           alignItems="flex-start"
           flexWrap="wrap"
-          flexDirection={['column', 'column', 'row-reverse']}
+          flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box flex={1} width={1} style={{ position: 'relative', zIndex: 9 }}>
-            <Box width={1} pl={[7, 12, 7]} mb={[5, 0, 0]}>
+            <Box width={1} pl={[7, 6, 7]} mb={[5, 0, 0]}>
               <ImgMatch
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."

@@ -47,7 +47,7 @@ const InstagramFeed = () => {
         </Text>
       </Box>
 
-      <Grid columns={[3, 6, 3]} gap={0} className="ig-feed-grid">
+      <Grid columns={[3]} gap={0} className="ig-feed-grid">
         {feed.slice(0, 3).map(({ node: shot }, idx) => (
           <Flex
             className="ig-feed-grid__cell"
