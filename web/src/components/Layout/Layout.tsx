@@ -31,10 +31,9 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
-
   const isBrowser = typeof window !== 'undefined'
 
-  let isHome
+  let isHome: boolean | null
   if (!isBrowser) {
     isHome = null
   } else {
