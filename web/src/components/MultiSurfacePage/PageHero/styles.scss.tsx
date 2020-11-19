@@ -1,4 +1,4 @@
-// Hero Styles:
+// PageHero Styles:
 
 // ___________________________________________________________________
 
@@ -9,7 +9,7 @@ import { Box, Flex } from '../../ui'
 
 // ___________________________________________________________________
 
-export const Hero = styled(Flex)`
+export const PageHero = styled(Flex)`
   /* min-height: 800px; */
   position: relative;
   overflow: hidden;
@@ -22,10 +22,17 @@ export const Hero = styled(Flex)`
 
   .hero {
     &__inner {
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      width: 100%;
+
+      @media ${theme.mq.tablet} {
+      }
+    }
+
+    &__message {
       flex-direction: column;
       justify-content: flex-end;
-      margin: 0 auto;
-      width: 100%;
 
       @media ${theme.mq.tablet} {
         justify-content: space-between;
@@ -33,27 +40,41 @@ export const Hero = styled(Flex)`
     }
 
     &__figure {
-      justify-content: flex-end;
-      position: absolute;
-      margin-right: auto;
-
-      width: 100%;
-      z-index: 0;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: ${theme.space[6]};
+      position: relative;
 
       @media ${theme.mq.tablet} {
-        align-self: center;
-        margin: 0 auto;
+        margin-top: calc(${theme.space[5]} * -1);
+        margin-bottom: 0;
       }
 
-      .figure {
-        width: calc(${theme.space[7]} * 2.25);
+      .decorator {
+        position: absolute;
+        top: ${theme.space[7]};
+        width: 250px;
 
         @media ${theme.mq.tablet} {
-          width: calc(${theme.space[7]} * 3);
+          top: calc(${theme.space[7]} * 1.25);
+          width: 275px;
         }
 
         @media ${theme.mq.desktop} {
-          width: calc(${theme.space[9]} * 2);
+          top: ${theme.space[9]};
+          width: 400px;
+        }
+      }
+
+      .figure {
+        width: 100px;
+
+        @media ${theme.mq.tablet} {
+          width: 150px;
+        }
+
+        @media ${theme.mq.desktop} {
+          width: 200px;
         }
       }
 
@@ -93,15 +114,6 @@ export const Hero = styled(Flex)`
       .feature-set {
         margin-top: ${theme.space[4]};
         width: 100%;
-
-        @media ${theme.mq.tablet} {
-          margin-top: ${theme.space[7]};
-          width: 50%;
-        }
-
-        @media ${theme.mq.desktop} {
-          width: 66.666%;
-        }
       }
 
       .cta {
@@ -132,6 +144,6 @@ export const Decorator = styled.div`
   @media ${theme.mq.tablet} {
     top: ${theme.space[5]};
     right: calc(${theme.space[6]} + 14px);
-    width: calc(${theme.space[9]} / 1.25);
+    width: calc(${theme.space[9]} * 3);
   }
 `

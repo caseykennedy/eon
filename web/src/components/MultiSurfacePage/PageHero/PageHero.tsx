@@ -15,11 +15,13 @@ import { Box, Flex, Text } from '../../ui'
 // Compoonents
 import ImgMatch from '../../ImgMatch'
 import Shine from '../../Shine'
-import Trademarks from '../../Trademarks'
+import Trademarks from './Trademarks'
+
+import spray from './assets/multi-spray.svg'
 
 // ___________________________________________________________________
 
-const Hero = () => {
+const PageHero = () => {
   return (
     <motion.div
       initial={{
@@ -28,41 +30,37 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75 }}
     >
-      <S.Hero py={[6, 7]}>
-        <S.Decorator>{/* <Shine /> */}</S.Decorator>
-
-        {/* <Flex className="hero__figure">
-          <Box position="relative">
-            <Box className="figure">
-              <ImgMatch src="can.png" altText="eOn Hand Sanitizer can" />
-            </Box>
-          </Box>
-        </Flex> */}
+      <S.PageHero pt={[6, 7]} pb={4}>
+        {/* <S.Decorator>
+          <img src={spray} />
+        </S.Decorator> */}
 
         <Flex px={theme.gutter.axis} className="hero__inner">
-          <Box
-            position="relative"
-            width={[1, 1 / 2, 1 / 2]}
-            style={{ zIndex: 9 }}
-          >
-            <Text as="h4" mb={[3, 4]}>
-              {data.title}
-            </Text>
-            <h1
-              dangerouslySetInnerHTML={{ __html: data.headline }}
-              className="text--xl"
-            />
-          </Box>
+          <Flex width={[1, 1 / 2, 1 / 2]} className="hero__figure">
+            <Box className="decorator">
+              <img src={spray} />
+            </Box>
+            <Box className="figure">
+              <ImgMatch
+                src="can-multi-surface-eon-mist.png"
+                altText="eOn Hand Sanitizer can"
+              />
+            </Box>
+          </Flex>
 
-          <motion.div
-            initial={{
-              opacity: 0
-            }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
-          >
+          <Flex width={[1, 1 / 2, 1 / 2]} className="hero__message">
+            <Box>
+              <Text as="h4" mb={[3, 4]}>
+                {data.title}
+              </Text>
+              <h1
+                dangerouslySetInnerHTML={{ __html: data.headline }}
+                className="text--xl"
+              />
+            </Box>
+
             <Flex className="hero__features">
-              <Flex className="cta">{/* <AddToCart /> */}</Flex>
+              {/* <Flex className="cta"><AddToCart /></Flex> */}
 
               <Flex className="feature-set">
                 <Text
@@ -80,18 +78,18 @@ const Hero = () => {
                 />
               </Flex>
             </Flex>
-          </motion.div>
+          </Flex>
         </Flex>
-      </S.Hero>
+      </S.PageHero>
       <Trademarks />
     </motion.div>
   )
 }
 
-export default Hero
+export default PageHero
 
 const data = {
-  title: 'eOn',
+  title: 'eOn multi-surface',
   headline:
     'Find eOn multi-surface disinfectant at your favorite local pharmacy, retail or grocery store today.',
   featureA: 'Eliminates<br /><mark>99.99%</mark> of bacteria<br />and viruses',

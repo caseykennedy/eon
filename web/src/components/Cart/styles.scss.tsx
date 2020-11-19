@@ -173,11 +173,10 @@ export const Exit = styled(Flex)`
 export const GlobalStyles = createGlobalStyle<{isOpen?: boolean}>`
   html,
   body {
-    height: 100vh;
-    width: 100%;
+    height: 100%;
 
     @media (max-width: 400px) {
-      overflow: ${p => p.isOpen ? 'auto' : 'inherit'};
+      overflow: ${p => p.isOpen ? 'auto' : 'initial'};
       -webkit-overflow-scrolling: touch;
     }
   }

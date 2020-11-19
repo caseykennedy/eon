@@ -12,7 +12,8 @@ import { Box, Flex } from '../../ui'
 export const Hero = styled(Flex)`
   height: 768px;
   min-height: 400px;
-  padding-top: ${theme.headerHeight};
+  padding-top: ${theme.space[2]};
+  padding-bottom: ${theme.space[4]};
   position: relative;
   overflow: hidden;
 
@@ -22,6 +23,7 @@ export const Hero = styled(Flex)`
     );
     max-height: 750px;
     min-height: 500px;
+    padding-top: ${theme.headerHeight};
   }
 
   @media ${theme.mq.desktop} {

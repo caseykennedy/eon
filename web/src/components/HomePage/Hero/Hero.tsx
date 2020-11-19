@@ -31,7 +31,7 @@ const Hero = () => {
       transition={{ duration: 0.75 }}
 
     >
-      <S.Hero pb={[4, 5]}>
+      <S.Hero>
         <S.Decorator>
           <Shine />
         </S.Decorator>

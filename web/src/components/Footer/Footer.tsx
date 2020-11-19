@@ -51,21 +51,8 @@ const PreFoot = () => (
 
 const Terms = () => (
   <S.Terms>
-    <p>
-      <small>
-        eOn® Advanced Hand Sanitizer is America’s #1 hand sanitizer, and kills
-        99.99% of most common germs that can make you sick. We offer the
-        germ-killing power of eOn® products in several different formats and
-        dispensing options, so you can promote well-being throughout your
-        facility – and your home.
-      </small>
-    </p>
-    <p>
-      <small>
-        eOn® products are available in luxurious foam, refreshing gel,
-        convenient spray and durable wipes. That means no matter where you are,
-        you’re never far from hand hygiene.
-      </small>
+    <p className="t--small">
+      eOn branded products are America’s premiere - travel size - TSA friendly, continuous-spray packaged goods for on-the-go protection from dirty, bad, nasties which make you sick. Our products are available so you can promote well-being throughout your facility – and your home.
     </p>
   </S.Terms>
 )

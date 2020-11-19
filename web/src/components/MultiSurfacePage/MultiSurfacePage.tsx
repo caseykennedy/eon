@@ -15,7 +15,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 import Section from '../Section'
 
 // Sections
-import Hero from './Hero'
+import PageHero from './PageHero'
 import Retailers from './Retailers'
 
 // ___________________________________________________________________
@@ -23,12 +23,12 @@ import Retailers from './Retailers'
 const MultiSurfacePage = () => {
   return (
     <S.MultiSurfacePage>
-      <Hero />
+      <PageHero />
       <Section bg="babyblue">
         <Text as="p">
-          Find eOn multi-surface disinfectant<br />in a store near you.
+          Store locator coming soon!
+          {/* Find eOn multi-surface disinfectant<br />in a store near you. */}
         </Text>
-        <Box bg="white" mt={7} py={12} />
       </Section>
       <Retailers />
     </S.MultiSurfacePage>
