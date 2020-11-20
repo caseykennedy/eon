@@ -22,13 +22,13 @@ export const Announcement = styled(motion.div)`
   height: ${height};
   max-height: 0;
   width: 100%;
-  
+
   opacity: 0;
   top: 0;
   padding: 0 calc(${theme.space[3]});
   position: fixed;
   visibility: hidden;
-  z-index: 999;
+  z-index: 11;
 
   &.announcement {
     &--open {
