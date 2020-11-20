@@ -16,7 +16,7 @@ const useInstagram = () => {
             figure {
               alt
               asset {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 300) {
                   aspectRatio
                   base64
                   sizes

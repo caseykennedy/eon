@@ -31,14 +31,14 @@ const InstagramFeed = () => {
   const [isOpen, setOpen] = useState(false)
   const [currentImageIndex, setCurrentIndex] = useState(0)
   return (
-    <S.InstagramFeed bg="white">
+    <S.InstagramFeed bg="babyblue">
       <Box mb={[6, 6, 7]} pl={theme.gutter.axis}>
         <Text as="p">
           Get social with us
           <br />
           <Box
             as="a"
-            color="gray"
+            color="primary"
             href="https://www.instagram.com/eonmist/"
             target="_blank"
           >
@@ -47,8 +47,8 @@ const InstagramFeed = () => {
         </Text>
       </Box>
 
-      <Grid columns={[3]} gap={0} className="ig-feed-grid">
-        {feed.slice(0, 3).map(({ node: shot }, idx) => (
+      <Grid columns={[3, 6, 6]} gap={0} className="ig-feed-grid">
+        {feed.map(({ node: shot }, idx) => (
           <Flex
             className="ig-feed-grid__cell"
             onClick={() => {

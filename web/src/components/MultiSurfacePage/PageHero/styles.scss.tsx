@@ -11,13 +11,19 @@ import { Box, Flex } from '../../ui'
 
 export const PageHero = styled(Flex)`
   /* min-height: 800px; */
+  padding-top: ${theme.space[6]};
+  padding-bottom: ${theme.space[5]};
   position: relative;
   overflow: hidden;
 
   @media ${theme.mq.tablet} {
+    padding-top: ${theme.space[6]};
+    padding-bottom: ${theme.space[6]};
   }
 
   @media ${theme.mq.desktop} {
+    padding-top: ${theme.space[7]};
+    padding-bottom: ${theme.space[7]};
   }
 
   .hero {
@@ -67,7 +73,7 @@ export const PageHero = styled(Flex)`
       }
 
       .figure {
-        width: 100px;
+        width: 110px;
 
         @media ${theme.mq.tablet} {
           width: 150px;

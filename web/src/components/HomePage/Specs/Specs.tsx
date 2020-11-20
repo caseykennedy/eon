@@ -123,7 +123,7 @@ const Specs = () => {
           </Box>
         </Flex>
 
-        <Flex className="spec__block">
+        <Flex className="spec__block" mt={[5, 0, 0]}>
           <Box width={[1, 7 / 10, 6 / 10]} pr={[5, 0]}>
             <Heading as="h3" className="text--xl" mb={[4, 5]}>
               190 proof, plant-based{' '}

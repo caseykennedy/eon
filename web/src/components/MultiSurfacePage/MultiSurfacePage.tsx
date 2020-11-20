@@ -24,12 +24,12 @@ const MultiSurfacePage = () => {
   return (
     <S.MultiSurfacePage>
       <PageHero />
-      <Section bg="babyblue">
-        <Text as="p">
-          Store locator coming soon!
+      <S.StoreLocator bg="babyblue">
+        <Text as="h4" mb={0} textAlign="center" py={4}>
+          store locator coming soon 🥳
           {/* Find eOn multi-surface disinfectant<br />in a store near you. */}
         </Text>
-      </Section>
+      </S.StoreLocator>
       <Retailers />
     </S.MultiSurfacePage>
   )

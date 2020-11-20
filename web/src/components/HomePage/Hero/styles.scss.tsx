@@ -13,7 +13,7 @@ export const Hero = styled(Flex)`
   height: 768px;
   min-height: 400px;
   padding-top: ${theme.space[2]};
-  padding-bottom: ${theme.space[4]};
+  padding-bottom: ${theme.space[5]};
   position: relative;
   overflow: hidden;
 
@@ -23,11 +23,14 @@ export const Hero = styled(Flex)`
     );
     max-height: 750px;
     min-height: 500px;
-    padding-top: ${theme.headerHeight};
+    padding-top: ${theme.space[6]};
+    padding-bottom: ${theme.space[6]};
   }
 
   @media ${theme.mq.desktop} {
     max-height: 1200px;
+    padding-top: ${theme.space[7]};
+    padding-bottom: ${theme.space[7]};
   }
 
   .hero {

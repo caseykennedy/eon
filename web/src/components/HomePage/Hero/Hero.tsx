@@ -49,7 +49,7 @@ const Hero = () => {
                 opacity: 0
               }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 1 }}
+              transition={{ delay: 1.25, duration: 0.5 }}
             >
               <Box className="spray">
                 <CanSpray />
@@ -84,15 +84,14 @@ const Hero = () => {
               <Flex className="feature-set">
                 <Text
                   as="p"
-                  mr={5}
-                  mb={[5, 0, 0]}
+                  mr={[4, 5, 5]}
+                  mb={0}
                   dangerouslySetInnerHTML={{ __html: data.featureA }}
                 />
 
                 <Text
                   as="p"
                   color="primary"
-                  mr={5}
                   dangerouslySetInnerHTML={{ __html: data.featureB }}
                 />
               </Flex>

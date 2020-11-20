@@ -21,7 +21,7 @@ import useRetailers from '../../../hooks/useRetailers'
 const Retailers = () => {
   const retailers = useRetailers()
   return (
-    <S.Retailers bg="white" border={true}>
+    <S.Retailers bg="white">
       <Text as="p" mb={[5, 7]}>
         eOn sanitizing mist&trade; brand
         <br />

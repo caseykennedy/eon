@@ -23,23 +23,24 @@ import spray from './assets/multi-spray.svg'
 
 const PageHero = () => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0
-      }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.75 }}
-    >
-      <S.PageHero pt={[6, 7]} pb={4}>
+    <>
+      <S.PageHero>
         {/* <S.Decorator>
           <img src={spray} />
         </S.Decorator> */}
 
         <Flex px={theme.gutter.axis} className="hero__inner">
           <Flex width={[1, 1 / 2, 1 / 2]} className="hero__figure">
-            <Box className="decorator">
-              <img src={spray} />
-            </Box>
+            <motion.div
+              initial={{
+                opacity: 0
+              }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.25, duration: 0.5 }}
+              className="decorator"
+            >
+               <img src={spray} alt="eOn multi surface mist" />
+            </motion.div>
             <Box className="figure">
               <ImgMatch
                 src="can-multi-surface-eon-mist.png"
@@ -60,8 +61,6 @@ const PageHero = () => {
             </Box>
 
             <Flex className="hero__features">
-              {/* <Flex className="cta"><AddToCart /></Flex> */}
-
               <Flex className="feature-set">
                 <Text
                   as="p"
@@ -82,14 +81,14 @@ const PageHero = () => {
         </Flex>
       </S.PageHero>
       <Trademarks />
-    </motion.div>
+    </>
   )
 }
 
 export default PageHero
 
 const data = {
-  title: 'eOn multi-surface',
+  title: 'More info coming.',
   headline:
     'Find eOn multi-surface disinfectant at your favorite local pharmacy, retail or grocery store today.',
   featureA: 'Eliminates<br /><mark>99.99%</mark> of bacteria<br />and viruses',

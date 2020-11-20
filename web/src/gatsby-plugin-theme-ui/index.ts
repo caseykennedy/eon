@@ -97,7 +97,7 @@ const theme: ThemeShape = {
     quinary: '#dcedff',
 
     // Theme colors
-    lightgray: '#EEEEEE',
+    lightgray: '#F1F1F1',
     gray: '#C4C4c4',
     darkgray: '#9D9FA2',
     darknight: '#09040b',
