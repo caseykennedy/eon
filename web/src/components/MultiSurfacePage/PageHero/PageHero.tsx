@@ -30,7 +30,7 @@ const PageHero = () => {
         </S.Decorator> */}
 
         <Flex px={theme.gutter.axis} className="hero__inner">
-          <Flex width={[1, 1 / 2, 1 / 2]} className="hero__figure">
+          <Flex width={[1, 4 / 10, 1 / 2]} className="hero__figure">
             <motion.div
               initial={{
                 opacity: 0
@@ -39,7 +39,7 @@ const PageHero = () => {
               transition={{ delay: 1.25, duration: 0.5 }}
               className="decorator"
             >
-               <img src={spray} alt="eOn multi surface mist" />
+              <img src={spray} alt="eOn multi surface mist" />
             </motion.div>
             <Box className="figure">
               <ImgMatch
@@ -49,7 +49,7 @@ const PageHero = () => {
             </Box>
           </Flex>
 
-          <Flex width={[1, 1 / 2, 1 / 2]} className="hero__message">
+          <Flex width={[1, 6 / 10, 1 / 2]} className="hero__message">
             <Box>
               <Text as="h4" mb={[3, 4]}>
                 {data.title}

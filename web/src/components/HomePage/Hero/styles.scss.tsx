@@ -29,8 +29,6 @@ export const Hero = styled(Flex)`
 
   @media ${theme.mq.desktop} {
     max-height: 1200px;
-    padding-top: ${theme.space[7]};
-    padding-bottom: ${theme.space[7]};
   }
 
   .hero {

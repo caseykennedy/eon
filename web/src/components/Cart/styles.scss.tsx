@@ -60,7 +60,7 @@ export const Cart = styled(Box)`
     &__utilities {
       display: flex;
       justify-content: space-between;
-      margin-bottom: ${theme.space[4]};
+      margin-bottom: ${theme.space[3]};
       width: 100%;
 
       .close-cart {

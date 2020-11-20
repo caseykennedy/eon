@@ -22,8 +22,6 @@ export const PageHero = styled(Flex)`
   }
 
   @media ${theme.mq.desktop} {
-    padding-top: ${theme.space[7]};
-    padding-bottom: ${theme.space[7]};
   }
 
   .hero {
@@ -54,6 +52,8 @@ export const PageHero = styled(Flex)`
       @media ${theme.mq.tablet} {
         margin-top: calc(${theme.space[5]} * -1);
         margin-bottom: 0;
+        padding-top: ${theme.space[4]};
+        padding-bottom: ${theme.space[4]};
       }
 
       .decorator {
