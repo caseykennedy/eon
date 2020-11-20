@@ -4,6 +4,7 @@
 // ___________________________________________________________________
 
 import React, { useRef } from 'react'
+import { withPrefix } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 
 import ContextProvider from '../../provider/ContextProvider'
@@ -22,7 +23,7 @@ import 'swiper/css/swiper.css'
 // ___________________________________________________________________
 
 type LayoutProps = {
-  children: React.ReactNode
+  children: any
   location?: {
     pathname: string
   }
@@ -33,15 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const mainRef = useRef<HTMLDivElement>(null)
   const isBrowser = typeof window !== 'undefined'
 
-  let isHome: boolean | null
-  if (!isBrowser) {
-    isHome = null
-  } else {
-    const { pathname } = location
-    isHome = pathname === '/'
-  }
-
-  const showAnnouncement = isHome
+  const isHomepage = isBrowser && location.pathname === withPrefix('/')
 
   // eslint-disable-next-line no-console
   console.log(
@@ -54,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <GlobalStyles />
         <S.Wrapper id="main-root">
           <Header mainRef={mainRef} />
-          {showAnnouncement && (
+          {isHomepage && (
             <Announcement to={`/eon-multi-surface`} mainRef={mainRef} />
           )}
           <S.Main ref={mainRef}>{children}</S.Main>
