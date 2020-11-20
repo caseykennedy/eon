@@ -90,7 +90,7 @@ export default PageHero
 const data = {
   title: 'More info coming.',
   headline:
-    'Find eOn multi-surface disinfectant at your favorite local pharmacy, retail or grocery store today.',
+    'Find eOn multi-surface disinfectant at your local pharmacy, retail or grocery store today.',
   featureA: 'Eliminates<br /><mark>99.99%</mark> of bacteria<br />and viruses',
   featureB: 'personal size<br />multi-surface<br />disinfectant'
 }

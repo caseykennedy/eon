@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
             <small>Contact Us</small>
           </Flex>
         </Flex>
-        <Flex className="footer__copyright">&copy;{getYear()} eOn Mist</Flex>
+        <Flex className="footer__copyright">&copy;{getYear()} eOn Mist&trade;</Flex>
       </S.Footer>
     </>
   )

@@ -68,7 +68,7 @@ export const PageHero = styled(Flex)`
 
         @media ${theme.mq.desktop} {
           top: ${theme.space[9]};
-          width: 400px;
+          width: 390px;
         }
       }
 
@@ -80,7 +80,7 @@ export const PageHero = styled(Flex)`
         }
 
         @media ${theme.mq.desktop} {
-          width: 200px;
+          width: 185px;
         }
       }
 

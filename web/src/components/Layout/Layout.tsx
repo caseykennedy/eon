@@ -41,6 +41,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     isHome = pathname === '/'
   }
 
+  const showAnnouncement = isHome
+
   // eslint-disable-next-line no-console
   console.log(
     `%c eOn Mist — built by caseyKennedy.me `,
@@ -52,7 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <GlobalStyles />
         <S.Wrapper id="main-root">
           <Header mainRef={mainRef} />
-          {isHome && (
+          {showAnnouncement && (
             <Announcement to={`/eon-multi-surface`} mainRef={mainRef} />
           )}
           <S.Main ref={mainRef}>{children}</S.Main>

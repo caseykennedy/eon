@@ -90,6 +90,7 @@ export const Specs = styled(Section)`
 
           img {
             position: relative;
+            right: calc(${theme.space[6]} * -1);
             right: calc(${theme.space[6]} * -2);
 
             @media ${theme.mq.tablet} {
