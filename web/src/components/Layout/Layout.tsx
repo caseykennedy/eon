@@ -47,9 +47,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <GlobalStyles />
         <S.Wrapper id="main-root">
           <Header mainRef={mainRef} />
-          {isHomepage && (
-            <Announcement to={`/eon-multi-surface`} mainRef={mainRef} />
-          )}
           <S.Main ref={mainRef}>{children}</S.Main>
           <Footer />
         </S.Wrapper>

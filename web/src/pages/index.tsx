@@ -6,6 +6,7 @@
 import React from 'react'
 
 // Components
+import Announcement from '../components/Layout/Announcement'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import HomePage from '../components/HomePage'
@@ -19,6 +20,7 @@ const Index = () => {
   return (
     <Layout>
       <SEO />
+      <Announcement to={`/eon-multi-surface`} />
       <HomePage />
     </Layout>
   )

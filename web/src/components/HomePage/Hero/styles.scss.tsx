@@ -12,10 +12,11 @@ import { Box, Flex } from '../../ui'
 export const Hero = styled(Flex)`
   height: 768px;
   min-height: 400px;
-  padding-top: ${theme.space[2]};
+  padding-top: calc(${theme.space[2]});
   padding-bottom: ${theme.space[5]};
   position: relative;
   overflow: hidden;
+  top: ${theme.headerHeight};
 
   @media ${theme.mq.tablet} {
     height: calc(

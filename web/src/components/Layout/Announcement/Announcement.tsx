@@ -22,7 +22,7 @@ type Props = {
   announcement?: string
   handleExit?: () => any
   isPortalOpen?: boolean
-  mainRef: React.RefObject<HTMLDivElement>
+  mainRef?: React.RefObject<HTMLDivElement>
 } & typeof defaultProps
 const defaultProps = {
   to: '/'
