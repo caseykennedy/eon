@@ -37,28 +37,20 @@ const ProductDetail: React.FC = () => {
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
               />
-              <Box width={1} mt={`-40%`}>
+              <Box width={`110%`} mt={`-40%`}>
                 <img src={triangleObtuse} alt="frame" />
               </Box>
             </Box>
           </Box>
           <Box flex={[1]} mr={[0, 0, 7]}>
-            <Text className="text--md">
-              Spray and go.
-            </Text>
             <h3 className="text--xl">
-              The <em>only</em> 80% ethyl alcohol, continuous spray hand sanitizer.
+              eOn mist&trade; 80% ethyl alcohol hand sanitizer.
             </h3>
 
             <p>
-              Personal size (2 fl. oz.), professional-grade sanitation in your pocket. Effective on <mark>99.99%</mark>
-              of germs—no droplets, just mist. Easy to carry and use.
-            </p>
+              Rapid, effective, advanced formula—gentle enough for kids, strong enough for industry. Fully recyclable ♻️ for a greener environment. Proudly made in the USA 🇺🇸 in an EPA &amp; FDA registered
+              facility.
 
-            <p>
-              eOn hand sanitizer cans are fully recyclable—for a greener ♻️
-              environment. Proudly made in the 🇺🇸USA in an EPA &amp; FDA Registered
-              Facility.
             </p>
 
             <Box mt={[6, 6, 7]}>
@@ -82,7 +74,7 @@ const ProductDetail: React.FC = () => {
               </Text>
             </Flex>
 
-            <Flex mt={[4, 6]}>
+            {/* <Flex mt={[4, 6]}>
               <Flex
                 alignItems="center"
                 // bg="white"
@@ -103,7 +95,7 @@ const ProductDetail: React.FC = () => {
                   <strong>Recyclable</strong> aluminum despenser
                 </Text>
               </Flex>
-            </Flex>
+            </Flex> */}
           </Box>
         </Flex>
       </Flex>

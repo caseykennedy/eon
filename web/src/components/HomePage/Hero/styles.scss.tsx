@@ -72,26 +72,26 @@ export const Hero = styled(Flex)`
         @media ${theme.mq.desktop} {
           margin-right: ${theme.space[7]};
           margin-left: ${theme.space[5]};
-          width: calc(${theme.space[9]} * 2);
+          width: calc(${theme.space[9]} * 1.75);
         }
       }
 
       .spray {
         position: absolute;
-        top: 125px;
-        right: -175px;
+        top: 50px;
+        right: -125px;
         width: 225px;
 
         @media ${theme.mq.tablet} {
-          top: 125px;
-          right: -190px;
+          top: 60px;
+          right: -145px;
           width: 275px;
         }
 
         @media ${theme.mq.desktop} {
-          top: 175px;
-          right: -250px;
-          width: 375px;
+          top: 75px;
+          right: -160px;
+          width: 350px;
         }
       }
     }

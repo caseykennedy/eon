@@ -27,7 +27,7 @@ export const Retailers = styled(Section)`
       /* height: 40px; */
 
       div {
-        max-width: 150px;
+        max-width: 130px;
         width: 100%;
       }
     }

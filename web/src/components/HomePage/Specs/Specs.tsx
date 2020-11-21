@@ -56,34 +56,47 @@ const Specs = () => {
       </Section>
       <S.Specs bg="white" overflow="hidden">
         <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
-          <Flex width={[1, 1 / 3, 1 / 2]} className="decorator">
+          <Flex width={[1, 1 / 3, 1 / 3]} className="decorator">
             <Box
-              width={['50px', '70px', '80px']}
+              width={['50px', '110px', '135px']}
               className="decorator--features"
             >
               <FeatureStack />
             </Box>
           </Flex>
-          <Box width={[8 / 10, 2 / 3, 1 / 2]} pr={[5, 0]}>
+          <Box width={[8 / 10, 2 / 3, 2 / 3]} pr={[5, 0]}>
             <Heading as="h3" className="text--xl" mb={[4, 5]}>
-              <Text as="span" color="primary">
-                Works on contact;
-              </Text>{' '}
               Immediate action against 99.99% of common germs.
             </Heading>
           </Box>
         </Flex>
 
-        <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
-          <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
+        <Flex className="spec__block">
+          <Box width={[1, 7 / 10, 8 / 10]} pr={[6, 4, 11]}>
+            <Heading as="h3" className="text--xl" mb={[4, 5]}>
+              Lab tested{' '}
+              <span>
+                <Beaker />
+              </span>{' '}
+              formulation doesn’t dry or leave hands sticky{' '}
+              <span>
+                <HandFemale />
+              </span>
+              .
+            </Heading>
+          </Box>
+        </Flex>
+
+        <Flex className="spec__block">
+          {/* <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
             <Box
               width={['75px', '125px', '150px']}
               className="decorator--abstract"
             >
               <AbstractSpray />
             </Box>
-          </Flex>
-          <Box width={[1, 7 / 10, 6 / 10]} pr={[6, 0]}>
+          </Flex> */}
+          <Box width={[1, 7 / 10, 2 / 3]} pr={[6, 0]}>
             <Heading as="h3" className="text--xl" mb={[4, 5]}>
               Child-safe{' '}
               <span>
@@ -99,38 +112,38 @@ const Specs = () => {
           </Box>
         </Flex>
 
-        <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
-          <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
+        <Flex className="spec__block">
+          {/* <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
             <Box
               width={['200px', '300px', '375px']}
               className="decorator--spray"
             >
               <Box as="img" src={sprayMist} alt="spray mist" />
             </Box>
-          </Flex>
-          <Box width={[1, 7 / 10, 6 / 10]} pr={[6, 0]}>
+          </Flex> */}
+          <Box width={[1, 7 / 10, 2 / 3]} pr={[6, 0]}>
             <Heading as="h3" className="text--xl" mb={[4, 5]}>
-              Fine, wide angle{' '}
+              Wide angle{' '}
               <span>
                 <Spray />
               </span>{' '}
-              mist covers hands in one quick spray{' '}
+              mist covers hands in one quick spray
               <span>
                 <Hand />
-              </span>{' '}
+              </span>
               .
             </Heading>
           </Box>
         </Flex>
 
         <Flex className="spec__block" mt={[5, 0, 0]}>
-          <Box width={[1, 7 / 10, 6 / 10]} pr={[5, 0]}>
-            <Heading as="h3" className="text--xl" mb={[4, 5]}>
+          <Box width={[1, 7 / 10, 2 / 3]} pr={[0, 0]}>
+            <Heading as="h3" className="text--xl" mb={4}>
               190 proof, plant-based{' '}
               <span>
-                <CornCob />,
+                <CornCob />
               </span>{' '}
-              Food Chemical Codex approved, Ethyl Alcohol solution{' '}
+              Ethyl Alcohol solution{' '}
               <span>
                 <Atom />
               </span>{' '}
@@ -138,32 +151,11 @@ const Specs = () => {
             </Heading>
           </Box>
 
-          <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
+          {/* <Flex width={[1, 3 / 10, 4 / 10]} className="decorator">
             <Box width={['175px', '200px', '225px']} className="decorator--hch">
               <Box as="img" src={hch} alt="spray mist" />
             </Box>
-          </Flex>
-        </Flex>
-
-        <Flex className="spec__block">
-          <Box width={[1, 7 / 10, 8 / 10]} pr={[5, 4, 11]}>
-            <Heading as="h3" className="text--xl" mb={[4, 5]}>
-              Lab tested, high performance{' '}
-              <span>
-                <Beaker />
-              </span>{' '}
-              formulation doesn’t dry or leave hands sticky{' '}
-              <span>
-                <HandFemale />
-              </span>{' '}
-              .
-            </Heading>
-          </Box>
-        </Flex>
-        <Flex width={1} mt={6} justifyContent="center">
-          <Box width={['60%', '30%']}>
-            <WeRefreshHands />
-          </Box>
+          </Flex> */}
         </Flex>
       </S.Specs>
     </>

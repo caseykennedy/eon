@@ -59,10 +59,19 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
           >
             <Box width={1}>
               <h3 className="text--xxxl">
-                Pardon our dust! We're building an exciting new eOn sanitizing
-                mist™ website experience — chockful of info, usage tips, support
-                and more.
+                We're building an exciting new eOn sanitizing mist™ website
+                experience — chockful of info, usage tips, support and more.
+                Hang tight.
               </h3>
+
+              <Box width={[1, 2 / 3, 1 / 2]}>
+                <p>
+                  <strong>eOn</strong> branded products are America’s premiere,
+                  TSA friendly, continuous spray packaged goods for on-the-go
+                  protection from common germs. Our products are available to
+                  promote well-being throughout your life.
+                </p>
+              </Box>
 
               <Flex mt={[5, 7, 7]}>
                 <AddToCart btnText="Buy eOn mist™" />
@@ -87,7 +96,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                       eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
                     </Text>
                     solution works by denaturing the proteins of germs,
-                    inactivating and inhibiting microbial growth. Learn more.
+                    inactivating and inhibiting microbial growth.
                   </p>
                 </Box>
               </Flex>

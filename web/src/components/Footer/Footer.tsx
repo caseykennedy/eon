@@ -62,7 +62,6 @@ const Footer: React.FC = () => {
   return (
     <>
       <PreFoot />
-      <Terms />
       <S.Footer as="footer">
         <Flex className="footer__links">
           <Link to={`/privacy`}>privacy</Link>

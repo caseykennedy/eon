@@ -32,7 +32,7 @@ const HomePage = () => {
       <Specs />
       <ProductDetail />
       <Reviews />
-      <InstagramFeed />
+      {/* <InstagramFeed /> */}
       <Retailers />
     </S.HomePage>
   )

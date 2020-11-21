@@ -5,6 +5,7 @@
 
 import React, { useRef } from 'react'
 import { withPrefix } from 'gatsby'
+import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 
 import ContextProvider from '../../provider/ContextProvider'
@@ -42,16 +43,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     `background: #FFFFFF; color: #000000`
   )
   return (
-    <ContextProvider>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <S.Wrapper id="main-root">
-          <Header mainRef={mainRef} />
-          <S.Main ref={mainRef}>{children}</S.Main>
-          <Footer />
-        </S.Wrapper>
-      </ThemeProvider>
-    </ContextProvider>
+    <>
+      <Helmet>
+        <script
+          id="termly-jssdk"
+          src="https://app.termly.io/embed-policy.min.js"
+        />
+      </Helmet>
+      <ContextProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <S.Wrapper id="main-root">
+            <Header mainRef={mainRef} />
+            <S.Main ref={mainRef}>{children}</S.Main>
+            <Footer />
+          </S.Wrapper>
+        </ThemeProvider>
+      </ContextProvider>
+    </>
   )
 }
 

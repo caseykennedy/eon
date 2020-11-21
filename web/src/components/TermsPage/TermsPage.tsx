@@ -28,7 +28,7 @@ const resize = () => {
 }
 
 const TermsPage = () => {
-  const [iframe, setIframe] = useState('')
+  const [loading, stillLoading] = useState<boolean>()
 
   useEffect(() => {
     const d = document
@@ -43,25 +43,22 @@ const TermsPage = () => {
     js.src = 'https://app.termly.io/embed-policy.min.js'
     tjs.parentNode.insertBefore(js, tjs)
 
-    console.log('useEffect triggered')
-
-    // or trigger window resize event by setTimeout
-    setTimeout(() => {
-      setIframe('03977565-0b35-498f-a368-72d2cf0a3e8e')
-    }, 1000)
-  }, [])
+    console.log('onMount')
+  })
+  // console.log(loading)
   return (
-    <S.TermsPage>
-      <Section>
-        {/* <Heading as="h1">Terms of Service</Heading> */}
-        <div
-          className="terms"
-          name="termly-embed"
-          // Replace data-id with your policy uuid
-          data-id="03977565-0b35-498f-a368-72d2cf0a3e8e"
-          data-type="iframe"
-        />
-        {/* <Iframe
+    <>
+      <S.TermsPage>
+        <Section>
+          {/* <Heading as="h1">Terms of Service</Heading> */}
+          <div
+            className="terms"
+            name="termly-embed"
+            // Replace data-id with your policy uuid
+            data-id="03977565-0b35-498f-a368-72d2cf0a3e8e"
+            data-type="iframe"
+          />
+          {/* <Iframe
           url="https://app.termly.io/embed/terms-of-use/03977565-0b35-498f-a368-72d2cf0a3e8e"
           position="relative"
           width="100%"
@@ -70,8 +67,9 @@ const TermsPage = () => {
           height="600px"
           frameBorder={0}
         /> */}
-      </Section>
-    </S.TermsPage>
+        </Section>
+      </S.TermsPage>
+    </>
   )
 }
 

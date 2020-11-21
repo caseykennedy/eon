@@ -207,7 +207,7 @@ const Typography = css`
     }
 
     @media ${theme.mq.desktop} {
-      font-size: calc(${theme.root.font.lg} * 1.25);
+      font-size: calc(${theme.root.font.lg} * 1.15);
     }
   }
 
@@ -251,7 +251,7 @@ const Typography = css`
 
   p {
     font-size: ${theme.fontSizes[2]};
-    font-weight: ${theme.fontWeights.medium};
+    /* font-weight: ${theme.fontWeights.medium}; */
     line-height: ${theme.root.font.bodyLineHeight};
     margin: 0 0 ${theme.space[3]};
 

@@ -16,17 +16,7 @@ export const Specs = styled(Section)`
       flex-wrap: wrap;
       justify-content: space-between;
 
-      h3 {
-        font-size: calc(${theme.fontSizes[4]} / 1.5);
-
-        @media ${theme.mq.tablet} {
-          font-size: calc(${theme.fontSizes[5]} / 1.5);
-        }
-
-        @media (min-width: 1280px) {
-          font-size: calc(${theme.fontSizes[5]} / 1.25);
-        }
-      }
+      
 
       .decorator {
         justify-content: flex-end;
@@ -214,6 +204,10 @@ export const HowTo = styled(Flex)`
 
       @media ${theme.mq.desktop} {
         font-size: calc(${theme.fontSizes[2]} * 1.5);
+      }
+
+      &__block {
+        width: 100%;
       }
     }
   }

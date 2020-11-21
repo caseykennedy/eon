@@ -13,10 +13,10 @@ import { Parallax } from 'react-scroll-parallax'
 // ___________________________________________________________________
 
 export const Mist = styled(Section)`
-  border-radius: 0 0 ${theme.space[7]} 0;
+  border-radius: 0 0 ${theme.space[6]} 0;
 
   @media ${theme.mq.tablet} {
-    border-radius: 0 0 ${theme.space[9]} 0;
+    border-radius: 0 0 ${theme.space[7]} 0;
   }
 
   .how {

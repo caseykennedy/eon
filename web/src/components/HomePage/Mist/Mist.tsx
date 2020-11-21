@@ -58,9 +58,7 @@ const How = () => {
                 <Gauge />
               </Box>
               <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
-                <strong>Maximum strength</strong> 80% ethyl
-                <br />
-                alcohol continuous spray action.
+                <strong>Maximum strength</strong><br />continuous spray formulation.
               </Text>
             </Flex>
           </Flex>
