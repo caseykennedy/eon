@@ -128,11 +128,11 @@ const Specs = () => {
                 <span>
                   <Spray />
                 </span>{' '}
-                mist covers hands in one quick spray
+                mist covers hands
                 <span>
                   <Hand />
-                </span>
-                .
+                </span>{' '}
+                in one quick spray.
               </Heading>
             </Box>
           </Flex>
@@ -144,7 +144,7 @@ const Specs = () => {
                 <span>
                   <CornCob />
                 </span>{' '}
-                Ethyl Alcohol solution{' '}
+                80% Ethyl Alcohol solution{' '}
                 <span>
                   <Atom />.
                 </span>

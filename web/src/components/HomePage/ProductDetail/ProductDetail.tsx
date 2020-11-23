@@ -37,21 +37,29 @@ const ProductDetail: React.FC = () => {
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
               />
-              <Box width={`110%`} mt={`-40%`}>
+              <Box width={`110%`} mt={`-33%`}>
                 <img src={triangleObtuse} alt="frame" />
               </Box>
             </Box>
           </Box>
           <Box flex={[1]} mr={[0, 0, 11]}>
+            <Text as="h4" mb={[3, 4]}>
+              Spray and go.
+            </Text>
             <h3 className="text--xl">
-              eOn mist&trade; 80% ethyl alcohol hand sanitizer.
+              Precise hand sanitation you can use anywhere.
             </h3>
 
             <p>
               Rapid, effective, advanced formula—gentle enough for kids, strong
               enough for industry. Fully recyclable ♻️ for a greener
-              environment. Proudly made in the USA 🇺🇸 in an EPA &amp; FDA
-              registered facility.
+              environment. The simplest, fastest, easiest way to sanitize
+              hands—anywhere.
+            </p>
+
+            <p>
+              Proudly made in the USA 🇺🇸 in an EPA &amp; FDA registered
+              facility.
             </p>
 
             <Box mt={[6, 6, 7]}>

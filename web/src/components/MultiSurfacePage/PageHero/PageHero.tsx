@@ -88,7 +88,7 @@ const PageHero = () => {
 export default PageHero
 
 const data = {
-  title: 'More info coming.',
+  title: 'On the go disinfection.',
   headline:
     'Find eOn multi-surface disinfectant at your local pharmacy, retail or grocery store today.',
   featureA: 'Eliminates<br /><mark>99.99%</mark> of bacteria<br />and viruses',

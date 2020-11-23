@@ -49,7 +49,7 @@ const data = [
   {
     alt: 'multi-surface',
     src: fdaMark,
-    title: 'multi-surface'
+    title: 'Hypochlorous Acid'
   },
   {
     alt: 'EPA logo',

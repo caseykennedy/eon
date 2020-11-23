@@ -18,9 +18,9 @@ export const MultiSurfacePage = styled(Box)`
 `
 
 export const StoreLocator = styled(Section)`
-  border-radius: 0 0 ${theme.space[6]} 0;
+  /* border-radius: 0 0 ${theme.space[6]} 0;
 
   @media ${theme.mq.tablet} {
     border-radius: 0 0 ${theme.space[7]} 0;
-  }
+  } */
 `
