@@ -12,6 +12,11 @@ import { Grid, Cell } from 'styled-css-grid'
 
 export const Specs = styled(Section)`
   .spec {
+    &__wrapper {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
     &__block {
       flex-wrap: wrap;
       justify-content: space-between;
@@ -121,7 +126,7 @@ export const Specs = styled(Section)`
     /* font-size: calc(${theme.fontSizes[3]} * 1);
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.lg};
+      font-size: calc(${theme.fontSizes[4]} * 1.15);
     } */
 
     span {
@@ -135,6 +140,21 @@ export const Specs = styled(Section)`
         }
       }
     }
+  }
+`
+
+export const Gradient = styled(Box)`
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    176deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 43%,
+    rgba(220, 237, 255, 1) 100%
+  );
+  border-radius: 0 0 ${theme.space[6]} 0;
+
+  @media ${theme.mq.tablet} {
+    border-radius: 0 0 ${theme.space[7]} 0;
   }
 `
 

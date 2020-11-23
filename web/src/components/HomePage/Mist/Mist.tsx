@@ -29,16 +29,26 @@ const VideoProps = {
 
 const How = () => {
   return (
-    <S.Mist bg={theme.colors.babyblue} pt={[6, 7, 9]} pb={[6, 7, 9]}>
+    <S.Mist pt={[6, 7, 9]} pb={[6, 7, 9]}>
       <Flex
         flexDirection={['column', 'column', 'row']}
         maxWidth={theme.maxWidth}
         margin={'0 auto'}
       >
-        <Box flex={[1, 1, 4]} mb={[6, 6, 0]} pr={[4, 7, 7]} pl={[4, 7, 0]}>
+        <Box
+          flex={[1, 1, 4]}
+          mb={[6, 6, 0]}
+          pr={[4, 7, 7]}
+          pl={[4, 7, 0]}
+          className="mist__video"
+        >
           <Video {...VideoProps} />
 
-          <Flex justifyContent="center" mt={4}>
+          <Flex
+            justifyContent="center"
+            mt={4}
+            style={{ position: 'relative', zIndex: 9 }}
+          >
             <Flex
               // bg="white"
               alignItems="center"
@@ -58,7 +68,9 @@ const How = () => {
                 <Gauge />
               </Box>
               <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
-                <strong>Maximum strength</strong><br />continuous spray formulation.
+                <strong>Maximum strength</strong>
+                <br />
+                continuous spray formulation.
               </Text>
             </Flex>
           </Flex>

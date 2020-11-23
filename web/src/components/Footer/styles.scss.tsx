@@ -101,7 +101,7 @@ export const PreFoot = styled.div`
             }
 
             svg {
-              width: 42px;
+              width: 40px;
             }
 
             &:hover {

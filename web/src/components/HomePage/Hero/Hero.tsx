@@ -58,7 +58,7 @@ const Hero = () => {
           </Box>
         </Flex>
 
-        <Flex px={theme.gutter.axis} className="hero__inner">
+        <Flex px={[4, 5, 6]} className="hero__inner">
           <Box position="relative" style={{ zIndex: 9 }}>
             <Text my={[3, 4]} className="text--md">
               {data.title}

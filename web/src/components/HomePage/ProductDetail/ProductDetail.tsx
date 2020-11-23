@@ -32,7 +32,7 @@ const ProductDetail: React.FC = () => {
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box flex={1} width={1} style={{ position: 'relative', zIndex: 9 }}>
-            <Box width={1} pl={[7, 6, 7]} mb={[5, 0, 0]}>
+            <Box width={1} pl={[0, 6, 2]} mb={[5, 0, 0]}>
               <ImgMatch
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
@@ -42,15 +42,16 @@ const ProductDetail: React.FC = () => {
               </Box>
             </Box>
           </Box>
-          <Box flex={[1]} mr={[0, 0, 7]}>
+          <Box flex={[1]} mr={[0, 0, 11]}>
             <h3 className="text--xl">
               eOn mist&trade; 80% ethyl alcohol hand sanitizer.
             </h3>
 
             <p>
-              Rapid, effective, advanced formula—gentle enough for kids, strong enough for industry. Fully recyclable ♻️ for a greener environment. Proudly made in the USA 🇺🇸 in an EPA &amp; FDA registered
-              facility.
-
+              Rapid, effective, advanced formula—gentle enough for kids, strong
+              enough for industry. Fully recyclable ♻️ for a greener
+              environment. Proudly made in the USA 🇺🇸 in an EPA &amp; FDA
+              registered facility.
             </p>
 
             <Box mt={[6, 6, 7]}>

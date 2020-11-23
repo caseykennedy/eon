@@ -13,10 +13,37 @@ import { Parallax } from 'react-scroll-parallax'
 // ___________________________________________________________________
 
 export const Mist = styled(Section)`
+  background: ${theme.colors.babyblue};
   border-radius: 0 0 ${theme.space[6]} 0;
 
   @media ${theme.mq.tablet} {
     border-radius: 0 0 ${theme.space[7]} 0;
+  }
+
+  .mist {
+    &__video {
+      position: relative;
+
+      &::before {
+        background: rgb(146, 198, 246);
+        background: radial-gradient(
+          circle,
+          rgba(146, 198, 246, 1) 25%,
+          rgba(255, 255, 255, 0) 63%
+        );
+        content: '';
+        position: absolute;
+        top: calc(${theme.space[7]} * -1.75);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+
+        @media ${theme.mq.tablet} {
+          top: calc(${theme.space[7]} * -2);
+        }
+      }
+    }
   }
 
   .how {

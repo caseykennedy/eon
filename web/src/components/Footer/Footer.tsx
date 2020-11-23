@@ -43,7 +43,7 @@ const PreFoot = () => (
         <CanMulti />
       </Box>
       <Text as="p" textAlign="center">
-        Looking for eOn multi-surface disinfectant?
+        Looking for eOn mist&trade; multi-surface disinfectant?
       </Text>
     </Link>
   </S.PreFoot>
