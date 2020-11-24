@@ -29,7 +29,7 @@ const VideoProps = {
 
 const How = () => {
   return (
-    <S.Mist pt={[6, 7, 9]} pb={[6, 7, 9]}>
+    <S.Mist>
       <Flex
         flexDirection={['column', 'column', 'row']}
         maxWidth={theme.maxWidth}

@@ -17,11 +17,19 @@ export const PageHero = styled(Flex)`
   overflow: hidden;
 
   @media ${theme.mq.tablet} {
+    height: calc(
+      100vh - calc(${theme.headerHeight} * 1) - ${theme.trademarksHeight}
+    );
+    max-height: 750px;
+    min-height: 600px;
+
     padding-top: ${theme.space[6]};
     padding-bottom: ${theme.space[6]};
   }
 
   @media ${theme.mq.desktop} {
+    max-height: 1024px;
+    min-height: 750px;
   }
 
   .hero {
@@ -39,7 +47,6 @@ export const PageHero = styled(Flex)`
       justify-content: flex-end;
 
       @media ${theme.mq.tablet} {
-        justify-content: space-between;
       }
     }
 
@@ -67,7 +74,7 @@ export const PageHero = styled(Flex)`
         }
 
         @media ${theme.mq.desktop} {
-          top: ${theme.space[9]};
+          top: calc(${theme.space[7]} * 1.5);
           width: 390px;
         }
       }
@@ -76,11 +83,11 @@ export const PageHero = styled(Flex)`
         width: 110px;
 
         @media ${theme.mq.tablet} {
-          width: 150px;
+          width: 125px;
         }
 
         @media ${theme.mq.desktop} {
-          width: 185px;
+          width: 150px;
         }
       }
 

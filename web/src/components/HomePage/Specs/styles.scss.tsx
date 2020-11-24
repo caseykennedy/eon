@@ -183,11 +183,11 @@ export const HowTo = styled(Flex)`
     margin: 0 ${theme.space[5]} ${theme.space[5]};
 
     flex: 1 1 280px;
-    max-width: 280px;
+    max-width: 300px;
 
     @media ${theme.mq.tablet} {
       margin: 0 ${theme.space[3]} ${theme.space[6]};
-      max-width: 333px;
+      max-width: 400px;
     }
 
     svg {
@@ -203,7 +203,7 @@ export const HowTo = styled(Flex)`
       }
     }
 
-    &-spec {
+    &__spec {
       width: 100%;
       align-items: center;
       justify-content: center;
@@ -229,6 +229,11 @@ export const HowTo = styled(Flex)`
       &__block {
         width: 100%;
       }
+    }
+
+    &__caption {
+      margin: ${theme.space[3]} 0 0 0;
+      text-align: center;
     }
   }
 `

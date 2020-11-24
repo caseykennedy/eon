@@ -32,7 +32,7 @@ const ProductDetail: React.FC = () => {
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box flex={1} width={1} style={{ position: 'relative', zIndex: 9 }}>
-            <Box width={1} pl={[0, 6, 2]} mb={[5, 0, 0]}>
+            <Box width={1} pl={[0, 6, 0]} pr={[5, 0, 7]} mb={[5, 0, 0]}>
               <ImgMatch
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
@@ -42,25 +42,24 @@ const ProductDetail: React.FC = () => {
               </Box>
             </Box>
           </Box>
-          <Box flex={[1]} mr={[0, 0, 11]}>
+          <Box flex={[1]} mr={[0, 0, 7]}>
             <Text as="h4" mb={[3, 4]}>
               Spray and go.
             </Text>
             <h3 className="text--xl">
-              Precise hand sanitation you can use anywhere.
+              Precise hand sanitation wherever you go.
             </h3>
 
             <p>
               Rapid, effective, advanced formula—gentle enough for kids, strong
-              enough for industry. Fully recyclable ♻️ for a greener
-              environment. The simplest, fastest, easiest way to sanitize
+              enough for industry. The simplest, fastest, easiest way to sanitize
               hands—anywhere.
             </p>
 
-            <p>
+            {/* <p>
               Proudly made in the USA 🇺🇸 in an EPA &amp; FDA registered
               facility.
-            </p>
+            </p> */}
 
             <Box mt={[6, 6, 7]}>
               <AddToCart>Buy Now</AddToCart>
@@ -75,11 +74,11 @@ const ProductDetail: React.FC = () => {
                 Paraben-Free
               </Text>
               <Text as="p" color="primary" ml={5} className="t--small">
-                Keeps your
+                100% Recyclable
                 <br />
-                hands sanitized
+                FDA Registered
                 <br />
-                on the go
+                Continuous Spray
               </Text>
             </Flex>
 
@@ -101,7 +100,7 @@ const ProductDetail: React.FC = () => {
                   <Recycle />
                 </Box>
                 <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
-                  <strong>Recyclable</strong> aluminum despenser
+                  Fully <strong>Recyclable</strong>
                 </Text>
               </Flex>
             </Flex> */}

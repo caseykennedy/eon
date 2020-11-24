@@ -38,9 +38,12 @@ const HowTo = () => (
     {data.map((item, idx) => (
       <Box className="figure" key={idx}>
         {item.figure}
-        <Flex as="span" className="figure-spec">
+        <Flex as="span" className="figure__spec">
           {item.spec}
         </Flex>
+        <Text as="p" className="figure__caption">
+          {item.caption}
+        </Text>
       </Box>
     ))}
   </>
@@ -49,7 +52,7 @@ const HowTo = () => (
 const Specs = () => {
   return (
     <S.Gradient>
-      <Section bg="transparent" pt={[7, 9, 10]}>
+      <Section bg="transparent" pt={[7, 9, 9]}>
         <S.HowTo>
           <HowTo />
         </S.HowTo>
@@ -170,14 +173,17 @@ export default Specs
 const data = [
   {
     spec: 'TWIST to UNLOCK',
-    figure: <CapTwist />
+    figure: <CapTwist />,
+    caption: 'Press down on cap end'
   },
   {
     spec: 'SPRAY LIGHTLY',
-    figure: <SprayHand />
+    figure: <SprayHand />,
+    caption: '1—2 sec from 6-8" away'
   },
   {
     spec: 'RUB until DRY',
-    figure: <HappyHands />
+    figure: <HappyHands />,
+    caption: 'Smooth clean feeling'
   }
 ]

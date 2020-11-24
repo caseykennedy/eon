@@ -60,7 +60,7 @@ const Hero = () => {
 
         <Flex px={[4, 5, 6]} className="hero__inner">
           <Box position="relative" style={{ zIndex: 9 }}>
-            <Text my={[3, 4]} className="text--md">
+            <Text className="text--md">
               {data.title}
             </Text>
             <h1

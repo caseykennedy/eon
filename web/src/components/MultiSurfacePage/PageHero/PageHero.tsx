@@ -30,7 +30,7 @@ const PageHero = () => {
         </S.Decorator> */}
 
         <Flex px={theme.gutter.axis} className="hero__inner">
-          <Flex width={[1, 4 / 10, 1 / 2]} className="hero__figure">
+          <Flex width={[1]} className="hero__figure">
             <motion.div
               initial={{
                 opacity: 0
@@ -49,8 +49,8 @@ const PageHero = () => {
             </Box>
           </Flex>
 
-          <Flex width={[1, 6 / 10, 1 / 2]} className="hero__message">
-            <Box>
+          <Flex width={[1]} className="hero__message">
+            <Box pr={[0, 0, 10]}>
               <Text as="h4" mb={[3, 4]}>
                 {data.title}
               </Text>
@@ -60,7 +60,7 @@ const PageHero = () => {
               />
             </Box>
 
-            <Flex className="hero__features">
+            {/* <Flex className="hero__features">
               <Flex className="feature-set">
                 <Text
                   as="p"
@@ -76,7 +76,7 @@ const PageHero = () => {
                   dangerouslySetInnerHTML={{ __html: data.featureB }}
                 />
               </Flex>
-            </Flex>
+            </Flex> */}
           </Flex>
         </Flex>
       </S.PageHero>

@@ -29,7 +29,7 @@ export const Hero = styled(Flex)`
   }
 
   @media ${theme.mq.desktop} {
-    max-height: 1200px;
+    max-height: 800px;
   }
 
   .hero {

@@ -28,7 +28,7 @@ export const Mist = styled(Section)`
         background: rgb(146, 198, 246);
         background: radial-gradient(
           circle,
-          rgba(146, 198, 246, 1) 25%,
+          rgba(146, 198, 246, 0.75) 25%,
           rgba(255, 255, 255, 0) 63%
         );
         content: '';
