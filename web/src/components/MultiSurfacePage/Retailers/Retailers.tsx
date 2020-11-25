@@ -23,7 +23,7 @@ const Retailers = () => {
   return (
     <S.Retailers bg="white">
       <Text as="p" mb={[5, 7]}>
-        eOn sanitizing mist&trade; brand
+        eOn mist&trade; multi-surface disinfectent
         <br />
         is available at these fine retailers:
       </Text>

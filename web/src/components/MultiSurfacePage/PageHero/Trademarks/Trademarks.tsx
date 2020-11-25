@@ -14,7 +14,7 @@ import Icon from '../../../Icons'
 import fdaMark from './svg/fda-registered.svg'
 import tsaMark from './svg/tsa-friendly.svg'
 import usaMark from './svg/usa-made.svg'
-import ethylMark from './svg/ethyl-alc.svg'
+import hclMark from './svg/hcl.svg'
 
 // ___________________________________________________________________
 
@@ -48,7 +48,7 @@ export default Trademarks
 const data = [
   {
     alt: 'multi-surface',
-    src: fdaMark,
+    src: hclMark,
     title: 'Hypochlorous Acid'
   },
   {

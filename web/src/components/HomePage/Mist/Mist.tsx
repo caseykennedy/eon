@@ -68,9 +68,9 @@ const How = () => {
                 <Gauge />
               </Box>
               <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
-                <strong>Maximum strength</strong>
+                <strong>Maximum strength solution</strong>
                 <br />
-                continuous spray formulation.
+                Food Chemical Codex approved
               </Text>
             </Flex>
           </Flex>
@@ -84,7 +84,7 @@ const How = () => {
           </Heading>
           <Heading as="h2" className="text--xl">
             eOn mist's hand sanitizer packs high performance germ fighting power
-            into easy, effective, zero mess protection.
+            into easy, effective, everyday protection.
           </Heading>
         </Box>
       </Flex>

@@ -25,6 +25,15 @@ export const Menu = styled(Flex)`
     justify-content: space-between;
     height: 100%;
   }
+
+  .icon {
+    margin-right: ${theme.space[4]};
+
+    svg {
+      stroke: ${theme.colors.primary};
+      width: ${theme.space[6]};
+    }
+  }
 `
 
 export const MenuItems = styled(AnimatedFlex)``

@@ -5,12 +5,14 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { useTransition } from 'react-spring'
 
 import { motion, AnimatePresence } from 'framer-motion'
 
+// Components
 import { Box, Flex, Text } from '../../ui'
 import AddToCart from '../../AddToCart'
+import Beaker from '../../Beaker'
+import Factory from '../../Factory'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
@@ -34,15 +36,15 @@ type MenuProps = {
 
 // ___________________________________________________________________
 
-const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
-  return (
-    <S.MenuItems onClick={handleExitOnClick} style={transition}>
-      <Link to={item.link} className="nav-mobile__link">
-        {item.name}
-      </Link>
-    </S.MenuItems>
-  )
-}
+// const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
+//   return (
+//     <S.MenuItems onClick={handleExitOnClick} style={transition}>
+//       <Link to={item.link} className="nav-mobile__link">
+//         {item.name}
+//       </Link>
+//     </S.MenuItems>
+//   )
+// }
 
 const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
   return (
@@ -81,23 +83,33 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             <Box mt={7} mb={[4, 0, 0]} width={1}>
               <Flex flexDirection={['column', 'column', 'row']}>
                 <Box bg="white" p={4} mr={[0, 0, 4]} mb={[4, 4, 0]} flex={1}>
-                  <p>
-                    <Text as="span" color="primary" fontWeight={600}>
-                      Quality in manufacturing excellence:
-                    </Text>{' '}
-                    eOn is produced in a nearly 100 yr. state of the art factory
-                    in compliance with all applicable safety, health and
-                    environmental standards.
-                  </p>
+                  <Flex>
+                    <Box className="icon">
+                      <Beaker />
+                    </Box>
+                    <p>
+                      <Text as="span" color="primary" fontWeight={600}>
+                        Quality in manufacturing excellence:
+                      </Text>{' '}
+                      eOn is produced in a nearly 100 yr. state of the art
+                      factory in compliance with all applicable safety, health
+                      and environmental standards.
+                    </p>
+                  </Flex>
                 </Box>
                 <Box bg="white" p={4} flex={1}>
-                  <p>
-                    <Text as="span" color="primary" fontWeight={600}>
-                      eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
-                    </Text>
-                    solution works by denaturing the proteins of germs,
-                    inactivating and inhibiting microbial growth.
-                  </p>
+                  <Flex>
+                    <Box className="icon">
+                      <Factory />
+                    </Box>
+                    <p>
+                      <Text as="span" color="primary" fontWeight={600}>
+                        eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
+                      </Text>
+                      solution works by denaturing the proteins of germs,
+                      inactivating and inhibiting microbial growth.
+                    </p>
+                  </Flex>
                 </Box>
               </Flex>
             </Box>

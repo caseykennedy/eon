@@ -14,6 +14,7 @@ import { Input } from 'theme-ui'
 // Components
 import Icon from '../Icons'
 import CanMulti from '../CanMulti'
+import SocialLinks from '../SocialLinks'
 
 // ___________________________________________________________________
 
@@ -61,6 +62,7 @@ const Footer: React.FC = () => {
   const getYear = () => new Date().getFullYear()
   return (
     <>
+      <SocialLinks />
       <PreFoot />
       <S.Footer as="footer">
         <Flex className="footer__links">
@@ -75,7 +77,7 @@ const Footer: React.FC = () => {
             <small>Contact Us</small>
           </Flex>
         </Flex>
-        <Flex className="footer__copyright">&copy;{getYear()} eOn Mist&trade;</Flex>
+        <Flex className="footer__copyright">&copy;{getYear()} eOn mist&trade;</Flex>
       </S.Footer>
     </>
   )

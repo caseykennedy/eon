@@ -28,19 +28,20 @@ export const Mist = styled(Section)`
         background: rgb(146, 198, 246);
         background: radial-gradient(
           circle,
-          rgba(146, 198, 246, 0.75) 25%,
-          rgba(255, 255, 255, 0) 63%
+          rgba(146, 198, 246, 0.7) 20%,
+          rgba(255, 255, 255, 0) 60%
         );
         content: '';
+        overflow: visible;
         position: absolute;
-        top: calc(${theme.space[7]} * -1.75);
+        top: calc(${theme.space[7]} * -1.5);
         right: 0;
         bottom: 0;
-        left: 0;
+        left: calc(${theme.space[7]} * -1);
         z-index: 0;
 
-        @media ${theme.mq.tablet} {
-          top: calc(${theme.space[7]} * -2);
+        @media ${theme.mq.desktop} {
+          transform: scale(1.25);
         }
       }
     }

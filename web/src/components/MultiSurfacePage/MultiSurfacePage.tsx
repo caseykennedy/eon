@@ -11,9 +11,6 @@ import Button from '../ui/Button'
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
 
-// Components
-import Section from '../Section'
-
 // Sections
 import PageHero from './PageHero'
 import Retailers from './Retailers'
@@ -25,12 +22,6 @@ const MultiSurfacePage = () => {
     <S.MultiSurfacePage>
       <PageHero />
       <Retailers />
-      <S.StoreLocator bg="lightgray" border={true}>
-        <Text as="p" mb={0} textAlign="center" py={2}>
-          Store locator coming soon.
-          {/* Find eOn multi-surface disinfectant<br />in a store near you. */}
-        </Text>
-      </S.StoreLocator>
     </S.MultiSurfacePage>
   )
 }

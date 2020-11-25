@@ -5,6 +5,7 @@
 import * as React from 'react'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
+import { motion } from 'framer-motion'
 
 // ui
 import { Button, Text, Flex, Box } from '../../ui'
@@ -14,13 +15,14 @@ import ImgMatch from '../../ImgMatch'
 import AddToCart from '../../AddToCart'
 import Recycle from '../../Recycle'
 
+import badge from './assets/ContinuousSpray.svg'
 import triangleObtuse from './assets/TriangleObtuse.svg'
 
 // ___________________________________________________________________
 
 const ProductDetail: React.FC = () => {
   return (
-    <S.ProductDetail>
+    <S.ProductDetail overflow="visible">
       <Flex
         flexDirection={['column', 'column', 'row']}
         // maxWidth={theme.maxWidth}
@@ -32,7 +34,22 @@ const ProductDetail: React.FC = () => {
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box flex={1} width={1} style={{ position: 'relative', zIndex: 9 }}>
-            <Box width={1} pl={[0, 6, 0]} pr={[5, 0, 7]} mb={[5, 0, 0]}>
+            <Box className="badge">
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ ease: 'linear', duration: 75, loop: Infinity }}
+              >
+                <img src={badge} alt="frame" />
+              </motion.div>
+            </Box>
+            <Box
+              width={1}
+              pl={[0, 6, 0]}
+              pr={[5, 0, 7]}
+              mb={[5, 0, 0]}
+              position="relative"
+              style={{ zIndex: 9 }}
+            >
               <ImgMatch
                 src="can-stack.png"
                 altText="Hand holding eOn Hand Sanitizer can."
@@ -52,8 +69,8 @@ const ProductDetail: React.FC = () => {
 
             <p>
               Rapid, effective, advanced formula—gentle enough for kids, strong
-              enough for industry. The simplest, fastest, easiest way to sanitize
-              hands—anywhere.
+              enough for industry. The simplest, fastest, easiest way to
+              sanitize hands—anywhere.
             </p>
 
             {/* <p>

@@ -41,7 +41,7 @@ const HowTo = () => (
         <Flex as="span" className="figure__spec">
           {item.spec}
         </Flex>
-        <Text as="p" className="figure__caption">
+        <Text fontSize={2} className="figure__caption">
           {item.caption}
         </Text>
       </Box>
@@ -52,7 +52,7 @@ const HowTo = () => (
 const Specs = () => {
   return (
     <S.Gradient>
-      <Section bg="transparent" pt={[7, 9, 9]}>
+      <Section bg="transparent" pt={[6, 7, 9]}>
         <S.HowTo>
           <HowTo />
         </S.HowTo>
@@ -142,7 +142,7 @@ const Specs = () => {
 
           <Flex className="spec__block" mt={[5, 0, 0]}>
             <Box width={[1, 7 / 10, 2 / 3]} pr={[2, 0, 7]}>
-              <Heading as="h3" className="text--xl" mb={4}>
+              <Heading as="h3" className="text--xl" mb={0}>
                 190 proof, plant-based{' '}
                 <span>
                   <CornCob />
@@ -179,11 +179,11 @@ const data = [
   {
     spec: 'SPRAY LIGHTLY',
     figure: <SprayHand />,
-    caption: '1—2 sec from 6-8" away'
+    caption: '1—2 sec from 6—8" away'
   },
   {
     spec: 'RUB until DRY',
     figure: <HappyHands />,
-    caption: 'Smooth clean feeling'
+    caption: 'Enjoy Smooth clean feeling'
   }
 ]

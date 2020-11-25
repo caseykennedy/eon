@@ -81,7 +81,7 @@ const SVG = styled.svg`
 
   .cls-1 {
     stroke: #000;
-    stroke-width: 0.65pt;
+    stroke-width: 0.5pt;
   }
 
   .cls-2 {

@@ -186,7 +186,7 @@ export const HowTo = styled(Flex)`
     max-width: 300px;
 
     @media ${theme.mq.tablet} {
-      margin: 0 ${theme.space[3]} ${theme.space[6]};
+      margin: 0 ${theme.space[3]} 0;
       max-width: 400px;
     }
 

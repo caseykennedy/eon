@@ -30,7 +30,7 @@ const PageHero = () => {
         </S.Decorator> */}
 
         <Flex px={theme.gutter.axis} className="hero__inner">
-          <Flex width={[1]} className="hero__figure">
+          <Flex width={[1, 4 / 10, 1 / 2]} className="hero__figure">
             <motion.div
               initial={{
                 opacity: 0
@@ -49,8 +49,8 @@ const PageHero = () => {
             </Box>
           </Flex>
 
-          <Flex width={[1]} className="hero__message">
-            <Box pr={[0, 0, 10]}>
+          <Flex width={[1, 6 / 10, 1 / 2]} className="hero__message">
+            <Box>
               <Text as="h4" mb={[3, 4]}>
                 {data.title}
               </Text>
@@ -60,23 +60,23 @@ const PageHero = () => {
               />
             </Box>
 
-            {/* <Flex className="hero__features">
+            <Flex className="hero__features">
               <Flex className="feature-set">
                 <Text
                   as="p"
-                  mr={5}
+                  mr={[0, 6, 10]}
                   mb={[5, 0, 0]}
                   dangerouslySetInnerHTML={{ __html: data.featureA }}
                 />
 
-                <Text
+                {/* <Text
                   as="p"
                   color="primary"
                   mr={5}
                   dangerouslySetInnerHTML={{ __html: data.featureB }}
-                />
+                /> */}
               </Flex>
-            </Flex> */}
+            </Flex>
           </Flex>
         </Flex>
       </S.PageHero>
@@ -91,6 +91,7 @@ const data = {
   title: 'On the go disinfection.',
   headline:
     'Find eOn multi-surface disinfectant at your local pharmacy, retail or grocery store today.',
-  featureA: 'Eliminates<br /><mark>99.99%</mark> of bacteria<br />and viruses',
-  featureB: 'personal size<br />multi-surface<br />disinfectant'
+  featureA:
+    "We're working on a new store locator so you can find eOn mist™ products near you!",
+  featureB: ''
 }

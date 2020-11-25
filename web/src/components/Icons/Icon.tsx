@@ -27,6 +27,8 @@ import Pdf from './SVG/Pdf'
 import Plus from './SVG/Plus'
 import Pin from './SVG/Pin'
 
+import Youtube from './SVG/Youtube'
+
 // ___________________________________________________________________
 
 type Props = {
@@ -120,6 +122,12 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
       return (
         <IconStyle color={color} className={className}>
           <Twitter />
+        </IconStyle>
+      )
+    case 'youtube':
+      return (
+        <IconStyle color={color} className={className}>
+          <Youtube />
         </IconStyle>
       )
     default:

@@ -252,7 +252,7 @@ const SVG = styled.svg`
   .cls-7,
   .cls-8,
   .cls-9 {
-    stroke-width: 0.65pt;
+    stroke-width: 0.5pt;
   }
 
   .cls-5 {

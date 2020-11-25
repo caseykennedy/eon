@@ -5,7 +5,7 @@
         fill: none;
         stroke: #000;
         stroke-miterlimit: 10;
-        stroke-width: 0.65pt;
+        stroke-width: 0.5pt;
         fill-rule: evenodd;
       }
     </style>
