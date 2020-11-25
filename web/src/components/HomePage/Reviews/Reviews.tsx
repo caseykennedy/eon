@@ -23,8 +23,8 @@ const ReviewSlider: React.FC = ({ children }) => {
   const params = {
     freeMode: true,
     grabCursor: true,
-    // loop: true,
-    centeredSlides: true,
+    loop: true,
+    centeredSlides: false,
     // effect: 'fade',
     slidesPerView: 1,
     spaceBetween: 8,
@@ -34,7 +34,7 @@ const ReviewSlider: React.FC = ({ children }) => {
     },
     breakpoints: {
       1024: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 32
       },
       768: {
@@ -60,9 +60,7 @@ const ReviewSlider: React.FC = ({ children }) => {
 const Specs: React.FC<Props> = () => {
   return (
     <S.Reviews bg="white" overflow="hidden" pt={0}>
-      <Text className="text--md">What people are saying</Text>
-      <br />
-      <br />
+      <Text as="p" mb={[5, 6, 6]}>What people are saying</Text>
       <ReviewSlider>
         {data.map((item, idx) => (
           <Box className="review__card" key={idx}>
@@ -86,12 +84,6 @@ const Specs: React.FC<Props> = () => {
 export default Specs
 
 const data = [
-  {
-    lead: 'Thank you, eOn!!',
-    author: 'Blake, CA',
-    review:
-      'I was tired of carrying around messy or ineffective gels, and wondered if there existed an easy to carry and use, industrial-grade "spray" hand sanitizer. eOn\'s just what I was looking for.'
-  },
   {
     lead: 'My hands feel refreshed!',
     author: 'Jenny, AZ',
@@ -121,5 +113,11 @@ const data = [
     author: 'Mark, FL',
     review:
       'I carry it in my pocket and bring it out for a quick spray when needed, the feeling of clean it leaves on my hands feels great and I definitely feel protected from taking germs to my face or bringing them back home to my family.'
+  },
+  {
+    lead: 'Thank you, eOn!!',
+    author: 'Blake, CA',
+    review:
+      'I was tired of carrying around messy or ineffective gels, and wondered if there existed an easy to carry and use, industrial-grade "spray" hand sanitizer. eOn\'s just what I was looking for.'
   }
 ]

@@ -70,7 +70,7 @@ const How = () => {
               <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
                 <strong>Maximum strength solution</strong>
                 <br />
-                Food Chemical Codex approved
+                Food Chemicals Codex approved
               </Text>
             </Flex>
           </Flex>

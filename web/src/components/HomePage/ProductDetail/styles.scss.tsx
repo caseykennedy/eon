@@ -34,7 +34,7 @@ export const ProductDetail = styled(Section)`
     }
 
     @media ${theme.mq.desktop} {
-      top: calc(${theme.space[7]} * -2.25);
+      top: calc(${theme.space[7]} * -1.75);
     }
 
     img {
@@ -45,7 +45,7 @@ export const ProductDetail = styled(Section)`
       }
 
       @media ${theme.mq.desktop} {
-        width: calc(${theme.space[7]} * 2.75);
+        width: calc(${theme.space[7]} * 2.25);
       }
     }
   }

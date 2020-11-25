@@ -60,11 +60,10 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             ref={scrollRef}
           >
             <Box width={1}>
-              <h3 className="text--xxxl">
-                We're building an exciting new eOn sanitizing mist™ website
-                experience — chockful of info, usage tips, support and more.
-                Hang tight.
-              </h3>
+              <p className="text--xxxl">
+                We're working on new eOn mist content, complete with FAQs, usage
+                tips, support and more. Stay tuned!
+              </p>
 
               <Box width={[1, 2 / 3, 1 / 2]}>
                 <p>
@@ -80,7 +79,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
               </Flex>
             </Box>
 
-            <Box mt={7} mb={[4, 0, 0]} width={1}>
+            <Box mt={[4, 5, 6]} width={1}>
               <Flex flexDirection={['column', 'column', 'row']}>
                 <Box bg="white" p={4} mr={[0, 0, 4]} mb={[4, 4, 0]} flex={1}>
                   <Flex>
@@ -89,11 +88,10 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                     </Box>
                     <p>
                       <Text as="span" color="primary" fontWeight={600}>
-                        Quality in manufacturing excellence:
+                        eOn is produced in a state of the art facility
                       </Text>{' '}
-                      eOn is produced in a nearly 100 yr. state of the art
-                      factory in compliance with all applicable safety, health
-                      and environmental standards.
+                      with nearly 100 years in operation, in compliance with all
+                      applicable safety, health and environmental standards.
                     </p>
                   </Flex>
                 </Box>
@@ -105,9 +103,10 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                     <p>
                       <Text as="span" color="primary" fontWeight={600}>
                         eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
-                      </Text>
+                      </Text>{' '}
                       solution works by denaturing the proteins of germs,
-                      inactivating and inhibiting microbial growth.
+                      inactivating and inhibiting microbial growth, and ensuring
+                      you're protected.
                     </p>
                   </Flex>
                 </Box>

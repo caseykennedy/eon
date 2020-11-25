@@ -184,6 +184,6 @@ const data = [
   {
     spec: 'RUB until DRY',
     figure: <HappyHands />,
-    caption: 'Enjoy Smooth clean feeling'
+    caption: 'You\'re good to go'
   }
 ]

@@ -68,9 +68,8 @@ const ProductDetail: React.FC = () => {
             </h3>
 
             <p>
-              Rapid, effective, advanced formula—gentle enough for kids, strong
-              enough for industry. The simplest, fastest, easiest way to
-              sanitize hands—anywhere.
+              Rapid, effective, advanced delivery. Gentle on hands, strong on
+              germs. The simplest, easiest way to sanitize hands—anywhere.
             </p>
 
             {/* <p>
@@ -91,11 +90,11 @@ const ProductDetail: React.FC = () => {
                 Paraben-Free
               </Text>
               <Text as="p" color="primary" ml={5} className="t--small">
-                100% Recyclable
+                Fully Recyclable
                 <br />
                 FDA Registered
                 <br />
-                Continuous Spray
+                FCC Approved
               </Text>
             </Flex>
 
