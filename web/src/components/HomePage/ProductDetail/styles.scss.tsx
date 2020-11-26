@@ -33,19 +33,11 @@ export const ProductDetail = styled(Section)`
       top: calc(${theme.space[7]} * -1.5);
     }
 
-    @media ${theme.mq.desktop} {
-      top: calc(${theme.space[7]} * -1.75);
-    }
-
     img {
       width: calc(${theme.space[7]} * 1.5);
 
       @media ${theme.mq.tablet} {
         width: calc(${theme.space[7]} * 2);
-      }
-
-      @media ${theme.mq.desktop} {
-        width: calc(${theme.space[7]} * 2.25);
       }
     }
   }

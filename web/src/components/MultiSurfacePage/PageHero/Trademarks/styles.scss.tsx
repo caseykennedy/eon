@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { transparentize } from 'polished'
 import { Flex } from '../../../ui'
 import theme from '../../../../gatsby-plugin-theme-ui'
 
@@ -12,7 +13,7 @@ export const Trademarks = styled(Flex)`
   justify-content: center;
   flex-wrap: wrap;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: ${transparentize(0.15, theme.colors.lightgray)};
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 
@@ -58,7 +59,7 @@ export const Trademarks = styled(Flex)`
     }
 
     p {
-      color: ${theme.colors.black};
+      color: ${theme.colors.text};
       letter-spacing: 0.25px;
       font-size: calc(${theme.fontSizes[1]} / 1);
       margin-top: ${theme.space[2]};

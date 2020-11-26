@@ -39,7 +39,7 @@ const ProductDetail: React.FC = () => {
                 animate={{ rotate: 360 }}
                 transition={{ ease: 'linear', duration: 75, loop: Infinity }}
               >
-                <img src={badge} alt="frame" />
+                <img src={badge} alt="eOn mist, continous spray" />
               </motion.div>
             </Box>
             <Box

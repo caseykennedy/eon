@@ -88,10 +88,11 @@ const PageHero = () => {
 export default PageHero
 
 const data = {
-  title: 'On the go disinfection.',
-  headline:
-    'Find eOn multi-surface disinfectant at your local pharmacy, retail or grocery store today.',
+  title: 'eOn multi-surface.',
+  headline: 'Clean, deoderize and disinfect your environment, on the go.',
   featureA:
-    "We're working on a new store locator so you can find eOn mist™ products near you!",
-  featureB: ''
+    "Currently only available in stores. We're at work on our store locator to help you find eOn nearby.",
+  featureB: '',
+  featureC:
+    'Derived from naturally occuring salt minerals and water. Effective on <mark>99.9%</mark> of bacteria and viruses.'
 }

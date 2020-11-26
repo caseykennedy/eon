@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { transparentize } from 'polished'
 import { Flex } from '../ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
@@ -12,7 +13,7 @@ export const SocialLinks = styled(Flex)`
   justify-content: center;
   flex-wrap: wrap;
 
-  background: ${theme.colors.white};
+  background: ${transparentize(0.15, theme.colors.lightgray)};
   border-top: ${theme.border};
   position: relative;
   z-index: 9;
