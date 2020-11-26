@@ -18,11 +18,12 @@ export const Announcement = styled(motion.div)`
   display: flex;
   background: ${transparentize(0.15, theme.colors.lightgray)};
   backdrop-filter: blur(9px);
-  border-bottom: 1px solid ${theme.colors.white};
+  /* border-bottom: 1px solid ${theme.colors.white}; */
   height: ${height};
   max-height: 0;
   width: 100%;
 
+  overflow: hidden;
   opacity: 0;
   top: 0;
   padding: 0 calc(${theme.space[3]});
@@ -73,7 +74,8 @@ export const Announcement = styled(motion.div)`
     .figure {
       justify-content: flex-end;
       margin: 0 ${theme.space[4]};
-      padding-top: ${theme.space[1]};
+      padding-top: ${theme.space[5]};
+
 
       svg {
         width: 32px;

@@ -23,12 +23,12 @@ const Retailers = () => {
   return (
     <S.Retailers bg="white" border={true}>
       <Text as="p" mb={[5, 7]}>
-        eOn mist&trade; multi-surface disinfectent
+        eOn mist&trade; sanitizing products
         <br />
-        is available at these fine retailers:
+        are available at these fine retailers:
       </Text>
 
-      <Grid columns={[3, 4, 5]} gap={[6, 7, 7]} className="retailers-grid">
+      <Grid columns={[3, 5]} gap={[6, 7, 7]} className="retailers-grid">
         {retailers.map(({ node: retailer }, idx) => (
           <Flex key={idx} className="retailers-grid__cell">
             <Img
