@@ -28,7 +28,8 @@ module.exports = {
     facebook: config.ogSiteName,
     gatsbyStorefrontConfig: {
       storeName: 'eOn mist™',
-      storeDescription: 'eOn is professional-grade hand sanitation, for everyone.',
+      storeDescription:
+        'eOn is professional-grade hand sanitation, for everyone.',
       email: 'hello@eonmist.com',
       logoUrl: '',
       company: 'eOn mist™',
@@ -58,6 +59,12 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -79,7 +86,7 @@ module.exports = {
         // or `npm run build`. This prints which nodes are being fetched and how
         // much time was required to fetch and process the data.
         // Defaults to true.
-        verbose: true,
+        verbose: true
       }
     },
     {
@@ -107,17 +114,6 @@ module.exports = {
         name: 'images',
         path: `${__dirname}/src/images`
       }
-    },
-    {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        // your google analytics tracking id
-        trackingId: config.googleAnalyticsID,
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // enable ip anonymization
-        anonymize: true,
-      },
     },
     // {
     //   resolve: `gatsby-source-instagram`,
