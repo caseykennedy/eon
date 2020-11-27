@@ -88,7 +88,7 @@ const PageHero = () => {
 export default PageHero
 
 const data = {
-  title: 'eOn multi-surface.',
+  title: 'eOn multi-surface HOCl.',
   headline: 'Clean, deoderize and disinfect your environment, on the go.',
   featureA:
     "Currently only available in stores. We're at work on our store locator to help you find eOn nearby.",
