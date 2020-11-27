@@ -98,6 +98,7 @@ const CartItems: React.FC<CartItemsProps> = ({
             <Button
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}
+              aria-label="Checkout"
             >
               Checkout
             </Button>

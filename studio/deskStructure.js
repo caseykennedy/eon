@@ -44,6 +44,18 @@ export default () =>
         .schemaType("instagram")
         .child(S.documentTypeList("instagram").title("Instagram"))
 
+        .icon(MdSettings),
+
+      // Legal
+      // _________________________________________________________________
+      S.listItem()
+        .title("Legal stuff")
+        .child(
+          S.editor()
+            .id("legal")
+            .schemaType("legal")
+            .documentId("legal")
+        )
         .icon(MdSettings)
 
       // End

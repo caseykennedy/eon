@@ -25,13 +25,14 @@ const ProductDetail: React.FC = () => {
     <S.ProductDetail overflow="visible">
       <Flex
         flexDirection={['column', 'column', 'row']}
-        // maxWidth={theme.maxWidth}
+        maxWidth={theme.maxWidth}
         margin={'0 auto'}
       >
         <Flex
           alignItems="flex-start"
           flexWrap="wrap"
           flexDirection={['column', 'row-reverse', 'row-reverse']}
+          width={1}
         >
           <Box flex={1} width={1} style={{ position: 'relative', zIndex: 9 }}>
             <Box className="badge">

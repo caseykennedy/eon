@@ -10,18 +10,23 @@ import { Box, Flex } from '../../ui'
 // ___________________________________________________________________
 
 export const PageHero = styled(Flex)`
-  /* min-height: 800px; */
+  min-height: 580px;
   padding-top: ${theme.space[6]};
   padding-bottom: ${theme.space[5]};
   position: relative;
   overflow: hidden;
 
   @media ${theme.mq.tablet} {
+    /* height: calc(
+      100vh - calc(${theme.headerHeight} * 1) - ${theme.trademarksHeight}
+    ); */
+    /* max-height: 900px; */
     padding-top: ${theme.space[6]};
     padding-bottom: ${theme.space[6]};
   }
 
   @media ${theme.mq.desktop} {
+    /* max-height: 800px; */
   }
 
   .hero {

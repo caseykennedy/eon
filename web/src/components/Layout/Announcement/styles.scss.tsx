@@ -18,7 +18,7 @@ export const Announcement = styled(motion.div)`
   display: flex;
   background: ${transparentize(0.15, theme.colors.lightgray)};
   backdrop-filter: blur(9px);
-  /* border-bottom: 1px solid ${theme.colors.white}; */
+  border-bottom: 1px solid ${theme.colors.white};
   height: ${height};
   max-height: 0;
   width: 100%;

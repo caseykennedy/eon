@@ -24,7 +24,16 @@ const PreFoot = () => (
       <Text as="p" color="primary">
         Sign up for updates and giveaways!
       </Text>
-      <Box as="form" action="/">
+      <Box
+        as="form"
+        name="eOn Newsletter Signup Form"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="eOn Newsletter Signup Form" />
+
         <label htmlFor="email" style={{ display: 'none' }}>
           Email address:
         </label>
@@ -33,13 +42,18 @@ const PreFoot = () => (
           type="email"
           className="form-control"
           id="email"
+          required={true}
         />
+
         <button type="submit">
           <Icon name="arrow" color="white" />
         </button>
       </Box>
     </Box>
-    <Link to={`/eon-multi-surface`} className="prefoot-panel  prefoot-panel__usa">
+    <Link
+      to={`/eon-multi-surface`}
+      className="prefoot-panel  prefoot-panel__usa"
+    >
       <Box mb={4}>
         <CanMulti />
       </Box>
@@ -53,7 +67,10 @@ const PreFoot = () => (
 const Terms = () => (
   <S.Terms>
     <p className="t--small">
-      eOn branded products are America’s premiere - travel size - TSA friendly, continuous-spray packaged goods for on-the-go protection from dirty, bad, nasties which make you sick. Our products are available so you can promote well-being throughout your facility – and your home.
+      eOn branded products are America’s premiere - travel size - TSA friendly,
+      continuous-spray packaged goods for on-the-go protection from dirty, bad,
+      nasties which make you sick. Our products are available so you can promote
+      well-being throughout your facility – and your home.
     </p>
   </S.Terms>
 )
@@ -77,7 +94,9 @@ const Footer: React.FC = () => {
             <small>Contact Us</small>
           </Flex>
         </Flex>
-        <Flex className="footer__copyright">&copy;{getYear()} eOn mist&trade;</Flex>
+        <Flex className="footer__copyright">
+          &copy;{getYear()} eOn mist&trade;
+        </Flex>
       </S.Footer>
     </>
   )

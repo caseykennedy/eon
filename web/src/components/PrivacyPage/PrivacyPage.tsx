@@ -4,16 +4,20 @@
 
 import React, { useEffect } from 'react'
 
-import { Heading, Flex } from '../ui'
+import { Box } from '../ui'
 import Button from '../ui/Button'
 
 import Section from '../Section'
+
+// Hooks
+import useLegal from '../../hooks/useLegal'
 
 // Theme
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
 
-// Sections
+// Components
+import BlockContent from '../BlockContent'
 
 // ___________________________________________________________________
 
@@ -25,17 +29,21 @@ const resize = () => {
 }
 
 const PrivacyPage = () => {
+  const data = useLegal()
+  const page = data.privacy
   return (
     <S.PrivacyPage>
       <Section>
         {/* <Heading as="h1">Privacy Policy</Heading> */}
-        <div
+        {/* <div
           className="privacy"
           name="termly-embed"
           // Replace data-id with your policy uuid
-          data-id="03977565-0b35-498f-a368-72d2cf0a3e8e"
+          data-id="969bcd2a-33e6-4ed8-95d0-33e0fb193359"
           data-type="iframe"
-        />
+        /> */}
+
+        {page._rawBody && <BlockContent blocks={page._rawBody || []} />}
       </Section>
     </S.PrivacyPage>
   )

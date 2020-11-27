@@ -71,6 +71,7 @@ const AddToCart: React.FC<Props> = ({ btnText, linkText, setPortalOpen }) => {
       type="submit"
       disabled={!available || adding}
       onClick={handleAddToCart}
+      aria-label="Buy now"
     >
       {!adding ? btnText : 'Thank you'}
       {!adding ? <Icon name="arrow" /> : <Box className="smiley">😃</Box>}

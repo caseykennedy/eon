@@ -9,9 +9,13 @@ import blockContent from './blockContent'
 import blockText from './blockText'
 import figure from './figure'
 import instagram from './instagram'
+import legal from './legal'
 import mainImage from './mainImage'
+import privacy from './privacy'
 import retailer from './retailer'
+import returns from './returns'
 import siteSettings from './siteSettings'
+import terms from './terms'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,9 +31,13 @@ export default createSchema({
     blockText,
     figure,
     instagram,
+    legal,
     mainImage,
+    privacy,
     retailer,
+    returns,
     siteSettings,
+    terms,
 
 
     // When added to this list, object types can be used as

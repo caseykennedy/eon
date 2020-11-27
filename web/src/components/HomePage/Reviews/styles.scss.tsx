@@ -61,10 +61,6 @@ export const Reviews = styled(Section)`
       padding-bottom: ${theme.space[8]};
     }
 
-    .parallax-bg {
-      background: yellow;
-    }
-
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};

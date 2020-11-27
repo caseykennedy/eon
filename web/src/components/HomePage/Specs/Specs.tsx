@@ -58,7 +58,7 @@ const Specs = () => {
         </S.HowTo>
       </Section>
       <S.Specs overflow="hidden">
-        <Box className="">
+        <Box maxWidth={theme.maxWidth} margin={'0 auto'}>
           <Flex className="spec__block" flexDirection={['row', 'row-reverse']}>
             <Flex width={[1, 1 / 3, 1 / 3]} className="decorator">
               <Box
@@ -184,6 +184,6 @@ const data = [
   {
     spec: 'RUB until DRY',
     figure: <HappyHands />,
-    caption: 'You\'re good to go'
+    caption: "You're good to go"
   }
 ]
