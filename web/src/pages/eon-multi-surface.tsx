@@ -18,7 +18,12 @@ import theme from '../gatsby-plugin-theme-ui'
 const Returns = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname={`/eon-multi-surface/`}
+        title={`eOn multi-surface disinfectant | eOn mist™`}
+        desc={`eOn Sanitizing Mist is an EPA registered personal protection product which can rapidly neutralize easily transmitted pathogens via HOCI. eOn Sanitizing Mist Eliminates 99.9% of bacteria and viruses. Spray on surfaces you come in contact with. Hypochlorous acid (HOCI) is one of the most effective known biocides produced by the human immune system. HOCI is now used in healthcare, food safety, water treatment, and general sanitation world-wide. HOCI’s chlorine based odor does not linger and rapidly dissipates.`}
+        individual={true}
+      />
       <MultiSurfacePage />
     </Layout>
   )
