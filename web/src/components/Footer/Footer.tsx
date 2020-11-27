@@ -38,14 +38,15 @@ const PreFoot = () => (
           Email address:
         </label>
         <Input
-          placeholder="email here"
           type="email"
-          className="form-control"
+          name="email"
           id="email"
+          placeholder="email here"
           required={true}
+          className="form-control"
         />
 
-        <button type="submit">
+        <button type="submit" value="Submit form">
           <Icon name="arrow" color="white" />
         </button>
       </Box>

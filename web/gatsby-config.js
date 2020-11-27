@@ -27,13 +27,13 @@ module.exports = {
     twitter: config.userTwitter,
     facebook: config.ogSiteName,
     gatsbyStorefrontConfig: {
-      storeName: 'Gatsby Storefront',
-      storeDescription: 'Demo store description',
-      email: 'info@gatsbystorefront.com',
+      storeName: 'eOn mist™',
+      storeDescription: 'eOn is professional-grade hand sanitation, for everyone.',
+      email: 'hello@eonmist.com',
       logoUrl: '',
-      company: 'Gatsby Storefront Inc.',
-      location: 'New York, NY',
-      address: '1 Centre St.',
+      company: 'eOn mist™',
+      location: 'Wilmington, DE',
+      address: '427 N Tatnall St # 85923',
       phone: '+1 (800) 123-1234',
       workingDays: 'Mon - Fri',
       workingHours: '8AM - 6PM',
@@ -109,10 +109,15 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: config.googleAnalyticsID
-      }
+        // your google analytics tracking id
+        trackingId: config.googleAnalyticsID,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
+      },
     },
     // {
     //   resolve: `gatsby-source-instagram`,
