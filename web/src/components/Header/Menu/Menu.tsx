@@ -84,7 +84,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                 <Box bg="white" p={4} mr={[0, 0, 4]} mb={[4, 4, 0]} flex={1}>
                   <Flex>
                     <Box className="icon">
-                      <Beaker />
+                      <Factory />
                     </Box>
                     <p>
                       <Text as="span" color="primary" fontWeight={600}>
@@ -98,7 +98,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                 <Box bg="white" p={4} flex={1}>
                   <Flex>
                     <Box className="icon">
-                      <Factory />
+                      <Beaker />
                     </Box>
                     <p>
                       <Text as="span" color="primary" fontWeight={600}>

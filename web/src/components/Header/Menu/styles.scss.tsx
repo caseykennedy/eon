@@ -30,7 +30,6 @@ export const Menu = styled(Flex)`
     margin-right: ${theme.space[4]};
 
     svg {
-      stroke: ${theme.colors.primary};
       width: ${theme.space[6]};
     }
   }
