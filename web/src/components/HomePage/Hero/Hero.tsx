@@ -23,14 +23,7 @@ import Trademarks from '../../Trademarks'
 
 const Hero = () => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0
-      }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.75 }}
-
-    >
+    <>
       <S.Hero>
         <S.Decorator>
           <Shine />
@@ -60,9 +53,7 @@ const Hero = () => {
 
         <Flex px={[4, 5, 6]} className="hero__inner">
           <Box position="relative" style={{ zIndex: 9 }}>
-            <Text className="text--md">
-              {data.title}
-            </Text>
+            <Text className="text--md">{data.title}</Text>
             <h1
               dangerouslySetInnerHTML={{ __html: data.headline }}
               className="text--xl"
@@ -100,7 +91,7 @@ const Hero = () => {
         </Flex>
       </S.Hero>
       <Trademarks />
-    </motion.div>
+    </>
   )
 }
 

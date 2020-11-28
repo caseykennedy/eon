@@ -14,6 +14,7 @@ import ContextProvider from '../../provider/ContextProvider'
 import Announcement from './Announcement'
 import Header from '../Header'
 import Footer from '../Footer'
+import Popup from '../Popup'
 
 // Styles + Theme
 import theme from '../../gatsby-plugin-theme-ui'

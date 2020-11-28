@@ -91,7 +91,7 @@ const data = {
   title: 'eOn multi-surface HOCl.',
   headline: 'Clean, deoderize and disinfect your environment, on the go.',
   featureA:
-    "Currently only available in stores. We're at work on our store locator to help you find eOn nearby.",
+    "Currently available in stores only. We're at work on our store locator to help you find eOn nearby.",
   featureB: '',
   featureC:
     'Derived from naturally occuring salt minerals and water. Effective on <mark>99.9%</mark> of bacteria and viruses.'
