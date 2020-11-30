@@ -28,6 +28,7 @@ module.exports = {
   ogLanguage: settings.ogLanguage, // og:language
   googleAnalyticsID: 'G-29NFE5QM0T',
   // googleAnalyticsID: settings.googleAnalyticsID,
+  googleTagManagerID: 'GTM-5KBCX6Z',
 
   // Manifest and Progress color
   themeColor: settings.themeColor,
