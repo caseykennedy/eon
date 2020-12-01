@@ -11,6 +11,7 @@ declare module '@sanity/block-content-to-react'
 declare module 'react-id-swiper'
 declare module 'shopify-buy/index.unoptimized.umd'
 declare module 'react-responsive-embed'
+declare module 'iframe-script-container'
 
 function createRef<T>(): RefObject<T>
 interface RefObject<T> {

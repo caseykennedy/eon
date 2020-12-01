@@ -15,6 +15,15 @@ import theme from '../../gatsby-plugin-theme-ui'
 export const MultiSurfacePage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
+
+  .locator__iframe {
+    height: 80vh;
+    max-height: calc(1024px - ${theme.headerHeight});
+
+    @media ${theme.mq.tablet} {
+      height: 60vw;
+    }
+  }
 `
 
 export const StoreLocator = styled(Section)`
