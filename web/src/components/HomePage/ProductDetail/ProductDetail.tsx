@@ -79,7 +79,7 @@ const ProductDetail: React.FC = () => {
             </p> */}
 
             <Box mt={[6, 6, 7]}>
-              <AddToCart>Buy Now</AddToCart>
+              <AddToCart trackEventLabel="Product detail section">Buy Now</AddToCart>
             </Box>
 
             <Flex mt={4} mb={0}>

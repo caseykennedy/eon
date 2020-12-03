@@ -21,7 +21,7 @@ export const Retailers = styled(Section)`
     justify-content: center;
 
     &__cell {    
-      /* justify-content: center; */
+      justify-content: center;
       height: auto;
       width: 100%;
       /* height: 40px; */

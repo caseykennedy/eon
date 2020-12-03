@@ -4,6 +4,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // Styles + Theme
 import * as S from './styles.scss'
@@ -14,8 +15,8 @@ import { Box, Flex, Text } from '../../ui'
 
 // Compoonents
 import ImgMatch from '../../ImgMatch'
-import Shine from '../../Shine'
-import CanSpray from '../../CanSpray'
+import Shine from '../../SVG/Shine'
+import CanSpray from '../../SVG/CanSpray'
 import AddToCart from '../../AddToCart'
 import Trademarks from '../../Trademarks'
 
@@ -68,7 +69,16 @@ const Hero = () => {
             transition={{ delay: 1.5, duration: 0.5 }}
           >
             <Flex className="hero__features">
-              <Flex className="cta">
+              <Flex
+                className="cta"
+                onClick={e => {
+                  trackCustomEvent({
+                    category: 'Buy Now button',
+                    action: 'Click',
+                    label: 'Homepage hero'
+                  })
+                }}
+              >
                 <AddToCart />
               </Flex>
 
@@ -98,8 +108,8 @@ const Hero = () => {
 export default Hero
 
 const data = {
-  title: 'eOn makes it simple.',
-  headline: 'Pro-grade<br />hand sanitation<br />for everyone.',
+  title: 'eOn hand sanitizer',
+  headline: 'Pro-grade<br />hand sanitation<br />made simple.',
   featureA: 'Effective on<br /><mark>99.99%</mark> of<br />common germs',
   featureB: 'personal size<br />germ protection<br />on the go'
 }

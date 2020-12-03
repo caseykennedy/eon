@@ -237,9 +237,7 @@ const Typography = css`
   h5,
   .text--sm {
     font-size: ${theme.fontSizes[1]};
-    font-weight: 600;
     letter-spacing: 1px;
-    text-transform: uppercase;
 
     @media ${theme.mq.tablet} {
     }
@@ -249,7 +247,8 @@ const Typography = css`
     font-size: ${theme.root.font.xs};
   }
 
-  p {
+  p,
+  .text--base {
     font-size: ${theme.fontSizes[2]};
     /* font-weight: ${theme.fontWeights.medium}; */
     line-height: ${theme.root.font.bodyLineHeight};

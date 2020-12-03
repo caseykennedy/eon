@@ -11,8 +11,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 // Components
 import { Box, Flex, Text } from '../../ui'
 import AddToCart from '../../AddToCart'
-import Beaker from '../../Beaker'
-import Factory from '../../Factory'
+import Beaker from '../../SVG/Beaker'
+import Factory from '../../SVG/Factory'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
@@ -75,7 +75,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
               </Box>
 
               <Flex mt={[5, 7, 7]}>
-                <AddToCart btnText="Buy eOn mist™" />
+                <AddToCart btnText="Buy eOn mist™" trackEventLabel="Menu overlay" />
               </Flex>
             </Box>
 

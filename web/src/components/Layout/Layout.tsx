@@ -4,17 +4,13 @@
 // ___________________________________________________________________
 
 import React, { useRef } from 'react'
-import { withPrefix } from 'gatsby'
-import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 
 import ContextProvider from '../../provider/ContextProvider'
 
 // Components
-import Announcement from './Announcement'
 import Header from '../Header'
 import Footer from '../Footer'
-import Popup from '../Popup'
 
 // Styles + Theme
 import theme from '../../gatsby-plugin-theme-ui'
@@ -34,10 +30,6 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
-  const isBrowser = typeof window !== 'undefined'
-
-  const isHomepage = isBrowser && location.pathname === withPrefix('/')
-
   // eslint-disable-next-line no-console
   console.log(
     `%c eOn Mist — built by caseyKennedy.me `,
@@ -45,12 +37,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
   return (
     <>
-      <Helmet>
-        <script
-          id="termly-jssdk"
-          src="https://app.termly.io/embed-policy.min.js"
-        />
-      </Helmet>
       <ContextProvider>
         <ThemeProvider theme={theme}>
           <GlobalStyles />

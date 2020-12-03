@@ -7,25 +7,24 @@ import React, { useState, useRef, useContext } from 'react'
 import { Link } from 'gatsby'
 import reduce from 'lodash/reduce'
 import HamburgerMenu from 'react-hamburger-menu'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
-// Hooks
+// Theme + ui
+import theme from '../../gatsby-plugin-theme-ui'
+import * as S from './styles.scss'
+import { Box } from '../ui'
+
+// Hooks + context
 import useScrollWatch from '../../hooks/useScrollWatch'
-
 import StoreContext from '../../context/StoreContext'
 
-import Logo from '../Logo'
-import Menu from './Menu'
+import Logo from '../SVG/Logo'
 import Portal from '../Portal'
+import Menu from './Menu'
 import Overlay from './Menu/Overlay'
 import Cart from '../Cart'
 import BuyButton from './BuyButton'
 import Icon from '../Icons'
-
-// Elements
-import { Box } from '../ui'
-
-import theme from '../../gatsby-plugin-theme-ui'
-import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
@@ -40,14 +39,22 @@ interface CallbackTypes {
 const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const exitRef = useRef<HTMLDivElement>(null)
-
   const {
     isCartOpen,
     setCartOpen,
     store: { checkout, adding }
   } = useContext(StoreContext)
+
   // Toggle cart portal
-  const togglePortal = () => setCartOpen(!isCartOpen)
+  const toggleCart = () => {
+    setCartOpen(!isCartOpen)
+    trackCustomEvent({
+      category: 'Header utilities',
+      action: 'Click',
+      label: 'Header cart toggle'
+    })
+  }
+
   // Get current cart count
   const useQuantity = () => {
     const items = checkout ? checkout.lineItems : []
@@ -58,7 +65,14 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
   // Navigation portal
   const [isNavOpen, setNavOpen] = useState(false)
-  const toggleModal = () => setNavOpen(!isNavOpen)
+  const toggleMenu = () => {
+    setNavOpen(!isNavOpen)
+    trackCustomEvent({
+      category: 'Header utilities',
+      action: 'Click',
+      label: 'Header hamburger toggle'
+    })
+  }
 
   // On scroll class change
   const [shouldHideHeader, setShouldHideHeader] = useState(false)
@@ -107,12 +121,12 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         <Box
           bg={`${isNavOpen && theme.colors.quinary}`}
           className="header-toggle"
-          onClick={toggleModal}
+          onClick={toggleMenu}
           aria-label="toggle menu"
         >
           <HamburgerMenu
             isOpen={!isNavOpen ? false : true}
-            menuClicked={toggleModal}
+            menuClicked={toggleMenu}
             width={32}
             height={12}
             strokeWidth={1.5}
@@ -138,7 +152,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         <S.CartToggle
           bg={`${isCartOpen && theme.colors.quinary}`}
           aria-label="toggle cart"
-          onClick={togglePortal}
+          onClick={toggleCart}
         >
           {hasItems && <div className="quantity">{quantity}</div>}
           <Icon name="bag" color="black" />

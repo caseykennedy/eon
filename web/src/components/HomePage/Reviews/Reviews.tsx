@@ -2,18 +2,16 @@
 
 // ___________________________________________________________________
 
+// Libraries
 import React from 'react'
+import Swiper from 'react-id-swiper'
 
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
-
 import { Box, Flex, Heading, Text } from '../../ui'
 
 // Components
-import Stars from '../../Stars'
-
-// Libraries
-import Swiper from 'react-id-swiper'
+import Stars from '../../SVG/Stars'
 
 // ___________________________________________________________________
 

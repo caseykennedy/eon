@@ -16,8 +16,8 @@ const height = theme.headerHeight
 
 export const Announcement = styled(motion.div)`
   display: flex;
-  background: ${transparentize(0.15, theme.colors.lightgray)};
-  backdrop-filter: blur(9px);
+  background: ${transparentize(0.05, theme.colors.lightgray)};
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid ${theme.colors.white};
   height: ${height};
   max-height: 0;
@@ -61,7 +61,7 @@ export const Announcement = styled(motion.div)`
   a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     color: ${theme.colors.text};
     height: 100%;
@@ -79,6 +79,22 @@ export const Announcement = styled(motion.div)`
 
       svg {
         width: 32px;
+      }
+    }
+  }
+
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        transition: ${theme.transition.all};
+
+        &:hover {
+          /* cursor: pointer; */
+        }
+
+        &.swiper-slide-active {
+          /* background: ${theme.colors.primary}; */
+        }
       }
     }
   }

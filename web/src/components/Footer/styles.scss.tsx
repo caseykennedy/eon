@@ -117,7 +117,7 @@ export const PreFoot = styled.div`
         }
       }
 
-      &__usa {
+      &__cta {
         border-top: ${theme.border};
         cursor: pointer;
 
@@ -130,8 +130,26 @@ export const PreFoot = styled.div`
           background: ${theme.colors.babyblue};
         }
 
+        &--hand-sanitizer {
+          background: rgb(255, 255, 255);
+          background: linear-gradient(
+            176deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 1) 43%,
+            rgba(220, 237, 255, 1) 100%
+          );
+        }
+
         p {
           color: ${theme.colors.text};
+
+          span {
+            margin-left: ${theme.space[2]};
+
+            svg {
+              width: 16px;
+            }
+          }
         }
 
         svg {
@@ -164,18 +182,24 @@ export const Footer = styled(Flex)`
   .footer {    
     &__links {
       align-items: center;
+      flex-direction: column;
       justify-content: center;
       margin-bottom: ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
+        flex-direction: row;
         justify-content: flex-end;
         margin-bottom: 0;
       }
 
-      a {
+      .link {
         color: ${theme.colors.black};
         margin-left: ${theme.space[4]};
         /* display: none; */
+
+        &:first-child {
+          margin-left: 0;
+        }
 
         @media ${theme.mq.tablet} {
           display: inherit;
@@ -188,22 +212,28 @@ export const Footer = styled(Flex)`
       justify-content: center;
     }
 
-    &__contact {
+    &__button{
+      /* display: flex; */
       background-color: ${theme.colors.quinary};
       border: ${theme.border};
+      border-color: ${theme.colors.black};
       border-radius: ${theme.space[6]};
       
       cursor: pointer;
       outline: none;
-      margin-left: ${theme.space[4]};
+      margin-top: ${theme.space[4]};
+      margin-left: ${theme.space[0]};
       padding: calc(${theme.space[1]} * 1.5) ${theme.space[3]};
 
+      color: ${theme.colors.black};
       font-weight: 500;
       text-transform: capitalize;
       transition: background-color ${theme.transition.global};
       white-space: nowrap;
 
       @media ${theme.mq.tablet} {
+        margin-top: 0;
+        margin-left: ${theme.space[4]};
         padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
       }
 

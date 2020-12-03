@@ -3,10 +3,10 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-
 import { Flex, Text } from '../ui'
 
 import Icon from '../Icons'
@@ -21,7 +21,19 @@ type TrademarkShape = {
 
 const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
   return (
-    <a href={item.link} className="mark" target="_blank">
+    <a
+      href={item.link}
+      className="mark"
+      target="_blank"
+      onClick={e => {
+        // e.preventDefault()
+        trackCustomEvent({
+          category: 'Footer social link',
+          action: 'Click',
+          label: item.alt
+        })
+      }}
+    >
       {item.src}
     </a>
   )

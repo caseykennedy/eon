@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React, { useContext, useState, useEffect, useCallback } from 'react'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 import StoreContext from '../../context/StoreContext'
 import useProduct from '../../hooks/useProduct'
@@ -18,10 +19,10 @@ import * as S from './styles.scss'
 type Props = {
   btnText?: string
   linkText?: string
-  setPortalOpen?: any
+  trackEventLabel?: string
 }
 
-const AddToCart: React.FC<Props> = ({ btnText, linkText, setPortalOpen }) => {
+const AddToCart: React.FC<Props> = ({ btnText, linkText, trackEventLabel }) => {
   const products = useProduct()
   const product = products.edges[0].node
   const {
@@ -63,6 +64,19 @@ const AddToCart: React.FC<Props> = ({ btnText, linkText, setPortalOpen }) => {
 
   const handleAddToCart = () => {
     addVariantToCart(productVariant.shopifyId, quantity)
+    if (!linkText) {
+      trackCustomEvent({
+        category: 'Buy Now button',
+        action: 'Click',
+        label: trackEventLabel
+      })
+    } else {
+      trackCustomEvent({
+        category: 'Buy Now text link',
+        action: 'Click',
+        label: trackEventLabel
+      })
+    }
   }
 
   return !linkText ? (
@@ -88,7 +102,8 @@ export default AddToCart
 // ___________________________________________________________________
 
 const defaultProps = {
-  btnText: 'Buy Now'
+  btnText: 'Buy Now',
+  trackEventLabel: 'unlabeled'
 }
 
 AddToCart.defaultProps = defaultProps

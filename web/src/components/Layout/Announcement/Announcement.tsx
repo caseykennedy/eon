@@ -4,9 +4,10 @@
 
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import Swiper from 'react-id-swiper'
 
 // UI
-import { Box, Flex } from '../../ui'
+import { Box, Flex, Text } from '../../ui'
 
 // Theme
 import * as S from './styles.scss'
@@ -14,7 +15,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 
 // Components
 import Icon from '../../Icons'
-import CanMulti from '../../CanMulti'
+import CanMulti from '../../SVG/CanMulti'
 
 // ___________________________________________________________________
 
@@ -28,6 +29,20 @@ const defaultProps = {
   to: '/'
 }
 
+const AnnouncementSlider: React.FC = ({ children }) => {
+  const params = {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true
+    },
+  }
+  return <Swiper {...params}>{children}</Swiper>
+}
+
 const Message: React.FC<Props> = ({
   announcement,
   handleExit,
@@ -35,27 +50,28 @@ const Message: React.FC<Props> = ({
   to
 }) => {
   return (
-    <>
+    <AnnouncementSlider>
       <Link to={to}>
-        {/* <Text as="p" fontSize={1} dangerouslySetInnerHTML={{ __html: announcement }} /> */}
         <Flex>
-          <p>
-            <small>
-              <Box as="span" color="primary">
-                Hello there!
-              </Box>{' '}
-              Looking for eOn multi-surface disinfectant?
-            </small>
-          </p>
+          <Text as="p" className="t--small">
+            <Box as="span" color="primary">
+              Hello there!&nbsp;
+            </Box>{' '}
+            Looking for eOn multi-surface disinfectant?
+          </Text>
           <Flex as="span" className="figure">
             <CanMulti />
           </Flex>
         </Flex>
       </Link>
-      {/* <S.Exit onClick={handleExit} aria-label="close announcement">
-        <Icon name="plus" color="black" />
-      </S.Exit> */}
-    </>
+      <Link to={to}>
+        <Flex>
+          <Text as="p" className="t--small">
+            Happy Holidays from eOn!
+          </Text>
+        </Flex>
+      </Link>
+    </AnnouncementSlider>
   )
 }
 

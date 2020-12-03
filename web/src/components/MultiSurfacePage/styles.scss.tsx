@@ -16,20 +16,29 @@ export const MultiSurfacePage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
 
-  .locator__iframe {
-    height: 80vh;
-    max-height: calc(1024px - ${theme.headerHeight});
+  .split {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
 
-    @media ${theme.mq.tablet} {
-      height: 60vw;
+    @media ${theme.mq.desktop} {
+      flex-direction: row;
+    }
+
+    &__content {
+    }
+
+    &__map {
+      padding: 0 ${theme.space[4]} ${theme.space[4]};
+
+      @media ${theme.mq.tablet} {
+        padding: 0 ${theme.space[5]} ${theme.space[5]};
+      }
+
+      @media ${theme.mq.desktop} {
+        padding: 0;
+      }
     }
   }
-`
-
-export const StoreLocator = styled(Section)`
-  /* border-radius: 0 0 ${theme.space[6]} 0;
-
-  @media ${theme.mq.tablet} {
-    border-radius: 0 0 ${theme.space[7]} 0;
-  } */
 `

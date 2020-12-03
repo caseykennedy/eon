@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 201.71 158.64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-3 {
+        fill: #f1f1f1;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-6 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-7 {
+        fill: url(#radial-gradient-4);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="223.8" cy="236.16" r="1"
+      gradientTransform="translate(-17667.84 -18669.04) scale(79.39)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e1f1ff" />
+      <stop offset="1" stop-color="#4e4e4e" />
+    </radialGradient>
+    <clipPath id="clip-path" transform="translate(21.4)">
+      <rect class="cls-1" width="158.64" height="158.64" rx="16.32" />
+    </clipPath>
+    <radialGradient id="radial-gradient-2" cx="223.8" cy="236.16" r="1"
+      gradientTransform="translate(-10775.53 -11473.3) scale(48.79)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" />
+      <stop offset="1" stop-color="#64b0ed" />
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="223.8" cy="236.16" r="1"
+      gradientTransform="translate(-6235.58 -6516.81) scale(27.87)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" />
+      <stop offset="1" stop-color="#adadad" />
+    </radialGradient>
+    <radialGradient id="radial-gradient-4" cx="223.8" cy="236.16" r="1"
+      gradientTransform="translate(-7297.49 -7651.3) scale(32.84)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" />
+      <stop offset="1" stop-color="#3b7aad" />
+    </radialGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect class="cls-2" x="21.4" width="158.64" height="158.64" rx="16.32" />
+      <rect class="cls-3" x="21.4" width="158.64" height="158.64" rx="16.32" />
+      <g class="cls-4">
+        <polyline points="103.42 102.2 123.53 88.71 115.69 77.03 95.58 90.52" />
+        <polyline points="39.18 89.81 51.29 99.7 60.19 88.81 48.08 78.92" />
+        <circle class="cls-5" cx="152.92" cy="62.96" r="48.79" />
+        <path class="cls-6" d="M6.47,42.86A27.87,27.87,0,1,1-21.4,70.73,27.87,27.87,0,0,1,6.47,42.86Z"
+          transform="translate(21.4)" />
+        <path class="cls-7" d="M54.87,78.91A32.84,32.84,0,1,1,22,111.75,32.84,32.84,0,0,1,54.87,78.91Z"
+          transform="translate(21.4)" />
+      </g>
+    </g>
+  </g>
+</svg>

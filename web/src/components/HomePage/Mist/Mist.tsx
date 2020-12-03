@@ -13,9 +13,9 @@ import { Box, Flex, Heading, Text, AnimatedBox } from '../../ui'
 
 // Components
 import ImgMatch from '../../ImgMatch'
-import Gauge from '../../Gauge'
-import Germs from '../../Germs'
-import Alcohol from '../../Alcohol'
+import Gauge from '../../SVG/Gauge'
+import Germs from '../../SVG/Germs'
+import Alcohol from '../../SVG/Alcohol'
 import Video from '../../Video'
 
 import borderFrame from './assets/border.svg'

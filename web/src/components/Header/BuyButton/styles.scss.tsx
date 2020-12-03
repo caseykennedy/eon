@@ -16,6 +16,7 @@ import { Flex, AnimatedFlex } from '../../ui'
 export const BuyButton = styled.button`
   background-color: ${theme.colors.quinary};
   border: ${theme.border};
+  border-color: ${theme.colors.black};
   border-radius: ${theme.space[6]};
   
   cursor: pointer;
