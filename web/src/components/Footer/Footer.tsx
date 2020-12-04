@@ -94,7 +94,7 @@ const PreFoot = () => {
       ) : (
         <Link
           to={`/`}
-          className="prefoot-panel  prefoot-panel__cta prefoot-panel__cta--hand-sanitizer"
+          className="prefoot-panel  prefoot-panel__cta  prefoot-panel__cta--hand-sanitizer"
           onClick={e => {
             // e.preventDefault()
             trackCustomEvent({
