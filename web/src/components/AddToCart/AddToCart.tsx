@@ -3,10 +3,12 @@
 // ___________________________________________________________________
 
 import React, { useContext, useState, useEffect, useCallback } from 'react'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 import StoreContext from '../../context/StoreContext'
 import useProduct from '../../hooks/useProduct'
+
+// utils
+import * as gtag from '../../utils/gtag'
 
 import { Box } from '../ui'
 import Icon from '../Icons'
@@ -65,16 +67,16 @@ const AddToCart: React.FC<Props> = ({ btnText, linkText, trackEventLabel }) => {
   const handleAddToCart = () => {
     addVariantToCart(productVariant.shopifyId, quantity)
     if (!linkText) {
-      trackCustomEvent({
+      gtag.event({
         category: 'Buy Now button',
         action: 'Click',
-        label: trackEventLabel
+        label: `${trackEventLabel}`
       })
     } else {
-      trackCustomEvent({
+      gtag.event({
         category: 'Buy Now text link',
         action: 'Click',
-        label: trackEventLabel
+        label: `${trackEventLabel}`
       })
     }
   }

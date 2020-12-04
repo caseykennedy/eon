@@ -3,7 +3,9 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+
+// utils
+import * as gtag from '../../utils/gtag'
 
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
@@ -27,7 +29,7 @@ const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
       target="_blank"
       onClick={e => {
         // e.preventDefault()
-        trackCustomEvent({
+        gtag.event({
           category: 'Footer social link',
           action: 'Click',
           label: item.alt

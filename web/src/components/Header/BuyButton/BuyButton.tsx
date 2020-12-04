@@ -3,7 +3,9 @@
 // ___________________________________________________________________
 
 import React, { useContext, useState, useEffect, useCallback } from 'react'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+
+// utils
+import * as gtag from '../../../utils/gtag'
 
 // Context
 import StoreContext from '../../../context/StoreContext'
@@ -62,7 +64,7 @@ const BuyButton: React.FC<Props> = ({ setPortalOpen, highlightBG }) => {
 
   const handleAddToCart = () => {
     addVariantToCart(productVariant.shopifyId, quantity)
-    trackCustomEvent({
+    gtag.event({
       category: 'Buy Now button',
       action: 'Click',
       label: 'Header'

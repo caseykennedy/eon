@@ -4,7 +4,9 @@
 
 import * as React from 'react'
 import { Link, withPrefix } from 'gatsby'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+
+// utils
+import * as gtag from '../../utils/gtag'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
@@ -55,7 +57,7 @@ const PreFoot = () => {
             className="form-control"
             onClick={e => {
               // e.preventDefault()
-              trackCustomEvent({
+              gtag.event({
                 category: 'Submit form',
                 action: 'Click',
                 label: 'Footer newsletter sign up'
@@ -74,7 +76,7 @@ const PreFoot = () => {
           className="prefoot-panel  prefoot-panel__cta"
           onClick={e => {
             // e.preventDefault()
-            trackCustomEvent({
+            gtag.event({
               category: 'Footer eon callout',
               action: 'Click',
               label: 'eon multi surface'
@@ -97,7 +99,7 @@ const PreFoot = () => {
           className="prefoot-panel  prefoot-panel__cta  prefoot-panel__cta--hand-sanitizer"
           onClick={e => {
             // e.preventDefault()
-            trackCustomEvent({
+            gtag.event({
               category: 'Footer eon callout',
               action: 'Click',
               label: 'eon ethyl alcohol'
@@ -149,7 +151,7 @@ const Footer: React.FC = () => {
             to={`/eon-multi-surface`}
             onClick={e => {
               // e.preventDefault()
-              trackCustomEvent({
+              gtag.event({
                 category: 'Store locator button',
                 action: 'Click',
                 label: 'footer'

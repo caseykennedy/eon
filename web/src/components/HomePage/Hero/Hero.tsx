@@ -4,7 +4,9 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+
+// utils
+import * as gtag from '../../../utils/gtag'
 
 // Styles + Theme
 import * as S from './styles.scss'
@@ -72,7 +74,7 @@ const Hero = () => {
               <Flex
                 className="cta"
                 onClick={e => {
-                  trackCustomEvent({
+                  gtag.event({
                     category: 'Buy Now button',
                     action: 'Click',
                     label: 'Homepage hero'

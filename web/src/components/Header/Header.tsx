@@ -7,7 +7,6 @@ import React, { useState, useRef, useContext } from 'react'
 import { Link } from 'gatsby'
 import reduce from 'lodash/reduce'
 import HamburgerMenu from 'react-hamburger-menu'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
@@ -17,6 +16,9 @@ import { Box } from '../ui'
 // Hooks + context
 import useScrollWatch from '../../hooks/useScrollWatch'
 import StoreContext from '../../context/StoreContext'
+
+// utils
+import * as gtag from '../../utils/gtag'
 
 import Logo from '../SVG/Logo'
 import Portal from '../Portal'
@@ -48,7 +50,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   // Toggle cart portal
   const toggleCart = () => {
     setCartOpen(!isCartOpen)
-    trackCustomEvent({
+    gtag.event({
       category: 'Header utilities',
       action: 'Click',
       label: 'Header cart toggle'
@@ -67,7 +69,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleMenu = () => {
     setNavOpen(!isNavOpen)
-    trackCustomEvent({
+    gtag.event({
       category: 'Header utilities',
       action: 'Click',
       label: 'Header hamburger toggle'

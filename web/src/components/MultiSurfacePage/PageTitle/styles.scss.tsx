@@ -19,8 +19,8 @@ export const PageTitle = styled(Flex)`
 
   @media ${theme.mq.tablet} {
     padding-top: ${theme.space[6]};
-  padding-bottom: ${theme.space[6]};
-      }
+    padding-bottom: ${theme.space[6]};
+  }
 
   .hero {
     &__inner {
@@ -103,7 +103,6 @@ export const PageTitle = styled(Flex)`
       position: relative;
 
       @media ${theme.mq.tablet} {
-
       }
 
       .feature-set {
