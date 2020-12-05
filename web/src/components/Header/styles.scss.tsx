@@ -68,6 +68,29 @@ export const Header = styled(Flex)`
     &-cta {
     }
 
+    &-tools {
+      display: flex;
+      align-items: center;
+
+      nav {
+        margin-right: ${theme.space[4]};
+        display: none;
+
+        @media ${theme.mq.tablet} {
+          display: initial;
+        }
+
+        a {
+          color: ${theme.colors.tertiary};
+          /* text-transform: capitalize; */
+
+          &:hover {
+            color: ${theme.colors.text};
+          }
+        }
+      }
+    }
+
     &-toggle {
       display: flex;
       align-items: center;

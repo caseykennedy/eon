@@ -16,11 +16,37 @@ export const Retailers = styled(Section)`
   @media ${theme.mq.tablet} {
   }
 
+  .cta {
+    margin: ${theme.space[4]} 0;
+
+    @media ${theme.mq.tablet} {
+      margin: 0 0;
+    }
+
+    a {
+      color: ${theme.colors.tertiary};
+
+      svg {
+        fill: ${theme.colors.tertiary};
+        margin-left: ${theme.space[3]};
+        width: 14px;
+      }
+
+      &:hover {
+        color: ${theme.colors.secondary};
+
+        svg {
+          fill: ${theme.colors.secondary};
+        }
+      }
+    }
+  }
+
   .retailers-grid {
     align-items: center;
     justify-content: center;
 
-    &__cell {    
+    &__cell {
       justify-content: center;
       height: auto;
       width: 100%;

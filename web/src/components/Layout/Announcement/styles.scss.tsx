@@ -72,8 +72,8 @@ export const Announcement = styled(motion.div)`
     }
 
     svg {
-      margin-left: ${theme.space[2]};
-      width: 18px;
+      margin-left: ${theme.space[3]};
+      width: 14px;
     }
 
     .figure {
@@ -83,6 +83,7 @@ export const Announcement = styled(motion.div)`
 
 
       svg {
+        margin-left: ${theme.space[2]};
         width: 32px;
       }
     }

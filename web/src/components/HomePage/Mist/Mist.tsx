@@ -20,6 +20,9 @@ import Video from '../../Video'
 
 import borderFrame from './assets/border.svg'
 
+// utils
+import * as gtag from '../../../utils/gtag'
+
 // ___________________________________________________________________
 
 const VideoProps = {
@@ -41,6 +44,13 @@ const How = () => {
           pr={[4, 7, 7]}
           pl={[4, 7, 0]}
           className="mist__video"
+          onClick={e => {
+            gtag.event({
+              category: 'Youtube embed',
+              action: 'Click',
+              label: 'No mess, just mist'
+            })
+          }}
         >
           <Video {...VideoProps} />
 

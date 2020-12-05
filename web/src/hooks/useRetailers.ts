@@ -44,7 +44,7 @@ const useRetailers = () => {
             logo {
               alt
               asset {
-                fluid(maxHeight: 300) {
+                fluid(maxWidth: 130) {
                   srcWebp
                   srcSetWebp
                   srcSet

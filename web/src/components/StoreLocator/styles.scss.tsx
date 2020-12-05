@@ -17,14 +17,13 @@ const frameHeight = '800px'
 export const StoreLocator = styled(Box)`
   .locator__iframe {
     background: ${transparentize(0.15, theme.colors.lightgray)};
-    border: ${theme.border};
-    border-color: ${transparentize(0.15, theme.colors.lightgray)};
-    border-radius: ${theme.borderRadius};
     height: 80vh;
     max-height: ${frameHeight};
     min-height: 444px;
+    border: none;
 
     @media ${theme.mq.tablet} {
+      border-left: ${theme.border};
       height: ${frameHeight};
     }
   }

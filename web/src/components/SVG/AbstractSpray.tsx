@@ -9,7 +9,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 const AbstractSpray = () => (
-  <SVG viewBox="0 0 220.72 337.38">
+  <SVG width="100%" viewBox="0 0 220.72 337.38">
     <title>Features icon</title>
     <g id="Layer_2" data-name="Layer 2">
       <g id="BG">

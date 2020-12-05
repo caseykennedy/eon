@@ -146,8 +146,16 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
             </Link>
           </div>
 
-          <div className="header-cta">
-            <BuyButton setPortalOpen={!setCartOpen} highlightBG={highlightBG} />
+          <div className="header-tools">
+            {/* <nav>
+              <Link to={`/eon-multi-surface`}>store locator</Link>
+            </nav> */}
+            <div className="header-cta">
+              <BuyButton
+                setPortalOpen={!setCartOpen}
+                highlightBG={highlightBG}
+              />
+            </div>
           </div>
         </div>
 
