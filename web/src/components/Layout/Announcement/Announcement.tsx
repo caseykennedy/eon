@@ -6,6 +6,9 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Swiper from 'react-id-swiper'
 
+// utils
+import * as gtag from '../../../utils/gtag'
+
 // UI
 import { Box, Flex, Text } from '../../ui'
 
@@ -36,9 +39,9 @@ const AnnouncementSlider: React.FC = ({ children }) => {
     slidesPerView: 1,
     spaceBetween: 0,
     autoplay: {
-      delay: 4000,
+      delay: 5000,
       disableOnInteraction: true
-    },
+    }
   }
   return <Swiper {...params}>{children}</Swiper>
 }
@@ -51,24 +54,39 @@ const Message: React.FC<Props> = ({
 }) => {
   return (
     <AnnouncementSlider>
-      <Link to={to}>
-        <Flex>
-          <Text as="p" className="t--small">
-            <Box as="span" color="primary">
-              Hello there!&nbsp;
-            </Box>{' '}
-            Looking for eOn multi-surface disinfectant?
-          </Text>
-          <Flex as="span" className="figure">
-            <CanMulti />
-          </Flex>
+      <Link
+        to={to}
+        onClick={e => {
+          gtag.event({
+            category: 'Announcement bar',
+            action: 'Click',
+            label: 'Looking for multi-surface'
+          })
+        }}
+      >
+        <Text as="p" className="t--small">
+          <Box as="span" color="primary">Hello there!&nbsp;</Box> Looking for eOn
+          multi-surface disinfectant?
+        </Text>
+        <Flex as="span" className="figure">
+          <CanMulti />
         </Flex>
       </Link>
-      <Link to={to}>
+      <Link
+        to={to}
+        onClick={e => {
+          gtag.event({
+            category: 'Announcement bar',
+            action: 'Click',
+            label: 'Find at your local retailer'
+          })
+        }}
+      >
         <Flex>
           <Text as="p" className="t--small">
-            Happy Holidays from eOn!
+            Find eOn at your local retailer
           </Text>
+          <Icon name="arrow" />
         </Flex>
       </Link>
     </AnnouncementSlider>

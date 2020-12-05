@@ -146,7 +146,7 @@ export const Decorator = styled.div`
   top: ${theme.space[4]};
   right: calc(${theme.space[4]});
   margin-left: auto;
-  width: ${theme.space[8]};
+  width: calc(${theme.space[7]} / 1.15);
 
   @media ${theme.mq.tablet} {
     top: ${theme.space[5]};

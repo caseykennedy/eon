@@ -77,7 +77,12 @@ const PageTitle = () => {
                   as="p"
                   dangerouslySetInnerHTML={{ __html: data.featureA }}
                 />
-                <p className="t--small">Available in stores only.</p>
+                <Text
+                  as="p"
+                  mt={6}
+                  className="t--small"
+                  dangerouslySetInnerHTML={{ __html: data.note }}
+                />
               </Box>
             </Flex>
           </Flex>
@@ -94,5 +99,6 @@ const data = {
   headline: 'Eliminates<br />99.9% of bacteria<br />and viruses.',
   featureA: 'Clean, deodorize, and disinfect<br />your environment, on the go.',
   featureC:
-    'Derived from naturally occuring salt minerals and water. Effective on <mark>99.9%</mark> of bacteria and viruses.'
+    'Derived from naturally occuring salt minerals and water. Effective on <mark>99.9%</mark> of bacteria and viruses.',
+  note: 'Available in stores only.'
 }

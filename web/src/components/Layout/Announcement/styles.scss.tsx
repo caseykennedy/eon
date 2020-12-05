@@ -71,6 +71,11 @@ export const Announcement = styled(motion.div)`
       color: ${theme.colors.secondary};
     }
 
+    svg {
+      margin-left: ${theme.space[2]};
+      width: 18px;
+    }
+
     .figure {
       justify-content: flex-end;
       margin: 0 ${theme.space[4]};
@@ -84,6 +89,8 @@ export const Announcement = styled(motion.div)`
   }
 
   .swiper-container {
+    width: 100%;
+
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};

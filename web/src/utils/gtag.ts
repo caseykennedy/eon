@@ -2,7 +2,7 @@ type EventProps = {
   action: string
   category: string
   label: string
-  value?: string
+  value?: number
 }
 
 const isBrowser = typeof window !== 'undefined'

@@ -23,7 +23,7 @@ const Retailers = () => {
   return (
     <S.Retailers bg="white" border={true}>
       <Text as="p" mb={[5, 7]}>
-        Available at these fine retailers:
+        Find eOn mist™ at your favorite local retailer:
       </Text>
 
       <Grid columns={[3, 5]} gap={[6, 7, 7]} className="retailers-grid">

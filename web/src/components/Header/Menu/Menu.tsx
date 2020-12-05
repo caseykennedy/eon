@@ -75,8 +75,19 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
               </Box>
 
               <Flex mt={[5, 7, 7]}>
-                <AddToCart btnText="Buy eOn mist™" trackEventLabel="Menu overlay" />
+                <AddToCart
+                  btnText="Buy eOn mist™"
+                  trackEventLabel="Menu overlay"
+                />
               </Flex>
+
+              <Box width={[1, 2 / 3, 1 / 2]} mt={[5, 4]}>
+                <p className="t--small">
+                  <Link to={`/eon-multi-surface`} onClick={handleExit}>
+                    Looking for eOn multi-surface disinfectant?
+                  </Link>
+                </p>
+              </Box>
             </Box>
 
             <Box mt={[4, 5, 6]} width={1}>
