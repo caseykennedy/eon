@@ -12,6 +12,7 @@ declare module 'react-id-swiper'
 declare module 'shopify-buy/index.unoptimized.umd'
 declare module 'react-responsive-embed'
 declare module 'iframe-script-container'
+declare module 'react-cookie'
 
 function createRef<T>(): RefObject<T>
 interface RefObject<T> {

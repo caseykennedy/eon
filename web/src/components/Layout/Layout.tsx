@@ -4,19 +4,24 @@
 // ___________________________________________________________________
 
 import React, { useRef } from 'react'
-import { ThemeProvider } from 'styled-components'
 
+// Providers
+import { ThemeProvider } from 'styled-components'
 import ContextProvider from '../../provider/ContextProvider'
+import { CookiesProvider } from 'react-cookie'
 
 // Components
 import Header from '../Header'
 import Footer from '../Footer'
+
+import NewCustomerModal from '../NewCustomerModal'
 
 // Styles + Theme
 import theme from '../../gatsby-plugin-theme-ui'
 import GlobalStyles from '../../styles/global'
 import * as S from './styles.scss'
 import 'swiper/css/swiper.css'
+import 'react-responsive-modal/styles.css'
 
 // ___________________________________________________________________
 
@@ -37,16 +42,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
   return (
     <>
-      <ContextProvider>
-        <ThemeProvider theme={theme}>
-          <GlobalStyles />
-          <S.Wrapper id="main-root">
-            <Header mainRef={mainRef} />
-            <S.Main ref={mainRef}>{children}</S.Main>
-            <Footer />
-          </S.Wrapper>
-        </ThemeProvider>
-      </ContextProvider>
+      <CookiesProvider>
+        <ContextProvider>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <S.Wrapper id="main-root">
+              <Header mainRef={mainRef} />
+              <S.Main ref={mainRef}>{children}</S.Main>
+              <Footer />
+            </S.Wrapper>
+            <NewCustomerModal />
+          </ThemeProvider>
+        </ContextProvider>
+      </CookiesProvider>
     </>
   )
 }
