@@ -7,6 +7,9 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { Grid } from 'theme-ui'
 
+// utils
+import * as gtag from '../../../utils/gtag'
+
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
@@ -38,7 +41,16 @@ const Retailers = () => {
         </Text>
 
         <div className="cta">
-          <Link to={`/eon-multi-surface`}>
+          <Link
+            to={`/eon-multi-surface`}
+            onClick={() => {
+              gtag.event({
+                category: 'homepage retailers',
+                action: 'Click',
+                label: 'store locator link'
+              })
+            }}
+          >
             store locator <Icon name="arrow" />
           </Link>
         </div>

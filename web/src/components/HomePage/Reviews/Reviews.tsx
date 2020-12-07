@@ -89,6 +89,11 @@ const data = [
       'I take it with me wherever I go, from the gym to the restaurant, one single spray gives me the confidence my hands are clean and completely germ free. Thanks for the cool product!'
   },
   {
+    lead: 'This product is incredible!',
+    author: 'Edward, CA',
+    review: 'This product is incredible! Much better than the squeeze bottle goop we grew up on!'
+  },
+  {
     lead: 'Love the spray action',
     author: 'John, OH',
     review:
