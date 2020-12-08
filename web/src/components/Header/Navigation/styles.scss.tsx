@@ -13,25 +13,13 @@ import theme from '../../../gatsby-plugin-theme-ui'
 
 export const Nav = styled.nav`
   display: flex;
-  align-items: flex-start;
-  z-index: 999;
-
-  width: 100%;
-  height: ${theme.headerHeight};
-  padding: ${theme.space[5]} ${theme.space[5]};
-  background: ${theme.colors.background};
 
   @media ${theme.mq.desktop} {
   }
 
   .nav-link {
-    font-family: ${theme.fonts.heading};
-    font-size: ${theme.fontSizes[2]};
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-
-    margin-left: ${theme.space[5]};
+    text-transform: capitalize;
+    margin-left: ${theme.space[4]};
     position: relative;
     cursor: pointer;
 

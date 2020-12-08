@@ -66,29 +66,42 @@ export const Header = styled(Flex)`
     }
 
     &-cta {
+      a {
+        background-color: ${theme.colors.quinary};
+        border: ${theme.border};
+        border-color: ${theme.colors.black};
+        border-radius: ${theme.space[6]};
+        
+        cursor: pointer;
+        outline: none;
+        padding: calc(${theme.space[1]} * 1.5) ${theme.space[3]};
+
+        color: ${theme.colors.text};
+        font-weight: 500;
+        text-transform: capitalize;
+        transition: background-color ${theme.transition.global};
+
+        @media ${theme.mq.tablet} {
+          padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
+        }
+
+        &:hover {
+          background: ${darken(0, theme.colors.cta)};
+          color: ${theme.colors.white};
+          border-color: ${theme.colors.cta};
+        }
+
+        &:active {
+          background: ${theme.colors.black};
+          color: ${theme.colors.white};
+          border-color: ${theme.colors.black};
+        }
+      }
     }
 
     &-tools {
       display: flex;
       align-items: center;
-
-      nav {
-        margin-right: ${theme.space[4]};
-        display: none;
-
-        @media ${theme.mq.tablet} {
-          display: initial;
-        }
-
-        a {
-          color: ${theme.colors.tertiary};
-          /* text-transform: capitalize; */
-
-          &:hover {
-            color: ${theme.colors.text};
-          }
-        }
-      }
     }
 
     &-toggle {

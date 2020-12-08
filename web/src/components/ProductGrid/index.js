@@ -61,7 +61,7 @@ const ProductGrid = () => {
             },
           }) => (
             <Product key={id}>
-              <Link to={`/product/${handle}/`}>
+              <Link to={`/products/${handle}/`}>
                 {firstImage && firstImage.localFile && (
                   <Img
                     fluid={firstImage.localFile.childImageSharp.fluid}

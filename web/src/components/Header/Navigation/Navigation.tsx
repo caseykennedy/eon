@@ -9,17 +9,19 @@ import { Box } from '../../ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
+import Icon from '../../Icons'
+
 // ___________________________________________________________________
 
 const Navigation = () => {
   return (
-    <S.Nav>
+    <S.Nav as="nav">
       {data.map((item, idx) => (
         <Box className="nav-link" key={idx}>
           {!item.link ? (
             <span className="nav-link__title">
               {item.name}
-              {/* {item.subPage && <Icon name="carat" />} */}
+              {item.subPage && <Icon name="carat" />}
             </span>
           ) : (
             <Link
@@ -57,59 +59,25 @@ export default Navigation
 
 const data = [
   {
-    name: 'rethink',
-    link: '/rethink'
-  },
-  {
-    name: 'about',
-    link: '/about',
+    name: 'shop',
+    link: '/shop',
     subPage: [
       {
-        name: 'Team',
-        link: '/about#team'
-      },
-      {
-        name: 'Careers',
-        link: '/about#careers'
-      }
-    ]
-  },
-  {
-    name: 'implants',
-    link: '/implants',
-    subPage: [
-      {
-        name: 'External Fixation',
+        name: 'eOn hand sanitizer',
         link: '/implants/external-fixation'
       },
       {
-        name: 'Hip Fractures',
+        name: 'eOn multi-surface',
         link: '/implants/hip-fractures'
-      },
-      {
-        name: 'IM Nails',
-        link: '/implants/im-nails'
-      },
-      {
-        name: 'Plates and Screws',
-        link: '/implants/plates-and-screws'
-      },
-      {
-        name: 'Cannulated Screws',
-        link: '/implants/cannulated-screws'
-      },
-      {
-        name: 'Sports Medicine',
-        link: '/implants/sports-medicine'
       },
     ]
   },
   {
-    name: 'news',
-    link: '/news'
+    name: 'mission',
+    link: '/mission'
   },
   {
-    name: 'contact',
-    link: '/contact'
+    name: 'store locator',
+    link: '/store-locator'
   }
 ]

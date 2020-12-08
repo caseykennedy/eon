@@ -11,12 +11,13 @@ import * as gtag from '../../utils/gtag'
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Flex, Text } from '../ui'
+import { Box, Flex, Heading, Text } from '../ui'
 import { Input } from 'theme-ui'
 
 // Components
-import Icon from '../Icons'
 import Modal from '../Modal'
+
+import signupDecorator from './assets/signup.svg'
 
 // ___________________________________________________________________
 
@@ -25,29 +26,44 @@ const NewCustomerModal = () => {
   const [cookie, setCookie, removeCookie] = useCookies(['new_user_modal'])
 
   const createCookie = () => {
-    setCookie('new_user_modal', 'true', { path: '/' })
-  }
-
-  const destroyCookie = () => {
-    removeCookie('new_user_modal', { path: '/' })
+    setCookie('new_user_modal', 'true', { path: '/', maxAge: 86400 })
+    gtag.event({
+      category: 'Submit form',
+      action: 'Click',
+      label: 'Popup modal new customer signup form'
+    })
   }
 
   useEffect(() => {
     !cookie.new_user_modal &&
       setTimeout(() => {
         setActive(true)
-      }, 7500)
+      }, 500)
   }, [cookie])
   return (
     <>
       {active && (
         <Modal active={true}>
           <S.Modal>
-            <h4>
-              Get 10% off
+            <Box mb={0} className="text--lg">
+              Sign up to get
               <br />
-              your first order!
-            </h4>
+              <strong>10% off</strong> your
+              <br />
+              first order.
+            </Box>
+
+            <div className="decorator">
+              <span>
+                <img src={signupDecorator} alt="eOn new customer signup" />
+              </span>
+            </div>
+
+            <p>
+              <strong>Hey!</strong> We're talking exclusive offers and
+              announcements—<em>never spam</em>.
+            </p>
+
             <form
               name="Popup modal new customer signup form"
               method="POST"
@@ -64,6 +80,7 @@ const NewCustomerModal = () => {
               <label htmlFor="email" style={{ display: 'none' }}>
                 Email address:
               </label>
+
               <Input
                 type="email"
                 name="email"
@@ -71,19 +88,10 @@ const NewCustomerModal = () => {
                 placeholder="email"
                 required={true}
                 className="form-control"
-                onClick={e => {
-                  // e.preventDefault()
-                  gtag.event({
-                    category: 'Submit form',
-                    action: 'Click',
-                    label: 'Footer newsletter sign up'
-                  })
-                }}
               />
 
               <button type="submit" value="Submit form" onClick={createCookie}>
                 subscribe
-                {/* <Icon name="arrow" color="white" /> */}
               </button>
             </form>
           </S.Modal>

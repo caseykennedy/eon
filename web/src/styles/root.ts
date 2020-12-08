@@ -30,14 +30,18 @@ const RootVariables = css`
 
     /* set base values */
     --text-base-size: 1em;
-    --text-scale-ratio: 1.618;
+    --text-scale-ratio: 1.414;
     --text-base-letter-spacing: 0px;
+
+    /* line-height */
+    --heading-line-height: 1.25;
+    --body-line-height: 1.25;
 
     @media ${theme.mq.tablet} {
       :root {
         --text-base-size: 0.95em;
         --body-line-height: 1.35;
-        --heading-line-height: 1.15;
+        --heading-line-height: 1.25;
       }
     }
 
@@ -46,10 +50,6 @@ const RootVariables = css`
         --text-base-size: 1em;
       }
     }
-
-    /* line-height */
-    --heading-line-height: 1.15;
-    --body-line-height: 1.25;
 
     /* type scale */
     --text-xs: calc(

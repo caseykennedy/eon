@@ -99,7 +99,7 @@ const theme: ThemeShape = {
     // Theme colors
     lightgray: '#F1F1F1',
     gray: '#C4C4c4',
-    darkgray: '#9D9FA2',
+    darkgray: '#696d6d',
     darknight: '#09040b',
     babyblue: '#dcedff',
     skyblue: '#4073b2',
@@ -156,7 +156,9 @@ const theme: ThemeShape = {
     'var(--text-xxxl)' // 7
   ],
 
-  Heading: {},
+  Heading: {
+    lineHeight: 'var(--heading-line-height)'
+  },
 
   fontWeights: {
     light: 300,

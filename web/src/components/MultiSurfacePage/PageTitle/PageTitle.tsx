@@ -25,9 +25,9 @@ const PageTitle = () => {
   return (
     <>
       <S.PageTitle>
-      <S.Decorator>
-        <img src={dropBolt} alt="eOn multi-surface badge" />
-      </S.Decorator>
+        <S.Decorator>
+          <img src={dropBolt} alt="eOn multi-surface badge" />
+        </S.Decorator>
         <Flex px={[4, 5, 6]} className="hero__inner">
           <Box>
             <Text
@@ -36,11 +36,11 @@ const PageTitle = () => {
               className="text--base"
               dangerouslySetInnerHTML={{ __html: data.title }}
             />
-            <Text
+            {/* <Text
               as="h1"
               className="text--md"
               dangerouslySetInnerHTML={{ __html: data.headline }}
-            />
+            /> */}
           </Box>
           <Flex width={[1]} className="hero__can">
             <motion.div
@@ -97,7 +97,7 @@ export default PageTitle
 const data = {
   title: 'eOn multi-surface',
   headline: 'Eliminates<br />99.9% of bacteria<br />and viruses.',
-  featureA: 'Clean, deodorize, and disinfect<br />your environment, on the go.',
+  featureA: 'Clean, disinfect, and deodorize<br />your environment, on the go.',
   featureC:
     'Derived from naturally occuring salt minerals and water. Effective on <mark>99.9%</mark> of bacteria and viruses.',
   note: 'Available in stores only.'

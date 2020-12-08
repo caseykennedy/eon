@@ -28,6 +28,8 @@ import Cart from '../Cart'
 import BuyButton from './BuyButton'
 import Icon from '../Icons'
 
+import Navigation from './Navigation'
+
 // ___________________________________________________________________
 
 type HeaderShape = { mainRef: React.RefObject<HTMLDivElement> }
@@ -147,15 +149,10 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           </div>
 
           <div className="header-tools">
-            {/* <nav>
+            <Navigation />
+            {/* <div className="header-cta">
               <Link to={`/eon-multi-surface`}>store locator</Link>
-            </nav> */}
-            <div className="header-cta">
-              <BuyButton
-                setPortalOpen={!setCartOpen}
-                highlightBG={highlightBG}
-              />
-            </div>
+            </div> */}
           </div>
         </div>
 

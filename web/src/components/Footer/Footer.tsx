@@ -55,17 +55,19 @@ const PreFoot = () => {
             placeholder="email"
             required={true}
             className="form-control"
-            onClick={e => {
-              // e.preventDefault()
+          />
+
+          <button
+            type="submit"
+            value="Submit form"
+            onClick={() => {
               gtag.event({
                 category: 'Submit form',
                 action: 'Click',
                 label: 'Footer newsletter sign up'
               })
             }}
-          />
-
-          <button type="submit" value="Submit form">
+          >
             <Icon name="arrow" color="white" />
           </button>
         </Box>
@@ -74,8 +76,7 @@ const PreFoot = () => {
         <Link
           to={`/eon-multi-surface`}
           className="prefoot-panel  prefoot-panel__cta"
-          onClick={e => {
-            // e.preventDefault()
+          onClick={() => {
             gtag.event({
               category: 'Footer eon callout',
               action: 'Click',
@@ -97,8 +98,7 @@ const PreFoot = () => {
         <Link
           to={`/`}
           className="prefoot-panel  prefoot-panel__cta  prefoot-panel__cta--hand-sanitizer"
-          onClick={e => {
-            // e.preventDefault()
+          onClick={() => {
             gtag.event({
               category: 'Footer eon callout',
               action: 'Click',
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
       <SocialLinks />
       <PreFoot />
       <S.Footer as="footer">
-        <Flex className="footer__links" flexWrap="wrap">
+        <div className="footer__links">
           <Flex as="nav">
             <Link to={`/privacy`} className="link">
               privacy
@@ -149,8 +149,7 @@ const Footer: React.FC = () => {
           <Link
             className="footer__button"
             to={`/eon-multi-surface`}
-            onClick={e => {
-              // e.preventDefault()
+            onClick={() => {
               gtag.event({
                 category: 'Store locator button',
                 action: 'Click',
@@ -160,7 +159,7 @@ const Footer: React.FC = () => {
           >
             Store locator
           </Link>
-        </Flex>
+        </div>
         <Flex className="footer__copyright">
           &copy;{getYear()} eOn mist&trade;
         </Flex>

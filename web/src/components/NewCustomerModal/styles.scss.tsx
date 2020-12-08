@@ -10,11 +10,30 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const Modal = styled(Box)`
+  padding: ${theme.space[4]};
   max-width: 500px;
   width: 90vw;
-  padding: ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
+  }
+
+  .decorator {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: calc(${theme.space[6]} * -1);
+    margin-bottom: ${theme.space[4]};
+
+    @media ${theme.mq.tablet} {
+      margin-top: calc(${theme.space[6]} * -1.5);
+    }
+
+    span {
+      width: 96px;
+
+      @media ${theme.mq.tablet} {
+        width: 128px;
+      }
+    }
   }
 
   form {
@@ -22,20 +41,19 @@ export const Modal = styled(Box)`
       border: ${theme.border};
       border-radius: ${theme.borderRadius};
       font-size: calc(${theme.fontSizes[2]} * 1.25);
-      padding: ${theme.space[1]} ${theme.space[3]};
 
       @media ${theme.mq.desktop} {
-        font-size: calc(${theme.fontSizes[2]} * 1.5);
+        /* font-size: calc(${theme.fontSizes[2]} * 1.5); */
       }
     }
 
     button {
-      background: ${theme.colors.primary};
+      background: ${theme.colors.black};
       border: none;
       border-radius: ${theme.borderRadius};
 
       color: ${theme.colors.white};
-      font-size: calc(${theme.fontSizes[3]} / 1.5);
+      font-size: calc(${theme.fontSizes[2]} * 1.25);
       font-weight: 500;
 
       margin-top: ${theme.space[2]};
@@ -45,13 +63,22 @@ export const Modal = styled(Box)`
       cursor: pointer;
 
       &:hover {
-        background: ${darken(0.05, theme.colors.cta)};
+        background: ${lighten(0.15, theme.colors.black)};
       }
 
       &:active {
         background: ${theme.colors.black};
         color: ${theme.colors.white};
         border-color: ${theme.colors.black};
+      }
+
+      span {
+        margin-left: ${theme.space[3]};
+        width: 16px;
+
+        svg {
+          
+        }
       }
 
       @media ${theme.mq.desktop} {

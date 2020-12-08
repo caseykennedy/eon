@@ -1,18 +1,23 @@
+// Hand Sanitizer Product Detail Template
+
+// ___________________________________________________________________
+
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image/withIEPolyfill'
-
-import SEO from '../components/SEO'
-import ProductForm from '../components/ProductForm'
 
 // UI
 import { Box, Flex } from '../components/ui'
 
 // Components
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import ProductForm from '../components/ProductForm'
 
-const ProductPage: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
+// ___________________________________________________________________
+
+const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
   const product = data.shopifyProduct
   console.log(product)
   return (
@@ -32,7 +37,7 @@ const ProductPage: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
           )}
         </Box>
         <Box width={1 / 2}>
-          <p>{product.title}</p>
+          <h2>{product.title}</h2>
           <p dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
           <ProductForm product={product} />
         </Box>
@@ -40,6 +45,10 @@ const ProductPage: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
     </Layout>
   )
 }
+
+export default HandSanitizer
+
+// ___________________________________________________________________
 
 export const query = graphql`
   query($handle: String!) {
@@ -91,5 +100,3 @@ export const query = graphql`
     }
   }
 `
-
-export default ProductPage

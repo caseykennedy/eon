@@ -173,15 +173,15 @@ const Typography = css`
   }
 
   .text--xxxl {
-    font-size: calc(${theme.root.font.xl} / 1.75);
-    line-height: calc(${theme.root.font.headingLineHeight} / 1);
+    font-size: calc(${theme.root.font.xl});
+    line-height: ${theme.root.font.headingLineHeight};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xl} / 1.25);
+      font-size: calc(${theme.root.font.xxl} / 1.25);
     }
 
     @media ${theme.mq.desktop} {
-      font-size: calc(${theme.root.font.xxl} / 1.5);
+      font-size: calc(${theme.root.font.xxxl} / 1.5);
     }
   }
 

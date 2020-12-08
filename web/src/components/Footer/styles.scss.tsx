@@ -181,6 +181,8 @@ export const Footer = styled(Flex)`
 
   .footer {    
     &__links {
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
       flex-direction: column;
       justify-content: center;

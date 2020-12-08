@@ -9,7 +9,7 @@ import { Link } from 'gatsby'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // Components
-import { Box, Flex, Text } from '../../ui'
+import { Box, Flex, Heading, Text } from '../../ui'
 import AddToCart from '../../AddToCart'
 import Beaker from '../../SVG/Beaker'
 import Factory from '../../SVG/Factory'
@@ -60,12 +60,12 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             ref={scrollRef}
           >
             <Box width={1}>
-              <p className="text--xxxl">
+              <Heading className="text--xxxl">
                 We're working on new eOn mist content, complete with FAQs, usage
                 tips, support and more. Stay tuned!
-              </p>
+              </Heading>
 
-              <Box width={[1, 2 / 3, 1 / 2]}>
+              <Box width={[1, 2 / 3, 1 / 2]} mt={[5, 7, 7]}>
                 <p>
                   <strong>eOn</strong> branded products are America’s premiere,
                   TSA friendly, continuous spray packaged goods for on-the-go
@@ -115,9 +115,9 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
                       <Text as="span" color="primary" fontWeight={600}>
                         eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
                       </Text>{' '}
-                      solution works by denaturing the proteins of germs,
-                      inactivating and inhibiting microbial growth, and ensuring
-                      you're protected.
+                      solution works by denaturing germ proteins, inactivating
+                      and inhibiting microbial growth, and ensuring you're
+                      protected.
                     </p>
                   </Flex>
                 </Box>

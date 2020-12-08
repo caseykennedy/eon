@@ -12,7 +12,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const HomePage = styled(Box)`
-
   @media ${theme.mq.tablet} {
   }
+  
 `

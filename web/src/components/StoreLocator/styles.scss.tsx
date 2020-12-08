@@ -12,7 +12,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const frameHeight = '800px'
+const frameHeight = '900px'
 
 export const StoreLocator = styled(Box)`
   .locator__iframe {
@@ -23,7 +23,7 @@ export const StoreLocator = styled(Box)`
     border: none;
 
     @media ${theme.mq.tablet} {
-      border-left: ${theme.border};
+      /* border-left: ${theme.border}; */
       height: ${frameHeight};
     }
   }
