@@ -32,8 +32,10 @@ const HomePage = () => {
     <S.HomePage>
       <ProductMasonry />
 
-      <Section border={true}>
-        <Text as="p">
+      <Trademarks />
+
+      <Section bg="white" border={false}>
+        <Text as="p" py={11}>
           About us info
         </Text>
       </Section>

@@ -13,7 +13,7 @@ export const Trademarks = styled(Flex)`
   justify-content: center;
   flex-wrap: wrap;
 
-  background: ${transparentize(0.15, theme.colors.lightgray)};
+  background: ${transparentize(0, theme.colors.white)};
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 
@@ -50,7 +50,7 @@ export const Trademarks = styled(Flex)`
     @media ${theme.mq.tablet} {
       border-bottom: none !important;
       padding: ${theme.space[3]} 0;
-      max-width: 333px;
+      /* max-width: 333px; */
       width: 25%;
 
       &:nth-child(2) {

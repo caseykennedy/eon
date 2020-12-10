@@ -20,7 +20,6 @@ const Index = () => {
   return (
     <Layout>
       <SEO />
-      <Announcement to={`/eon-multi-surface`} />
       <HomePage />
     </Layout>
   )

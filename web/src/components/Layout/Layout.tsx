@@ -13,7 +13,7 @@ import { CookiesProvider } from 'react-cookie'
 // Components
 import Header from '../Header'
 import Footer from '../Footer'
-
+import Announcement from './Announcement'
 import NewCustomerModal from '../NewCustomerModal'
 
 // Styles + Theme
@@ -48,6 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <GlobalStyles />
             <S.Wrapper id="main-root">
               <Header mainRef={mainRef} />
+              <Announcement to={`/eon-multi-surface`} />
               <S.Main ref={mainRef}>{children}</S.Main>
               <Footer />
             </S.Wrapper>

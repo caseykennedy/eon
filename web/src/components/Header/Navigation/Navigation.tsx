@@ -60,16 +60,15 @@ export default Navigation
 const data = [
   {
     name: 'shop',
-    link: '/shop',
     subPage: [
       {
-        name: 'eOn hand sanitizer',
-        link: '/implants/external-fixation'
+        name: 'hand sanitizer',
+        link: '/products/eon-continuous-spray-hand-sanitizer-80'
       },
       {
-        name: 'eOn multi-surface',
-        link: '/implants/hip-fractures'
-      },
+        name: 'multi-surface disinfectant',
+        link: '/eon-multi-surface'
+      }
     ]
   },
   {

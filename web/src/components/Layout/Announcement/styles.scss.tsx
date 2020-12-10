@@ -27,7 +27,8 @@ export const Announcement = styled(motion.div)`
   opacity: 0;
   top: 0;
   padding: 0 calc(${theme.space[3]});
-  position: fixed;
+  
+  position: sticky;
   visibility: hidden;
   z-index: 11;
 
@@ -68,7 +69,7 @@ export const Announcement = styled(motion.div)`
     width: 100%;
 
     &:hover {
-      color: ${theme.colors.secondary};
+      /* color: ${theme.colors.secondary}; */
     }
 
     svg {

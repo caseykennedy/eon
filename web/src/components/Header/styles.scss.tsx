@@ -25,7 +25,6 @@ export const Header = styled(Flex)`
   border-bottom: ${theme.border};
   
   height: ${theme.headerHeight};
-  max-height: calc(${theme.headerHeight} * 2);
   max-width: ${theme.siteWidth};
   width: ${theme.siteWidth};
 

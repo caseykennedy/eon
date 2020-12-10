@@ -25,6 +25,7 @@ type ThemeShape = {
   fontWeights: {
     [key: string]: number
   }
+  arrowWidth: string
   strokeWidth: string
   maxWidth: string
   siteWidth: string
@@ -133,7 +134,7 @@ const theme: ThemeShape = {
   gutter: {
     tablet: 4,
     desktop: 7,
-    axis: [4, 6, 7]
+    axis: [4, 6, 6]
   },
 
   // Typography
@@ -168,8 +169,8 @@ const theme: ThemeShape = {
     black: 700
   },
 
+  arrowWidth: '14px',
   strokeWidth: '2px',
-
   maxWidth: '1440px',
   siteWidth: '100%',
   logoWidth: '70px',

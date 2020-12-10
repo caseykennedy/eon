@@ -11,37 +11,49 @@ import { Box, Flex } from '../../ui'
 // ___________________________________________________________________
 
 export const ProductMasonry = styled(Flex)`
+  min-height: 333px;
+
+  @media ${theme.mq.tablet} {
+    height: calc(
+      100vh - calc(${theme.headerHeight} * 2) - ${theme.trademarksHeight}
+    );
+    max-height: 1024px;
+  }
+
   .panel-group {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100%;
     width: 100%;
 
     @media ${theme.mq.desktop} {
       flex-direction: row;
     }
 
-    .multi-surface {
-      padding-top: ${theme.space[6]};
-
-      &:hover {
-        background: ${theme.colors.white};
-      }
-    }
-
-    .hand-sanitizer {
-      border-bottom: ${theme.border};
-      padding: 0 ${theme.space[4]} ${theme.space[4]};
+    .panel {
+      color: ${theme.colors.text};
+      padding: ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
-        padding: 0 ${theme.space[5]} ${theme.space[5]};
+        padding: ${theme.space[6]};
       }
 
-      @media ${theme.mq.desktop} {
-        border-bottom: 0;
-        border-right: ${theme.border};
-        padding: 0;
+      &:hover {
+        background: ${lighten(0, theme.colors.babyblue)};
+      }
+
+      &--multi-surface {
+        flex: 1;
+      }
+
+      &--hand-sanitizer {
+        flex: 2;
+        border-bottom: ${theme.border};
+
+        @media ${theme.mq.desktop} {
+          border-bottom: 0;
+          border-right: ${theme.border};
+        }
       }
     }
   }
@@ -55,38 +67,18 @@ export const HandSanitizer = styled(Flex)`
     rgba(255, 255, 255, 1) 43%,
     rgba(220, 237, 255, 0.3) 100%
   ); */
-  height: 768px;
-  min-height: 400px;
-  padding-top: calc(${theme.space[2]});
-  padding-bottom: ${theme.space[5]};
+  height: 100%;
   position: relative;
-  overflow: hidden;
-  margin-top: ${theme.headerHeight};
-
   transition: background-color 0.222s ease-in 0s;
-
-  @media ${theme.mq.tablet} {
-    height: calc(
-      100vh - calc(${theme.headerHeight} * 2) - ${theme.trademarksHeight}
-    );
-    max-height: 750px;
-    min-height: 500px;
-    padding-top: ${theme.space[6]};
-    padding-bottom: ${theme.space[6]};
-  }
-
-  @media ${theme.mq.desktop} {
-    max-height: 800px;
-  }
 
   /* &:hover {
     background: ${theme.colors.babyblue};
   } */
 
-  .hero {
+  .panel {
     &__inner {
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
       margin: 0 auto;
       width: 100%;
 
@@ -109,6 +101,10 @@ export const HandSanitizer = styled(Flex)`
         margin: 0 auto;
       }
 
+      &--inline {
+        position: relative;
+      }
+
       .figure {
         margin-right: ${theme.space[5]};
         margin-left: 0;
@@ -124,6 +120,18 @@ export const HandSanitizer = styled(Flex)`
           margin-right: ${theme.space[7]};
           margin-left: ${theme.space[5]};
           width: calc(${theme.space[9]} * 1.75);
+        }
+
+        &--small {
+          width: calc(${theme.space[7]} * 2.25);
+
+          @media ${theme.mq.tablet} {
+            width: calc(${theme.space[7]} * 3);
+          }
+
+          @media ${theme.mq.desktop} {
+            width: calc(${theme.space[7]} * 1.5);
+          }
         }
       }
 
@@ -148,7 +156,7 @@ export const HandSanitizer = styled(Flex)`
     }
 
     &__features {
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
       flex-direction: row;
       flex-wrap: wrap;
@@ -187,6 +195,37 @@ export const HandSanitizer = styled(Flex)`
         @media ${theme.mq.desktop} {
           width: 33.333%;
         }
+
+        a {
+          color: ${theme.colors.text};
+          position: relative;
+
+          &::before {
+            content: '';
+            background: ${theme.colors.secondary};
+            width: 0;
+            height: 1px;
+
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            z-index: 0;
+
+            transition: width 0.222s ease-in-out;
+          }
+
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
+        svg {
+          margin-left: ${theme.space[3]};
+          width: ${theme.arrowWidth};
+        }
       }
     }
   }
@@ -194,15 +233,15 @@ export const HandSanitizer = styled(Flex)`
 
 export const Decorator = styled.div`
   position: absolute;
-  top: ${theme.space[4]};
-  right: calc(${theme.space[4]});
-  
+  top: 0;
+  right: 0;
+
   margin-left: auto;
   width: calc(${theme.space[7]} / 1.15);
 
   @media ${theme.mq.tablet} {
-    top: ${theme.space[5]};
-    right: calc(${theme.space[5]});
-    width: calc(${theme.space[7]} / 1);
+    top: calc(${theme.space[4]} * -1);
+    right: calc(${theme.space[4]} * -1);
+    width: calc(${theme.space[7]} * 1.25);
   }
 `

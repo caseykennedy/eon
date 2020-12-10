@@ -3,10 +3,9 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { lighten } from 'polished'
 import { Link } from 'gatsby'
-
 import { Box, Flex, Text } from '../../ui'
-
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
@@ -18,9 +17,14 @@ export const Nav = styled.nav`
   }
 
   .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: ${theme.headerHeight};
+
     text-transform: capitalize;
     margin-left: ${theme.space[4]};
-    position: relative;
+    /* position: relative; */
     cursor: pointer;
 
     transition: ${theme.transition.all};
@@ -31,31 +35,16 @@ export const Nav = styled.nav`
 
     &:hover {
       .sub-nav {
-        display: initial;
+        display: flex;
         opacity: 1;
         transition: ${theme.transition.all};
       }
     }
 
     a {
-      &::before {
-        content: '';
-        background: ${theme.colors.tertiary};
-        width: 0;
-        height: 2px;
-
-        position: absolute;
-
-        bottom: 0;
-        left: 0;
-        z-index: 0;
-
-        transition: width 0.222s ease-in-out;
-      }
-
       &.active,
       &:hover {
-        color: ${theme.colors.primary};
+        color: ${theme.colors.tertiary};
 
         /* &::before {
           width: 100%;
@@ -76,7 +65,7 @@ export const Nav = styled.nav`
 
         svg {
           transform: rotate(90deg);
-          width: 8px;
+          width: 6px;
           margin-top: -${theme.space[1]};
           margin-left: ${theme.space[2]};
         }
@@ -84,15 +73,19 @@ export const Nav = styled.nav`
     }
 
     .sub-nav {
-      background: ${theme.colors.background};
-      border-left: 1px solid ${theme.colors.black};
-      border-bottom: 1px solid ${theme.colors.black};
+      align-items: center;
+      justify-content: center;
 
-      padding: ${theme.space[3]} 0 0.2rem ${theme.space[3]};
+      background: ${lighten(0, theme.colors.lightgray)};
+      border-top: ${theme.border};
+      border-bottom: ${theme.border};
+
       position: absolute;
-      left: -1.15rem;
-      width: auto;
-      min-width: 200px;
+      top: calc(${theme.headerHeight} - 2px);
+      left: 0;
+
+      height: calc(${theme.headerHeight} * 4);
+      width: 100%;
 
       display: none;
       opacity: 0;
@@ -101,20 +94,18 @@ export const Nav = styled.nav`
       a {
         color: ${theme.colors.text};
         font-family: ${theme.fonts.body};
-        font-size: calc(${theme.fontSizes[1]} / 1.1);
-        text-transform: capitalize;
+        font-size: calc(${theme.fontSizes[3]});
         letter-spacing: 0.5px;
 
         display: block;
-        margin: 0;
+        margin: 0 ${theme.space[4]};
         padding: calc(${theme.space[1]} / 2) 0;
         white-space: nowrap;
 
         &.active,
         &:hover {
           /* background: ${theme.colors.primary}; */
-          color: ${theme.colors.primary};
-          margin-left: ${theme.space[1]};
+          color: ${theme.colors.white};
         }
       }
     }

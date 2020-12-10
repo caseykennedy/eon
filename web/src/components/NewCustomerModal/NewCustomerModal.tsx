@@ -85,7 +85,7 @@ const NewCustomerModal = () => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="email"
+                placeholder="enter your email"
                 required={true}
                 className="form-control"
               />

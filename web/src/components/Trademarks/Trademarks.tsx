@@ -14,7 +14,7 @@ import Icon from '../Icons'
 import fdaMark from './svg/fda-registered.svg'
 import tsaMark from './svg/tsa-friendly.svg'
 import usaMark from './svg/usa-made.svg'
-import ethylMark from './svg/ethyl-alc.svg'
+import epaMark from './svg/epa-registered.svg'
 
 // ___________________________________________________________________
 
@@ -26,7 +26,7 @@ type TrademarkShape = {
 
 const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
   return (
-    <Flex className="mark">
+    <Flex flex={1} className="mark">
       <img src={item.src} alt={item.alt} />
       <Text as="p">{item.title}</Text>
     </Flex>
@@ -47,9 +47,9 @@ export default Trademarks
 
 const data = [
   {
-    alt: '80% ethyl alcohol',
-    src: ethylMark,
-    title: '80% Ethyl Alcohol'
+    alt: 'EPA logo',
+    src: epaMark,
+    title: 'EPA Registered'
   },
   {
     alt: 'FDA logo',
