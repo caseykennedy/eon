@@ -23,25 +23,28 @@ export const Nav = styled.nav`
     height: ${theme.headerHeight};
 
     text-transform: capitalize;
-    margin-left: ${theme.space[4]};
     /* position: relative; */
     cursor: pointer;
 
     transition: ${theme.transition.all};
 
-    &:first-child {
-      margin-left: 0;
-    }
-
     &:hover {
       .sub-nav {
         display: flex;
         opacity: 1;
-        transition: ${theme.transition.all};
       }
     }
 
     a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 ${theme.space[3]};
+      height: 100%;
+
+      &:last-child {
+      }
+
       &.active,
       &:hover {
         color: ${theme.colors.tertiary};
@@ -54,6 +57,10 @@ export const Nav = styled.nav`
 
     &__title {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      height: ${theme.headerHeight};
+      padding: 0 ${theme.space[3]};
       position: relative;
       color: ${theme.colors.text};
       transition: ${theme.transition.all};
@@ -68,13 +75,21 @@ export const Nav = styled.nav`
           width: 6px;
           margin-top: -${theme.space[1]};
           margin-left: ${theme.space[2]};
+          transition: ${theme.transition.all};
+        }
+      }
+
+      &:hover {
+        /* color: ${theme.colors.tertiary}; */
+        svg {
+          margin-top: ${theme.space[2]};
         }
       }
     }
 
     .sub-nav {
       align-items: center;
-      justify-content: center;
+      /* justify-content: center; */
 
       background: ${lighten(0, theme.colors.lightgray)};
       border-top: ${theme.border};
@@ -91,21 +106,48 @@ export const Nav = styled.nav`
       opacity: 0;
       transition: ${theme.transition.all};
 
-      a {
-        color: ${theme.colors.text};
-        font-family: ${theme.fonts.body};
-        font-size: calc(${theme.fontSizes[3]});
-        letter-spacing: 0.5px;
+      &.is-hovered {
+        display: flex;
+        opacity: 1;
+      }
 
-        display: block;
-        margin: 0 ${theme.space[4]};
-        padding: calc(${theme.space[1]} / 2) 0;
-        white-space: nowrap;
+      a {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+
+        padding: ${theme.space[4]};
+        height: 100%;
+
+        font-size: calc(${theme.fontSizes[2]});
+        
+        border-right: ${theme.border};
+
+        &:last-child {
+          border-right: none;
+        }
 
         &.active,
         &:hover {
-          /* background: ${theme.colors.primary}; */
-          color: ${theme.colors.white};
+          background: ${theme.colors.babyblue};
+          /* color: ${theme.colors.white}; */
+        }
+
+        p {
+          color: ${theme.colors.text};
+
+          span {
+            margin-left: ${theme.space[2]};
+
+            svg {
+              width: 14px;
+            }
+          }
+        }
+
+      svg {  
+          width: 37px;
         }
       }
     }

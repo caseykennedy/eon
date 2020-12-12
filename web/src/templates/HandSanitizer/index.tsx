@@ -8,12 +8,19 @@ import styled from 'styled-components'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // UI
-import { Box, Flex } from '../components/ui'
+import { Box, Flex } from '../../components/ui'
+
+// Sections
+import Hero from './Hero'
+import Mist from './Mist'
+import Specs from './Specs'
+import Reviews from './Reviews'
+import Retailers from './Retailers'
 
 // Components
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import ProductForm from '../components/ProductForm'
+import Layout from '../../components/Layout'
+import SEO from '../../components/SEO'
+import ProductForm from '../../components/ProductForm'
 
 // ___________________________________________________________________
 
@@ -42,6 +49,11 @@ const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
           <ProductForm product={product} />
         </Box>
       </Flex>
+      <Hero />
+      <Mist />
+      <Specs />
+      <Retailers />
+      <Reviews />
     </Layout>
   )
 }

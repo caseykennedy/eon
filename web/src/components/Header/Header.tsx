@@ -122,26 +122,25 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
       </Portal>
 
       <S.Header as="header">
-        <Box
-          bg={`${isNavOpen && theme.colors.quinary}`}
-          className="header-toggle"
-          onClick={toggleMenu}
-          aria-label="toggle menu"
-        >
-          <HamburgerMenu
-            isOpen={!isNavOpen ? false : true}
-            menuClicked={toggleMenu}
-            width={32}
-            height={12}
-            strokeWidth={1.5}
-            rotate={0}
-            color="black"
-            borderRadius={0}
-            animationDuration={0.333}
-          />
-        </Box>
-
         <div className="header-inner">
+          <div
+            className="header-toggle"
+            onClick={toggleMenu}
+            aria-label="toggle menu"
+          >
+            <HamburgerMenu
+              isOpen={!isNavOpen ? false : true}
+              menuClicked={toggleMenu}
+              width={32}
+              height={12}
+              strokeWidth={1.5}
+              rotate={0}
+              color="black"
+              borderRadius={0}
+              animationDuration={0.333}
+            />
+          </div>
+
           <div className="header-logo">
             <Link to="/" aria-label="eOn Mist, back to home">
               <Logo />
@@ -150,20 +149,20 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
           <div className="header-tools">
             <Navigation />
-            {/* <div className="header-cta">
-              <Link to={`/eon-multi-surface`}>store locator</Link>
-            </div> */}
+            <Link to={`/eon-multi-surface`} className="btn">
+              store locator
+            </Link>
           </div>
-        </div>
 
-        <S.CartToggle
-          bg={`${isCartOpen && theme.colors.quinary}`}
-          aria-label="toggle cart"
-          onClick={toggleCart}
-        >
-          {hasItems && <div className="quantity">{quantity}</div>}
-          <Icon name="bag" color="black" />
-        </S.CartToggle>
+          <S.CartToggle
+            aria-label="toggle cart"
+            onClick={toggleCart}
+            className={`${isCartOpen && 'is-open'}`}
+          >
+            {hasItems && <div className="quantity">{quantity}</div>}
+            <Icon name="bag" />
+          </S.CartToggle>
+        </div>
       </S.Header>
       <Cart mainRef={mainRef} />
     </>

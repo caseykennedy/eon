@@ -59,9 +59,9 @@ export const Trademarks = styled(Flex)`
     }
 
     p {
-      color: ${theme.colors.black};
+      color: ${theme.colors.text};
       letter-spacing: 0.25px;
-      font-size: calc(${theme.fontSizes[1]} / 1);
+      font-size: calc(${theme.fontSizes[1]} / 1.25);
       margin-top: ${theme.space[2]};
     }
   }
@@ -70,7 +70,7 @@ export const Trademarks = styled(Flex)`
     height: calc(${theme.space[5]} / 1.15);
 
     @media ${theme.mq.tablet} {
-      height: calc(${theme.space[4]} * 1.35);
+      height: calc(${theme.space[4]} * 1.25);
     }
   }
 `

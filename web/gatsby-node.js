@@ -16,12 +16,12 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allShopifyProduct.edges.forEach(({ node }) => {
       createPage({
         path: `/products/${node.handle}/`,
-        component: path.resolve(`./src/templates/HandSanitizer.tsx`),
+        component: path.resolve(`./src/templates/HandSanitizer/index.tsx`),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
-          handle: node.handle,
-        },
+          handle: node.handle
+        }
       })
     })
   })

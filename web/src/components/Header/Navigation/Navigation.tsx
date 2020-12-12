@@ -4,19 +4,25 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
+import { motion, AnimatePresence } from 'framer-motion'
 
-import { Box } from '../../ui'
+// Hooks
+import useHover from '../../../hooks/useHover'
+
+import { Box, Flex, Text } from '../../ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 import Icon from '../../Icons'
+import CanMulti from '../../SVG/CanMulti'
 
 // ___________________________________________________________________
 
 const Navigation = () => {
+  const [hoverRef, isHovered] = useHover()
   return (
     <S.Nav as="nav">
-      {data.map((item, idx) => (
+      {sitemap.map((item, idx) => (
         <Box className="nav-link" key={idx}>
           {!item.link ? (
             <span className="nav-link__title">
@@ -33,8 +39,9 @@ const Navigation = () => {
               {item.name}
             </Link>
           )}
+
           {item.subPage && (
-            <Box className="sub-nav">
+            <Flex className={`sub-nav  ${isHovered && 'is-hovered'}`}>
               {item.subPage.map((subItem, idx) => (
                 <Link
                   to={subItem.link}
@@ -42,10 +49,19 @@ const Navigation = () => {
                   activeClassName="active"
                   partiallyActive={true}
                 >
-                  {subItem.name}
+                  <Box mr={[4, 6, 6]}>
+                    <CanMulti />
+                  </Box>
+
+                  <Text as="p" textAlign="center">
+                    {subItem.name}{' '}
+                    <span>
+                      <Icon name="arrow" />
+                    </span>
+                  </Text>
                 </Link>
               ))}
-            </Box>
+            </Flex>
           )}
         </Box>
       ))}
@@ -57,7 +73,7 @@ export default Navigation
 
 // ___________________________________________________________________
 
-const data = [
+const sitemap = [
   {
     name: 'shop',
     subPage: [
@@ -76,7 +92,7 @@ const data = [
     link: '/mission'
   },
   {
-    name: 'store locator',
-    link: '/store-locator'
+    name: 'faqs',
+    link: '/faqs'
   }
 ]

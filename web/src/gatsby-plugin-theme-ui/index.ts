@@ -175,7 +175,7 @@ const theme: ThemeShape = {
   siteWidth: '100%',
   logoWidth: '70px',
   headerHeight: '56px',
-  trademarksHeight: '82px',
+  trademarksHeight: '76px',
   iconWidth: '18px',
 
   // Base
@@ -199,7 +199,7 @@ const theme: ThemeShape = {
 
   border: '1px solid #9D9FA2',
   borderRadius: '4px',
-  shadow: '2rem 1.5rem 1rem #8a8a7c',
+  shadow: '2rem 1.5rem 1rem #9D9FA2',
 
   root: {
     mouseX: 'var(--mouse-x)',

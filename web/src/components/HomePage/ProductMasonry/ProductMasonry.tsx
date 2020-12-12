@@ -24,27 +24,27 @@ import CanSpray from '../../SVG/CanSpray'
 import AddToCart from '../../AddToCart'
 import Trademarks from '../../Trademarks'
 
-import PageTitle from '../../MultiSurfacePage/PageTitle'
+import dropBolt from './assets/drop-bolt.svg'
 
 // ___________________________________________________________________
 
 const HandSanitizer = () => {
   return (
     <S.HandSanitizer>
-      <S.Decorator>
+      <Box className="decorator">
         <Shine />
-      </S.Decorator>
-
-      <Flex className="panel__figure">
-        <Box width={1} className="figure">
-          <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" />
-        </Box>
-      </Flex>
+      </Box>
 
       <Flex className="panel__inner">
         <Box position="relative" style={{ zIndex: 9 }}>
           <Text className="text--base">{data.title}</Text>
         </Box>
+
+        <Flex className="panel__figure">
+          <Box width={1} className="figure">
+            {/* <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" /> */}
+          </Box>
+        </Flex>
 
         <Flex className="panel__features">
           <Flex className="cta">
@@ -78,20 +78,24 @@ const HandSanitizer = () => {
 
 const MultiSurface = () => {
   return (
-    <S.HandSanitizer>
+    <S.Disinfectant>
+      <Box className="decorator">
+        <img src={dropBolt} alt="eon bolt" />
+      </Box>
+
       <Flex className="panel__inner">
         <Box position="relative" style={{ zIndex: 9 }}>
           <Text className="text--base">multi-surface</Text>
         </Box>
 
-        <Flex className="panel__figure  panel__figure--inline">
+        {/* <Flex className="panel__figure  panel__figure--inline">
           <Box className="figure--small">
             <ImgMatch
               src="can-multi-surface-eon-mist.png"
               altText="eOn Hand Sanitizer can"
             />
           </Box>
-        </Flex>
+        </Flex> */}
 
         <Flex className="panel__features">
           <Heading as="h4">
@@ -115,7 +119,7 @@ const MultiSurface = () => {
           </Flex>
         </Flex>
       </Flex>
-    </S.HandSanitizer>
+    </S.Disinfectant>
   )
 }
 

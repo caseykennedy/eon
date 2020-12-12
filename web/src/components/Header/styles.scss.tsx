@@ -55,7 +55,7 @@ export const Header = styled(Flex)`
       width: calc(${theme.logoWidth} / 1.15);
 
       @media ${theme.mq.tablet} {
-        top: 3px;
+        /* top: 3px; */
         width: calc(${theme.logoWidth} / 1);
       }
 
@@ -64,11 +64,21 @@ export const Header = styled(Flex)`
       }
     }
 
-    &-cta {
-      a {
-        background-color: ${theme.colors.quinary};
+    &-tools {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 ${theme.space[4]};
+      width: 100%;
+
+      @media ${theme.mq.tablet} {
+        display: flex;
+        margin: 0 ${theme.space[5]};
+      }
+
+      .btn {
         border: ${theme.border};
-        border-color: ${theme.colors.black};
+        border-color: ${theme.colors.tertiary};
         border-radius: ${theme.space[6]};
         
         cursor: pointer;
@@ -76,6 +86,7 @@ export const Header = styled(Flex)`
         padding: calc(${theme.space[1]} * 1.5) ${theme.space[3]};
 
         color: ${theme.colors.text};
+        font-size: calc(${theme.fontSizes[1]} / 1.25);
         font-weight: 500;
         text-transform: capitalize;
         transition: background-color ${theme.transition.global};
@@ -85,9 +96,8 @@ export const Header = styled(Flex)`
         }
 
         &:hover {
-          background: ${darken(0, theme.colors.cta)};
-          color: ${theme.colors.white};
-          border-color: ${theme.colors.cta};
+          background: ${darken(0, theme.colors.babyblue)};
+          border-color: ${theme.colors.black};
         }
 
         &:active {
@@ -98,30 +108,20 @@ export const Header = styled(Flex)`
       }
     }
 
-    &-tools {
-      display: flex;
-      align-items: center;
-    }
-
     &-toggle {
       display: flex;
       align-items: center;
-      border-right: ${theme.border};
+      
       color: ${theme.colors.text};
       cursor: pointer;
-
       height: 100%;
-      width: 70px;
-      padding-left: ${theme.space[3]};
-      
-      transition: background-color ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
+        display: none;
         width: ${theme.space[7]};
       }
 
       &:hover {
-        background: ${darken(0.05, theme.colors.quinary)};
       }
 
       /* &:active {
@@ -137,7 +137,7 @@ export const Header = styled(Flex)`
       }
     }
 
-    &-cart {
+    /* &-cart {
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -164,36 +164,43 @@ export const Header = styled(Flex)`
           width: 24px;
         }
       }
-    }
+    } */
   }
 `
 
 export const CartToggle = styled(Box)`
+  /* margin-left: auto; */
+
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
-  border-left: ${theme.border};
+  /* border-left: ${theme.border}; */
   color: ${theme.colors.text};
   cursor: pointer;
 
-  padding-right: ${theme.space[3]};
+  /* padding-right: ${theme.space[3]}; */
   position: relative;
   height: 100%;
-  width: 70px;
+  /* width: 70px; */
   transition: background-color ${theme.transition.global};
 
   @media ${theme.mq.tablet} {
-    width: ${theme.space[7]};
-  }
-
-  &:hover {
-    background: ${darken(0.08, theme.colors.quinary)};
+    /* width: ${theme.space[7]}; */
   }
 
   span {
     svg {
+      stroke: ${theme.colors.black};
       width: 24px;
+    }
+  }
+
+  &:hover,
+  &.is-open {
+    /* background: ${darken(0.08, theme.colors.quinary)}; */
+    svg {
+      stroke: ${theme.colors.darkgray};
     }
   }
 
@@ -210,8 +217,8 @@ export const CartToggle = styled(Box)`
     font-weight: 600;
 
     position: absolute;
-    bottom: ${theme.space[2]};
-    right: ${theme.space[2]};
+    top: ${theme.space[4]};
+    right: calc(${theme.space[3]} * -0.5);
 
     height: calc(${theme.space[4]} * 1.15);
     width: calc(${theme.space[4]} * 1.15);
