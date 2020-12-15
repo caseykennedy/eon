@@ -8,20 +8,20 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PrivacyPage from '../components/PrivacyPage'
+import MissionPage from '../components/MissionPage'
 
 // Theme
 import theme from '../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const Privacy = () => {
+const Mission = () => {
   return (
     <Layout>
       <SEO />
-      <p>mission page</p>
+      <MissionPage />
     </Layout>
   )
 }
 
-export default Privacy
+export default Mission

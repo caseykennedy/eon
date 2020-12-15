@@ -139,26 +139,20 @@ const Footer: React.FC = () => {
             <Link to={`/returns`} className="link">
               returns
             </Link>
-            <a
-              href="mailto:hello@eonmist.com?subject=Contact from eonmist.com"
-              className="link"
-            >
-              contact
-            </a>
           </Flex>
-          <Link
+          <a
             className="footer__button"
-            to={`/eon-multi-surface`}
+            href="mailto:hello@eonmist.com?subject=Contact from eonmist.com"
             onClick={() => {
               gtag.event({
-                category: 'Store locator button',
+                category: 'footer links',
                 action: 'Click',
-                label: 'footer'
+                label: 'footer contact'
               })
             }}
           >
-            Store locator
-          </Link>
+            Contact
+          </a>
         </div>
         <Flex className="footer__copyright">
           &copy;{getYear()} eOn mist&trade;

@@ -74,7 +74,6 @@ export const HandSanitizer = styled(Flex)`
   ); */
   height: 100%;
   overflow: visible;
-  position: relative;
   transition: background-color 0.222s ease-in 0s;
 
   /* &:hover {
@@ -83,15 +82,14 @@ export const HandSanitizer = styled(Flex)`
 
   .decorator {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: calc(${theme.space[4]} * 1);
+    right: calc(${theme.space[4]} * 1);
 
     margin-left: auto;
     width: calc(${theme.space[7]} / 1.15);
+    z-index: 999;
 
     @media ${theme.mq.tablet} {
-      top: calc(${theme.space[4]} * -1);
-      right: calc(${theme.space[4]} * -1);
       width: calc(${theme.space[7]} * 1.25);
     }
   }
@@ -102,7 +100,6 @@ export const HandSanitizer = styled(Flex)`
       justify-content: space-between;
       margin: 0 auto;
       overflow: visible;
-      position: relative;
       width: 100%;
 
       @media ${theme.mq.tablet} {
@@ -111,11 +108,18 @@ export const HandSanitizer = styled(Flex)`
     }
 
     &__figure {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
 
       .figure {
 
         @media ${theme.mq.tablet} {
-          width: 15%;
+          /* width: 15%; */
         }
 
         @media ${theme.mq.desktop} {
@@ -250,7 +254,7 @@ export const Disinfectant = styled(Flex)`
 
     @media ${theme.mq.tablet} {
       top: calc(${theme.space[4]} * -1);
-      right: calc(${theme.space[4]} * -1);
+      right: calc(${theme.space[1]} * -1);
       width: calc(${theme.space[6]} / 1.15);
     }
   }

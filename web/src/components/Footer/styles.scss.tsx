@@ -49,8 +49,12 @@ export const PreFoot = styled.div`
 
       @media ${theme.mq.tablet} {
         flex-direction: column;
-        padding: ${theme.space[6]} ${theme.space[7]};
+        padding: ${theme.space[6]};
         width: 50%;
+      }
+
+      @media ${theme.mq.tablet} {
+        padding: ${theme.space[6]} ${theme.space[7]};
       }
 
       &__newsletter {
@@ -176,10 +180,14 @@ export const Footer = styled(Flex)`
   @media ${theme.mq.tablet} {
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: ${theme.space[4]} ${theme.space[7]};
+    padding: ${theme.space[4]} ${theme.space[5]};
   }
 
-  .footer {    
+  @media ${theme.mq.desktop} {
+    padding: ${theme.space[4]} ${theme.space[6]};
+  }
+
+  .footer {
     &__links {
       display: flex;
       flex-wrap: wrap;
@@ -214,24 +222,23 @@ export const Footer = styled(Flex)`
       justify-content: center;
     }
 
-    &__button{
-      /* display: flex; */
-      background-color: ${theme.colors.quinary};
+    &__button {
       border: ${theme.border};
-      border-color: ${theme.colors.black};
+      border-color: ${theme.colors.tertiary};
       border-radius: ${theme.space[6]};
-      
+
       cursor: pointer;
       outline: none;
-      margin-top: ${theme.space[4]};
-      margin-left: ${theme.space[0]};
-      padding: calc(${theme.space[1]} * 1.5) ${theme.space[3]};
 
-      color: ${theme.colors.black};
+      color: ${theme.colors.text};
+      font-size: calc(${theme.fontSizes[1]});
       font-weight: 500;
       text-transform: capitalize;
       transition: background-color ${theme.transition.global};
-      white-space: nowrap;
+
+      margin-top: ${theme.space[4]};
+      margin-left: ${theme.space[0]};
+      padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
         margin-top: 0;
@@ -240,32 +247,14 @@ export const Footer = styled(Flex)`
       }
 
       &:hover {
-        background: ${darken(0, theme.colors.cta)};
-        color: ${theme.colors.white};
-        border-color: ${theme.colors.cta};
+        background: ${darken(0, theme.colors.babyblue)};
+        border-color: ${theme.colors.black};
       }
 
       &:active {
         background: ${theme.colors.black};
         color: ${theme.colors.white};
         border-color: ${theme.colors.black};
-      }
-
-      &.header--stuck {
-        background: ${theme.colors.cta};
-        border-color: ${theme.colors.cta};
-        color: ${theme.colors.white};
-
-        &:hover {
-          background: ${darken(0.08, theme.colors.cta)};
-          /* color: ${theme.colors.white}; */
-        }
-
-        &:active {
-          background: ${theme.colors.black};
-          color: ${theme.colors.white};
-          border-color: ${theme.colors.black};
-        }
       }
     }
   }

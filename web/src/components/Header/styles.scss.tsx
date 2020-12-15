@@ -42,10 +42,14 @@ export const Header = styled(Flex)`
       justify-content: space-between;
       flex: 1;
 
-      padding: 0 ${theme.space[3]};
+      padding: 0 ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
-        padding: 0 ${theme.space[4]};
+        padding: 0 ${theme.space[5]};
+      }
+
+      @media ${theme.mq.desktop} {
+        padding: 0 ${theme.space[6]};
       }
     }
 
@@ -86,7 +90,7 @@ export const Header = styled(Flex)`
         padding: calc(${theme.space[1]} * 1.5) ${theme.space[3]};
 
         color: ${theme.colors.text};
-        font-size: calc(${theme.fontSizes[1]} / 1.25);
+        font-size: calc(${theme.fontSizes[1]});
         font-weight: 500;
         text-transform: capitalize;
         transition: background-color ${theme.transition.global};

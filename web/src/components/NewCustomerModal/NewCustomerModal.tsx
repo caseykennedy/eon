@@ -38,7 +38,7 @@ const NewCustomerModal = () => {
     !cookie.new_user_modal &&
       setTimeout(() => {
         setActive(true)
-      }, 500)
+      }, 5000)
   }, [cookie])
   return (
     <>

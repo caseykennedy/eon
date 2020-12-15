@@ -39,29 +39,12 @@ const HomePage = () => {
 
       <Section bg="lightgray" border={false}>
         <Box width={1}>
-          <Heading className="text--xxxl">
-            We're working on new eOn mist content, complete with FAQs, usage
-            tips, support and more. Stay tuned!
-          </Heading>
-
           <Box width={[1, 2 / 3, 1 / 2]} mt={[5, 7, 7]}>
             <p>
               <strong>eOn</strong> branded products are America’s premiere, TSA
               friendly, continuous spray packaged goods for on-the-go protection
               from common germs. Our products are available to promote
               well-being throughout your life.
-            </p>
-          </Box>
-
-          <Flex mt={[5, 7, 7]}>
-            <AddToCart btnText="Buy eOn mist™" trackEventLabel="Menu overlay" />
-          </Flex>
-
-          <Box width={[1, 2 / 3, 1 / 2]} mt={[5, 4]}>
-            <p className="t--small">
-              <Link to={`/eon-multi-surface`}>
-                Looking for eOn multi-surface disinfectant?
-              </Link>
             </p>
           </Box>
         </Box>

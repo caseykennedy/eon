@@ -27,7 +27,7 @@ export const SocialLinks = styled(Flex)`
 
     border-right: ${theme.border};
     cursor: pointer;
-    padding: ${theme.space[5]} 0;
+    padding: ${theme.space[4]} 0;
     white-space: nowrap;
     transition: background-color 0.222s ease-in-out 0s;
 

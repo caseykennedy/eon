@@ -42,7 +42,7 @@ const HandSanitizer = () => {
 
         <Flex className="panel__figure">
           <Box width={1} className="figure">
-            {/* <ImgMatch src="hero-handcan.png" altText="eOn Hand Sanitizer can" /> */}
+            {/* <ImgMatch src="hero-hand-sanitizer-b.jpg" altText="eOn Hand Sanitizer can" /> */}
           </Box>
         </Flex>
 

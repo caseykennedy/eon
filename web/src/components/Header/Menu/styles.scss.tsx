@@ -22,8 +22,13 @@ export const Menu = styled(Flex)`
   .motion {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
+    width: 100%;
+
+    a {
+      font-size: ${theme.fontSizes[3]};
+      padding: ${theme.space[3]} 0;
+    }
   }
 
   .icon {
