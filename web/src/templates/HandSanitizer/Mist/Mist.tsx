@@ -1,4 +1,4 @@
-// How Section:
+// Mist Section:
 
 // ___________________________________________________________________
 
@@ -30,7 +30,7 @@ const VideoProps = {
   title: 'Placeholder'
 }
 
-const How = () => {
+const Mist = () => {
   return (
     <S.Mist>
       <Flex
@@ -44,7 +44,7 @@ const How = () => {
           pr={[4, 7, 7]}
           pl={[4, 7, 0]}
           className="mist__video"
-          onClick={e => {
+          onClick={() => {
             gtag.event({
               category: 'Youtube embed',
               action: 'Click',
@@ -102,10 +102,10 @@ const How = () => {
   )
 }
 
-export default How
+export default Mist
 
 // ___________________________________________________________________
 
 const defaultProps = {}
 
-How.defaultProps = defaultProps
+Mist.defaultProps = defaultProps

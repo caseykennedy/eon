@@ -21,6 +21,7 @@ type Props = {
   children: React.ReactNode
   className?: string
   color?: string
+  maxWidth?: number | number[] | string | string[]
   pt?: number | number[] | string
   pb?: number | number[] | string
   pr?: number | number[] | string
@@ -36,6 +37,7 @@ const Section: React.FC<Props> = ({
   children,
   className,
   color,
+  maxWidth,
   pt,
   pb,
   pr,
@@ -52,11 +54,11 @@ const Section: React.FC<Props> = ({
     pt={pt}
     pb={pb}
     id={id}
-    width={width}
     overflow={overflow}
+    width={width}
     className={className}
   >
-    <Box width={1} pr={pr} pl={pl} m="0 auto">
+    <Box pr={pr} pl={pl} m="0 auto" maxWidth={maxWidth}>
       {children}
     </Box>
   </S.Section>

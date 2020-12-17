@@ -47,7 +47,7 @@ export const Nav = styled.nav`
 
       &.active,
       &:hover {
-        color: ${theme.colors.tertiary};
+        color: ${theme.colors.primary};
 
         /* &::before {
           width: 100%;

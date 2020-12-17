@@ -33,33 +33,18 @@ const PageTitle = () => {
             <Text
               as="h2"
               mb={[3, 4]}
-              className="text--base"
+              className="text--md"
               dangerouslySetInnerHTML={{ __html: data.title }}
             />
-            {/* <Text
-              as="h1"
-              className="text--md"
-              dangerouslySetInnerHTML={{ __html: data.headline }}
-            /> */}
           </Box>
-          <Flex width={[1]} className="hero__can">
-            <motion.div
-              initial={{
-                opacity: 0
-              }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.25, duration: 0.5 }}
-              className="decorator"
-            >
-              <img src={spray} alt="eOn multi surface disinfectant" />
-            </motion.div>
+          <Box width={[1]} className="hero__can">
             <Box className="figure">
               <ImgMatch
-                src="can-multi-surface-eon-mist.png"
+                src="hero-multi-surface-shadow--hard.jpg"
                 altText="eOn Hand Sanitizer can"
               />
             </Box>
-          </Flex>
+          </Box>
 
           <Flex width={[1]} className="hero__message">
             <Box>

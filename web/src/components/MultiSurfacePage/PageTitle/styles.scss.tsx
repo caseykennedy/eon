@@ -26,30 +26,28 @@ export const PageTitle = styled(Flex)`
     &__inner {
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: space-between;
+      /* justify-content: space-between; */
       width: 100%;
 
       @media ${theme.mq.tablet} {
+        flex-direction: row;
       }
     }
 
     &__message {
       flex-direction: column;
       justify-content: flex-end;
-
-      @media ${theme.mq.tablet} {
-        justify-content: space-between;
-      }
     }
 
     &__can {
+      
       align-items: flex-start;
       justify-content: center;
       margin-bottom: ${theme.space[6]};
       position: relative;
 
       @media ${theme.mq.tablet} {
-        margin-top: calc(${theme.space[5]} * -1);
+        /* margin-top: calc(${theme.space[5]} * -1); */
         margin-bottom: 0;
         padding-top: ${theme.space[4]};
         padding-bottom: ${theme.space[4]};
@@ -67,10 +65,15 @@ export const PageTitle = styled(Flex)`
       }
 
       .figure {
-        width: 110px;
+        max-width: 250px;
+        width: 100%;
 
         @media ${theme.mq.tablet} {
-          width: 125px;
+          max-width: 333px;
+        }
+
+        @media ${theme.mq.desktop} {
+          max-width: 400px;
         }
       }
 

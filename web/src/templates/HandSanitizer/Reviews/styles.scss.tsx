@@ -34,7 +34,7 @@ export const Reviews = styled(Section)`
         
 
         @media ${theme.mq.desktop} {
-          font-size: calc(${theme.fontSizes[3]} / 1.25);
+          font-size: calc(${theme.fontSizes[3]});
         }
       }
 

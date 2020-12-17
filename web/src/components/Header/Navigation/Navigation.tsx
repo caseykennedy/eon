@@ -15,6 +15,7 @@ import * as S from './styles.scss'
 
 import Icon from '../../Icons'
 import CanMulti from '../../SVG/CanMulti'
+import CanHand from '../../SVG/CanHand'
 
 // ___________________________________________________________________
 
@@ -50,7 +51,7 @@ const Navigation = () => {
                   partiallyActive={true}
                 >
                   <Box mr={[4, 6, 6]}>
-                    <CanMulti />
+                    {subItem.icon}
                   </Box>
 
                   <Text as="p" textAlign="center">
@@ -79,11 +80,13 @@ const sitemap = [
     subPage: [
       {
         name: 'hand sanitizer',
-        link: '/products/eon-continuous-spray-hand-sanitizer-80'
+        link: '/products/eon-continuous-spray-hand-sanitizer-80',
+        icon: <CanHand />
       },
       {
         name: 'multi-surface disinfectant',
-        link: '/eon-multi-surface'
+        link: '/eon-multi-surface',
+        icon: <CanMulti />
       }
     ]
   },
@@ -92,7 +95,7 @@ const sitemap = [
     link: '/mission'
   },
   {
-    name: 'faqs',
+    name: 'FAQs',
     link: '/faqs'
   }
 ]

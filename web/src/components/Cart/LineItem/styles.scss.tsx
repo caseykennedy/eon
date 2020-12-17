@@ -80,7 +80,7 @@ export const LineItem = styled.div`
           height: calc(${theme.space[3]} * 2.5);
           width: calc(${theme.space[3]} * 2.5);
 
-          transition: background-color 0.222s ease-in-out;
+          transition: background-color ${theme.transition.global};
 
           &:hover {
             background: ${theme.colors.quinary};

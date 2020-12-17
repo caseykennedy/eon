@@ -16,6 +16,21 @@ export const MultiSurfacePage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
 
+  .hand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .features {
+    ul {
+    
+    }
+  }
+
   .split {
     display: flex;
     flex-direction: column;
@@ -39,6 +54,37 @@ export const MultiSurfacePage = styled(Box)`
       @media ${theme.mq.desktop} {
         padding: 0;
       }
+    }
+  }
+
+  a {
+    color: ${theme.colors.text};
+    position: relative;
+
+    &::before {
+      content: '';
+      background: ${theme.colors.secondary};
+      width: 0;
+      height: 1px;
+
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      z-index: 0;
+
+      transition: width ${theme.transition.global};
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+
+    svg {
+      margin-left: ${theme.space[3]};
+      width: ${theme.arrowWidth};
     }
   }
 `

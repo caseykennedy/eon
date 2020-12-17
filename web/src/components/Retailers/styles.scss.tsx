@@ -20,7 +20,7 @@ export const Retailers = styled(Section)`
     align-items: center;
     justify-content: center;
 
-    &__cell {    
+    &__cell {
       justify-content: center;
       height: auto;
       width: 100%;
@@ -30,6 +30,37 @@ export const Retailers = styled(Section)`
         max-width: 130px;
         width: 100%;
       }
+    }
+  }
+
+  a {
+    color: ${theme.colors.text};
+    position: relative;
+
+    &::before {
+      content: '';
+      background: ${theme.colors.secondary};
+      width: 0;
+      height: 1px;
+
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      z-index: 0;
+
+      transition: width ${theme.transition.global};
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+
+    svg {
+      margin-left: ${theme.space[3]};
+      width: ${theme.arrowWidth};
     }
   }
 `

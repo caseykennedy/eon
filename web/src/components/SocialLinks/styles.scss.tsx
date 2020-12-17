@@ -29,7 +29,7 @@ export const SocialLinks = styled(Flex)`
     cursor: pointer;
     padding: ${theme.space[4]} 0;
     white-space: nowrap;
-    transition: background-color 0.222s ease-in-out 0s;
+    transition: background-color ${theme.transition.global};
 
     &:nth-child(3) {
       border-right: none;
@@ -53,7 +53,7 @@ export const SocialLinks = styled(Flex)`
     svg {
       fill: ${theme.colors.gray};
       width: 24px;
-      transition: fill 0.222s ease-in-out 0s;
+      transition: fill ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
         width: 24px;

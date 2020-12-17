@@ -28,6 +28,7 @@ type ThemeShape = {
   arrowWidth: string
   strokeWidth: string
   maxWidth: string
+  readingWidth: string
   siteWidth: string
   logoWidth: string
   headerHeight: string
@@ -122,7 +123,7 @@ const theme: ThemeShape = {
     'var(--space-lg)',       // 5
     'var(--space-xl)',       // 6
     'var(--space-xxl)',      // 7
-    '6rem',                  // 8
+    '7rem',                  // 8
     '10rem',                 // 9
     '12rem',                 // 10
     '14rem',                 // 11
@@ -147,14 +148,14 @@ const theme: ThemeShape = {
   },
 
   fontSizes: [
-    'var(--text-xs)', // 0
-    'var(--text-sm)', // 1
-    'var(--text-base-size)', // 2
-    'var(--text-md)', // 3
-    'var(--text-lg)', // 4
-    'var(--text-xl)', // 5
-    'var(--text-xxl)', // 6
-    'var(--text-xxxl)' // 7
+    'var(--text-xs)',              // 0
+    'var(--text-sm)',              // 1
+    'var(--text-base-size)',       // 2
+    'var(--text-md)',              // 3
+    'var(--text-lg)',              // 4
+    'var(--text-xl)',              // 5
+    'var(--text-xxl)',             // 6
+    'var(--text-xxxl)'             // 7
   ],
 
   Heading: {
@@ -172,6 +173,7 @@ const theme: ThemeShape = {
   arrowWidth: '14px',
   strokeWidth: '2px',
   maxWidth: '1440px',
+  readingWidth: '1100px',
   siteWidth: '100%',
   logoWidth: '70px',
   headerHeight: '56px',
@@ -186,8 +188,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.22s ease-in-out 0s',
-    global: '0.22s ease-in-out 0s'
+    all: 'all 0.111s ease-in-out 0s',
+    global: '0.111s ease-in-out 0s'
   },
 
   transform: {

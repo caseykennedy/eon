@@ -38,9 +38,9 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    &::-webkit-scrollbar {
+    /* &::-webkit-scrollbar {
       display: none;
-    }
+    } */
   }
 
   .img {

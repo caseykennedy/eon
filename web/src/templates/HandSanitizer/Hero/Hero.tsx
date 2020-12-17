@@ -36,21 +36,10 @@ const Hero = () => {
           <Box position="relative">
             <Box className="figure">
               <ImgMatch
-                src="hero-handcan.png"
+                src="hero-hand-san.png"
                 altText="eOn Hand Sanitizer can"
               />
             </Box>
-            <motion.div
-              initial={{
-                opacity: 0
-              }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.25, duration: 0.5 }}
-            >
-              <Box className="spray">
-                <CanSpray />
-              </Box>
-            </motion.div>
           </Box>
         </Flex>
 

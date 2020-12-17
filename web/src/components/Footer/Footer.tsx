@@ -28,7 +28,7 @@ const PreFoot = () => {
   return (
     <S.PreFoot>
       <Box className="prefoot-panel  prefoot-panel__newsletter">
-        <Text as="p" color="primary">
+        <Text as="p" mb={5}>
           Sign up for exclusive offers, spam free.
         </Text>
         <Box
@@ -68,7 +68,7 @@ const PreFoot = () => {
               })
             }}
           >
-            <Icon name="arrow" color="white" />
+            submit
           </button>
         </Box>
       </Box>
@@ -96,7 +96,7 @@ const PreFoot = () => {
         </Link>
       ) : (
         <Link
-          to={`/`}
+          to={`/products/eon-continuous-spray-hand-sanitizer-80`}
           className="prefoot-panel  prefoot-panel__cta  prefoot-panel__cta--hand-sanitizer"
           onClick={() => {
             gtag.event({

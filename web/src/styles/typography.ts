@@ -187,50 +187,47 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.lg} / 1.1);
+    font-size: calc(${theme.fontSizes[4]});
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.xl} / 1.45);
+      font-size: calc(${theme.fontSizes[6]} / 1.25);
     }
 
-    @media (min-width: 1280px) {
-      font-size: ${theme.root.font.xl};
+    @media ${theme.mq.desktop} {
+      font-size: ${theme.fontSizes[6]};
     }
   }
 
   h2,
   .text--xl {
-    font-size: calc(${theme.root.font.lg} / 1.15);
+    font-size: calc(${theme.fontSizes[4]});
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.root.font.lg} * 1);
+      font-size: calc(${theme.fontSizes[5]} / 1.25);
     }
 
     @media ${theme.mq.desktop} {
-      font-size: calc(${theme.root.font.lg} * 1.15);
+      font-size: ${theme.fontSizes[5]};
     }
   }
 
   h3,
   .text--lg {
-    font-size: ${theme.root.font.md};
+    font-size: calc(${theme.fontSizes[3]});
+    margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      font-size: ${theme.root.font.lg};
+      font-size: calc(${theme.fontSizes[4]});
     }
   }
 
   h4,
   .text--md {
-    font-size: calc(${theme.fontSizes[3]} / 1.5);
+    font-size: calc(${theme.fontSizes[3]} / 1.15);
     margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[3]} / 1.25);
-    }
-
-    @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[3]} / 1.15);
+      font-size: calc(${theme.fontSizes[3]});
     }
   }
 
@@ -252,7 +249,7 @@ const Typography = css`
     font-size: ${theme.fontSizes[2]};
     /* font-weight: ${theme.fontWeights.medium}; */
     line-height: ${theme.root.font.bodyLineHeight};
-    margin: 0 0 ${theme.space[3]};
+    margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[2]} * 1.25);
@@ -326,7 +323,7 @@ const Typography = css`
       right: 0;
       z-index: 0;
 
-      transition: width 0.222s ease-in-out;
+      transition: width ${theme.transition.global};
     }
 
     /* &:hover {
@@ -367,11 +364,12 @@ const Typography = css`
 
     li {
       list-style-position: outside;
-      /* font-size: calc(${theme.root.font.baseSize} / 1); */
-      line-height: ${theme.root.font.bodyLineHeight};
+      font-size: ${theme.fontSizes[2]};
+      line-height: 1.5;
+      margin-bottom: ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
-        /* font-size: calc(${theme.root.font.baseSize} / 1.25); */
+        /* font-size: calc(${theme.fontSizes[2]} * 1.5); */
       }
     }
   }

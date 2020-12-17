@@ -61,8 +61,12 @@ export const Trademarks = styled(Flex)`
     p {
       color: ${theme.colors.text};
       letter-spacing: 0.25px;
-      font-size: calc(${theme.fontSizes[1]} / 1.25);
+      font-size: calc(${theme.fontSizes[1]} / 1.15);
       margin-top: ${theme.space[2]};
+
+      @media ${theme.mq.tablet} {
+        font-size: calc(${theme.fontSizes[1]});
+      }
     }
   }
 

@@ -32,7 +32,7 @@ export const Announcement = styled(motion.div)`
   visibility: hidden;
   z-index: 11;
 
-  transition: background-color 0.222s ease-in-out 0s;
+  transition: background-color ${theme.transition.global};
 
   &:hover {
     background: ${theme.colors.babyblue};

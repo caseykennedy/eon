@@ -9,6 +9,7 @@ import React, { useRef } from 'react'
 import { ThemeProvider } from 'styled-components'
 import ContextProvider from '../../provider/ContextProvider'
 import { CookiesProvider } from 'react-cookie'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 // Components
 import Header from '../Header'
@@ -45,14 +46,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <CookiesProvider>
         <ContextProvider>
           <ThemeProvider theme={theme}>
-            <GlobalStyles />
-            <S.Wrapper id="main-root">
-              <Header mainRef={mainRef} />
-              <Announcement to={`/eon-multi-surface`} />
-              <S.Main ref={mainRef}>{children}</S.Main>
-              <Footer />
-            </S.Wrapper>
-            <NewCustomerModal />
+            <ParallaxProvider>
+              <GlobalStyles />
+              <S.Wrapper id="main-root">
+                <Header mainRef={mainRef} />
+                <Announcement to={`/eon-multi-surface`} />
+                <S.Main ref={mainRef}>{children}</S.Main>
+                <Footer />
+              </S.Wrapper>
+              <NewCustomerModal />
+            </ParallaxProvider>
           </ThemeProvider>
         </ContextProvider>
       </CookiesProvider>

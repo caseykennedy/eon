@@ -50,7 +50,7 @@ export const Trademarks = styled(Flex)`
     @media ${theme.mq.tablet} {
       border-bottom: none !important;
       padding: ${theme.space[3]} 0;
-      max-width: 333px;
+      /* max-width: 333px; */
       width: 25%;
 
       &:nth-child(2) {
@@ -63,6 +63,10 @@ export const Trademarks = styled(Flex)`
       letter-spacing: 0.25px;
       font-size: calc(${theme.fontSizes[1]} / 1.25);
       margin-top: ${theme.space[2]};
+
+      @media ${theme.mq.tablet} {
+        font-size: calc(${theme.fontSizes[1]});
+      }
     }
   }
 

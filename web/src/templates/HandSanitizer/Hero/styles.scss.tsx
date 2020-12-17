@@ -16,7 +16,6 @@ export const Hero = styled(Flex)`
   padding-bottom: ${theme.space[5]};
   position: relative;
   overflow: hidden;
-  margin-top: ${theme.headerHeight};
 
   @media ${theme.mq.tablet} {
     height: calc(

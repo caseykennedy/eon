@@ -7,26 +7,22 @@ import { Link } from 'gatsby'
 import { Box, Flex, Text, Heading } from '../ui'
 import Button from '../ui/Button'
 
+// utils
+import * as gtag from '../../utils/gtag'
+
 // Theme
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // Sections
 import ProductMasonry from './ProductMasonry'
-import Mist from './Mist'
-import Specs from './Specs'
-import Reviews from './Reviews'
-import Retailers from './Retailers'
-import InstagramFeed from './InstagramFeed'
+import Retailers from '../Retailers'
 
 // Components
+import Icon from '../Icons'
 import Section from '../Section'
-import ProductDetail from './ProductDetail'
 import Trademarks from '../Trademarks'
-import StoreLocator from '../StoreLocator'
-import AddToCart from '../AddToCart'
-import Beaker from '../SVG/Beaker'
-import Factory from '../SVG/Factory'
+import ImgMatch from '../ImgMatch'
 
 // ___________________________________________________________________
 
@@ -34,12 +30,29 @@ const HomePage = () => {
   return (
     <S.HomePage>
       <ProductMasonry />
-
       <Trademarks />
-
       <Section bg="lightgray" border={false}>
         <Box width={1}>
-          <Box width={[1, 2 / 3, 1 / 2]} mt={[5, 7, 7]}>
+          <Box width={[1, 2 / 3, 1 / 2]}>
+            <Heading as="h2" mb={0}>Everyday, professional-grade hygienics for a cleaner world.</Heading>
+          </Box>
+        </Box>
+
+        <Flex
+          justifyContent="flex-end"
+          width={1}
+          mt={[0, `calc(${theme.space[4]} * -3)`]}
+        >
+          <Box width={1} maxWidth="555px">
+            <ImgMatch
+              src="mission-collage.png"
+              altText="eOn Mission: Refresh America"
+            />
+          </Box>
+        </Flex>
+
+        <Flex alignItems="center" flexWrap="wrap" width={1}>
+          <Box width={[1, 2 / 3, 1 / 2]}>
             <p>
               <strong>eOn</strong> branded products are America’s premiere, TSA
               friendly, continuous spray packaged goods for on-the-go protection
@@ -47,51 +60,24 @@ const HomePage = () => {
               well-being throughout your life.
             </p>
           </Box>
-        </Box>
 
-        <Box mt={[4, 5, 6]} width={1}>
-          <Flex flexDirection={['column', 'column', 'row']}>
-            <Box bg="white" p={4} mr={[0, 0, 4]} mb={[4, 4, 0]} flex={1}>
-              <Flex>
-                <Box className="icon">
-                  <Factory />
-                </Box>
-                <p>
-                  <Text as="span" color="primary" fontWeight={600}>
-                    eOn is produced in a state of the art facility
-                  </Text>{' '}
-                  with nearly 100 years in operation, in compliance with all
-                  applicable safety, health and environmental standards.
-                </p>
-              </Flex>
-            </Box>
-            <Box bg="white" p={4} flex={1}>
-              <Flex>
-                <Box className="icon">
-                  <Beaker />
-                </Box>
-                <p>
-                  <Text as="span" color="primary" fontWeight={600}>
-                    eOn's (80% Ethyl Alcohol) hand sanitizer ready to spray
-                  </Text>{' '}
-                  solution works by denaturing germ proteins, inactivating and
-                  inhibiting microbial growth, and ensuring you're protected.
-                </p>
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
+          <Box width={[1, 1 / 3, 1 / 2]} textAlign="right" className="cta">
+            <Link
+              to={`/mission`}
+              onClick={() => {
+                gtag.event({
+                  category: 'homepage mission',
+                  action: 'Click',
+                  label: 'mission ->'
+                })
+              }}
+            >
+              Mission
+              <Icon name="arrow" />
+            </Link>
+          </Box>
+        </Flex>
       </Section>
-
-      {/* <Section border={true}>
-        <StoreLocator />
-      </Section> */}
-
-      {/* <Mist /> */}
-      {/* <Specs /> */}
-      {/* <ProductDetail /> */}
-      {/* <Reviews /> */}
-      {/* <InstagramFeed /> */}
       <Retailers />
     </S.HomePage>
   )

@@ -10,9 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 // Components
 import { Box, Flex, Heading, Text } from '../../ui'
-import AddToCart from '../../AddToCart'
-import Beaker from '../../SVG/Beaker'
-import Factory from '../../SVG/Factory'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
@@ -31,7 +28,6 @@ type LinkProps = {
 type MenuProps = {
   handleExit: () => void
   isNavOpen: boolean
-  scrollRef: React.RefObject<HTMLDivElement>
 }
 
 // ___________________________________________________________________
@@ -46,7 +42,7 @@ type MenuProps = {
 //   )
 // }
 
-const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
+const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen }) => {
   return (
     <S.Menu>
       <AnimatePresence>
@@ -58,7 +54,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen, scrollRef }) => {
             className="motion"
           >
             {sitemap.map((link, idx) => (
-              <Box as="a" href={link.link} key={idx}>{link.name}</Box>
+              <Link to={link.link} key={idx}>{link.name}</Link>
             ))}
           </motion.div>
         )}

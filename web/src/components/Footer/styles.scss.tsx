@@ -53,8 +53,8 @@ export const PreFoot = styled.div`
         width: 50%;
       }
 
-      @media ${theme.mq.tablet} {
-        padding: ${theme.space[6]} ${theme.space[7]};
+      @media ${theme.mq.desktop} {
+        padding: ${theme.space[6]} ${theme.space[8]};
       }
 
       &__newsletter {
@@ -67,55 +67,49 @@ export const PreFoot = styled.div`
           input {
             flex: 1;
 
-            border: ${theme.border};
-            border-radius: ${theme.borderRadius};
-            font-size: calc(${theme.fontSizes[2]} * 1.25);
-            margin-right: ${theme.space[2]};
-            padding: ${theme.space[1]} ${theme.space[3]};
+            border: none;
+            border-bottom: ${theme.border};
+            border-radius: 0;
+            font-size: ${theme.fontSizes[2]};
+            padding: ${theme.space[1]} 0;
             min-width: 200px;
 
             @media ${theme.mq.desktop} {
-              font-size: calc(${theme.fontSizes[2]} * 1.5);
+              font-size: calc(${theme.fontSizes[2]} * 1.25);
             }
           }
 
           button {
             display: flex;
+            align-items: center;
             justify-content: center;
 
             padding: calc(${theme.space[2]} / 1) ${theme.space[3]};
 
+            color: ${theme.colors.tertiary};
             font-family: ${theme.fonts.heading};
-            font-size: calc(${theme.fontSizes[2]} * 1.25);
+            font-size: ${theme.fontSizes[2]};
             font-weight: 500;
             letter-spacing: 0.5px;
             line-height: 0.5;
             text-transform: capitalize;
 
-            background: ${theme.colors.primary};
+            background: transparent;
             border: none;
+            border-bottom: ${theme.border};
             box-shadow: none;
-            border-radius: ${theme.borderRadius};
             outline: none;
             cursor: pointer;
 
-            @media ${theme.mq.desktop} {
-              font-size: ${theme.fontSizes[3]};
-              transition: ${theme.transition.all};
-            }
+            transition: ${theme.transition.all};
 
-            svg {
-              width: 40px;
+            @media ${theme.mq.desktop} {
+              font-size: calc(${theme.fontSizes[2]} * 1.25);
             }
 
             &:hover {
-              background: ${darken(0.05, theme.colors.cta)};
-            }
-
-            &:active {
-              background: ${theme.colors.black};
-              color: ${theme.colors.white};
               border-color: ${theme.colors.black};
+              color: ${theme.colors.black};
             }
           }
         }
@@ -209,6 +203,10 @@ export const Footer = styled(Flex)`
 
         &:first-child {
           margin-left: 0;
+        }
+
+        &:hover {
+          color: ${theme.colors.tertiary};
         }
 
         @media ${theme.mq.tablet} {

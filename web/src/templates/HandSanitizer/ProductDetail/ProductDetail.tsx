@@ -63,9 +63,9 @@ const ProductDetail: React.FC = () => {
             <Text as="h4" mb={[3, 4]}>
               Spray and go.
             </Text>
-            <h3 className="text--xl">
+            <h2>
               Precise hand sanitation wherever you go.
-            </h3>
+            </h2>
 
             <p>
               Rapid, effective, advanced delivery. Gentle on hands, strong on

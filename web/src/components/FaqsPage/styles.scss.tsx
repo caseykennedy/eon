@@ -1,4 +1,4 @@
-// Mission Page Styles:
+// Faqs Page Styles:
 
 // ___________________________________________________________________
 
@@ -11,7 +11,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const MissionPage = styled(Box)`
+export const FaqsPage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
 
@@ -20,24 +20,6 @@ export const MissionPage = styled(Box)`
 
     svg {
       width: ${theme.space[7]};
-    }
-  }
-
-  .decorators {
-    position: relative;
-
-    .image-clip {
-      margin-top: ${theme.space[9]};
-      position: absolute;
-      top: 0;
-      left: ${theme.space[7]};
-      z-index: 0;
-      width: 100%;
-
-      img {
-        clip-path: circle(100px at center);
-        position: absolute;
-      }
     }
   }
 `
