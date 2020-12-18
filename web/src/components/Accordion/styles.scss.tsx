@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { darken } from 'polished'
 
 // Theme
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 
 // UI
 import { Box, Flex } from '../ui'
@@ -107,7 +107,7 @@ export const Carat = styled(Box)<{ chevronColor?: string, chevronWidth?: string 
 
   svg {
     fill: ${p => p.chevronColor};
-    width: ${theme.space[4]};
+    width: ${theme.space[3]};
 
     @media ${theme.mq.tablet} {
       width: ${p => !p.chevronWidth ? theme.space[6] : p.chevronWidth};

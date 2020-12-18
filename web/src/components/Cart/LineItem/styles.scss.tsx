@@ -82,10 +82,6 @@ export const LineItem = styled.div`
 
           transition: background-color ${theme.transition.global};
 
-          &:hover {
-            background: ${theme.colors.quinary};
-          }
-
           div {
             background: ${theme.colors.gray};
             position: relative;
@@ -95,6 +91,14 @@ export const LineItem = styled.div`
             transform: rotate(45deg);
             height: calc(${theme.space[3]} * 1.5);
             width: calc(${theme.space[3]} * 1.5);
+          }
+
+          &:hover {
+            background: ${theme.colors.tertiary};
+
+            svg {
+              /* fill: ${theme.colors.white}; */
+            }
           }
         }
       }

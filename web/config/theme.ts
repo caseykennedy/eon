@@ -89,22 +89,23 @@ const theme: ThemeShape = {
     background: '#ffffff',
     cta: '#39b14a',
 
-    primary: '#4073b2',
+    primary: '#1554c2',
     secondary: '#09040b',
     tertiary: '#9D9FA2',
     quaternary: '#C4C4c4',
     quinary: '#dcedff',
 
     // Theme colors
-    lightgray: '#EEEEEE',
+    lightgray: '#F1F1F1',
     gray: '#C4C4c4',
-    darkgray: '#9D9FA2',
+    darkgray: '#696d6d',
     darknight: '#09040b',
     babyblue: '#dcedff',
-    skyblue: '#4073b2',
+    skyblue: '#1554c2',
     moneygreen: '#39b14a',
     yellowbuzz: '#F1E554',
-    goldenrod: '#daa520'
+    goldenrod: '#daa520',
+    mossgreen: '#f3fdf4'
   },
 
   // Space

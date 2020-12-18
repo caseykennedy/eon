@@ -25,7 +25,7 @@ export const SocialLinks = styled(Flex)`
     align-items: center;
     justify-content: center;
 
-    border-right: ${theme.border};
+    /* border-right: ${theme.border}; */
     cursor: pointer;
     padding: ${theme.space[4]} 0;
     white-space: nowrap;
@@ -39,7 +39,7 @@ export const SocialLinks = styled(Flex)`
       border-bottom: none !important;
 
       &:nth-child(2) {
-        border-right: ${theme.border};
+        /* border-right: ${theme.border}; */
       }
     }
 
@@ -61,7 +61,7 @@ export const SocialLinks = styled(Flex)`
     }
 
     &:hover {
-      background: ${theme.colors.babyblue};
+      background: ${theme.colors.white};
 
       svg {
         fill: ${theme.colors.primary};

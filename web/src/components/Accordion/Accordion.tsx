@@ -7,7 +7,7 @@ import React, { useState, useRef } from 'react'
 import { Box, Flex, Text, Heading } from '../ui'
 import Icon from '../Icons'
 
-import theme from '../../../config/theme'
+import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
@@ -107,16 +107,14 @@ const Accordion: React.FC<Props> = ({
           pl={pl}
         >
           <S.AccordionToggleInner width={3 / 4}>
-            <Heading
+            <Text
               fontFamily="heading"
               fontSize={fontSize}
-              letterSpacing={0.75}
-              lineHeight={1.25}
               width={1}
               className="title"
             >
               {title}
-            </Heading>
+            </Text>
             {subTitle && (
               <Text as="span" mb={0}>
                 {subTitle}
@@ -147,14 +145,14 @@ export default Accordion
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [5],
-  pb: [5],
+  pt: [5, 6],
+  pb: [5, 6],
   pr: [0],
   pl: [0],
   title: 'title',
   color: theme.colors.text,
   colorActive: theme.colors.primary,
-  fontSize: 4,
+  fontSize: [3, 4],
   chevronColor: theme.colors.text,
   chevronWidth: theme.space[3],
   borderColor: theme.colors.text,

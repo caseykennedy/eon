@@ -34,7 +34,6 @@ export const Billboard = styled(Flex)`
   align-items: center;
   flex: 1;
 
-  border-bottom: ${theme.border};
   padding: ${theme.space[6]} ${theme.space[4]};
   position: relative;
   z-index: 9;
@@ -44,7 +43,7 @@ export const Billboard = styled(Flex)`
   }
 
   @media ${theme.mq.desktop} {
-    padding: ${theme.space[8]} ${theme.space[6]};
+    padding: ${theme.space[9]} ${theme.space[6]};
   }
 `
 

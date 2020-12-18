@@ -81,8 +81,9 @@ export const Header = styled(Flex)`
       }
 
       .btn {
+        background: ${theme.colors.babyblue};
         border: ${theme.border};
-        border-color: ${theme.colors.tertiary};
+        border-color: ${theme.colors.black};
         border-radius: ${theme.space[6]};
         
         cursor: pointer;
@@ -99,11 +100,7 @@ export const Header = styled(Flex)`
           padding: calc(${theme.space[1]} * 1.5) ${theme.space[4]};
         }
 
-        &:hover {
-          background: ${darken(0, theme.colors.babyblue)};
-          border-color: ${theme.colors.black};
-        }
-
+        &:hover,
         &:active {
           background: ${theme.colors.black};
           color: ${theme.colors.white};

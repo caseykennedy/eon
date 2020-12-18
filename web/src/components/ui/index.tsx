@@ -5,7 +5,7 @@
 
 import styled from 'styled-components'
 import { animated } from 'react-spring'
-import { darken } from 'polished'
+import { darken, transparentize } from 'polished'
 
 // Theme
 import theme from '../../gatsby-plugin-theme-ui'
@@ -208,72 +208,61 @@ export const Button = styled.button<ElementProps>`
   align-items: center;
   justify-content: space-between;
 
-  padding: calc(${theme.space[3]} / 1.25) ${theme.space[3]};
-  /* max-width: 400px; */
-  /* width: 100%; */
+  padding: ${theme.space[3]} 0 ${theme.space[3]} 0;
+  width: 100%;
 
-  color: ${theme.colors.white};
-  font-family: ${theme.fonts.heading};
+  /* color: ${theme.colors.white}; */
   font-size: calc(${theme.fontSizes[2]} * 1.25);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  /* line-height: 1; */
-  /* text-transform: capitalize; */
 
-  background: ${theme.colors.cta};
-  border: ${theme.border};
-  border-color: ${theme.colors.cta};
-  border-radius: ${theme.borderRadius};
+  background: transparent;
+  border: none;
+  border-bottom: ${theme.border};
+  border-color: ${theme.colors.black};
   cursor: pointer;
   outline: none;
   transition: ${theme.transition.all};
   white-space: nowrap;
 
-  @media ${theme.mq.tablet} {
-
-  }
-
   @media ${theme.mq.desktop} {
-    font-size: calc(${theme.fontSizes[2]} * 1.5);
   }
 
   span {
-    margin-left: ${theme.space[5]};
+    margin-left: ${theme.space[4]};
     transition: ${theme.transition.all};
 
     position: relative;
-    right: ${theme.space[2]};
 
-    display: none;
+    /* display: none; */
 
     @media ${theme.mq.tablet} {
       display: block;
-      margin-left: ${theme.space[6]};
+      margin-left: ${theme.space[7]};
+      right: ${theme.space[2]};
     }
 
     @media ${theme.mq.desktop} {
-      margin-left: ${theme.space[7]};
+      margin-left: ${theme.space[6]};
     }
 
     svg {
-      width: calc(${theme.space[5]});
-      fill: ${theme.colors.white};
+      width: ${theme.space[4]};
+      fill: ${theme.colors.black};
 
       @media ${theme.mq.desktop} {
-        width: calc(${theme.space[5]} / 1);
+        width: ${theme.space[4]};
       }
     }
   }
 
   &:hover {
-    background: ${darken(0.05, theme.colors.cta)};
-    color: ${theme.colors.white};
+    border-color: ${theme.colors.primary};
+    color: ${theme.colors.primary};
 
     span {
       right: 0;
 
       svg {
-        fill: ${theme.colors.white};
+        fill: ${theme.colors.primary};
       }
     }
   }

@@ -16,7 +16,7 @@ const height = theme.headerHeight
 
 export const Announcement = styled(motion.div)`
   display: flex;
-  background: ${transparentize(0.05, theme.colors.lightgray)};
+  background: ${transparentize(0.1, theme.colors.lightgray)};
   backdrop-filter: blur(8px);
   border-bottom: 1px solid ${theme.colors.tertiary};
   height: ${height};

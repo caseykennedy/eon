@@ -13,7 +13,7 @@ export const Trademarks = styled(Flex)`
   justify-content: center;
   flex-wrap: wrap;
 
-  background: ${transparentize(0, theme.colors.white)};
+  background: ${transparentize(0, theme.colors.lightgray)};
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 
@@ -30,7 +30,7 @@ export const Trademarks = styled(Flex)`
     align-items: center;
     justify-content: center;
 
-    border-right: ${theme.border};
+    /* border-right: ${theme.border}; */
     padding: ${theme.space[3]} 0;
     white-space: nowrap;
     width: 50%;
@@ -40,11 +40,11 @@ export const Trademarks = styled(Flex)`
     }
 
     &:nth-child(1) {
-      border-bottom: ${theme.border};
+      /* border-bottom: ${theme.border}; */
     }
 
     &:nth-child(2) {
-      border-bottom: ${theme.border};
+      /* border-bottom: ${theme.border}; */
     }
 
     @media ${theme.mq.tablet} {
@@ -54,7 +54,7 @@ export const Trademarks = styled(Flex)`
       width: 25%;
 
       &:nth-child(2) {
-        border-right: ${theme.border};
+        /* border-right: ${theme.border}; */
       }
     }
 

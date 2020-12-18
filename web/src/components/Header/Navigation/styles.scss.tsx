@@ -122,7 +122,7 @@ export const Nav = styled.nav`
 
         font-size: calc(${theme.fontSizes[2]});
         
-        border-right: ${theme.border};
+        /* border-right: ${theme.border}; */
 
         &:last-child {
           border-right: none;

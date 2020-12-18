@@ -26,8 +26,8 @@ const FaqsPage = () => {
   return (
     <>
       <PageTitle
-        message="FAQs"
-        image="pt-mission-eon-spray.jpg"
+        message="Frequently asked"
+        image="pt-faqs-flat.png"
         altText="eOn hand holding a can"
       />
       <S.FaqsPage>
@@ -66,20 +66,26 @@ const data = [
   {
     question: 'How do I spray my eOn sanitizing mist? ',
     answer:
-      'Twist to unlock the cap, after you hear a click, the circular opening should line up with the spray actuator. Next, place your finger on the top of the cap, locating the groove near the end edge of the component. With your finger there—press down firmly to spray. Hold for a continuous spray.',
+      'Twist to unlock the cap, after you hear a click, the circular opening should line up with the spray actuator. Next, place your finger on the top of the cap and locate the small groove near the back-end of the spray button. With your finger there—press down firmly to mist. Press and hold for a continuous spray. ',
     note: 'Sprays from any angle. Requires no shaking, uses no propellant.'
+  },
+  {
+    question: 'How do I clean with eOn multi-surface?',
+    answer:
+      'Spray 6-8" from surfaces you come in everyday contact with. Treated surfaces must remain wet for 10 minutes. Reapply as necessary to keep wet for 10 minutes. Do not rinse. Allow surfaces to air dry.',
+    // note: 'Learn more about eOn multi-surface → '
   },
   {
     question: 'How does eOn sanitizing mist (HOCl) work? ',
     answer:
-      "eOn's Hypochlorous Acid multi surface disinfectant destroys microbe and virus cell walls, protein degradation, and inhibition of protein synthesis, , destroying or inactivating 99.9% of common germs. ",
+      "eOn's Hypochlorous Acid multi-surface disinfectant breaks down microbe and virus cell walls, destroying or inactivating 99.9% of bacteria and viruses through protein degradation and inhibition of protein synthesis.",
     note: ''
   },
   {
     question: 'How does eOn hand sanitizer work? ',
     answer:
       "eOn's (80% Ethyl Alcohol) hand sanitizer solution works by denaturing germ proteins, inactivating and inhibiting microbial growth, ensuring you're clean and protected.",
-    note: ''
+    // note: 'Learn more about eOn hand sanitizer  →'
   },
   {
     question: 'How long does an eOn can last? ',
@@ -104,7 +110,7 @@ const data = [
     question: "My can won't spray correctly, help.",
     answer:
       'Make sure your cap has been twisted to unlock and that no part of your clear-actuator-cap component is damaged or missing. If misting action is reduced, it may be your can is empty. ',
-    note: 'Learn about Returns →'
+    // note: 'Learn about Returns →'
   },
   {
     question:

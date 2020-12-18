@@ -54,7 +54,9 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen }) => {
             className="motion"
           >
             {sitemap.map((link, idx) => (
-              <Link to={link.link} key={idx}>{link.name}</Link>
+              <Link to={link.link} key={idx}>
+                {link.name}
+              </Link>
             ))}
           </motion.div>
         )}
@@ -77,11 +79,11 @@ const sitemap = [
     link: '/eon-multi-surface'
   },
   {
-    name: 'mission',
+    name: 'our mission',
     link: '/mission'
   },
   {
-    name: 'faqs',
+    name: 'FAQs',
     link: '/faqs'
   }
 ]

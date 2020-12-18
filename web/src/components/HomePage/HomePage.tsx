@@ -23,6 +23,7 @@ import Icon from '../Icons'
 import Section from '../Section'
 import Trademarks from '../Trademarks'
 import ImgMatch from '../ImgMatch'
+import StoreLocator from '../StoreLocator'
 
 // ___________________________________________________________________
 
@@ -31,7 +32,17 @@ const HomePage = () => {
     <S.HomePage>
       <ProductMasonry />
       <Trademarks />
-      <Section bg="lightgray" border={false}>
+      <Section border={false}>
+        <Text as="p">
+          Find eOn at your local pharmacy,
+          <br />
+          retail or grocery store today.
+        </Text>
+        <Box>
+          <StoreLocator />
+        </Box>
+      </Section>
+      {/* <Section bg="lightgray" border={false}>
         <Box width={1}>
           <Box width={[1, 2 / 3, 1 / 2]}>
             <Heading as="h2" mb={0}>Everyday, professional-grade hygienics for a cleaner world.</Heading>
@@ -77,7 +88,7 @@ const HomePage = () => {
             </Link>
           </Box>
         </Flex>
-      </Section>
+      </Section> */}
       <Retailers />
     </S.HomePage>
   )

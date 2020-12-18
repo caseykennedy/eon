@@ -17,6 +17,7 @@ import { Input } from 'theme-ui'
 // Components
 import Icon from '../Icons'
 import CanMulti from '../SVG/CanMulti'
+import CanHand from '../SVG/CanHand'
 import SocialLinks from '../SocialLinks'
 
 // ___________________________________________________________________
@@ -107,7 +108,7 @@ const PreFoot = () => {
           }}
         >
           <Box mb={4}>
-            <CanMulti />
+            <CanHand />
           </Box>
           <Text as="p" textAlign="center">
             eOn mist™ hand sanitizer{' '}
@@ -151,7 +152,7 @@ const Footer: React.FC = () => {
               })
             }}
           >
-            Contact
+            Contact us
           </a>
         </div>
         <Flex className="footer__copyright">

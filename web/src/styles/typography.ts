@@ -200,7 +200,7 @@ const Typography = css`
 
   h2,
   .text--xl {
-    font-size: calc(${theme.fontSizes[4]});
+    font-size: calc(${theme.fontSizes[4]} / 1.15);
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[5]} / 1.25);
@@ -234,7 +234,6 @@ const Typography = css`
   h5,
   .text--sm {
     font-size: ${theme.fontSizes[1]};
-    letter-spacing: 1px;
 
     @media ${theme.mq.tablet} {
     }
@@ -304,6 +303,7 @@ const Typography = css`
   mark {
     background-color: transparent;
     border: 2px solid red;
+    color: inherit;
     padding: 0 calc(${theme.space[1]} / 1.5);
   }
 
@@ -370,6 +370,10 @@ const Typography = css`
 
       @media ${theme.mq.tablet} {
         /* font-size: calc(${theme.fontSizes[2]} * 1.5); */
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

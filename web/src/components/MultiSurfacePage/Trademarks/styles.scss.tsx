@@ -15,7 +15,7 @@ export const Trademarks = styled(Flex)`
 
   background: ${lighten(0.125, theme.colors.tertiary)};
   border-top: ${theme.border};
-  /* border-bottom: ${theme.border}; */
+  border-bottom: ${theme.border};
 
   height: calc(${theme.trademarksHeight} * 2);
   position: relative;
@@ -40,11 +40,11 @@ export const Trademarks = styled(Flex)`
     }
 
     &:nth-child(1) {
-      border-bottom: ${theme.border};
+      /* border-bottom: ${theme.border}; */
     }
 
     &:nth-child(2) {
-      border-bottom: ${theme.border};
+      /* border-bottom: ${theme.border}; */
     }
 
     @media ${theme.mq.tablet} {

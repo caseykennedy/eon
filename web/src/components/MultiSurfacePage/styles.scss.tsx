@@ -19,10 +19,14 @@ export const MultiSurfacePage = styled(Box)`
   .hand {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+
+    img {
+      width: 50%;
+    }
   }
 
   .features {
@@ -45,9 +49,11 @@ export const MultiSurfacePage = styled(Box)`
     }
 
     &__map {
+      margin-top: ${theme.space[6]};
       padding: 0 ${theme.space[4]} ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
+        margin-top: 0;
         padding: 0 ${theme.space[5]} ${theme.space[5]};
       }
 

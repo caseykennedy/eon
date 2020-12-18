@@ -37,14 +37,14 @@ const PageTitle = () => {
               dangerouslySetInnerHTML={{ __html: data.title }}
             />
           </Box>
-          <Box width={[1]} className="hero__can">
-            <Box className="figure">
+          <Flex width={[1]} className="hero__can">
+            <Box width={1} className="figure">
               <ImgMatch
                 src="hero-multi-surface-shadow--hard.jpg"
                 altText="eOn Hand Sanitizer can"
               />
             </Box>
-          </Box>
+          </Flex>
 
           <Flex width={[1]} className="hero__message">
             <Box>

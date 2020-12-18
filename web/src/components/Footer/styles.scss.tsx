@@ -71,7 +71,7 @@ export const PreFoot = styled.div`
             border-bottom: ${theme.border};
             border-radius: 0;
             font-size: ${theme.fontSizes[2]};
-            padding: ${theme.space[1]} 0;
+            padding: ${theme.space[2]};
             min-width: 200px;
 
             @media ${theme.mq.desktop} {

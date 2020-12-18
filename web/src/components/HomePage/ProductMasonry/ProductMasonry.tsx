@@ -14,7 +14,7 @@ import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
-import { Box, Flex, Text, Heading } from '../../ui'
+import { Box, Flex, Text, Heading, Button } from '../../ui'
 
 // Compoonents
 import Icon from '../../Icons'
@@ -30,14 +30,17 @@ import dropBolt from './assets/drop-bolt.svg'
 
 const HandSanitizer = () => {
   return (
-    <S.HandSanitizer>
+    <S.HeroPanel>
       <Box className="decorator">
         <Shine />
       </Box>
 
       <Flex className="panel__inner">
         <Box position="relative" style={{ zIndex: 9 }}>
-          <Text className="text--base">{data.title}</Text>
+          <Text
+            className="statement  text--base"
+            dangerouslySetInnerHTML={{ __html: data.title }}
+          />
         </Box>
 
         <Flex className="panel__figure">
@@ -46,47 +49,52 @@ const HandSanitizer = () => {
           </Box>
         </Flex>
 
-        <Flex className="panel__features">
-          <Flex className="cta">
-            <Link
-              to={`/eon-continuous-spray-hand-sanitizer-80`}
-              onClick={() => {
-                gtag.event({
-                  category: 'homepage masonry',
-                  action: 'Click',
-                  label: 'hand sanitizer - shop now'
-                })
-              }}
-            >
+        <Box
+          className="panel__features"
+          position="relative"
+          style={{ zIndex: 9 }}
+        >
+          <Heading
+            as="h1"
+            className="text--xl"
+            dangerouslySetInnerHTML={{ __html: data.headline }}
+          />
+
+          <Link
+            to={`/products/eon-continuous-spray-hand-sanitizer-80`}
+            onClick={() => {
+              gtag.event({
+                category: 'homepage masonry',
+                action: 'Click',
+                label: 'hand sanitizer - shop now'
+              })
+            }}
+          >
+            <Button>
               Shop now
               <Icon name="arrow" />
-            </Link>
-          </Flex>
-
-          <Flex className="feature-set">
-            <Heading
-              as="h1"
-              className="text--xl"
-              mb={0}
-              dangerouslySetInnerHTML={{ __html: data.headline }}
-            />
-          </Flex>
-        </Flex>
+            </Button>
+          </Link>
+        </Box>
       </Flex>
-    </S.HandSanitizer>
+    </S.HeroPanel>
   )
 }
 
 const MultiSurface = () => {
   return (
-    <S.Disinfectant>
-      <Box className="decorator">
+    <S.HeroPanel>
+      <Box className="decorator  decorator--multi">
         <img src={dropBolt} alt="eon bolt" />
       </Box>
 
       <Flex className="panel__inner">
         <Box position="relative" style={{ zIndex: 9 }}>
-          <Text className="text--base">multi-surface</Text>
+          <Text className="statement  text--base">
+            Clean, disinfect and
+            <br />
+            deodorize—on the go.
+          </Text>
         </Box>
 
         {/* <Flex className="panel__figure  panel__figure--inline">
@@ -107,31 +115,26 @@ const MultiSurface = () => {
           </Box>
         </Flex>
 
-        <Flex className="panel__features">
-          <Flex className="cta">
-            <Link
-              to={`/eon-multi-surface`}
-              onClick={() => {
-                gtag.event({
-                  category: 'homepage masonry',
-                  action: 'Click',
-                  label: 'multi-surface disinfectant - find in store'
-                })
-              }}
-            >
+        <Box className="panel__features">
+          <Heading as="h3">multi-surface disinfectant</Heading>
+          <Link
+            to={`/eon-multi-surface`}
+            onClick={() => {
+              gtag.event({
+                category: 'homepage masonry',
+                action: 'Click',
+                label: 'multi-surface disinfectant - find in store'
+              })
+            }}
+          >
+            <Button>
               Find in store
               <Icon name="arrow" />
-            </Link>
-          </Flex>
-
-          <Flex className="feature-set">
-            <Heading as="h2" fontSize={3}>
-              Clean, disinfect and deodorize your environment, on the go.
-            </Heading>
-          </Flex>
-        </Flex>
+            </Button>
+          </Link>
+        </Box>
       </Flex>
-    </S.Disinfectant>
+    </S.HeroPanel>
   )
 }
 
@@ -176,8 +179,8 @@ export default ProductMasonry
 // ___________________________________________________________________
 
 const data = {
-  title: 'hand sanitizer',
-  headline: 'Germ-free hands<br />in one quick mist.',
+  title: 'Germ-free hands<br />in one quick mist.',
+  headline: 'hand sanitizer',
   featureA: 'Effective on<br /><mark>99.99%</mark> of<br />common germs',
   featureB: 'personal size<br />germ protection<br />on the go'
 }

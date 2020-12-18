@@ -52,43 +52,35 @@ const Hero = () => {
             />
           </Box>
 
-          <motion.div
-            initial={{
-              opacity: 0
-            }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
-          >
-            <Flex className="hero__features">
-              <Flex
-                className="cta"
-                onClick={e => {
-                  gtag.event({
-                    category: 'Buy Now button',
-                    action: 'Click',
-                    label: 'Homepage hero'
-                  })
-                }}
-              >
-                <AddToCart />
-              </Flex>
-
-              <Flex className="feature-set">
-                <Text
-                  as="p"
-                  mr={[4, 5, 5]}
-                  mb={0}
-                  dangerouslySetInnerHTML={{ __html: data.featureA }}
-                />
-
-                <Text
-                  as="p"
-                  color="primary"
-                  dangerouslySetInnerHTML={{ __html: data.featureB }}
-                />
-              </Flex>
+          <Flex className="hero__features">
+            <Flex
+              className="cta"
+              onClick={e => {
+                gtag.event({
+                  category: 'Buy Now button',
+                  action: 'Click',
+                  label: 'Homepage hero'
+                })
+              }}
+            >
+              <AddToCart />
             </Flex>
-          </motion.div>
+
+            <Flex className="feature-set">
+              <Text
+                as="p"
+                mr={[4, 5, 5]}
+                mb={0}
+                dangerouslySetInnerHTML={{ __html: data.featureA }}
+              />
+
+              <Text
+                as="p"
+                color="primary"
+                dangerouslySetInnerHTML={{ __html: data.featureB }}
+              />
+            </Flex>
+          </Flex>
         </Flex>
       </S.Hero>
       <Trademarks />

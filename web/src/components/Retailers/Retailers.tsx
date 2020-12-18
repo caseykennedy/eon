@@ -25,7 +25,7 @@ import Icon from '../../components/Icons'
 const Retailers = () => {
   const retailers = useRetailers()
   return (
-    <S.Retailers bg="white" border={true} maxWidth={theme.maxWidth}>
+    <S.Retailers bg="white" border={true}>
       <Flex
         alignItems={['flex-start', 'center']}
         flexDirection={['column', 'row']}

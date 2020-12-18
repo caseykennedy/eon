@@ -65,8 +65,7 @@ const Message: React.FC<Props> = ({
         }}
       >
         <Text as="p" className="t--small">
-          <Box as="span" color="primary">Hello there!&nbsp;</Box> Looking for eOn
-          multi-surface disinfectant?
+          Looking for eOn multi-surface disinfectant?
         </Text>
         <Flex as="span" className="figure">
           <CanMulti />
