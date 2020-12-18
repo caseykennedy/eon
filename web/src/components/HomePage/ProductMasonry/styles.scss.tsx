@@ -31,7 +31,7 @@ export const ProductMasonry = styled(Flex)`
       flex-direction: row;
     }
 
-    .panel {
+    .link {
       color: ${theme.colors.text};
       padding: ${theme.space[4]};
       position: relative;
@@ -44,12 +44,6 @@ export const ProductMasonry = styled(Flex)`
       @media ${theme.mq.desktop} {
         padding: ${theme.space[5]} ${theme.space[6]};
       }
-
-      /* &:hover {
-        .statement {
-          color: ${theme.colors.primary};
-        }
-      } */
 
       &--multi-surface {
         flex: 1;
@@ -166,75 +160,75 @@ export const ProductMasonry = styled(Flex)`
         }
       }
     }
-  }
-`
 
-export const HeroPanel = styled(Flex)`
-  height: 100%;
-  overflow: visible;
-  transition: background-color ${theme.transition.global};
-
-  .decorator {
-    position: absolute;
-    top: calc(${theme.space[4]} * 1);
-    right: calc(${theme.space[4]} * 1);
-
-    margin-left: auto;
-    width: calc(${theme.space[7]} / 1.15);
-    z-index: 999;
-
-    @media ${theme.mq.tablet} {
-      width: calc(${theme.space[7]} * 1.25);
-    }
-
-    &--multi {
-      position: absolute;
-      top: ${theme.space[4]};
-      right: ${theme.space[4]};
-
-      margin-left: auto;
-      width: calc(${theme.space[6]} / 1.15);
-      z-index: 999;
-    }
-  }
-
-  .panel {
-    &__inner {
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: visible;
-      width: 100%;
-    }
-
-    &__tagline {
-      position: relative;
-      z-index: 9;
-    }
-
-    &__figure {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+    .panel {
       height: 100%;
-      width: 100%;
-    }
+      overflow: visible;
+      transition: background-color ${theme.transition.global};
 
-    &__message {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      .decorator {
+        position: absolute;
+        top: calc(${theme.space[4]} * 1);
+        right: calc(${theme.space[4]} * 1);
 
-      width: 100%;
-      position: relative;
-      z-index: 9;
+        margin-left: auto;
+        width: calc(${theme.space[7]} / 1.15);
+        z-index: 999;
 
-      @media ${theme.mq.tablet} {
-        display: block;
+        @media ${theme.mq.tablet} {
+          width: calc(${theme.space[7]} * 1.25);
+        }
+
+        &--multi {
+          position: absolute;
+          top: ${theme.space[4]};
+          right: ${theme.space[4]};
+
+          margin-left: auto;
+          width: calc(${theme.space[6]} / 1.15);
+          z-index: 999;
+        }
+      }
+
+      &__inner {
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: visible;
+        width: 100%;
+      }
+
+      &__tagline {
+        position: relative;
+        z-index: 9;
+      }
+
+      &__figure {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      &__message {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        width: 100%;
+        position: relative;
+        z-index: 9;
+
+        @media ${theme.mq.tablet} {
+          display: block;
+        }
       }
     }
   }
+
 `
+

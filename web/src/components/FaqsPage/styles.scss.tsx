@@ -12,14 +12,9 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const FaqsPage = styled(Box)`
-  @media ${theme.mq.tablet} {
-  }
-
-  .icon {
-    margin-right: ${theme.space[6]};
-
-    svg {
-      width: ${theme.space[7]};
-    }
+  .faqs {
+    border-top: 1px solid ${theme.colors.black};
+    margin: 0 auto;
+    max-width: ${theme.maxWidth};
   }
 `

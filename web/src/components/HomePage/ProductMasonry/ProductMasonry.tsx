@@ -30,7 +30,7 @@ import dropBolt from './assets/drop-bolt.svg'
 
 const HandSanitizer = () => {
   return (
-    <S.HeroPanel>
+    <Flex className="panel">
       <Box className="decorator">
         <Shine />
       </Box>
@@ -73,13 +73,13 @@ const HandSanitizer = () => {
           </Link>
         </Box>
       </Flex>
-    </S.HeroPanel>
+    </Flex>
   )
 }
 
 const MultiSurface = () => {
   return (
-    <S.HeroPanel>
+    <Flex className="panel">
       <Box className="decorator  decorator--multi">
         <img src={dropBolt} alt="eon bolt" />
       </Box>
@@ -123,7 +123,7 @@ const MultiSurface = () => {
           </Link>
         </Box>
       </Flex>
-    </S.HeroPanel>
+    </Flex>
   )
 }
 
@@ -140,7 +140,7 @@ const ProductMasonry = () => {
               label: 'hand sanitizer - panel'
             })
           }}
-          className="panel  panel--hand-sanitizer"
+          className="link  link--hand-sanitizer"
         >
           <HandSanitizer />
         </Link>
@@ -154,7 +154,7 @@ const ProductMasonry = () => {
               label: 'multi-surface disinfectant - panel'
             })
           }}
-          className="panel  panel--multi-surface"
+          className="link  link--multi-surface"
         >
           <MultiSurface />
         </Link>

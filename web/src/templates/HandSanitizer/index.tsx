@@ -31,6 +31,12 @@ const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
   console.log(product)
   return (
     <Layout>
+      <SEO
+        pathname={`/products/${product.handle}`}
+        title={`${product.title} | eOn mist disinfectants and personal sanitation`}
+        desc={`${product.description} | `}
+        individual={false}
+      />
       <Box>
         {/* <Flex p={5}>
             <Box width={1 / 2}>

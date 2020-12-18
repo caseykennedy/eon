@@ -18,7 +18,7 @@ import theme from '../gatsby-plugin-theme-ui'
 const Mission = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO pathname={`/mission`} title={`Our Mission | eOn mist™`} />
       <MissionPage />
     </Layout>
   )

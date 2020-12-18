@@ -18,7 +18,7 @@ import theme from '../gatsby-plugin-theme-ui'
 const Faqs = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO pathname={`/faqs`} title={`FAQs | eOn mist™`} />
       <FaqsPage />
     </Layout>
   )

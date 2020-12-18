@@ -4,19 +4,13 @@
 
 import React from 'react'
 
-import { Box, Flex, Heading, Text } from '../ui'
-import Button from '../ui/Button'
-
-import Section from '../Section'
-
-// Hooks
-import useLegal from '../../hooks/useLegal'
-
 // Theme
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
+import { Box, Flex, Heading, Text } from '../ui'
 
 // Components
+import Section from '../Section'
 import Accordion from '../Accordion'
 import PageTitle from '../PageTitle'
 
@@ -40,11 +34,7 @@ const FaqsPage = () => {
             </Box>
           </Box>
 
-          <Box
-            mx={`auto`}
-            maxWidth={theme.maxWidth}
-            style={{ borderTop: `1px solid ${theme.colors.black}` }}
-          >
+          <Box className="faqs">
             {data.map((faq, idx) => (
               <Accordion title={faq.question} active={false} key={idx}>
                 <Box py={[4, 5]}>
@@ -61,6 +51,8 @@ const FaqsPage = () => {
 }
 
 export default FaqsPage
+
+// ___________________________________________________________________
 
 const data = [
   {
