@@ -38,7 +38,12 @@ const HomePage = () => {
           <br />
           retail or grocery store today.
         </Text>
-        <Box>
+        <Box
+          style={{
+            border: theme.border,
+            borderRadius: theme.borderRadius
+          }}
+        >
           <StoreLocator />
         </Box>
       </Section>

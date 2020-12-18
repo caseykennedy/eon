@@ -51,6 +51,7 @@ export const ProductMasonry = styled(Flex)`
 
       &--multi-surface {
         flex: 1;
+        width: 100%;
       }
 
       &--hand-sanitizer {
@@ -68,6 +69,7 @@ export const ProductMasonry = styled(Flex)`
           flex: 2;
           border-bottom: none;
           border-right: ${theme.border};
+          width: 100%;
         }
       }
     }
