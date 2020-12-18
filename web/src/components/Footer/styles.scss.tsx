@@ -125,7 +125,7 @@ export const PreFoot = styled.div`
         }
 
         &:hover {
-          background: ${theme.colors.babyblue};
+          background: ${theme.colors.lightgray};
         }
 
         &--hand-sanitizer {

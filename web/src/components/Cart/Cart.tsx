@@ -95,13 +95,14 @@ const CartItems: React.FC<CartItemsProps> = ({
               <p>Total</p>
               <p>${checkout.totalPrice && checkout.totalPrice}</p>
             </div> */}
-            <Button
+            <button
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}
               aria-label="Checkout"
+              className="btn"
             >
               Checkout
-            </Button>
+            </button>
           </div>
           {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
       <br /> */}

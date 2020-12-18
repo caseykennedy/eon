@@ -36,7 +36,7 @@ const HandSanitizer = () => {
       </Box>
 
       <Flex className="panel__inner">
-        <Box position="relative" style={{ zIndex: 9 }}>
+        <Box className="panel__tagline">
           <Text
             className="statement  text--base"
             dangerouslySetInnerHTML={{ __html: data.title }}
@@ -45,17 +45,13 @@ const HandSanitizer = () => {
 
         <Flex className="panel__figure">
           <Box width={1} className="figure">
-            <ImgMatch src="eon-hero-3d.png" altText="eOn Hand Sanitizer can" />
+            <ImgMatch src="eon-hero-3d.jpg" altText="eOn Hand Sanitizer can" />
           </Box>
         </Flex>
 
-        <Box
-          className="panel__features"
-          position="relative"
-          style={{ zIndex: 9 }}
-        >
+        <Box className="panel__message">
           <Heading
-            as="h2"
+            as="h3"
             mb={1}
             dangerouslySetInnerHTML={{ __html: data.headline }}
           />
@@ -70,10 +66,10 @@ const HandSanitizer = () => {
               })
             }}
           >
-            <Button>
+            <a className="btn">
               Shop now
               <Icon name="arrow" />
-            </Button>
+            </a>
           </Link>
         </Box>
       </Flex>
@@ -89,7 +85,7 @@ const MultiSurface = () => {
       </Box>
 
       <Flex className="panel__inner">
-        <Box position="relative" style={{ zIndex: 9 }}>
+        <Box className="panel__tagline">
           <Text className="statement  text--base">
             Clean, disinfect and
             <br />
@@ -97,26 +93,19 @@ const MultiSurface = () => {
           </Text>
         </Box>
 
-        {/* <Flex className="panel__figure  panel__figure--inline">
-          <Box className="figure--small">
-            <ImgMatch
-              src="can-multi-surface-eon-mist.png"
-              altText="eOn Hand Sanitizer can"
-            />
-          </Box>
-        </Flex> */}
-
         <Flex className="panel__figure">
           <Box width={1} className="figure">
             <ImgMatch
               src="hero-multi-surface--wide.jpg"
-              altText="eOn Hand Sanitizer can"
+              altText="eOn multi-surface disinfectant can"
             />
           </Box>
         </Flex>
 
-        <Box className="panel__features">
-          <Heading as="h3" mb={1}>multi-surface disinfectant</Heading>
+        <Box className="panel__message">
+          <Heading as="h3" mb={1}>
+            multi-surface disinfectant
+          </Heading>
           <Link
             to={`/eon-multi-surface`}
             onClick={() => {
@@ -127,10 +116,10 @@ const MultiSurface = () => {
               })
             }}
           >
-            <Button>
+            <a className="btn">
               Find in store
               <Icon name="arrow" />
-            </Button>
+            </a>
           </Link>
         </Box>
       </Flex>
@@ -180,7 +169,7 @@ export default ProductMasonry
 
 const data = {
   title: 'Germ-free hands<br />in one quick mist.',
-  headline: 'hand sanitizer',
+  headline: 'eOn hand sanitizer',
   featureA: 'Effective on<br /><mark>99.99%</mark> of<br />common germs',
   featureB: 'personal size<br />germ protection<br />on the go'
 }

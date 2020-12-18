@@ -54,7 +54,7 @@ const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen }) => {
             className="motion"
           >
             {sitemap.map((link, idx) => (
-              <Link to={link.link} key={idx}>
+              <Link to={link.link} onClick={handleExit} key={idx}>
                 {link.name}
               </Link>
             ))}
@@ -70,6 +70,10 @@ export default Menu
 // ___________________________________________________________________
 
 const sitemap = [
+  {
+    name: 'home',
+    link: '/'
+  },
   {
     name: 'hand sanitizer',
     link: '/products/eon-continuous-spray-hand-sanitizer-80'

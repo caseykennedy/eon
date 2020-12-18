@@ -51,7 +51,7 @@ const MultiSurfacePage = () => {
 
           <Box flex={2} width={[1, 1 / 2]}>
             <Text as="h4">Hypochlorous Acid (HOCl)</Text>
-            <Heading as="h2">
+            <Heading as="h2" className="text--xxl">
               eOn multi-surface
               <br />
               disinfectant
@@ -67,7 +67,7 @@ const MultiSurfacePage = () => {
         <Flex
           flexDirection={['column', 'column', 'row']}
           flexWrap="wrap"
-          alignItems="flex-start"
+          // alignItems="flex-start"
           mt={[6, 6, 7]}
         >
           <Box
@@ -81,7 +81,7 @@ const MultiSurfacePage = () => {
               borderRadius: theme.borderRadius
             }}
           >
-            <Text as="p" className="text--lg">
+            <Text as="p" className="text--md">
               Effective on <mark>99.9%</mark> of bacteria and viruses.
             </Text>
           </Box>
@@ -98,14 +98,14 @@ const MultiSurfacePage = () => {
               borderRadius: theme.borderRadius
             }}
           >
-            <Text as="p" className="text--lg">
+            <Text as="p" className="text--md">
               Derived from naturally occurring salt minerals and water
             </Text>
           </Box>
         </Flex>
       </Section>
 
-      <Section bg={theme.colors.lightgray} border={true} maxWidth={theme.maxWidth}>
+      <Section maxWidth={theme.maxWidth} pt={0}>
         <Flex
           alignItems="flex-start"
           justifyContent="flex-start"
@@ -135,20 +135,19 @@ const MultiSurfacePage = () => {
         </Text>
 
         <Flex
+          bg={theme.colors.primary}
+          color="white"
           flexDirection={['column', 'row', 'row']}
           alignItems="center"
           mt={7}
+          p={[4, 6]}
           width={1}
+          style={{
+            borderRadius: theme.borderRadius
+          }}
         >
           <Flex flex={1}>
-            <Box
-              bg={theme.colors.white}
-              p={4}
-              width={1}
-              style={{
-                borderRadius: theme.borderRadius
-              }}
-            >
+            <Box width={1}>
               <Box as="ul" mb={0}>
                 <li>
                   This product was tested for efficacy standards for hospital
@@ -179,7 +178,7 @@ const MultiSurfacePage = () => {
               <strong>Total:</strong>
               ......................................100.000%
             </Text>
-            <Text as="p" color="primary" mt={[4, 0, 0]} ml={[0, 6, 7]}>
+            <Text as="p" fontWeight={500} mt={[4, 0, 0]} ml={[0, 6, 7]}>
               Contains
               <br />
               500ppm Free

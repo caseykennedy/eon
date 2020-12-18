@@ -366,7 +366,7 @@ const Typography = css`
       list-style-position: outside;
       font-size: ${theme.fontSizes[2]};
       line-height: 1.5;
-      margin-bottom: ${theme.space[4]};
+      margin-bottom: ${theme.space[3]};
 
       @media ${theme.mq.tablet} {
         /* font-size: calc(${theme.fontSizes[2]} * 1.5); */

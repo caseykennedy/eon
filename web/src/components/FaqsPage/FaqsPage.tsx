@@ -72,7 +72,7 @@ const data = [
   {
     question: 'How do I clean with eOn multi-surface?',
     answer:
-      'Spray 6-8" from surfaces you come in everyday contact with. Treated surfaces must remain wet for 10 minutes. Reapply as necessary to keep wet for 10 minutes. Do not rinse. Allow surfaces to air dry.',
+      'Spray 6-8" from surfaces you come in everyday contact with. Treated surfaces must remain wet for 10 minutes. Reapply as necessary to keep wet for 10 minutes. Do not rinse. Allow surfaces to air dry.'
     // note: 'Learn more about eOn multi-surface → '
   },
   {
@@ -82,48 +82,41 @@ const data = [
     note: ''
   },
   {
+    question: 'Does eOn sanitizing mist have an odor? ',
+    answer:
+      'eOn multi-surface disinfectant is an odorless substance, though some natural variation in concentration may lead a light, harmless scent of chlorine that disappears after drying. ',
+    note:
+      'eOn hand sanitizer is 80%, 190 proof ethyl alcohol and carries the sharp, fresh scent of alcohol.'
+  },
+  {
     question: 'How does eOn hand sanitizer work? ',
     answer:
-      "eOn's (80% Ethyl Alcohol) hand sanitizer solution works by denaturing germ proteins, inactivating and inhibiting microbial growth, ensuring you're clean and protected.",
+      "eOn's (80% Ethyl Alcohol) hand sanitizer solution works by denaturing germ proteins, inactivating and inhibiting microbial growth, ensuring you're clean and protected."
     // note: 'Learn more about eOn hand sanitizer  →'
   },
   {
     question: 'How long does an eOn can last? ',
     answer:
-      'Each 2oz. can of eOn sanitizing mist™ carries just over 60 seconds of continuous spray, sanitizing action.  ',
+      'Each 2oz. can of eOn sanitizing mist™ carries just over 65 seconds of continuous spray, which roughly translates to over 60 quality sprays per can. ',
     note: ''
   },
   {
     question: 'How do I store my eOn sanitizing mist?',
     answer:
-      'Store in a cool dark space. Do not expose to heat or store at temperatures above 120°f/50°c or in enclosed places that could overheat. Keep out of reach of children. ',
+      'Store in a cool dark space. Do not expose to heat or store at temperatures above 120°f/50°c or in enclosed places that could overheat. Keep out of reach of children.',
     note: ''
   },
   {
     question: 'Can I travel with eOn sanitizing mist? ',
     answer:
-      'Yes! At 2 fluid ounces, our personal size multi-surface EPA registered disinfectant is TSA friendly. Spray it on your seat or meal tray, wait until dry. ',
+      'Yes! At 2 fluid ounces, our personal size DOT 2Q aluminum cans are fully TSA compliant. Spray it on your seat or tray table, wait until dry. ',
     note:
-      'Current TSA guidelines allow for up to 3.4oz of liquid. Find eOn multi-surface at your friendly airport Hudson News.'
+      'Current TSA guidelines allow for up to 3.4oz of liquid. At the airport? Find eOn multi-surface at your terminal’s Hudson News retailer. '
   },
   {
     question: "My can won't spray correctly, help.",
     answer:
-      'Make sure your cap has been twisted to unlock and that no part of your clear-actuator-cap component is damaged or missing. If misting action is reduced, it may be your can is empty. ',
+      'Make sure your cap has been fully twisted to unlock and that no part of your clear-actuator-cap component is damaged or missing. If misting action is reduced or not present, it may be your can is empty or actuator is faulty. '
     // note: 'Learn about Returns →'
-  },
-  {
-    question:
-      "Can I use eOn multi-surface disinfectant past it's expiration date? ",
-    answer:
-      "Our Hypochlorous Acid formula in electrolyzed water solution, shelf-stable up to 6 months. However, once it's electrical charge is diminished it returns to its original salt & vinegar concentration—losing its disinfecting capability. ",
-    note: ''
-  },
-  {
-    question: 'Can I spray eOn sanitizing mist on my body?',
-    answer:
-      'Our FDA registered, 80% Ethyl Alcohol formula is laboratory tested and formulated to be tough on germs while gentle on skin, never sticky or messy. Frequent use will not dry skin. ',
-    note:
-      "Though Hypochlorous Acid is produced by the human body and is safe on skin, our EPA registered, 500ppm disinfectant is designed for hard, non porous surfaces and not recommended for bodily use due to it's higher concentration."
   }
 ]

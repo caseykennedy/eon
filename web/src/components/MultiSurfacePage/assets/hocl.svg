@@ -13,8 +13,8 @@
 	<g id="Layer_1-2">
 		
 			<radialGradient id="SVGID_1_" cx="99.98" cy="80.06" r="79.39" gradientTransform="matrix(1 0 0 -1 0 160)" gradientUnits="userSpaceOnUse">
-			<stop  offset="0" style="stop-color:#ffffff"/>
-			<stop  offset="1" style="stop-color:#f3fdf4"/>
+			<stop  offset="0" style="stop-color:#dcedff"/>
+			<stop  offset="1" style="stop-color:#ffffff"/>
 		</radialGradient>
 		<path class="st0" d="M37.7,0h126c9,0,16.3,7.3,16.3,16.3v126c0,9-7.3,16.3-16.3,16.3h-126c-9,0-16.3-7.3-16.3-16.3v-126
 			C21.4,7.3,28.7,0,37.7,0z"/>
@@ -37,7 +37,7 @@
 				
 					<radialGradient id="SVGID_4_" cx="73.64" cy="55.71" r="32.84" gradientTransform="matrix(1 0 0 -1 0 160)" gradientUnits="userSpaceOnUse">
 					<stop  offset="0" style="stop-color:#FFFFFF"/>
-					<stop  offset="1" style="stop-color:#3B7AAD"/>
+					<stop  offset="1" style="stop-color:#1554c2"/>
 				</radialGradient>
 				<circle class="st4" cx="76.3" cy="111.8" r="32.8"/>
 			</g>

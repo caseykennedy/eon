@@ -58,7 +58,7 @@ const MissionPage = () => {
               <Box className="image-clip">
                 <Box width={1}>
                   <Parallax y={[0, 50]}>
-                    <ImgMatch src="in-store.jpg" altText="asdf" />
+                    <ImgMatch src="eon-in-target.jpg" altText="eOn on the shelf at Target" />
                   </Parallax>
                 </Box>
               </Box>

@@ -269,27 +269,6 @@ export const Button = styled.button<ElementProps>`
     }
   }
 
-  &:disabled {
-    background: ${theme.colors.white};
-    border-color: ${theme.colors.white};
-    color: ${theme.colors.primary};
-  }
-
-  &:active {
-    background: ${theme.colors.black};
-    color: ${theme.colors.white};
-    border-color: ${theme.colors.black};
-  }
-
-  .inner {
-  }
-
-  .smiley {
-    display: block;
-    margin-left: ${theme.space[3]};
-    /* width: calc(${theme.space[5]}); */
-  }
-
   ${space}
   ${color}
   ${textAlign}

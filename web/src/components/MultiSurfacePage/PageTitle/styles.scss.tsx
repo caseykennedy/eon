@@ -71,29 +71,6 @@ export const PageTitle = styled(Flex)`
         @media ${theme.mq.tablet} {
           max-width: 333px;
         }
-
-        @media ${theme.mq.desktop} {
-          max-width: 400px;
-        }
-      }
-
-      .spray {
-        position: absolute;
-        top: 125px;
-        right: -175px;
-        width: 225px;
-
-        @media ${theme.mq.tablet} {
-          top: 125px;
-          right: -190px;
-          width: 275px;
-        }
-
-        @media ${theme.mq.desktop} {
-          top: 175px;
-          right: -250px;
-          width: 375px;
-        }
       }
     }
 

@@ -30,7 +30,7 @@ export const Trademarks = styled(Flex)`
     align-items: center;
     justify-content: center;
 
-    /* border-right: ${theme.border}; */
+    border-right: ${theme.border};
     padding: ${theme.space[3]} 0;
     white-space: nowrap;
     width: 50%;
@@ -48,6 +48,7 @@ export const Trademarks = styled(Flex)`
     }
 
     @media ${theme.mq.tablet} {
+      border-right: none;
       border-bottom: none !important;
       padding: ${theme.space[3]} 0;
       /* max-width: 333px; */
