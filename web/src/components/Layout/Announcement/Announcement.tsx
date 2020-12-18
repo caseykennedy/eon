@@ -72,20 +72,20 @@ const Message: React.FC<Props> = ({
         </Flex>
       </Link>
       <Link
-        to={to}
-        onClick={e => {
+        to={`/products/eon-continuous-spray-hand-sanitizer-80`}
+        onClick={() => {
           gtag.event({
             category: 'Announcement bar',
             action: 'Click',
-            label: 'Find at your local retailer'
+            label: 'Free 2 day shipping'
           })
         }}
       >
         <Flex>
           <Text as="p" className="t--small">
-            Find eOn at your local retailer
+            <strong>FREE 2 DAY SHIPPING&nbsp;</strong> til' TUES at 12PM EST. Use
+            code: <strong>&nbsp;FREE2DAY</strong>
           </Text>
-          <Icon name="arrow" />
         </Flex>
       </Link>
     </AnnouncementSlider>
