@@ -29,7 +29,7 @@ const FaqsPage = () => {
           <Box width={1} mb={[6, 7]}>
             <Box width={[1, 2 / 3]}>
               <Heading as="p" mb={0}>
-                Some kind of intro here.
+                Here are some of the most frequently asked questions people had about eOn.
               </Heading>
             </Box>
           </Box>
