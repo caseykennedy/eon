@@ -57,56 +57,55 @@ const MultiSurfacePage = () => {
               disinfectant
             </Heading>
 
-            <Text as="p" color={theme.colors.primary}>
+            <Text as="p" color={theme.colors.primary} className="text--lg">
               For general, nursery, clinic, food, retail, athletic or industrial
               facility use. On an airplane, at a hotel, or at the grocery
               store—make it eOn, on the go disinfection.
             </Text>
-
-            <Flex
-              flexDirection={['column', 'column', 'row']}
-              flexWrap="wrap"
-              alignItems="flex-start"
-              mt={[6, 6, 7]}
-            >
-              <Box
-                flex={1}
-                width={1}
-                bg={theme.colors.black}
-                color={theme.colors.white}
-                p={4}
-                mr={[0, 0, 4]}
-                style={{
-                  borderRadius: theme.borderRadius
-                }}
-              >
-                <Text as="p" className="t--small" fontWeight={500}>
-                  Effective on <mark>99.9%</mark> of bacteria and viruses.
-                </Text>
-              </Box>
-              <Box
-                flex={1}
-                width={1}
-                // bg={theme.colors.lightgray}
-                p={4}
-                mt={[4, 4, 0]}
-                style={{
-                  position: 'relative',
-                  // top: theme.space[4],
-                  border: theme.border,
-                  borderRadius: theme.borderRadius
-                }}
-              >
-                <Text as="p" className="t--small">
-                  Derived from naturally occurring salt minerals and water
-                </Text>
-              </Box>
-            </Flex>
+          </Box>
+        </Flex>
+        <Flex
+          flexDirection={['column', 'column', 'row']}
+          flexWrap="wrap"
+          alignItems="flex-start"
+          mt={[6, 6, 7]}
+        >
+          <Box
+            flex={1}
+            width={1}
+            bg={theme.colors.black}
+            color={theme.colors.white}
+            p={[4, 5]}
+            mr={[0, 0, 4]}
+            style={{
+              borderRadius: theme.borderRadius
+            }}
+          >
+            <Text as="p" className="text--lg">
+              Effective on <mark>99.9%</mark> of bacteria and viruses.
+            </Text>
+          </Box>
+          <Box
+            flex={1}
+            width={1}
+            // bg={theme.colors.lightgray}
+            p={[4, 5]}
+            mt={[4, 4, 0]}
+            style={{
+              position: 'relative',
+              // top: theme.space[4],
+              border: theme.border,
+              borderRadius: theme.borderRadius
+            }}
+          >
+            <Text as="p" className="text--lg">
+              Derived from naturally occurring salt minerals and water
+            </Text>
           </Box>
         </Flex>
       </Section>
 
-      <Section border={true} maxWidth={theme.maxWidth}>
+      <Section bg={theme.colors.lightgray} border={true} maxWidth={theme.maxWidth}>
         <Flex
           alignItems="flex-start"
           justifyContent="flex-start"
@@ -143,11 +142,10 @@ const MultiSurfacePage = () => {
         >
           <Flex flex={1}>
             <Box
-              bg={theme.colors.lightgray}
+              bg={theme.colors.white}
               p={4}
               width={1}
               style={{
-                border: theme.border,
                 borderRadius: theme.borderRadius
               }}
             >
@@ -164,7 +162,13 @@ const MultiSurfacePage = () => {
             </Box>
           </Flex>
 
-          <Flex flex={2} flexDirection={['column', 'row', 'row']} mt={[6, 0]} ml={[0, 7]} width={1}>
+          <Flex
+            flex={2}
+            flexDirection={['column', 'row', 'row']}
+            mt={[6, 0]}
+            ml={[0, 7]}
+            width={1}
+          >
             <Text as="p" mb={0} className="t--small">
               <strong>Active Ingredient:</strong>
               <br />
