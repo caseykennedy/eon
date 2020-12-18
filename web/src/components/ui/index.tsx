@@ -208,22 +208,24 @@ export const Button = styled.button<ElementProps>`
   align-items: center;
   justify-content: space-between;
 
-  padding: ${theme.space[3]} 0 ${theme.space[3]} 0;
+  padding: ${theme.space[2]} 0 ${theme.space[2]} 0;
   width: 100%;
 
-  /* color: ${theme.colors.white}; */
-  font-size: calc(${theme.fontSizes[2]} * 1.25);
+  color: ${theme.colors.tertiary};
+  font-size: calc(${theme.fontSizes[2]} * 1);
 
   background: transparent;
   border: none;
   border-bottom: ${theme.border};
-  border-color: ${theme.colors.black};
+  border-color: ${theme.colors.tertiary};
   cursor: pointer;
   outline: none;
   transition: ${theme.transition.all};
   white-space: nowrap;
 
   @media ${theme.mq.desktop} {
+    font-size: calc(${theme.fontSizes[2]} * 1.25);
+    padding: ${theme.space[3]} 0 ${theme.space[3]} 0;
   }
 
   span {
@@ -246,7 +248,7 @@ export const Button = styled.button<ElementProps>`
 
     svg {
       width: ${theme.space[4]};
-      fill: ${theme.colors.black};
+      fill: ${theme.colors.tertiary};
 
       @media ${theme.mq.desktop} {
         width: ${theme.space[4]};

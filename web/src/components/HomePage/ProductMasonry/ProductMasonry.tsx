@@ -55,8 +55,8 @@ const HandSanitizer = () => {
           style={{ zIndex: 9 }}
         >
           <Heading
-            as="h1"
-            className="text--xl"
+            as="h2"
+            mb={1}
             dangerouslySetInnerHTML={{ __html: data.headline }}
           />
 
@@ -116,7 +116,7 @@ const MultiSurface = () => {
         </Flex>
 
         <Box className="panel__features">
-          <Heading as="h3">multi-surface disinfectant</Heading>
+          <Heading as="h3" mb={1}>multi-surface disinfectant</Heading>
           <Link
             to={`/eon-multi-surface`}
             onClick={() => {
