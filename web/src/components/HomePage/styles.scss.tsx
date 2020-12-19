@@ -11,5 +11,4 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const HomePage = styled(Box)`
-`
+export const HomePage = styled(Box)``
