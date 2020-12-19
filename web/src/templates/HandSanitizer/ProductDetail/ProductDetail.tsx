@@ -63,9 +63,7 @@ const ProductDetail: React.FC = () => {
             <Text as="h4" mb={[3, 4]}>
               Spray and go.
             </Text>
-            <h2>
-              Precise hand sanitation wherever you go.
-            </h2>
+            <h2>Precise hand sanitation wherever you go.</h2>
 
             <p>
               Rapid, effective, advanced delivery. Gentle on hands, strong on
@@ -78,7 +76,12 @@ const ProductDetail: React.FC = () => {
             </p> */}
 
             <Box mt={[6, 6, 7]}>
-              <AddToCart trackEventLabel="Product detail section">Buy Now</AddToCart>
+              <Text as="p" fontWeight={500} mb={2} className="t--small">
+                $4.49
+              </Text>
+              <AddToCart trackEventLabel="Product detail section">
+                Buy Now
+              </AddToCart>
             </Box>
 
             <Flex mt={4} mb={0}>

@@ -124,6 +124,8 @@ export const Hero = styled(Flex)`
 
       .cta {
         justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
         margin-top: ${theme.space[5]};
         width: 100%;
 
