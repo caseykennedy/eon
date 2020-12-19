@@ -28,7 +28,7 @@ export const Hero = styled.div`
 
     &.billboard {
       border-bottom: ${theme.border};
-      min-height: 50vh;
+      min-height: 30vh;
 
       @media ${theme.mq.desktop} {
         border-bottom: none;
@@ -38,6 +38,11 @@ export const Hero = styled.div`
     }
 
     &.sideboard {
+      min-height: 15vh;
+
+      @media ${theme.mq.desktop} {
+        min-height: initial;
+      }
     }
 
     &__inner {
