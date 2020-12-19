@@ -10,20 +10,20 @@ import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // Sections
-import ProductMasonry from './ProductMasonry'
-import Retailers from '../Retailers'
+import Hero from './Hero'
 
 // Components
 import Section from '../Section'
 import Trademarks from '../Trademarks'
 import StoreLocator from '../StoreLocator'
+import Retailers from '../Retailers'
 
 // ___________________________________________________________________
 
 const HomePage = () => {
   return (
     <S.HomePage>
-      <ProductMasonry />
+      <Hero />
       <Trademarks />
       <Section border={false}>
         <Text as="p">
