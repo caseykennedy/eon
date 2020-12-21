@@ -13,7 +13,7 @@ export const Trademarks = styled(Flex)`
   justify-content: center;
   flex-wrap: wrap;
 
-  background: ${transparentize(0, theme.colors.lightgray)};
+  background: ${transparentize(0, theme.colors.white)};
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 

@@ -24,6 +24,7 @@ const HomePage = () => {
   return (
     <S.HomePage>
       <Hero />
+      <Box id="store-locator" />
       <Trademarks />
       <Section border={false}>
         <Text as="p">

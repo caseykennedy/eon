@@ -149,8 +149,9 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
           <div className="header-tools">
             <Navigation />
-            <Link to={`/eon-multi-surface`} className="btn">
+            <Link to={`/#store-locator`} className="btn">
               store locator
+              {/* <Icon name="pin" /> */}
             </Link>
           </div>
 

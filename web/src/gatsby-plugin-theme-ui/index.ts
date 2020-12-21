@@ -176,7 +176,7 @@ const theme: ThemeShape = {
   readingWidth: '1100px',
   siteWidth: '100%',
   logoWidth: '70px',
-  headerHeight: '56px',
+  headerHeight: '52px',
   trademarksHeight: '76px',
   iconWidth: '18px',
 

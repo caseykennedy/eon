@@ -81,6 +81,10 @@ export const Header = styled(Flex)`
       }
 
       .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         background: ${theme.colors.babyblue};
         border: ${theme.border};
         border-color: ${theme.colors.black};
@@ -93,7 +97,7 @@ export const Header = styled(Flex)`
         color: ${theme.colors.text};
         font-size: calc(${theme.fontSizes[1]});
         font-weight: 500;
-        text-transform: capitalize;
+        /* text-transform: capitalize; */
         transition: background-color ${theme.transition.global};
 
         @media ${theme.mq.tablet} {
@@ -105,6 +109,14 @@ export const Header = styled(Flex)`
           background: ${theme.colors.black};
           color: ${theme.colors.white};
           border-color: ${theme.colors.black};
+        }
+
+        span {
+          margin-left: ${theme.space[3]};
+
+          svg {
+            width: 14px;
+          }
         }
       }
     }

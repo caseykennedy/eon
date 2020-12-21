@@ -223,7 +223,7 @@ const Typography = css`
 
   h4,
   .text--md {
-    font-size: calc(${theme.fontSizes[3]} / 1.15);
+    font-size: calc(${theme.fontSizes[3]} / 1.25);
     margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
@@ -305,57 +305,6 @@ const Typography = css`
     border: 2px solid red;
     color: inherit;
     padding: 0 calc(${theme.space[1]} / 1.5);
-  }
-
-  .t--link {
-    position: relative;
-
-    &::before {
-      content: '';
-      background: ${theme.colors.secondary};
-      width: 0;
-      height: 6px;
-
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 0;
-
-      transition: width ${theme.transition.global};
-    }
-
-    /* &:hover {
-      &::before {
-        width: 100%;
-      }
-    } */
-
-    &:active {
-      &::after {
-        mix-blend-mode: difference;
-      }
-    }
-
-    &:hover {
-      span {
-        margin-left: calc(${theme.space[5]} * 1.5);
-      }
-    }
-
-    span {
-      margin-left: ${theme.space[5]};
-      transition: ${theme.transition.all};
-
-      svg {
-        width: ${theme.iconWidth};
-      }
-    }
-
-    h4 {
-      display: flex;
-    }
   }
 
   ul {

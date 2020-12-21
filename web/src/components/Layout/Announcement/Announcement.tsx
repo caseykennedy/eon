@@ -64,7 +64,7 @@ const Message: React.FC<Props> = ({
           })
         }}
       >
-        <Text as="p" className="t--small">
+        <Text as="p" fontSize={1}>
           Looking for eOn multi-surface disinfectant?
         </Text>
         <Flex as="span" className="figure">
@@ -82,7 +82,7 @@ const Message: React.FC<Props> = ({
         }}
       >
         <Flex>
-          <Text as="p" className="t--small">
+          <Text as="p" fontSize={1}>
             Free 2 day shipping 'til Tues at 12pm est. USE CODE: <strong>&nbsp;FREE2DAY</strong>
           </Text>
         </Flex>

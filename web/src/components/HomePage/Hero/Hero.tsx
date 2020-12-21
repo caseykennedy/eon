@@ -3,8 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
 
 // utils
 import * as gtag from '../../../utils/gtag'
@@ -20,10 +18,6 @@ import { Box, Flex, Text, Heading, Button } from '../../ui'
 import Icon from '../../Icons'
 import ImgMatch from '../../ImgMatch'
 import Shine from '../../SVG/Shine'
-import CanSpray from '../../SVG/CanSpray'
-import AddToCart from '../../AddToCart'
-import Trademarks from '../../Trademarks'
-
 import dropBolt from './assets/drop-bolt.svg'
 
 // ___________________________________________________________________

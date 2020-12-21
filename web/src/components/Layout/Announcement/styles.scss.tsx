@@ -19,7 +19,7 @@ export const Announcement = styled(motion.div)`
   background: ${transparentize(0.1, theme.colors.lightgray)};
   backdrop-filter: blur(8px);
   border-bottom: 1px solid ${theme.colors.tertiary};
-  height: ${height};
+  height: calc(${theme.headerHeight} - 4px);
   max-height: 0;
   width: 100%;
 
@@ -85,7 +85,7 @@ export const Announcement = styled(motion.div)`
 
       svg {
         margin-left: ${theme.space[2]};
-        width: 32px;
+        width: 24px;
       }
     }
   }

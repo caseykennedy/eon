@@ -20,20 +20,12 @@ const FaqsPage = () => {
   return (
     <>
       <PageTitle
-        message="Frequently asked"
+        message="FAQs"
         image="pt-faqs-flat.png"
         altText="eOn hand holding a can"
       />
       <S.FaqsPage>
         <Section maxWidth={`1024px`}>
-          <Box width={1} mb={[6, 7]}>
-            <Box width={[1, 2 / 3]}>
-              <Heading as="p" mb={0}>
-                Here are some of the most frequently asked questions people had about eOn.
-              </Heading>
-            </Box>
-          </Box>
-
           <Box className="faqs">
             {data.map((faq, idx) => (
               <Accordion title={faq.question} active={false} key={idx}>

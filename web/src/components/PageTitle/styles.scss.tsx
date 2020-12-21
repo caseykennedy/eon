@@ -43,7 +43,7 @@ export const Billboard = styled(Flex)`
   }
 
   @media ${theme.mq.desktop} {
-    padding: ${theme.space[9]} ${theme.space[6]};
+    padding: ${theme.space[7]} ${theme.space[6]};
   }
 `
 

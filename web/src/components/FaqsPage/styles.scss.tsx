@@ -13,7 +13,6 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 export const FaqsPage = styled(Box)`
   .faqs {
-    border-top: 1px solid ${theme.colors.black};
     margin: 0 auto;
     max-width: ${theme.maxWidth};
   }

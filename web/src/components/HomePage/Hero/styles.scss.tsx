@@ -109,8 +109,12 @@ export const Hero = styled.div`
       right: ${theme.space[4]};
 
       margin-left: auto;
-      width: calc(${theme.space[6]} / 1.15);
+      width: calc(${theme.space[6]} / 1.25);
       z-index: 999;
+
+      @media ${theme.mq.tablet} {
+        right: ${theme.space[5]};
+      }
     }
   }
 
@@ -126,7 +130,7 @@ export const Hero = styled.div`
     }
 
     @media ${theme.mq.desktop} {
-      padding: ${theme.space[5]} ${theme.space[6]};
+      padding: ${theme.space[5]};
     }
 
     .btn {

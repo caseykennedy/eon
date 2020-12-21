@@ -43,14 +43,14 @@ export const PageTitle = styled(Flex)`
       
       align-items: flex-start;
       justify-content: center;
-      margin-bottom: ${theme.space[6]};
+      /* margin-bottom: ${theme.space[6]}; */
       position: relative;
 
       @media ${theme.mq.tablet} {
         /* margin-top: calc(${theme.space[5]} * -1); */
         margin-bottom: 0;
-        padding-top: ${theme.space[4]};
-        padding-bottom: ${theme.space[4]};
+        /* padding-top: ${theme.space[4]}; */
+        /* padding-bottom: ${theme.space[4]}; */
       }
 
       .decorator {
@@ -113,10 +113,10 @@ export const Decorator = styled.div`
   top: ${theme.space[5]};
   right: calc(${theme.space[4]});
   margin-left: auto;
-  width: ${theme.space[6]};
+  width: ${theme.space[5]};
 
   @media ${theme.mq.tablet} {
     right: calc(${theme.space[5]});
-    width: calc(${theme.space[6]});
+    width: calc(${theme.space[6]} / 1.25);
   }
 `

@@ -9,7 +9,6 @@ import Iframe from 'react-iframe'
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 import { Box, Flex, Text, Heading } from '../ui'
-import Button from '../ui/Button'
 
 // Sections
 import PageTitle from './PageTitle'
@@ -51,13 +50,13 @@ const MultiSurfacePage = () => {
 
           <Box flex={2} width={[1, 1 / 2]}>
             <Text as="h4">Hypochlorous Acid (HOCl)</Text>
-            <Heading as="h2" className="text--xxl">
+            <Heading as="h2">
               eOn multi-surface
               <br />
               disinfectant
             </Heading>
 
-            <Text as="p" color={theme.colors.primary} className="text--lg">
+            <Text as="p" className="text--md">
               For general, nursery, clinic, food, retail, athletic or industrial
               facility use. On an airplane, at a hotel, or at the grocery
               store—make it eOn, on the go disinfection.
@@ -65,7 +64,8 @@ const MultiSurfacePage = () => {
           </Box>
         </Flex>
         <Flex
-          flexDirection={['column', 'column', 'row']}
+          width={[1, 1, 2 / 3]}
+          flexDirection={['column', 'row', 'row']}
           flexWrap="wrap"
           // alignItems="flex-start"
           mt={[6, 6, 7]}
@@ -75,13 +75,13 @@ const MultiSurfacePage = () => {
             width={1}
             bg={theme.colors.black}
             color={theme.colors.white}
-            p={[4, 5]}
-            mr={[0, 0, 4]}
+            p={[4]}
+            mr={[0, 4, 4]}
             style={{
               borderRadius: theme.borderRadius
             }}
           >
-            <Text as="p" className="text--md">
+            <Text as="p">
               Effective on <mark>99.9%</mark> of bacteria and viruses.
             </Text>
           </Box>
@@ -89,8 +89,8 @@ const MultiSurfacePage = () => {
             flex={1}
             width={1}
             // bg={theme.colors.lightgray}
-            p={[4, 5]}
-            mt={[4, 4, 0]}
+            p={[4]}
+            mt={[4, 0, 0]}
             style={{
               position: 'relative',
               // top: theme.space[4],
@@ -98,14 +98,14 @@ const MultiSurfacePage = () => {
               borderRadius: theme.borderRadius
             }}
           >
-            <Text as="p" className="text--md">
-              Derived from naturally occurring salt minerals and water
+            <Text as="p">
+              Derived from naturally occurring salt minerals and water.
             </Text>
           </Box>
         </Flex>
       </Section>
 
-      <Section maxWidth={theme.maxWidth} pt={0}>
+      <Section maxWidth={theme.maxWidth}>
         <Flex
           alignItems="flex-start"
           justifyContent="flex-start"

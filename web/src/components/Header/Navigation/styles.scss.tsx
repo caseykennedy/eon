@@ -21,11 +21,7 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     height: ${theme.headerHeight};
-
-    text-transform: capitalize;
-    /* position: relative; */
     cursor: pointer;
-
     transition: ${theme.transition.all};
 
     &:hover {
@@ -122,7 +118,7 @@ export const Nav = styled.nav`
 
         font-size: calc(${theme.fontSizes[2]});
         
-        /* border-right: ${theme.border}; */
+        border-right: ${theme.border};
 
         &:last-child {
           border-right: none;
@@ -151,29 +147,5 @@ export const Nav = styled.nav`
         }
       }
     }
-  }
-`
-
-export const SignIn = styled(Link)`
-  color: ${theme.colors.text};
-  font-size: ${theme.fontSizes[1]};
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  display: flex;
-  align-items: center;
-  box-sizing: content-box;
-
-  height: ${theme.headerHeight};
-  padding: 0 ${theme.space[4]};
-  border-left: ${theme.border};
-
-  @media ${theme.mq.tablet} {
-    padding: ${theme.space[2]} ${theme.space[4]};
-  }
-
-  &:hover {
-    color: ${theme.colors.white};
-    background: ${theme.colors.bloodshot};
   }
 `
