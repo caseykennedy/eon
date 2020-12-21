@@ -95,7 +95,7 @@ const sitemap = [
     link: '/mission'
   },
   {
-    name: 'help',
+    name: 'FAQs',
     link: '/faqs'
   }
 ]

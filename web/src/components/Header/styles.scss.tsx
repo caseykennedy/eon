@@ -97,7 +97,6 @@ export const Header = styled(Flex)`
         color: ${theme.colors.text};
         font-size: calc(${theme.fontSizes[1]});
         font-weight: 500;
-        /* text-transform: capitalize; */
         transition: background-color ${theme.transition.global};
 
         @media ${theme.mq.tablet} {

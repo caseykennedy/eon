@@ -19,7 +19,7 @@ export const Announcement = styled(motion.div)`
   background: ${transparentize(0.1, theme.colors.lightgray)};
   backdrop-filter: blur(8px);
   border-bottom: 1px solid ${theme.colors.tertiary};
-  height: calc(${theme.headerHeight} - 4px);
+  height: ${height};
   max-height: 0;
   width: 100%;
 

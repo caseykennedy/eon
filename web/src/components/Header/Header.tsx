@@ -150,7 +150,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
           <div className="header-tools">
             <Navigation />
             <Link to={`/#store-locator`} className="btn">
-              store locator
+              Store locator
               {/* <Icon name="pin" /> */}
             </Link>
           </div>
