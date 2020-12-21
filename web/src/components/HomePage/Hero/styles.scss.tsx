@@ -169,7 +169,7 @@ export const Hero = styled.div`
 
       @media ${theme.mq.desktop} {
         font-size: calc(${theme.fontSizes[2]} * 1.25);
-        padding: ${theme.space[3]} 0 ${theme.space[3]} 0;
+        padding: ${theme.space[3]} 0 ${theme.space[2]} 0;
       }
 
       span {

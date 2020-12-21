@@ -149,7 +149,17 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
 
           <div className="header-tools">
             <Navigation />
-            <Link to={`/#store-locator`} className="btn">
+            <Link
+              to={`/#store-locator`}
+              className="btn"
+              onClick={() =>
+                gtag.event({
+                  category: 'Header tools',
+                  action: 'Click',
+                  label: 'Store locator'
+                })
+              }
+            >
               Store locator
               {/* <Icon name="pin" /> */}
             </Link>

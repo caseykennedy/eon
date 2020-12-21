@@ -103,30 +103,6 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         name: 'Homepage'
       },
       position: 1
-    },
-    {
-      '@type': 'ListItem',
-      item: {
-        '@id': `${settings.url}/rethink`,
-        name: 'Rethink'
-      },
-      position: 2
-    },
-    {
-      '@type': 'ListItem',
-      item: {
-        '@id': `${settings.url}/about`,
-        name: 'About'
-      },
-      position: 3
-    },
-    {
-      '@type': 'ListItem',
-      item: {
-        '@id': `${settings.url}/implants`,
-        name: 'Implants'
-      },
-      position: 4
     }
   ]
 
