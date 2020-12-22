@@ -92,7 +92,7 @@ const MissionPage = () => {
           </Flex>
         </Section>
 
-        <Section
+        {/* <Section
           maxWidth={theme.maxWidth}
           bg={theme.colors.babyblue}
           border={true}
@@ -117,7 +117,7 @@ const MissionPage = () => {
               </p>
             </Box>
           </Flex>
-        </Section>
+        </Section> */}
       </S.MissionPage>
     </>
   )
