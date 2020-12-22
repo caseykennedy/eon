@@ -3,10 +3,10 @@
 // ___________________________________________________________________
 
 import React, { useEffect } from 'react'
+import { Link } from 'gatsby'
 import { Parallax } from 'react-scroll-parallax'
 
 import { Box, Flex, Heading, Text } from '../ui'
-import Button from '../ui/Button'
 
 import Section from '../Section'
 
@@ -23,6 +23,7 @@ import PageTitle from '../PageTitle'
 import Logo from '../SVG/Logo'
 import AbstractSpray from '../SVG/AbstractSpray'
 import ImgMatch from '../ImgMatch'
+import Icon from '../Icons'
 
 // ___________________________________________________________________
 
@@ -57,9 +58,10 @@ const MissionPage = () => {
               </Box>
               <Box className="image-clip">
                 <Box width={1}>
-                  <Parallax y={[0, 50]}>
-                    <ImgMatch src="eon-in-target.jpg" altText="eOn on the shelf at Target" />
-                  </Parallax>
+                    <ImgMatch
+                      src="eon-in-target.jpg"
+                      altText="eOn on the shelf at Target"
+                    />
                 </Box>
               </Box>
             </Flex>
@@ -83,7 +85,35 @@ const MissionPage = () => {
                 disinfection you can trust.
               </p>
               <p className="text--lg">
-              From on-the-go to at home, factory or daycare—eOn is about helping to create a healthy, clean environment—for everyone.
+                From on-the-go to at home, factory or daycare—eOn is about
+                helping to create a healthy, clean environment—for everyone.
+              </p>
+            </Box>
+          </Flex>
+        </Section>
+
+        <Section
+          maxWidth={theme.maxWidth}
+          bg={theme.colors.babyblue}
+          border={true}
+        >
+          <Flex
+            flexDirection={['column', 'row', 'row']}
+            flexWrap="wrap"
+            width={1}
+          >
+            <Box flex={1} mb={6} mr={7} className="decorators">
+              <Heading as="h3" mb={0}>
+                Everyday, professional-grade hygienics for a cleaner world.
+              </Heading>
+            </Box>
+
+            <Box flex={2} pl={[0, 4, 7]}>
+              <p>
+                <strong>eOn</strong> branded products are America’s premiere,
+                TSA friendly, continuous spray packaged goods for on-the-go
+                protection from common germs. Our products are available to
+                promote well-being throughout your life.
               </p>
             </Box>
           </Flex>
