@@ -90,7 +90,7 @@ const AddToCart: React.FC<Props> = ({ btnText, linkText, trackEventLabel }) => {
       aria-label="Buy now"
     >
       {!adding ? btnText : 'Thank you'}
-      {!adding ? <Icon name="arrow" /> : <Box className="smiley">😃</Box>}
+      {!adding ? <span>$4.49</span> : <Box className="smiley">😃</Box>}
     </S.AddToCart>
   ) : (
     <S.TextLink as="span" onClick={handleAddToCart} aria-label="Buy now">
@@ -104,7 +104,7 @@ export default AddToCart
 // ___________________________________________________________________
 
 const defaultProps = {
-  btnText: 'Buy Now',
+  btnText: 'Add to cart',
   trackEventLabel: 'unlabeled'
 }
 

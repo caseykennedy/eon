@@ -83,7 +83,7 @@ const Message: React.FC<Props> = ({
       >
         <Flex>
           <Text as="p" fontSize={1}>
-            Free 2 day shipping 'til Tues at 12pm est. USE CODE: <strong>&nbsp;FREE2DAY</strong>
+            FREE ONE DAY SHIPPING! Use code: <strong>&nbsp;FREE1DAY</strong>
           </Text>
         </Flex>
       </Link>

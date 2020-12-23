@@ -63,16 +63,6 @@ const Hero = () => {
                 })
               }}
             >
-              <Text
-                as="p"
-                fontWeight={500}
-                mb={2}
-                textAlign="right"
-                width={1}
-                className="t--small"
-              >
-                $4.49
-              </Text>
               <Box>
                 <AddToCart />
               </Box>

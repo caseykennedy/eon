@@ -50,6 +50,8 @@ export const AddToCart = styled(Flex)`
   }
 
   span {
+    font-size: calc(${theme.fontSizes[1]});
+
     margin-left: ${theme.space[4]};
     transition: ${theme.transition.all};
 
@@ -60,7 +62,7 @@ export const AddToCart = styled(Flex)`
     @media ${theme.mq.tablet} {
       display: block;
       margin-left: ${theme.space[7]};
-      right: ${theme.space[2]};
+      /* right: ${theme.space[2]}; */
     }
 
     @media ${theme.mq.desktop} {

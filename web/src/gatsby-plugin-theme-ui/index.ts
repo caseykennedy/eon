@@ -200,7 +200,7 @@ const theme: ThemeShape = {
   },
 
   border: '1px solid #9D9FA2',
-  borderRadius: '4px',
+  borderRadius: '3px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 
   root: {

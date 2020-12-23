@@ -76,9 +76,6 @@ const ProductDetail: React.FC = () => {
             </p> */}
 
             <Box mt={[6, 6, 7]}>
-              <Text as="p" fontWeight={500} mb={2} className="t--small">
-                $4.49
-              </Text>
               <AddToCart trackEventLabel="Product detail section">
                 Buy Now
               </AddToCart>
