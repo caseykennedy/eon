@@ -74,6 +74,11 @@ const CartItems: React.FC<CartItemsProps> = ({
           <div className="cart-items__list">
             <LineItems />
           </div>
+          <Text as="span" mt={1} textAlign="center">
+            🎄 Free shipping 🎄
+            <br />
+            Use code: <strong>FREE1DAY</strong>
+          </Text>
           <div className="cart-items__checkout">
             {/* <div className="subtotal">
               <Text as="p" color="darkgray">
