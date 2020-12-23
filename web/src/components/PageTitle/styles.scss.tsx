@@ -12,7 +12,7 @@ export const PageTitle = styled(Flex)`
   flex-wrap: wrap;
   position: relative;
   width: 100%;
-  background: ${theme.colors.tertiary};
+  background: ${theme.colors.black};
 
   .figure {
     position: absolute;
@@ -50,7 +50,7 @@ export const Billboard = styled(Flex)`
 export const Figure = styled(Box)`
   position: relative;
   width: 100%;
-  background: ${theme.colors.tertiary};
+  background: ${theme.colors.black};
   margin-top: -${theme.space[7]};
 
   @media ${theme.mq.tablet} {

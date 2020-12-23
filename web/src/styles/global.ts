@@ -32,8 +32,6 @@ const GlobalStyles = createGlobalStyle`
   } */
   
   body {
-    background: ${theme.colors.secondary};
-    
     border: 0;
     margin: 0;
     padding: 0;

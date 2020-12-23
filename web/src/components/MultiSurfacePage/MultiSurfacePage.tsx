@@ -50,10 +50,9 @@ const MultiSurfacePage = () => {
 
           <Box flex={2} width={[1, 1 / 2]}>
             <Text as="h4">Hypochlorous Acid (HOCl)</Text>
-            <Heading as="h2">
-              eOn multi-surface
-              <br />
-              disinfectant
+            <Heading as="h3" color={theme.colors.primary}>
+              eOn is an EPA registered (List N) personal protection disinfectant
+              which rapidly neutralizes transmissable pathogens.
             </Heading>
 
             <Text as="p" className="text--md">
@@ -82,7 +81,7 @@ const MultiSurfacePage = () => {
             }}
           >
             <Text as="p">
-              Effective on <mark>99.9%</mark> of bacteria and viruses.
+              Continuous mist, ready to spray broad spectrum disinfectant.
             </Text>
           </Box>
           <Box
@@ -176,7 +175,7 @@ const MultiSurfacePage = () => {
               <strong>Other Ingredients:</strong>...........99.954%
               <br />
               <strong>Total:</strong>
-              ......................................100.000%
+              .......................................100.000%
             </Text>
             <Text as="p" fontWeight={500} mt={[4, 0, 0]} ml={[0, 6, 7]}>
               Contains
