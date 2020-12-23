@@ -33,6 +33,42 @@ type LayoutProps = {
   }
 }
 
+const NewCustomerHidden = () => {
+  return (
+    <form
+      name="Popup modal new customer signup form"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      style={{ display: 'none' }}
+    >
+      <input type="hidden" name="bot-field" />
+      <input
+        type="hidden"
+        name="form-name"
+        value="Popup modal new customer signup form"
+      />
+
+      <label htmlFor="email" style={{ display: 'none' }}>
+        Email address:
+      </label>
+
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="enter your email"
+        required={true}
+        className="form-control"
+      />
+
+      <button type="submit" value="Submit form">
+        subscribe
+      </button>
+    </form>
+  )
+}
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
@@ -55,6 +91,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Footer />
               </S.Wrapper>
               <NewCustomerModal />
+              <NewCustomerHidden />
             </ParallaxProvider>
           </ThemeProvider>
         </ContextProvider>
