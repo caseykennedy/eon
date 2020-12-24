@@ -36,6 +36,12 @@ const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
         title={`${product.title} | eOn mist disinfectants and personal sanitation`}
         desc={`${product.description} | `}
         individual={false}
+        product={true}
+        productName={product.title}
+        productImage={product.images[0].originalSrc}
+        productDesc={product.description}
+        productSku={product.variants[0].shopifyId}
+        productPrice={product.variants[0].price}
       />
       <Box>
         {/* <Flex p={5}>

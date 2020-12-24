@@ -16,6 +16,12 @@ import Twitter from './twitter'
 
 type Props = {
   banner?: string
+  product: boolean
+  productName?: string
+  productImage?: string
+  productDesc?: string
+  productSku?: string
+  productPrice?: number
 } & typeof defaultProps
 const defaultProps = {
   title: '',
@@ -28,7 +34,20 @@ const defaultProps = {
   individual: false
 }
 
-const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
+const SEO = ({
+  banner,
+  desc,
+  title,
+  product,
+  productName,
+  productImage,
+  productDesc,
+  productSku,
+  productPrice,
+  pathname,
+  node,
+  individual
+}: Props) => {
   const { site } = useStaticQuery(query)
   const settings = useSiteSettings()
 
@@ -45,9 +64,29 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
   // https://developers.google.com/search/docs/guides/intro-structured-data
   // You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
 
+  const schemaOrgProduct = {
+    '@context': 'http://schema.org/',
+    '@type': 'Product',
+    name: productName,
+    image: productImage,
+    description: productDesc,
+    sku: productSku,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: ''
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: `${productPrice}`,
+      availability: 'http://schema.org/InStock'
+    }
+  }
+
   const schemaOrgWebPage = {
     '@context': 'http://schema.org',
-    '@type': 'Product',
+    '@type': !product ? 'WebPage' : 'Product',
     url: settings.url,
     headline: settings.headline,
     inLanguage: settings.language,
@@ -90,7 +129,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     brand: {
       '@type': 'Brand',
       name: 'eOn Mist™'
-    },
+    }
   }
 
   // Initial breadcrumb list
@@ -175,7 +214,9 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
         {!individual && (
           <script type="application/ld+json">
-            {JSON.stringify(schemaOrgWebPage)}
+            {!product
+              ? `${JSON.stringify(schemaOrgWebPage)}`
+              : `${JSON.stringify(schemaOrgProduct)}`}
           </script>
         )}
         {individual && (
