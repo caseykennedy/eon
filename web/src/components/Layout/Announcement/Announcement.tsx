@@ -77,13 +77,13 @@ const Message: React.FC<Props> = ({
           gtag.event({
             category: 'Announcement bar',
             action: 'Click',
-            label: 'Free 2 day shipping'
+            label: 'Happy holidays'
           })
         }}
       >
         <Flex>
           <Text as="p" fontSize={1}>
-            FREE ONE DAY SHIPPING! Use code: <strong>&nbsp;FREE1DAY</strong>
+            🎄 Happy Holidays from our family to yours! 🎄
           </Text>
         </Flex>
       </Link>

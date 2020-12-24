@@ -37,22 +37,6 @@ const Retailers = () => {
           <br />
           are available at these fine retailers:
         </Text>
-
-        <div className="cta">
-          <Link
-            to={`/eon-multi-surface`}
-            onClick={e => {
-              e.preventDefault
-              gtag.event({
-                category: 'homepage retailers',
-                action: 'Click',
-                label: 'store locator link'
-              })
-            }}
-          >
-            store locator <Icon name="arrow" />
-          </Link>
-        </div>
       </Flex>
 
       <Grid columns={[3, 5]} gap={[6, 7, 7]} className="retailers-grid">

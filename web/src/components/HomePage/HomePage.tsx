@@ -17,6 +17,7 @@ import Section from '../Section'
 import Trademarks from '../Trademarks'
 import StoreLocator from '../StoreLocator'
 import Retailers from '../Retailers'
+import HandSan from '../../templates/HandSanitizer/ProductDetail'
 
 // ___________________________________________________________________
 
@@ -37,6 +38,7 @@ const HomePage = () => {
           <StoreLocator />
         </Box>
       </Section>
+      
       <Retailers />
     </S.HomePage>
   )

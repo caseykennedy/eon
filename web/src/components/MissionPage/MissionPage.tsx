@@ -58,10 +58,10 @@ const MissionPage = () => {
               </Box>
               <Box className="image-clip">
                 <Box width={1}>
-                    <ImgMatch
-                      src="eon-in-target.jpg"
-                      altText="eOn on the shelf at Target"
-                    />
+                  <ImgMatch
+                    src="eon-in-target.jpg"
+                    altText="eOn on the shelf at Target"
+                  />
                 </Box>
               </Box>
             </Flex>
@@ -88,27 +88,16 @@ const MissionPage = () => {
                 From on-the-go to at home, factory or daycare—eOn is about
                 helping to create a healthy, clean environment—for everyone.
               </p>
-            </Box>
-          </Flex>
-        </Section>
-
-        {/* <Section
-          maxWidth={theme.maxWidth}
-          bg={theme.colors.babyblue}
-          border={true}
-        >
-          <Flex
-            flexDirection={['column', 'row', 'row']}
-            flexWrap="wrap"
-            width={1}
-          >
-            <Box flex={1} mb={6} mr={7} className="decorators">
-              <Heading as="h3" mb={0}>
-                Everyday, professional-grade hygienics for a cleaner world.
+              <Heading
+                as="h3"
+                color={theme.colors.primary}
+                pt={4}
+                style={{ borderTop: theme.border }}
+              >
+                Everyday, professional-grade
+                <br />
+                hygienics for a cleaner world.
               </Heading>
-            </Box>
-
-            <Box flex={2} pl={[0, 4, 7]}>
               <p>
                 <strong>eOn</strong> branded products are America’s premiere,
                 TSA friendly, continuous spray packaged goods for on-the-go
@@ -117,7 +106,7 @@ const MissionPage = () => {
               </p>
             </Box>
           </Flex>
-        </Section> */}
+        </Section>
       </S.MissionPage>
     </>
   )
