@@ -16,12 +16,9 @@ import Twitter from './twitter'
 
 type Props = {
   banner?: string
-  product?: boolean
+  price?: number
   productName?: string
-  productImage?: string
-  productDesc?: string
-  productSku?: string
-  productPrice?: number
+  sku?: string
 } & typeof defaultProps
 const defaultProps = {
   title: '',
@@ -31,22 +28,21 @@ const defaultProps = {
     modifiedTime: '',
     birthTime: ''
   },
-  individual: false
+  article: false,
+  product: false
 }
 
 const SEO = ({
   banner,
   desc,
   title,
+  price,
   product,
   productName,
-  productImage,
-  productDesc,
-  productSku,
-  productPrice,
+  sku,
   pathname,
   node,
-  individual
+  article
 }: Props) => {
   const { site } = useStaticQuery(query)
   const settings = useSiteSettings()
@@ -67,19 +63,23 @@ const SEO = ({
   const schemaOrgProduct = {
     '@context': 'http://schema.org/',
     '@type': 'Product',
+    brand: settings.siteName,
     name: productName,
-    image: productImage,
-    description: productDesc,
-    sku: productSku,
+    image: seo.image,
+    description: seo.description,
+    review: '',
+    sku: `${sku}`,
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
-      reviewCount: ''
+      reviewCount: '5'
     },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'USD',
-      price: `${productPrice}`,
+      price: `${price}`,
+      priceValidUntil: '',
+      url: seo.url,
       availability: 'http://schema.org/InStock'
     }
   }
@@ -147,7 +147,7 @@ const SEO = ({
 
   let schemaArticle = null
 
-  if (individual) {
+  if (article) {
     schemaArticle = {
       '@context': 'http://schema.org',
       '@type': 'Article',
@@ -212,14 +212,14 @@ const SEO = ({
         <meta name="image" content={seo.image} />
         <meta name={seo.title} content={seo.description} />
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
-        {!individual && (
+        {!article && (
           <script type="application/ld+json">
             {!product
               ? `${JSON.stringify(schemaOrgWebPage)}`
               : `${JSON.stringify(schemaOrgProduct)}`}
           </script>
         )}
-        {individual && (
+        {article && (
           <script type="application/ld+json">
             {JSON.stringify(schemaArticle)}
           </script>
@@ -230,7 +230,7 @@ const SEO = ({
         desc={seo.description}
         image={seo.image}
         title={seo.title}
-        type={individual ? 'article' : 'website'}
+        type={article ? 'article' : 'website'}
         url={seo.url}
         locale={settings.language}
         name={settings.ogSiteName}
