@@ -13,12 +13,19 @@ import PrivacyPage from '../components/PrivacyPage'
 // Theme
 import theme from '../gatsby-plugin-theme-ui'
 
+// Hooks
+import useSiteSettings from '../hooks/useSiteSettings'
+
 // ___________________________________________________________________
 
 const Privacy = () => {
+  const site = useSiteSettings()
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname={`/privacy`}
+        title={`Privacy Policy | ${site.titleShort}`}
+      />
       <PrivacyPage />
     </Layout>
   )

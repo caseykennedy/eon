@@ -13,12 +13,20 @@ import CheckoutPage from '../components/CheckoutPage'
 // Theme
 import theme from '../gatsby-plugin-theme-ui'
 
+// Hooks
+import useSiteSettings from '../hooks/useSiteSettings'
+
 // ___________________________________________________________________
 
 const checkout = () => {
+  const site = useSiteSettings()
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname={`/checkout`}
+        title={`Checkout | ${site.titleShort}`}
+        desc={`${site.description}`}
+      />
       <CheckoutPage />
     </Layout>
   )

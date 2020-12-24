@@ -17,12 +17,19 @@ const ReturnsPage = loadable(() => import('../components/ReturnsPage'))
 // Theme
 import theme from '../gatsby-plugin-theme-ui'
 
+// Hooks
+import useSiteSettings from '../hooks/useSiteSettings'
+
 // ___________________________________________________________________
 
 const Returns = () => {
+  const site = useSiteSettings()
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname={`/returns`}
+        title={`Returns | ${site.titleShort}`}
+      />
       <ReturnsPage />
     </Layout>
   )

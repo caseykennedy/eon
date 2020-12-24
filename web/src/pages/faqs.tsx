@@ -13,12 +13,19 @@ import FaqsPage from '../components/FaqsPage'
 // Theme
 import theme from '../gatsby-plugin-theme-ui'
 
+// Hooks
+import useSiteSettings from '../hooks/useSiteSettings'
+
 // ___________________________________________________________________
 
 const Faqs = () => {
+  const site = useSiteSettings()
   return (
     <Layout>
-      <SEO pathname={`/faqs`} title={`FAQs | eOn mist™`} />
+      <SEO
+        pathname={`/faqs`}
+        title={`FAQs | ${site.titleShort}`}
+      />
       <FaqsPage />
     </Layout>
   )

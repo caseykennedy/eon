@@ -16,7 +16,7 @@ import Twitter from './twitter'
 
 type Props = {
   banner?: string
-  product: boolean
+  product?: boolean
   productName?: string
   productImage?: string
   productDesc?: string

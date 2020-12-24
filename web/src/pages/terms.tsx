@@ -13,12 +13,19 @@ import TermsPage from '../components/TermsPage'
 // Theme
 import theme from '../gatsby-plugin-theme-ui'
 
+// Hooks
+import useSiteSettings from '../hooks/useSiteSettings'
+
 // ___________________________________________________________________
 
 const Terms = () => {
+  const site = useSiteSettings()
   return (
     <Layout>
-      <SEO />
+      <SEO
+        pathname={`/terms`}
+        title={`Terms of Service | ${site.titleShort}`}
+      />
       <TermsPage />
     </Layout>
   )
