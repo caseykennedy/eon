@@ -5,4 +5,3 @@ sitemap: https://eonmist.com/sitemap.xml
 Disallow: /products/eon-new-can
 Disallow: /products/counter-top-display-wholesale
 Disallow: /products/eon-25-countertop-display
-Disallow: /products/

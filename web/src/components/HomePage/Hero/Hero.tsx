@@ -152,7 +152,7 @@ const data = {
     slug: '/products/eon-continuous-spray-hand-sanitizer-80'
   },
   multi: {
-    title: 'multi-surface disinfectant',
+    title: 'eOn multi-surface disinfectant',
     tagline: 'Clean, disinfect and <br />deodorize—on the go.',
     cta: 'Find in store',
     slug: '/products/eon-multi-surface-disinfectant'
