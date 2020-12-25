@@ -26,7 +26,7 @@ const NewCustomerModal = () => {
   const [cookie, setCookie, removeCookie] = useCookies(['new_user_modal'])
 
   const createCookie = () => {
-    setCookie('new_user_modal', 'true', { path: '/', maxAge: 86400 })
+    setCookie('new_user_modal', 'true', { path: '/', maxAge: 3333333 })
     gtag.event({
       category: 'Submit form',
       action: 'Click',
