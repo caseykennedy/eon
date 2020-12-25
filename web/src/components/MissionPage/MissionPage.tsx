@@ -4,24 +4,16 @@
 
 import React from 'react'
 
-import { Box, Flex, Heading, Text } from '../ui'
-
-import Section from '../Section'
-
-// Hooks
-import useLegal from '../../hooks/useLegal'
-
 // Theme
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
+import { Box, Flex, Heading, Text } from '../ui'
 
 // Components
-import BlockContent from '../BlockContent'
 import PageTitle from '../PageTitle'
-import Logo from '../SVG/Logo'
 import AbstractSpray from '../SVG/AbstractSpray'
 import ImgMatch from '../ImgMatch'
-import Icon from '../Icons'
+import Section from '../Section'
 
 // ___________________________________________________________________
 
@@ -86,25 +78,39 @@ const MissionPage = () => {
                 From on-the-go to at home, factory or daycare—eOn is about
                 helping to create a healthy, clean environment—for everyone.
               </p>
-              <Box
-                mt={6}
-                p={[4, 5]}
-                style={{
-                  border: theme.border,
-                  borderRadius: theme.borderRadius
-                }}
-              >
-                <Heading as="h4" color="primary" fontWeight={600}>
-                  Everyday, professional-grade
-                  <br />
-                  hygienics for a cleaner world.
-                </Heading>
-                <p>
-                  <strong>eOn</strong> branded products are America’s premiere,
-                  TSA friendly, continuous spray packaged goods for on-the-go
-                  protection from common germs. Our products are available to
-                  promote well-being throughout your life.
-                </p>
+            </Box>
+          </Flex>
+        </Section>
+
+        <Section maxWidth={theme.maxWidth}>
+          <Flex
+            flexDirection={['column', 'row', 'row']}
+            flexWrap="wrap"
+            width={1}
+            mt={6}
+            p={[4, 5]}
+            style={{
+              border: theme.border,
+              borderRadius: theme.borderRadius
+            }}
+          >
+            <Box flex={1} width={1}>
+              <Heading as="h3" color="primary" fontWeight={600}>
+                Everyday, professional-grade hygienics for a cleaner world.
+              </Heading>
+              <p>
+                <strong>eOn</strong> branded products are America’s premiere,
+                TSA friendly, continuous spray packaged goods for on-the-go
+                protection from common germs. Our products are available to
+                promote well-being throughout your life.
+              </p>
+            </Box>
+            <Box flex={1} width={1}>
+              <Box maxWidth="350px" mx="auto">
+                <ImgMatch
+                  src="mission-collage.png"
+                  altText="Refresh your hands with eOn"
+                />
               </Box>
             </Box>
           </Flex>
