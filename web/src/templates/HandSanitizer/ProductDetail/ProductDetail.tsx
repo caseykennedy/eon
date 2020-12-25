@@ -39,12 +39,12 @@ const ProductDetail: React.FC = () => {
                 animate={{ rotate: 360 }}
                 transition={{ ease: 'linear', duration: 75, loop: Infinity }}
               >
-                <img src={badge} alt="eOn mist, continous spray" />
+                <img src={badge} width="100%" alt="eOn mist, continous spray" />
               </motion.div>
             </Box>
             <Box
               width={1}
-              pl={[0, 6, 0]}
+              pl={[0, 3, 6]}
               pr={[5, 0, 7]}
               mb={[5, 0, 0]}
               position="relative"
@@ -55,25 +55,23 @@ const ProductDetail: React.FC = () => {
                 altText="Hand holding eOn Hand Sanitizer can."
               />
               <Box width={`110%`} mt={`-33%`}>
-                <img src={triangleObtuse} alt="frame" />
+                <img src={triangleObtuse} width="100%" alt="frame" />
               </Box>
             </Box>
           </Box>
-          <Box flex={[1]} mr={[0, 0, 7]}>
+          <Box flex={[1]} mr={[0, 0, 7]} mt={[4, 6]}>
             <Text as="h4" mb={[3, 4]}>
-              Spray and go.
+              eOn hand sanitizer{' '}
+              <Box as="span" color="tertiary">
+                (80% ethyl alcohol)
+              </Box>
             </Text>
             <h2>Precise hand sanitation wherever you go.</h2>
 
-            <p>
+            <Text as="p">
               Rapid, effective, advanced delivery. Gentle on hands, strong on
               germs. The simplest, easiest way to sanitize hands—anywhere.
-            </p>
-
-            {/* <p>
-              Proudly made in the USA 🇺🇸 in an EPA &amp; FDA registered
-              facility.
-            </p> */}
+            </Text>
 
             <Box mt={[6, 6, 7]}>
               <AddToCart trackEventLabel="Product detail section">
@@ -97,29 +95,6 @@ const ProductDetail: React.FC = () => {
                 FCC Approved
               </Text>
             </Flex>
-
-            {/* <Flex mt={[4, 6]}>
-              <Flex
-                alignItems="center"
-                // bg="white"
-                py={2}
-                // style={{ border: theme.border, borderRadius: theme.borderRadius }}
-              >
-                <Box
-                  width={[
-                    theme.space[5],
-                    theme.space[5],
-                    `calc(${theme.space[5]} * 1.15)`
-                  ]}
-                  mr={3}
-                >
-                  <Recycle />
-                </Box>
-                <Text fontSize={[`calc(${theme.fontSizes[1]} / 1.25)`, 2, 2]}>
-                  Fully <strong>Recyclable</strong>
-                </Text>
-              </Flex>
-            </Flex> */}
           </Box>
         </Flex>
       </Flex>

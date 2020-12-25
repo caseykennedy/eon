@@ -77,6 +77,7 @@ const HandSanitizer = () => {
 }
 
 const MultiSurface = () => {
+  const BoltBadge = () => <img src={dropBolt} width="100%" alt="eon bolt" />
   return (
     <Flex width={[1, 1, 1 / 3]} className="card sideboard">
       <Box
@@ -92,7 +93,7 @@ const MultiSurface = () => {
         className="link"
       >
         <Box className="decorator  decorator--multi">
-          <img src={dropBolt} alt="eon bolt" />
+          <BoltBadge />
         </Box>
 
         <Flex className="card__inner">
@@ -154,6 +155,6 @@ const data = {
     title: 'multi-surface disinfectant',
     tagline: 'Clean, disinfect and <br />deodorize—on the go.',
     cta: 'Find in store',
-    slug: '/eon-multi-surface'
+    slug: '/products/eon-multi-surface-disinfectant'
   }
 }

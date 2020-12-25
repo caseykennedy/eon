@@ -55,7 +55,7 @@ const NewCustomerModal = () => {
 
             <div className="decorator">
               <span>
-                <img src={signupDecorator} alt="eOn new customer signup" />
+                <img src={signupDecorator}  width="100%" alt="eOn new customer signup" />
               </span>
             </div>
 

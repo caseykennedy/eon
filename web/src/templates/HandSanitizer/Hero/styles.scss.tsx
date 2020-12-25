@@ -3,16 +3,15 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import Section from '../../../components/Section'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../../../components/ui'
 
 // ___________________________________________________________________
 
 export const Hero = styled(Flex)`
-  height: 768px;
+  /* height: 768px; */
   min-height: 400px;
-  padding-top: calc(${theme.space[2]});
+  padding-top: calc(${theme.space[4]});
   padding-bottom: ${theme.space[5]};
   position: relative;
   overflow: hidden;
@@ -34,7 +33,7 @@ export const Hero = styled(Flex)`
   .hero {
     &__inner {
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
       margin: 0 auto;
       width: 100%;
 
@@ -45,16 +44,15 @@ export const Hero = styled(Flex)`
 
     &__figure {
       justify-content: center;
-      position: absolute;
-      margin-right: auto;
 
-      max-height: 100%;
+      max-height: 325px;
       width: 100%;
       z-index: 0;
 
       @media ${theme.mq.tablet} {
         align-self: center;
         margin: 0 auto;
+        position: absolute;
       }
 
       .figure {
@@ -123,13 +121,13 @@ export const Hero = styled(Flex)`
       }
 
       .cta {
-        justify-content: flex-end;
-        align-items: flex-end;
+        /* justify-content: flex-end; */
         flex-direction: column;
         margin-top: ${theme.space[5]};
         width: 100%;
 
         @media ${theme.mq.tablet} {
+          align-items: flex-end;
           margin-top: 0;
           width: 50%;
         }

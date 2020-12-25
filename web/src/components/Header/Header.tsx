@@ -25,7 +25,6 @@ import Portal from '../Portal'
 import Menu from './Menu'
 import Overlay from './Menu/Overlay'
 import Cart from '../Cart'
-import BuyButton from './BuyButton'
 import Icon from '../Icons'
 
 import Navigation from './Navigation'
@@ -113,11 +112,7 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
         <Overlay
           className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
         >
-          <Menu
-            handleExit={() => setNavOpen(false)}
-            isNavOpen={isNavOpen}
-            scrollRef={scrollRef}
-          />
+          <Menu handleExit={() => setNavOpen(false)} isNavOpen={isNavOpen} />
         </Overlay>
       </Portal>
 
@@ -165,14 +160,14 @@ const Header: React.FC<HeaderShape> = ({ mainRef }) => {
             </Link>
           </div>
 
-          <S.CartToggle
+          <Box
             aria-label="toggle cart"
             onClick={toggleCart}
-            className={`${isCartOpen && 'is-open'}`}
+            className={`header-cart  ${isCartOpen && 'is-open'}`}
           >
             {hasItems && <div className="quantity">{quantity}</div>}
             <Icon name="bag" />
-          </S.CartToggle>
+          </Box>
         </div>
       </S.Header>
       <Cart mainRef={mainRef} />

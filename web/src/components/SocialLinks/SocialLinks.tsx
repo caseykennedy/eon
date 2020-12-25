@@ -27,7 +27,7 @@ const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
       href={item.link}
       className="mark"
       target="_blank"
-      onClick={e => {
+      onClick={() => {
         // e.preventDefault()
         gtag.event({
           category: 'Footer social link',
@@ -35,6 +35,7 @@ const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
           label: item.alt
         })
       }}
+      rel="noopener"
     >
       {item.src}
     </a>

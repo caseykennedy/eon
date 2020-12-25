@@ -83,7 +83,7 @@ const sitemap = [
       },
       {
         name: 'multi-surface disinfectant',
-        link: '/eon-multi-surface'
+        link: '/products/eon-multi-surface-disinfectant'
       }
     ]
   },

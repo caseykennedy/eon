@@ -2,9 +2,7 @@
 
 // ___________________________________________________________________
 
-import React, { useEffect } from 'react'
-import { Link } from 'gatsby'
-import { Parallax } from 'react-scroll-parallax'
+import React from 'react'
 
 import { Box, Flex, Heading, Text } from '../ui'
 
@@ -88,22 +86,26 @@ const MissionPage = () => {
                 From on-the-go to at home, factory or daycare—eOn is about
                 helping to create a healthy, clean environment—for everyone.
               </p>
-              <Heading
-                as="h3"
-                color={theme.colors.primary}
-                pt={4}
-                style={{ borderTop: theme.border }}
+              <Box
+                mt={6}
+                p={[4, 5]}
+                style={{
+                  border: theme.border,
+                  borderRadius: theme.borderRadius
+                }}
               >
-                Everyday, professional-grade
-                <br />
-                hygienics for a cleaner world.
-              </Heading>
-              <p>
-                <strong>eOn</strong> branded products are America’s premiere,
-                TSA friendly, continuous spray packaged goods for on-the-go
-                protection from common germs. Our products are available to
-                promote well-being throughout your life.
-              </p>
+                <Heading as="h4" color="primary" fontWeight={600}>
+                  Everyday, professional-grade
+                  <br />
+                  hygienics for a cleaner world.
+                </Heading>
+                <p>
+                  <strong>eOn</strong> branded products are America’s premiere,
+                  TSA friendly, continuous spray packaged goods for on-the-go
+                  protection from common germs. Our products are available to
+                  promote well-being throughout your life.
+                </p>
+              </Box>
             </Box>
           </Flex>
         </Section>

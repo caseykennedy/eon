@@ -98,6 +98,7 @@ module.exports = {
     'gatsby-plugin-loadable-components-ssr',
     'gatsby-plugin-netlify',
     `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-netlify-headers`,
     {
       resolve: `gatsby-source-shopify`,
       options: {

@@ -85,7 +85,7 @@ const Mist = () => {
             </Flex>
           </Flex>
           <Box width={1} mt={4}>
-            <img src={borderFrame} alt="frame" />
+            <img src={borderFrame} width="100%" alt="frame" />
           </Box>
         </Box>
         <Box flex={[1, 1, 4]}>

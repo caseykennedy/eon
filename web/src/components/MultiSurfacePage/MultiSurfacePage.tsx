@@ -19,6 +19,7 @@ import ImgMatch from '../ImgMatch'
 import Section from '../Section'
 import Retailers from '../Retailers'
 import StoreLocator from '../StoreLocator'
+import Reviews from '../../templates/HandSanitizer/Reviews'
 
 import hclMark from './assets/hocl.svg'
 
@@ -45,7 +46,7 @@ const MultiSurfacePage = () => {
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box width="100%" flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <img src={hclMark} alt="" />
+            <img src={hclMark} width="100%" alt="HOCl" />
           </Box>
 
           <Box flex={2} width={[1, 1 / 2]}>
@@ -187,6 +188,10 @@ const MultiSurfacePage = () => {
           </Flex>
         </Flex>
       </Section>
+
+      <Box mt={7}>
+      <Reviews />
+      </Box>
 
       <Section bg="" border={true} maxWidth={theme.maxWidth}>
         <Text as="p" color={theme.colors.tertiary}>

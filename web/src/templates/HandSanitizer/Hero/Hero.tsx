@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { motion } from 'framer-motion'
 
 // utils
 import * as gtag from '../../../utils/gtag'
@@ -18,7 +17,6 @@ import { Box, Flex, Text } from '../../../components/ui'
 // Compoonents
 import ImgMatch from '../../../components/ImgMatch'
 import Shine from '../../../components/SVG/Shine'
-import CanSpray from '../../../components/SVG/CanSpray'
 import AddToCart from '../../../components/AddToCart'
 import Trademarks from '../../../components/Trademarks'
 
@@ -32,17 +30,6 @@ const Hero = () => {
           <Shine />
         </S.Decorator>
 
-        <Flex className="hero__figure">
-          <Box position="relative">
-            <Box className="figure">
-              <ImgMatch
-                src="hero-hand-san.png"
-                altText="eOn Hand Sanitizer can"
-              />
-            </Box>
-          </Box>
-        </Flex>
-
         <Flex px={[4, 5, 6]} className="hero__inner">
           <Box position="relative" style={{ zIndex: 9 }}>
             <Text className="text--md">{data.title}</Text>
@@ -51,6 +38,17 @@ const Hero = () => {
               className="text--xl"
             />
           </Box>
+
+          <Flex className="hero__figure">
+            <Box position="relative">
+              <Box className="figure">
+                <ImgMatch
+                  src="hero-hand-san.png"
+                  altText="eOn Hand Sanitizer can"
+                />
+              </Box>
+            </Box>
+          </Flex>
 
           <Flex className="hero__features">
             <Flex

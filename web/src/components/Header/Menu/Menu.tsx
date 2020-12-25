@@ -5,25 +5,12 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-
 import { motion, AnimatePresence } from 'framer-motion'
-
-// Components
-import { Box, Flex, Heading, Text } from '../../ui'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
-
-type LinkProps = {
-  item: {
-    link: string
-    name: string
-  }
-  transition: any
-  handleExitOnClick: () => void
-}
 
 type MenuProps = {
   handleExit: () => void
@@ -31,16 +18,6 @@ type MenuProps = {
 }
 
 // ___________________________________________________________________
-
-// const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
-//   return (
-//     <S.MenuItems onClick={handleExitOnClick} style={transition}>
-//       <Link to={item.link} className="nav-mobile__link">
-//         {item.name}
-//       </Link>
-//     </S.MenuItems>
-//   )
-// }
 
 const Menu: React.FC<MenuProps> = ({ handleExit, isNavOpen }) => {
   return (
@@ -80,7 +57,7 @@ const sitemap = [
   },
   {
     name: 'multi-surface disinfectant',
-    link: '/eon-multi-surface'
+    link: '/products/eon-multi-surface-disinfectant'
   },
   {
     name: 'our mission',
@@ -89,5 +66,9 @@ const sitemap = [
   {
     name: 'FAQs',
     link: '/faqs'
-  }
+  },
+  {
+    name: 'store locator',
+    link: '/#store-locator'
+  },
 ]

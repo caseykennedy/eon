@@ -2,3 +2,8 @@
   base = "web/"
   command = "npm run build"
   publish = "public/"
+
+[[redirects]]
+  from = "/eon-multi-surface"
+  to = "/products/eon-multi-surface-disinfectant"
+  status = 301

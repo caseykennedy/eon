@@ -9,7 +9,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 const CanSpray = () => (
-  <SVG viewBox="0 0 389.15 293.18">
+  <svg viewBox="0 0 389.15 293.18">
     <title>Features icon</title>
     <path
       className="cls-1"

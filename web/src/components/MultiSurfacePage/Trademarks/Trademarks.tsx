@@ -27,7 +27,7 @@ type TrademarkShape = {
 const Mark: React.FC<{ item: TrademarkShape }> = ({ item }) => {
   return (
     <Flex className="mark">
-      <img src={item.src} alt={item.alt} />
+      <img src={item.src} width="100%" alt={item.alt} />
       <Text as="p">{item.title}</Text>
     </Flex>
   )

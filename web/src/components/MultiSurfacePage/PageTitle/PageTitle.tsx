@@ -26,7 +26,7 @@ const PageTitle = () => {
     <>
       <S.PageTitle>
         <S.Decorator>
-          <img src={dropBolt} alt="eOn multi-surface badge" />
+          <img src={dropBolt} width="100%" alt="eOn multi-surface badge" />
         </S.Decorator>
         <Flex px={[4, 5, 6]} className="hero__inner">
           <Box>

@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { transparentize } from 'polished'
 import Section from '../../../components/Section'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../../../components/ui'
@@ -23,27 +22,6 @@ export const Mist = styled(Section)`
   .mist {
     &__video {
       position: relative;
-
-      &::before {
-        background: rgb(146, 198, 246);
-        background: radial-gradient(
-          circle,
-          rgba(146, 198, 246, 0.7) 20%,
-          rgba(255, 255, 255, 0) 60%
-        );
-        content: '';
-        overflow: visible;
-        position: absolute;
-        top: calc(${theme.space[7]} * -1.5);
-        right: 0;
-        bottom: 0;
-        left: calc(${theme.space[7]} * -1);
-        z-index: 0;
-
-        @media ${theme.mq.desktop} {
-          transform: scale(1.25);
-        }
-      }
     }
   }
 

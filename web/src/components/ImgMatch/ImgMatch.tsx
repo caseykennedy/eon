@@ -19,6 +19,7 @@ const ImgMatch: React.FC<Props> = ({
   objectPosition,
   ...props
 }) => {
+  const maxSize = 980
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { internal: { mediaType: { regex: "images/" } } }) {
@@ -26,7 +27,7 @@ const ImgMatch: React.FC<Props> = ({
           node {
             relativePath
             childImageSharp {
-              fluid(maxWidth: 1600) {
+              fluid(maxWidth: 1500) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }

@@ -42,7 +42,7 @@ const Retailers = () => {
 
         <div className="cta">
           <Link
-            to={`/eon-multi-surface`}
+            to={`/products/eon-multi-surface-disinfectant`}
             onClick={() => {
               gtag.event({
                 category: 'homepage retailers',

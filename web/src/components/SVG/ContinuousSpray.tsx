@@ -9,7 +9,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 const ContinuousSpray = () => (
-  <SVG viewBox="0 0 65.32 65.22">
+  <svg viewBox="0 0 65.32 65.22">
     <title>Continuous Spray icon</title>
     <defs>
       <linearGradient

@@ -10,9 +10,6 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import TermsPage from '../components/TermsPage'
 
-// Theme
-import theme from '../gatsby-plugin-theme-ui'
-
 // Hooks
 import useSiteSettings from '../hooks/useSiteSettings'
 

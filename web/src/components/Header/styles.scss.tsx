@@ -122,6 +122,7 @@ export const Header = styled(Flex)`
     }
 
     &-toggle {
+      flex: 1;
       display: flex;
       align-items: center;
       
@@ -150,90 +151,61 @@ export const Header = styled(Flex)`
       }
     }
 
-    /* &-cart {
+    &-cart {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: flex-end;
 
-      border-left: ${theme.border};
+      /* border-left: ${theme.border}; */
       color: ${theme.colors.text};
       cursor: pointer;
 
-      padding-right: ${theme.space[3]};
+      /* padding-right: ${theme.space[3]}; */
+      position: relative;
       height: 100%;
-      width: 70px;
+      /* width: 70px; */
       transition: background-color ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
-        width: ${theme.space[7]};
-      }
-
-      &:hover {
-        background: ${darken(0.08, theme.colors.quinary)};
+        /* width: ${theme.space[7]}; */
       }
 
       span {
         svg {
+          stroke: ${theme.colors.black};
           width: 24px;
         }
       }
-    } */
+
+      &:hover,
+      &.is-open {
+        /* background: ${darken(0.08, theme.colors.quinary)}; */
+        svg {
+          stroke: ${theme.colors.darkgray};
+        }
+      }
+
+      .quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: ${theme.colors.primary};
+        border-radius: 999px;
+
+        color: ${theme.colors.white};
+        font-size: 0.8rem;
+        font-weight: 600;
+
+        position: absolute;
+        top: ${theme.space[4]};
+        right: calc(${theme.space[3]} * -0.5);
+
+        height: calc(${theme.space[4]} * 1.15);
+        width: calc(${theme.space[4]} * 1.15);
+      }
+    }
   }
 `
 
-export const CartToggle = styled(Box)`
-  /* margin-left: auto; */
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  /* border-left: ${theme.border}; */
-  color: ${theme.colors.text};
-  cursor: pointer;
-
-  /* padding-right: ${theme.space[3]}; */
-  position: relative;
-  height: 100%;
-  /* width: 70px; */
-  transition: background-color ${theme.transition.global};
-
-  @media ${theme.mq.tablet} {
-    /* width: ${theme.space[7]}; */
-  }
-
-  span {
-    svg {
-      stroke: ${theme.colors.black};
-      width: 24px;
-    }
-  }
-
-  &:hover,
-  &.is-open {
-    /* background: ${darken(0.08, theme.colors.quinary)}; */
-    svg {
-      stroke: ${theme.colors.darkgray};
-    }
-  }
-
-  .quantity {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: ${theme.colors.primary};
-    border-radius: 999px;
-
-    color: ${theme.colors.white};
-    font-size: 0.8rem;
-    font-weight: 600;
-
-    position: absolute;
-    top: ${theme.space[4]};
-    right: calc(${theme.space[3]} * -0.5);
-
-    height: calc(${theme.space[4]} * 1.15);
-    width: calc(${theme.space[4]} * 1.15);
-  }
-`

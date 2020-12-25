@@ -93,9 +93,9 @@ export const AddToCart = styled(Flex)`
   }
 
   &:disabled {
-    background: ${theme.colors.white};
-    border-color: ${theme.colors.white};
-    color: ${theme.colors.primary};
+    background: ${theme.colors.black};
+    border-color: ${theme.colors.black};
+    color: ${theme.colors.white};
   }
 
   &:active {

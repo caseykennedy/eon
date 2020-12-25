@@ -3,7 +3,7 @@ import * as React from 'react'
 import theme from '../../gatsby-plugin-theme-ui'
 
 const SymbolBadge = () => (
-  <svg width="100%" viewBox="0 0 162.78 162.78">
+  <svg viewBox="0 0 162.78 162.78">
     <title>eOn Sanitizing Mist</title>
     <circle fill={theme.colors.primary} cx="81.39" cy="81.39" r="81.39" />
     <path

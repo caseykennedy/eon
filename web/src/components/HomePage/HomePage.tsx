@@ -3,11 +3,11 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Box, Flex, Text, Heading } from '../ui'
 
-// Theme
+// Theme + ui
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
+import { Box, Flex, Text, Heading } from '../ui'
 
 // Sections
 import Hero from './Hero'
@@ -17,7 +17,6 @@ import Section from '../Section'
 import Trademarks from '../Trademarks'
 import StoreLocator from '../StoreLocator'
 import Retailers from '../Retailers'
-import HandSan from '../../templates/HandSanitizer/ProductDetail'
 
 // ___________________________________________________________________
 
@@ -33,12 +32,11 @@ const HomePage = () => {
           <br />
           retail or grocery store today.
         </Text>
-        <Box
-        >
+        <Box>
           <StoreLocator />
         </Box>
       </Section>
-      
+
       <Retailers />
     </S.HomePage>
   )

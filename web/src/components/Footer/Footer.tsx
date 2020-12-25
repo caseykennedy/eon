@@ -25,7 +25,7 @@ import SocialLinks from '../SocialLinks'
 const PreFoot = () => {
   const isBrowser = typeof window !== 'undefined'
   const isMultiPage =
-    isBrowser && location.pathname === withPrefix('/eon-multi-surface')
+    isBrowser && location.pathname === withPrefix('/products/eon-multi-surface-disinfectant')
   return (
     <S.PreFoot>
       <Box className="prefoot-panel  prefoot-panel__newsletter">
@@ -75,7 +75,7 @@ const PreFoot = () => {
       </Box>
       {!isMultiPage ? (
         <Link
-          to={`/eon-multi-surface`}
+          to={`/products/eon-multi-surface-disinfectant`}
           className="prefoot-panel  prefoot-panel__cta"
           onClick={() => {
             gtag.event({

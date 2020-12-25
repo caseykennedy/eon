@@ -87,7 +87,7 @@ const AddToCart: React.FC<Props> = ({ btnText, linkText, trackEventLabel }) => {
       type="submit"
       disabled={!available || adding}
       onClick={handleAddToCart}
-      aria-label="Buy now"
+      aria-label="Add to cart"
     >
       {!adding ? btnText : 'Thank you'}
       {!adding ? <span>$4.49</span> : <Box className="smiley">😃</Box>}
