@@ -15,6 +15,7 @@ import { Box, Flex, Text, Heading } from '../../ui'
 // Compoonents
 import ImgMatch from '../../ImgMatch'
 import Shine from '../../SVG/Shine'
+import Stars from '../../../components/SVG/Stars'
 
 import spray from './assets/multi-spray.svg'
 import dropBolt from './assets/drop-bolt.svg'
@@ -28,43 +29,54 @@ const PageTitle = () => {
         <S.Decorator>
           <img src={dropBolt} width="100%" alt="eOn multi-surface badge" />
         </S.Decorator>
-        <Flex px={[4, 5, 6]} className="hero__inner">
-          <Box>
-            <Text
-              as="h1"
-              mb={[3, 4]}
-              className="text--md"
-              dangerouslySetInnerHTML={{ __html: data.title }}
-            />
-            <Heading as="h3" mb={0} dangerouslySetInnerHTML={{ __html: data.headline }} />
-          </Box>
+
+        <Flex px={theme.gutter.axis} className="hero__inner">
+          <Flex className="hero__message">
+            <Box>
+              <Text
+                as="h1"
+                className="text--md"
+                dangerouslySetInnerHTML={{ __html: data.title }}
+              />
+
+              <div className="rating">
+                <Stars />
+                <span>( 7 ratings )</span>
+              </div>
+
+              <Heading
+                as="h3"
+                dangerouslySetInnerHTML={{ __html: data.headline }}
+              />
+            </Box>
+
+            <Box>
+              <Text as="p">
+                Ideal for use on the go, in restaurants, schools, offices,
+                retail, kitchens, etc. Leaves no residue. No wiping required.
+              </Text>
+              <Text as="p">Learn more →</Text>
+            </Box>
+          </Flex>
+
           <Flex width={[1]} className="hero__can">
             <Box width={1} className="figure">
               <ImgMatch
-                src="hero-multi-surface-shadow.jpg"
+                src="hero-multi-surface-shadow-fresh.jpg"
                 altText="eOn Hand Sanitizer can"
               />
             </Box>
           </Flex>
 
-          <Flex width={[1]} className="hero__message">
-            <Box>
-              {/* <Text
-                as="h2"
-                mb={[3, 4]}
-                className="text--base"
-                dangerouslySetInnerHTML={{ __html: data.title }}
-              /> */}
-            </Box>
-
-            <Flex className="hero__features">
-              <Box>
-                <Text
-                  as="p"
-                  dangerouslySetInnerHTML={{ __html: data.note }}
-                />
-              </Box>
-            </Flex>
+          <Flex className="hero__details">
+            <Text
+              as="p"
+              color="tertiary"
+              dangerouslySetInnerHTML={{ __html: data.note }}
+            />
+            <S.Button>
+              Find in-store <span>$4.49</span>
+            </S.Button>
           </Flex>
         </Flex>
       </S.PageTitle>
@@ -75,10 +87,10 @@ const PageTitle = () => {
 export default PageTitle
 
 const data = {
-  title: 'multi-surface disinfectant',
+  title: 'eOn multi-surface disinfectant',
   headline: 'Eliminates<br />99.9% of bacteria<br />and viruses.',
-  tagline: 'Clean, disinfect, and deodorize<br />your environment, on the go.',
-  featureC:
-    'Derived from naturally occuring salt minerals and water. Effective on <mark>99.9%</mark> of bacteria and viruses.',
-  note: 'Available in stores only.'
+  statement:
+    'Clean, disinfect, and deodorize<br />your environment, on the go.',
+  note: 'Available in stores only.',
+  tagline: 'For everyone.'
 }

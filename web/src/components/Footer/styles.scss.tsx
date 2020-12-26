@@ -75,7 +75,7 @@ export const PreFoot = styled.div`
             min-width: 200px;
 
             @media ${theme.mq.desktop} {
-              font-size: calc(${theme.fontSizes[2]} * 1.25);
+              font-size: calc(${theme.fontSizes[2]} * 1.15);
             }
           }
 
@@ -104,7 +104,7 @@ export const PreFoot = styled.div`
             transition: ${theme.transition.all};
 
             @media ${theme.mq.desktop} {
-              font-size: calc(${theme.fontSizes[2]} * 1.25);
+              font-size: calc(${theme.fontSizes[2]} * 1.15);
             }
 
             &:hover {
@@ -245,7 +245,7 @@ export const Footer = styled(Flex)`
       }
 
       &:hover {
-        background: ${darken(0, theme.colors.babyblue)};
+        background: ${darken(0, theme.colors.lightgray)};
         border-color: ${theme.colors.black};
       }
 

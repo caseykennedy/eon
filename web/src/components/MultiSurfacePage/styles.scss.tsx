@@ -42,7 +42,7 @@ export const MultiSurfacePage = styled(Box)`
     height: 100%;
 
     @media ${theme.mq.desktop} {
-      flex-direction: row;
+      /* flex-direction: row; */
     }
 
     &__content {
@@ -58,7 +58,7 @@ export const MultiSurfacePage = styled(Box)`
       }
 
       @media ${theme.mq.desktop} {
-        padding: 0;
+        padding: 0 ${theme.space[6]} ${theme.space[6]};
       }
     }
   }

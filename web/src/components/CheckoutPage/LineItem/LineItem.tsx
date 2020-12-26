@@ -119,7 +119,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             as="p"
             fontSize={[
               `calc(${theme.fontSizes[2]} / 1)`,
-              `calc(${theme.fontSizes[2]} * 1.25)`
+              `calc(${theme.fontSizes[2]} * 1.15)`
             ]}
             fontWeight={500}
             mb={2}

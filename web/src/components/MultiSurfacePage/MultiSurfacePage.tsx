@@ -28,15 +28,11 @@ import hclMark from './assets/hocl.svg'
 const MultiSurfacePage = () => {
   return (
     <S.MultiSurfacePage>
-      <Flex width={1} className="split">
-        <Box flex={1} className="split__content">
-          <PageTitle />
-        </Box>
+      <PageTitle />
 
-        <Box flex={2} className="split__map">
-          <StoreLocator />
-        </Box>
-      </Flex>
+      <Section border={true}>
+        <StoreLocator />
+      </Section>
 
       <Trademarks />
 
@@ -190,7 +186,7 @@ const MultiSurfacePage = () => {
       </Section>
 
       <Box mt={7}>
-      <Reviews />
+        <Reviews />
       </Box>
 
       <Section bg="" border={true} maxWidth={theme.maxWidth}>

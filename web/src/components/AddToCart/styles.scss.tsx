@@ -26,7 +26,7 @@ export const AddToCart = styled(Flex)`
 
   color: ${theme.colors.white};
   font-family: ${theme.fonts.heading};
-  font-size: calc(${theme.fontSizes[2]} * 1.25);
+  font-size: calc(${theme.fontSizes[2]} * 1.15);
   font-weight: 500;
   letter-spacing: 0.5px;
   /* line-height: 1; */

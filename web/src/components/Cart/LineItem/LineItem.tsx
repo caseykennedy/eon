@@ -109,7 +109,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
   return (
     <S.LineItem>
       <Flex className="line-item__product">
-        <Box width={1 / 4}>
+        <Box width={1 / 4} className="line-item__thumbnail">
           <Link to={`/products/${item.variant.product.handle}/`}>
             <VariantImage />
           </Link>
@@ -119,7 +119,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             as="p"
             fontSize={[
               `calc(${theme.fontSizes[2]} / 1)`,
-              `calc(${theme.fontSizes[2]} * 1.25)`
+              `calc(${theme.fontSizes[2]} * 1.15)`
             ]}
             fontWeight={500}
             mb={2}

@@ -85,7 +85,7 @@ export const Header = styled(Flex)`
         align-items: center;
         justify-content: center;
 
-        background: ${theme.colors.babyblue};
+        /* background: ${theme.colors.babyblue}; */
         border: ${theme.border};
         border-color: ${theme.colors.black};
         border-radius: ${theme.space[6]};
@@ -107,8 +107,8 @@ export const Header = styled(Flex)`
         &:hover,
         &:active {
           background: ${theme.colors.black};
-          color: ${theme.colors.white};
           border-color: ${theme.colors.black};
+          color: ${theme.colors.white};
         }
 
         span {

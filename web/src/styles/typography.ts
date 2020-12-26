@@ -251,7 +251,7 @@ const Typography = css`
     margin: 0 0 ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[2]} * 1.25);
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
     }
 
     &:last-child {

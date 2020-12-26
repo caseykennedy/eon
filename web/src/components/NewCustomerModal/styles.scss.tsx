@@ -40,7 +40,7 @@ export const Modal = styled(Box)`
     input {
       border: ${theme.border};
       border-radius: ${theme.borderRadius};
-      font-size: calc(${theme.fontSizes[2]} * 1.25);
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
 
       @media ${theme.mq.desktop} {
         /* font-size: calc(${theme.fontSizes[2]} * 1.5); */
@@ -53,7 +53,7 @@ export const Modal = styled(Box)`
       border-radius: ${theme.borderRadius};
 
       color: ${theme.colors.white};
-      font-size: calc(${theme.fontSizes[2]} * 1.25);
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
       font-weight: 500;
 
       margin-top: ${theme.space[2]};

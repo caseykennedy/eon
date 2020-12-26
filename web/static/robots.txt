@@ -1,6 +1,6 @@
 User-agent: *
-
-sitemap: https://eonmist.com/sitemap.xml
+Sitemap: https://eonmist.com/sitemap.xml
+Host: https://eonmist.com
 
 Disallow: /products/eon-new-can
 Disallow: /products/counter-top-display-wholesale

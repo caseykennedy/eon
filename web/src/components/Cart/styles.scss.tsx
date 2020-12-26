@@ -16,8 +16,7 @@ export const Cart = styled(Box)`
   width: ${theme.siteWidth};
   padding: ${theme.space[4]};
 
-  background: rgb(255, 255, 255, 0.85);
-  backdrop-filter: blur(9px);
+  background: ${theme.colors.white};
   opacity: 0;
   visibility: hidden;
 
@@ -163,7 +162,7 @@ export const CartItems = styled(Flex)`
 
         color: ${theme.colors.white};
         font-family: ${theme.fonts.heading};
-        font-size: calc(${theme.fontSizes[2]} * 1.25);
+        font-size: calc(${theme.fontSizes[2]} * 1.15);
         font-weight: 500;
         letter-spacing: 0.5px;
 

@@ -208,7 +208,7 @@ export const HowTo = styled(Flex)`
       align-items: center;
       justify-content: center;
 
-      font-size: calc(${theme.fontSizes[2]} * 1.25);
+      font-size: calc(${theme.fontSizes[2]} * 1.15);
       font-weight: 500;
       line-height: 1.75;
 
@@ -219,7 +219,7 @@ export const HowTo = styled(Flex)`
       padding: ${theme.space[1]} 0;
 
       @media ${theme.mq.tablet} {
-        font-size: calc(${theme.fontSizes[2]} * 1.25);
+        font-size: calc(${theme.fontSizes[2]} * 1.15);
       }
 
       @media ${theme.mq.desktop} {

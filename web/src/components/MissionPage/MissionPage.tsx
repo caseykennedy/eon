@@ -95,10 +95,15 @@ const MissionPage = () => {
             }}
           >
             <Box flex={1} width={1}>
-              <Heading as="h3" color="primary" fontWeight={600}>
+              <Heading
+                as="h4"
+                color="primary"
+                fontWeight={500}
+                className="text--xl"
+              >
                 Everyday, professional-grade hygienics for a cleaner world.
               </Heading>
-              <p>
+              <p className="text--md">
                 <strong>eOn</strong> branded products are America’s premiere,
                 TSA friendly, continuous spray packaged goods for on-the-go
                 protection from common germs. Our products are available to

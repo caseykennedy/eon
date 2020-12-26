@@ -13,7 +13,7 @@ export const Trademarks = styled(Flex)`
   justify-content: center;
   flex-wrap: wrap;
 
-  background: ${transparentize(0, theme.colors.white)};
+  background: ${theme.colors.white};
   border-top: ${theme.border};
   border-bottom: ${theme.border};
 
@@ -48,21 +48,20 @@ export const Trademarks = styled(Flex)`
     }
 
     @media ${theme.mq.tablet} {
-      border-right: none;
       border-bottom: none !important;
       padding: ${theme.space[3]} 0;
       /* max-width: 333px; */
       width: 25%;
 
       &:nth-child(2) {
-        /* border-right: ${theme.border}; */
+        border-right: ${theme.border};
       }
     }
 
     p {
       color: ${theme.colors.text};
       letter-spacing: 0.25px;
-      font-size: calc(${theme.fontSizes[1]} / 1.15);
+      font-size: calc(${theme.fontSizes[1]} / 1.25);
       margin-top: ${theme.space[2]};
 
       @media ${theme.mq.tablet} {
