@@ -50,7 +50,16 @@ export const PageTitle = styled(Flex)`
       .rating {
         display: flex;
         align-items: center;
-        margin: ${theme.space[2]} 0 ${theme.space[5]};
+        margin-top: ${theme.space[1]};
+        margin-bottom: ${theme.space[4]};
+
+        @media ${theme.mq.tablet} {
+        margin-bottom: ${theme.space[5]};
+        }
+
+        @media ${theme.mq.desktop} {
+        margin-bottom: ${theme.space[6]};
+        }
 
         span {
           font-size: ${theme.fontSizes[1]};
@@ -58,7 +67,7 @@ export const PageTitle = styled(Flex)`
         }
 
         svg {
-          width:calc(${theme.space[7]} * 1.15);
+          width:calc(${theme.space[7]} * 1);
         }
       }
     }

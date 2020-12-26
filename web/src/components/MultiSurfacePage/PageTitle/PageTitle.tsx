@@ -33,6 +33,7 @@ const PageTitle = () => {
         <Flex px={theme.gutter.axis} className="hero__inner">
           <Flex className="hero__message">
             <Box>
+              <Text as="h5" color="tertiary">{data.vendor}</Text>
               <Text
                 as="h1"
                 className="text--md"
@@ -87,7 +88,8 @@ const PageTitle = () => {
 export default PageTitle
 
 const data = {
-  title: 'eOn multi-surface disinfectant',
+  vendor: 'eOn mist™',
+  title: 'multi-surface disinfectant',
   headline: 'Eliminates<br />99.9% of bacteria<br />and viruses.',
   statement:
     'Clean, disinfect, and deodorize<br />your environment, on the go.',

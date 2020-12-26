@@ -85,7 +85,7 @@ const theme: ThemeShape = {
 
   colors: {
     // Standard Colors
-    black: '#000000',
+    black: '#09040b',
     white: '#ffffff',
 
     text: '#09040b',

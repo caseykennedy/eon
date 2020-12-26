@@ -30,11 +30,11 @@ const MultiSurfacePage = () => {
     <S.MultiSurfacePage>
       <PageTitle />
 
-      <Section border={true}>
+      <Trademarks />
+
+      <Section border={false}>
         <StoreLocator />
       </Section>
-
-      <Trademarks />
 
       <Section maxWidth={theme.maxWidth}>
         <Flex
