@@ -10,11 +10,14 @@ import useProduct from '../../hooks/useProduct'
 // utils
 import * as gtag from '../../utils/gtag'
 
-import { Box } from '../ui'
-import Icon from '../Icons'
-
+// Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
+import { Box } from '../ui'
+import Button from '../ui/Button'
+
+// Components
+import Icon from '../Icons'
 
 // ___________________________________________________________________
 
@@ -82,16 +85,18 @@ const AddToCart: React.FC<Props> = ({ btnText, linkText, trackEventLabel }) => {
   }
 
   return !linkText ? (
-    <S.AddToCart
+    <Button
       as="button"
+      bg={theme.colors.cta}
+      color={theme.colors.white}
       type="submit"
       disabled={!available || adding}
       onClick={handleAddToCart}
       aria-label="Add to cart"
     >
       {!adding ? btnText : 'Thank you'}
-      {!adding ? <span>$4.49</span> : <Box className="smiley">😃</Box>}
-    </S.AddToCart>
+      {!adding ? <span>$4.49</span> : <Box as="span" className="smiley">😃</Box>}
+    </Button>
   ) : (
     <S.TextLink as="span" onClick={handleAddToCart} aria-label="Buy now">
       {!adding ? linkText : 'thank you 😃'}

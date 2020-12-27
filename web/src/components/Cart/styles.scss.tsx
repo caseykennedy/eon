@@ -150,65 +150,8 @@ export const CartItems = styled(Flex)`
       }
 
       .btn {
-        box-sizing: border-box;
-        transition: ${theme.transition.all};
-        display: flex;
-        align-items: center;
         justify-content: center;
-        padding: calc(${theme.space[2]} * 1) ${theme.space[3]};
-
-        /* max-width: 400px; */
-        /* width: 100%; */
-
-        color: ${theme.colors.white};
-        font-family: ${theme.fonts.heading};
-        font-size: calc(${theme.fontSizes[2]} * 1.15);
-        font-weight: 500;
-        letter-spacing: 0.5px;
-
-        /* line-height: 1; */
-        /* text-transform: capitalize; */
-
-        background: ${theme.colors.cta};
-        border: ${theme.border};
-        border-color: ${theme.colors.cta};
-        border-radius: ${theme.borderRadius};
-        cursor: pointer;
-        outline: none;
-        transition: ${theme.transition.all};
-        white-space: nowrap;
-
-        @media ${theme.mq.tablet} {
-        }
-
-        @media ${theme.mq.desktop} {
-          font-size: calc(${theme.fontSizes[2]} * 1.5);
-        }
-        
-        &:hover {
-          background: ${darken(0.05, theme.colors.cta)};
-          color: ${theme.colors.white};
-
-          span {
-            right: 0;
-
-            svg {
-              fill: ${theme.colors.white};
-            }
-          }
-        }
-
-        &:disabled {
-          background: ${theme.colors.white};
-          border-color: ${theme.colors.white};
-          color: ${theme.colors.primary};
-        }
-
-        &:active {
-          background: ${theme.colors.black};
-          color: ${theme.colors.white};
-          border-color: ${theme.colors.black};
-        }
+        width: 100%;
       }
     }
   }

@@ -5,7 +5,6 @@
 import React, { useEffect } from 'react'
 
 import { Box } from '../ui'
-import Button from '../ui/Button'
 
 import Section from '../Section'
 

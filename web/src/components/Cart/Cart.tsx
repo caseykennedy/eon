@@ -9,7 +9,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import FocusLock from 'react-focus-lock'
 
 // UI
-import { Button, Text } from '../ui'
+import { Text } from '../ui'
+import Button from '../ui/Button'
 
 // Theme
 import * as S from './styles.scss'
@@ -98,14 +99,15 @@ const CartItems: React.FC<CartItemsProps> = ({
               <p>Total</p>
               <p>${checkout.totalPrice && checkout.totalPrice}</p>
             </div> */}
-            <button
+            <Button
+              bg={theme.colors.black}
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}
               aria-label="Checkout"
               className="btn"
             >
               Checkout
-            </button>
+            </Button>
           </div>
           {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
       <br /> */}

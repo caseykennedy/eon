@@ -8,7 +8,6 @@ import React, { useEffect, useState } from 'react'
 import Iframe from 'react-iframe'
 
 import { Box } from '../ui'
-import Button from '../ui/Button'
 
 import Section from '../Section'
 

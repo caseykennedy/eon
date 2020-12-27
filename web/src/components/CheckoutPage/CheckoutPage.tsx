@@ -5,7 +5,6 @@
 import React, { useContext } from 'react'
 
 import { Box, Text } from '../ui'
-import Button from '../ui/Button'
 
 import Section from '../Section'
 

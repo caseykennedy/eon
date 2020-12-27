@@ -9,7 +9,6 @@ import Iframe from 'react-iframe'
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 import { Box, Flex, Heading, Text } from '../ui'
-import Button from '../ui/Button'
 
 // Components
 import Section from '../Section'

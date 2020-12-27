@@ -11,7 +11,7 @@ import * as S from './styles.scss'
 import { Box, Flex, Text, Heading } from '../ui'
 
 // Sections
-import PageTitle from './PageTitle'
+import Hero from './Hero'
 import Trademarks from './Trademarks'
 
 // Components
@@ -28,15 +28,14 @@ import hclMark from './assets/hocl.svg'
 const MultiSurfacePage = () => {
   return (
     <S.MultiSurfacePage>
-      <PageTitle />
-
+      <Hero />
       <Trademarks />
-
+      
       <Section border={false}>
         <StoreLocator />
       </Section>
 
-      <Section maxWidth={theme.maxWidth}>
+      <Section border={true} maxWidth={theme.maxWidth}>
         <Flex
           flexWrap="wrap"
           flexDirection={['column', 'row-reverse', 'row-reverse']}

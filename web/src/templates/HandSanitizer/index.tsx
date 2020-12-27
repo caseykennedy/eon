@@ -13,6 +13,7 @@ import { Box, Flex } from '../../components/ui'
 
 // Sections
 import Hero from './Hero'
+import HeroNew from './HeroNew'
 import Mist from './Mist'
 import Specs from './Specs'
 import Reviews from './Reviews'
@@ -23,6 +24,7 @@ import ProductDetail from './ProductDetail'
 import Layout from '../../components/Layout'
 import SEO from '../../components/SEO'
 import ProductForm from '../../components/ProductForm'
+import Trademarks from '../../components/Trademarks'
 
 // ___________________________________________________________________
 
@@ -64,7 +66,8 @@ const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
               <ProductForm product={product} />
             </Box>
           </Flex> */}
-        <Hero />
+        <HeroNew />
+        <Trademarks />
         <Mist />
         <Specs />
         <ProductDetail />
