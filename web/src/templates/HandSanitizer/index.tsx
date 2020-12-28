@@ -4,15 +4,12 @@
 
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import Img from 'gatsby-image/withIEPolyfill'
 
 // UI
 import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../../components/ui'
 
 // Sections
-import Hero from './Hero'
 import HeroNew from './HeroNew'
 import Mist from './Mist'
 import Specs from './Specs'
@@ -23,7 +20,6 @@ import ProductDetail from './ProductDetail'
 // Components
 import Layout from '../../components/Layout'
 import SEO from '../../components/SEO'
-import ProductForm from '../../components/ProductForm'
 import Trademarks from '../../components/Trademarks'
 
 // ___________________________________________________________________

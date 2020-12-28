@@ -20,7 +20,6 @@ export const Hero = styled(Section)`
       align-items: flex-start;
       flex-direction: column;
       flex-wrap: wrap;
-      /* justify-content: space-between; */
 
       margin: 0 auto;
       width: 100%;
@@ -35,8 +34,12 @@ export const Hero = styled(Section)`
       flex-direction: column;
       justify-content: space-between;
 
-      flex: 1;
-      height: 100%;
+      width: 100%;
+
+      @media ${theme.mq.tablet} {
+        flex: 1;
+        height: 100%;
+      }
 
       h1 {
         margin-bottom: 0;
@@ -67,18 +70,14 @@ export const Hero = styled(Section)`
       }
     }
 
-    &__can {
+    &__money-shot {
       flex: 1;
       align-items: flex-start;
       justify-content: center;
-      /* margin-bottom: ${theme.space[6]}; */
       position: relative;
 
       @media ${theme.mq.tablet} {
-        /* margin-top: calc(${theme.space[5]} * -1); */
         margin-bottom: 0;
-        /* padding-top: ${theme.space[4]}; */
-        /* padding-bottom: ${theme.space[4]}; */
       }
 
       .figure {

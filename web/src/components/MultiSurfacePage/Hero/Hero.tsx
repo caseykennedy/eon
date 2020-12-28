@@ -71,7 +71,7 @@ const Hero = () => {
               </Box>
             </Flex>
 
-            <Flex width={[1]} className="hero__can">
+            <Flex width={[1]} className="hero__money-shot">
               <Box width={1} className="figure">
                 <ImgMatch
                   src="hero-multi-surface-shadow-fresh.jpg"
