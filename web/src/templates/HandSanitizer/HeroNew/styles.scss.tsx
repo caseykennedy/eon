@@ -28,6 +28,22 @@ export const Hero = styled(Section)`
       @media ${theme.mq.tablet} {
         flex-direction: row;
       }
+
+      .feature-set {
+        display: none;
+        
+        @media ${theme.mq.tablet} {
+          display: flex;
+        }
+
+        &--mobile {
+          margin-top: ${theme.space[4]};
+
+          @media ${theme.mq.tablet} {
+            display: none;
+          }
+        }
+      }
     }
 
     &__message {
@@ -62,7 +78,7 @@ export const Hero = styled(Section)`
         }
 
         svg {
-          width:calc(${theme.space[7]} * 1);
+          width:calc(${theme.space[7]} / 1.25);
         }
       }
     }
@@ -82,15 +98,15 @@ export const Hero = styled(Section)`
       }
 
       .figure {
-        max-width: 200px;
+        max-width: 250px;
         width: 100%;
 
         @media ${theme.mq.tablet} {
-          max-width: 200px;
+          max-width: 290px;
         }
 
         @media ${theme.mq.desktop} {
-          max-width: 230px;
+          max-width: 325px;
         }
       }
     }
@@ -103,6 +119,14 @@ export const Hero = styled(Section)`
       flex: 1;
       height: 100%;
       width: 100%;
+
+      div {
+        width: 100%;
+
+        @media ${theme.mq.tablet} {
+          width: initial;
+        }
+      }
       
       img {
         width: ${theme.space[5]};

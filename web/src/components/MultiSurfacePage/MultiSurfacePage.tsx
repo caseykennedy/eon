@@ -33,6 +33,7 @@ const MultiSurfacePage = () => {
       
       <Section border={false}>
         <StoreLocator />
+        <a id="learn-more" />
       </Section>
 
       <Section border={true} maxWidth={theme.maxWidth}>
@@ -182,6 +183,7 @@ const MultiSurfacePage = () => {
             </Text>
           </Flex>
         </Flex>
+        <a id="ratings" />
       </Section>
 
       <Box mt={7}>

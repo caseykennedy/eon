@@ -172,7 +172,7 @@ const theme: ThemeShape = {
 
   arrowWidth: '14px',
   strokeWidth: '2px',
-  maxWidth: '1440px',
+  maxWidth: '1680px',
   readingWidth: '1100px',
   siteWidth: '100%',
   logoWidth: '70px',

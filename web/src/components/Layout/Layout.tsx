@@ -86,7 +86,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <GlobalStyles />
               <S.Wrapper id="main-root">
                 <Header mainRef={mainRef} />
-                <Announcement to={`/eon-multi-surface`} />
+                <Announcement to={`/products/eon-multi-surface-disinfectant`} />
                 <S.Main ref={mainRef}>{children}</S.Main>
                 <Footer />
               </S.Wrapper>

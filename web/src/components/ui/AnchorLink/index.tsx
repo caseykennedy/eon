@@ -35,6 +35,10 @@ const AnchorLink = styled(Box)`
   transition: ${theme.transition.all};
   white-space: nowrap;
 
+  @media ${theme.mq.desktop} {
+    padding: ${theme.space[3]} 0 ${theme.space[2]} 0;
+  }
+
   &::after {
     background: ${theme.colors.primary};
     content: '';
@@ -44,10 +48,6 @@ const AnchorLink = styled(Box)`
     bottom: 0;
     left: 0;
     transition: width 0.222s ease-in-out 0s;
-  }
-
-  @media ${theme.mq.desktop} {
-    padding: ${theme.space[3]} 0 ${theme.space[2]} 0;
   }
 
   span {
@@ -73,7 +73,7 @@ const AnchorLink = styled(Box)`
       fill: ${theme.colors.tertiary};
 
       @media ${theme.mq.desktop} {
-        width: 18px;
+        width: 16px;
       }
     }
   }

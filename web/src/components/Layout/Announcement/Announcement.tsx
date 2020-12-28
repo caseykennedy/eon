@@ -56,7 +56,7 @@ const Message: React.FC<Props> = ({
     <AnnouncementSlider>
       <Link
         to={to}
-        onClick={e => {
+        onClick={() => {
           gtag.event({
             category: 'Announcement bar',
             action: 'Click',

@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import { Link } from 'gatsby'
 
 // utils
 import * as gtag from '../../../utils/gtag'
@@ -46,8 +47,10 @@ const Hero = () => {
                 />
 
                 <div className="rating">
-                  <Stars />
-                  <span>( 7 ratings )</span>
+                  <Link to={`#ratings`}>
+                    <Stars />
+                    <span>7 ratings</span>
+                  </Link>
                 </div>
               </Box>
 
@@ -56,7 +59,7 @@ const Hero = () => {
                   as="h3"
                   dangerouslySetInnerHTML={{ __html: data.headline }}
                 />
-                <Flex mb={5} className="feature-set">
+                <Flex className="feature-set">
                   <Text
                     as="p"
                     mr={[4, 5, 5]}
@@ -70,9 +73,9 @@ const Hero = () => {
                     dangerouslySetInnerHTML={{ __html: data.featureB }}
                   />
                 </Flex>
-                <AnchorLink>
+                {/* <AnchorLink>
                   Learn more <Icon name="arrow" />
-                </AnchorLink>
+                </AnchorLink> */}
               </Box>
             </Flex>
 
@@ -103,6 +106,21 @@ const Hero = () => {
               >
                 <AddToCart />
               </Box>
+              <Flex className="feature-set--mobile">
+                <Text
+                  as="p"
+                  mr={[4, 5, 5]}
+                  mb={0}
+                  dangerouslySetInnerHTML={{ __html: data.featureA }}
+                />
+
+                <Text
+                  as="p"
+                  color="primary"
+                  mb={0}
+                  dangerouslySetInnerHTML={{ __html: data.featureB }}
+                />
+              </Flex>
             </Flex>
           </Flex>
         </Flex>

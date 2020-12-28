@@ -47,8 +47,10 @@ const Hero = () => {
                 />
 
                 <div className="rating">
-                  <Stars />
-                  <span>( 7 ratings )</span>
+                  <Link to={`#ratings`}>
+                    <Stars />
+                    <span>7 ratings</span>
+                  </Link>
                 </div>
               </Box>
 
@@ -61,9 +63,11 @@ const Hero = () => {
                   Ideal for use on the go, in restaurants, schools, offices,
                   retail, kitchens, etc. Leaves no residue. No wiping required.
                 </Text>
-                <AnchorLink>
-                  Learn more <Icon name="arrow" />
-                </AnchorLink>
+                <Link to={`#learn-more`}>
+                  <AnchorLink>
+                    Learn more <Icon name="arrow" />
+                  </AnchorLink>
+                </Link>
               </Box>
             </Flex>
 

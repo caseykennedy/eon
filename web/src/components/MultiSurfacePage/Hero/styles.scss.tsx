@@ -62,7 +62,7 @@ export const Hero = styled(Section)`
         }
 
         svg {
-          width:calc(${theme.space[7]} * 1);
+          width:calc(${theme.space[7]} / 1.25);
         }
       }
     }
@@ -99,6 +99,14 @@ export const Hero = styled(Section)`
       flex: 1;
       height: 100%;
       width: 100%;
+
+      a {
+        width: 100%;
+
+        @media ${theme.mq.tablet} {
+          width: initial;
+        }
+      }
       
       img {
         width: ${theme.space[5]};

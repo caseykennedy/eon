@@ -71,6 +71,7 @@ const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
         <Mist />
         <Specs />
         <ProductDetail />
+        <a id="ratings" />
         <Reviews />
         <Retailers />
       </Box>
