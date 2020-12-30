@@ -70,7 +70,7 @@ export const Hero = styled(Section)`
       }
     }
 
-    &__money-shot {
+    &__can {
       flex: 1;
       align-items: flex-start;
       justify-content: center;

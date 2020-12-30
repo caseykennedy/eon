@@ -6,6 +6,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 
+// utils
+import * as gtag from '../../../utils/gtag'
+
 // Styles + Theme
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
@@ -71,7 +74,7 @@ const Hero = () => {
               </Box>
             </Flex>
 
-            <Flex width={[1]} className="hero__money-shot">
+            <Flex width={[1]} className="hero__can">
               <Box width={1} className="figure">
                 <ImgMatch
                   src="hero-multi-surface-shadow-fresh.jpg"
@@ -87,7 +90,17 @@ const Hero = () => {
                 dangerouslySetInnerHTML={{ __html: data.note }}
               />
               <Link to={`#store-locator`}>
-                <Button bg={theme.colors.primary} color={theme.colors.white}>
+                <Button
+                  bg={theme.colors.primary}
+                  color={theme.colors.white}
+                  onClick={() => {
+                    gtag.event({
+                      category: 'Button',
+                      action: 'Click',
+                      label: 'find in store - multi-surface hero'
+                    })
+                  }}
+                >
                   Find in-store <span>$4.49</span>
                 </Button>
               </Link>

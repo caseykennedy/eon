@@ -8,20 +8,22 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import FocusLock from 'react-focus-lock'
 
-// UI
-import { Text } from '../ui'
-import Button from '../ui/Button'
+// utils
+import * as gtag from '../../utils/gtag'
 
-// Theme
+// Context
+import StoreContext from '../../context/StoreContext'
+
+// Theme + UI
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
+import { Text } from '../ui'
+import Button from '../ui/Button'
 
 // Components
 import Icon from '../Icons'
 import Portal from '../Portal'
 import AddToCart from '../AddToCart'
-
-import StoreContext from '../../context/StoreContext'
 import LineItem from './LineItem'
 
 // ___________________________________________________________________
@@ -52,6 +54,11 @@ const CartItems: React.FC<CartItemsProps> = ({
   // Trigger checkout
   const handleCheckout = () => {
     window.open(checkout.webUrl)
+    gtag.event({
+      category: 'Cart',
+      action: 'Click',
+      label: 'Checkout - cart'
+    })
   }
   return (
     <S.CartItems>
@@ -100,6 +107,7 @@ const CartItems: React.FC<CartItemsProps> = ({
               <p>${checkout.totalPrice && checkout.totalPrice}</p>
             </div> */}
             <Button
+              as="button"
               bg={theme.colors.black}
               onClick={handleCheckout}
               disabled={checkout.lineItems.length === 0}

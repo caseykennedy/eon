@@ -98,9 +98,9 @@ const Hero = () => {
               <Box
                 onClick={() => {
                   gtag.event({
-                    category: 'Product Hero',
+                    category: 'Button',
                     action: 'Click',
-                    label: 'ATC hand sanitizer'
+                    label: 'add to cart - hand sanitizer hero'
                   })
                 }}
               >
