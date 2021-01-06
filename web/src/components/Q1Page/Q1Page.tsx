@@ -16,8 +16,11 @@ import AbstractSpray from '../SVG/AbstractSpray'
 import ImgMatch from '../ImgMatch'
 import Section from '../Section'
 import Icon from '../Icons'
+import Logo from '../SVG/Logo'
 
 // ___________________________________________________________________
+
+const padding = [6, 7, 8]
 
 const Q1Page = () => {
   return (
@@ -28,7 +31,10 @@ const Q1Page = () => {
         altText="eOn hand holding a can"
       />
       <S.Q1Page>
-        <Section bg={theme.colors.cosmicblue} maxWidth={theme.maxWidth}>
+        <Section
+          bg={theme.colors.cosmicblue}
+          maxWidth={theme.maxWidth}
+        >
           <Box width={[1, 2 / 3]}>
             <Heading as="h2" mb={0}>
               New pro-grade disinfection options for everyone—welcome to the
@@ -37,7 +43,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth}>
+        <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
           <Box width={1} textAlign="center">
             <Heading as="h3">Clean to-go, just got bigger.</Heading>
           </Box>
@@ -67,7 +73,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth}>
+        <Section maxWidth={theme.readingWidth} pb={padding}>
           <Box width={1} textAlign="center">
             <Heading as="h3">Side by side.</Heading>
           </Box>
@@ -195,7 +201,7 @@ const Q1Page = () => {
           </Box>
         </Box>
 
-        <Section maxWidth={theme.readingWidth}>
+        <Section maxWidth={theme.readingWidth} pt={7}>
           <Box width={1} textAlign="center">
             <Text as="p" className="text--md" mb={0}>
               Clean down a variety of surfaces with eOn’s new, durable, extra
@@ -206,7 +212,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth}>
+        <Section maxWidth={theme.readingWidth} pb={padding}>
           <Flex width={1} alignItems="center" flexDirection="column">
             <Text as="p" textAlign="center">
               Interested in learning more? Want to know about future products?
@@ -220,6 +226,11 @@ const Q1Page = () => {
               >
                 Reach out <Icon name="envelope" />
               </Button>
+            </Box>
+          </Flex>
+          <Flex justifyContent="center" mt={padding}>
+            <Box width="90px">
+              <Logo fill={theme.colors.primary} />
             </Box>
           </Flex>
         </Section>

@@ -46,7 +46,7 @@ export const Q1Page = styled(Box)`
 
       @media ${theme.mq.desktop} {
         bottom: calc(${theme.space[6]} * -2);
-        max-width: 500px;
+        max-width: 450px;
       }
     }
 
