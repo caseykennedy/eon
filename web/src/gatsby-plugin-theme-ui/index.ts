@@ -105,6 +105,7 @@ const theme: ThemeShape = {
     darknight: '#09040b',
     babyblue: '#dcedff',
     skyblue: '#1554c2',
+    cosmicblue: '#97b9ff',
     moneygreen: '#39b14a',
     yellowbuzz: '#F1E554',
     goldenrod: '#daa520',
@@ -172,8 +173,8 @@ const theme: ThemeShape = {
 
   arrowWidth: '14px',
   strokeWidth: '2px',
-  maxWidth: '1680px',
-  readingWidth: '1100px',
+  maxWidth: '1280px',
+  readingWidth: '800px',
   siteWidth: '100%',
   logoWidth: '70px',
   headerHeight: '52px',

@@ -83,7 +83,7 @@ const Message: React.FC<Props> = ({
       >
         <Flex>
           <Text as="p" fontSize={1}>
-            🎄 Happy Holidays from our family to yours! 🎄
+            🎉 Happy New Year! 🥳
           </Text>
         </Flex>
       </Link>

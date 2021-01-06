@@ -20,8 +20,8 @@ const CanHand = () => (
         y2="519.71"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.38" stop-color="#fff" />
-        <stop offset="0.79" stop-color="#b8d8ff" />
+        <stop offset="0.38" stopColor="#fff" />
+        <stop offset="0.79" stopColor="#b8d8ff" />
       </linearGradient>
     </defs>
     <g id="Layer_2" data-name="Layer 2">

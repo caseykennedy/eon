@@ -11,7 +11,9 @@ import IconStyle from './styles.scss'
 // Icons
 // TODO: alphabetize
 import Hamburger from './SVG/Hamburger'
+import Check from './SVG/Check'
 import Carat from './SVG/Carat'
+import Envelope from './SVG/Envelope'
 import Facebook from './SVG/Facebook'
 import Bag from './SVG/Bag'
 import Instagram from './SVG/Instagram'
@@ -52,6 +54,12 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
           <Carat />
         </IconStyle>
       )
+    case 'check':
+      return (
+        <IconStyle color={color} className={className}>
+          <Check />
+        </IconStyle>
+      )
     case 'document':
       return (
         <IconStyle color={color} className={className}>
@@ -62,6 +70,12 @@ const Icon: React.FC<Props> = ({ name, className, color, fas }) => {
       return (
         <IconStyle color={color} className={className}>
           <Download />
+        </IconStyle>
+      )
+    case 'envelope':
+      return (
+        <IconStyle color={color} className={className}>
+          <Envelope />
         </IconStyle>
       )
     case 'facebook':
