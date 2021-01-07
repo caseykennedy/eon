@@ -47,7 +47,7 @@ const Q1Page = () => {
 
         <Section maxWidth={theme.readingWidth} pt={padding}>
           <Box width={1} textAlign="center">
-            <Heading as="h3" mb={0}>
+            <Heading as="h3">
               Clean to-go, just got bigger.
             </Heading>
           </Box>
@@ -71,7 +71,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Box pt={[0, 4, 6]}>
+        <Box>
           <Flex flexDirection={['column']}>
             <Flex alignItems="center" flexDirection={['column']} mb={6}>
               <Box width={`50px`}>

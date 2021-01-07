@@ -35,7 +35,11 @@ export const Q1Page = styled(Box)`
         transform: scale(1.7);
         margin: ${theme.space[7]} 0;
 
-        @media (min-width: 600px) {
+        @media (min-width: 400px) {
+          transform: scale(1.25);
+        }
+
+        @media ${theme.mq.desktop} {
           transform: scale(1);
         }
       }
