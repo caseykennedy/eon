@@ -47,9 +47,7 @@ const Q1Page = () => {
 
         <Section maxWidth={theme.readingWidth} pt={padding}>
           <Box width={1} textAlign="center">
-            <Heading as="h3">
-              Clean to-go, just got bigger.
-            </Heading>
+            <Heading as="h3">Clean to-go, just got bigger.</Heading>
           </Box>
         </Section>
 
@@ -218,7 +216,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pt={padding} pb={6}>
+        <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
           <Box width={1} textAlign="center">
             <Heading as="h3" mb={0}>
               Disinfecting wipes for pros.
@@ -226,25 +224,23 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Box
-          width={1}
-          className="figure-stack  figure-stack--wipes"
-          position="relative"
-        >
-          <Box className="countertop">
+        <S.Wipes py={[4, 6, 7]}>
+          <Box width={1} className="countertop">
             <ImgMatch src="countertop.jpg" altText="countertop" />
           </Box>
 
-          {/* <Box className="wipes">
-            <ImgMatch src="wipes.png" altText="radial burst" />
-          </Box> */}
+          <Box className="inner">
+            <Box width={1} className="wipes">
+              <ImgMatch src="wipes.png" altText="radial burst" />
+            </Box>
 
-          <Box className="thumbs-up">
-            <ImgMatch src="hand-right.png" altText="thumbs up" />
+            <Box width={1} className="thumbs-up">
+              <ImgMatch src="hand-right.png" altText="thumbs up" />
+            </Box>
           </Box>
-        </Box>
+        </S.Wipes>
 
-        <Section maxWidth={theme.readingWidth}>
+        <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
           <Box width={1} textAlign="center">
             <Text as="p" className="text--md" mb={0}>
               Clean down a variety of surfaces with eOn’s new, durable, extra
@@ -255,7 +251,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pb={padding}>
+        <Section maxWidth={theme.readingWidth} pt={2} pb={padding}>
           <Flex width={1} alignItems="center" flexDirection="column">
             <Text as="p" textAlign="center">
               Interested in learning about new and future products?

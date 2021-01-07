@@ -5,7 +5,7 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { Box } from '../ui'
+import { Box, Flex } from '../ui'
 
 import theme from '../../gatsby-plugin-theme-ui'
 
@@ -77,7 +77,7 @@ export const Q1Page = styled(Box)`
         left: -10%;
         bottom: calc(${theme.space[6]} * 2);
         width: 80%;
-        max-width: 800px;
+        max-width: 850px;
       }
     }
 
@@ -161,4 +161,74 @@ export const Q1Page = styled(Box)`
       }
     }
   }
+`
+
+export const Wipes = styled(Flex)`
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .inner {
+    margin: 0 auto;
+    max-width: ${theme.readingWidth};
+    width: 100%;
+  }
+
+  .thumbs-up {
+    margin: 0 auto;
+    position: absolute;
+    max-width: 200px;
+    width: 100%;
+
+    bottom: calc(${theme.space[4]} * -1);
+    right: calc(${theme.space[4]} * -4);
+
+    @media ${theme.mq.tablet} {
+      bottom: calc(${theme.space[6]} * 1);
+      max-width: 300px;
+    }
+
+    @media ${theme.mq.desktop} {
+      /* bottom: calc(${theme.space[6]} * -2); */
+      max-width: 500px;
+    }
+  }
+
+  .countertop {
+
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .img {
+      /* transform: scale(1.7);
+      margin: ${theme.space[7]} 0;
+
+      @media (min-width: 400px) {
+        transform: scale(1.25);
+      }
+
+      @media ${theme.mq.desktop} {
+        transform: scale(1);
+      } */
+    }
+  }
+
+  /* .countertop {
+    .img {
+      transform: scale(1.7);
+      margin: ${theme.space[7]} 0;
+
+      @media (min-width: 400px) {
+        transform: scale(1.25);
+      }
+
+      @media ${theme.mq.desktop} {
+        transform: scale(1);
+      }
+    }
+  } */
 `
