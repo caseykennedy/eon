@@ -83,7 +83,7 @@ const Q1Page = () => {
 
         <Section maxWidth={theme.readingWidth} pb={padding}>
           <Box width={1} textAlign="center">
-            <Heading as="h3">Side by side.</Heading>
+            <Heading as="h3">Side by side:</Heading>
           </Box>
 
           <Box>

@@ -61,10 +61,7 @@ const ProductDetail: React.FC = () => {
           </Box>
           <Box flex={[1]} mr={[0, 0, 7]} mt={[4, 6]}>
             <Text as="h4" mb={[3, 4]}>
-              eOn hand sanitizer{' '}
-              <Box as="span" color="tertiary">
-                (80% ethyl alcohol)
-              </Box>
+              eOn hand sanitizer
             </Text>
             <h2>Precise hand sanitation wherever you go.</h2>
 
