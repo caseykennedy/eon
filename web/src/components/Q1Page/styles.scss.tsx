@@ -34,8 +34,9 @@ export const Q1Page = styled(Box)`
     .cans {
       margin: 0 auto;
       position: absolute;
-      max-width: 150px;
-      width: 100%;
+      max-width: 333px;
+      width: 65%;
+      
       top: 0;
       right: 0;
       left: 0;
@@ -47,6 +48,7 @@ export const Q1Page = styled(Box)`
 
       @media ${theme.mq.desktop} {
         max-width: 475px;
+        top: calc(${theme.space[6]} * -2);
       }
     }
 
@@ -66,13 +68,15 @@ export const Q1Page = styled(Box)`
 
         left: -50%;
         bottom: calc(${theme.space[6]} * 3);
-        max-width: 900px;
+        width: 80%;
+        max-width: 800px;
       }
 
       @media ${theme.mq.desktop} {
-        left: -20%;
+        left: -10%;
         bottom: calc(${theme.space[6]} * 2);
-        max-width: 1024px;
+        width: 80%;
+        max-width: 800px;
       }
     }
 
@@ -100,7 +104,7 @@ export const Q1Page = styled(Box)`
       position: absolute;
       max-width: 125px;
       width: 100%;
-      bottom: 0;
+      bottom: calc(${theme.space[8]} * -1);
       right: calc(${theme.space[4]} * -1);
 
       @media ${theme.mq.tablet} {

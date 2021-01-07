@@ -17,6 +17,11 @@ import ImgMatch from '../ImgMatch'
 import Section from '../Section'
 import Icon from '../Icons'
 import Logo from '../SVG/Logo'
+import Germs from '../SVG/Germs'
+import FlagUsa from '../SVG/FlagUsa'
+import SymbolBadge from '../SVG/SymbolBadge'
+
+import bolt from './assets/bolt.svg'
 
 // ___________________________________________________________________
 
@@ -40,9 +45,9 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pt={padding}>
+        <Section maxWidth={theme.readingWidth} pt={padding} pb={0}>
           <Box width={1} textAlign="center">
-            <Heading as="h3">Clean to-go, just got bigger.</Heading>
+            <Heading as="h3" mb={0}>Clean to-go, just got bigger.</Heading>
           </Box>
         </Section>
 
@@ -68,6 +73,29 @@ const Q1Page = () => {
             </Box>
           </Box>
         </Section>
+
+        <Box><Flex flexDirection={['column']}>
+            <Flex alignItems="center" flexDirection={['column']} mb={6}>
+              <Box width={`50px`}>
+                <Germs />
+              </Box>
+              <Box>Multi-surface disinfection</Box>
+            </Flex>
+
+            <Flex alignItems="center" flexDirection={['column']} mb={6}>
+              <Box width={`50px`}>
+                <img src={bolt} alt="bolt" />
+              </Box>
+              <Box>Kills germs fast</Box>
+            </Flex>
+
+            <Flex alignItems="center" flexDirection={['column']}>
+              <Box width={`50px`}>
+                <FlagUsa />
+              </Box>
+              <Box>Proudly made in the USA</Box>
+            </Flex>
+          </Flex></Box>
 
         <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
           <Box width={1} textAlign="center">
