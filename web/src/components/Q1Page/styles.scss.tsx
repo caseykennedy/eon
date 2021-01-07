@@ -16,19 +16,28 @@ export const Q1Page = styled(Box)`
   }
 
   .figure-stack {
-    position: relative;
 
     .radial {
+      z-index: 1;
     }
 
     .cans {
       margin: 0 auto;
       position: absolute;
-      max-width: 500px;
+      max-width: 333px;
       width: 100%;
       top: 0;
       right: 0;
       left: 0;
+      z-index: 5;
+
+      @media ${theme.mq.tablet} {
+        max-width: 400px;
+      }
+
+      @media ${theme.mq.desktop} {
+        max-width: 475px;
+      }
     }
 
     .thumbs-up {
@@ -57,15 +66,23 @@ export const Q1Page = styled(Box)`
       width: 100%;
       bottom: 0;
       left: 0;
+      z-index: 3;
+
+      display: none;
 
       @media ${theme.mq.tablet} {
-        bottom: calc(${theme.space[6]} * -1);
-        max-width: 250px;
+        display: initial;
+
+        left: -50%;
+        bottom: calc(${theme.space[6]} * 3);
+        max-width: 900px;
       }
 
       @media ${theme.mq.desktop} {
-        bottom: calc(${theme.space[6]} * -2);
-        max-width: 500px;
+
+        left: -20%;
+        bottom: calc(${theme.space[6]} * 2);
+        max-width: 1024px;
       }
     }
   }

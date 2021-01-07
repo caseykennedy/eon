@@ -31,10 +31,7 @@ const Q1Page = () => {
         altText="eOn hand holding a can"
       />
       <S.Q1Page>
-        <Section
-          bg={theme.colors.cosmicblue}
-          maxWidth={theme.maxWidth}
-        >
+        <Section bg={theme.colors.cosmicblue} maxWidth={theme.maxWidth}>
           <Box width={[1, 2 / 3]}>
             <Heading as="h2" mb={0}>
               New pro-grade disinfection options for everyone—welcome to the
@@ -43,25 +40,31 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
+        <Section maxWidth={theme.readingWidth} pt={padding}>
           <Box width={1} textAlign="center">
             <Heading as="h3">Clean to-go, just got bigger.</Heading>
           </Box>
+        </Section>
 
-          <Box width={1} className="figure-stack" my={7}>
-            <Box className="burst">
-              <ImgMatch src="radial-burst.png" altText="radial burst" />
+        <Section maxWidth={theme.readingWidth} pt={0} pb={0} overflow="hidden">
+          <Box width={1} className="figure-stack" mb={7} p={6}>
+            <Box position="relative">
+              <Box className="burst">
+                <ImgMatch src="radial-burst.png" altText="radial burst" />
+              </Box>
+
+              <Box className="cans">
+                <ImgMatch src="can-stack-q1.png" altText="radial burst" />
+              </Box>
             </Box>
 
-            <Box className="cans">
-              <ImgMatch src="can-stack-q1.png" altText="radial burst" />
-            </Box>
-
-            {/* <Box className="hand-left">
+            <Box className="hand-left">
               <ImgMatch src="hand-left.png" altText="thumbs up" />
-            </Box> */}
+            </Box>
           </Box>
+        </Section>
 
+        <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
           <Box width={1} textAlign="center">
             <Text as="p" className="text--md" mb={0}>
               Introducing new eOn sanitizing mist in 8oz and 14oz options. The
@@ -191,7 +194,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Box width={1} className="figure-stack">
+        <Box width={1} className="figure-stack" position="relative">
           <Box className="countertop">
             <ImgMatch src="countertop.jpg" altText="countertop" />
           </Box>
@@ -215,7 +218,7 @@ const Q1Page = () => {
         <Section maxWidth={theme.readingWidth} pb={padding}>
           <Flex width={1} alignItems="center" flexDirection="column">
             <Text as="p" textAlign="center">
-              Interested in learning more? Want to know about future products?
+              Interested in learning about new and future products?
             </Text>
             <Box>
               <Button
