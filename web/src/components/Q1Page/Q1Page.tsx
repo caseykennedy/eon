@@ -47,7 +47,7 @@ const Q1Page = () => {
         </Section>
 
         <Section maxWidth={theme.readingWidth} pt={0} pb={0} overflow="hidden">
-          <Box width={1} className="figure-stack" mb={7} p={6}>
+          <Box width={1} className="figure-stack" p={6}>
             <Box position="relative">
               <Box className="burst">
                 <ImgMatch src="radial-burst.png" altText="radial burst" />
