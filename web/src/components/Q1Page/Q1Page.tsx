@@ -46,8 +46,13 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pt={0} pb={0} overflow="hidden">
-          <Box width={1} className="figure-stack" p={6}>
+        <Section
+          maxWidth={theme.readingWidth}
+          pt={0}
+          pb={[7, 0, 4]}
+          overflow="hidden"
+        >
+          <Box width={1} className="figure-stack" px={6}>
             <Box position="relative">
               <Box className="burst">
                 <ImgMatch src="radial-burst.png" altText="radial burst" />
@@ -194,10 +199,18 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Box width={1} className="figure-stack" position="relative">
+        <Box
+          width={1}
+          className="figure-stack  figure-stack--wipes"
+          position="relative"
+        >
           <Box className="countertop">
             <ImgMatch src="countertop.jpg" altText="countertop" />
           </Box>
+
+          {/* <Box className="wipes">
+            <ImgMatch src="wipes.png" altText="radial burst" />
+          </Box> */}
 
           <Box className="thumbs-up">
             <ImgMatch src="hand-right.png" altText="thumbs up" />
