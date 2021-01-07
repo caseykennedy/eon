@@ -18,38 +18,35 @@ export const Q1Page = styled(Box)`
   }
 
   .figure-stack {
-    .img {
-      transform: scale(1.5);
-      margin: ${theme.space[7]} 0;
-
-      @media ${theme.mq.tablet} {
-        transform: scale(1);
-      }
-    }
-
-    .radial {
+    .burst {
       z-index: 1;
-    }
-
-    .cans {
       margin: 0 auto;
       position: absolute;
-      max-width: 333px;
-      width: 65%;
-      
+      max-width: 800px;
+      width: 100%;
+
       top: 0;
       right: 0;
       left: 0;
+    }
+
+    .countertop {
+      .img {
+        transform: scale(1.7);
+        margin: ${theme.space[7]} 0;
+
+        @media (min-width: 600px) {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .cans {
+      position: relative;
+      margin: 0 auto;
+      /* max-width: 400px; */
+      width: 90%;
       z-index: 5;
-
-      @media ${theme.mq.tablet} {
-        max-width: 400px;
-      }
-
-      @media ${theme.mq.desktop} {
-        max-width: 475px;
-        top: calc(${theme.space[6]} * -2);
-      }
     }
 
     .hand-left {
@@ -57,7 +54,7 @@ export const Q1Page = styled(Box)`
       position: absolute;
       max-width: 600px;
       width: 100%;
-      bottom: ${theme.space[5]};
+      bottom: ${theme.space[8]};
       left: -60%;
       z-index: 3;
 
@@ -102,7 +99,7 @@ export const Q1Page = styled(Box)`
     .thumbs-up {
       margin: 0 auto;
       position: absolute;
-      max-width: 125px;
+      max-width: 165px;
       width: 100%;
       bottom: calc(${theme.space[8]} * -1);
       right: calc(${theme.space[4]} * -1);

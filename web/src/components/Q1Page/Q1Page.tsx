@@ -45,18 +45,15 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pt={padding} pb={0}>
+        <Section maxWidth={theme.readingWidth} pt={padding}>
           <Box width={1} textAlign="center">
-            <Heading as="h3" mb={0}>Clean to-go, just got bigger.</Heading>
+            <Heading as="h3" mb={0}>
+              Clean to-go, just got bigger.
+            </Heading>
           </Box>
         </Section>
 
-        <Section
-          maxWidth={theme.readingWidth}
-          pt={0}
-          pb={[7, 0, 4]}
-          overflow="hidden"
-        >
+        <Section maxWidth={`600px`} overflow="hidden" pb={7}>
           <Box width={1} className="figure-stack" px={6}>
             <Box position="relative">
               <Box className="burst">
@@ -74,7 +71,8 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Box><Flex flexDirection={['column']}>
+        <Box pt={[0, 4, 6]}>
+          <Flex flexDirection={['column']}>
             <Flex alignItems="center" flexDirection={['column']} mb={6}>
               <Box width={`50px`}>
                 <Germs />
@@ -95,7 +93,8 @@ const Q1Page = () => {
               </Box>
               <Box>Proudly made in the USA</Box>
             </Flex>
-          </Flex></Box>
+          </Flex>
+        </Box>
 
         <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
           <Box width={1} textAlign="center">
@@ -219,7 +218,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pb={6}>
+        <Section maxWidth={theme.readingWidth} pt={padding} pb={6}>
           <Box width={1} textAlign="center">
             <Heading as="h3" mb={0}>
               Disinfecting wipes for pros.
@@ -245,7 +244,7 @@ const Q1Page = () => {
           </Box>
         </Box>
 
-        <Section maxWidth={theme.readingWidth} pt={7}>
+        <Section maxWidth={theme.readingWidth}>
           <Box width={1} textAlign="center">
             <Text as="p" className="text--md" mb={0}>
               Clean down a variety of surfaces with eOn’s new, durable, extra
