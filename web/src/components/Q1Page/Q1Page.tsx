@@ -69,8 +69,8 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Box>
-          <Flex flexDirection={['column']}>
+        <S.Features>
+          <Flex className="inner">
             <Flex alignItems="center" flexDirection={['column']} mb={6}>
               <Box width={`50px`}>
                 <Germs />
@@ -92,7 +92,7 @@ const Q1Page = () => {
               <Box>Proudly made in the USA</Box>
             </Flex>
           </Flex>
-        </Box>
+        </S.Features>
 
         <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
           <Box width={1} textAlign="center">
@@ -216,7 +216,7 @@ const Q1Page = () => {
           </Box>
         </Section>
 
-        <Section maxWidth={theme.readingWidth} pt={padding} pb={padding}>
+        <Section maxWidth={theme.readingWidth} pt={padding} pb={0}>
           <Box width={1} textAlign="center">
             <Heading as="h3" mb={0}>
               Disinfecting wipes for pros.

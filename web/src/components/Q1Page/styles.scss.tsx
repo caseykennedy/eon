@@ -163,12 +163,27 @@ export const Q1Page = styled(Box)`
   }
 `
 
+export const Features = styled(Box)`
+  position: relative;
+
+  .inner {
+    flex-direction: column;
+
+    @media ${theme.mq.desktop} {
+      display: flex;
+      position: absolute;
+      right: ${theme.space[8]};
+      top: -39rem;
+    }
+  }
+`
+
 export const Wipes = styled(Flex)`
-  overflow: hidden;
   position: relative;
   width: 100%;
 
   .inner {
+    overflow: hidden;
     margin: 0 auto;
     max-width: ${theme.readingWidth};
     width: 100%;
@@ -177,20 +192,20 @@ export const Wipes = styled(Flex)`
   .thumbs-up {
     margin: 0 auto;
     position: absolute;
-    max-width: 200px;
+    max-width: 225px;
     width: 100%;
 
-    bottom: calc(${theme.space[4]} * -1);
+    bottom: calc(${theme.space[4]} * -4);
     right: calc(${theme.space[4]} * -4);
 
     @media ${theme.mq.tablet} {
-      bottom: calc(${theme.space[6]} * 1);
-      max-width: 300px;
+      bottom: calc(${theme.space[4]} * -4);
+      max-width: 400px;
     }
 
     @media ${theme.mq.desktop} {
       /* bottom: calc(${theme.space[6]} * -2); */
-      max-width: 500px;
+      max-width: 550px;
     }
   }
 
