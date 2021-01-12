@@ -31,12 +31,9 @@ const MultiSurfacePage = () => {
       <Hero />
       <Trademarks />
 
-      <Section border={false}>
         <StoreLocator />
-        <a id="learn-more" />
-      </Section>
 
-      <Section border={true} maxWidth={theme.maxWidth}>
+      <Section border={true} maxWidth={theme.maxWidth} id="learn-more">
         <Flex
           flexWrap="wrap"
           flexDirection={['column', 'row-reverse', 'row-reverse']}
@@ -177,7 +174,7 @@ const MultiSurfacePage = () => {
         <a id="ratings" />
       </Section>
 
-      <Section border={true} overflow="visible">
+      <Section border={true} overflow="hidden">
         <Reviews reviews={reviews} />
       </Section>
 

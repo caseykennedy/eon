@@ -67,7 +67,7 @@ const Specs: React.FC<Props> = ({ reviews }) => {
       <Text as="p" mb={[5, 6, 6]}>What people are saying</Text>
       <ReviewSlider>
         {reviews.map((item, idx) => (
-          <Box className="review__card" key={idx}>
+          <Flex className="review__card" key={idx}>
             <Flex alignItems="center" justifyContent="space-between">
               <p className="lead">{item.lead}</p>
             </Flex>
@@ -78,7 +78,7 @@ const Specs: React.FC<Props> = ({ reviews }) => {
               {item.review}
             </Text>
             <p>{item.author}</p>
-          </Box>
+          </Flex>
         ))}
       </ReviewSlider>
     </S.Reviews>

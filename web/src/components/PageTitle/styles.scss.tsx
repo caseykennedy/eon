@@ -5,10 +5,11 @@
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../ui'
+import Section from '../Section'
 
 // ___________________________________________________________________
 
-export const PageTitle = styled(Flex)`
+export const PageTitle = styled(Section)`
   flex-wrap: wrap;
   position: relative;
   width: 100%;

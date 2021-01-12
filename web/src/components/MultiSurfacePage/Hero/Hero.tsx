@@ -3,8 +3,7 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // utils
 import * as gtag from '../../../utils/gtag'
@@ -16,7 +15,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 // UI
 import { Box, Flex, Text, Heading } from '../../ui'
 import Button from '../../ui/Button'
-import AnchorLink from '../../ui/AnchorLink'
+import ArrowLink from '../../ui/ArrowLink'
 
 // Compoonents
 import ImgMatch from '../../ImgMatch'
@@ -50,10 +49,10 @@ const Hero = () => {
                 />
 
                 <div className="rating">
-                  <Link to={`#ratings`}>
+                  <AnchorLink href={`#ratings`} offset={theme.headerHeight}>
                     <Stars />
-                    <span>7 ratings</span>
-                  </Link>
+                    <span>3 ratings</span>
+                  </AnchorLink>
                 </div>
               </Box>
 
@@ -66,11 +65,11 @@ const Hero = () => {
                   Ideal for use on the go, in restaurants, schools, offices,
                   retail, kitchens, etc. Leaves no residue. No wiping required.
                 </Text>
-                <Link to={`#learn-more`}>
-                  <AnchorLink>
+                <AnchorLink href={`#learn-more`} offset={theme.headerHeight}>
+                  <ArrowLink>
                     Learn more <Icon name="arrow" />
-                  </AnchorLink>
-                </Link>
+                  </ArrowLink>
+                </AnchorLink>
               </Box>
             </Flex>
 
@@ -89,7 +88,7 @@ const Hero = () => {
                 color="tertiary"
                 dangerouslySetInnerHTML={{ __html: data.note }}
               />
-              <Link to={`#store-locator`}>
+              <AnchorLink href={`#store-locator`} offset={104}>
                 <Button
                   bg={theme.colors.primary}
                   color={theme.colors.white}
@@ -103,7 +102,7 @@ const Hero = () => {
                 >
                   Find in-store <span>$4.49</span>
                 </Button>
-              </Link>
+              </AnchorLink>
             </Flex>
           </Flex>
         </Flex>

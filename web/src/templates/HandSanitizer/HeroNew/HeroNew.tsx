@@ -4,6 +4,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // utils
 import * as gtag from '../../../utils/gtag'
@@ -20,7 +21,7 @@ import AddToCart from '../../../components/AddToCart'
 import ImgMatch from '../../../components/ImgMatch'
 import Shine from '../../../components/SVG/Shine'
 import Stars from '../../../components/SVG/Stars'
-import AnchorLink from '../../../components/ui/AnchorLink'
+import ArrowLink from '../../../components/ui/ArrowLink'
 import Icon from '../../../components/Icons'
 
 // ___________________________________________________________________
@@ -47,10 +48,10 @@ const Hero = () => {
                 />
 
                 <div className="rating">
-                  <Link to={`#ratings`}>
+                  <AnchorLink href={`#ratings`} offset={theme.headerHeight}>
                     <Stars />
                     <span>7 ratings</span>
-                  </Link>
+                  </AnchorLink>
                 </div>
               </Box>
 
@@ -73,9 +74,6 @@ const Hero = () => {
                     dangerouslySetInnerHTML={{ __html: data.featureB }}
                   />
                 </Flex>
-                {/* <AnchorLink>
-                  Learn more <Icon name="arrow" />
-                </AnchorLink> */}
               </Box>
             </Flex>
 

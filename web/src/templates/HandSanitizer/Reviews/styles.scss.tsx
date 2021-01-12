@@ -64,6 +64,7 @@ export const Reviews = styled(Section)`
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};
+        height: 100% !important;
 
         &:hover {
           /* cursor: pointer; */

@@ -3,15 +3,12 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
-
-import { Box, Flex, Heading, AnimatedBox } from '..'
-
+import { Box } from '..'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const AnchorLink = styled(Box)`
+const ArrowLink = styled(Box)`
   float: left;
 
   box-sizing: border-box;
@@ -109,4 +106,4 @@ const AnchorLink = styled(Box)`
   }
 `
 
-export default AnchorLink
+export default ArrowLink

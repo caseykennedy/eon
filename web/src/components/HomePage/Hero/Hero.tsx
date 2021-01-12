@@ -12,7 +12,7 @@ import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
-import { Box, Flex, Text, Heading, Button } from '../../ui'
+import { Box, Flex, Text, Heading } from '../../ui'
 
 // Compoonents
 import Icon from '../../Icons'

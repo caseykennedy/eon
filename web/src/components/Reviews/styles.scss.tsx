@@ -12,6 +12,8 @@ import { Box, Flex } from '../ui'
 export const Reviews = styled(Box)`
   .review {
     &__card {
+      display: flex;
+      flex-direction: column;
       /* background: ${theme.colors.quinary}; */
       border: ${theme.border};
       padding: ${theme.space[4]};
@@ -63,6 +65,7 @@ export const Reviews = styled(Box)`
     .swiper-wrapper {
       .swiper-slide {
         transition: ${theme.transition.all};
+        height: 100% !important;
 
         &:hover {
           /* cursor: pointer; */
