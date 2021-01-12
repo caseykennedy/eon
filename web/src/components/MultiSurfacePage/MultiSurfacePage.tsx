@@ -19,7 +19,7 @@ import ImgMatch from '../ImgMatch'
 import Section from '../Section'
 import Retailers from '../Retailers'
 import StoreLocator from '../StoreLocator'
-import Reviews from '../../templates/HandSanitizer/Reviews'
+import Reviews from '../Reviews'
 
 import hclMark from './assets/hocl.svg'
 
@@ -30,7 +30,7 @@ const MultiSurfacePage = () => {
     <S.MultiSurfacePage>
       <Hero />
       <Trademarks />
-      
+
       <Section border={false}>
         <StoreLocator />
         <a id="learn-more" />
@@ -57,45 +57,65 @@ const MultiSurfacePage = () => {
               facility use. On an airplane, at a hotel, or at the grocery
               store—make it eOn, on the go disinfection.
             </Text>
-          </Box>
-        </Flex>
-        <Flex
-          width={[1, 1, 2 / 3]}
-          flexDirection={['column', 'row', 'row']}
-          flexWrap="wrap"
-          // alignItems="flex-start"
-          mt={[6, 6, 7]}
-        >
-          <Box
-            flex={1}
-            width={1}
-            bg={theme.colors.black}
-            color={theme.colors.white}
-            p={[4]}
-            mr={[0, 4, 4]}
-            style={{
-              borderRadius: theme.borderRadius
-            }}
-          >
-            <Text as="p">
-              Continuous mist, ready to spray broad spectrum disinfectant.
+
+            <Flex
+              width={[1]}
+              flexDirection={['column', 'row', 'row']}
+              flexWrap="wrap"
+              // alignItems="flex-start"
+              my={[6]}
+            >
+              <Box
+                flex={1}
+                width={1}
+                bg={theme.colors.black}
+                color={theme.colors.white}
+                p={[4]}
+                mr={[0, 4, 4]}
+                style={{
+                  borderRadius: theme.borderRadius
+                }}
+              >
+                <Text as="p">
+                  Continuous mist, ready to spray broad spectrum disinfectant.
+                </Text>
+              </Box>
+              <Box
+                flex={1}
+                width={1}
+                // bg={theme.colors.lightgray}
+                p={[4]}
+                mt={[4, 0, 0]}
+                style={{
+                  position: 'relative',
+                  // top: theme.space[4],
+                  border: theme.border,
+                  borderRadius: theme.borderRadius
+                }}
+              >
+                <Text as="p">
+                  Derived from naturally occurring salt minerals and water.
+                </Text>
+              </Box>
+            </Flex>
+
+            <Text as="p" className="text--md">
+              Cleans stains, dirt, fingerprints, food residue, grease, mold,
+              soil, pet odor, rust, and more. Designed for use on a variety of
+              surfaces—from porcelain to glass—plastic, cloth, sponges, dishes,
+              pots, utensils, sinks, coolers, counter tops, desk tops, tables,
+              shelves, appliances, door knobs, faucets and more.{' '}
             </Text>
-          </Box>
-          <Box
-            flex={1}
-            width={1}
-            // bg={theme.colors.lightgray}
-            p={[4]}
-            mt={[4, 0, 0]}
-            style={{
-              position: 'relative',
-              // top: theme.space[4],
-              border: theme.border,
-              borderRadius: theme.borderRadius
-            }}
-          >
-            <Text as="p">
-              Derived from naturally occurring salt minerals and water.
+
+            <Text as="p" className="text--md">
+              Ideal for use on the go, in restaurants, schools, colleges,
+              offices, retail, industrial, commercial facilities, recreational
+              facilities, kitchens, playgrounds, autos, and homes. Leaves no
+              residue. No wiping required.{' '}
+            </Text>
+
+            <Text as="p" className="text--md">
+              The convenient way to disinfect.
             </Text>
           </Box>
         </Flex>
@@ -103,40 +123,11 @@ const MultiSurfacePage = () => {
 
       <Section maxWidth={theme.maxWidth}>
         <Flex
-          alignItems="flex-start"
-          justifyContent="flex-start"
-          flexWrap="wrap"
-          mb={5}
-        >
-          <Box flex={3}>
-            <Text as="h3" className="text--xl">
-              Cleans stains, dirt, fingerprints, food residue, grease, mold,
-              soil, pet odor, rust, and more. Designed for use on a variety of
-              surfaces—from porcelain to glass—plastic, cloth, sponges, dishes,
-              pots, utensils, sinks, coolers, counter tops, desk tops, tables,
-              shelves, appliances, door knobs, faucets and more.{' '}
-            </Text>
-          </Box>
-        </Flex>
-
-        <Text as="p" className="text--lg">
-          Ideal for use on the go, in restaurants, schools, colleges, offices,
-          retail, industrial, commercial facilities, recreational facilities,
-          kitchens, playgrounds, autos, and homes. Leaves no residue. No wiping
-          required.{' '}
-        </Text>
-
-        <Text as="p" className="text--lg">
-          The convenient way to disinfect.
-        </Text>
-
-        <Flex
           bg={theme.colors.primary}
           color="white"
           flexDirection={['column', 'row', 'row']}
           alignItems="center"
-          mt={7}
-          p={[4, 6]}
+          p={[4, 5]}
           width={1}
           style={{
             borderRadius: theme.borderRadius
@@ -144,7 +135,7 @@ const MultiSurfacePage = () => {
         >
           <Flex flex={1}>
             <Box width={1}>
-              <Box as="ul" mb={0}>
+              <Box as="ul" mb={0} fontSize={3}>
                 <li>
                   This product was tested for efficacy standards for hospital
                   disinfection using AOAC testing methods.
@@ -164,7 +155,7 @@ const MultiSurfacePage = () => {
             ml={[0, 7]}
             width={1}
           >
-            <Text as="p" mb={0} className="t--small">
+            <Text as="p" mb={0}>
               <strong>Active Ingredient:</strong>
               <br />
               Hypochlorous Acid..............0.046%
@@ -186,9 +177,9 @@ const MultiSurfacePage = () => {
         <a id="ratings" />
       </Section>
 
-      <Box mt={7}>
-        <Reviews />
-      </Box>
+      <Section border={true} overflow="visible">
+        <Reviews reviews={reviews} />
+      </Section>
 
       <Section bg="" border={true} maxWidth={theme.maxWidth}>
         <Text as="p" color={theme.colors.tertiary}>
@@ -211,3 +202,24 @@ const MultiSurfacePage = () => {
 }
 
 export default MultiSurfacePage
+
+const reviews = [
+  {
+    lead: 'Fast service!',
+    author: 'Satisfied Customer',
+    review:
+      'I bought a defective product and you replied and replaced my purchase the fastest I’ve ever experienced. I would be happy to purchase more products in the future.'
+  },
+  {
+    lead: 'Strong, even mist.',
+    author: 'John',
+    review:
+      'The strength of the continuous spray surprised me, as well as the even mist it leaves on surfaces.'
+  },
+  {
+    lead: 'Good stuff!',
+    author: 'Alex Persing',
+    review:
+      'I love the fact that it\'s so safe, effective and portable. Good stuff!'
+  }
+]

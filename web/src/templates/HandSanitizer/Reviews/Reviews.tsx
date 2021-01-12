@@ -58,7 +58,9 @@ const ReviewSlider: React.FC = ({ children }) => {
 const Specs: React.FC<Props> = () => {
   return (
     <S.Reviews bg="white" overflow="hidden" pt={0}>
-      <Text as="p" mb={[5, 6, 6]}>What people are saying</Text>
+      <Text as="p" mb={[5, 6, 6]}>
+        What people are saying
+      </Text>
       <ReviewSlider>
         {data.map((item, idx) => (
           <Box className="review__card" key={idx}>
@@ -83,15 +85,15 @@ export default Specs
 
 const data = [
   {
-    lead: 'My hands feel refreshed!',
-    author: 'Jenny, AZ',
-    review:
-      'I take it with me wherever I go, from the gym to the restaurant, one single spray gives me the confidence my hands are clean and completely germ free. Thanks for the cool product!'
+    lead: 'Full coverage!',
+    author: 'Mary Mills',
+    review: 'I love how I am able to get good coverage on my hands!'
   },
   {
     lead: 'This product is incredible!',
     author: 'Edward, CA',
-    review: 'This product is incredible! Much better than the squeeze bottle goop we grew up on!'
+    review:
+      'This product is incredible! Much better than the squeeze bottle goop we grew up on!'
   },
   {
     lead: 'Love the spray action',
@@ -100,10 +102,9 @@ const data = [
       'The strength of the continuous spray surprised me, as well as the even mist it leaves on hands. Oh and the lock cap "click" is really satisfying. Recommended!'
   },
   {
-    lead: 'No mess!',
-    author: 'Teresa, TX',
-    review:
-      "It's just easier to spray and mist hands while on the go, it saves time and with 80% ethyl alcohol, I know I’m getting professional sanitation."
+    lead: 'Product is great!',
+    author: 'BreAnna McLean',
+    review: 'Product is great and it shipped fast.'
   },
   {
     lead: 'Convenient!',
