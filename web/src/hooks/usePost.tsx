@@ -17,12 +17,16 @@ const usePost = () => {
             _rawExcerpt
             _rawBody
             _id
-            publishedAt(formatString: "MMM. DD, YYYY | hh:mma")
+            publishedAt(formatString: "MMMM DD, YYYY")
             slug {
               current
             }
             tags {
               tag
+            }
+            sources {
+              title
+              url
             }
             figure {
               asset {

@@ -140,6 +140,9 @@ const Footer: React.FC = () => {
             <Link to={`/returns`} className="link">
               returns
             </Link>
+            <Link to={`/news`} className="link">
+              news
+            </Link>
           </Flex>
           <a
             className="footer__button"

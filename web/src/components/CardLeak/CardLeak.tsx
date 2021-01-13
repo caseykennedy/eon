@@ -34,28 +34,37 @@ const CardLeak: React.FC<Props> = ({
 }) => {
   const pagePrefix = `news`
   return (
-    <Card>
-      <Box width={1}>
-        {post.figure && (
-          <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
-            <Box className="figure">
-              <Img
-                fluid={{
-                  ...post.figure.asset.fluid,
-                  aspectRatio: `${aspectRatio}`
-                }}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt={post.title}
-              />
-            </Box>
-          </Link>
-        )}
-      </Box>
+    <Link to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}>
+      <Card>
+        <Box width={1}>
+          {post.figure && (
+            <Link
+              to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}
+            >
+              <Box className="figure">
+                <Img
+                  fluid={{
+                    ...post.figure.asset.fluid,
+                    aspectRatio: `${aspectRatio}`
+                  }}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt={post.title}
+                />
+              </Box>
+            </Link>
+          )}
+        </Box>
 
-      <Flex width={!inline ? 1 : 2 / 3} className="content">
-        <Box>
-          {/* {post.tags && (
+        <Flex width={!inline ? 1 : 2 / 3} className="content">
+          <PostMeta
+            authors={post.authors}
+            categories={post.categories}
+            publishedAt={post.publishedAt}
+          />
+
+          <Box mt={6}>
+            {/* {post.tags && (
             <Flex mb={4} width={1}>
               {post.tags.slice(0, 3).map((item, idx) => (
                 <Pill key={idx}>
@@ -65,28 +74,27 @@ const CardLeak: React.FC<Props> = ({
             </Flex>
           )} */}
 
-          <Heading as="h3">
-            <Link
-              to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}
-            >
-              {post.title && post.title}
-            </Link>
-          </Heading>
+            <Heading as="h4">
+              <Link
+                to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}
+              >
+                {post.title && post.title}
+              </Link>
+            </Heading>
 
-          <Box color="darkgray" fontSize={1} mb={6}>
+            <Box color="darkgray" fontSize={2}>
+              read more
+            </Box>
+
+            {/* <Box color="darkgray" fontSize={1} mb={6}>
             {post._rawExcerpt && (
               <BlockContent blocks={post._rawExcerpt || []} />
             )}
+          </Box> */}
           </Box>
-        </Box>
-
-        <PostMeta
-          authors={post.authors}
-          categories={post.categories}
-          publishedAt={post.publishedAt}
-        />
-      </Flex>
-    </Card>
+        </Flex>
+      </Card>
+    </Link>
   )
 }
 
@@ -95,7 +103,7 @@ export default CardLeak
 // ___________________________________________________________________
 
 CardLeak.defaultProps = {
-  aspectRatio: 20 / 9,
+  aspectRatio: 16 / 9,
   bg: theme.colors.background,
   small: false
 }

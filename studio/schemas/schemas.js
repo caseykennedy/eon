@@ -18,6 +18,7 @@ import privacy from './privacy'
 import retailer from './retailer'
 import returns from './returns'
 import siteSettings from './siteSettings'
+import source from './source'
 import tag from './tag'
 import terms from './terms'
 
@@ -44,6 +45,7 @@ export default createSchema({
     retailer,
     returns,
     siteSettings,
+    source,
     tag,
     terms,
 

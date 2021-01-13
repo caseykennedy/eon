@@ -26,12 +26,14 @@ export const Card = styled(Flex)<{ inline?: boolean }>`
     padding: ${theme.space[4]} 0;
 
     @media ${theme.mq.tablet} {
-      padding: ${theme.space[5]} 0;
+      padding-top: ${theme.space[4]};
+      padding-bottom: ${theme.space[4]};
     }
   }
 
-  h3 a {
+  h4 a {
     color: ${theme.colors.secondary};
+    line-height: 1.5;
     flex: 1;
     width: 100%;
 
@@ -42,20 +44,15 @@ export const Card = styled(Flex)<{ inline?: boolean }>`
 
   .figure {
     background: ${theme.colors.secondary};
-
-    width: 100%;
-
+    bottom: 0;
     position: relative;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    transition: all 0.222s ease-in-out 0s;
+    width: 100%;
+    transition: bottom 0.222s ease-in-out 0s;
   }
 
   &:hover {
     .figure {
-
-      @media ${theme.mq.tablet} {
-        transform: matrix(1, 0, 0, 1, 0, -4);
-      }
+      bottom: ${theme.space[2]};
     }
   }
 

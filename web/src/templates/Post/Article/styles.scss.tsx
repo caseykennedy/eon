@@ -19,3 +19,9 @@ export const PageTitle = styled(Section)`
     width: 100%;
   }
 `
+
+export const Sources = styled(Flex)`
+  border-top: ${theme.border};
+  margin-top: ${theme.space[5]};
+  padding-top: ${theme.space[5]};
+`

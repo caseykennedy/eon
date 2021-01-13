@@ -102,6 +102,10 @@ exports.createPages = async function({ graphql, actions }) {
             tags {
               tag
             }
+            sources {
+              title
+              url
+            }
             figure {
               alt
               asset {

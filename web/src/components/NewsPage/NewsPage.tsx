@@ -24,15 +24,17 @@ const NewsPage = () => {
   console.log(posts)
   return (
     <>
-      <PageTitle
-        message="News and Press"
-        image="pt-q1.jpg"
-        altText="eOn hand holding a can"
-      />
+      <S.PageTitle>
+        <Section maxWidth={theme.maxWidth}>
+          <Box width={[1, 2 / 3, 1 / 2]}>
+            <Heading as="h4" mb={0}>News and Press</Heading>
+          </Box>
+        </Section>
+      </S.PageTitle>
 
       <S.NewsPage>
-        <Section maxWidth={theme.maxWidth}>
-          <Grid columns={[1, 3]} gap={[6, 7, 7]}>
+        <Section maxWidth={theme.maxWidth} border={true}>
+          <Grid columns={[1, 2]} gap={[6]}>
             {posts.map(({ node: post }, idx) => (
               <Flex key={idx}>
                 <CardLeak post={post} small={true} />

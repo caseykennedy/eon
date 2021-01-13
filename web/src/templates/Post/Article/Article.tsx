@@ -25,19 +25,22 @@ import PostMeta from '../../../components/PostMeta'
 
 // Data
 import usePost from '../../../hooks/usePost'
+import useSiteSettings from '../../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
 const Article: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
   const posts = usePost()
+  const siteSettings = useSiteSettings()
   return (
     <Layout>
       <SEO
-        pathname={`/implants/${post.slug.current}`}
-        title={`${post.title} | `}
-        desc={`${post.title} | `}
         article={true}
+        banner={`${post.figure.asset.fluid.src}`}
+        pathname={`/news/${post.slug.current}`}
+        title={`${post.title} | ${siteSettings.titleShort}`}
+        desc={`${post.title} | ${siteSettings.titleShort}`}
       />
 
       <Section maxWidth={910}>
@@ -95,6 +98,24 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
               </Box>
             </Box>
           </Flex>
+
+          {post.sources[0] && (
+            <S.Sources>
+              <Box flex={1}>
+                <Text as="p">Sources</Text>
+                <Box width={1}>
+                  {post.sources.map((source, idx) => (
+                    <Box key={idx}>
+                      <Heading as="h5" fontWeight={500}>{source.title}</Heading>
+                      <Text as="a" href={source.url} target="_blank">
+                        {source.url}
+                      </Text>
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
+            </S.Sources>
+          )}
         </Flex>
       </Section>
     </Layout>

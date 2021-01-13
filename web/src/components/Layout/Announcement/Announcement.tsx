@@ -71,22 +71,6 @@ const Message: React.FC<Props> = ({
           <CanMulti />
         </Flex>
       </Link>
-      <Link
-        to={`/products/eon-continuous-spray-hand-sanitizer-80`}
-        onClick={() => {
-          gtag.event({
-            category: 'Announcement bar',
-            action: 'Click',
-            label: 'Happy holidays'
-          })
-        }}
-      >
-        <Flex>
-          <Text as="p" fontSize={1}>
-            🎉 Happy New Year! 🥳
-          </Text>
-        </Flex>
-      </Link>
     </AnnouncementSlider>
   )
 }

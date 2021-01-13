@@ -37,7 +37,7 @@ const PostMeta: React.FC<MetaShape> = ({
       <Text as="span" mb={0} className="text--uppercase">
         {publishedAt}
       </Text>
-      posted in <Link to={``}>{categories && categories[0].title}</Link>
+      {/* posted in <Link to={``}>{categories && categories[0].title}</Link> */}
     </Meta>
   )
 }

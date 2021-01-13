@@ -17,3 +17,6 @@ export const NewsPage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
 `
+
+export const PageTitle = styled(Box)`
+`

@@ -60,6 +60,10 @@ type PostQuery = {
   tags: {
     tag: string
   }[]
+  sources: {
+    title
+    url
+  }[]
 }
 
 type PostAuthor = {
