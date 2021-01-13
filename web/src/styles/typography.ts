@@ -263,23 +263,15 @@ const Typography = css`
     font-weight: 600;
   }
 
-  .t--small {
-    font-size: calc(${theme.fontSizes[2]});
+  .text--small {
+    font-size: calc(${theme.fontSizes[1]});
   }
 
-  .t-underline {
+  .text-underline {
     text-decoration: underline;
   }
 
-  .t--dual-col {
-    column-count: 1;
-
-    @media ${theme.mq.tablet} {
-      column-count: 2;
-    }
-  }
-
-  .t--uppercase {
+  .text--uppercase {
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }

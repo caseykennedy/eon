@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdSettings } from "react-icons/md";
+import { MdSettings, MdStop } from "react-icons/md";
 import { GoFile } from "react-icons/go";
 
 const hiddenTypes = [
@@ -27,6 +27,34 @@ export default () =>
             .documentId("siteSettings")
         )
         .icon(MdSettings),
+
+      // People
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("People")
+        .schemaType("person")
+        .child(S.documentTypeList("person").title("People")),
+
+      // Post Category
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Post Categories")
+        .schemaType("postCategory")
+        .child(S.documentTypeList("postCategory").title("Post Category"))
+
+        .icon(MdStop),
+
+      // Post
+      // _________________________________________________________________
+
+      S.listItem()
+        .title("Posts")
+        .schemaType("post")
+        .child(S.documentTypeList("post").title("Post"))
+
+        .icon(GoFile),
 
       // Retailers
       // _________________________________________________________________

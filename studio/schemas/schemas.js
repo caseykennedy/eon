@@ -11,10 +11,14 @@ import figure from './figure'
 import instagram from './instagram'
 import legal from './legal'
 import mainImage from './mainImage'
+import person from './person'
+import post from './post'
+import postCategory from './postCategory'
 import privacy from './privacy'
 import retailer from './retailer'
 import returns from './returns'
 import siteSettings from './siteSettings'
+import tag from './tag'
 import terms from './terms'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -33,10 +37,14 @@ export default createSchema({
     instagram,
     legal,
     mainImage,
+    person,
+    post,
+    postCategory,
     privacy,
     retailer,
     returns,
     siteSettings,
+    tag,
     terms,
 
 

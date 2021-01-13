@@ -24,8 +24,10 @@ import Trademarks from '../../components/Trademarks'
 
 // ___________________________________________________________________
 
-const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
-  const product = data.shopifyProduct
+const HandSanitizer: React.FC<ShopifyProductContextShape> = ({
+  pageContext
+}) => {
+  const product = pageContext.product
   console.log(product)
   return (
     <Layout>
@@ -75,56 +77,3 @@ const HandSanitizer: React.FC<{ data: ShopifyProductShape }> = ({ data }) => {
 }
 
 export default HandSanitizer
-
-// ___________________________________________________________________
-
-export const query = graphql`
-  query($handle: String!) {
-    shopifyProduct(handle: { eq: $handle }) {
-      id
-      title
-      handle
-      productType
-      description
-      descriptionHtml
-      shopifyId
-      options {
-        id
-        name
-        values
-      }
-      variants {
-        id
-        title
-        price
-        availableForSale
-        shopifyId
-        selectedOptions {
-          name
-          value
-        }
-      }
-      priceRange {
-        minVariantPrice {
-          amount
-          currencyCode
-        }
-        maxVariantPrice {
-          amount
-          currencyCode
-        }
-      }
-      images {
-        originalSrc
-        id
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 910) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  }
-`

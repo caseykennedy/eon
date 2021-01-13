@@ -1,96 +1,93 @@
 export default {
-  name: 'post',
-  title: 'Blog Post',
-  type: 'document',
+  name: "post",
+  title: "Blog Post",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: Rule => Rule.required()
+      name: "title",
+      title: "Title",
+      type: "string"
     },
     {
-      name: 'featured',
-      title: 'Featured',
-      type: 'boolean'
-    },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      description: 'Set the page URL',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      description: "Some frontend will require a slug to be set to be able to show the post",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96
-      },
-      validation: Rule => Rule.required()
+      }
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      description: 'You can use this field to schedule post where you show them',
-      type: 'datetime',
-      validation: Rule => Rule.required()
+      name: "publishedAt",
+      title: "Published at",
+      description: "You can use this field to schedule post where you show them",
+      type: "datetime"
     },
     {
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'blockText',
-      validation: Rule => Rule.required()
+      name: "authors",
+      title: "Authors",
+      type: "reference",
+      to: [{ type: "person" }]
     },
     {
-      name: 'authors',
-      title: 'Authors',
-      type: 'reference',
-      to: [{ type: 'person' }],
-      validation: Rule => Rule.required()
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "reference", to: { type: "postCategory" } }]
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'mainImage',
-      validation: Rule => Rule.required()
+      name: "tags",
+      title: "Tags",
+      type: "array", 
+      of: [
+        {
+          type: "tag"
+        }
+      ]
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{ type: 'reference', to: { type: 'postCategory' } }],
-      validation: Rule => Rule.required()
+      name: "figure",
+      title: "Figure",
+      type: "figure"
     },
     {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-      validation: Rule => Rule.required()
+      name: "excerpt",
+      title: "Excerpt",
+      type: "blockText"
+    },
+    {
+      name: "body",
+      title: "Body",
+      type: "blockContent"
     }
   ],
   orderings: [
     {
-      title: 'Publishing date new–>old',
-      name: 'publishingDateAsc',
-      by: [{ field: 'publishedAt', direction: 'asc' }, { field: 'title', direction: 'asc' }]
+      title: "Publishing date new–>old",
+      name: "publishingDateAsc",
+      by: [{ field: "publishedAt", direction: "asc" }, { field: "title", direction: "asc" }]
     },
     {
-      title: 'Publishing date old->new',
-      name: 'publishingDateDesc',
-      by: [{ field: 'publishedAt', direction: 'desc' }, { field: 'title', direction: 'asc' }]
+      title: "Publishing date old->new",
+      name: "publishingDateDesc",
+      by: [{ field: "publishedAt", direction: "desc" }, { field: "title", direction: "asc" }]
     }
   ],
   preview: {
     select: {
-      title: 'title',
-      publishedAt: 'publishedAt',
-      image: 'mainImage'
+      title: "title",
+      publishedAt: "publishedAt",
+      image: "figure"
     },
-    prepare ({ title = 'No title', publishedAt, image }) {
+    prepare({ title = "No title", publishedAt, image }) {
       return {
         title,
         subtitle: publishedAt
           ? new Date(publishedAt).toLocaleDateString()
-          : 'Missing publishing date',
+          : "Missing publishing date",
         media: image
-      }
+      };
     }
   }
-}
+};

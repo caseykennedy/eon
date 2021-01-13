@@ -49,7 +49,7 @@ const Hero = () => {
                 />
 
                 <div className="rating">
-                  <AnchorLink href={`#ratings`} offset={theme.headerHeight}>
+                  <AnchorLink href={`#ratings`} offset={theme.scrollOffset}>
                     <Stars />
                     <span>3 ratings</span>
                   </AnchorLink>
@@ -65,7 +65,7 @@ const Hero = () => {
                   Ideal for use on the go, in restaurants, schools, offices,
                   retail, kitchens, etc. Leaves no residue. No wiping required.
                 </Text>
-                <AnchorLink href={`#learn-more`} offset={theme.headerHeight}>
+                <AnchorLink href={`#learn-more`} offset={theme.scrollOffset}>
                   <ArrowLink>
                     Learn more <Icon name="arrow" />
                   </ArrowLink>
@@ -88,7 +88,7 @@ const Hero = () => {
                 color="tertiary"
                 dangerouslySetInnerHTML={{ __html: data.note }}
               />
-              <AnchorLink href={`#store-locator`} offset={104}>
+              <AnchorLink href={`#store-locator`} offset={theme.scrollOffset}>
                 <Button
                   bg={theme.colors.primary}
                   color={theme.colors.white}

@@ -15,13 +15,13 @@ export default {
       },
       validation: Rule => Rule.required()
     },
-    // {
-    //   name: 'caption',
-    //   title: 'Caption',
-    //   type: 'string',
-    //   options: {
-    //     isHighlighted: true
-    //   }
-    // }
+    {
+      name: 'caption',
+      title: 'Caption',
+      type: 'string',
+      options: {
+        isHighlighted: true
+      }
+    }
   ]
 }
