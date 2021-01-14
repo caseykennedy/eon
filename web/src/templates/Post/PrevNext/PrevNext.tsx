@@ -7,6 +7,7 @@ import React from 'react'
 
 // Components
 import Icon from '../../../components/Icons'
+import CardLeak from '../../../components/CardLeak'
 
 // Elements
 import { Flex } from '../../../components/ui'
@@ -17,10 +18,9 @@ import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const path = 'blog'
+const path = 'news'
 
 const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
-  const post = pageContext.post
   const prev = pageContext.prev
   const next = pageContext.next
   // console.log('—————|— Prev / Next —|—————')
@@ -29,11 +29,11 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
   return (
     <S.PrevNext width={1}>
       {!prev ? (
-        <S.Button to={`/${path}`}>View all</S.Button>
+        <S.Button to={`/${path}`}>View all posts</S.Button>
       ) : (
         <S.Button to={`/${path}/${prev.slug.current}`}>
           <Flex className="button__title">
-            previous
+            previous post
             <span>
               <Icon name="nextArrow" />
             </span>
@@ -43,12 +43,12 @@ const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
         </S.Button>
       )}
       {!next ? (
-        <S.Button to={`/${path}`}>View all</S.Button>
+        <S.Button to={`/${path}`}>View all posts</S.Button>
       ) : (
         <S.Button to={`/${path}/${next.slug.current}`}>
           {next.title}
           <Flex className="button__title button__title--next">
-            next
+            next post
             <span>
               <Icon name="nextArrow" />
             </span>

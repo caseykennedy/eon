@@ -22,6 +22,7 @@ import Section from '../../../components/Section'
 import BlockContent from '../../../components/BlockContent'
 import Icon from '../../../components/Icons'
 import PostMeta from '../../../components/PostMeta'
+import PrevNext from '../PrevNext'
 
 // Data
 import usePost from '../../../hooks/usePost'
@@ -117,6 +118,8 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
             </S.Sources>
           )}
         </Flex>
+        
+        <PrevNext pageContext={pageContext} />
       </Section>
     </Layout>
   )

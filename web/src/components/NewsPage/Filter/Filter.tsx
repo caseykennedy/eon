@@ -14,6 +14,7 @@ import { Box, Flex, Heading } from '../../ui'
 
 // Hooks
 import usePost from '../../../hooks/usePost'
+import useClick from '../../../hooks/useClick'
 
 // Components
 import Pill from '../../ui/Pill'
@@ -23,10 +24,11 @@ import Posts from '../Posts'
 
 const Filter = () => {
   const posts = usePost()
-  const categories = [{ title: 'Blog' }, { title: 'News' }, { title: 'Press' }]
+  const categories = [{ title: 'News' }, { title: 'Press' }]
 
   // Filter posts
   const [items, setItems] = useState(posts)
+  const [pillActive, setPillActive] = useState(false)
   const setFilteredItems = (category: string) => {
     setItems(
       posts.filter(item => {
@@ -42,7 +44,6 @@ const Filter = () => {
       })
     )
   }
-
   // Reset / Show all
   const resetFilteredItems = () => {
     setItems(posts)
@@ -60,11 +61,11 @@ const Filter = () => {
         </Pill>
 
         {categories.map((cat, idx) => (
-          <Box onClick={() => setFilteredItems(cat.title)} key={idx}>
+          <div onClick={() => setFilteredItems(cat.title)} key={idx}>
             <Pill bg={theme.colors.lightgray} color={theme.colors.text}>
               {cat.title}
             </Pill>
-          </Box>
+          </div>
         ))}
       </S.FilterNav>
 

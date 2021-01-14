@@ -15,6 +15,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 export const PrevNext = styled(Flex)`
   flex-wrap: wrap;
   border-top: ${theme.border};
+  margin-top: ${theme.space[5]};
 `
 
 export const Button = styled(Link)`
@@ -23,16 +24,10 @@ export const Button = styled(Link)`
   flex-wrap: wrap;
   justify-content: space-between;
   
-  background: ${theme.colors.background};
   padding: ${theme.space[4]};
   width: 100%;
 
   color: ${theme.colors.text};
-  font-family: ${theme.fonts.heading};
-  font-size: ${theme.fontSizes[2]};
-  font-weight: 500;
-  line-height: 1.15;
-  text-transform: uppercase;
 
   @media ${theme.mq.tablet} {
     padding: ${theme.space[4]};
@@ -41,7 +36,7 @@ export const Button = styled(Link)`
   }
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.babyblue};
     color: ${theme.colors.text};
   }
 
