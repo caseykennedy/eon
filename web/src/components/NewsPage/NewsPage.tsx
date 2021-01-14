@@ -11,9 +11,11 @@ import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex, Heading, Text } from '../ui'
 
 // Components
+import Pill from '../ui/Pill'
 import PageTitle from '../PageTitle'
 import Section from '../Section'
 import CardLeak from '../CardLeak'
+import Filter from './Filter'
 
 import usePost from '../../hooks/usePost'
 
@@ -21,26 +23,21 @@ import usePost from '../../hooks/usePost'
 
 const NewsPage = () => {
   const posts = usePost()
-  console.log(posts)
   return (
     <>
       <S.PageTitle>
         <Section maxWidth={theme.maxWidth}>
           <Box width={[1, 2 / 3, 1 / 2]}>
-            <Heading as="h4" mb={0}>News and Press</Heading>
+            <Heading as="h4" mb={0}>
+              News and Press
+            </Heading>
           </Box>
         </Section>
       </S.PageTitle>
 
       <S.NewsPage>
         <Section maxWidth={theme.maxWidth} border={true}>
-          <Grid columns={[1, 2]} gap={[6]}>
-            {posts.map(({ node: post }, idx) => (
-              <Flex key={idx}>
-                <CardLeak post={post} small={true} />
-              </Flex>
-            ))}
-          </Grid>
+          <Filter />
         </Section>
       </S.NewsPage>
     </>
@@ -48,3 +45,18 @@ const NewsPage = () => {
 }
 
 export default NewsPage
+
+const data = [
+  {
+    criteria: 'All'
+  },
+  {
+    criteria: 'News'
+  },
+  {
+    criteria: 'Blog'
+  },
+  {
+    criteria: 'Press'
+  }
+]

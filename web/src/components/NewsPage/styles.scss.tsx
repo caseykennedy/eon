@@ -18,5 +18,16 @@ export const NewsPage = styled(Box)`
   }
 `
 
-export const PageTitle = styled(Box)`
+export const PageTitle = styled(Box)``
+
+export const FilterNav = styled(Flex)`
+  display: flex;
+  align-items: center;
+
+  margin-bottom: ${theme.space[6]};
+  width: 100%;
+
+  position: sticky;
+  top: ${theme.headerHeight};
+  z-index: 99999;
 `

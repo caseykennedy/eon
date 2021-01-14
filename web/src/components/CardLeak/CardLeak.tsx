@@ -38,9 +38,7 @@ const CardLeak: React.FC<Props> = ({
       <Card>
         <Box width={1}>
           {post.figure && (
-            <Link
-              to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}
-            >
+            <Box style={{ overflow: 'hidden' }}>
               <Box className="figure">
                 <Img
                   fluid={{
@@ -52,46 +50,37 @@ const CardLeak: React.FC<Props> = ({
                   alt={post.title}
                 />
               </Box>
-            </Link>
+            </Box>
           )}
         </Box>
 
-        <Flex width={!inline ? 1 : 2 / 3} className="content">
-          <PostMeta
-            authors={post.authors}
-            categories={post.categories}
-            publishedAt={post.publishedAt}
-          />
-
-          <Box mt={6}>
-            {/* {post.tags && (
-            <Flex mb={4} width={1}>
-              {post.tags.slice(0, 3).map((item, idx) => (
-                <Pill key={idx}>
-                  <span>#{item.tag}</span>
-                </Pill>
-              ))}
-            </Flex>
-          )} */}
-
-            <Heading as="h4">
-              <Link
-                to={`/${pagePrefix}/${post.slug.current && post.slug.current}`}
-              >
-                {post.title && post.title}
-              </Link>
-            </Heading>
-
-            <Box color="darkgray" fontSize={2}>
-              read more
+        <Flex width={1} className="content">
+          <Box>
+            <Box mb={2}>
+              <PostMeta
+                authors={post.authors}
+                categories={post.categories}
+                publishedAt={post.publishedAt}
+              />
             </Box>
 
-            {/* <Box color="darkgray" fontSize={1} mb={6}>
-            {post._rawExcerpt && (
-              <BlockContent blocks={post._rawExcerpt || []} />
-            )}
-          </Box> */}
+            <Heading as="h4" fontWeight={500}>
+              {post.title && post.title}
+            </Heading>
+
+            <Box color="darkgray" fontSize={1} mb={6} className="excerpt">
+              {post._rawExcerpt && (
+                <BlockContent blocks={post._rawExcerpt || []} />
+              )}
+            </Box>
           </Box>
+          {post.categories && (
+            <Flex>
+              <Pill bg={theme.colors.lightgray} color={theme.colors.text}>
+                {post.categories[0].title}
+              </Pill>
+            </Flex>
+          )}
         </Flex>
       </Card>
     </Link>

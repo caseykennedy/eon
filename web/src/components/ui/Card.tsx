@@ -15,6 +15,9 @@ export const Card = styled(Flex)<{ inline?: boolean }>`
   flex-direction: ${p => (!p.inline ? `column` : `row-reverse`)};
 
   border-bottom: ${theme.border};
+  color: ${theme.colors.text};
+
+  height: 100%;
 
   .content {
     flex: 1;
@@ -29,30 +32,44 @@ export const Card = styled(Flex)<{ inline?: boolean }>`
       padding-top: ${theme.space[4]};
       padding-bottom: ${theme.space[4]};
     }
+
+    .excerpt {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
   }
 
-  h4 a {
-    color: ${theme.colors.secondary};
-    line-height: 1.5;
+  a {
+    color: ${theme.colors.text};
     flex: 1;
     width: 100%;
 
-    &:hover {
-      color: ${theme.colors.primary};
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
   }
 
   .figure {
     background: ${theme.colors.secondary};
-    bottom: 0;
     position: relative;
     width: 100%;
-    transition: bottom 0.222s ease-in-out 0s;
+
+    transform: scale(1);
+    transition: all 0.222s ease-in-out 0s;
   }
 
   &:hover {
+    h4 {
+      text-decoration: underline;
+    }
+
     .figure {
-      bottom: ${theme.space[2]};
+      transform: scale(1.1);
     }
   }
 
