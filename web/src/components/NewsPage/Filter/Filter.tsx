@@ -3,18 +3,16 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Libraries
 
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
-import { Box, Flex, Heading } from '../../ui'
+import { Box } from '../../ui'
 
 // Hooks
 import usePost from '../../../hooks/usePost'
-import useClick from '../../../hooks/useClick'
 
 // Components
 import Pill from '../../ui/Pill'
@@ -72,16 +70,6 @@ const Filter = () => {
       <Box>
         <Posts items={items} />
       </Box>
-
-      {/* {gridView ? (
-        <Flex style={{ marginRight: '-2px' }}>
-          <Grid items={items} />
-        </Flex>
-      ) : (
-        <Box className="view">
-          <List items={items} />
-        </Box>
-      )} */}
     </S.Filter>
   )
 }

@@ -7,7 +7,6 @@ import React from 'react'
 
 // Components
 import Icon from '../../../components/Icons'
-import CardLeak from '../../../components/CardLeak'
 
 // Elements
 import { Flex } from '../../../components/ui'

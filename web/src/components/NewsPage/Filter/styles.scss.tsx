@@ -76,10 +76,6 @@ export const FilterNav = styled(Flex)`
 
   margin-bottom: ${theme.space[6]};
   width: 100%;
-
-  position: sticky;
-  top: ${theme.headerHeight};
-  z-index: 99999;
 `
 
 export const Toggler = styled(Flex)`

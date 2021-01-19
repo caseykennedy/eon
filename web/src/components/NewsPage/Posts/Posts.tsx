@@ -11,7 +11,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 import { Flex } from '../../ui'
 
 // Components
-import CardLeak from '../../CardLeak'
+import NewsCard from '../../NewsCard'
 
 import usePost from '../../../hooks/usePost'
 
@@ -23,7 +23,7 @@ const Posts: React.FC<{ items: PostEdges[] }> = ({ items }) => {
     <Grid columns={[1, 3]} gap={[6]}>
       {items.map(({ node: post }, idx) => (
         <Flex key={idx}>
-          <CardLeak post={post} small={true} />
+          <NewsCard post={post} small={true} />
         </Flex>
       ))}
     </Grid>

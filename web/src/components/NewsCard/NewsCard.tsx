@@ -1,4 +1,4 @@
-// Card Leak
+// News Card
 
 // ___________________________________________________________________
 
@@ -25,7 +25,7 @@ type Props = {
   video?: boolean
 }
 
-const CardLeak: React.FC<Props> = ({
+const NewsCard: React.FC<Props> = ({
   aspectRatio,
   bg,
   inline,
@@ -87,11 +87,11 @@ const CardLeak: React.FC<Props> = ({
   )
 }
 
-export default CardLeak
+export default NewsCard
 
 // ___________________________________________________________________
 
-CardLeak.defaultProps = {
+NewsCard.defaultProps = {
   aspectRatio: 16 / 9,
   bg: theme.colors.background,
   small: false

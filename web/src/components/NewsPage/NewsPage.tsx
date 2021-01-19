@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Grid } from 'theme-ui'
 
 // Theme
 import * as S from './styles.scss'
@@ -11,10 +10,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex, Heading, Text } from '../ui'
 
 // Components
-import Pill from '../ui/Pill'
-import PageTitle from '../PageTitle'
 import Section from '../Section'
-import CardLeak from '../CardLeak'
 import Filter from './Filter'
 
 import usePost from '../../hooks/usePost'
@@ -45,18 +41,3 @@ const NewsPage = () => {
 }
 
 export default NewsPage
-
-const data = [
-  {
-    criteria: 'All'
-  },
-  {
-    criteria: 'News'
-  },
-  {
-    criteria: 'Blog'
-  },
-  {
-    criteria: 'Press'
-  }
-]

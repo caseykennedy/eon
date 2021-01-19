@@ -41,7 +41,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
         banner={`${post.figure.asset.fluid.src}`}
         pathname={`/news/${post.slug.current}`}
         title={`${post.title} | ${siteSettings.titleShort}`}
-        desc={`${post.title} | ${siteSettings.titleShort}`}
+        desc={`${post.title}`}
       />
 
       <Section maxWidth={910}>
