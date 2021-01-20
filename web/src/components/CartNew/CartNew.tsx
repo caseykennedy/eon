@@ -48,7 +48,7 @@ CartNew.defaultProps = defaultProps
 
 const modalStyles = {
   overlay: {
-    background: `transparent`
+    background: `gray`
   },
   modal: {
     boxShadow: 'none',
