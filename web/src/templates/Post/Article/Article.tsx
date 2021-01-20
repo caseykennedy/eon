@@ -4,9 +4,7 @@
 
 // Libraries
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Theme + UI
 import * as S from './styles.scss'
@@ -14,25 +12,21 @@ import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex, Text, Heading } from '../../../components/ui'
 
 // Components
-import Button from '../../../components/ui/Button'
 import Pill from '../../../components/ui/Pill'
 import Layout from '../../../components/Layout'
 import SEO from '../../../components/SEO'
 import Section from '../../../components/Section'
 import BlockContent from '../../../components/BlockContent'
-import Icon from '../../../components/Icons'
 import PostMeta from '../../../components/PostMeta'
 import PrevNext from '../PrevNext'
 
 // Data
-import usePost from '../../../hooks/usePost'
 import useSiteSettings from '../../../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
 const Article: React.FC<PostContextShape> = ({ pageContext }) => {
   const post = pageContext.post
-  const posts = usePost()
   const siteSettings = useSiteSettings()
   return (
     <Layout>
@@ -107,7 +101,9 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
                 <Box width={1}>
                   {post.sources.map((source, idx) => (
                     <Box key={idx}>
-                      <Heading as="h5" fontWeight={500}>{source.title}</Heading>
+                      <Heading as="h5" fontWeight={500}>
+                        {source.title}
+                      </Heading>
                       <Text as="a" href={source.url} target="_blank">
                         {source.url}
                       </Text>
@@ -118,7 +114,7 @@ const Article: React.FC<PostContextShape> = ({ pageContext }) => {
             </S.Sources>
           )}
         </Flex>
-        
+
         <PrevNext pageContext={pageContext} />
       </Section>
     </Layout>

@@ -25,6 +25,7 @@ import Icon from '../Icons'
 import Portal from '../Portal'
 import AddToCart from '../AddToCart'
 import LineItem from './LineItem'
+import CartNew from '../CartNew'
 
 // ___________________________________________________________________
 
@@ -143,15 +144,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
     return [total !== 0, total]
   }
   return (
-    <Portal
-      id="cart-root"
-      root="main-root"
-      isOpen={isCartOpen}
-      handleExit={() => setCartOpen(false)}
-      scrollRef={scrollRef}
-      mainRef={mainRef}
-      exitRef={exitRef}
-    >
+    <CartNew active={false}>
       <S.GlobalStyles isOpen={isCartOpen} />
       <FocusLock persistentFocus={false}>
         <S.Cart
@@ -202,7 +195,7 @@ const Cart: React.FC<Props> = ({ mainRef }) => {
           </AnimatePresence>
         </S.Cart>
       </FocusLock>
-    </Portal>
+    </CartNew>
   )
 }
 

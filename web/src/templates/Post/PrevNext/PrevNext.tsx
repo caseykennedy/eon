@@ -22,9 +22,6 @@ const path = 'news'
 const PrevNext: React.FC<PostContextShape> = ({ pageContext }) => {
   const prev = pageContext.prev
   const next = pageContext.next
-  // console.log('—————|— Prev / Next —|—————')
-  // console.log(prev)
-  // console.log(next)
   return (
     <S.PrevNext width={1}>
       {!prev ? (
