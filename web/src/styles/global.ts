@@ -50,6 +50,26 @@ const GlobalStyles = createGlobalStyle`
     position: relative;
     z-index: 99999999;
   }
+
+  #cart-modal {
+    display: flex;
+    margin: 0 0 0 auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+
+    @media ${theme.mq.tablet} {
+      height: calc(100% - ${theme.headerHeight});
+      max-width: 500px;
+    }
+
+    /* div {
+      width: 100%;
+    } */
+  }
 `
 
 export default GlobalStyles

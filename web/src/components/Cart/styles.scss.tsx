@@ -14,7 +14,7 @@ const cartWidth = `500px`
 
 export const Cart = styled(Box)`
   height: 100%;
-  width: ${theme.siteWidth};
+  width: 100%;
   padding: ${theme.space[4]};
 
   background: ${theme.colors.white};
@@ -40,7 +40,6 @@ export const Cart = styled(Box)`
     right: 0;
     bottom: 0;
     padding: ${theme.space[4]} ${theme.space[5]} ${theme.space[5]};
-    height: calc(100% - ${theme.headerHeight});
     width: ${cartWidth};
     z-index: 991;
   }

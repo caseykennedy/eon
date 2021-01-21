@@ -1,4 +1,5 @@
-// CartNew:
+// CartNew
+// https://react-responsive-modal.leopradel.com/
 
 // ___________________________________________________________________
 
@@ -32,6 +33,7 @@ const CartNew: React.FC<ModalProps> = ({ active, children }) => {
   const closeModal = () => setCartOpen(false)
   return (
     <ReactModal
+      modalId={`cart-modal`}
       open={isCartOpen}
       onClose={closeModal}
       center={false}
@@ -55,10 +57,5 @@ const modalStyles = {
   },
   modal: {
     boxShadow: 'none',
-    display: 'flex',
-    margin: '0 0 0 auto',
-    padding: '0',
-    height: '100%',
-    width: '100%'
   }
 }
