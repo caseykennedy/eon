@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
 
-  html,
+  /* html,
   body {
     height: 100%;
     width: 100%;
@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
       overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
-  }
+  } */
   
   body {
     border: 0;
