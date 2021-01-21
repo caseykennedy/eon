@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import React, { useContext, useState } from 'react'
+import styled from 'styled-components'
 import { default as ReactModal } from 'react-responsive-modal'
 import { transparentize } from 'polished'
 import { useCookies } from 'react-cookie'
@@ -33,6 +34,8 @@ const CartNew: React.FC<ModalProps> = ({ active, children }) => {
     <ReactModal
       open={isCartOpen}
       onClose={closeModal}
+      center={false}
+      showCloseIcon={false}
       styles={modalStyles}
     >
       {children}
@@ -48,10 +51,14 @@ CartNew.defaultProps = defaultProps
 
 const modalStyles = {
   overlay: {
-    background: `gray`
+    background: 'transparent'
   },
   modal: {
     boxShadow: 'none',
-    padding: '0'
+    display: 'flex',
+    margin: '0 0 0 auto',
+    padding: '0',
+    height: '100%',
+    width: '100%'
   }
 }

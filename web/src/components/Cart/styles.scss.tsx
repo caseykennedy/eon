@@ -13,6 +13,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 const cartWidth = `500px`
 
 export const Cart = styled(Box)`
+  height: 100%;
   width: ${theme.siteWidth};
   padding: ${theme.space[4]};
 
@@ -20,7 +21,7 @@ export const Cart = styled(Box)`
   opacity: 0;
   visibility: hidden;
 
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -36,8 +37,6 @@ export const Cart = styled(Box)`
     opacity: 0;
     visibility: hidden;
 
-    position: fixed;
-    top: ${theme.headerHeight};
     right: 0;
     bottom: 0;
     padding: ${theme.space[4]} ${theme.space[5]} ${theme.space[5]};
