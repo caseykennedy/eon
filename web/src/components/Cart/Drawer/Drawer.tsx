@@ -1,18 +1,16 @@
-// CartNew
+// Drawer
 // https://react-responsive-modal.leopradel.com/
 
 // ___________________________________________________________________
 
-import React, { useContext, useState } from 'react'
-import styled from 'styled-components'
+import React, { useContext } from 'react'
 import { default as ReactModal } from 'react-responsive-modal'
-import { transparentize } from 'polished'
-import { useCookies } from 'react-cookie'
 
-import theme from '../../gatsby-plugin-theme-ui'
+// Theme
+import theme from '../../../gatsby-plugin-theme-ui'
 
 // Context
-import StoreContext from '../../context/StoreContext'
+import StoreContext from '../../../context/StoreContext'
 
 // ___________________________________________________________________
 
@@ -20,11 +18,9 @@ type ModalProps = {
   children: React.ReactNode
 } & typeof defaultProps
 
-const defaultProps = {
-  active: false
-}
+const defaultProps = {}
 
-const CartNew: React.FC<ModalProps> = ({ active, children }) => {
+const Drawer: React.FC<ModalProps> = ({ children }) => {
   const {
     isCartOpen,
     setCartOpen,
@@ -45,11 +41,11 @@ const CartNew: React.FC<ModalProps> = ({ active, children }) => {
   )
 }
 
-export default CartNew
+export default Drawer
 
 // ___________________________________________________________________
 
-CartNew.defaultProps = defaultProps
+Drawer.defaultProps = defaultProps
 
 const modalStyles = {
   overlay: {
