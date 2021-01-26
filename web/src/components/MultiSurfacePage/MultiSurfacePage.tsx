@@ -31,7 +31,9 @@ const MultiSurfacePage = () => {
       <Hero />
       <Trademarks />
 
+      <Section>
         <StoreLocator />
+      </Section>
 
       <Section border={true} maxWidth={theme.maxWidth} id="learn-more">
         <Flex
@@ -217,6 +219,6 @@ const reviews = [
     lead: 'Good stuff!',
     author: 'Alex Persing',
     review:
-      'I love the fact that it\'s so safe, effective and portable. Good stuff!'
+      "I love the fact that it's so safe, effective and portable. Good stuff!"
   }
 ]

@@ -74,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const mainRef = useRef<HTMLDivElement>(null)
   // eslint-disable-next-line no-console
   console.log(
-    `%c eOn Mist — built by caseyKennedy.me `,
+    `%c eOn Mist — crafted with care. [ caseykennedy.hns.to ] `,
     `background: #FFFFFF; color: #000000`
   )
   return (
