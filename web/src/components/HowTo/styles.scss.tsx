@@ -26,12 +26,14 @@ export const HowTo = styled(Flex)`
     flex-direction: column;
     justify-content: space-between;
 
-    margin: 0 ${theme.space[5]} ${theme.space[5]} 0;
+    margin: 0 ${theme.space[5]} ${theme.space[5]};
 
-    flex: 1;
+    flex: 1 1 280px;
+    max-width: 300px;
 
-    &:last-child {
-      margin-right: 0;
+    @media ${theme.mq.tablet} {
+      margin: 0 ${theme.space[3]} 0;
+      max-width: 400px;
     }
 
     svg {
@@ -57,6 +59,7 @@ export const HowTo = styled(Flex)`
       line-height: 1.75;
 
       background: ${theme.colors.white};
+      border: ${theme.border};
       border-radius: ${theme.borderRadius};
       margin-top: ${theme.space[4]};
       padding: ${theme.space[1]} 0;
