@@ -13,15 +13,15 @@ import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
-import { Box, Flex, Text, Heading } from '../../ui'
-import Button from '../../ui/Button'
-import ArrowLink from '../../ui/ArrowLink'
+import { Box, Flex, Text, Heading } from '../../../components/ui'
+import Button from '../../../components/ui/Button'
+import ArrowLink from '../../../components/ui/ArrowLink'
 
 // Compoonents
-import ImgMatch from '../../ImgMatch'
-import Icon from '../../Icons'
-import Shine from '../../SVG/Shine'
-import Stars from '../../SVG/Stars'
+import ImgMatch from '../../../components/ImgMatch'
+import Icon from '../../../components/Icons'
+import Shine from '../../../components/SVG/Shine'
+import Stars from '../../../components/SVG/Stars'
 
 import dropBolt from './assets/drop-bolt.svg'
 
@@ -30,7 +30,7 @@ import dropBolt from './assets/drop-bolt.svg'
 const Hero = () => {
   return (
     <>
-      <S.Hero maxWidth={theme.maxWidth}>
+      <S.Hero>
         <S.Decorator>
           <img src={dropBolt} width="100%" alt="eOn multi-surface badge" />
         </S.Decorator>

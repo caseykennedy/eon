@@ -25,6 +25,9 @@ const FaqsPage = () => {
         altText="eOn hand holding a can"
       />
       <S.FaqsPage>
+        {/* <Section maxWidth={`1024px`}>
+          <Heading as="h3" mb={0}>FAQs</Heading>
+        </Section> */}
         <Section maxWidth={`1024px`}>
           <Box className="faqs">
             {data.map((faq, idx) => (

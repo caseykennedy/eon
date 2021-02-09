@@ -7,10 +7,10 @@ import React from 'react'
 // Theme
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Flex, Heading, Text } from '../ui'
+import { Box, Flex, Heading, Text } from '../../components/ui'
 
 // Components
-import Section from '../Section'
+import Section from '../../components/Section'
 import Filter from './Filter'
 
 import usePost from '../../hooks/usePost'

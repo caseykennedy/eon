@@ -57,7 +57,7 @@ const ReviewSlider: React.FC = ({ children }) => {
 
 const Specs: React.FC<Props> = () => {
   return (
-    <S.Reviews bg="white" overflow="hidden" pt={0} id="ratings">
+    <S.Reviews bg="white" overflow="hidden" maxWidth={theme.maxWidth} id="ratings">
       <Text as="p" mb={[5, 6, 6]}>
         What people are saying
       </Text>

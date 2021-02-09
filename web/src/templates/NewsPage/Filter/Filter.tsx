@@ -9,13 +9,13 @@ import React, { useState } from 'react'
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../../config/theme'
-import { Box } from '../../ui'
+import { Box } from '../../../components/ui'
 
 // Hooks
 import usePost from '../../../hooks/usePost'
 
 // Components
-import Pill from '../../ui/Pill'
+import Pill from '../../../components/ui/Pill'
 import Posts from '../Posts'
 
 // ___________________________________________________________________

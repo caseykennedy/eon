@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 import { lighten } from 'polished'
-import { Flex } from '../../ui'
+import { Flex } from '../../../components/ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________

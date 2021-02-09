@@ -8,10 +8,10 @@ import { Grid } from 'theme-ui'
 // Theme
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Flex } from '../../ui'
+import { Flex } from '../../../components/ui'
 
 // Components
-import NewsCard from '../../NewsCard'
+import NewsCard from '../../../components/NewsCard'
 
 import usePost from '../../../hooks/usePost'
 

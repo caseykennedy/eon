@@ -5,8 +5,8 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 import theme from '../../../gatsby-plugin-theme-ui'
-import { Box, Flex } from '../../ui'
-import Section from '../../Section'
+import { Box, Flex } from '../../../components/ui'
+import Section from '../../../components/Section'
 
 // ___________________________________________________________________
 
@@ -17,6 +17,7 @@ export const Hero = styled(Section)`
 
   .hero {
     &__inner {
+      display: flex;
       align-items: flex-start;
       flex-direction: column;
       flex-wrap: wrap;

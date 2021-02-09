@@ -28,7 +28,6 @@ const HandSanitizer: React.FC<ShopifyProductContextShape> = ({
   pageContext
 }) => {
   const product = pageContext.product
-  console.log(product)
   return (
     <Layout>
       <SEO

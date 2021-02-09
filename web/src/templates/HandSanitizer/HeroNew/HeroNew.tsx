@@ -29,7 +29,7 @@ import Icon from '../../../components/Icons'
 const Hero = () => {
   return (
     <>
-      <S.Hero maxWidth={theme.maxWidth}>
+      <S.Hero>
         <S.Decorator>
           <Shine />
         </S.Decorator>

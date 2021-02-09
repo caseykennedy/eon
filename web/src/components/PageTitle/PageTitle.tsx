@@ -32,7 +32,7 @@ const PageTitle: React.FC<Props> = ({ altText, image, message, title }) => {
   })
   return (
     <>
-      <S.PageTitle>
+      <S.PageTitle pt={[7, 8]}>
         {image && (
           <div className="figure">
             <ImgMatch src={image} altText={altText} />

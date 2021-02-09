@@ -99,7 +99,7 @@ const MissionPage = () => {
                 as="h4"
                 color="primary"
                 fontWeight={500}
-                className="text--xl"
+                className="text--lg"
               >
                 Everyday, professional-grade hygienics for a cleaner world.
               </Heading>

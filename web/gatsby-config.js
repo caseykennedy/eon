@@ -64,7 +64,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          config.googleMeasurementID, // Google Analytics / GA
+          config.googleMeasurementID // Google Analytics / GA
           // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
@@ -81,11 +81,11 @@ module.exports = {
           // Puts tracking script in the head instead of the body
           head: true,
           // Setting this parameter is also optional
-          respectDNT: false,
+          respectDNT: false
           // Avoids sending pageview hits from custom paths
           // exclude: ["/preview/**", "/do-not-track/me/too/"],
-        },
-      },
+        }
+      }
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
@@ -139,13 +139,6 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
-    // {
-    //   resolve: `gatsby-source-instagram`,
-    //   options: {
-    //     type: `user-profile`,
-    //     username: `eonmist`,
-    //   },
-    // },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {

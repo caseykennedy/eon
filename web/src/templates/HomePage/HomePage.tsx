@@ -7,16 +7,16 @@ import React from 'react'
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Flex, Text, Heading } from '../ui'
+import { Box, Flex, Text, Heading } from '../../components/ui'
 
 // Sections
 import Hero from './Hero'
 
 // Components
-import Section from '../Section'
-import Trademarks from '../Trademarks'
-import StoreLocator from '../StoreLocator'
-import Retailers from '../Retailers'
+import Section from '../../components/Section'
+import Trademarks from '../../components/Trademarks'
+import StoreLocator from '../../components/StoreLocator'
+import Retailers from '../../components/Retailers'
 
 // ___________________________________________________________________
 

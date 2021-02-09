@@ -90,7 +90,7 @@ const Mist = () => {
         </Box>
         <Box flex={[1, 1, 4]}>
           <Heading mb={4} className="text--md">
-            No mess, just mist.
+            No messy gels, just mist.
           </Heading>
           <Heading as="h2" className="text--xl">
             eOn mist's hand sanitizer packs high performance germ fighting power

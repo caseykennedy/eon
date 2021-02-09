@@ -100,7 +100,7 @@ const theme: ThemeShape = {
     quinary: '#dcedff',
 
     // Theme colors
-    lightgray: '#F1F1F1',
+    lightgray: '#f7f7f7',
     gray: '#C4C4c4',
     darkgray: '#696d6d',
     darknight: '#09040b',
@@ -174,7 +174,7 @@ const theme: ThemeShape = {
 
   arrowWidth: '14px',
   strokeWidth: '2px',
-  maxWidth: '1440px',
+  maxWidth: '1280px',
   readingWidth: '800px',
   siteWidth: '100%',
   logoWidth: '70px',
@@ -202,7 +202,7 @@ const theme: ThemeShape = {
     }
   },
 
-  border: '1px solid #9D9FA2',
+  border: '1px solid #dee1e3',
   borderRadius: '4px',
   shadow: '2rem 1.5rem 1rem #9D9FA2',
 

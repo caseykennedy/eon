@@ -5,7 +5,7 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-import { Box, Flex } from '../ui'
+import { Box, Flex } from '../../components/ui'
 
 import theme from '../../gatsby-plugin-theme-ui'
 

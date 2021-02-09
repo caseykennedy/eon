@@ -35,17 +35,8 @@ export const Billboard = styled(Flex)`
   align-items: center;
   flex: 1;
 
-  padding: ${theme.space[6]} ${theme.space[4]};
   position: relative;
   z-index: 9;
-
-  @media ${theme.mq.tablet} {
-    padding: ${theme.space[7]} ${theme.space[5]};
-  }
-
-  @media ${theme.mq.desktop} {
-    padding: ${theme.space[7]} ${theme.space[6]};
-  }
 `
 
 export const Figure = styled(Box)`

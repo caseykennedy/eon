@@ -12,12 +12,12 @@ import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // UI
-import { Box, Flex, Text, Heading } from '../../ui'
+import { Box, Flex, Text, Heading } from '../../../components/ui'
 
 // Compoonents
-import Icon from '../../Icons'
-import ImgMatch from '../../ImgMatch'
-import Shine from '../../SVG/Shine'
+import Icon from '../../../components/Icons'
+import ImgMatch from '../../../components/ImgMatch'
+import Shine from '../../../components/SVG/Shine'
 import dropBolt from './assets/drop-bolt.svg'
 
 // ___________________________________________________________________

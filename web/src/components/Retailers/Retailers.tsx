@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 import { Grid } from 'theme-ui'
 
@@ -17,8 +16,6 @@ import { Box, Flex, Text } from '../ui'
 
 // Hooks
 import useRetailers from '../../hooks/useRetailers'
-
-import Icon from '../../components/Icons'
 
 // ___________________________________________________________________
 

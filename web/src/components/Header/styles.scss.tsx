@@ -42,6 +42,10 @@ export const Header = styled(Flex)`
       justify-content: space-between;
       flex: 1;
 
+      /* box-sizing: content-box; */
+      margin: 0 auto;
+      /* max-width: ${theme.maxWidth}; */
+
       padding: 0 ${theme.space[4]};
 
       @media ${theme.mq.tablet} {
