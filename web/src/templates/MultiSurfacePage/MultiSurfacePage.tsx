@@ -43,7 +43,7 @@ const MultiSurfacePage = () => {
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <img src={hclMark} width="100%" alt="HOCl" />
+            <ImgMatch src="eon-in-target.jpg" altText="" />
           </Box>
 
           <Box flex={3}>
@@ -167,10 +167,14 @@ const MultiSurfacePage = () => {
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <img src={hclMark} width="100%" alt="HOCl" />
+            <ImgMatch src="radial-burst.png" altText="" />
           </Box>
 
           <Box flex={3}>
+            <Text as="p" color="primary">
+              Usage
+            </Text>
+
             <Heading as="h3">The convenient way to disinfect.</Heading>
 
             <Text as="p">
@@ -207,7 +211,7 @@ const MultiSurfacePage = () => {
           <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}></Box>
 
           <Box flex={3}>
-            <Text as="p" className="text--small">
+            <Text as="p" color="tertiary" className="text--small">
               Do not use on steel, aluminum, silver, or chipped enamel.
               Prolonged contact with metal may cause pitting or discoloration.
               First test in an inconspicuous place for color washout or contact
@@ -222,8 +226,8 @@ const MultiSurfacePage = () => {
           flexWrap="wrap"
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
-          <Box width="100%" flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <img src={hclMark} width="100%" alt="HOCl" />
+          <Box width={1} flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
+            <ImgMatch src="hand-right.png" altText="" />
           </Box>
 
           <Box flex={3}>
