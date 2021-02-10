@@ -128,7 +128,14 @@ const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
             fontWeight={500}
             mb={2}
           >
-            {item.title}
+            {item.discountAllocations[0] ? (
+              <>
+                <Box as="span">BUY3GET3</Box>
+                <br />
+              </>
+            ) : (
+              item.title
+            )}
           </Text>
           <Text as="p" fontSize={2} fontWeight={500} mb={0}>
             ${item.variant.priceV2.amount}

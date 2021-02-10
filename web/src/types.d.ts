@@ -190,7 +190,7 @@ type LineItemShape = {
   id: string
   title: string
   quantity: number
-  discountAllocations: []
+  discountAllocations: {}[]
   variant: {
     id: string
     title: string
