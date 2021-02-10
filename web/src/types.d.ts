@@ -1,7 +1,7 @@
 // GraphQL Types
 // TODO:
 
-import { GraphModel } from 'shopify-buy'
+import { GraphModel, LineItem } from 'shopify-buy'
 
 type ImageShape = {
   aspectRatio: number
@@ -190,7 +190,7 @@ type LineItemShape = {
   id: string
   title: string
   quantity: number
-  discountAllocations: any
+  discountAllocations: []
   variant: {
     id: string
     title: string

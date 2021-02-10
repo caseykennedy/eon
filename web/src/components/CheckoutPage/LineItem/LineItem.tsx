@@ -18,8 +18,9 @@ import Icon from '../../Icons'
 
 // Context
 import StoreContext from '../../../context/StoreContext'
+import { LineItemShape } from '@/types'
 
-const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
+const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
   const qtyRef = React.useRef<HTMLInputElement>(null)
 
   const {
@@ -106,10 +107,13 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
       />
     )
 
+  console.log(item)
+  console.log(item.discountAllocations[0])
+
   return (
     <S.LineItem>
       <Flex className="line-item__product">
-        <Box width={1 / 4}>
+        <Box width={1 / 4} className="line-item__thumbnail">
           <Link to={`/products/${item.variant.product.handle}/`}>
             <VariantImage />
           </Link>
@@ -130,7 +134,7 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             ${item.variant.priceV2.amount}
           </Text>
 
-          <Box as="span" color="tertiary" mt={1}>$4.90 flat rate shipping</Box>
+          {/* <Box as="span" color="tertiary" mt={1}>$4.90 flat rate shipping</Box> */}
         </Box>
       </Flex>
 
