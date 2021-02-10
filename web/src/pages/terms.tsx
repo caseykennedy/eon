@@ -18,13 +18,13 @@ import useSiteSettings from '../hooks/useSiteSettings'
 const Terms = () => {
   const site = useSiteSettings()
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/terms`}
         title={`Terms of Service | ${site.titleShort}`}
       />
       <TermsPage />
-    </Layout>
+    </>
   )
 }
 

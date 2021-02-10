@@ -18,8 +18,9 @@ import Icon from '../../Icons'
 
 // Context
 import StoreContext from '../../../context/StoreContext'
+import { LineItemShape } from '@/types'
 
-const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
+const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
   const qtyRef = React.useRef<HTMLInputElement>(null)
 
   const {

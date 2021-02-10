@@ -21,13 +21,13 @@ import useSiteSettings from '../hooks/useSiteSettings'
 const Faqs = () => {
   const site = useSiteSettings()
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/faqs`}
         title={`FAQs | ${site.titleShort}`}
       />
       <FaqsPage />
-    </Layout>
+    </>
   )
 }
 

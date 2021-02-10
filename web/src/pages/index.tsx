@@ -18,10 +18,10 @@ import theme from '../gatsby-plugin-theme-ui'
 
 const Index = () => {
   return (
-    <Layout>
+    <>
       <SEO />
       <HomePage />
-    </Layout>
+    </>
   )
 }
 

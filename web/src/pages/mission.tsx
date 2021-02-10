@@ -21,10 +21,10 @@ import useSiteSettings from '../hooks/useSiteSettings'
 const Mission = () => {
   const site = useSiteSettings()
   return (
-    <Layout>
+    <>
       <SEO pathname={`/mission`} title={`Our Mission | ${site.titleShort}`} />
       <MissionPage />
-    </Layout>
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-// Privacy page
+// Checkout page
 
 // ___________________________________________________________________
 
@@ -8,24 +8,24 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PrivacyPage from '../components/PrivacyPage'
+import CheckoutPage from '../components/CheckoutPage'
+
+// Theme
+import theme from '../gatsby-plugin-theme-ui'
 
 // Hooks
 import useSiteSettings from '../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
-const Privacy = () => {
+const Checkout = () => {
   const site = useSiteSettings()
   return (
     <>
-      <SEO
-        pathname={`/privacy`}
-        title={`Privacy Policy | ${site.titleShort}`}
-      />
-      <PrivacyPage />
+      <SEO pathname={`/mission`} title={`Our Mission | ${site.titleShort}`} />
+      <CheckoutPage />
     </>
   )
 }
 
-export default Privacy
+export default Checkout

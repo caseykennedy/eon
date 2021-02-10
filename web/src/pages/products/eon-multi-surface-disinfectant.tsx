@@ -18,7 +18,7 @@ import useSiteSettings from '../../hooks/useSiteSettings'
 const Returns = () => {
   const site = useSiteSettings()
   return (
-    <Layout>
+    <>
       <SEO
         pathname={'/products/eon-multi-surface-disinfectant'}
         title={`eOn multi-surface disinfectant | ${site.titleShort}`}
@@ -29,7 +29,7 @@ const Returns = () => {
         price={4.49}
       />
       <MultiSurfacePage />
-    </Layout>
+    </>
   )
 }
 
