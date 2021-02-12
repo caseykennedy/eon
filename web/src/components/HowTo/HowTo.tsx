@@ -14,13 +14,16 @@ import CapTwist from '../SVG/CapTwist'
 import SprayHand from '../SVG/SprayHand'
 import HappyHands from '../SVG/HappyHands'
 
+import spray from './svg/spray.svg'
+import wait from './svg/wait.svg'
+
 // ___________________________________________________________________
 
 const Specs = () => {
   return (
     <S.HowTo>
       {data.map((item, idx) => (
-        <Box className="figure" key={idx}>
+        <Box className="figure figure-cap" key={idx}>
           {item.figure}
           <Flex as="span" className="figure__spec">
             {item.spec}
@@ -30,6 +33,26 @@ const Specs = () => {
           </Text>
         </Box>
       ))}
+
+      <Box className="figure">
+        <img src={spray} />
+        <Flex as="span" className="figure__spec">
+          SPRAY FREELY
+        </Flex>
+        <Text fontSize={2} className="figure__caption">
+          1—2 sec from 6—8" away
+        </Text>
+      </Box>
+
+      <Box className="figure">
+        <img src={wait} />
+        <Flex as="span" className="figure__spec">
+          WAIT until DRY
+        </Flex>
+        <Text fontSize={2} className="figure__caption">
+          you're good to go
+        </Text>
+      </Box>
     </S.HowTo>
   )
 }
@@ -43,15 +66,5 @@ const data = [
     spec: 'TWIST to UNLOCK',
     figure: <CapTwist />,
     caption: 'Press down on cap end'
-  },
-  {
-    spec: 'SPRAY LIGHTLY',
-    figure: <SprayHand />,
-    caption: '1—2 sec from 6—8" away'
-  },
-  {
-    spec: 'RUB until DRY',
-    figure: <HappyHands />,
-    caption: "You're good to go"
   }
 ]

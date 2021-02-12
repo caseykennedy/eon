@@ -24,6 +24,13 @@ import HowTo from '../../components/HowTo'
 import Accordion from '../../components/Accordion'
 
 import hclMark from './assets/hocl.svg'
+import shelf from './assets/shelf.svg'
+
+import disinfect from './assets/disinfect.svg'
+import safe from './assets/safe.svg'
+import virus from './assets/virus.svg'
+import trust from './assets/trust.svg'
+import steps from './assets/steps.svg'
 
 // ___________________________________________________________________
 
@@ -37,25 +44,26 @@ const MultiSurfacePage = () => {
         <StoreLocator />
       </Section>
 
-      <Section border={true} maxWidth={theme.maxWidth}>
+      <Section border={true} maxWidth={theme.maxWidth} id="learn-more" overflow="hidden">
         <Flex
           flexWrap="wrap"
-          flexDirection={['column', 'row-reverse', 'row-reverse']}
+          flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
         >
-          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <ImgMatch src="eon-in-target.jpg" altText="" />
+          <Box flex={1}>
+            <Box width={1}>
+              <img src={shelf} width="100%" />
+            </Box>
           </Box>
 
-          <Box flex={3}>
+          <Box flex={2}>
             <Text as="p" color="primary">
-              Details
+              Pro-grade sanitation
             </Text>
 
             <Heading as="h3">
-              eOn Sanitizing Mist is an EPA registered personal protection
-              product which can rapidly neutralize easily transmitted pathogens
-              via HOCI. eOn Sanitizing Mist Eliminates 99.9% of bacteria and
-              viruses.
+              eOn Sanitizing Mist™ is an EPA-registered (List N) personal
+              protection disinfectant which rapidly neutralizes 99.9% of
+              transmissible pathogens.
             </Heading>
 
             {/* <Text as="p">
@@ -81,69 +89,115 @@ const MultiSurfacePage = () => {
               // alignItems="flex-start"
               my={[6]}
             >
-              <Box flex={1} mr={[0, 4, 4]}>
-                <Text as="p" fontSize={3} fontWeight="600" mb={0}>
+              <Box
+                flex={1}
+                width={1}
+                bg={theme.colors.black}
+                color={theme.colors.white}
+                p={[4]}
+                mr={[0, 4, 4]}
+                style={{
+                  borderRadius: theme.borderRadius
+                }}
+              >
+                <Text as="p" fontSize={3} fontWeight={600} mb={0}>
                   eOn multi-surface
                 </Text>
                 <Text as="p">
-                  eOn multi-surface is an EPA registered (List N) personal
-                  protection disinfectant which rapidly neutralizes
-                  transmissible pathogens.
+                  eOn multi-surface is zero-mess, zero-propellant, wide-angle
+                  continuous spray, broad spectrum disinfection.
                 </Text>
               </Box>
-              <Box flex={1} mt={[4, 0, 0]}>
-                <Text as="p" fontSize={3} fontWeight="600" mb={0}>
+              <Box
+                flex={1}
+                width={1}
+                bg={theme.colors.lightgray}
+                p={[4]}
+                mt={[4, 0, 0]}
+                style={{
+                  position: 'relative',
+                  // top: theme.space[4],
+                  border: theme.border,
+                  borderRadius: theme.borderRadius
+                }}
+              >
+                <Text as="p" fontSize={3} fontWeight={600} mb={0}>
                   Hypochlorous acid (HOCI)
                 </Text>
                 <Text as="p">
-                  HOCI is one of the most effective known biocides produced by
-                  the human immune system. HOCI is now used in healthcare, food
-                  safety, water treatment, and general sanitation world-wide.
-                  HOCI’s chlorine based odor does not linger and rapidly
-                  dissipates.
+                  Hypochlorous Acid (HOCI) is one of the most effective known
+                  biocides, also produced in the human immune system. HOCI is
+                  used in healthcare, food safety, water treatment and general
+                  sanitation world-wide.
                 </Text>
               </Box>
             </Flex>
           </Box>
         </Flex>
+      </Section>
+
+      <Section border={true} maxWidth={theme.maxWidth}>
+        <Flex
+          flexWrap="wrap"
+          alignItems="center"
+          flexDirection={['column', 'row-reverse', 'row-reverse']}
+        >
+          <Box flex={1} ml={[0, 6, 7]}>
+            <img src={disinfect} width="100%" />
+          </Box>
+
+          <Box flex={2}>
+            <Text as="p" color="primary">
+              Smarter sanitation
+            </Text>
+
+            <Heading as="h3">The convenient way to disinfect.</Heading>
+
+            <Text as="p">
+              Perfect for general, nursery, clinical, food, retail athletic or
+              industrial facility use. Use on an airplane, at a hotel, at the
+              grocery store, or at home. Perfect versatility. Wherever you go,
+              eOn’s got you covered.
+            </Text>
+          </Box>
+        </Flex>
 
         <Flex
-          mt={6}
-          pt={6}
+          mt={7}
+          flexWrap="wrap"
+          alignItems="center"
+          flexDirection={['column', 'row', 'row']}
+        >
+          <Box flex={1} mr={[0, 6, 7]}>
+            <img src={safe} width="100%" alt="HOCl" />
+          </Box>
+
+          <Box flex={2}>
+            <Heading as="h3">Safe on just about any surface.</Heading>
+
+            <Text as="p">
+              Designed for use on a variety of surfaces, from porcelain to
+              glass, plastic, cloth, sponges, dishes, pots, utensils, sinks,
+              coolers, counter tops, desk tops, tables, shelves, appliances,
+              door knobs, faucets and more! Cleans stains, dirt, fingerprints,
+              food residue, grease, mold, soil, pet odor, rust, and more.
+            </Text>
+          </Box>
+        </Flex>
+
+        <Flex
+          mt={7}
           flexWrap="wrap"
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
-          <Box width="100%" flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <img src={hclMark} width="100%" alt="HOCl" />
-          </Box>
+          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}></Box>
 
           <Box flex={3}>
-            <Text as="p" color="primary">
-              How does it work?
-            </Text>
-
-            <Heading as="h3">
-              eOn's Hypochlorous Acid multi-surface disinfectant breaks down
-              microbe and virus cell walls, destroying or inactivating 99.9% of
-              bacteria and viruses through protein degradation and inhibition of
-              protein synthesis.
-            </Heading>
-
-            <Box as="ul">
-              <li>Hypochlorous Acid (HOCl)</li>
-              <li>Broad spectrum disinfectant.</li>
-              <li>Derived from naturally occurring salt minerals and water.</li>
-              <li>Zero propellant </li>
-              <li>Continuous mist, bag on valve spray actuator.</li>
-              <li>Convenient, travel friendly, personal size.</li>
-              <li>100% recyclable.</li>
-            </Box>
-
-            <Text as="p" color="tertiary" className="text--small">
-              *Kills over 99.99% of household germs, specifically: Influenza A
-              virus, H1N1, Rhinovirus type 37, Staphylococcus aureus, Salmonella
-              enterica, Pseudomonas aeruginosa and Escherichia coli on hard
-              nonporous surfaces.
+            <Text as="p" color="tertiary">
+              Do not use on steel, aluminum, silver, or chipped enamel.
+              Prolonged contact with metal may cause pitting or discoloration.
+              First test in an inconspicuous place for color washout or contact
+              incompatibility.
             </Text>
           </Box>
         </Flex>
@@ -164,78 +218,70 @@ const MultiSurfacePage = () => {
       <Section border={true} maxWidth={theme.maxWidth}>
         <Flex
           flexWrap="wrap"
-          flexDirection={['column', 'row-reverse', 'row-reverse']}
+          flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
         >
-          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <ImgMatch src="radial-burst.png" altText="" />
+          <Box width="100%" flex={1} ml={[0, 6, 7]}>
+            <img src={virus} width="100%" alt="HOCl" />
           </Box>
 
-          <Box flex={3}>
+          <Box flex={2}>
             <Text as="p" color="primary">
-              Usage
+              How does it work?
             </Text>
 
-            <Heading as="h3">The convenient way to disinfect.</Heading>
+            <Heading as="h3">
+              eOn's Hypochlorous Acid multi-surface disinfectant breaks down
+              microbe and virus cell walls, destroying or inactivating 99.9% of
+              bacteria and viruses through protein degradation and inhibition of
+              protein synthesis.
+            </Heading>
 
-            <Text as="p">
-              eOn mist is perfect for general, nursery, clinical, food, retail,
-              athletic or industrial facility use. On an airplane, at a hotel,
-              or at the grocery store.
-            </Text>
-          </Box>
-        </Flex>
-
-        <Flex mt={7} flexWrap="wrap" flexDirection={['column', 'row', 'row']}>
-          <Box flex={1} pr={[0, 11, 11]} pl={[12, 0, 0]}>
-            <img src={hclMark} width="100%" alt="HOCl" />
-          </Box>
-
-          <Box flex={3}>
-            <Heading as="h3">Safe on just about any surface.</Heading>
-
-            <Text as="p">
-              Cleans stains, dirt, fingerprints, food residue, grease, mold,
-              soil, pet odor, rust, and more. Designed for use on a variety of
-              surfaces—from porcelain to glass—plastic, cloth, sponges, dishes,
-              pots, utensils, sinks, coolers, counter tops, desk tops, tables,
-              shelves, appliances, door knobs, faucets and more.
-            </Text>
+            <Box as="ul">
+              <li>Derived from naturally occurring salt minerals and water.</li>
+              <li>One step, broad spectrum germicide</li>
+              <li>Zero propellant, bag-on-valve spray action</li>
+              <li>Convenient, TSA friendly, personal size</li>
+              <li>Premium-grade recyclable aluminum</li>
+            </Box>
           </Box>
         </Flex>
 
         <Flex
-          mt={7}
+          mt={[5, 6, 7]}
           flexWrap="wrap"
-          flexDirection={['column', 'row-reverse', 'row-reverse']}
+          alignItems="center"
+          flexDirection={['column-reverse', 'row', 'row']}
         >
-          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}></Box>
+          <Box width="100%" flex={1} mr={[0, 6, 7]}>
+            <img src={steps} width="100%" alt="HOCl" />
+          </Box>
 
-          <Box flex={3}>
-            <Text as="p" color="tertiary" className="text--small">
-              Do not use on steel, aluminum, silver, or chipped enamel.
-              Prolonged contact with metal may cause pitting or discoloration.
-              First test in an inconspicuous place for color washout or contact
-              incompatibility.
+          <Box flex={2} mb={[5, 0]}>
+            <Text as="p">
+              *Kills over 99.9% of household germs, specifically: Influenza A
+              virus, H1N1, Rhinovirus type 37, Staphylococcus aureus, Salmonella
+              enterica, Pseudomonas aeruginosa and Escherichia coli on hard
+              nonporous surfaces.
             </Text>
           </Box>
         </Flex>
       </Section>
 
-      <Section border={true} maxWidth={theme.maxWidth}>
+      <Section bg="lightgray" border={true} maxWidth={theme.maxWidth}>
         <Flex
           flexWrap="wrap"
-          flexDirection={['column', 'row-reverse', 'row-reverse']}
+          flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
         >
-          <Box width={1} flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}>
-            <ImgMatch src="hand-right.png" altText="" />
+          <Box width={1} flex={1}>
+            <img src={trust} alt="trust" width="100%" />
           </Box>
 
-          <Box flex={3}>
+          <Box flex={1}>
             <Text as="p" color="primary">
               Ingredients
             </Text>
 
-            <Heading as="h3">Tested and approved.</Heading>
+            <Heading as="h3">Tested and approved, for everyone.</Heading>
 
             <Box as="ul">
               <li>
@@ -244,10 +290,10 @@ const MultiSurfacePage = () => {
               </li>
               <li>Meets OSHA[s] Bloodborne Pathogen Guidelines</li>
               <li>One step germicide</li>
-              <li>Non-greasy formula</li>
+              <li>Gel free, non-greasy formula</li>
               <li>Contains no phosphates</li>
               <li>Contains 500ppm Free Available Chlorine</li>
-              <li>Safe on………..</li>
+              <li>HOCI's light, chlorine odor rapidly dissipates</li>
             </Box>
           </Box>
         </Flex>
@@ -270,7 +316,7 @@ const MultiSurfacePage = () => {
         </Box>
       </Section>
 
-      <Section border={true} overflow="hidden">
+      <Section border={true} overflow="hidden" id="ratings">
         <Reviews reviews={reviews} />
       </Section>
 
@@ -327,18 +373,6 @@ const data = [
     note: 'Sprays from any angle. Requires no shaking, uses no propellant.'
   },
   {
-    question: 'How do I clean with eOn multi-surface?',
-    answer:
-      'Spray 6-8" from surfaces you come in everyday contact with. Treated surfaces must remain wet for 10 minutes. Reapply as necessary to keep wet for 10 minutes. Do not rinse. Allow surfaces to air dry.'
-    // note: 'Learn more about eOn multi-surface → '
-  },
-  {
-    question: 'How does eOn sanitizing mist (HOCl) work? ',
-    answer:
-      "eOn's Hypochlorous Acid multi-surface disinfectant breaks down microbe and virus cell walls, destroying or inactivating 99.9% of bacteria and viruses through protein degradation and inhibition of protein synthesis.",
-    note: ''
-  },
-  {
     question: 'Does eOn sanitizing mist have an odor? ',
     answer:
       'eOn multi-surface disinfectant is an odorless substance, though some natural variation in concentration may lead a light, harmless scent of chlorine that disappears after drying. ',
@@ -352,22 +386,10 @@ const data = [
     note: ''
   },
   {
-    question: 'How do I store my eOn sanitizing mist?',
-    answer:
-      'Store in a cool dark space. Do not expose to heat or store at temperatures above 120°f/50°c or in enclosed places that could overheat. Keep out of reach of children.',
-    note: ''
-  },
-  {
     question: 'Can I travel with eOn sanitizing mist? ',
     answer:
       'Yes! At 2 fluid ounces, our personal size DOT 2Q aluminum cans are fully TSA compliant. Spray it on your seat or tray table, wait until dry. ',
     note:
       'Current TSA guidelines allow for up to 3.4oz of liquid. At the airport? Find eOn multi-surface at your terminal’s Hudson News retailer. '
-  },
-  {
-    question: "My can won't spray correctly, help.",
-    answer:
-      'Make sure your cap has been fully twisted to unlock and that no part of your clear-actuator-cap component is damaged or missing. If misting action is reduced or not present, it may be your can is empty or actuator is faulty. '
-    // note: 'Learn about Returns →'
   }
 ]

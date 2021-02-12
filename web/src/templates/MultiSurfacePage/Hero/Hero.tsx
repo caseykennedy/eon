@@ -62,8 +62,8 @@ const Hero = () => {
                   dangerouslySetInnerHTML={{ __html: data.headline }}
                 />
                 <Text as="p">
-                  Ideal for use on the go, in restaurants, schools, offices,
-                  retail, kitchens, etc. Leaves no residue. No wiping required.
+                  Ideal for use on-the-go, in restaurants, schools, offices,
+                  retail, kitchens and beyond. Leaves no residue. No wiping required.
                 </Text>
                 <AnchorLink href={`#learn-more`} offset={theme.scrollOffset}>
                   <ArrowLink>

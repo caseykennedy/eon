@@ -24,7 +24,7 @@ export const HowTo = styled(Flex)`
   .figure {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     margin: 0 ${theme.space[5]} ${theme.space[5]};
 
@@ -36,7 +36,8 @@ export const HowTo = styled(Flex)`
       max-width: 400px;
     }
 
-    svg {
+    svg,
+    img {
       height: 150px;
       width: 100%;
 
