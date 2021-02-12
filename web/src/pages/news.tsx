@@ -21,10 +21,10 @@ import useSiteSettings from '../hooks/useSiteSettings'
 const News = () => {
   const site = useSiteSettings()
   return (
-    <Layout>
+    <>
       <SEO pathname={`/news`} title={`News & Press | ${site.titleShort}`} />
       <NewsPage />
-    </Layout>
+    </>
   )
 }
 

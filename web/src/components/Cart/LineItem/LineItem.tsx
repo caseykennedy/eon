@@ -18,8 +18,9 @@ import Icon from '../../Icons'
 
 // Context
 import StoreContext from '../../../context/StoreContext'
+import { LineItemShape } from '@/types'
 
-const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
+const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
   const qtyRef = React.useRef<HTMLInputElement>(null)
 
   const {
@@ -124,10 +125,22 @@ const LineItem: React.FC<{ item: LineItem }> = ({ item }) => {
             fontWeight={500}
             mb={2}
           >
-            {item.title}
+            {!item.discountAllocations[0] ? (
+              item.title
+            ) : (
+              <>
+                <Box as="span">BUY3GET3</Box>
+                <br />
+              </>
+            )}
           </Text>
           <Text as="p" fontSize={2} fontWeight={500} mb={0}>
-            ${item.variant.priceV2.amount}
+          {!item.discountAllocations[0] ? (
+              `$${item.variant.priceV2.amount}`
+            ) : (
+                <Box as="span">FREE</Box>
+              
+            )}
           </Text>
 
           {/* <Box as="span" color="tertiary" mt={1}>$4.90 flat rate shipping</Box> */}

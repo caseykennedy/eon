@@ -13,6 +13,7 @@ import Pill from '../ui/Pill'
 import Card from '../ui/Card'
 import PostMeta from '../PostMeta'
 import BlockContent from '../BlockContent'
+import { PostQuery } from '@/types'
 
 // ___________________________________________________________________
 

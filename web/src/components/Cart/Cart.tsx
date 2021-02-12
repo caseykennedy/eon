@@ -17,7 +17,7 @@ import StoreContext from '../../context/StoreContext'
 // Theme + UI
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Text } from '../ui'
+import { Box, Text } from '../ui'
 import Button from '../ui/Button'
 
 // Components
@@ -84,7 +84,10 @@ const CartItems: React.FC<CartItemsProps> = ({
             <LineItems />
           </div>
           <Text as="span" mt={1} textAlign="center">
-            $4.90 flat rate shipping
+            {/* $4.90 flat rate shipping */}
+            ❤️&nbsp;<Box as="strong">BUY 3 GET 3 FREE</Box>&nbsp;❤️
+            <br />
+            Just add them to your cart
           </Text>
           <div className="cart-items__checkout">
             {/* <div className="subtotal">

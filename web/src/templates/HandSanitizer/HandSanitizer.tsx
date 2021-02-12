@@ -29,7 +29,7 @@ const HandSanitizer: React.FC<ShopifyProductContextShape> = ({
 }) => {
   const product = pageContext.product
   return (
-    <Layout>
+    <>
       <SEO
         pathname={`/products/${product.handle}`}
         title={`${product.title} | eOn mist disinfectants and personal sanitation`}
@@ -71,7 +71,7 @@ const HandSanitizer: React.FC<ShopifyProductContextShape> = ({
         <Reviews />
         <Retailers />
       </Box>
-    </Layout>
+    </>
   )
 }
 

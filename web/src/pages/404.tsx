@@ -17,13 +17,13 @@ import SEO from '../components/SEO'
 
 const fourofourPage = () => {
   return (
-    <Layout>
+    <>
       <SEO />
       <Box px={[4, 7]} py={[8, 10]}>
         <h1>404</h1>
         <p>This is not the droid you are looking for 👋</p>
       </Box>
-    </Layout>
+    </>
   )
 }
 
