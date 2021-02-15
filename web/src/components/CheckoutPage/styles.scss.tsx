@@ -12,7 +12,6 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const CheckoutPage = styled(Box)`
-
   @media ${theme.mq.tablet} {
   }
 `
@@ -31,8 +30,6 @@ export const CartItems = styled(Flex)`
       flex-direction: column;
       justify-content: space-between;
       width: 100%;
-      /* overflow: auto;
-      -webkit-overflow-scrolling: touch; */
     }
 
     &__checkout {
@@ -41,7 +38,6 @@ export const CartItems = styled(Flex)`
       align-items: center;
 
       border-top: ${theme.border};
-      /* border-top-color: ${theme.colors.gray}; */
       padding-top: ${theme.space[2]};
 
       button {
@@ -62,5 +58,10 @@ export const CartItems = styled(Flex)`
         }
       }
     }
+  }
+
+  .full-amount {
+    color: ${theme.colors.tertiary};
+    text-decoration: line-through;
   }
 `

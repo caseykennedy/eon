@@ -17,11 +17,7 @@ export const LineItem = styled.div`
     &__utilities {
       display: flex;
       justify-content: space-between;
-      margin: ${theme.space[3]} 0 0;
-
-      @media ${theme.mq.tablet} {
-        margin: ${theme.space[4]} 0 0;
-      }
+      margin: 0;
 
       input {
         background: ${theme.colors.white};
@@ -108,14 +104,12 @@ export const LineItem = styled.div`
   .discount {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    background: ${theme.colors.primary};
+    border: ${theme.border};
     border-radius: ${theme.borderRadius};
-    color: ${theme.colors.white};
-    font-weight: 500;
+    padding: ${theme.space[2]};
 
-    padding: ${theme.space[4]};
     width: 100%;
   }
 `

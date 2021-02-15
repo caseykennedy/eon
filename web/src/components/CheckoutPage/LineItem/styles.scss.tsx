@@ -17,11 +17,7 @@ export const LineItem = styled.div`
     &__utilities {
       display: flex;
       justify-content: space-between;
-      margin: ${theme.space[3]} 0 0;
-
-      @media ${theme.mq.tablet} {
-        margin: ${theme.space[4]} 0 0;
-      }
+      margin: 0;
 
       input {
         background: ${theme.colors.white};
@@ -82,10 +78,6 @@ export const LineItem = styled.div`
 
           transition: background-color ${theme.transition.global};
 
-          &:hover {
-            background: ${theme.colors.quinary};
-          }
-
           div {
             background: ${theme.colors.gray};
             position: relative;
@@ -96,8 +88,28 @@ export const LineItem = styled.div`
             height: calc(${theme.space[3]} * 1.5);
             width: calc(${theme.space[3]} * 1.5);
           }
+
+          &:hover {
+            background: ${theme.colors.tertiary};
+
+            svg {
+              /* fill: ${theme.colors.white}; */
+            }
+          }
         }
       }
     }
+  }
+
+  .discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: ${theme.border};
+    border-radius: ${theme.borderRadius};
+    padding: ${theme.space[2]};
+
+    width: 100%;
   }
 `

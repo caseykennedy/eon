@@ -17,7 +17,7 @@ import StoreContext from '../../context/StoreContext'
 // Theme + UI
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Text } from '../ui'
+import { Box, Flex, Text } from '../ui'
 import Button from '../ui/Button'
 
 // Components
@@ -87,29 +87,16 @@ const CartItems: React.FC<CartItemsProps> = ({
             {/* $4.90 flat rate shipping */}
             ❤️&nbsp;<Box as="strong">BUY 3 GET 3 FREE</Box>&nbsp;❤️
             <br />
-            Add all six to your cart
+            Add six or more to activate
           </Text>
           <div className="cart-items__checkout">
-            {/* <div className="subtotal">
-              <Text as="p" color="darkgray">
-                Subtotal
-              </Text>
-              <Text as="p" color="darkgray">
-                ${checkout.subtotalPrice && checkout.subtotalPrice}
-              </Text>
-            </div> */}
-            {/* <div className="total">
-              <Text>shipping</Text>
-              <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>
-            </div> */}
+            <Flex justifyContent="flex-end" width={1}>
+              <Text as="p" className="full-amount">{checkout.discountApplications[0] && checkout.lineItemsSubtotalPrice.amount}</Text>
+            </Flex>
             <div className="total">
               <p>Subtotal</p>
               <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>
             </div>
-            {/* <div className="total">
-              <p>Total</p>
-              <p>${checkout.totalPrice && checkout.totalPrice}</p>
-            </div> */}
             <Button
               as="button"
               bg={theme.colors.black}

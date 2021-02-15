@@ -127,7 +127,10 @@ const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
                 fontWeight={500}
                 mb={2}
               >
-                {item.title}
+                Hand Sanitizer{' '}
+                <Box as="span" color="tertiary">
+                  (80% ethyl alc.)
+                </Box>
               </Text>
               <Text as="p" fontSize={2} fontWeight={500} mb={0}>
                 ${item.variant.priceV2.amount}
@@ -168,9 +171,47 @@ const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
           </Flex>
         </>
       ) : (
-        <Flex className="discount">
-          <Text as="span">❤️ You rock! We'll add 3 free cans to your order ❤️</Text>
-        </Flex>
+        <>
+          <Flex className="discount">
+            <Box width={1 / 4} className="line-item__thumbnail">
+              <Link to={`/products/${item.variant.product.handle}/`}>
+                <VariantImage />
+              </Link>
+            </Box>
+            <Box width={3 / 4}>
+              <Text
+                as="p"
+                fontSize={[
+                  `calc(${theme.fontSizes[2]} / 1)`,
+                  `calc(${theme.fontSizes[2]} * 1.15)`
+                ]}
+                fontWeight={500}
+                mb={0}
+              >
+                Buy 3 Get 3 ❤️
+              </Text>
+            </Box>
+
+            <Flex justifyContent="flex-end" className="line-item__utilities">
+              <Flex pl={4}>
+                <Box mr={2}>qty.</Box>
+                <Input
+                  type="number"
+                  id="quantity"
+                  inputMode="numeric"
+                  name="quantity"
+                  min="1"
+                  step="1"
+                  pattern="[0-9]*"
+                  onChange={handleQuantityChange}
+                  value={quantity}
+                  ref={qtyRef}
+                  onClick={focusInput}
+                />
+              </Flex>
+            </Flex>
+          </Flex>
+        </>
       )}
     </S.LineItem>
   )

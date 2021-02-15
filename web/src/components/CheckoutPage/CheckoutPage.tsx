@@ -4,7 +4,7 @@
 
 import React, { useContext } from 'react'
 
-import { Box, Text } from '../ui'
+import { Box, Flex, Text } from '../ui'
 
 import Section from '../Section'
 
@@ -38,6 +38,8 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
   const handleCheckout = () => {
     window.open(checkout.webUrl)
   }
+
+  console.log(checkout)
   return (
     <S.CartItems>
       {!checkout.lineItems[0] ? (
@@ -61,20 +63,21 @@ const CartItems: React.FC<CartItemsProps> = ({ adding, checkout }) => {
             <LineItems />
           </div>
           <div className="cart-items__checkout">
-            <div className="total">
+            {/* <div className="total">
               <Text>shipping</Text>
               <p>$4.90</p>
-            </div>
+            </div> */}
+            <Flex justifyContent="flex-end" width={1}>
+              <Text as="p" className="full-amount">{checkout.discountApplications[0] && checkout.lineItemsSubtotalPrice.amount}</Text>
+            </Flex>
             <div className="total">
-              <p>Subtotal</p>
+              <p>
+                SUBTOTAL
+              </p>
               <p>${checkout.subtotalPrice && checkout.subtotalPrice}</p>
             </div>
-            <div className="total">
-              <p>Total</p>
-              <p>${checkout.totalPrice && checkout.totalPrice}</p>
-            </div>
           </div>
-          <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
+          {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p> */}
           <br />
           <button
             onClick={handleCheckout}

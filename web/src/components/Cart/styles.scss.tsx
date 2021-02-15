@@ -153,6 +153,14 @@ export const CartItems = styled(Flex)`
       }
     }
   }
+
+  .full-amount {
+    font-size: ${theme.fontSizes[2]};
+          font-weight: 600;
+          text-transform: uppercase;
+    color: ${theme.colors.tertiary};
+    text-decoration: line-through;
+  }
 `
 
 export const Exit = styled(Flex)`
