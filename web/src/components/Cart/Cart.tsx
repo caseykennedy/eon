@@ -87,7 +87,7 @@ const CartItems: React.FC<CartItemsProps> = ({
             {/* $4.90 flat rate shipping */}
             ❤️&nbsp;<Box as="strong">BUY 3 GET 3 FREE</Box>&nbsp;❤️
             <br />
-            Just add them to your cart
+            Add all six to your cart
           </Text>
           <div className="cart-items__checkout">
             {/* <div className="subtotal">

@@ -65,7 +65,7 @@ const Message: React.FC<Props> = ({
         }}
       >
         <Text as="p" fontSize={1}>
-          ❤️&nbsp;<Box as="strong">BUY 3 GET 3 FREE</Box>&nbsp;❤️ Just add them to your cart
+          ❤️&nbsp;<Box as="strong">BUY 3 GET 3 FREE</Box>&nbsp;❤️ Add all six to your cart
         </Text>
       </Link>
 
