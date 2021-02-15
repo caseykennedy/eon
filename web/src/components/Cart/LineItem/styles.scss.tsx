@@ -104,4 +104,18 @@ export const LineItem = styled.div`
       }
     }
   }
+
+  .discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: ${theme.colors.primary};
+    border-radius: ${theme.borderRadius};
+    color: ${theme.colors.white};
+    font-weight: 500;
+
+    padding: ${theme.space[4]};
+    width: 100%;
+  }
 `

@@ -64,7 +64,7 @@ const CartItems: React.FC<CartItemsProps> = ({
   return (
     <S.CartItems>
       {!checkout.lineItems[0] ? (
-        <>
+        <Box width={1}>
           {!adding ? (
             <Text as="p" mt={7} textAlign="center">
               Your cart is empty 😭
@@ -77,7 +77,7 @@ const CartItems: React.FC<CartItemsProps> = ({
               Adding eOn...
             </Text>
           )}
-        </>
+        </Box>
       ) : (
         <>
           <div className="cart-items__list">

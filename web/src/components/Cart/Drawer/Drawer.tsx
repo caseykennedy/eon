@@ -35,6 +35,7 @@ const Drawer: React.FC<ModalProps> = ({ children }) => {
       center={false}
       showCloseIcon={false}
       styles={modalStyles}
+      focusTrapped={false}
     >
       {children}
     </ReactModal>
