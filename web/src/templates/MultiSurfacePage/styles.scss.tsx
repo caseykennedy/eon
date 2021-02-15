@@ -15,4 +15,9 @@ import theme from '../../gatsby-plugin-theme-ui'
 export const MultiSurfacePage = styled(Box)`
   @media ${theme.mq.tablet} {
   }
+
+  .shield {
+    margin-left: auto;
+    max-width: 500px;
+  }
 `

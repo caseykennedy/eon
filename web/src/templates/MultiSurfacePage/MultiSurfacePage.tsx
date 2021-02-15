@@ -29,7 +29,7 @@ import shelf from './assets/shelf.svg'
 import disinfect from './assets/disinfect.svg'
 import safe from './assets/safe.svg'
 import virus from './assets/virus.svg'
-import trust from './assets/trust.svg'
+import trust from './assets/trusttt.svg'
 import steps from './assets/steps.svg'
 
 // ___________________________________________________________________
@@ -44,7 +44,12 @@ const MultiSurfacePage = () => {
         <StoreLocator />
       </Section>
 
-      <Section border={true} maxWidth={theme.maxWidth} id="learn-more" overflow="hidden">
+      <Section
+        border={true}
+        maxWidth={theme.maxWidth}
+        id="learn-more"
+        overflow="hidden"
+      >
         <Flex
           flexWrap="wrap"
           flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
@@ -80,7 +85,7 @@ const MultiSurfacePage = () => {
               dissipates.
             </Text> */}
 
-            <Text as="p"></Text>
+            <Text as="p"/>
 
             <Flex
               width={[1]}
@@ -122,7 +127,7 @@ const MultiSurfacePage = () => {
                 }}
               >
                 <Text as="p" fontSize={3} fontWeight={600} mb={0}>
-                  Hypochlorous acid (HOCI)
+                  Hypochlorous Acid (HOCI)
                 </Text>
                 <Text as="p">
                   Hypochlorous Acid (HOCI) is one of the most effective known
@@ -137,6 +142,7 @@ const MultiSurfacePage = () => {
       </Section>
 
       <Section border={true} maxWidth={theme.maxWidth}>
+        <Text className="text--xl" textAlign="center">Over 14 million sold!</Text>
         <Flex
           flexWrap="wrap"
           alignItems="center"
@@ -148,7 +154,7 @@ const MultiSurfacePage = () => {
 
           <Box flex={2}>
             <Text as="p" color="primary">
-              Smarter sanitation
+            Smarter, to-go
             </Text>
 
             <Heading as="h3">The convenient way to disinfect.</Heading>
@@ -190,7 +196,7 @@ const MultiSurfacePage = () => {
           flexWrap="wrap"
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
-          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}></Box>
+          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}/>
 
           <Box flex={3}>
             <Text as="p" color="tertiary">
@@ -268,17 +274,10 @@ const MultiSurfacePage = () => {
       </Section>
 
       <Section bg="lightgray" border={true} maxWidth={theme.maxWidth}>
-        <Flex
-          flexWrap="wrap"
-          flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
-        >
-          <Box width={1} flex={1}>
-            <img src={trust} alt="trust" width="100%" />
-          </Box>
-
+        <Flex flexWrap="wrap" flexDirection={['column', 'row', 'row']}>
           <Box flex={1}>
             <Text as="p" color="primary">
-              Ingredients
+              Everyday sanitation
             </Text>
 
             <Heading as="h3">Tested and approved, for everyone.</Heading>
@@ -294,6 +293,12 @@ const MultiSurfacePage = () => {
               <li>Contains no phosphates</li>
               <li>Contains 500ppm Free Available Chlorine</li>
               <li>HOCI's light, chlorine odor rapidly dissipates</li>
+            </Box>
+          </Box>
+
+          <Box width={1} flex={1}>
+            <Box className="shield">
+              <ImgMatch src="trust.png" altText="" />
             </Box>
           </Box>
         </Flex>
