@@ -25,11 +25,6 @@ import CapTwist from '../../../components/SVG/CapTwist'
 import SprayHand from '../../../components/SVG/SprayHand'
 import HappyHands from '../../../components/SVG/HappyHands'
 import FeatureStack from '../../../components/SVG/FeatureStack'
-import AbstractSpray from '../../../components/SVG/AbstractSpray'
-import WeRefreshHands from '../../../components/SVG/WeRefreshHands'
-
-import sprayMist from './svg/spray.svg'
-import hch from './svg/hch.svg'
 
 // ___________________________________________________________________
 
@@ -52,7 +47,10 @@ const HowTo = () => (
 const Specs = () => {
   return (
     <S.Gradient>
-      <Section bg="transparent" pt={[6, 7, 9]}>
+      <Section bg="transparent">
+        <Text className="text--xl" textAlign="center" mb={5}>
+          How to use
+        </Text>
         <S.HowTo>
           <HowTo />
         </S.HowTo>

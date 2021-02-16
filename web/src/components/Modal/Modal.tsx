@@ -34,6 +34,7 @@ const Modal: React.FC<ModalProps> = ({ active, children }) => {
       onClose={closeModal}
       center={true}
       styles={modalStyles}
+      focusTrapped={false}
     >
       {children}
     </ReactModal>

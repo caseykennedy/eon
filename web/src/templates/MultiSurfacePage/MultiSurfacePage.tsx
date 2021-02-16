@@ -25,6 +25,7 @@ import Accordion from '../../components/Accordion'
 
 import hclMark from './assets/hocl.svg'
 import shelf from './assets/shelf.svg'
+import trustShield from './assets/trustShield.svg'
 
 import disinfect from './assets/disinfect.svg'
 import safe from './assets/safe.svg'
@@ -85,7 +86,7 @@ const MultiSurfacePage = () => {
               dissipates.
             </Text> */}
 
-            <Text as="p"/>
+            <Text as="p" />
 
             <Flex
               width={[1]}
@@ -142,7 +143,9 @@ const MultiSurfacePage = () => {
       </Section>
 
       <Section border={true} maxWidth={theme.maxWidth}>
-        <Text className="text--xl" textAlign="center">Over 14 million sold!</Text>
+        <Text className="text--xl" textAlign="center">
+          Over 14 million sold
+        </Text>
         <Flex
           flexWrap="wrap"
           alignItems="center"
@@ -154,7 +157,7 @@ const MultiSurfacePage = () => {
 
           <Box flex={2}>
             <Text as="p" color="primary">
-            Smarter, to-go
+              Smarter, to-go
             </Text>
 
             <Heading as="h3">The convenient way to disinfect.</Heading>
@@ -196,7 +199,7 @@ const MultiSurfacePage = () => {
           flexWrap="wrap"
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
-          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]}/>
+          <Box flex={1} pl={[0, 11, 11]} pr={[12, 0, 0]} />
 
           <Box flex={3}>
             <Text as="p" color="tertiary">
@@ -214,9 +217,9 @@ const MultiSurfacePage = () => {
         border={true}
         maxWidth={theme.maxWidth}
       >
-        <Heading as="h2" mb={5} textAlign="center">
+        <Text className="text--xl" textAlign="center" mb={5}>
           How to use
-        </Heading>
+        </Text>
 
         <HowTo />
       </Section>
@@ -298,7 +301,7 @@ const MultiSurfacePage = () => {
 
           <Box width={1} flex={1}>
             <Box className="shield">
-              <ImgMatch src="trust.png" altText="" />
+              <img src={trustShield} alt="" width="100%" />
             </Box>
           </Box>
         </Flex>
@@ -321,17 +324,12 @@ const MultiSurfacePage = () => {
         </Box>
       </Section>
 
-      <Section border={true} overflow="hidden" id="ratings">
+      <Section bg="white" border={true} overflow="hidden" id="ratings">
         <Reviews reviews={reviews} />
       </Section>
 
-      <Section bg="" border={true} maxWidth={theme.maxWidth}>
-        <Text as="p" color={theme.colors.tertiary}>
-          * Do not use on steel, aluminum, silver, or chipped enamel. Prolonged
-          contact with metal may cause pitting or discoloration. First test in
-          an inconspicuous place for color washout or contact incompatibility.
-        </Text>
-        <Text as="p" color={theme.colors.tertiary}>
+      <Section bg="lightgray" border={true} maxWidth={theme.readingWidth}>
+        <Text as="p" color={theme.colors.tertiary} className="text--small">
           <strong>WARNING:</strong> DO NOT SPRAY ON ELECTRONIC DEVICES. AVOID
           SPRAYING IN EYES, IN CASE OF CONTACT WITH EYES, FLUSH THOROUGHLY WITH
           WATER. CONTENTS UNDER PRESSURE. DO NOT PUNCTURE OR INCINERATE. DO NOT

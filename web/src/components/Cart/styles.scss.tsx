@@ -32,6 +32,10 @@ export const Cart = styled(Box)`
   overflow: scroll;
   -webkit-overflow-scrolling: scroll;
 
+  & > div {
+    width: 100%;
+  }
+
   @media ${theme.mq.tablet} {
     border-left: ${theme.border};
     opacity: 0;

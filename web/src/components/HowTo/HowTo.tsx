@@ -50,7 +50,7 @@ const Specs = () => {
           WAIT until DRY
         </Flex>
         <Text fontSize={2} className="figure__caption">
-          you're good to go
+          You're good to go
         </Text>
       </Box>
     </S.HowTo>

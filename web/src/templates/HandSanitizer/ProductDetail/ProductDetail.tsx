@@ -8,7 +8,7 @@ import * as S from './styles.scss'
 import { motion } from 'framer-motion'
 
 // ui
-import { Button, Text, Flex, Box } from '../../../components/ui'
+import { Text, Flex, Box } from '../../../components/ui'
 
 // Components
 import ImgMatch from '../../../components/ImgMatch'
@@ -60,9 +60,10 @@ const ProductDetail: React.FC = () => {
             </Box>
           </Box>
           <Box flex={[1]} mr={[0, 0, 7]} mt={[4, 6]}>
-            <Text as="h4" mb={[3, 4]}>
-              Better, faster, smarter.
+            <Text as="p" color="primary">
+              Better, faster, smarter
             </Text>
+
             <h2>Precise hand sanitation wherever you go.</h2>
 
             <Text as="p">
@@ -77,14 +78,14 @@ const ProductDetail: React.FC = () => {
             </Box>
 
             <Flex mt={4} mb={0}>
-              <Text as="p" mb={0} className="t--small">
+              <Text as="p" mb={0} className="text--small">
                 Aluminum-Free
                 <br />
                 Dye-Free
                 <br />
                 Paraben-Free
               </Text>
-              <Text as="p" color="primary" ml={5} className="t--small">
+              <Text as="p" color="primary" ml={5} className="text--small">
                 Fully Recyclable
                 <br />
                 FDA Registered

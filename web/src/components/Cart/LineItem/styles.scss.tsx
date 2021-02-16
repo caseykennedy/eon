@@ -106,6 +106,7 @@ export const LineItem = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    background: ${theme.colors.lightgray};
     border: ${theme.border};
     border-radius: ${theme.borderRadius};
     padding: ${theme.space[2]};

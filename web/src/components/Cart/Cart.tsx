@@ -1,4 +1,4 @@
-// Announcement:
+// Cart
 
 // ___________________________________________________________________
 
@@ -35,13 +35,13 @@ type Props = {
   // setPortalOpen: (arg0: boolean) => void
 }
 
-// ___________________________________________________________________
-
 type CartItemsProps = {
   adding?: boolean
   checkout: any
   scrollRef?: React.RefObject<HTMLDivElement>
 }
+
+// ___________________________________________________________________
 
 const CartItems: React.FC<CartItemsProps> = ({
   adding,
@@ -108,8 +108,6 @@ const CartItems: React.FC<CartItemsProps> = ({
               Checkout
             </Button>
           </div>
-          {/* <p>Taxes $ {checkout.totalTax && checkout.totalTax}</p>
-      <br /> */}
         </>
       )}
     </S.CartItems>
