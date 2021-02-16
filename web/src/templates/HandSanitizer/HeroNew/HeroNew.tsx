@@ -137,8 +137,8 @@ const data = {
   headline: 'Pro-grade<br />hand sanitation<br />made simple.',
   statement:
     'Clean, disinfect, and deodorize<br />your environment, on the go.',
-  note: 'For everyone.',
-  tagline: 'For everyone.',
+  note: 'eOn, for everyone™',
+  tagline: 'eOn, for everyone™',
   featureA: 'Effective on<br /><mark>99.99%</mark> of<br />common germs',
   featureB: 'personal size<br />germ protection<br />on the go'
 }

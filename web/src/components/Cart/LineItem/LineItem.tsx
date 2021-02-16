@@ -207,6 +207,7 @@ const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
                   value={quantity}
                   ref={qtyRef}
                   onClick={focusInput}
+                  disabled={true}
                 />
               </Flex>
             </Flex>

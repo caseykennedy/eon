@@ -40,8 +40,7 @@ const Hero = () => {
             <Flex className="hero__message">
               <Box>
                 <Text as="h5" color="tertiary">
-                  {/* {data.vendor} */}
-                  Over 14 million sold!
+                  {data.vendor}
                 </Text>
                 <Text
                   as="h1"
