@@ -15,6 +15,9 @@ import { Flex } from '../../../components/ui'
 import * as S from './styles.scss'
 import theme from '../../../gatsby-plugin-theme-ui'
 
+// Types
+import { PostContextShape } from '@/types'
+
 // ___________________________________________________________________
 
 const path = 'news'

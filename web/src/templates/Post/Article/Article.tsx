@@ -23,6 +23,9 @@ import PrevNext from '../PrevNext'
 // Data
 import useSiteSettings from '../../../hooks/useSiteSettings'
 
+// Types
+import { PostContextShape } from '@/types'
+
 // ___________________________________________________________________
 
 const Article: React.FC<PostContextShape> = ({ pageContext }) => {

@@ -52,6 +52,7 @@ const MultiSurfacePage = () => {
         overflow="hidden"
       >
         <Flex
+          alignItems="center"
           flexWrap="wrap"
           flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
         >
@@ -67,10 +68,31 @@ const MultiSurfacePage = () => {
             </Text>
 
             <Heading as="h3">
-              eOn Sanitizing Mist™ is an EPA-registered (List N) personal
+              eOn sanitizing mist&trade; is an EPA-registered (List N) personal
               protection disinfectant which rapidly neutralizes 99.9% of
               transmissible pathogens.
             </Heading>
+
+            {/* <Text as="p" fontSize={3} fontWeight={600} mb={0}>
+              The easy one-step sanitizing formula.
+            </Text>
+
+            <Text as="p">
+              eOn multi-surface is zero-mess, broad spectrum, wide-angle-mist
+              disinfection that breaks down germs—effectively cleaning,
+              deodorizing and disinfecting high touch surfaces.
+            </Text>
+
+            <Text as="p" fontSize={3} fontWeight={600} mb={0}>
+              Hypochlorous Acid (HOCI)
+            </Text>
+
+            <Text as="p">
+              Derived from naturally occurring minerals (which also occur in the
+              human immune system), HOCI is one of the best known biocides—used
+              in healthcare, food safety, water treatment and general
+              sanitation.
+            </Text> */}
 
             {/* <Text as="p">
               eOn multi-surface is an EPA registered (List N) personal
@@ -85,8 +107,6 @@ const MultiSurfacePage = () => {
               world-wide. HOCI’s chlorine based odor does not linger and rapidly
               dissipates.
             </Text> */}
-
-            <Text as="p" />
 
             <Flex
               width={[1]}
@@ -107,11 +127,12 @@ const MultiSurfacePage = () => {
                 }}
               >
                 <Text as="p" fontSize={3} fontWeight={600} mb={0}>
-                  eOn multi-surface
+                  Easy one-step formula
                 </Text>
                 <Text as="p">
-                  eOn multi-surface is zero-mess, zero-propellant, wide-angle
-                  continuous spray, broad spectrum disinfection.
+                  The zero-mess, broad spectrum, wide-angle-mist disinfectant
+                  that breaks down germs and effectively cleans, deodorizes and
+                  disinfects high touch surfaces.
                 </Text>
               </Box>
               <Box
@@ -131,10 +152,10 @@ const MultiSurfacePage = () => {
                   Hypochlorous Acid (HOCI)
                 </Text>
                 <Text as="p">
-                  Hypochlorous Acid (HOCI) is one of the most effective known
-                  biocides, also produced in the human immune system. HOCI is
-                  used in healthcare, food safety, water treatment and general
-                  sanitation world-wide.
+                  Derived from naturally occurring minerals (which also occur in
+                  the human immune system), HOCI is one of the best known
+                  biocides—used in healthcare, food safety, water treatment and
+                  general sanitation.
                 </Text>
               </Box>
             </Flex>
@@ -142,9 +163,19 @@ const MultiSurfacePage = () => {
         </Flex>
       </Section>
 
+      <Section bg="primary" color="white" maxWidth="875px">
+        <Text className="text--lg" textAlign="center" py={5}>
+          Personal size sanitation designed to be carried everywhere. Effective
+          against viral pathogens. No fumes, fragrance or worries. Proudly made
+          in the USA.
+        </Text>
+      </Section>
+
       <Section border={true} maxWidth={theme.maxWidth}>
         <Text className="text--xl" textAlign="center">
-          Over 14 million sold
+          In over 25,000 U.S. stores.
+          <br />
+          Over 14 million sold.
         </Text>
         <Flex
           flexWrap="wrap"
@@ -157,17 +188,15 @@ const MultiSurfacePage = () => {
 
           <Box flex={2}>
             <Text as="p" color="primary">
-              Smarter, to-go
+              The convenient way to disinfect
             </Text>
 
-            <Heading as="h3">The convenient way to disinfect.</Heading>
-
-            <Text as="p">
+            <Heading as="h3">
               Perfect for general, nursery, clinical, food, retail athletic or
               industrial facility use. Use on an airplane, at a hotel, at the
-              grocery store, or at home. Perfect versatility. Wherever you go,
-              eOn’s got you covered.
-            </Text>
+              grocery store, or at home. Disinfection versatility, wherever you
+              go, eOn’s got you covered.
+            </Heading>
           </Box>
         </Flex>
 
@@ -185,11 +214,12 @@ const MultiSurfacePage = () => {
             <Heading as="h3">Safe on just about any surface.</Heading>
 
             <Text as="p">
-              Designed for use on a variety of surfaces, from porcelain to
-              glass, plastic, cloth, sponges, dishes, pots, utensils, sinks,
-              coolers, counter tops, desk tops, tables, shelves, appliances,
-              door knobs, faucets and more! Cleans stains, dirt, fingerprints,
-              food residue, grease, mold, soil, pet odor, rust, and more.
+              Designed for use on a variety of surfaces: from porcelain to
+              glass, plastic to cloth and everything from sponges, dishes, pots,
+              utensils, sinks, coolers, counter tops, desk tops, tables,
+              shelves, appliances, door knobs, to faucets and more! Cleans
+              stains, dirt, fingerprints, food residue, grease, mold, soil, pet
+              odor, and rust.
             </Text>
           </Box>
         </Flex>

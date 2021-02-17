@@ -20,7 +20,10 @@ import ProductDetail from './ProductDetail'
 // Components
 import Layout from '../../components/Layout'
 import SEO from '../../components/SEO'
-import Trademarks from '../../components/Trademarks'
+import Trademarks from './Trademarks'
+
+// Types
+import { ShopifyProductContextShape } from '@/types'
 
 // ___________________________________________________________________
 
@@ -40,37 +43,13 @@ const HandSanitizer: React.FC<ShopifyProductContextShape> = ({
         sku={product.variants[0].shopifyId}
         price={product.variants[0].price}
       />
-      <Box>
-        {/* <Flex p={5}>
-            <Box width={1 / 2}>
-              {product.images && (
-                <Box width={1 / 4}>
-                  {product.images.map(image => (
-                    <Img
-                      fluid={image.localFile.childImageSharp.fluid}
-                      key={image.id}
-                      alt={product.title}
-                    />
-                  ))}
-                </Box>
-              )}
-            </Box>
-            <Box width={1 / 2}>
-              <h2>{product.title}</h2>
-              <p
-                dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-              />
-              <ProductForm product={product} />
-            </Box>
-          </Flex> */}
-        <HeroNew />
-        <Trademarks />
-        <Mist />
-        <Specs />
-        <ProductDetail />
-        <Reviews />
-        <Retailers />
-      </Box>
+      <HeroNew />
+      <Trademarks />
+      <Mist />
+      <Specs />
+      <ProductDetail />
+      <Reviews />
+      <Retailers />
     </>
   )
 }
