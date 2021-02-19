@@ -4,6 +4,7 @@
 // ___________________________________________________________________
 
 import { graphql, useStaticQuery } from 'gatsby'
+import { ShopifyProductNode } from '@/types'
 
 // ___________________________________________________________________
 

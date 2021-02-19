@@ -182,7 +182,7 @@ const MultiSurfacePage = () => {
           alignItems="center"
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
-          <Box flex={1} ml={[0, 6, 7]}>
+          <Box width={1} flex={1} ml={[0, 6, 7]} mb={[2, 0]}>
             <img src={disinfect} width="100%" />
           </Box>
 
@@ -206,7 +206,7 @@ const MultiSurfacePage = () => {
           alignItems="center"
           flexDirection={['column', 'row', 'row']}
         >
-          <Box flex={1} mr={[0, 6, 7]}>
+          <Box width={1} flex={1} mr={[0, 6, 7]}>
             <img src={safe} width="100%" alt="HOCl" />
           </Box>
 

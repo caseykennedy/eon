@@ -1,34 +1,28 @@
 // useInstagram hook
+// Hook for querying data
 
 // ___________________________________________________________________
 
 import { graphql, useStaticQuery } from 'gatsby'
+import { InstagramFeedShape } from '@/types'
 
 // ___________________________________________________________________
 
 const useInstagram = () => {
   const data = useStaticQuery<InstagramFeedShape>(graphql`
     query InstagramQuery {
-      instagram: allSanityInstagram(sort: {order: DESC, fields: publishedAt}) {
+      instagram: allInstagramContent {
         edges {
           node {
-            _rawCaption
-            figure {
-              alt
-              asset {
-                fluid(maxWidth: 300) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
+            caption
+            media_url
+            localImage {
+              childImageSharp {
+                fluid(maxHeight: 500, maxWidth: 500, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
-            publishedAt
-            title
           }
         }
       }

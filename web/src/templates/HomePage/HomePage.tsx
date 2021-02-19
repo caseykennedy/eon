@@ -18,6 +18,8 @@ import Trademarks from '../../components/Trademarks'
 import StoreLocator from '../../components/StoreLocator'
 import Retailers from '../../components/Retailers'
 
+import InstaFeed from '../../components/InstaFeed'
+
 // ___________________________________________________________________
 
 const HomePage = () => {
@@ -38,6 +40,11 @@ const HomePage = () => {
       </Section>
 
       <Retailers />
+
+      <Section border={true} maxWidth={theme.maxWidth}>
+        <Text as="p">@eonmist</Text>
+        <InstaFeed />
+      </Section>
     </S.HomePage>
   )
 }

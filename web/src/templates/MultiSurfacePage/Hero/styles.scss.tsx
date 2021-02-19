@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Box, Flex } from '../../../components/ui'
 import Section from '../../../components/Section'
@@ -66,7 +65,7 @@ export const Hero = styled(Section)`
         }
 
         svg {
-          width:calc(${theme.space[7]} / 1.25);
+          width: calc(${theme.space[7]} / 1.25);
         }
       }
     }
@@ -107,7 +106,7 @@ export const Hero = styled(Section)`
           width: initial;
         }
       }
-      
+
       img {
         width: ${theme.space[5]};
 
@@ -124,12 +123,11 @@ export const Decorator = styled.span`
   position: absolute;
   top: 0;
   right: ${theme.space[4]};
-  /* margin-left: auto; */
-  width: ${theme.space[5]};
+  width: calc(${theme.space[5]} * 1.15);
 
   @media ${theme.mq.tablet} {
     right: ${theme.space[5]};
-    width: calc(${theme.space[6]} / 1.25);
+    width: ${theme.space[6]};
   }
 
   @media ${theme.mq.desktop} {

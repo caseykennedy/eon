@@ -6,10 +6,7 @@ import * as React from 'react'
 
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-
 import { Flex, Text } from '../../../components/ui'
-
-import Icon from '../../../components/Icons'
 
 import fdaMark from './svg/fda-registered.svg'
 import tsaMark from './svg/tsa-friendly.svg'

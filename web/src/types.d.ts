@@ -120,16 +120,26 @@ type InstagramFeedEdges = {
 }
 
 type InstagramFeedNode = {
-  id: string
-  _rawCaption: string
-  figure: {
-    alt: string
-    asset: {
-      fluid: ImageShape
+  caption: string
+  media_url: string
+  media_id: string
+  timestamp: number
+  username: string
+  media_type: string
+  permalink: string
+  localImage: {
+    childImageSharp: {
+      fluid: {
+        aspectRatio: number
+        base64: string
+        sizes: string
+        src: string
+        srcSet: string
+        srcSetWebp: string
+        srcWebp: string
+      }
     }
   }
-  publishedAt: string
-  title: string
 }
 
 // Shopify Product

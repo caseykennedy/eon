@@ -139,13 +139,12 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
-    // {
-    //   resolve: `gatsby-source-instagram`,
-    //   options: {
-    //     type: `user-profile`,
-    //     username: `eonmist`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token: process.env.GATSBY_INSTA_TOKEN
+      }
+    },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
