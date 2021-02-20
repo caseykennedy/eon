@@ -18,7 +18,7 @@ const InstaFeed = () => {
   const igPosts = useInstagram()
   console.log(igPosts)
   return (
-    <Grid columns={3} gap={2}>
+    <Grid columns={3} gap={[1, 2]}>
       {igPosts.slice(0, 3).map(({ node: post }, idx) => (
         <Box key={idx}>
           <Img
