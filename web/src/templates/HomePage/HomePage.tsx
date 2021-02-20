@@ -42,7 +42,11 @@ const HomePage = () => {
       <Retailers />
 
       <Section border={true} maxWidth={theme.maxWidth}>
-        <Text as="p">@eonmist</Text>
+        <Text as="p">
+          <a href="//www.instagram.com/eonmist" rel="noopener" target="_blank">
+            @eonmist
+          </a>
+        </Text>
         <InstaFeed />
       </Section>
     </S.HomePage>

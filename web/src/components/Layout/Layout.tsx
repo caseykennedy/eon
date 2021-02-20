@@ -64,7 +64,7 @@ const NewCustomerHidden = () => {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
-  // eslint-disable-next-line no-console
+  // tslint-disable-next-line no-console
   console.log(
     `%c eOn Mist — crafted with care. [ caseykennedy.hns.to ] `,
     `background: #FFFFFF; color: #000000`

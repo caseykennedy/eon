@@ -24,5 +24,7 @@
     "lerna": "^3.14.1",
     "rimraf": "^2.6.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gatsby-source-instagram-all": "^3.0.4"
+  }
 }
