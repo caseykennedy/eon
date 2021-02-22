@@ -8,8 +8,6 @@ import { motion } from 'framer-motion'
 import { transparentize } from 'polished'
 import theme from '../../../gatsby-plugin-theme-ui'
 
-import Headroom from 'react-headroom'
-
 // ___________________________________________________________________
 
 const height = theme.headerHeight
