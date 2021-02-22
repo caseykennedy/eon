@@ -7,7 +7,7 @@ import Img from 'gatsby-image/withIEPolyfill'
 
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Flex, Text } from '../ui'
+import { Box, Text } from '../ui'
 import { Grid } from 'theme-ui'
 
 import useInstagram from '../../hooks/useInstagram'

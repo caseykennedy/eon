@@ -12,14 +12,12 @@ import { Box, Flex, Heading, Text } from '../ui'
 // Components
 import Button from '../ui/Button'
 import PageTitle from '../PageTitle'
-import AbstractSpray from '../SVG/AbstractSpray'
 import ImgMatch from '../ImgMatch'
 import Section from '../Section'
 import Icon from '../Icons'
 import Logo from '../SVG/Logo'
 import Germs from '../SVG/Germs'
 import FlagUsa from '../SVG/FlagUsa'
-import SymbolBadge from '../SVG/SymbolBadge'
 
 import bolt from './assets/bolt.svg'
 

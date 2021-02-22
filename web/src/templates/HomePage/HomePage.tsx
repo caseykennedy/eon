@@ -7,7 +7,7 @@ import React from 'react'
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Flex, Text, Heading } from '../../components/ui'
+import { Box, Text } from '../../components/ui'
 
 // Sections
 import Hero from './Hero'
@@ -17,7 +17,6 @@ import Section from '../../components/Section'
 import Trademarks from '../../components/Trademarks'
 import StoreLocator from '../../components/StoreLocator'
 import Retailers from '../../components/Retailers'
-
 import InstaFeed from '../../components/InstaFeed'
 
 // ___________________________________________________________________

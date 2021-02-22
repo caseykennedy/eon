@@ -29,7 +29,7 @@ module.exports = {
     gatsbyStorefrontConfig: {
       storeName: 'eOn mist™',
       storeDescription:
-        'eOn is professional-grade hand sanitation, for everyone.',
+        'eOn is professional-grade hand sanitation and disinfectant, for everyone.',
       email: 'hello@eonmist.com',
       logoUrl: '',
       company: 'eOn mist™',

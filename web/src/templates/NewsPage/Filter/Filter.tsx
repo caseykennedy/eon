@@ -8,7 +8,7 @@ import React, { useState } from 'react'
 
 // Theme
 import * as S from './styles.scss'
-import theme from '../../../../config/theme'
+import theme from '../../../gatsby-plugin-theme-ui'
 import { Box } from '../../../components/ui'
 
 // Hooks

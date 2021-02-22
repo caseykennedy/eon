@@ -8,7 +8,6 @@ import React from 'react'
 import loadable from '@loadable/component'
 
 // Components
-import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 const ReturnsPage = loadable(() => import('../components/ReturnsPage'))

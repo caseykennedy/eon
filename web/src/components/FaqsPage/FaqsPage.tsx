@@ -7,7 +7,7 @@ import React from 'react'
 // Theme
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
-import { Box, Flex, Heading, Text } from '../ui'
+import { Box } from '../ui'
 
 // Components
 import Section from '../Section'
@@ -25,9 +25,6 @@ const FaqsPage = () => {
         altText="eOn hand holding a can"
       />
       <S.FaqsPage>
-        {/* <Section maxWidth={`1024px`}>
-          <Heading as="h3" mb={0}>FAQs</Heading>
-        </Section> */}
         <Section maxWidth={`1024px`}>
           <Box className="faqs">
             {data.map((faq, idx) => (

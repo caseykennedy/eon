@@ -4,15 +4,12 @@
 
 import React from 'react'
 import Img from 'gatsby-image/withIEPolyfill'
-import { Grid } from 'theme-ui'
-
-// utils
-import * as gtag from '../../utils/gtag'
 
 // Theme + ui
 import * as S from './styles.scss'
 import theme from '../../gatsby-plugin-theme-ui'
 import { Box, Flex, Text } from '../ui'
+import { Grid } from 'theme-ui'
 
 // Hooks
 import useRetailers from '../../hooks/useRetailers'

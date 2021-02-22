@@ -2,15 +2,12 @@
 
 // ___________________________________________________________________
 
-// Libraries
 import React from 'react'
 
 // Theme + ui
 import { Box } from '../components/ui'
 import theme from '../gatsby-plugin-theme-ui'
 
-// Components
-import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 // ___________________________________________________________________
