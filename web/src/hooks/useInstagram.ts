@@ -11,7 +11,7 @@ import { InstagramFeedShape } from '@/types'
 const useInstagram = () => {
   const data = useStaticQuery<InstagramFeedShape>(graphql`
     query InstagramQuery {
-      instagram: allInstagramContent {
+      instagram: allInstagramContent(sort: {order: DESC, fields: timestamp}) {
         edges {
           node {
             caption

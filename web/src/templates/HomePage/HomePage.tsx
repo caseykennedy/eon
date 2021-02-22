@@ -35,7 +35,7 @@ const HomePage = () => {
           retail or grocery store today.
         </Text>
         <Box>
-          {/* <StoreLocator /> */}
+          <StoreLocator />
         </Box>
       </Section>
 

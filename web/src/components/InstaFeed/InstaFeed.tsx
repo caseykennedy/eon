@@ -19,7 +19,7 @@ const InstaFeed = () => {
 
   return (
     <S.InstaFeed>
-      <Grid columns={3} gap={[1, 2]}>
+      <Grid columns={[1, 3]} gap={[1, 2]}>
         {igPosts.slice(0, 3).map(({ node: post }, idx) => (
           <Box className="post" key={idx}>
             <Box className="caption">
