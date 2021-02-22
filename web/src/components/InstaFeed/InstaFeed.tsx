@@ -16,21 +16,27 @@ import useInstagram from '../../hooks/useInstagram'
 
 const InstaFeed = () => {
   const igPosts = useInstagram()
-  console.log(igPosts)
+
   return (
-    <Grid columns={3} gap={[1, 2]}>
-      {igPosts.slice(0, 3).map(({ node: post }, idx) => (
-        <Box key={idx}>
-          <Img
-            fluid={post.localImage.childImageSharp.fluid}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt={post.caption}
-            className="article__img"
-          />
-        </Box>
-      ))}
-    </Grid>
+    <S.InstaFeed>
+      <Grid columns={3} gap={[1, 2]}>
+        {igPosts.slice(0, 3).map(({ node: post }, idx) => (
+          <Box className="post" key={idx}>
+            <Box className="caption">
+              <Text as="p" fontWeight={600}>{post.timestamp}</Text>
+              <Text as="p">{post.caption}</Text>
+            </Box>
+            <Img
+              fluid={post.localImage.childImageSharp.fluid}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={post.caption}
+              className="img"
+            />
+          </Box>
+        ))}
+      </Grid>
+    </S.InstaFeed>
   )
 }
 

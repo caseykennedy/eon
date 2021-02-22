@@ -15,7 +15,6 @@ const useInstagram = () => {
         edges {
           node {
             caption
-            media_url
             localImage {
               childImageSharp {
                 fluid(maxHeight: 500, maxWidth: 500, quality: 90) {
@@ -23,6 +22,8 @@ const useInstagram = () => {
                 }
               }
             }
+            media_url
+            timestamp(formatString: "MMMM DD, YYYY")
           }
         }
       }
