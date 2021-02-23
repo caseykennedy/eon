@@ -15,10 +15,7 @@
     "lint": "tslint -t stylish -p tsconfig.json",
     "lint:fix": "tslint -p tsconfig.json -t stylish --fix",
     "format": "prettier --write content/**/*.yaml",
-    "precommit": "lint-staged",
-    "server:open": "start-server-and-test develop http://localhost:8000 cy:open",
-    "server:run": "start-server-and-test develop http://localhost:8000 cy:run",
-    "server:ci": "start-server-and-test develop http://localhost:8000 cy:run:ci"
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",

@@ -58,7 +58,7 @@ module.exports = {
       articlesPerBlogPage: '6'
     }
   },
-  flags: { PRESERVE_WEBPACK_CACHE: true },
+  flags: { PRESERVE_WEBPACK_CACHE: true, FAST_REFRESH: true },
   plugins: [
     {
       resolve: 'gatsby-plugin-google-tagmanager',
