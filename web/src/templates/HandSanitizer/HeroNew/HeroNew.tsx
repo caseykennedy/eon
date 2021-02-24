@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // utils
@@ -21,8 +20,6 @@ import AddToCart from '../../../components/AddToCart'
 import ImgMatch from '../../../components/ImgMatch'
 import Shine from '../../../components/SVG/Shine'
 import Stars from '../../../components/SVG/Stars'
-import ArrowLink from '../../../components/ui/ArrowLink'
-import Icon from '../../../components/Icons'
 
 // ___________________________________________________________________
 

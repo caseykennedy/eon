@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { lighten } from 'polished'
 
 // Theme
 import theme from '../../gatsby-plugin-theme-ui'
@@ -15,7 +14,6 @@ import Hero from './Hero'
 import Trademarks from './Trademarks'
 
 // Components
-import ImgMatch from '../../components/ImgMatch'
 import Section from '../../components/Section'
 import Retailers from '../../components/Retailers'
 import StoreLocator from '../../components/StoreLocator'
@@ -23,14 +21,12 @@ import Reviews from '../../components/Reviews'
 import HowTo from '../../components/HowTo'
 import Accordion from '../../components/Accordion'
 
-import hclMark from './assets/hocl.svg'
 import shelf from './assets/shelf.svg'
 import trustShield from './assets/trustShield.svg'
 
 import disinfect from './assets/disinfect.svg'
 import safe from './assets/safe.svg'
 import virus from './assets/virus.svg'
-import trust from './assets/trusttt.svg'
 import steps from './assets/steps.svg'
 
 // ___________________________________________________________________
@@ -73,41 +69,6 @@ const MultiSurfacePage = () => {
               transmissible pathogens.
             </Heading>
 
-            {/* <Text as="p" fontSize={3} fontWeight={600} mb={0}>
-              The easy one-step sanitizing formula.
-            </Text>
-
-            <Text as="p">
-              eOn multi-surface is zero-mess, broad spectrum, wide-angle-mist
-              disinfection that breaks down germs—effectively cleaning,
-              deodorizing and disinfecting high touch surfaces.
-            </Text>
-
-            <Text as="p" fontSize={3} fontWeight={600} mb={0}>
-              Hypochlorous Acid (HOCI)
-            </Text>
-
-            <Text as="p">
-              Derived from naturally occurring minerals (which also occur in the
-              human immune system), HOCI is one of the best known biocides—used
-              in healthcare, food safety, water treatment and general
-              sanitation.
-            </Text> */}
-
-            {/* <Text as="p">
-              eOn multi-surface is an EPA registered (List N) personal
-              protection disinfectant which rapidly neutralizes transmissible
-              pathogens.
-            </Text>
-
-            <Text as="p">
-              Hypochlorous acid (HOCI) is one of the most effective known
-              biocides produced by the human immune system. HOCI is now used in
-              healthcare, food safety, water treatment, and general sanitation
-              world-wide. HOCI’s chlorine based odor does not linger and rapidly
-              dissipates.
-            </Text> */}
-
             <Flex
               width={[1]}
               flexDirection={['column', 'row', 'row']}
@@ -143,7 +104,6 @@ const MultiSurfacePage = () => {
                 mt={[4, 0, 0]}
                 style={{
                   position: 'relative',
-                  // top: theme.space[4],
                   border: theme.border,
                   borderRadius: theme.borderRadius
                 }}
@@ -243,7 +203,6 @@ const MultiSurfacePage = () => {
       </Section>
 
       <Section
-        // bg={`${lighten(0.0, theme.colors.babyblue)}`}
         border={true}
         maxWidth={theme.maxWidth}
       >
@@ -391,7 +350,19 @@ const reviews = [
       'The strength of the continuous spray surprised me, as well as the even mist it leaves on surfaces.'
   },
   {
+    lead: 'I recommend it',
+    author: 'Ayra V.',
+    review:
+      'Has it happened to you that you have your hands full of hand sanitizer? this is a resolve. this is water it is as if you were washing your hands it does not contain any odor nor is it sticky. eliminates 99.99% of bacteria and viruses. I recommend it.'
+  },
+  {
     lead: 'Good stuff!',
+    author: 'Chritine',
+    review:
+      'Awesome purchase I am so happy that this was available I keep one in my purse at all times.'
+  },
+  {
+    lead: 'Awesome purchase',
     author: 'Alex Persing',
     review:
       "I love the fact that it's so safe, effective and portable. Good stuff!"

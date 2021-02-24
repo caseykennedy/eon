@@ -7,7 +7,7 @@ export type StoreState = {
   checkout: {
     id: string
     lineItems: {
-      quantity: number
+      quantity: string
     }[]
     webUrl?: string
   }
@@ -19,7 +19,7 @@ type ContextProps = {
   isCartOpen: boolean
   setCartOpen: (arg1: boolean) => any
   store: StoreState
-  addVariantToCart: (variantId: any, quantity: number) => Promise<void>
+  addVariantToCart: (variantId: any, quantity: string) => Promise<void>
   removeLineItem: (
     client: any,
     checkoutID: string,
@@ -27,9 +27,9 @@ type ContextProps = {
   ) => Promise<void>
   updateLineItem: (
     client: any,
-    checkoutID: any,
-    lineItemID: any,
-    quantity: any
+    checkoutID: string,
+    lineItemID: string,
+    quantity: string
   ) => Promise<void>
 }
 

@@ -21,7 +21,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
     client,
     added: false,
     adding: false,
-    checkout: { lineItems: [] },
+    checkout: { id: '', lineItems: [] },
     products: [],
     shop: {},
     isCartOpen: false
@@ -40,7 +40,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
         : null
 
       // Needs correct typings
-      const setCheckoutInState = (checkout: ShopifyBuy.CheckoutResource) => {
+      const setCheckoutInState = (checkout: any) => {
         if (isBrowser) {
           localStorage.setItem('shopify_checkout_id', checkout.id)
         }
@@ -107,7 +107,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
 
           return client.checkout
             .addLineItems(checkoutId, lineItemsToUpdate)
-            .then(checkout => {
+            .then((checkout: any) => {
               updateStore(prevState => {
                 return { ...prevState, checkout, adding: false, added: true }
               })
@@ -117,7 +117,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
         removeLineItem: (client, checkoutID, lineItemID) => {
           return client.checkout
             .removeLineItems(checkoutID, [lineItemID])
-            .then(res => {
+            .then((res: any) => {
               updateStore(prevState => {
                 return { ...prevState, checkout: res }
               })
@@ -134,7 +134,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
 
           return client.checkout
             .updateLineItems(checkoutID, lineItemsToUpdate)
-            .then(res => {
+            .then((res: any) => {
               updateStore(prevState => {
                 return { ...prevState, checkout: res, adding: false }
               })
