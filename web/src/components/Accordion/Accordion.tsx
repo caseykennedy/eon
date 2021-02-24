@@ -4,7 +4,7 @@
 
 import React, { useState, useRef } from 'react'
 
-import { Box, Flex, Text, Heading } from '../ui'
+import { Text } from '../ui'
 import Icon from '../Icons'
 
 import theme from '../../gatsby-plugin-theme-ui'

@@ -22,7 +22,6 @@ import Button from '../ui/Button'
 
 // Components
 import Icon from '../Icons'
-import Portal from '../Portal'
 import AddToCart from '../AddToCart'
 import LineItem from './LineItem'
 import Drawer from './Drawer'

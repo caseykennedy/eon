@@ -62,8 +62,8 @@ const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
   //   window.addEventListener('touchstart', handleTouch)
 
   //   return () => {
-  //     window.removeEventListener('touchmove', handleTouch)
-  //     window.removeEventListener('touchstart', handleTouch)
+  //     window.removeEventListener('touchmove', handleTouch, {passive: true})
+  //     window.removeEventListener('touchstart', handleTouch, {passive: true})
   //   }
   // }, [])
 

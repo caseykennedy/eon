@@ -3,10 +3,8 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
 
 import { Box } from '../../components/ui'
-import Section from '../../components/Section'
 
 import theme from '../../gatsby-plugin-theme-ui'
 

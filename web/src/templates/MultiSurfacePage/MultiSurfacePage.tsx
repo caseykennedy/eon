@@ -14,15 +14,13 @@ import Hero from './Hero'
 import Trademarks from './Trademarks'
 
 // Components
+import ImgMatch from '../../components/ImgMatch'
 import Section from '../../components/Section'
 import Retailers from '../../components/Retailers'
 import StoreLocator from '../../components/StoreLocator'
 import Reviews from '../../components/Reviews'
 import HowTo from '../../components/HowTo'
 import Accordion from '../../components/Accordion'
-
-import shelf from './assets/shelf.svg'
-import trustShield from './assets/trustShield.svg'
 
 import disinfect from './assets/disinfect.svg'
 import safe from './assets/safe.svg'
@@ -52,9 +50,9 @@ const MultiSurfacePage = () => {
           flexWrap="wrap"
           flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
         >
-          <Box flex={1}>
-            <Box width={1}>
-              <img src={shelf} width="100%" />
+          <Box flex={1} width={1} px={[6, 0]}>
+            <Box pl={[0, 7]} width={1}>
+              <ImgMatch src="shelf.png" altText="eOn mist on the store shelf" />
             </Box>
           </Box>
 
@@ -73,7 +71,6 @@ const MultiSurfacePage = () => {
               width={[1]}
               flexDirection={['column', 'row', 'row']}
               flexWrap="wrap"
-              // alignItems="flex-start"
               my={[6]}
             >
               <Box
@@ -143,7 +140,7 @@ const MultiSurfacePage = () => {
           flexDirection={['column', 'row-reverse', 'row-reverse']}
         >
           <Box width={1} flex={1} ml={[0, 6, 7]} mb={[2, 0]}>
-            <img src={disinfect} width="100%" />
+            <img src={disinfect} width="100%" alt="eOn mist disinfects" />
           </Box>
 
           <Box flex={2}>
@@ -167,7 +164,7 @@ const MultiSurfacePage = () => {
           flexDirection={['column', 'row', 'row']}
         >
           <Box width={1} flex={1} mr={[0, 6, 7]}>
-            <img src={safe} width="100%" alt="HOCl" />
+            <img src={safe} width="100%" alt="eon mist is safe" />
           </Box>
 
           <Box flex={2}>
@@ -202,10 +199,7 @@ const MultiSurfacePage = () => {
         </Flex>
       </Section>
 
-      <Section
-        border={true}
-        maxWidth={theme.maxWidth}
-      >
+      <Section border={true} maxWidth={theme.maxWidth}>
         <Text className="text--xl" textAlign="center" mb={5}>
           How to use
         </Text>
@@ -219,7 +213,7 @@ const MultiSurfacePage = () => {
           flexDirection={['column-reverse', 'row-reverse', 'row-reverse']}
         >
           <Box width="100%" flex={1} ml={[0, 6, 7]}>
-            <img src={virus} width="100%" alt="HOCl" />
+            <img src={virus} width="100%" alt="eon mist kills 99.9% of viruses" />
           </Box>
 
           <Box flex={2}>
@@ -251,7 +245,7 @@ const MultiSurfacePage = () => {
           flexDirection={['column-reverse', 'row', 'row']}
         >
           <Box width="100%" flex={1} mr={[0, 6, 7]}>
-            <img src={steps} width="100%" alt="HOCl" />
+            <img src={steps} width="100%" alt="how to use" />
           </Box>
 
           <Box flex={2} mb={[5, 0]}>
@@ -290,7 +284,10 @@ const MultiSurfacePage = () => {
 
           <Box width={1} flex={1}>
             <Box className="shield">
-              <img src={trustShield} alt="" width="100%" />
+              <ImgMatch
+                src="trust-shield.png"
+                altText="eOn mist on the store shelf"
+              />
             </Box>
           </Box>
         </Flex>
