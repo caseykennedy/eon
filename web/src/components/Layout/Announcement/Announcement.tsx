@@ -38,10 +38,10 @@ const AnnouncementSlider: React.FC = ({ children }) => {
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 0,
-    autoplay: {
-      delay: 14500,
-      disableOnInteraction: true
-    }
+    // autoplay: {
+    //   delay: 14500,
+    //   disableOnInteraction: true
+    // }
   }
   return <Swiper {...params}>{children}</Swiper>
 }
@@ -55,21 +55,6 @@ const Message: React.FC<Props> = ({
   return (
     <AnnouncementSlider>
       <Link
-        to={`/products/eon-continuous-spray-hand-sanitizer-80`}
-        onClick={() => {
-          gtag.event({
-            category: 'Announcement bar',
-            action: 'Click',
-            label: 'BUY3GET3'
-          })
-        }}
-      >
-        <Text as="p" fontSize={1}>
-          ❤️&nbsp;<Box as="strong">BUY 3 GET 3 FREE</Box>&nbsp;❤️ Add all six to your cart
-        </Text>
-      </Link>
-
-      {/* <Link
         to={to}
         onClick={() => {
           gtag.event({
@@ -85,7 +70,7 @@ const Message: React.FC<Props> = ({
         <Flex as="span" className="figure">
           <CanMulti />
         </Flex>
-      </Link> */}
+      </Link>
     </AnnouncementSlider>
   )
 }

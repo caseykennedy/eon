@@ -83,10 +83,7 @@ const CartItems: React.FC<CartItemsProps> = ({
             <LineItems />
           </div>
           <Text as="span" mt={1} textAlign="center">
-            {/* $4.90 flat rate shipping */}
-            ❤️&nbsp;<Box as="strong">BUY 3 GET 3 FREE</Box>&nbsp;❤️
-            <br />
-            Add six or more to activate
+            $4.90 flat rate shipping
           </Text>
           <div className="cart-items__checkout">
             <Flex justifyContent="flex-end" width={1}>

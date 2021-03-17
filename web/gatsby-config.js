@@ -96,6 +96,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',
+    'gatsby-plugin-optimize-svgs',
     'gatsby-plugin-loadable-components-ssr',
     'gatsby-plugin-netlify',
     `gatsby-plugin-remove-trailing-slashes`,
