@@ -21,7 +21,7 @@ const ReviewSlider: React.FC = ({ children }) => {
   const params = {
     freeMode: true,
     grabCursor: true,
-    loop: true,
+    loop: false,
     centeredSlides: false,
     // effect: 'fade',
     slidesPerView: 1,
@@ -57,7 +57,12 @@ const ReviewSlider: React.FC = ({ children }) => {
 
 const Specs: React.FC<Props> = () => {
   return (
-    <S.Reviews bg="white" overflow="hidden" maxWidth={theme.maxWidth} id="ratings">
+    <S.Reviews
+      bg="white"
+      overflow="hidden"
+      maxWidth={theme.maxWidth}
+      id="ratings"
+    >
       <Text as="p" mb={[5, 6, 6]}>
         What people are saying
       </Text>
@@ -85,21 +90,31 @@ export default Specs
 
 const data = [
   {
+    lead: 'Compact and easy to spray.',
+    author: 'Samara',
+    review: "I love that it's compact and easy to spray."
+  },
+  {
+    lead: 'Not filmy or foamy.',
+    author: 'Paul, AZ',
+    review:
+      'I like this product because it is clean, not filmy or foamy like other products.'
+  },
+  {
+    lead: 'Easy to use.',
+    author: 'Alicia, MI',
+    review: 'Safe and effective. Easy to use. '
+  },
+  {
+    lead: "Isn't harmful to our bodies.",
+    author: 'Anne, OH',
+    review:
+      "It's wonderful to know that a company is making a product that kill covid but isn't harmful to our bodies or our environment!"
+  },
+  {
     lead: 'Full coverage!',
     author: 'Mary Mills',
     review: 'I love how I am able to get good coverage on my hands!'
-  },
-  {
-    lead: 'This product is incredible!',
-    author: 'Edward, CA',
-    review:
-      'This product is incredible! Much better than the squeeze bottle goop we grew up on!'
-  },
-  {
-    lead: 'Love the spray action',
-    author: 'John, OH',
-    review:
-      'The strength of the continuous spray surprised me, as well as the even mist it leaves on hands. Oh and the lock cap "click" is really satisfying. Recommended!'
   },
   {
     lead: 'Product is great!',
@@ -120,8 +135,7 @@ const data = [
   },
   {
     lead: 'Thank you, eOn!!',
-    author: 'Blake, CA',
-    review:
-      'I was tired of carrying around messy or ineffective gels, and wondered if there existed an easy to carry and use, industrial-grade "spray" hand sanitizer. eOn\'s just what I was looking for.'
+    author: 'Thomasena, PA',
+    review: 'Quick, effective and easy to travel '
   }
 ]
