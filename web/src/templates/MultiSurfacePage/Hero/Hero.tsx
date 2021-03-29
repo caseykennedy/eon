@@ -51,7 +51,7 @@ const Hero = () => {
                 <div className="rating">
                   <AnchorLink href={`#ratings`} offset={theme.scrollOffset}>
                     <Stars />
-                    <span>3 ratings</span>
+                    <span>6 ratings</span>
                   </AnchorLink>
                 </div>
               </Box>

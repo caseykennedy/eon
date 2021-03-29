@@ -335,6 +335,12 @@ export default MultiSurfacePage
 
 const reviews = [
   {
+    lead: 'I love this mist',
+    author: 'Andra C.',
+    review:
+      'I love this mist because you can carry it anywhere, especially on an airplane. I like the size and the easy spray top.'
+  },
+  {
     lead: 'Fast service!',
     author: 'Satisfied Customer',
     review:

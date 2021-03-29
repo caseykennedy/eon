@@ -35,7 +35,7 @@ const HandSanitizer: React.FC<ShopifyProductContextShape> = ({
     <>
       <SEO
         pathname={`/products/${product.handle}`}
-        title={`${product.title} | eOn mist disinfectants and personal sanitation`}
+        title={`Hand Sanitizer | eOn mist disinfectants and personal sanitation`}
         desc={`${product.description}`}
         product={true}
         productName={product.title}

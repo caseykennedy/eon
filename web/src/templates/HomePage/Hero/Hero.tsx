@@ -99,6 +99,7 @@ const MultiSurface = () => {
         <Flex className="card__inner">
           <Box className="card__tagline">
             <Text
+              as="h1"
               className="statement  text--base"
               dangerouslySetInnerHTML={{ __html: data.multi.title }}
             />

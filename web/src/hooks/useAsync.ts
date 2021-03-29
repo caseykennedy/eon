@@ -16,22 +16,22 @@
 //   )
 // }
 
+// // An async function for testing our hook.
+// // Will be successful 50% of the time.
+// const myFunction = (): Promise<string> => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const rnd = Math.random() * 10
+//       rnd <= 5
+//         ? resolve('Submitted successfully 🙌')
+//         : reject('Oh no there was an error 😞')
+//     }, 2000)
+//   })
+// }
+
 // ___________________________________________________________________
 
 import React, { useState, useEffect, useCallback } from 'react'
-
-// An async function for testing our hook.
-// Will be successful 50% of the time.
-const myFunction = (): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const rnd = Math.random() * 10
-      rnd <= 5
-        ? resolve('Submitted successfully 🙌')
-        : reject('Oh no there was an error 😞')
-    }, 2000)
-  })
-}
 
 // Hook
 const useAsync = <T, E = string>(
