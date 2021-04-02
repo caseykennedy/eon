@@ -3,7 +3,6 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { graphql } from 'gatsby'
 
 // UI
 import theme from '../../gatsby-plugin-theme-ui'
@@ -18,24 +17,27 @@ import Retailers from './Retailers'
 import ProductDetail from './ProductDetail'
 
 // Components
-import Layout from '../../components/Layout'
 import SEO from '../../components/SEO'
 import Trademarks from './Trademarks'
 
 // Types
 import { ShopifyProductContextShape } from '@/types'
 
+// Hooks
+import useSiteSettings from '../../hooks/useSiteSettings'
+
 // ___________________________________________________________________
 
 const HandSanitizer: React.FC<ShopifyProductContextShape> = ({
   pageContext
 }) => {
+  const site = useSiteSettings()
   const product = pageContext.product
   return (
     <>
       <SEO
         pathname={`/products/${product.handle}`}
-        title={`Hand Sanitizer | eOn mist disinfectants and personal sanitation`}
+        title={`hand sanitizer | Pro-grade sanitation that kills germs |${site.siteName}`}
         desc={`${product.description}`}
         product={true}
         productName={product.title}
