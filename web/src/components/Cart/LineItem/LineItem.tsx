@@ -29,7 +29,7 @@ const LineItem: React.FC<{ item: LineItemShape }> = ({ item }) => {
     store: { client, checkout, adding }
   } = useContext(StoreContext)
   // Line item quantity state
-  const [quantity, setQuantity] = useState(item.quantity)
+  const [quantity, setQuantity] = useState<number>(item.quantity)
   // Change the input quantity value
   const handleQuantityChange = ({ target }: any) => {
     setQuantity(target.value)

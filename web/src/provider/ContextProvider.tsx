@@ -129,7 +129,7 @@ const ContextProvider: React.FC<Props> = ({ children }) => {
           })
 
           const lineItemsToUpdate = [
-            { id: lineItemID, quantity: parseInt(quantity, 10) }
+            { id: lineItemID, quantity: parseInt(`${quantity}`, 10) }
           ]
 
           return client.checkout

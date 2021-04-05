@@ -7,7 +7,7 @@ export type StoreState = {
   checkout: {
     id: string
     lineItems: {
-      quantity: string
+      quantity: number
     }[]
     webUrl?: string
   }
@@ -29,7 +29,7 @@ type ContextProps = {
     client: any,
     checkoutID: string,
     lineItemID: string,
-    quantity: string
+    quantity: number
   ) => Promise<void>
 }
 
