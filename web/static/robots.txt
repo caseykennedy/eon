@@ -7,3 +7,4 @@ Disallow: /products/counter-top-display-wholesale
 Disallow: /products/eon-25-countertop-display
 Disallow: /q1
 Disallow: /q2
+Disallow: /q3

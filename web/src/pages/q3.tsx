@@ -1,4 +1,4 @@
-// Q2 page
+// Q3 page
 
 // ___________________________________________________________________
 
@@ -14,14 +14,14 @@ import useSiteSettings from '../hooks/useSiteSettings'
 
 // ___________________________________________________________________
 
-const Q2 = () => {
+const Q3 = () => {
   const site = useSiteSettings()
   return (
     <>
-      <SEO pathname={`/q2`} title={`Q2 New Products | ${site.titleShort}`} />
+      <SEO pathname={`/q3`} title={`Q3 New Products | ${site.titleShort}`} />
       <Q1Page />
     </>
   )
 }
 
-export default Q2
+export default Q3
