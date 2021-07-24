@@ -40,14 +40,14 @@ const HomePage = () => {
 
       <Retailers />
 
-      <Section border={true} maxWidth={theme.maxWidth}>
+      {/* <Section border={true} maxWidth={theme.maxWidth}>
         <Text as="p">
           <a href="//www.instagram.com/eonmist" rel="noopener" target="_blank">
             @eonmist
           </a>
         </Text>
         <InstaFeed />
-      </Section>
+      </Section> */}
     </S.HomePage>
   )
 }
