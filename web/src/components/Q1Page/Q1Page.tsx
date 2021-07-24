@@ -29,7 +29,7 @@ const Q1Page = () => {
   return (
     <>
       <PageTitle
-        message="Q2 2021"
+        message="Q3 2021"
         image="pt-q1.jpg"
         altText="eOn hand holding a can"
       />
@@ -257,7 +257,7 @@ const Q1Page = () => {
             <Box>
               <Button
                 as="a"
-                href="mailto:hello@eonmist.com?subject=Contact from eonmist.com/Q2"
+                href="mailto:hello@eonmist.com?subject=Contact from eonmist.com/Q3"
                 bg={theme.colors.primary}
                 color={theme.colors.white}
               >
