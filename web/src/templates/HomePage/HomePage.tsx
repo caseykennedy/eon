@@ -17,7 +17,7 @@ import Section from '../../components/Section'
 import Trademarks from '../../components/Trademarks'
 import StoreLocator from '../../components/StoreLocator'
 import Retailers from '../../components/Retailers'
-import InstaFeed from '../../components/InstaFeed'
+// import InstaFeed from '../../components/InstaFeed'
 
 // ___________________________________________________________________
 
