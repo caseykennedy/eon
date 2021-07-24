@@ -18,7 +18,7 @@ const Q1 = () => {
   const site = useSiteSettings()
   return (
     <>
-      <SEO pathname={`/q1`} title={`Q1 New Products | ${site.titleShort}`} />
+      <SEO pathname={`/q2`} title={`Q2 New Products | ${site.titleShort}`} />
       <Q1Page />
     </>
   )
